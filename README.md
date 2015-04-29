@@ -40,9 +40,9 @@ Your directory should follow this convention:
 
 #License
 
-The project is opensource and free under the GNU GPL v2 License. The sources are available on <a target="_blank" href="http://snorql.nextprot.org/">GitHub</a>.
+The project is opensource and free under the GNU GPL v2 License. The sources are available on <a target="_blank" href="https://github.com/calipho-sib/sparql-playground">GitHub</a>.
 
-This project was forked from the <a target="_blank" href="https://github.com/calipho-sib/sparql-playground">neXtProt snorql interface.</a>
+This project was forked from the <a target="_blank" href="http://snorql.nextprot.org/">neXtProt snorql interface.</a>
 
 
 #Contact
