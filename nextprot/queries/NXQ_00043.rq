@@ -1,0 +1,15 @@
+#id:NXQ_00043
+#title:Proteins that bind zinc and are not oxidoreductase and not involved in transcription
+#tags:zinc,metal,function
+#acs:Q9Y6I4, A6NIR3, A7E2V4, ...
+#count:1297
+#time:0.45
+
+select distinct ?entry where {
+  ?entry :isoform ?iso .
+  ?iso :keyword / :term cv:KW-0479. # metal-binding
+  ?iso :keyword / :term cv:KW-0862. # zinc
+  filter not exists {?iso :keyword / :term cv:KW-0804} # transcription
+  filter not exists {?iso :keyword / :term cv:KW-0560} # oxidoreductase
+}
+

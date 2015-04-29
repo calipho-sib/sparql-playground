@@ -1,0 +1,15 @@
+#id:NXQ_00111
+#title:Proteins with one transmembrane domain and no annotated topology
+#tags:domain,region,transmembrane,topology
+#acs:A0A5B9,A0AVI2,A1L0T0
+#count:682
+#time:0.25
+
+select distinct ?entry where {
+ ?entry :isoform ?iso.
+   ?iso :topology ?tm.
+   ?tm a :TransmembraneRegion.
+   filter (not exists { ?iso :topology ?topodom.
+   ?topodom a :TopologicalDomain.
+   })
+} group by ?entry ?iso having (count( ?tm)=1)

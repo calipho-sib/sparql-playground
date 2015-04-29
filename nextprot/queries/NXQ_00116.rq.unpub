@@ -1,0 +1,20 @@
+#id:NXQ_00116
+#title:How to build sequences subsets centered around sites of interest for further alignment and context pattern analysis:
+#tags:sequence
+#acs:A4D1S5,A6NMY6,A8K4G0
+#count:1977
+#time:2.7
+
+select distinct ?entry ?roi where {
+ ?entry :isoform ?iso.
+  ?iso :modifiedResidue ?ptm;:sequence ?s.
+  ?ptm :term cv:PTM-0255;:start ?pos. # Example for phosphotyrosine
+  ?s :chain ?chain;:length ?len.
+  bind (6 as ?width). # The window size
+  bind (if (?pos>?width && ?pos<=?len-?width ,substr(?chain, ?pos-?width, 2*?width+1),"---") as ?roi)
+  filter(?pos>?width && ?pos<=?len-?width)
+}
+order by ?entry
+
+# The filter strangely has to be put after the BIND because even if put before the virtuoso engine will execute it after and crash the BINDing.
+# This is why the BIND itself is in a 'if' clause which prevent crash, the "---" values are filtered out by the final FILTER

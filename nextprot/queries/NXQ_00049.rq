@@ -1,0 +1,13 @@
+#id:NXQ_00049
+#title:Proteins with at least one variant of the types "A->R" or "R->A"
+#tags:variant,sequence variation
+#acs:P07988, Q68CP9, Q29836, ...
+#count:14
+#time:0.39
+
+select distinct ?entry where {
+  ?entry :isoform/:variant ?statement.
+  {?statement :original "A"^^xsd:string;:variation "R"^^xsd:string}
+  UNION
+  {?statement :original "R"^^xsd:string;:variation "A"^^xsd:string}
+}

@@ -1,0 +1,13 @@
+#id:NXQ_00076
+#title:Proteins which are located in mitochondrion and have at least one HPA antibody and exist in at least one proteome identification sets
+#tags:subcellular location,cellular component,antibody,proteomics,mass spectrometry
+#acs:A8K5M9,O75570,P23443, ...
+#count:1169
+#time: 0.4
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :cellularComponent/:term/:childOf cv:SL-0173.
+  ?iso :antibodyMapping ?map1.
+  ?iso :peptideMapping ?map2.
+}

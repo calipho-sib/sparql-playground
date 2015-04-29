@@ -1,0 +1,14 @@
+#id:NXQ_00022
+#title:Select creatures species and name ordered species and name  
+#comment:by default the direction of ORDER BY is ascending (asc), use desc() to use descending direction. 
+#comment:using ; between multiple predicate - object pairs  is useful when they are related to a common subject  
+#comment:adding + to the predicate owl:subClassOf means that we accept solutions for the subjects and the objects if
+#comment:they are connected by one or more owl:subClassOf predicates. 
+#tags:3 graph patterns,2 variables,ORDER BY,path syntax : 1-n paths +
+
+select ?species ?name where {
+  ?species owl:subClassOf+ tto:Creature .
+  ?crea rdf:type ?species .
+  ?crea dbp:name ?name .
+}
+ORDER BY ?species ?name

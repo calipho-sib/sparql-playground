@@ -1,0 +1,13 @@
+#id:NXQ_00133
+#title:Proteins which interact with a viral protein
+#tags:taxonomy,interaction
+#comments: Not yet found a way to impose a tax range on interactant (exploring federated query with UniProt)
+#acs:,,
+#count:
+#time:
+
+select distinct ?entry ?ac where {
+  ?entry :isoform / :interaction / :interactant ?partner.
+  ?partner a :Xref. #xeno
+  ?partner :accession ?ac.
+}

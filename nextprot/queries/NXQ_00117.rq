@@ -1,0 +1,11 @@
+#id:NXQ_00117
+#title:Proteins with at least one sequence variant
+#tags:variant,sequence variation
+#acs:Q9UPT5,Q9UPT9,Q14678
+#count:19222
+#time:0.7
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :variant ?var.
+}

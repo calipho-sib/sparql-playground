@@ -1,0 +1,328 @@
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+body {
+  padding-top: 70px;
+}
+.prefixes {
+  font-family: monospace;
+  font-size: 80%;
+}
+.click{
+  cursor: hand;
+  border-bottom: 1px dotted #ddd;
+}
+
+textarea, button, input, select {
+  margin: 10px 5px 0 0;
+}
+
+textarea.form-control{
+  font-family: monospace;
+  font-size: 11px;
+}
+
+.overvlow-hidden{
+  overflow:hidden;
+}
+
+.codemirror-data>.CodeMirror{
+	height:100%;
+}
+
+.small-codemirror> .row>.CodeMirror{
+	height:100%;
+}
+
+.CodeMirror-code{
+  font-size:14px;
+  line-height:14px;
+}
+
+.pink{
+  color:#FF00DD;
+}
+
+.filter-search{
+  padding: 14px 1px ;
+  margin-top: -25px;
+
+}
+
+.label-snorql{
+  background-color: #ccf;
+  color: #666;
+}
+
+.scrollable-menu {
+  height: auto;
+  max-height: 400px;
+  overflow-x: hidden;
+}
+
+.headlines{
+  padding-top: 5px;
+  float: left;
+  width: 100%;
+}
+
+.headlines>div{
+  position: relative;
+  margin-right: 5px;
+  border-right: 1px solid #ddd;
+  width:30%;
+  float: left;
+  padding: 15px;
+  min-height: 300px;
+}
+
+.headlines>div .btn{
+  position: absolute;
+  bottom: 5px;
+}
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+
+
+@media screen and (max-width: 960px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+    overflow:hidden;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -57%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 60%; /* 6 columns */
+    overflow:inherit;
+  }
+
+  .row-offcanvas-left.active {
+    left: 60%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 60%; /* 6 columns */
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .headlines>div{
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 98%;
+    min-height: 5px;
+    margin-bottom:10px;
+  }
+  .headlines>div .btn{
+    position: relative;
+    bottom: 5px;
+  }
+}
+
+
+.navbar-snorql {
+    background-color: #ccccff;
+    border-color: #9f9fff;
+}
+
+.navbar-snorql .navbar-brand {
+    color: #333;
+}
+
+.navbar-snorql .navbar-brand:hover,
+.navbar-snorql .navbar-brand:focus {
+    color: #fff;
+    background-color: transparent;
+}
+
+.navbar-snorql .navbar-nav > li > a {
+    color: #333;
+}
+
+.navbar-snorql .navbar-nav > li > a:hover,
+.navbar-snorql .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color: #b3b3ff;
+}
+
+.navbar-snorql .navbar-nav > .active > a,
+.navbar-snorql .navbar-nav > .active > a:hover,
+.navbar-snorql .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #333;
+}
+
+.navbar-snorql .navbar-nav > .disabled > a,
+.navbar-snorql .navbar-nav > .disabled > a:hover,
+.navbar-snorql .navbar-nav > .disabled > a:focus {
+    color: #333;
+    background-color: transparent;
+}
+
+.navbar-snorql .navbar-toggle {
+    border-color: #9f9fff;
+}
+
+.navbar-snorql .navbar-toggle:hover,
+.navbar-snorql .navbar-toggle:focus {
+    background-color: #b3b3ff;
+}
+
+.navbar-snorql .navbar-toggle .icon-bar {
+    background-color: #333;
+}
+
+.navbar-snorql .navbar-collapse,
+.navbar-snorql .navbar-form {
+    border-color: #9f9fff;
+}
+
+.navbar-snorql .navbar-nav > .open > a,
+.navbar-snorql .navbar-nav > .open > a:hover,
+.navbar-snorql .navbar-nav > .open > a:focus {
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .navbar-snorql .navbar-nav .open .dropdown-menu > .dropdown-header {
+        border-color: #9f9fff;
+    }
+    .navbar-snorql .navbar-nav .open .dropdown-menu .divider {
+        background-color: #b3b3ff;
+    }
+    .navbar-snorql .navbar-nav .open .dropdown-menu > li > a {
+        color: #333;
+    }
+    .navbar-snorql .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-snorql .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #fff;
+        background-color: transparent;
+    }
+    .navbar-snorql .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-snorql .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-snorql .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #fff;
+        background-color: #333;
+    }
+    .navbar-snorql .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-snorql .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-snorql .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+}
+
+.navbar-snorql .navbar-link {
+    color: #333;
+}
+
+.navbar-snorql .navbar-link:hover {
+    color: #fff;
+}
+
+.navbar-snorql .btn-link {
+    color: #333;
+}
+
+.navbar-snorql .btn-link:hover,
+.navbar-snorql .btn-link:focus {
+    color: #fff;
+}
+
+.navbar-snorql .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-snorql .btn-link:hover,
+.navbar-snorql .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-snorql .btn-link:focus {
+    color: #333;
+}
+
+
+/* Put your css in here */
+
+.link { background: center right no-repeat; padding-right: 13px; }
+.queryresults { border-collapse: collapse; margin-top: 0.3em;width:100%;font-size:90%; }
+.queryresults td, .queryresults th { padding: 0.2em 0.4em; vertical-align: top; }
+.uri { white-space: nowrap; }
+.uri a, a.uri { text-decoration: none; }
+.unbound { color: #888; }
+.queryresults a small { font-size: 100%; color: #55a; }
+.queryresults small { font-size: 100%; color: #666; }
+.queryresults .property { white-space: nowrap; }
+#rdficon { float: right; margin: 0.6em 1em; }
+.directory li { margin-bottom: 0.5em; }
+.directory small { font-size: 80%; color: #666; }
+
+.snorql h1, .snorql h2 { color: #400; }
+.snorql #header, .snorql .section { background: #ccf; }
+.snorql .queryresults th { background: #88c; }
+.snorql .queryresults .odd td { background: #f2f2ff;max-width: 30%; }
+.snorql .queryresults .even td { background: #ddf;max-width: 30%; }
+
+.browser h1, .browser h2 { color: #810; }
+.browser #header, .browser .section { background: #beb; }
+.browser .queryresults th { background: #7b7; }
+.browser .queryresults .odd td { background: #f0fcf0; }
+.browser .queryresults .even td { background: #d4f6d4; }
+
+.uri .media{
+	left: 0;
+	top: 0;
+	position: relative;
+	width: 100%;
+}
+
+.snorql-info{
+	color:gray;
+	padding: 10px;
+}
+
+.snorql{
+  background-color: #ccf;
+  padding:4px;
+}
+
+.label-as-badge {
+	border-radius: 1em;
+}
+
+.examples .label-as-badge {
+	margin-right: 2px;
+	background: #ccf;
+	color: #428bca;
+	font-size: 10px;
+}
+
+.example-list {
+	height: 90vh;
+	min-height: 580px;
+	overflow-y: scroll;
+}

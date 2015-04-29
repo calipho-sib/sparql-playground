@@ -1,0 +1,10 @@
+#title:Stats about properties
+#comment:Very expensive query
+#tags:properties,stats
+#tags:properties,stats
+    
+
+SELECT ?p (COUNT(?p) AS ?pTotal)
+WHERE { ?s ?p ?o . }
+GROUP BY ?p
+ORDER BY DESC(?pTotal)

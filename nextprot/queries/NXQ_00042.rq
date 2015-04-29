@@ -1,0 +1,12 @@
+#id:NXQ_00042
+#title:Proteins that bind a metal and are secreted
+#tags:subcellular location,cellular component,metal
+#acs:O43852, O43852, P02787, ...
+#count:684
+#time:0.5
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :cellularComponent / :term /:childOf /^:related cv:SL-0243. # secreted
+  ?iso :keyword / :term cv:KW-0479. # metal-binding
+}

@@ -1,0 +1,14 @@
+#id:NXQ_00057
+#title:Proteins that are located in the mitochondrion with an experimental evidence originating not from HPA or DKFZ-GFP
+#tags:subcellular location,cellular component,experimental evidence
+#acs:Q9Y6N5, O14925, O14879, ...
+#count:1068
+#time:0.25
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :cellularComponent ?loc.
+  ?loc :term/:childOf cv:SL-0173.
+  ?loc :evidence /:assignedBy ?src.
+  filter ( ?src not in (source:Human_protein_atlas_subcellular_localization, source:GFP-cDNAEMBL))
+}

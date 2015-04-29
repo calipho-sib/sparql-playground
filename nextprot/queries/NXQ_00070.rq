@@ -1,0 +1,12 @@
+#id:NXQ_00070
+#title:Proteins secreted but without a signal sequence
+#tags:subcellular location,cellular component,signal sequence
+#acs:P00739,Q14393,P01344,...
+#count:396
+#time: 0.12
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :cellularComponent/:term/:childOf cv:SL-0243
+  filter not exists {?iso :signalPeptide ?_}
+}

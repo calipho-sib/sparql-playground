@@ -1,0 +1,12 @@
+#id:NXQ_00104
+#title:Proteins whose gene is on chromosome 21 with at least one cross-reference to Orphanet
+#tags:Xref,cross-reference,chromosomal location,disease
+#acs:O43918,P57078,P12110
+#count:31
+#time:0.11
+
+select distinct ?entry where {
+  ?entry
+  :reference / :provenance db:Orphanet ;
+  :gene / :chromosome "21"^^xsd:string
+}

@@ -1,0 +1,9 @@
+#title:How to get the declared properties
+#comment:Selects the properties
+#tags:rdf properties,advanced
+
+SELECT ?property
+WHERE {
+    ?property a rdf:Property . 
+    # you can replace a by rdf:type (they are synonyms)
+}

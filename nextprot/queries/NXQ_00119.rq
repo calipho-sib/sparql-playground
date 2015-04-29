@@ -1,0 +1,11 @@
+#id:NXQ_00119
+#title:Proteins with at least one annotated mutagenesis site
+#tags:mutagenesis
+#acs:Q9UPT9,Q14678,Q9UQB8
+#count:3259
+#time:0.18
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :mutagenesis ?mut.
+}

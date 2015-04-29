@@ -1,0 +1,35 @@
+#id:NXQ_00088
+#title:Proteins that have orthologs/paralogs in mammals but not in zebrafish
+#comment:Federated query with Ensembl
+#tags:federated query,ortholog
+#acs:A2A288,Q6K0P9,Q8NEG2
+#count:3263
+#time:15
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX ensembl: <http://rdf.ebi.ac.uk/resource/ensembl/>
+PREFIX ensemblterms: <http://rdf.ebi.ac.uk/terms/ensembl/>
+PREFIX unicore: <http://purl.uniprot.org/core/>
+
+SELECT distinct ?entry WHERE {
+  service <http://wwwdev.ebi.ac.uk/rdf/services/ensembl/sparql> {
+  select distinct ?humanProteinLabel WHERE {
+   ?humanGene rdf:type ensemblterms:protein_coding .
+   ?humanGene obo:RO_0002162 <http://identifiers.org/taxonomy/9606> .
+   ?humanGene ensemblterms:INFERRED_FROM_TRANSLATION ?humanProtein .
+   ?humanProtein a unicore:Reviewed_Protein; rdfs:label ?humanProteinLabel .
+   ?humanGene sio:SIO_000558 ?mouseGene .
+   ?mouseGene obo:RO_0002162 <http://identifiers.org/taxonomy/10090> .
+   OPTIONAL {
+    ?humanGene sio:SIO_000558 ?zebraGene .
+    ?zebraGene obo:RO_0002162 <http://identifiers.org/taxonomy/7955> .
+    }
+  filter(!bound(?zebraGene)).
+  }
+ }
+bind(iri(CONCAT("http://www.uniprot.org/uniprot/",?humanProteinLabel)) as ?unipage).
+?entry :swissprotPage ?unipage.
+}

@@ -1,0 +1,35 @@
+#id:NXQ_00126
+#title:Peptides that are potential neo N-termini from undescribed isoforms
+#tags:snorql-only,peptide,alternative splicing
+#acs:Q9NX46,Q49A26,P48556
+#count:8651
+#time:44
+
+select distinct ?entry ?pep where {
+  ?entry :isoform ?iso .
+  ?iso :peptideMapping ?pm.
+  ?pm :position [ :start ?p1 ; :end ?p2] .
+  ?pm :proteotypic true .
+  filter(?p1 > 2). # must not be already N-terminal
+  ?iso :sequence / :chain ?chain.
+  bind (substr(?chain, ?p1+1, ?p2 - ?p1) as ?pep) .
+  bind (substr(?chain, ?p1, 1) as ?prevAA) .
+  bind (substr(?chain, ?p1 + 1, 1) as ?firstAA) .
+  bind (substr(?chain, ?p2, 1) as ?lastAA) .
+  filter(!regex (?prevAA,'[KR]')) # must be semi-tryptic in N-ter
+  filter(regex (?prevAA,'M') || regex (?firstAA,'M')) # must be N-terminal
+  filter(!regex (?firstAA,'[DEFIKLRY]')) #plausible 2nd AA
+  filter(regex (?lastAA,'[KR]')) # must be tryptic in C-ter
+  filter not exists {
+   ?entry :isoform ?iso2.
+   ?iso2 :sequence / :chain ?chain2.
+   ?iso2 :matureProtein [ :start ?mstart ; :end ?mend]
+   bind (substr(?chain2, ?mstart, ?mend - ?mstart + 1) as ?mat2) .
+   filter(strlen(?mat2) > 30).
+   bind (substr(?mat2, 2, strlen(?mat2) - 1) as ?mat22) .
+   filter(regex(?mat2,concat("^", ?pep)) || regex(?mat22,concat("^", ?pep))).
+   }
+}  
+order by ?pep
+
+# Maybe overestimated, need additional filter(s) ?

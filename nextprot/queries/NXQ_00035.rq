@@ -1,0 +1,11 @@
+#id:NXQ_00035
+#title:Proteins located in the mitochondrion and which are enzymes
+#tags:enzyme,function,subcellular location,cellular component
+#acs:O00154, P55211, Q14318, ...
+#count:562
+#time:0.08
+
+select distinct ?entry where {
+  ?entry :classifiedWith/rdf:type :EnzymeClassificationCv.
+  ?entry :isoform/:cellularComponent/:term/:childOf cv:SL-0173
+}

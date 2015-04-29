@@ -1,0 +1,18 @@
+#id:NXQ_00034
+#title:Proteins with at least one homeobox domain and with at least one variant in the homeobox domain(s)
+#tags:domain,region,variant,sequence variation
+#acs:A6NHT5, A6NNA5, O95076, ...
+#count:232
+#time:0.15
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  # with >=1 homeobox domain
+  ?iso :region ?st1.
+  ?st1 :term cv:DO-00312;:start ?start;:end ?end.
+  # with >=1 variant
+  ?iso :variant ?var.
+  ?var :start ?varpos.
+  # one variant in the homeobox domain
+  filter (?varpos >=?start && ?varpos <=?end)
+}

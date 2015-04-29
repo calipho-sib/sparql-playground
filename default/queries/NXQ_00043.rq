@@ -1,0 +1,12 @@
+#id:NXQ_00043
+#title:Get list of class and instance pairs (subjects and objectes connected with rdf:type) in the dataset - only 4 first solutions (?class ?instance pairs) of the full set ordered by ?class and ?instance
+#comment:The LIMIT modifier sets an upper bound to the number of solutions returned.
+#comment:The ORDER BY clause is applied on the full set of solutions. The LIMIT modifier is taken into account
+#comment:after the ORDER BY clause.
+#tags:1 graph pattern,2 variables,ORDER BY,LIMIT
+
+SELECT ?class ?instance WHERE {
+  ?instance rdf:type ?class . 
+}
+ORDER BY ?class ?instance
+LIMIT 4

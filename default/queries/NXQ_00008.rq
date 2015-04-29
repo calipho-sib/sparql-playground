@@ -1,0 +1,11 @@
+#id:NXQ_00008
+#title:Select things that have a weight between 5 and 7 kg
+#comment:Selects subjects described with the tto:weight predicate. ?thing, ?name are the variables, 
+#comment:each filter removes some solutions in turn according to the ?weight value
+#tags:1 graph pattern,2 variables,FILTER,2 filters
+    
+select ?thing ?weight where {
+  ?thing tto:weight ?weight .
+  FILTER (?weight > "5.0"^^xsd:decimal) 
+  FILTER (?weight < "7.0"^^xsd:decimal) 
+}

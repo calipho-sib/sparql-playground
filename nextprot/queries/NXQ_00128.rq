@@ -1,0 +1,12 @@
+#id:NXQ_00128
+#title:Proteins whose gene is annotated to be induced by interferons
+#tags:induction
+#acs:P00973,P09913,P09914
+#count:162
+#time:0.1
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :induction /rdfs:comment ?comment.
+  filter(regex (?comment,'IFN|interferon',"i"))
+}

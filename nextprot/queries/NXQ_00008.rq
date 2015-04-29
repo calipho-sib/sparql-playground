@@ -1,0 +1,11 @@
+#id:NXQ_00008
+#title:Proteins whose genes are less than 50000 bp away from the location of the gene coding for protein p53
+#tags:gene,chromosomal location
+#acs:P04278,P04637,P14415,Q15768,Q96F10,Q9BUR4
+#count:5
+
+select distinct ?entry where {
+  entry:NX_P04637 :gene /:begin ?s;:gene/:chromosome ?chr.
+  ?entry :gene/:begin ?gs;:gene/:chromosome ?chr.
+  filter ( ?gs > (?s -50000) && ?gs <= (?s +50000) && ?entry != entry:NX_P04637 )
+}

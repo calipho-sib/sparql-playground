@@ -1,0 +1,1216 @@
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix :      <http://nextprot.org/rdf#> .
+@prefix db:    <http://nextprot.org/rdf/db/> .
+@prefix gene:  <http://nextprot.org/rdf/gene/> .
+@prefix evidence: <http://nextprot.org/rdf/evidence/> .
+@prefix interaction: <http://nextprot.org/rdf/interaction/> .
+@prefix cv:    <http://nextprot.org/rdf/terminology/> .
+@prefix up:    <http://purl.uniprot.org/core/> .
+@prefix publication: <http://nextprot.org/rdf/publication/> .
+@prefix annotation: <http://nextprot.org/rdf/annotation/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix source: <http://nextprot.org/rdf/source/> .
+@prefix entry: <http://nextprot.org/rdf/entry/> .
+@prefix context: <http://nextprot.org/rdf/context/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix isoform: <http://nextprot.org/rdf/isoform/> .
+@prefix xref:  <http://nextprot.org/rdf/xref/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix identifier: <http://nextprot.org/rdf/identifier/> .
+@prefix unipage: <http://www.uniprot.org/uniprot/> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+
+:Pathway  rdfs:subClassOf  :Pathway .
+
+db:Micado  rdfs:subClassOf  db:Micado .
+
+:TransmembraneRegion  rdfs:subClassOf  :TransmembraneRegion .
+
+:BY_DEFAULT  rdfs:subClassOf  :BY_DEFAULT .
+
+db:SKIP  rdfs:subClassOf  db:SKIP .
+
+source:PeptideAtlas_human_pancreas
+        rdfs:subClassOf  source:PeptideAtlas_human_pancreas .
+
+db:CCRID  rdfs:subClassOf  db:CCRID .
+
+db:MEROPS  rdfs:subClassOf  db:MEROPS .
+
+:Turn   rdfs:subClassOf  :Turn .
+
+db:CMR  rdfs:subClassOf  db:CMR .
+
+db:KIAA  rdfs:subClassOf  db:KIAA .
+
+:TopologicalDomain  rdfs:subClassOf  :TopologicalDomain .
+
+db:Cosmic-CLP  rdfs:subClassOf  db:Cosmic-CLP .
+
+db:UniPathway  rdfs:subClassOf  db:UniPathway .
+
+source:PMID_21890473  rdfs:subClassOf  source:PMID_21890473 .
+
+:CalciumBindingRegion
+        rdfs:subClassOf  :CalciumBindingRegion .
+
+db:SMART  rdfs:subClassOf  db:SMART .
+
+:IBD    rdfs:subClassOf  :IBD .
+
+db:LegioList  rdfs:subClassOf  db:LegioList .
+
+db:OrthoDB  rdfs:subClassOf  db:OrthoDB .
+
+:MiscellaneousRegion  rdfs:subClassOf  :MiscellaneousRegion .
+
+db:Coriell  rdfs:subClassOf  db:Coriell .
+
+:Caution  rdfs:subClassOf  :Caution .
+
+db:MGC  rdfs:subClassOf  db:MGC .
+
+db:GenoList  rdfs:subClassOf  db:GenoList .
+
+db:IntAct  rdfs:subClassOf  db:IntAct .
+
+:NextprotFamilyCv  rdfs:subClassOf  :NextprotFamilyCv .
+
+db:UniCarbKB  rdfs:subClassOf  db:UniCarbKB .
+
+:ISS    rdfs:subClassOf  :ISS .
+
+db:KCLB  rdfs:subClassOf  db:KCLB .
+
+db:CCLE  rdfs:subClassOf  db:CCLE .
+
+db:NCI  rdfs:subClassOf  db:NCI .
+
+db:IHW  rdfs:subClassOf  db:IHW .
+
+:SubcellularLocation  rdfs:subClassOf  :SubcellularLocation .
+
+:Pharmaceutical  rdfs:subClassOf  :Pharmaceutical .
+
+source:SGD  rdfs:subClassOf  source:SGD .
+
+:GeneralAnnotation  rdfs:subClassOf  :GeneralAnnotation .
+
+db:PhosphoSite  rdfs:subClassOf  db:PhosphoSite .
+
+db:MypuList  rdfs:subClassOf  db:MypuList .
+
+db:PubMed  rdfs:subClassOf  db:PubMed .
+
+db:RESID  rdfs:subClassOf  db:RESID .
+
+db:ChiTaRS  rdfs:subClassOf  db:ChiTaRS .
+
+db:RCB  rdfs:subClassOf  db:RCB .
+
+:InteractingRegion  rdfs:subClassOf  :InteractingRegion .
+
+db:AraC-XylS  rdfs:subClassOf  db:AraC-XylS .
+
+db:EMBL  rdfs:subClassOf  db:EMBL .
+
+db:RefSeq  rdfs:subClassOf  db:RefSeq .
+
+db:HAMAP-Rule  rdfs:subClassOf  db:HAMAP-Rule .
+
+db:DNASU  rdfs:subClassOf  db:DNASU .
+
+:GoBiologicalProcess  rdfs:subClassOf  :GoBiologicalProcess .
+
+:Function  rdfs:subClassOf  :Function .
+
+source:PMID_22865923  rdfs:subClassOf  source:PMID_22865923 .
+
+db:2DBase-Ecoli  rdfs:subClassOf  db:2DBase-Ecoli .
+
+:LipidationSite  rdfs:subClassOf  :LipidationSite .
+
+db:RGD  rdfs:subClassOf  db:RGD .
+
+db:Patent  rdfs:subClassOf  db:Patent .
+
+:UNKNOWN  rdfs:subClassOf  :UNKNOWN .
+
+:Evidence_at_protein_level
+        rdfs:subClassOf  :Evidence_at_protein_level .
+
+db:CTD  rdfs:subClassOf  db:CTD .
+
+:Positive  rdfs:subClassOf  :Positive .
+
+:UniprotKeyword  rdfs:subClassOf  :UniprotKeyword .
+
+:BetaStrand  rdfs:subClassOf  :BetaStrand .
+
+source:MTBbase  rdfs:subClassOf  source:MTBbase .
+
+db:Cornea-2DPAGE  rdfs:subClassOf  db:Cornea-2DPAGE .
+
+db:IZSLER  rdfs:subClassOf  db:IZSLER .
+
+db:Cosmic  rdfs:subClassOf  db:Cosmic .
+
+:NucleotidePhosphateBindingRegion
+        rdfs:subClassOf  :NucleotidePhosphateBindingRegion .
+
+:NextprotTopologyCv  rdfs:subClassOf  :NextprotTopologyCv .
+
+db:VectorBase  rdfs:subClassOf  db:VectorBase .
+
+:Region  rdfs:subClassOf  :Region .
+
+:EnzymeRegulation  rdfs:subClassOf  :EnzymeRegulation .
+
+db:EuPathDB  rdfs:subClassOf  db:EuPathDB .
+
+db:BCRJ  rdfs:subClassOf  db:BCRJ .
+
+db:IMGT  rdfs:subClassOf  db:IMGT .
+
+db:MGI  rdfs:subClassOf  db:MGI .
+
+source:PeptideAtlas_human_brain
+        rdfs:subClassOf  source:PeptideAtlas_human_brain .
+
+db:CleanEx  rdfs:subClassOf  db:CleanEx .
+
+source:PMID_20140087  rdfs:subClassOf  source:PMID_20140087 .
+
+db:GeneWiki  rdfs:subClassOf  db:GeneWiki .
+
+source:RefGenome  rdfs:subClassOf  source:RefGenome .
+
+db:SRMAtlas  rdfs:subClassOf  db:SRMAtlas .
+
+db:World-2DPAGE  rdfs:subClassOf  db:World-2DPAGE .
+
+db:IMGT_HLA  rdfs:subClassOf  db:IMGT_HLA .
+
+db:GeneTree  rdfs:subClassOf  db:GeneTree .
+
+db:DOSAC-COBS-2DPAGE  rdfs:subClassOf  db:DOSAC-COBS-2DPAGE .
+
+db:MetaCyc  rdfs:subClassOf  db:MetaCyc .
+
+:Evidence  rdfs:subClassOf  :Evidence .
+
+db:CCLV  rdfs:subClassOf  db:CCLV .
+
+:IGC    rdfs:subClassOf  :IGC .
+
+db:IMAGE  rdfs:subClassOf  db:IMAGE .
+
+source:PMID_21139048  rdfs:subClassOf  source:PMID_21139048 .
+
+source:PeptideAtlas_human_digestive_system
+        rdfs:subClassOf  source:PeptideAtlas_human_digestive_system .
+
+db:HUGE  rdfs:subClassOf  db:HUGE .
+
+db:dictyBase  rdfs:subClassOf  db:dictyBase .
+
+:SubcellularLocationNote
+        rdfs:subClassOf  :SubcellularLocationNote .
+
+:Selenocysteine  rdfs:subClassOf  :Selenocysteine .
+
+:UniprotRegionStructureCv
+        rdfs:subClassOf  :UniprotRegionStructureCv .
+
+db:GenAtlas  rdfs:subClassOf  db:GenAtlas .
+
+db:DYP  rdfs:subClassOf  db:DYP .
+
+source:PMID_22199227  rdfs:subClassOf  source:PMID_22199227 .
+
+db:ECO2DBASE  rdfs:subClassOf  db:ECO2DBASE .
+
+source:Antibodypedia  rdfs:subClassOf  source:Antibodypedia .
+
+source:PeptideAtlas_human_urine
+        rdfs:subClassOf  source:PeptideAtlas_human_urine .
+
+db:PaxDb  rdfs:subClassOf  db:PaxDb .
+
+db:MIM  rdfs:subClassOf  db:MIM .
+
+source:PMID_20570859  rdfs:subClassOf  source:PMID_20570859 .
+
+:SILVER  rdfs:subClassOf  :SILVER .
+
+:GoCellularComponentCv
+        rdfs:subClassOf  :GoCellularComponentCv .
+
+:SrmPeptideMapping  rdfs:subClassOf  :SrmPeptideMapping .
+
+db:CYGD  rdfs:subClassOf  db:CYGD .
+
+db:Aarhus_Ghent-2DPAGE
+        rdfs:subClassOf  db:Aarhus_Ghent-2DPAGE .
+
+db:ProMEX  rdfs:subClassOf  db:ProMEX .
+
+source:PMID_23312004  rdfs:subClassOf  source:PMID_23312004 .
+
+db:ANU-2DPAGE  rdfs:subClassOf  db:ANU-2DPAGE .
+
+db:NMPDR  rdfs:subClassOf  db:NMPDR .
+
+source:IPI  rdfs:subClassOf  source:IPI .
+
+:IEP    rdfs:subClassOf  :IEP .
+
+db:SMR  rdfs:subClassOf  db:SMR .
+
+db:TreeFam  rdfs:subClassOf  db:TreeFam .
+
+db:JCRB  rdfs:subClassOf  db:JCRB .
+
+db:Others  rdfs:subClassOf  db:Others .
+
+db:WorfDB  rdfs:subClassOf  db:WorfDB .
+
+source:PIR  rdfs:subClassOf  source:PIR .
+
+db:SABIO-RK  rdfs:subClassOf  db:SABIO-RK .
+
+:IPI    rdfs:subClassOf  :IPI .
+
+:History  rdfs:subClassOf  :History .
+
+db:GenomeReviews  rdfs:subClassOf  db:GenomeReviews .
+
+:Repeat  rdfs:subClassOf  :Repeat .
+
+:PdbMapping  rdfs:subClassOf  :PdbMapping .
+
+db:EnsemblBacteria  rdfs:subClassOf  db:EnsemblBacteria .
+
+:MetalBindingSite  rdfs:subClassOf  :MetalBindingSite .
+
+:ExpressionLevel  rdfs:subClassOf  :ExpressionLevel .
+
+source:PeptideAtlas_human_spleen
+        rdfs:subClassOf  source:PeptideAtlas_human_spleen .
+
+db:RSCB  rdfs:subClassOf  db:RSCB .
+
+:Microarray  rdfs:subClassOf  :Microarray .
+
+:MitochondrialTransitPeptide
+        rdfs:subClassOf  :MitochondrialTransitPeptide .
+
+:OrganelleCv  rdfs:subClassOf  :OrganelleCv .
+
+db:Siena-2DPAGE  rdfs:subClassOf  db:Siena-2DPAGE .
+
+:SignalPeptide  rdfs:subClassOf  :SignalPeptide .
+
+db:neXtProt  rdfs:subClassOf  db:neXtProt .
+
+db:Pathway_Interaction_DB
+        rdfs:subClassOf  db:Pathway_Interaction_DB .
+
+source:PMID_20972266  rdfs:subClassOf  source:PMID_20972266 .
+
+db:H-InvDB  rdfs:subClassOf  db:H-InvDB .
+
+db:PRO  rdfs:subClassOf  db:PRO .
+
+db:HOGENOM  rdfs:subClassOf  db:HOGENOM .
+
+:IGI    rdfs:subClassOf  :IGI .
+
+:PositionalAnnotation
+        rdfs:subClassOf  :PositionalAnnotation .
+
+db:SWISS-2DPAGE  rdfs:subClassOf  db:SWISS-2DPAGE .
+
+source:MeSH  rdfs:subClassOf  source:MeSH .
+
+db:IFO  rdfs:subClassOf  db:IFO .
+
+:FunctionInfo  rdfs:subClassOf  :FunctionInfo .
+
+db:DOI  rdfs:subClassOf  db:DOI .
+
+:Source  rdfs:subClassOf  :Source .
+
+:ProteinSequence  rdfs:subClassOf  :ProteinSequence .
+
+db:Antibodypedia  rdfs:subClassOf  db:Antibodypedia .
+
+:UniprotFamilyCv  rdfs:subClassOf  :UniprotFamilyCv .
+
+db:EchoBASE  rdfs:subClassOf  db:EchoBASE .
+
+db:BuruList  rdfs:subClassOf  db:BuruList .
+
+db:Clinvar  rdfs:subClassOf  db:Clinvar .
+
+source:GOC  rdfs:subClassOf  source:GOC .
+
+db:Pfam  rdfs:subClassOf  db:Pfam .
+
+source:dictyBase  rdfs:subClassOf  source:dictyBase .
+
+db:CCDS  rdfs:subClassOf  db:CCDS .
+
+:BinaryInteraction  rdfs:subClassOf  :BinaryInteraction .
+
+:PeptideMapping  rdfs:subClassOf  :PeptideMapping .
+
+db:Allergome  rdfs:subClassOf  db:Allergome .
+
+db:UCSC  rdfs:subClassOf  db:UCSC .
+
+db:PIRSF  rdfs:subClassOf  db:PIRSF .
+
+source:PMID_19413330  rdfs:subClassOf  source:PMID_19413330 .
+
+source:NextProt_integration
+        rdfs:subClassOf  source:NextProt_integration .
+
+db:PRINTS  rdfs:subClassOf  db:PRINTS .
+
+source:AgBase  rdfs:subClassOf  source:AgBase .
+
+:RCA    rdfs:subClassOf  :RCA .
+
+db:PATRIC  rdfs:subClassOf  db:PATRIC .
+
+:EvocDevelopmentalStageCv
+        rdfs:subClassOf  :EvocDevelopmentalStageCv .
+
+:ISO    rdfs:subClassOf  :ISO .
+
+source:Human_protein_atlas_subcellular_localization
+        rdfs:subClassOf  source:Human_protein_atlas_subcellular_localization .
+
+db:UniGene  rdfs:subClassOf  db:UniGene .
+
+:GoMolecularFunctionCv
+        rdfs:subClassOf  :GoMolecularFunctionCv .
+
+db:AGD  rdfs:subClassOf  db:AGD .
+
+:QualityQualifier  rdfs:subClassOf  :QualityQualifier .
+
+db:DKFZ  rdfs:subClassOf  db:DKFZ .
+
+:Entry  rdfs:subClassOf  :Entry .
+
+:FamilyName  rdfs:subClassOf  :FamilyName .
+
+:Uncertain  rdfs:subClassOf  :Uncertain .
+
+:CellularComponent  rdfs:subClassOf  :CellularComponent .
+
+db:DEPOD  rdfs:subClassOf  db:DEPOD .
+
+db:EnsemblProtists  rdfs:subClassOf  db:EnsemblProtists .
+
+db:Illumina  rdfs:subClassOf  db:Illumina .
+
+:NonStandardAminoAcidCv
+        rdfs:subClassOf  :NonStandardAminoAcidCv .
+
+source:EMBL-EBI  rdfs:subClassOf  source:EMBL-EBI .
+
+:ExpressionInfo  rdfs:subClassOf  :ExpressionInfo .
+
+:NonTerminalResidue  rdfs:subClassOf  :NonTerminalResidue .
+
+source:CCDS  rdfs:subClassOf  source:CCDS .
+
+db:TCDB  rdfs:subClassOf  db:TCDB .
+
+db:Xenbase  rdfs:subClassOf  db:Xenbase .
+
+db:PeroxiBase  rdfs:subClassOf  db:PeroxiBase .
+
+db:Leproma  rdfs:subClassOf  db:Leproma .
+
+db:ConoServer  rdfs:subClassOf  db:ConoServer .
+
+db:ModBase  rdfs:subClassOf  db:ModBase .
+
+db:PRIDE  rdfs:subClassOf  db:PRIDE .
+
+source:PeptideAtlas_human_plasma
+        rdfs:subClassOf  source:PeptideAtlas_human_plasma .
+
+:UniprotPtmCv  rdfs:subClassOf  :UniprotPtmCv .
+
+db:BioCyc  rdfs:subClassOf  db:BioCyc .
+
+db:Bgee  rdfs:subClassOf  db:Bgee .
+
+source:PeptideAtlas_human_lung
+        rdfs:subClassOf  source:PeptideAtlas_human_lung .
+
+db:CLDB  rdfs:subClassOf  db:CLDB .
+
+source:PeptideAtlas_human_eye
+        rdfs:subClassOf  source:PeptideAtlas_human_eye .
+
+:GOEvidenceCode  rdfs:subClassOf  :GOEvidenceCode .
+
+owl:Thing  rdfs:subClassOf  owl:Thing .
+
+:ComputedEvidence  rdfs:subClassOf  :ComputedEvidence .
+
+:ExpressionProfile  rdfs:subClassOf  :ExpressionProfile .
+
+db:GO_REF  rdfs:subClassOf  db:GO_REF .
+
+db:PDBj  rdfs:subClassOf  db:PDBj .
+
+db:SCOP  rdfs:subClassOf  db:SCOP .
+
+:AntibodyMapping  rdfs:subClassOf  :AntibodyMapping .
+
+:ProteinExistence  rdfs:subClassOf  :ProteinExistence .
+
+:GOLD   rdfs:subClassOf  :GOLD .
+
+source:PMID_23584533  rdfs:subClassOf  source:PMID_23584533 .
+
+source:PINC  rdfs:subClassOf  source:PINC .
+
+:Medium  rdfs:subClassOf  :Medium .
+
+source:PeptideAtlas_human_urinary_bladder
+        rdfs:subClassOf  source:PeptideAtlas_human_urinary_bladder .
+
+:Name   rdfs:subClassOf  :Name .
+
+:SequenceCaution  rdfs:subClassOf  :SequenceCaution .
+
+db:HGNC  rdfs:subClassOf  db:HGNC .
+
+:NextprotCarbohydrateCv
+        rdfs:subClassOf  :NextprotCarbohydrateCv .
+
+db:Rouge  rdfs:subClassOf  db:Rouge .
+
+source:MDATA_0004_2011
+        rdfs:subClassOf  source:MDATA_0004_2011 .
+
+source:Bgee  rdfs:subClassOf  source:Bgee .
+
+db:Array-probeset  rdfs:subClassOf  db:Array-probeset .
+
+db:HPRD  rdfs:subClassOf  db:HPRD .
+
+db:HAMAP  rdfs:subClassOf  db:HAMAP .
+
+:UnipathwayCv  rdfs:subClassOf  :UnipathwayCv .
+
+db:ENCODE  rdfs:subClassOf  db:ENCODE .
+
+source:MEROPS  rdfs:subClassOf  source:MEROPS .
+
+:ModifiedResidue  rdfs:subClassOf  :ModifiedResidue .
+
+:EnzymeClassificationCv
+        rdfs:subClassOf  :EnzymeClassificationCv .
+
+:TAS    rdfs:subClassOf  :TAS .
+
+db:EnsemblPlants  rdfs:subClassOf  db:EnsemblPlants .
+
+:IC     rdfs:subClassOf  :IC .
+
+:Induction  rdfs:subClassOf  :Induction .
+
+:EVocAnatomicalSystemCv
+        rdfs:subClassOf  :EVocAnatomicalSystemCv .
+
+:PtmInfo  rdfs:subClassOf  :PtmInfo .
+
+source:PMID_22468782  rdfs:subClassOf  source:PMID_22468782 .
+
+:NextprotAnnotationCv
+        rdfs:subClassOf  :NextprotAnnotationCv .
+
+:Mapping  rdfs:subClassOf  :Mapping .
+
+source:NCBI  rdfs:subClassOf  source:NCBI .
+
+db:TAIR  rdfs:subClassOf  db:TAIR .
+
+source:BHF-UCL  rdfs:subClassOf  source:BHF-UCL .
+
+db:TKG  rdfs:subClassOf  db:TKG .
+
+db:mycoCLAP  rdfs:subClassOf  db:mycoCLAP .
+
+:EnzymeClassification
+        rdfs:subClassOf  :EnzymeClassification .
+
+source:NCI  rdfs:subClassOf  source:NCI .
+
+db:GuidetoPHARMACOLOGY
+        rdfs:subClassOf  db:GuidetoPHARMACOLOGY .
+
+db:ENZYME  rdfs:subClassOf  db:ENZYME .
+
+:ExperimentalContext  rdfs:subClassOf  :ExperimentalContext .
+
+source:HGNC  rdfs:subClassOf  source:HGNC .
+
+:ZincFingerRegion  rdfs:subClassOf  :ZincFingerRegion .
+
+source:OBO  rdfs:subClassOf  source:OBO .
+
+db:GeneID  rdfs:subClassOf  db:GeneID .
+
+db:COMPLUYEAST-2DPAGE
+        rdfs:subClassOf  db:COMPLUYEAST-2DPAGE .
+
+:Topology  rdfs:subClassOf  :Topology .
+
+db:MaizeGDB  rdfs:subClassOf  db:MaizeGDB .
+
+:NciMetathesaurusCv  rdfs:subClassOf  :NciMetathesaurusCv .
+
+db:ArachnoServer  rdfs:subClassOf  db:ArachnoServer .
+
+source:HPRD  rdfs:subClassOf  source:HPRD .
+
+:Miscellaneous  rdfs:subClassOf  :Miscellaneous .
+
+db:ExpressionAtlas  rdfs:subClassOf  db:ExpressionAtlas .
+
+:IEA    rdfs:subClassOf  :IEA .
+
+:Xref   rdfs:subClassOf  :Xref .
+
+db:CGD  rdfs:subClassOf  db:CGD .
+
+db:EvolutionaryTrace  rdfs:subClassOf  db:EvolutionaryTrace .
+
+db:Affymetrix  rdfs:subClassOf  db:Affymetrix .
+
+:SmallMoleculeInteraction
+        rdfs:subClassOf  :SmallMoleculeInteraction .
+
+db:PMAP-CutDB  rdfs:subClassOf  db:PMAP-CutDB .
+
+:IBA    rdfs:subClassOf  :IBA .
+
+source:Prosite  rdfs:subClassOf  source:Prosite .
+
+db:BRENDA  rdfs:subClassOf  db:BRENDA .
+
+source:PeptideAtlas_human_male_reproductive_system
+        rdfs:subClassOf  source:PeptideAtlas_human_male_reproductive_system .
+
+:BRONZE  rdfs:subClassOf  :BRONZE .
+
+db:REPRODUCTION-2DPAGE
+        rdfs:subClassOf  db:REPRODUCTION-2DPAGE .
+
+:NR     rdfs:subClassOf  :NR .
+
+:Expression  rdfs:subClassOf  :Expression .
+
+db:NCBI_Taxonomy  rdfs:subClassOf  db:NCBI_Taxonomy .
+
+:UniprotSubcellularTopologyCv
+        rdfs:subClassOf  :UniprotSubcellularTopologyCv .
+
+source:PeptideAtlas_human_liver
+        rdfs:subClassOf  source:PeptideAtlas_human_liver .
+
+db:hESCreg  rdfs:subClassOf  db:hESCreg .
+
+db:ZFIN  rdfs:subClassOf  db:ZFIN .
+
+source:DFLAT  rdfs:subClassOf  source:DFLAT .
+
+db:PHCI-2DPAGE  rdfs:subClassOf  db:PHCI-2DPAGE .
+
+:CleavageSite  rdfs:subClassOf  :CleavageSite .
+
+:DomainInfo  rdfs:subClassOf  :DomainInfo .
+
+source:PMID_21406692  rdfs:subClassOf  source:PMID_21406692 .
+
+db:PDBsum  rdfs:subClassOf  db:PDBsum .
+
+:IntramembraneRegion  rdfs:subClassOf  :IntramembraneRegion .
+
+:ProcessingProduct  rdfs:subClassOf  :ProcessingProduct .
+
+source:String  rdfs:subClassOf  source:String .
+
+:Mutagenesis  rdfs:subClassOf  :Mutagenesis .
+
+source:InterPro  rdfs:subClassOf  source:InterPro .
+
+db:PseudoCAP  rdfs:subClassOf  db:PseudoCAP .
+
+:IMP    rdfs:subClassOf  :IMP .
+
+:EXP    rdfs:subClassOf  :EXP .
+
+:Helix  rdfs:subClassOf  :Helix .
+
+db:ListiList  rdfs:subClassOf  db:ListiList .
+
+:InitiatorMethionine  rdfs:subClassOf  :InitiatorMethionine .
+
+source:MGI  rdfs:subClassOf  source:MGI .
+
+db:GFP-cDNA  rdfs:subClassOf  db:GFP-cDNA .
+
+db:SagaList  rdfs:subClassOf  db:SagaList .
+
+db:GOA  rdfs:subClassOf  db:GOA .
+
+:PeroxisomeTransitPeptide
+        rdfs:subClassOf  :PeroxisomeTransitPeptide .
+
+:EVocCv  rdfs:subClassOf  :EVocCv .
+
+source:Alzheimers_University_of_Toronto
+        rdfs:subClassOf  source:Alzheimers_University_of_Toronto .
+
+db:MCCL  rdfs:subClassOf  db:MCCL .
+
+db:Uberon  rdfs:subClassOf  db:Uberon .
+
+db:PomBase  rdfs:subClassOf  db:PomBase .
+
+source:UniPathway  rdfs:subClassOf  source:UniPathway .
+
+:CompositionallyBiasedRegion
+        rdfs:subClassOf  :CompositionallyBiasedRegion .
+
+db:BioGrid  rdfs:subClassOf  db:BioGrid .
+
+db:PSI-MOD  rdfs:subClassOf  db:PSI-MOD .
+
+source:PMID_23153008  rdfs:subClassOf  source:PMID_23153008 .
+
+db:KEGGPathway  rdfs:subClassOf  db:KEGGPathway .
+
+:GoCellularComponent  rdfs:subClassOf  :GoCellularComponent .
+
+:IKR    rdfs:subClassOf  :IKR .
+
+db:UniProt  rdfs:subClassOf  db:UniProt .
+
+db:ISCR  rdfs:subClassOf  db:ISCR .
+
+db:EPODOC  rdfs:subClassOf  db:EPODOC .
+
+db:OGP  rdfs:subClassOf  db:OGP .
+
+db:HOVERGEN  rdfs:subClassOf  db:HOVERGEN .
+
+:NciThesaurusCv  rdfs:subClassOf  :NciThesaurusCv .
+
+db:Reactome  rdfs:subClassOf  db:Reactome .
+
+db:DIP  rdfs:subClassOf  db:DIP .
+
+db:DSMZ  rdfs:subClassOf  db:DSMZ .
+
+db:ChEBI  rdfs:subClassOf  db:ChEBI .
+
+:CrossLink  rdfs:subClassOf  :CrossLink .
+
+db:UniProt_family  rdfs:subClassOf  db:UniProt_family .
+
+db:SequenceOntology  rdfs:subClassOf  db:SequenceOntology .
+
+source:ClinVar  rdfs:subClassOf  source:ClinVar .
+
+source:GO_central  rdfs:subClassOf  source:GO_central .
+
+db:PDB  rdfs:subClassOf  db:PDB .
+
+db:LINCS  rdfs:subClassOf  db:LINCS .
+
+db:PeptideAtlas  rdfs:subClassOf  db:PeptideAtlas .
+
+db:InParanoid  rdfs:subClassOf  db:InParanoid .
+
+db:SignaLink  rdfs:subClassOf  db:SignaLink .
+
+db:UniProtKB  rdfs:subClassOf  db:UniProtKB .
+
+db:UniProt_domain  rdfs:subClassOf  db:UniProt_domain .
+
+db:ICLC  rdfs:subClassOf  db:ICLC .
+
+db:WEBINFO  rdfs:subClassOf  db:WEBINFO .
+
+db:SBKB  rdfs:subClassOf  db:SBKB .
+
+db:NIH-ARP  rdfs:subClassOf  db:NIH-ARP .
+
+db:CBA  rdfs:subClassOf  db:CBA .
+
+db:GenomeRNAi  rdfs:subClassOf  db:GenomeRNAi .
+
+db:FLJ  rdfs:subClassOf  db:FLJ .
+
+:DisulfideBond  rdfs:subClassOf  :DisulfideBond .
+
+db:SKY_M-FISH_CGH  rdfs:subClassOf  db:SKY_M-FISH_CGH .
+
+db:GenBank  rdfs:subClassOf  db:GenBank .
+
+db:RuleBase  rdfs:subClassOf  db:RuleBase .
+
+:Domain  rdfs:subClassOf  :Domain .
+
+source:PMID_20797634  rdfs:subClassOf  source:PMID_20797634 .
+
+:DnaBindingRegion  rdfs:subClassOf  :DnaBindingRegion .
+
+db:WormPep  rdfs:subClassOf  db:WormPep .
+
+db:PANTHER  rdfs:subClassOf  db:PANTHER .
+
+db:Lonza  rdfs:subClassOf  db:Lonza .
+
+db:KO   rdfs:subClassOf  db:KO .
+
+:NextprotDomainCv  rdfs:subClassOf  :NextprotDomainCv .
+
+source:WormBase  rdfs:subClassOf  source:WormBase .
+
+source:KEGG_PTW  rdfs:subClassOf  source:KEGG_PTW .
+
+db:BindingDB  rdfs:subClassOf  db:BindingDB .
+
+db:ProtoNet  rdfs:subClassOf  db:ProtoNet .
+
+db:FMA  rdfs:subClassOf  db:FMA .
+
+:Term   rdfs:subClassOf  :Term .
+
+db:EMBL-CDS  rdfs:subClassOf  db:EMBL-CDS .
+
+db:PMMA-2DPAGE  rdfs:subClassOf  db:PMMA-2DPAGE .
+
+db:GermOnline  rdfs:subClassOf  db:GermOnline .
+
+:CatalyticActivity  rdfs:subClassOf  :CatalyticActivity .
+
+:IRD    rdfs:subClassOf  :IRD .
+
+db:PptaseDB  rdfs:subClassOf  db:PptaseDB .
+
+:IsoformAnnotationSpecificityQualifier
+        rdfs:subClassOf  :IsoformAnnotationSpecificityQualifier .
+
+:High   rdfs:subClassOf  :High .
+
+db:MaxQB  rdfs:subClassOf  db:MaxQB .
+
+:GoBiologicalProcessCv
+        rdfs:subClassOf  :GoBiologicalProcessCv .
+
+db:Orphanet  rdfs:subClassOf  db:Orphanet .
+
+db:PROSITE  rdfs:subClassOf  db:PROSITE .
+
+:UniprotDiseaseCv  rdfs:subClassOf  :UniprotDiseaseCv .
+
+:BgeeDevelopmentalStageCv
+        rdfs:subClassOf  :BgeeDevelopmentalStageCv .
+
+source:Dyp  rdfs:subClassOf  source:Dyp .
+
+db:DrugBank  rdfs:subClassOf  db:DrugBank .
+
+source:FlyBase  rdfs:subClassOf  source:FlyBase .
+
+db:SGD  rdfs:subClassOf  db:SGD .
+
+db:RCSB  rdfs:subClassOf  db:RCSB .
+
+db:EnsemblFungi  rdfs:subClassOf  db:EnsemblFungi .
+
+:ShortSequenceMotif  rdfs:subClassOf  :ShortSequenceMotif .
+
+db:GPCRDB  rdfs:subClassOf  db:GPCRDB .
+
+source:Ensembl  rdfs:subClassOf  source:Ensembl .
+
+source:MDATA_0033_2013
+        rdfs:subClassOf  source:MDATA_0033_2013 .
+
+db:Gramene  rdfs:subClassOf  db:Gramene .
+
+db:Proteomes  rdfs:subClassOf  db:Proteomes .
+
+:MeshAnatomyCv  rdfs:subClassOf  :MeshAnatomyCv .
+
+db:CAZy  rdfs:subClassOf  db:CAZy .
+
+source:IntAct  rdfs:subClassOf  source:IntAct .
+
+db:PhosSite  rdfs:subClassOf  db:PhosSite .
+
+:VariantInfo  rdfs:subClassOf  :VariantInfo .
+
+source:Roslin_Institute
+        rdfs:subClassOf  source:Roslin_Institute .
+
+cv:ECO_0000104  rdfs:subClassOf  cv:ECO_0000104 .
+
+source:GFP-cDNAEMBL  rdfs:subClassOf  source:GFP-cDNAEMBL .
+
+source:NTNU_SB  rdfs:subClassOf  source:NTNU_SB .
+
+db:TIGR  rdfs:subClassOf  db:TIGR .
+
+:EvidenceCodeOntologyCv
+        rdfs:subClassOf  :EvidenceCodeOntologyCv .
+
+db:Proteopedia  rdfs:subClassOf  db:Proteopedia .
+
+:Disease  rdfs:subClassOf  :Disease .
+
+source:PMID_24129315  rdfs:subClassOf  source:PMID_24129315 .
+
+:UniprotKeywordCv  rdfs:subClassOf  :UniprotKeywordCv .
+
+:Publication  rdfs:subClassOf  :Publication .
+
+db:DisProt  rdfs:subClassOf  db:DisProt .
+
+db:MEDLINE  rdfs:subClassOf  db:MEDLINE .
+
+db:DDBJ  rdfs:subClassOf  db:DDBJ .
+
+:Ptm    rdfs:subClassOf  :Ptm .
+
+source:PubMed  rdfs:subClassOf  source:PubMed .
+
+db:EnsemblMetazoa  rdfs:subClassOf  db:EnsemblMetazoa .
+
+db:dbSNP  rdfs:subClassOf  db:dbSNP .
+
+:ActiveSite  rdfs:subClassOf  :ActiveSite .
+
+:NextprotMetalCv  rdfs:subClassOf  :NextprotMetalCv .
+
+source:PMID_21645671  rdfs:subClassOf  source:PMID_21645671 .
+
+source:LIFEdb  rdfs:subClassOf  source:LIFEdb .
+
+db:ProDom  rdfs:subClassOf  db:ProDom .
+
+db:Genevestigator  rdfs:subClassOf  db:Genevestigator .
+
+source:dbSNP  rdfs:subClassOf  source:dbSNP .
+
+source:PeptideAtlas_human_adrenal_gland
+        rdfs:subClassOf  source:PeptideAtlas_human_adrenal_gland .
+
+db:SUPFAM  rdfs:subClassOf  db:SUPFAM .
+
+db:ESTDAB  rdfs:subClassOf  db:ESTDAB .
+
+db:Ensembl  rdfs:subClassOf  db:Ensembl .
+
+db:MINT  rdfs:subClassOf  db:MINT .
+
+db:TIGRFAMs  rdfs:subClassOf  db:TIGRFAMs .
+
+db:ChEMBL  rdfs:subClassOf  db:ChEMBL .
+
+db:euHCVdb  rdfs:subClassOf  db:euHCVdb .
+
+:ISA    rdfs:subClassOf  :ISA .
+
+db:CATH  rdfs:subClassOf  db:CATH .
+
+:MaturationPeptide  rdfs:subClassOf  :MaturationPeptide .
+
+:SequenceConflict  rdfs:subClassOf  :SequenceConflict .
+
+source:MDATA_0023_2012
+        rdfs:subClassOf  source:MDATA_0023_2012 .
+
+:Evidence_at_transcript_level
+        rdfs:subClassOf  :Evidence_at_transcript_level .
+
+source:Cosmic  rdfs:subClassOf  source:Cosmic .
+
+db:CL   rdfs:subClassOf  db:CL .
+
+source:PeptideAtlas  rdfs:subClassOf  source:PeptideAtlas .
+
+db:ProteinModelPortal
+        rdfs:subClassOf  db:ProteinModelPortal .
+
+db:HPA  rdfs:subClassOf  db:HPA .
+
+db:DMDM  rdfs:subClassOf  db:DMDM .
+
+db:GeneFarm  rdfs:subClassOf  db:GeneFarm .
+
+db:LOC  rdfs:subClassOf  db:LOC .
+
+:Medical  rdfs:subClassOf  :Medical .
+
+db:TubercuList  rdfs:subClassOf  db:TubercuList .
+
+:CoiledCoilRegion  rdfs:subClassOf  :CoiledCoilRegion .
+
+db:STRING  rdfs:subClassOf  db:STRING .
+
+db:ECACC  rdfs:subClassOf  db:ECACC .
+
+db:GAD  rdfs:subClassOf  db:GAD .
+
+db:UCD-2DPAGE  rdfs:subClassOf  db:UCD-2DPAGE .
+
+db:CGH-DB  rdfs:subClassOf  db:CGH-DB .
+
+:Inferred_from_homology
+        rdfs:subClassOf  :Inferred_from_homology .
+
+source:PMID_23236377  rdfs:subClassOf  source:PMID_23236377 .
+
+source:PMID_22148984  rdfs:subClassOf  source:PMID_22148984 .
+
+db:KEGG  rdfs:subClassOf  db:KEGG .
+
+:BindingSite  rdfs:subClassOf  :BindingSite .
+
+:UniprotSubcellularLocationCv
+        rdfs:subClassOf  :UniprotSubcellularLocationCv .
+
+:Isoform  rdfs:subClassOf  :Isoform .
+
+:CuratedEvidence  rdfs:subClassOf  :CuratedEvidence .
+
+db:neXtProtDoc  rdfs:subClassOf  db:neXtProtDoc .
+
+:MeshCv  rdfs:subClassOf  :MeshCv .
+
+source:PMID_23266961  rdfs:subClassOf  source:PMID_23266961 .
+
+db:CLO  rdfs:subClassOf  db:CLO .
+
+db:NCImetathesaurus  rdfs:subClassOf  db:NCImetathesaurus .
+
+db:OMA  rdfs:subClassOf  db:OMA .
+
+db:InterPro  rdfs:subClassOf  db:InterPro .
+
+:IDA    rdfs:subClassOf  :IDA .
+
+:CellosaurusCv  rdfs:subClassOf  :CellosaurusCv .
+
+db:PhotoList  rdfs:subClassOf  db:PhotoList .
+
+db:IPI  rdfs:subClassOf  db:IPI .
+
+source:GDB  rdfs:subClassOf  source:GDB .
+
+db:PhylomeDB  rdfs:subClassOf  db:PhylomeDB .
+
+db:PharmGKB  rdfs:subClassOf  db:PharmGKB .
+
+db:ProtClustDB  rdfs:subClassOf  db:ProtClustDB .
+
+db:UniProt_control_vocabulary
+        rdfs:subClassOf  db:UniProt_control_vocabulary .
+
+source:PMID_18614565  rdfs:subClassOf  source:PMID_18614565 .
+
+:MiscellaneousSite  rdfs:subClassOf  :MiscellaneousSite .
+
+:MatureProtein  rdfs:subClassOf  :MatureProtein .
+
+source:PMID_20068231  rdfs:subClassOf  source:PMID_20068231 .
+
+:IHC    rdfs:subClassOf  :IHC .
+
+db:neXtProt_control_vocabulary
+        rdfs:subClassOf  db:neXtProt_control_vocabulary .
+
+:SequenceOntologyCv  rdfs:subClassOf  :SequenceOntologyCv .
+
+source:PMID_20687582  rdfs:subClassOf  source:PMID_20687582 .
+
+db:PIR  rdfs:subClassOf  db:PIR .
+
+:GoMolecularFunction  rdfs:subClassOf  :GoMolecularFunction .
+
+:Allergen  rdfs:subClassOf  :Allergen .
+
+db:IGRhCellID  rdfs:subClassOf  db:IGRhCellID .
+
+db:Rat-heart-2DPAGE  rdfs:subClassOf  db:Rat-heart-2DPAGE .
+
+:Interaction  rdfs:subClassOf  :Interaction .
+
+db:ATCC  rdfs:subClassOf  db:ATCC .
+
+db:BCRC  rdfs:subClassOf  db:BCRC .
+
+db:Gene3D  rdfs:subClassOf  db:Gene3D .
+
+:EVocCellTypeCv  rdfs:subClassOf  :EVocCellTypeCv .
+
+db:NextBio  rdfs:subClassOf  db:NextBio .
+
+:Variant  rdfs:subClassOf  :Variant .
+
+source:SRMAtlas  rdfs:subClassOf  source:SRMAtlas .
+
+source:NextProt  rdfs:subClassOf  source:NextProt .
+
+:Predicted  rdfs:subClassOf  :Predicted .
+
+db:neXtProtSubmission
+        rdfs:subClassOf  db:neXtProtSubmission .
+
+source:PeptideAtlas_human_kidney
+        rdfs:subClassOf  source:PeptideAtlas_human_kidney .
+
+:SPECIFIC  rdfs:subClassOf  :SPECIFIC .
+
+cv:ECO_0000220  rdfs:subClassOf  cv:ECO_0000220 .
+
+db:REBASE  rdfs:subClassOf  db:REBASE .
+
+db:MoonProt  rdfs:subClassOf  db:MoonProt .
+
+db:GeneRif  rdfs:subClassOf  db:GeneRif .
+
+:NextprotAnatomyCv  rdfs:subClassOf  :NextprotAnatomyCv .
+
+db:EcoGene  rdfs:subClassOf  db:EcoGene .
+
+db:eVOC  rdfs:subClassOf  db:eVOC .
+
+db:WormBase  rdfs:subClassOf  db:WormBase .
+
+:GlycosylationSite  rdfs:subClassOf  :GlycosylationSite .
+
+db:dbMHC  rdfs:subClassOf  db:dbMHC .
+
+db:GeneReviews  rdfs:subClassOf  db:GeneReviews .
+
+source:Uniprot  rdfs:subClassOf  source:Uniprot .
+
+:ND     rdfs:subClassOf  :ND .
+
+:EST    rdfs:subClassOf  :EST .
+
+db:Dharmacon  rdfs:subClassOf  db:Dharmacon .
+
+:InteractionInfo  rdfs:subClassOf  :InteractionInfo .
+
+:NonConsecutiveResidue
+        rdfs:subClassOf  :NonConsecutiveResidue .
+
+source:ParkinsonsUK-UCL
+        rdfs:subClassOf  source:ParkinsonsUK-UCL .
+
+db:eggNOG  rdfs:subClassOf  db:eggNOG .
+
+:Low    rdfs:subClassOf  :Low .
+
+source:PeptideAtlas_human_others
+        rdfs:subClassOf  source:PeptideAtlas_human_others .
+
+source:Human_protein_atlas
+        rdfs:subClassOf  source:Human_protein_atlas .
+
+:GoCv   rdfs:subClassOf  :GoCv .
+
+db:PROSITE-ProRule  rdfs:subClassOf  db:PROSITE-ProRule .
+
+source:PeptideAtlas_human_female_reproductive_system
+        rdfs:subClassOf  source:PeptideAtlas_human_female_reproductive_system .
+
+:ISM    rdfs:subClassOf  :ISM .
+
+db:UKSCB  rdfs:subClassOf  db:UKSCB .
+
+db:SOURCE  rdfs:subClassOf  db:SOURCE .
+
+:Keyword  rdfs:subClassOf  :Keyword .
+
+source:eVOC  rdfs:subClassOf  source:eVOC .
+
+source:GO  rdfs:subClassOf  source:GO .
+
+db:MobiDB  rdfs:subClassOf  db:MobiDB .
+
+db:GeneCards  rdfs:subClassOf  db:GeneCards .
+
+:Cofactor  rdfs:subClassOf  :Cofactor .
+
+:ProteinInteraction  rdfs:subClassOf  :ProteinInteraction .
+
+cv:ECO_0000045  rdfs:subClassOf  cv:ECO_0000045 .
+
+source:PeptideAtlas_human_heart
+        rdfs:subClassOf  source:PeptideAtlas_human_heart .
+
+source:PMID_19608861  rdfs:subClassOf  source:PMID_19608861 .
+
+db:MeSH  rdfs:subClassOf  db:MeSH .
+
+:Version  rdfs:subClassOf  :Version .
+
+db:EFO  rdfs:subClassOf  db:EFO .
+
+db:RCSB-PDB  rdfs:subClassOf  db:RCSB-PDB .
+
+:Identifier  rdfs:subClassOf  :Identifier .
+
+db:GO   rdfs:subClassOf  db:GO .
+
+:EVocPathologyCv  rdfs:subClassOf  :EVocPathologyCv .
+
+:NAS    rdfs:subClassOf  :NAS .
+
+db:FlyBase  rdfs:subClassOf  db:FlyBase .
+
+db:ECO  rdfs:subClassOf  db:ECO .
+
+:OmimCv  rdfs:subClassOf  :OmimCv .
+
+:Site   rdfs:subClassOf  :Site .
+
+source:PeptideAtlas_human_breast
+        rdfs:subClassOf  source:PeptideAtlas_human_breast .
+
+source:PhosphoSite  rdfs:subClassOf  source:PhosphoSite .
+
+:DevelopmentalStageInfo
+        rdfs:subClassOf  :DevelopmentalStageInfo .
+
+:UniprotSubcellularOrientationCv
+        rdfs:subClassOf  :UniprotSubcellularOrientationCv .
+
+db:SubtiList  rdfs:subClassOf  db:SubtiList .
+
+:Database  rdfs:subClassOf  :Database .
+
+:SecondaryStructure  rdfs:subClassOf  :SecondaryStructure .
+
+db:HSSP  rdfs:subClassOf  db:HSSP .

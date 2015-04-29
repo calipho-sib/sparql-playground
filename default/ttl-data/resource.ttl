@@ -1,0 +1,99 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sim: <http://purl.org/ontology/similarity/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbp: <http://dbpedia.org/property/> .
+@prefix up: <http://purl.uniprot.org/core/> .
+@prefix tto: <http://example.org/tuto/ontology#> .
+@prefix ttr: <http://example.org/tuto/resource#> .
+
+
+# Resources - persons
+
+ttr:John
+	rdf:type dbo:Person ;
+	dbp:name "John"^^xsd:string ;
+	dbp:birthDate "1982-02-02"^^xsd:date ;
+	tto:sex "male"^^xsd:string ;
+	tto:pet ttr:BuddyDog;
+	.
+
+ttr:William
+	rdf:type dbo:Person ;
+	dbp:name "William"^^xsd:string ;
+	dbp:birthDate "1988-07-20"^^xsd:date ;
+	tto:sex "male"^^xsd:string ;
+	tto:friend ttr:John ;
+	tto:pet ttr:TomCat;
+	tto:pet ttr:LunaCat;
+	.
+
+ttr:Eve
+	rdf:type dbo:Person ;
+	dbp:name "Eve"^^xsd:string ;
+	dbp:birthDate "1986-11-03"^^xsd:date ;
+	tto:friend ttr:William ;
+	tto:fanOf dbpedia:Harrison_Ford ;
+	tto:sex "female"^^xsd:string ;
+	#tto:pet ttr:FelixCat;
+	.
+
+dbpedia:Harrison_Ford
+	tto:pet ttr:SnuffMonkey;
+	.
+
+
+# Resources - cats
+
+ttr:TomCat
+	rdf:type tto:Cat ;
+	dbp:name "Tom"^^xsd:string ;
+	tto:sex "male"^^xsd:string ;
+	tto:color "black"^^xsd:string ;
+	tto:weight "5.5"^^xsd:decimal ;
+	.
+
+ttr:LunaCat
+	rdf:type tto:Cat ;
+	dbp:name "Luna"^^xsd:string ;
+	tto:sex "female"^^xsd:string ;
+	tto:color "red"^^xsd:string ;
+	.
+
+ttr:FelixCat
+	rdf:type tto:Cat ;
+	dbp:name "Felix"^^xsd:string ;
+	tto:sex "male"^^xsd:string ;
+	tto:weight "7.2"^^xsd:decimal ;
+	.
+
+# Resources - dogs
+
+
+ttr:BuddyDog
+	rdf:type tto:Dog ;
+	dbp:name "Buddy"^^xsd:string ;
+	tto:sex "male"^^xsd:string ;
+	tto:color "black"^^xsd:string ;
+	.
+
+# Resources - monkeys
+
+
+ttr:SnuffMonkey
+	rdf:type tto:Monkey ;
+	dbp:name "Snuff"^^xsd:string ;
+	tto:color "golden"^^xsd:string ;
+	tto:sex "female"^^xsd:string ;
+	tto:weight "3.6"^^xsd:decimal ;
+	.

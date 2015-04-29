@@ -1,0 +1,12 @@
+#id:NXQ_00099
+#title:Proteins that have at least one PTM in a position of a variant
+#tags:PTM,variant,sequence variation 
+#acs:Q9UPT9,Q9UPN4,Q9Y272
+#count:4492 
+#time:18.3  
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :variant /:start ?varpos.
+  ?iso :ptm /:start ?varpos.
+}

@@ -1,0 +1,12 @@
+#id:NXQ_00068
+#title:Proteins with a protein existence "At transcript level" (PE=2)
+#tags:protein existence,PE
+#acs:A6BM72, A6NEM1, A6NFU8, ...
+#count:2650
+#time: 0.45
+
+select distinct ?entry where {
+  ?entry :existence :Evidence_at_transcript_level
+}
+
+

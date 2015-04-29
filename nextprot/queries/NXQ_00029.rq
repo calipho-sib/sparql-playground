@@ -1,0 +1,14 @@
+#id:NXQ_00029
+#title:Proteins anchored to the membrane via a GPI-anchor
+#tags:PTM,subcellular location
+#acs:A6ND01,P07911,P55259
+#count:120
+#time:0.1
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :lipidationSite / rdfs:comment ?mod.
+  filter(contains(?mod,"GPI-anchor")).
+}
+
+

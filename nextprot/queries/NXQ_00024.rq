@@ -1,0 +1,13 @@
+#id:NXQ_00024
+#title:Proteins with more than 10 reported interactions (of 'gold' quality)
+#tags:interaction,PPI,annotation quality
+#acs:P04637,Q7Z434,P60484
+#count:222
+#time:0.4
+
+select distinct ?entry where {
+  ?entry :isoform/:binaryInteraction ?interaction.
+  ?interaction :interactant ?interactant; :quality :GOLD.
+  ?interactant a :Entry.
+} group by ?entry having (count(distinct ?interactant) > 10)
+

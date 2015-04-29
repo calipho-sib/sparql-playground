@@ -1,0 +1,16 @@
+#id:NXQ_00125
+#title:Domains that are entirely covered by 3D structures
+#tags:snorql-only,domain,region,PDB,3D structure
+#acs:
+#count:450
+#time:1
+
+select distinct ?domlabel where {
+  ?entry :isoform ?isoform.
+  ?isoform :pdbMapping ?struc.
+  ?struc :start ?s1 ; :end ?s2.
+  ?isoform :domain ?dom.
+  ?dom :start ?d1 ; :end ?d2.
+  ?dom :term/rdfs:label ?domlabel
+  filter ((?s1 <= ?d1) && (?s2 >= ?d2))
+}

@@ -1,0 +1,12 @@
+#title:Which classes are declared in the dataset?
+#comment:There are 2 ways to define classes.
+#comment:You could say Animal is is a member of the class owl:Class or you could say Animal is a member of the class rdfs:Class. 
+#comment:owl:Class is usually more common.
+#tags:rdf class
+    
+SELECT distinct ?class
+WHERE {
+    ?class a owl:Class 
+    #you may need to replace owl:Class with rdfs:Class
+}
+order by ?class

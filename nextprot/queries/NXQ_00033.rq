@@ -1,0 +1,19 @@
+#id:NXQ_00033
+#title:Proteins with at least one phosphotyrosine but no phosphoserine or phosphothreonine
+#tags:PTM,phosphorylation
+#acs:Q9Y3B8, P00387, Q14765, ...
+#count:311
+#time:0.08
+
+select distinct ?entry where {
+  select ?entry ?iso (count(?ptm) as ?ptmCnt) where {
+    ?entry :isoform ?iso.
+    ?iso :modifiedResidue ?ptm.
+    ?ptm :term cv:PTM-0255 #phosphotyrosine.
+    filter (
+     not exists { ?iso :modifiedResidue / :term cv:PTM-0253. } #phosphoserine
+     &&
+     not exists { ?iso :modifiedResidue / :term cv:PTM-0254. } #phosphothreonine
+    )
+  } group by ?entry ?iso having ( count(?ptm) >= 1 )
+}

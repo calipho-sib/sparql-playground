@@ -1,0 +1,11 @@
+#id:NXQ_00026
+#title:Proteins interacting with at least one protein which are located in the mitochondrion
+#tags:interaction,PPI,subcellular location,cellular component
+#acs:A0JLT2,A0PJW6,A2A2Y4,O00193,O00198,O00217,O00220,O00221,O00231,O00254
+#count:3769
+#time:0.4
+
+select distinct ?entry where {
+  ?entry :isoform / :interaction / :interactant ?interactant.
+  ?interactant :isoform? / :cellularComponent / :term/:childOf cv:SL-0173 
+}

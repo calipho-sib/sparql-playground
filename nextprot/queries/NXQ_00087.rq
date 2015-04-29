@@ -1,0 +1,11 @@
+#id:NXQ_00087
+#title:Proteins whose genes are on chromosome X and which do not have a ortholog in mouse
+#tags:chromosomal location,ortholog,Xref,cross-reference
+#acs:O95671,O15488,O60829
+#count: 184
+#time: 0.15
+
+select distinct ?entry where {
+  ?entry :gene / :chromosome "X"^^xsd:string .
+  filter not exists { ?entry :reference / :provenance db:MGI . }
+}

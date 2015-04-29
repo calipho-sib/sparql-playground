@@ -1,0 +1,15 @@
+#id:NXQ_00083
+#title:Proteins whose genes are on chromosome 11 that are expressed only in liver
+#tags:chromosomal location,expression
+#acs:Q63ZE4
+#count:1
+#time:1.6
+
+Select distinct ?entry where {
+  ?entry :gene / :chromosome "11"^^xsd:string.
+  ?entry :isoform ?iso.
+  ?iso :detectedExpression /:term ?tiss, ?tiss2.
+  ?tiss2 :childOf cv:TS-0564. # Liver
+} group by ?entry ?iso having(count(distinct ?tiss) = count(distinct ?tiss2))
+
+

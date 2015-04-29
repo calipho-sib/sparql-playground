@@ -1,0 +1,17 @@
+#id:NXQ_00134
+#title:Proteins with the longest poly-AA stretches
+#tags:snorql-only,sequence,compositional bias
+#acs:Q156A1, P42568, P20226
+#count:20
+#time:0.25
+
+select distinct ?entry  ?desc ?biaslen where {
+  ?entry :isoform  ?iso .
+  ?iso :compositionallyBiasedRegion ?breg.
+  ?breg rdfs:comment ?desc.
+  filter (contains(?desc,'Poly')).
+  ?breg :start ?bstart ; :end ?bend.
+  BIND(?bend - ?bstart as ?biaslen)  . 
+}
+order by desc(?blen)
+limit 25

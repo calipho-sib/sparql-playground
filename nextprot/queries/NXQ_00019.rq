@@ -1,0 +1,14 @@
+#id:NXQ_00019
+#title:Proteins with more than 12 WD repeats (ie: with at least two beta-propellers)
+#tags:repeats
+#acs:O43379,Q8TDJ6,Q8NI36 
+#count:20
+#time:0.3
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  {select ?iso where{
+    ?iso :repeat ?rep. ?rep :term cv:DO-00722
+   }
+  group by ?iso having(count( ?rep) > 12)}
+} 

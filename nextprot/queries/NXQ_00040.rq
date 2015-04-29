@@ -1,0 +1,12 @@
+#id:NXQ_00040
+#title:Proteins that are enzymes and with at least one mutagenesis site that decrease or abolish activity
+#tags:enzyme,function,mutagenesis
+#acs:Q96FJ0, O00487, ,P46736 ...
+#count:407
+#time:0.3
+
+select distinct ?entry where {
+  ?entry :classifiedWith/rdf:type :EnzymeClassificationCv;:isoform ?iso.
+  ?iso :mutagenesis/rdfs:comment ?comment
+  filter regex(?comment, '(decrease|abolish).*activity','i')
+}

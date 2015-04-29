@@ -1,0 +1,12 @@
+#id:NXQ_00062
+#title:Proteins which have at least one zinc finger of any subtype
+#tags:domain,region,zinc-finger
+#acs:Q9Y5X4, Q9Y6I4, Q14527, ...
+#count:1803
+#time: 0.26
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :zincFingerRegion ?_.
+}
+

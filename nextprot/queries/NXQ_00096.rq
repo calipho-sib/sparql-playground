@@ -1,0 +1,25 @@
+#id:NXQ_00096
+#title:Proteins which are targets of drugs for cardiac therapy
+#comment:Federated query with DrugBank
+#comment:Query based on the drug classification ATC Codes implemented in DrugBank
+#tags:drug,federated query
+#acs:P23975,O95069,P31645, ...
+#count:135
+#time:11
+
+PREFIX diseasome: <http://wifo5-04.informatik.uni-mannheim.de/diseasome/resource/diseasome/>
+PREFIX drugbank: <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugbank/>
+
+select distinct ?entry where {
+  service <http://wifo5-03.informatik.uni-mannheim.de/drugbank/sparql> {
+    select distinct ?unipage ?atcCode
+    where {
+    ?drug drugbank:drugCategory ?drugCat.
+    ?drug drugbank:target ?target.
+    ?drug drugbank:atcCode ?atcCode.
+    ?target drugbank:swissprotPage ?unipage.
+    }
+  }
+  ?entry :swissprotPage ?unipage.
+  filter (regex(?atcCode, '^C01' ))
+}

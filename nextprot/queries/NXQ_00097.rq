@@ -1,0 +1,16 @@
+#id:NXQ_00097
+#title:Proteins located on chromosome 2 and having at least one variant in a phosphorylated tyrosine
+#tags:chromosomal location,variant,sequence variation,PTM,phosphorylation
+#acs:O15259,O75643,Q12866, ...
+#count:10
+#time:0.15
+
+select distinct ?entry where {
+  ?entry :gene / :chromosome "2"^^xsd:string .
+  ?entry :isoform ?iso.
+  ?iso :variant /:start ?varpos.
+  ?iso :modifiedResidue ?modres.
+  ?modres :term cv:PTM-0255.
+  ?modres :start ?varpos.
+}
+

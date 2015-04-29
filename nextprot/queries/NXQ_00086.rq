@@ -1,0 +1,13 @@
+#id:NXQ_00086
+#title:Proteins whose genes are located in chromosome 2 region from 2p12 to 2p24.2
+#tags:chromosomal location
+#acs:O00470,B5MCY1,A8MZ97, ...
+#count:367
+#time: 0.15
+
+select distinct ?entry where {
+  ?entry :gene  ?gene .
+  ?gene :chromosome "2"^^xsd:string .
+  ?gene :band ?band.
+  filter (?band >= "p12"@en && ?band <= "p24.2"@en )
+}

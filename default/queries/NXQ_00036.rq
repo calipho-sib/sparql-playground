@@ -1,0 +1,12 @@
+#id:NXQ_00036
+#title:Get Eve's friends ' pets
+#comment: { ttr:Eve tto:friend / tto:pet ?pet . } is equivalent to
+#comment: { ttr:Eve tto:friend ?friend . 
+#comment: { ?friend tto:pet ?pet         }
+#comment: except that the variable ?friend is implicit
+#tags:2 graph patterns,1 variable,path syntax : sequence path /
+
+select * where {
+  ttr:Eve tto:friend / tto:pet ?pet .
+}
+

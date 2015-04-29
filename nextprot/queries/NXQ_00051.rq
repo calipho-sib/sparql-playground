@@ -1,0 +1,13 @@
+#id:NXQ_00051
+#title:Proteins that have at least one 3D structure solved by NMR
+#tags:3D structure,NMR,PDB
+#acs:P37840, O00763, O75554, ...
+#count:1765
+#time: 0.37
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :pdbMapping ?map.
+  ?map :method ?meth
+  filter (contains(?meth,'NMR'))
+}

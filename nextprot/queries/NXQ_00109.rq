@@ -1,0 +1,20 @@
+#id:NXQ_00109
+#title:Proteins that have a MS-identified proteotypic peptide that maps partly or fully into a signal sequence
+#tags:signal sequence,peptide,mass spectrometry,proteomics
+#acs:P08185 ,P35858,Q6UWY5
+#count:116
+#time:0.6
+
+select distinct ?entry ?overlap where {
+  ?entry :isoform ?iso.
+  #get Signal position (start is always 1)
+  ?iso :signalPeptide [:end ?s2] .
+  ?iso :peptideMapping ?pm .
+  ?pm :proteotypic true .
+  #get peptide position
+  ?pm :position [ :start ?p1 ; :end ?p2] .
+  #match positions
+  filter ( ?p1 < ?s2   )
+  bind ( if(?p2<?s2, ?p2, ?s2) - ?p1 as ?overlap) .
+  filter(?overlap > 2)
+}

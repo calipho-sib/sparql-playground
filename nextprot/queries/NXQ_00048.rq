@@ -1,0 +1,13 @@
+#id:NXQ_00048
+#title:Proteins with at least one variant of the type "C->X" (Cys to anything else) that are linked to one or more diseases
+#tags:variant,sequence variation,disease
+#acs:O14802,O43405,P35670 
+#count:469
+#time:0.8
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :variant ?var.
+  ?var :disease ?_.	   
+  ?var :original "C"^^xsd:string.
+}

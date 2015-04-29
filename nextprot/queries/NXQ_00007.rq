@@ -1,0 +1,9 @@
+#id:NXQ_00007
+#title:Proteins associated with diseases that are associated with cardiovascular aspects
+#tags:disease
+#acs:A6NCS4,O00522,O14958,O15273
+#count:236
+
+select distinct ?entry where {
+  ?entry :isoform /:medical / :term /:related / :childOf cv:D002318.
+}

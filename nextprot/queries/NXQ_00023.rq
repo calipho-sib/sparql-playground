@@ -1,0 +1,26 @@
+#id:NXQ_00023
+#title:Proteins that are involved in transport and located in a membrane and that are not glycosylated (experimentally or predicted)
+#tags:subcellular location,cellular process,function,PTM
+#acs: Q9Y6H8, ...
+#count:1585
+#time:3.514
+
+select distinct ?entry where {
+  ?entry :isoform  ?iso .
+  {
+    # cv:GO_0006810 transport
+    ?iso :goBiologicalProcess / :term / :childOf cv:GO_0006810.
+  } union {
+    # cv:KW-0813 transport
+    ?iso :keyword / :term cv:KW-0813.
+  }
+  {
+    # cv:KW-0472 membrane
+    ?iso :keyword / :term cv:KW-0472.
+  } union {
+    # cv:SL-0162 membrane
+    ?iso :cellularComponent / :term /:childOf cv:SL-0162.
+  }  
+  # KW-0325 glycoprotein
+  filter not exists { ?iso :keyword / :term cv:KW-0325 } 
+}

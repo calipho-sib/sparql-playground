@@ -1,0 +1,26 @@
+#id:NXQ_00131
+#title:Terms of controlled vocabularies containing some word(s)
+#tags:vocabulary,snorql-only
+
+select distinct * where { 
+  ?term rdfs:label ?label ; a ?type .
+  # ---------------------------
+  # exact match
+  # ---------------------------  
+  filter(?label = "peroxisome"^^xsd:string)
+  
+  # ---------------------------
+  # starting with peroxisome
+  # --------------------------- 
+  # filter(regex(?label,"^peroxisome"))
+  
+  # ---------------------------
+  # containing peroxisome
+  # ---------------------------
+  # filter(regex(?label,"peroxisome"))
+  
+  # ------------------------------------
+  # containing peroxisome and receptor 
+  # ------------------------------------
+  # filter(regex(?label,"peroxisome.*receptor"))
+} limit 20

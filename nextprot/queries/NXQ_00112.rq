@@ -1,0 +1,23 @@
+#id:NXQ_00112
+#title:Proteins located in nucleus and nowhere else
+#tags:subcellular location,cellular component
+#acs:Q9BWE0,Q8N7Q3,O60381
+#count:1942
+#time:3.7
+
+select ?entry where {
+  {
+  select  ?entry (count(?loc) as ?anyLoc) (sum(?inNucleus) as ?nucleusLoc)
+  where {
+    ?entry :isoform / :cellularComponent ?loc .
+    ?loc :evidence / :negative false .
+    ?loc :term ?locterm.
+    bind( exists {
+      ?locterm :childOf / rdfs:label ?label.
+      filter (regex(?label, '^[Nn]ucleus$'))
+      } as ?inNucleus)
+    }
+    group by ?entry
+  }
+  filter ( ?anyLoc = ?nucleusLoc)
+}

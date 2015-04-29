@@ -1,0 +1,11 @@
+#id:NXQ_00093
+#title:Proteins with a sequence containing "FF.+QYE" where ".+" is any peptide of any length
+#tags:sequence
+#acs:O14686,O14529,A7MBM2
+#count:274
+#time:0.9
+
+select distinct ?entry where {
+  ?entry :isoform / :sequence / :chain ?chain.
+  filter ( regex(?chain, "FF.+QYE") )
+}

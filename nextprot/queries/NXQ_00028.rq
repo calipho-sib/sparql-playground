@@ -1,0 +1,12 @@
+#id:NXQ_00028
+#title:Proteins associated with a disease but without a disease-linked variant
+#comment:COSMIC variants are not taken into account as the link between the variant and the cancer is not established
+#tags:disease,variant,sequence variation
+#acs:O00253,O14681,O15265,O43542,O95999,P00338,P00533,P02679
+#count:1457
+#time:2.147
+
+select distinct ?entry where {
+  ?entry :isoform / :medical / rdf:type :Disease.
+  filter ( not exists { ?entry :isoform / :variant / :disease ?_ . } )
+}

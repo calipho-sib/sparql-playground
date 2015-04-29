@@ -1,0 +1,14 @@
+#id:NXQ_00053
+#title:Proteins which are involved in cell adhesion according to GO with an evidence which is not used in automatic assertion nor a sequence similarity evidence used in manual assertion
+#tags:function,evidence
+#acs:O14788, P07911, Q14393, ...
+#count:574
+#time: 0.48
+
+select distinct ?entry where {
+  ?entry :isoform/:function ?statement.
+  ?statement :term / :childOf cv:GO_0007155.
+  ?statement :evidence/:evidenceCode ?ecode.
+  filter not exists { ?ecode :childOf cv:ECO_0000501. } # Automatic assertion
+  filter not exists { ?ecode :childOf cv:ECO_0000250. } # Sequence similarity evidence used in manual assertion
+}

@@ -1,0 +1,12 @@
+#id:NXQ_00106
+#title:Proteins annotated as glycosylated but with no recorded glycosylation site
+#tags:PTM,glycosylation,carbohydrate
+#acs:P49765,P11171,P13646
+#count:83
+#time:0.1
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :keyword / :term cv:KW-0325.
+  filter not exists { ?entry :isoform /:glycosylationSite ?_.  }
+}

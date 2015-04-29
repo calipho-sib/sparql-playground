@@ -1,0 +1,12 @@
+#id:NXQ_00085
+#title:Proteins with Poly-Proline stretches
+#tags:sequence,compositional bias
+#acs:O14686,Q12778,Q07157
+#count:416
+#time:0.2
+
+select distinct ?entry where {
+  ?entry :isoform  ?iso .
+    ?iso :compositionallyBiasedRegion / rdfs:comment ?desc.
+  filter (contains(?desc,'Poly-Pro')).
+}

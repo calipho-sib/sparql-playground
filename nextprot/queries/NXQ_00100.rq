@@ -1,0 +1,14 @@
+#id:NXQ_00100
+#title:Proteins expressed in liver and that have COSMIC variants associated with liver/hepatic cancer
+#tags:variant,sequence variation,disease,expression
+#acs:Q9UPT5,Q9UPT9,Q9UQB8
+#count:8066
+#time:3.4
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :detectedExpression/:term/:childOf cv:TS-0564.
+  ?iso :variant /:evidence ?ev.
+  ?ev :assignedBy source:Cosmic.
+  ?ev :experimentalContext /:tissue cv:TS-0564.
+}

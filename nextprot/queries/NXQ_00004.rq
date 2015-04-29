@@ -1,0 +1,18 @@
+#id:NXQ_00004
+#title:Proteins highly expressed in brain but not expressed in testis
+#tags:expression
+#acs:A5YM72,P43699,P78411
+#count: 54
+#time: 34
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  # get all expression
+  ?iso :expression ?e1.
+  # highly expressed in brain
+  ?e1 :term/:childOf cv:TS-0095;:evidence/:expressionLevel :High.
+  # not expressed in testis
+  ?iso :undetectedExpression ?e2.
+  ?e2 :term cv:TS-1030.
+  filter not exists { ?iso :detectedExpression / :term / :childOf cv:TS-1030 }
+}

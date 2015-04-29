@@ -1,0 +1,11 @@
+#id:NXQ_00022
+#title:Proteins with no function annotated 
+#tags:function
+#acs:A0PJZ0,A0ZSE6,A1L390
+#count:2610
+#time:0.544
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  filter not exists {?iso :function ?_ }
+}

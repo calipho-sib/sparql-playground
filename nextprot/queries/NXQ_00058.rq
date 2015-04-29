@@ -1,0 +1,57 @@
+#id:NXQ_00058
+#title:Proteins which are located on the genome next to a protein which is involved in spermatogenesis
+#comment:In the future we will add / pre-calculate interesting predicates like :neighbor , :overlaps, ...
+#tags:gene location,neighbour,function
+#acs:P50993,Q2M3M2,Q9NP85
+#count:893
+#time:3.3
+
+select ?entry where {
+{
+ # gets the one on the left side of the spermatogenesis (previous to spermatogenesis)
+ select distinct ?entry where {
+   {
+   select ?sp_entry ?sp_gene_begin (MIN(?prev_distance) as ?min_distance_prev) ?chr WHERE {
+     ?sp_entry :isoform/ :function/:term /:childOf cv:GO_0007283 .
+     ?sp_entry :gene ?sp_gene.
+     ?sp_gene :begin ?sp_gene_begin.
+     ?sp_gene  :chromosome ?chr.
+     ?prev_entry :gene ?prev_gene.
+     ?prev_gene :chromosome ?chr. # the previous entry should be in the same chromosome
+     ?prev_gene :end ?prev_gene_end.
+     bind (?sp_gene_begin - ?prev_gene_end as ?prev_distance) . 
+     filter (?prev_distance > 0). # only takes the one on the right side (next) 
+     }
+     group by ?sp_entry ?sp_gene_begin ?chr
+     }
+     ?entry :gene/:end ?entry_end. 
+     ?entry :gene/:chromosome ?chr.
+     bind (?sp_gene_begin - ?entry_end as ?entry_distance).
+     filter(?entry_distance = ?min_distance_prev).
+     }
+}
+union #union both queries
+{
+ # gets the one on the right side of the spermatogenesis (next to spermatogenesis)
+ select distinct ?entry where {
+     {
+     select ?sp_entry ?sp_gene_end (MIN(?next_distance) as ?min_distance_next) ?chr WHERE {
+     ?sp_entry :isoform/ :function/:term /:childOf cv:GO_0007283.
+     ?sp_entry :gene ?sp_gene.
+     ?sp_gene :end ?sp_gene_end.
+     ?sp_gene  :chromosome ?chr.
+     ?next_entry :gene ?next_gene.
+     ?next_gene :chromosome ?chr. # the next entry should be in the same chromosome
+     ?next_gene :begin ?next_gene_begin.
+     bind (?next_gene_begin - ?sp_gene_end as ?next_distance) . 
+     filter (?next_distance > 0)  . # only takes the one on the right side (next) 
+     }
+     group by ?sp_entry ?sp_gene_end ?chr
+     }
+     ?entry :gene/:begin ?entry_begin. 
+     ?entry :gene/:chromosome ?chr.
+     bind (?entry_begin - ?sp_gene_end as ?entry_distance) .
+     filter(?entry_distance = ?min_distance_next) .
+     }
+ }
+}

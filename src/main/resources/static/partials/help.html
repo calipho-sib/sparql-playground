@@ -1,0 +1,15 @@
+    <div id="content" class="content " ng-controller="HelpCtrl">
+
+      <!-- CONTENT -->
+      <div class="container-fluid" ng-init="initHelp()">
+        <div class="row">
+        <!-- LEFT PANE -->
+          <div class="col-sm-4 col-lg-3 sidebar">
+            <help-toc />
+          </div>
+
+          <!-- CENTER PANE -->
+          <div class="col-sm-8 col-sm-offset-4 col-lg-9 col-lg-offset-3 main help" rdf-help></div>
+        </div>
+      </div>
+    </div><!--/.container-->

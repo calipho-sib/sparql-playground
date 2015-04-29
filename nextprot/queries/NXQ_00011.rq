@@ -1,0 +1,14 @@
+#id:NXQ_00011
+#title:Proteins that are expressed in liver and involved in transport
+#comment:By using "related" for the CV term KW-0813 (keyword 'Transport') we also search using the GO biological process term GO_0006810.
+#tags:expression,function
+#acs:Q9UPT5, A5D8V6, O15439
+#count:1517
+#time: 9.7
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :detectedExpression/:term/:childOf cv:TS-0564.
+  cv:KW-0813 :related  ?tra.
+  ?iso :generalAnnotation / :term ?tra.
+}

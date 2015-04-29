@@ -1,0 +1,10 @@
+#id:NXQ_00002
+#title:Proteins that are located in both the cytoplasm and in the nucleus
+#tags:subcellular location,cellular component
+#acs:A0AVF1,A0PK00,A1A4S6,A1A5C7,A1KXE4,A2RRD8,A5PL33,A6NDU8,A1L020,A2A288,A5LHX3,A5PLL1,A5YKK6
+#count:3185
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :cellularComponent / :term / :childOf cv:SL-0086, cv:SL-0191
+}

@@ -1,0 +1,14 @@
+#id:NXQ_00107
+#title:Proteins with a protein existence not "At protein level" (PE=1) and with a HGNC approved gene name that contains "orf"
+#tags:protein existence,PE,gene name
+#acs:A6NJI1,C9JXX5,A1A4V9
+#count:287
+#time:0.42
+
+select distinct ?entry where {
+  ?entry :existence ?level.
+  filter (?level != :Evidence_at_protein_level).
+  ?entry :reference ?r.
+  ?r :provenance db:HGNC ; :accession ?ac.
+  filter (regex(?ac,'orf')) .
+}

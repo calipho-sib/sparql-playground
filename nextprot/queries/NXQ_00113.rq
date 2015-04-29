@@ -1,0 +1,13 @@
+#id:NXQ_00113
+#title:Proteins with protein existence "At protein level" (PE=1) and at least one proteotypic peptide
+#tags:peptide,mass spectrometry,proteomics,proteotypic,protein existence,PE
+#ac:Q9Y6X6,Q9BYP9,Q9BYQ2
+#count:15214
+#time:4.6
+
+select distinct ?entry where {
+  ?entry :isoform / :peptideMapping ?pm .
+  ?entry :existence :Evidence_at_protein_level .
+  ?pm :proteotypic true .
+}
+

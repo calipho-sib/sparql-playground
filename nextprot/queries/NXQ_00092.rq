@@ -1,0 +1,12 @@
+#id:NXQ_00092
+#title:Proteins with a sequence containing "FF.QYE" where "." is any single amino-acid
+#tags:sequence
+#acs:O75676,Q8NF91
+#count:2
+#time: 0.5
+
+select distinct ?entry where {
+  ?entry rdf:type :Entry.
+  ?entry :isoform / :sequence / :chain ?chain.
+  filter ( regex(?chain, "FF.QYE") )
+}

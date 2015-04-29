@@ -1,0 +1,13 @@
+#id:NXQ_00030
+#title:Proteins whose gene is located in chromosome 2 that belongs to families with at least 5 members in the human proteome
+#tags:family,chromosomal location
+#acs:A0AVI2,A5A3E0,A6NCK2,A6NFX1,A8MUA0,A8MX76,O00338,O00470,O00506,O14649 ...
+#count:370
+#time:0.456
+
+select ?entry where {
+  ?entry :family/:accession/^:accession/^:family ?member.
+  ?entry :gene / :chromosome "2"^^xsd:string .
+} group by ?entry having ( count(?member) >= 5 )
+
+

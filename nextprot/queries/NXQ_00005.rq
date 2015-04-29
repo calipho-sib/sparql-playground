@@ -1,0 +1,12 @@
+#id:NXQ_00005
+#title:Proteins located in mitochondrion and that lack a transit peptide
+#tags:cellular component,subcellular location
+#acs:A1XBS5,O00159,O00755,O14734,O14972,O15270,A2AJT9,A6NDV4,A6NFY7,A6NK06,B7ZC32
+#count:902
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :cellularComponent/:term/:childOf cv:SL-0173.
+  filter not exists { ?iso :keyword /:term cv:KW-0809 }
+}
+

@@ -1,0 +1,11 @@
+#id:NXQ_00010
+#title:Proteins that are glycosylated and are not located in the membrane
+#tags:subcellular location,cellular component,PTM,glycosylation,carbohydrate
+#acs:A1E959,A1KZ92,A1L453,A1L4H1,A2VEC9,A3KMH1,A4D0S4,A4D0V7,A5D8T8
+#count:1962
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :keyword / :term cv:KW-0325.
+  filter not exists { ?iso :topology / :term cv:CVTO_0022 }
+}

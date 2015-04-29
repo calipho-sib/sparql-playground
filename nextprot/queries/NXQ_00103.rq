@@ -1,0 +1,17 @@
+#id:NXQ_00103
+#title:Proteins that do not have a cross-reference to an Ensembl ENSG
+#tags:Xref,cross-reference
+#comment:The correct filter should be "filter not exists { ?entry :reference / :provenance db:Ensembl . }"
+#comment: It doesn't work now because we've exposed internal Xrefs to Ensembl, will be fixed in next release
+#acs:A6NHS1,A8MWK0,Q58FF6
+#count:216
+#time:1.4
+
+select distinct ?entry where {
+  ?entry a :Entry.
+  filter not exists {
+    ?entry :reference ?x.
+    ?x :provenance db:Ensembl ; :accession ?ac.
+    filter (regex(?ac,'^ENSG'))
+  }
+}

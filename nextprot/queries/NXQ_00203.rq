@@ -1,0 +1,14 @@
+#id:NXQ_00203
+#title:Proteins with a mature chain of from 300 to 400 residues
+#tags:sequence,processing
+#acs:A6NFC9, ...
+#count:4849
+#time:0.7
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :matureProtein [ :start ?mstart ; :end ?mend].
+  filter (?mend-?mstart > 0). # chain fully defined
+  bind(?mend - ?mstart as ?mlen)	 
+  filter(?mlen >= 300 && ?mlen <= 400)
+}

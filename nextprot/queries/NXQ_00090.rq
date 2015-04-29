@@ -1,0 +1,11 @@
+#id:NXQ_00090
+#title:Proteins which are linked to a disease and that do not have orthologs/paralogs in mouse
+#tags:disease,ortholog
+#acs:P12035,P48668,P35125
+#count:60
+#time:13.2
+
+select distinct ?entry where {
+  ?entry :isoform / :medical / rdf:type :Disease .
+  FILTER NOT EXISTS { ?entry :reference / :provenance db:MGI . }
+}

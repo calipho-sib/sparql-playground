@@ -1,0 +1,102 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sim: <http://purl.org/ontology/similarity/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbp: <http://dbpedia.org/property/> .
+@prefix up: <http://purl.uniprot.org/core/> .
+@prefix tto: <http://example.org/tuto/ontology#> .
+@prefix ttr: <http://example.org/tuto/resource#> .
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# Classes
+# - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+tto:Creature
+	rdf:type owl:Class;
+	rdfs:label "creature"^^xsd:string;
+	rdfs:isDefinedBy tto: . 
+
+dbo:Person
+	owl:subClassOf tto:Creature .
+
+tto:Animal
+	rdf:type owl:Class;
+	rdfs:label "animal"^^xsd:string;
+	owl:subClassOf tto:Creature ;
+	rdfs:isDefinedBy tto: . 
+
+tto:Cat
+	rdf:type owl:Class;
+	rdfs:label "cat"^^xsd:string;
+	owl:subClassOf tto:Animal ;
+	rdfs:isDefinedBy tto: . 
+
+tto:Dog
+	rdf:type owl:Class;
+	rdfs:label "dog"^^xsd:string;
+	owl:subClassOf tto:Animal ;
+	rdfs:isDefinedBy tto: . 
+
+tto:Monkey
+	rdf:type owl:Class;
+	rdfs:label "monkey"^^xsd:string;
+	owl:subClassOf tto:Animal ;
+	rdfs:isDefinedBy tto: . 
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# Properties
+# - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+tto:sex
+	rdf:type rdf:Property;
+	rdfs:label "sex"^^xsd:string;
+	rdfs:domain tto:Creature ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy tto: . 
+
+tto:pet 
+	rdf:type rdf:Property;
+	rdfs:label "domestic animal"^^xsd:string;
+	rdfs:domain dbo:Person ;
+	rdfs:range tto:Animal ;
+	rdfs:isDefinedBy tto: . 
+
+tto:friend
+	rdf:type rdf:Property;
+	rdfs:label "friend"^^xsd:string;
+	rdfs:domain dbo:Person ;
+	rdfs:range dbo:Person ;
+	rdfs:isDefinedBy tto: . 
+
+tto:fanOf 
+	rdf:type rdf:Property;
+	rdfs:label "fan of"^^xsd:string;
+	rdfs:domain dbo:Person ;
+	rdfs:range dbo:Person ;
+	rdfs:isDefinedBy tto: . 
+
+tto:color 
+	rdf:type rdf:Property;
+	rdfs:label "hair or furr color"^^xsd:string;
+	rdfs:domain dbo:Animal ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy tto: . 
+
+tto:weight 
+	rdf:type rdf:Property;
+	rdfs:label "weight"^^xsd:string;
+	rdfs:comment "weight in kilograms"^^xsd:string;
+	rdfs:domain tto:Creature ;
+	rdfs:range xsd:decimal ;
+	rdfs:isDefinedBy tto: . 
+

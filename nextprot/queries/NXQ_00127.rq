@@ -1,0 +1,12 @@
+#id:NXQ_00127
+#title:Proteins with at least one known SUMOylation site
+#tags:PTM,SUMO
+#acs:P29590,P49750,P13056
+#count:210
+#time:0.1
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :crossLink /rdfs:comment ?comment.
+  filter(contains (?comment,'SUMO'))
+}

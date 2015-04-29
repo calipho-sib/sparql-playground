@@ -1,0 +1,12 @@
+#id:NXQ_00041
+#title:Proteins that are annotated with GO "F" (function) terms prefixed by "Not"
+#tags:GO,function,evidence
+#acs:P12270, Q96EM0, Q9BSI4, ...
+#count:226
+#time:0.26
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :goMolecularFunction ?statement.
+  ?statement :negativeEvidence ?ev.
+}

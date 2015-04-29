@@ -1,0 +1,10 @@
+#id:NXQ_00012
+#title:Proteins that interact with protein RBM17 and that are involved in splicing
+#tags:interaction,PPI,function
+#acs:O43143,O75533,Q13573,Q15428,Q15637,Q8IWZ8,Q99459,Q9P013
+#count:8
+
+select distinct ?entry where {
+  entry:NX_Q96I25 :isoform / :interaction / :interactant ?entry.
+  ?entry :isoform / :keyword / :term cv:KW-0508
+}

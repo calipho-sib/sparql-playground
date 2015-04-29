@@ -1,0 +1,13 @@
+#id:NXQ_00046
+#title:Proteins with a gene alternative name which is IL27
+#tags:gene name
+#comment: Gene synonyms not yet exposed in triplets
+#acs:
+#count:
+#time:
+
+select distinct ?entry ?name where {
+  ?entry a :Entry.
+  ?entry :alternativeName /:shortName ?name.
+  filter (strlen(?name) < 5 )
+}

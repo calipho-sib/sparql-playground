@@ -1,0 +1,12 @@
+#id:NXQ_00015
+#title:Proteins with a PDZ domain that interact with at least one protein which is expressed in brain
+#tags:domain,region,interaction,PPI
+#acs:O00151,O00233,O00560,O14640,O14641,O14745,O14907,O14908,O14910,O14936
+#count:127
+#time:167
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :region / :term cv:DO-00477. #PDZ domain
+  ?iso :binaryInteraction/:interactant/:isoform?/:detectedExpression/:term/:childOf cv:TS-0095 #brain
+}

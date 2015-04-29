@@ -1,0 +1,14 @@
+#id:NXQ_00025
+#title:Proteins with at least 50 interactors that are not associated with a disease
+#comment:We exclude proteins that have either a disease annotation or a Xref to Orphanet
+#tags:interaction,PPI,disease
+#acs:Q12906, ...
+#count:288
+#time:16
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :binaryInteraction/:interactant ?interactant.
+  filter not exists { ?entry :reference / :provenance db:Orphanet . }
+  filter not exists { ?iso :medical / rdf:type :Disease. }
+} group by ?entry ?iso having (count(?interactant) >= 50)

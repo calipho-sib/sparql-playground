@@ -1,0 +1,14 @@
+#id:NXQ_00137
+#title:Proteins that potentially interact with Class I PDZ domains (whose C-terminal sequence has a PDZ-binding consensus)
+#tags:sequence,motif,interaction
+#acs:A6NK89,P08311,P0CG22
+#count:1222
+#time:0.7
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :matureProtein / :end ?mend.
+  ?iso :sequence / :chain ?seq.
+  bind (substr(?seq, ?mend-2, 3) as ?cterseq).
+  filter(regex(?cterseq,'[ST].[ILV]')). # short motif consensus for C-terminal PDZ-binding
+}

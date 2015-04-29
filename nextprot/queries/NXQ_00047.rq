@@ -1,0 +1,11 @@
+#id:NXQ_00047
+#title:Proteins with a gene name that starts with "CLDN"
+#tags:gene name
+#acs:O95500, P56750, P56748, ...
+#count:25
+#time:0.1
+
+select distinct ?entry where {
+  ?entry :gene / :name ?name.
+  filter (regex(?name, "^CLDN"@en))
+}

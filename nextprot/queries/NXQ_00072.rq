@@ -1,0 +1,11 @@
+#id:NXQ_00072
+#title:Proteins with a cross-reference to CCDS
+#tags:Xref,cross-reference
+#acs:A0AVK6, A1A4T8, A1L4K1, ...
+#count:18217
+#time: 3.6
+
+select distinct ?entry where {
+  ?entry :reference / :provenance db:CCDS.
+}
+

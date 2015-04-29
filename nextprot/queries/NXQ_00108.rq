@@ -1,0 +1,16 @@
+#id:NXQ_00108
+#title:Proteins that have a 3D structure in PDB that overlap by at least 50 amino acids with a SH3 domain
+#tags:PDB,3D structure,domain,region
+#acs:Q9UQB8,O43586,O94868
+#count:94
+#time:0.1
+
+select distinct ?entry where {
+  ?entry :isoform ?isoform.
+  ?isoform :pdbMapping ?struc.
+  ?struc :start ?s1 ; :end ?s2.
+  ?isoform :region ?dom.
+  ?dom :term cv:DO-00615 ; :start ?d1 ; :end ?d2.
+  bind ( if(?d2<?s2, ?d2, ?s2) - if(?d1>?s1, ?d1, ?s1) as ?overlap) .
+  filter (?overlap>50)
+}

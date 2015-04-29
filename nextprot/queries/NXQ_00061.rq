@@ -1,0 +1,15 @@
+#id:NXQ_00061
+#title:Proteins which have at least one 3D structure that spans the complete sequence of the mature protein
+#tags:PDB,3D structure,sequence
+#acs:Q9Y6J6, O14832, O14727, ...
+#count:1456
+#time: 0.23
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :pdbMapping  ?pdbmap.
+  ?pdbmap :start ?pdbstart ; :end ?pdbend.
+  ?iso :matureProtein [ :start ?mstart ; :end ?mend]
+  filter (?mend-?mstart > 0)	 
+  filter ((?pdbstart <= ?mstart) && (?pdbend >= ?mend))
+}

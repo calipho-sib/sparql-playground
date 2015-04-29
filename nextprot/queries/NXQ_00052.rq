@@ -1,0 +1,17 @@
+#id:NXQ_00052
+#title:Proteins with a sequence that does not contain a lysine in the mature region
+#tags:sequence,processing
+#acs:E5RJM6, H3BQW9, P04553, ...
+#count:262
+#time:0.6
+
+select distinct ?entry where {
+  ?entry :isoform ?iso .
+  ?iso :sequence / :chain ?seq.
+  ?iso :matureProtein [ :start ?mstart ; :end ?mend]
+  #filter (?mend-?mstart > 0)
+  bind(?mend - ?mstart + 1 as ?mlen)
+  bind(substr(?seq, ?mstart, ?mlen) as ?mseq)
+  filter (!regex (?mseq,'K'))
+}
+

@@ -1,0 +1,16 @@
+#id:NXQ_00066
+#title:Proteins that are cytoplasmic with alternate O-glycosylation or phosphorylation at the same positions
+#comment:Using PTM-0253 (phosphoserine), PTM-0254 (phosphothronine) and PTM-0255 (phosphotyrosine) for the phosphorylation sites
+#tags:subcellular location,cellular component,PTM,glycosylation,carbohydrate,sequence
+#acs:P08047, P31749, P10636, ...
+#count:17
+#time: 0.9
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :cellularComponent/:term/:childOf cv:SL-0086.
+  ?iso :modifiedResidue /:term ?ptmtype.
+  ?iso :modifiedResidue /:start ?ptmpos.
+  filter (?ptmtype in (cv:PTM-0253, cv:PTM-0254, cv:PTM-0255)) 
+  ?iso :glycosylationSite /:start ?ptmpos.
+}

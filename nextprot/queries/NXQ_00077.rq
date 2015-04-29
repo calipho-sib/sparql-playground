@@ -1,0 +1,14 @@
+#id:NXQ_00077
+#title:Proteins which are expressed in liver according to IHC data but not found in HUPO liver proteome set
+#tags:expression,evidence,proteomics,mass spectrometry
+#acs:Q9Y580, Q9Y5Q0, A1L453, ...
+#count:4225
+#time:8.3
+
+select distinct ?entry where {
+  ?entry :isoform /:expression ?s1.
+  ?s1 :evidence ?evi;:term/:childOf cv:TS-0564. #Liver
+  ?evi :experimentalContext / :detectionMethod cv:ECO_0000087; :expressionLevel ?level .
+  filter (?level not in (:Negative))
+  filter not exists { ?entry :isoform / :peptideMapping / :evidence / :assignedBy source:PeptideAtlas_human_liver . }
+}

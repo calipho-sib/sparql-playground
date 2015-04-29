@@ -1,0 +1,15 @@
+#id:NXQ_00060
+#title:Proteins which have one or more negatively charged residue in a transmembrane domain
+#tags:domain,region,transmembrane,topology,sequence,
+#acs:A6NGA9, O14678, ,A8MWL7 ...
+#count:2532
+#time: 0.58
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :transmembraneRegion ?tm.
+  ?tm :start ?tmstart ; :end ?tmend.
+  ?iso :sequence /:chain ?chain.
+  bind (substr(?chain, ?tmstart, ?tmend - ?tmstart + 1) as ?tmseq)
+  filter (regex(?tmseq, '[DE]'))
+}

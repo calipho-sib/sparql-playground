@@ -1,0 +1,10 @@
+#id:NXQ_00031
+#title:Proteins with more than 10 alternative isoforms
+#tags:isoforms
+#acs:P21675, P24071, P16070
+#count:90
+#time:0.28
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+} group by ?entry having (count(?iso)>10)

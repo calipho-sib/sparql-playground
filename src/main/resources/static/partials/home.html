@@ -1,0 +1,87 @@
+    <div id="content" class="content " >
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-12 col-md-6 ">
+          <p class="pull-right visible-sm visible-xs -visible-md">
+            <button id="toggle-examples" type="button" class="btn btn-primary btn-xs" menu-toggle="offcanvas">sparql example</button>
+          </p>
+          <div class="snorql">
+            <form>
+              <h5>{{snorql.queryTitle}}</h5>
+              <textarea style="border:none; width:100%; margin-top:1px; resize-disable: none;" rows=4 ng-model=snorql.description/>
+					
+	            <a style="font-size:11px" href="#" ng-click="showPrefixes = !showPrefixes">{{showPrefixes? "Hide SPARQL prefixes" : "Show SPARQL prefixes ..."}}</a>
+			 	<div class="pull-right" style="font-size:11px">SPARQL Endpoint: <a target="blank" ng-href="{{snorql.endpoint()}}">{{snorql.endpoint()}}</a></div>
+
+	            <ul ng-show="showPrefixes"  class="list-unstyled prefixes">
+	              <li style="font-size:10px" ng-repeat="(prefix, url) in snorql.getPrefixes()">PREFIX {{prefix}}:&lt;{{url}}&gt;</li>
+	            </ul>
+	            
+              <textarea class="form-control" ui-codemirror="cmOption" ng-model="snorql.query"></textarea>
+				  
+              <div class=" form-inline">
+                  <select class="form-control" ng-disabled="waiting||!snorql.query" ng-model="output" ng-options="output for output in outputs"></select>
+                  <button type="button" class="btn btn-primary" ng-disabled="waiting||!snorql.query" ng-click="executeQuery(snorql.query,output)">Go</button>
+                  <button type="button" class="btn btn-default"  ng-click="snorql.reset()">Reset</button>
+                  <div class="input-group pull-right">
+                    <input type="text"  class="form-control" ng-model="term" placeholder="eg. peroxisome, liver">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default "  ng-click="searchTerm(term)" ng-disabled="!term||waiting"><i class="glyphicon glyphicon-search"></i></button>
+                    </span>
+                  </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- DISPLAY SPARQL RESULT -->
+          <div class=" snorql " style="min-height:60px">
+            <div class="snorql-info" ng-show="waiting">Excuting query ...</div>
+            <div class="snorql-info" ng-show="error">{{error}}</div>
+            <div class="snorql-info" ng-show="executionTime">Query time is {{executionTime}}[s] for {{snorql.result.results.bindings.length||0}} rows</div>
+            <div class=" " sparql-formatter="snorql.result"></div>
+          </div>
+
+
+          <!-- DISPLAY SITE INFO -->
+          <div class=" headlines" ng-show="!snorql.result.head.vars">
+            <markdown markdown-article="snorql-headlines" ></markdown>
+          </div><!--/row-->
+        </div><!--/span-->
+
+        <!-- DISPLAY SPARQL EXAMPLES -->
+        <div class="col-xs-6 col-sm-6 col-md-6 sidebar-offcanvas" id="sidebar" role="navigation" >
+          <div class="list-group examples">
+            <div class="input-group">
+            </div>
+            <div class="input-group filter-search  has-feedback">
+                  <div class="input-group-btn ">
+                    <button type="button" class="btn btn-default " data-toggle="dropdown">{{(filterTag == null) ? "Tags " : filterTag}}<span class="caret"></span></button>
+                    <ul class="dropdown-menu scrollable-menu" role="menu">
+                      <li ng-click="resetFilters(); filter=''"><a href="#" >Clear filter</a></li>
+                      <li class="divider"></li>
+                      <li ng-repeat="tag in snorql.tags|orderBy" ng-click="setFilterTag(tag)"><a href="" >{{tag}}</a></li>
+                    </ul>
+                  </div>
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                <input type="text" class="form-control" placeholder="Filter sparql examples" ng-model="filter">
+            </div>
+
+            <div class="example-list">
+            <div ng-repeat="example in snorql.examples | containsTag:filterTag | filter:filter">
+              <a href="#" ng-click="selectExample(example.index); example.show=!example.show;" ng-class="{'active':qSelected===example.index}"  class="list-group-item query-{{example.index}}" >
+                <h5 class="list-group-item-heading">{{example.userQueryId}}) {{example.title}}</h5>
+                <p class="list-group-item-text"><span  class="label"  >
+                  <span ng-repeat="tag in example.tags | orderBy" class="label label-default label-as-badge">{{tag}}</span>
+                </p>
+               <img style="margin:10px" ng-if="example.show && example.img" ng-src="queries/{{example.img}}">
+              </a>
+            </div>
+            
+            </div>
+
+          </div>
+        </div><!--/span-->
+      </div><!--/row-->
+
+    </div><!--/.container-->

@@ -1,0 +1,14 @@
+#id:NXQ_00017
+#title:Proteins larger than 1000 amino acids that are located in the nucleus and expressed in the nervous system
+#tags:expression,subcellular location,cellular component,sequence
+#acs:A3KN83,A4D0V7,A5PL33,A6NHR9,A8MQ14,B1AJZ9,O00159,O00203,O00267,O00268
+#count:1004
+#time:1.7
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :cellularComponent/:term/:childOf cv:SL-0191.
+  ?iso :detectedExpression/:term/:childOf cv:TS-1313.
+  ?iso :sequence/:length ?len.
+  filter (?len>1000)
+}

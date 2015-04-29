@@ -1,0 +1,602 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix dc: <http://purl.org/dc/elements/1.1/> 
+prefix dcterms: <http://purl.org/dc/terms/> 
+prefix sim: <http://purl.org/ontology/similarity/> 
+prefix mo: <http://purl.org/ontology/mo/> 
+prefix ov: <http://open.vocab.org/terms/> 
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+prefix skos: <http://www.w3.org/2004/02/skos/core#> 
+prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> 
+prefix foaf: <http://xmlns.com/foaf/0.1/> 
+prefix dbpedia: <http://dbpedia.org/resource/> 
+prefix dbo: <http://dbpedia.org/ontology/> 
+prefix dbp: <http://dbpedia.org/property/> 
+prefix up: <http://purl.uniprot.org/core/> 
+prefix tto: <http://example.org/tuto/ontology#> 
+prefix ttr: <http://example.org/tuto/resource#> 
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# describe  
+# results as JSON in SNORQL
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#
+
+describe ttr:William
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# ask 
+# results as JSON in SNORQL
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ask { ttr:William rdf:type ttr:Cat }
+ask { ttr:William rdf:type dbo:Person }
+
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select 
+# single variable, single pattern: 
+# a) get things that are 
+# b) get things that are b) persons
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+select ?thing where { 
+	?thing rdf:type tto:Cat .
+}
+select ?x where {
+	?x rdf:type dbo:Person .
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# multiple variables
+# OPTIONAL
+# a) things that have a name with their name
+# b) things that have a name and a color with their name and color
+# c) things that have a name and optinally have a color with their name and color
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select ?subj ?name ?color where {
+	?subj dbp:name ?name .
+}
+select ?subj ?name ?color where {
+	?subj dbp:name ?name .
+	?subj tto:color ?color .
+}
+select ?subj ?name ?color where {
+	?subj dbp:name ?name .
+	OPTIONAL {
+		?subj tto:color ?color .
+	}
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# multiple variables
+# FILTER with values
+# a) things that have a weight 
+# b) things that have a weight less than 7 kg
+# c) && < > things that have a weight between 5 kg and 7 kg
+# d) = || things that have a red or golden color 
+# e) != things that have a color different if red 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select ?subj ?weight where {
+	?subj tto:weight ?weight .
+}
+select ?subj ?weight where {
+	?subj tto:weight ?weight .
+	FILTER (?weight < "7.0"^^xsd:decimal)
+}
+select ?subj ?weight where {
+	?subj tto:weight ?weight .
+	FILTER (?weight < "7.0"^^xsd:decimal && ?weight > "5.0"^^xsd:decimal)
+}
+select ?subj ?weight where {
+	?subj tto:weight ?weight .
+	FILTER (?weight > "5.0"^^xsd:decimal)
+	FILTER (?weight < "7.0"^^xsd:decimal)
+}
+select ?subj ?color where {
+	?subj tto:color ?color .
+	FILTER (?color = "red"^^xsd:string || ?color = "golden"^^xsd:string )
+}
+select ?subj ?color where {
+	?subj tto:color ?color .
+	FILTER (?color != "red"^^xsd:string )
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# multiple variables
+# FILTER EXISTS / NOT EXISTS 
+# test for the presence of a graph pattern
+# no binding for variables in filters !
+# a) persons with their name
+# b) persons with their name only if they have a pet
+# c) persons with their name only if they have NO pet
+# d) persons with their name only if they have a pet that is a cat (?pet scope !)
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select ?person ?name where {
+	?person rdf:type dbo:Person .
+	?person dbp:name ?name .
+}
+
+select ?person ?name ?pet where {
+	?person rdf:type dbo:Person .
+	?person dbp:name ?name .
+	FILTER EXISTS { ?person tto:pet ?pet}
+}
+
+select ?person ?name ?pet where {
+	?person rdf:type dbo:Person .
+	?person dbp:name ?name .
+	FILTER NOT EXISTS { ?person tto:pet ?_}
+}
+
+select ?person ?name ?pet where {
+	?person rdf:type dbo:Person .
+	?person dbp:name ?name .
+	FILTER  EXISTS { 
+		?person tto:pet ?pet .
+		?pet rdf:type tto:Cat .
+	}
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# multiple variables
+# UNION 
+# a) William's pets
+# b) John's pets
+# c) William's and John's pets 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select ?pet where {
+	ttr:William tto:pet ?pet .
+}
+select ?pet where {
+	ttr:John tto:pet ?pet .
+}
+select ?pet where {
+	{ 
+		ttr:William tto:pet ?pet .
+	} UNION {
+		ttr:John tto:pet ?pet .
+	}
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# VALUES 
+# c) William's and Sylvia's pets 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select ?owner ?pet where {
+	values (?owner) { (ttr:William) (ttr:John) }
+	?owner tto:pet ?pet .
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# ORDER BY 
+# a) People by gender and birthDate (oldest first)
+# b) Same as a) short syntax
+# c) Pets ordered by species and color and weight (heaviest first) 
+# d) Creatures ordered by species, sex, and name 
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select ?people ?sex ?birth ?name where {
+  ?people rdf:type dbo:Person .
+  ?people dbp:name ?name .
+  ?people tto:sex ?sex . 
+  ?people dbp:birthDate ?birth . 
+}
+order by ?sex desc(?birth)
+
+select ?people ?sex ?birth ?name where {
+  ?people 
+    rdf:type dbo:Person ; dbp:name ?name ; 
+    tto:sex ?sex ; dbp:birthDate ?birth . 
+}
+order by ?sex desc(?birth)
+
+# path syntax +
+select ?species ?name ?name where {
+  ?species owl:subClassOf+ tto:Creature .
+  ?crea rdf:type ?species .
+  ?crea dbp:name ?name .
+}
+order by ?species ?name
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# GROUP BY
+# a) COUNT - Number of persons by sex 
+# b) GROUP_CONCAT - Person's names  by sex
+# c) AVG, COUNT Pet count & average weight by species
+# d) COUNT, HAVING Number of individuals by species having more than 1 member
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select ?sex (COUNT(?name) as ?peopleCount) where {
+  ?people rdf:type dbo:Person .
+  ?people dbp:name ?name .
+  ?people tto:sex ?sex .
+}
+GROUP BY ?sex
+
+select ?sex (GROUP_CONCAT(?name) as ?peopleNames) where {
+  ?people rdf:type dbo:Person .
+  ?people dbp:name ?name .
+  ?people tto:sex ?sex .
+}
+
+GROUP BY ?sex
+
+select ?species (COUNT(?pet) as ?petCount) (AVG(?weight) as ?avgWeight) where {
+  ?species owl:subClassOf tto:Animal .
+  ?pet rdf:type ?species .
+  ?pet tto:weight ?weight .
+}
+GROUP BY ?species
+
+select ?species (COUNT(?member) as ?memberCount)  where {
+  ?species owl:subClassOf tto:Animal .
+  ?member rdf:type ?species .
+}
+GROUP BY ?species
+HAVING (?memberCount > 1)
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# property path syntax
+# a) Direct sub classes of Creatures: exactly 1 property link
+# b) + - All Sub classes of Creatures: exactly 1 property link
+# c) ? - Creature And its direct subclasses: 0 or 1 property links
+# d) * - Creature And all its subclasses: 0 -> n property links
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select ?subSpecies   where {
+  ?subSpecies owl:subClassOf tto:Creature .
+}
+
+select ?subSpecies   where {
+  ?subSpecies owl:subClassOf+ tto:Creature .
+}
+
+select ?subSpecies   where {
+  ?subSpecies owl:subClassOf? tto:Creature .
+}
+
+select ?subSpecies   where {
+  ?subSpecies owl:subClassOf* tto:Creature .
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# property path syntax
+# a) William's friends (direct links)
+# b) ^ : inverse path - William's friends (reverse links)
+# c) ^ | : inverse & alternative path - William's fiends (direct or reverse)
+# d) ^ | : inverse & alternative path - William's fiends or pets (direct or reverse)
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select * where {
+  ttr:William tto:friend ?friend.
+}
+
+select * where {
+  ttr:William ^tto:friend ?friend.
+}
+
+select * where {
+  ttr:William tto:friend | ^tto:friend ?friend.
+}
+
+select * where {
+  ttr:William tto:friend | ^tto:friend | tto:pet ?friend.
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# property path syntax
+# a) Eve's friends ' pets (explicit intermediary variable)
+# b) ^ Eve's friends ' pets (implicit intermediary variable)
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+select * where {
+  ttr:Eve tto:friend ?friend .
+  ?friend tto:pet ?pet .
+}
+
+select * where {
+  ttr:Eve tto:friend / tto:pet ?pet .
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# BIND
+# date function year now
+# Persons with date birth and calculated age
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select * where {
+  ?person rdf:type dbo:Person .
+  ?person dbp:birthDate ?birth .
+  BIND ( ( year(now()) - year(?birth) ) as ?age)
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# BIND
+# string functions: STR STRLEN SUBSTR
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select * where {
+  ?thing dbp:name ?name .
+  BIND ( ( str(?name))  as ?stdName)
+  BIND ( ( strlen(?stdName))  as ?nameLength)
+  BIND ( ( substr(?stdName, 1, 2))  as ?namePrefix)
+  BIND ( ( substr(?stdName, ?nameLength-1, ?nameLength))  as ?namePostfix)
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# BIND
+# string functions: STR REGEX
+# String patterns in creature names
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select * where {
+  ?creature dbp:name ?name .
+  BIND ( ( str(?name))  as ?stdName)
+  BIND ( ( regex(?name,"^T"))  as ?startsWithT)
+  BIND ( ( regex(?name,"dd"))  as ?containsDD)
+  BIND ( ( regex(?name,"a$"))  as ?endsWithA)
+  BIND ( ( regex(?name,".*l.*a", "i"))  as ?caseInsensitivePatternLxA)
+} 
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# FILTER
+# string functions: REGEX
+# Creature names starting with either B,T of F and ending with either x or y
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select * where {
+  ?creature dbp:name ?name .
+  FILTER ( REGEX(?name, "^[BF].*[xy]$" ) )
+} 
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# DISTINCT
+# a) Get people with the species of their pets 
+# b) Get people with the species of their pets (distinct)
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+SELECT ?people ?species WHERE {
+  ?people tto:pet ?pet . 
+  ?pet rdf:type ?species .
+}
+
+SELECT DISTINCT ?people ?species WHERE {
+  ?people tto:pet ?pet . 
+  ?pet rdf:type ?species .
+}
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# LIMIT OFFSET ORDER BY
+# a) Get list of class and instance pairs in the dataset - only 10 first pairs
+# b) Get list of 10 first class and instance pairs in the dataset - only pairs 11 to 20
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+SELECT ?class ?instance WHERE {
+  ?instance rdf:type ?class . 
+}
+ORDER BY ?class ?instance
+LIMIT 4 
+
+SELECT ?class ?instance WHERE {
+  ?instance rdf:type ?class . 
+}
+ORDER BY ?class ?instance
+LIMIT 4 OFFSET 4
+
+
+
+
+================ with examples ==================
+FILTER (values)
+FILTER EXISTS / NOT EXISTS{ graph pattern(s) }
+UNION
+VALUES
+ORDER BY
+GROUP BY
+- HAVING
+- aggregate functions: count, avg, group_concat
+BIND
+property path syntax ^ / | + * 
+- date functions: now, year
+- logical: && || = !=
+DISTINCT
+LIMIT, OFFSET
+- string functions: strlen, substr, regex(value, pattern, flag)
+
+================ without examples ==================
+
+- aggregate functions: sum, sample
+FUNCTIONS and OPERATORS
+- numeric: + - * / 
+
+
+ 
+==================================
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select 
+# all the triples
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+select * where {
+	?subj ?pred ?obj .
+}
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# things having a pet
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select ?subj ?pet where {
+	?subj tto:pet ?pet .
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# things having a pet who is a cat
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select ?subj ?pet where {
+	?subj tto:pet ?pet .
+	?pet rdf:type tto:Cat .
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# a) things having a pet who is a cat
+# b) things having a pet who is a cat with the cat name
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select ?subj ?pet where {
+	?subj tto:pet ?pet .
+	?pet rdf:type tto:Cat .
+}
+select ?subj ?pet ?petName where {
+	?subj tto:pet ?pet .
+	?pet rdf:type tto:Cat .
+	?pet dbp:name ?petName .
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# things having a pet who is a cat
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select ?subj ?pet where {
+	?subj tto:pet ?pet .
+	?pet rdf:type tto:Cat .
+}
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# SERVICE (federated query) - unused
+# Harrison Ford spouses and pets v1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# values ?subj { dbpedia:Harrsion_Ford }
+select ?pet ?spouse where {
+	{ dbpedia:Harrison_Ford tto:pet ?pet . }
+	
+	service <http://dbpedia.org/sparql> {
+    		select ?spouse WHERE {
+    		dbpedia:Harrison_Ford dbo:spouse ?spouse .
+                }
+    	}
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# SERVICE (federated), UNION - unused
+# Harrison Ford spouses and pets v2
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# values ?subj { dbpedia:Harrsion_Ford }
+select ?pred ?obj where {
+		values ?pred { tto:pet dbo:spouse } 
+	{
+		dbpedia:Harrison_Ford ?pred ?obj . 
+	} UNION {	
+		service <http://dbpedia.org/sparql> {
+    			select ?pred ?obj WHERE {
+    			dbpedia:Harrison_Ford ?pred ?obj .
+                	}
+		}
+    	}
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# SERVICE (federated), VALUES, UNION
+# Harrison Ford's name, occupation, birth date and pets
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+select ?subj ?pred ?obj where {
+	VALUES (?subj ?pred) { 
+		(dbpedia:Harrison_Ford dbo:birthDate) 
+		(dbpedia:Harrison_Ford dbp:name) 
+		(dbpedia:Harrison_Ford dbp:occupation) 
+		(dbpedia:Harrison_Ford tto:pet) 
+	} 
+	{
+		?subj ?pred ?obj . 
+	} UNION {	
+		SERVICE <http://dbpedia.org/sparql> {
+    		?subj ?pred ?obj .
+		}
+	}
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# SERVICE (federated), OPTIONAL
+# Harrison Ford's name, occupation, birth date and pets
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+SELECT *  where {
+  ?subj tto:pet ?pet .
+  optional {?subj dbp:name ?name} .
+  optional {?subj dbp:birthDate ?bd} .
+  optional {
+   service <http://dbpedia.org/sparql> {
+    ?subj dbp:name ?name .
+    ?subj dbp:birthDate ?bd .
+  } 		
+ }
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# select
+# SERVICE (federated), VALUES, FILTER
+# Celebrities born on the 13-017-1942 with their occupation and pets
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+select *  where {
+    service <http://dbpedia.org/sparql> {
+      select ?person ?birthDate ?occupation ?pet where {
+        values ?birthDate { "1942-07-13"^^xsd:date }
+        ?person dbp:birthDate ?birthDate .
+        ?person dbp:occupation ?occupation .
+      } 
+    }
+    OPTIONAL { ?person tto:pet ?pet } .
+} 
+
+
+
+# 
+
+# grouping & aggregate functions
+
+
+===========
+Exercices
+===========
+
+#id:NXQ_00106.rq
+select ?people (GROUP_CONCAT(?petName) as ?petNames) where {
+#  ?people rdf:type dbo:Person .
+  ?people tto:pet ?pet .
+  ?pet dbp:name ?petName .
+}
+GROUP BY ?people
+
+# - - - - - - - - - - - - - - - - - - - - - - 
+
+#id:NXQ_00107.rq
+select ?person ?yearBorn where {
+  ?person rdf:type dbo:Person .
+  ?person dbp:birthDate ?birth .
+  BIND ( ( year(?birth) ) AS ?yearBorn )
+}  
+
+# - - - - - - - - - - - - - - - - - - - - - - 
+
+#id:NXQ_00108.rq

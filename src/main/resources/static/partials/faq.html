@@ -1,0 +1,9 @@
+<div id="explore" class="container small-codemirror">
+	<div class="row" ng-repeat="faq in snorql.faqs">
+		<h2>{{faq.title}}</h2>
+		<p>{{faq.description}}</p>
+		<textarea id="faq" class="small-codemirror" ui-codemirror="{mode:'sparql'}" ng-model="faq.sparql">
+		</textarea>
+		<button type="button" class="btn btn-primary" ng-click="executeFaq(faq);">Try out!</button>
+	</div>
+</div>

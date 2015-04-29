@@ -1,0 +1,12 @@
+#id:NXQ_00073
+#title:Proteins with no known (annotated) domain
+#tags:domain,region
+#acs:P38405, Q8N5D0, Q9Y6J6, ...
+#count:12249
+#time: 2.4
+
+select distinct ?entry where {
+  ?entry a :Entry.
+  filter not exists { ?entry :isoform / :region/rdf:type :Domain}
+}
+

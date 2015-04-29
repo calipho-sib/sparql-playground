@@ -1,0 +1,16 @@
+#id:NXQ_00138
+#title:Proteins with 10 or more gold interactions with SH3 domain-containing proteins
+#tags:domain,interaction
+#acs:Q07889,P04626,P10721
+#count:13
+#time:0.2
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :interaction ?it.
+  ?it :quality :GOLD.
+  ?it :interactant ?interactant.
+  ?interactant a :Entry.
+  ?interactant :isoform / :domain / :term cv:DO-00615. # SH*
+}
+group by ?entry having (count (distinct ?interactant) >= 10)

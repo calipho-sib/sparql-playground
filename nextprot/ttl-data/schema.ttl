@@ -1,0 +1,4112 @@
+@prefix : <http://nextprot.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix up: <http://purl.uniprot.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix entry: <http://nextprot.org/rdf/entry/> .
+@prefix isoform: <http://nextprot.org/rdf/isoform/> .
+@prefix annotation: <http://nextprot.org/rdf/annotation/> .
+@prefix evidence: <http://nextprot.org/rdf/evidence/> .
+@prefix xref: <http://nextprot.org/rdf/xref/> .
+@prefix publication: <http://nextprot.org/rdf/publication/> .
+@prefix identifier: <http://nextprot.org/rdf/identifier/> .
+@prefix cv: <http://nextprot.org/rdf/terminology/> .
+@prefix gene: <http://nextprot.org/rdf/gene/> .
+@prefix source: <http://nextprot.org/rdf/source/> .
+@prefix db: <http://nextprot.org/rdf/db/> .
+@prefix context: <http://nextprot.org/rdf/context/> .
+@prefix interaction: <http://nextprot.org/rdf/interaction/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix unipage: <http://www.uniprot.org/uniprot/> .
+
+
+
+:Version
+  rdf:type owl:Class ;
+  :git "unknow"^^xsd:string ;
+  :version "unknow"^^xsd:string ;
+  :date "Jan 27, 2015 2:41:51 PM"^^xsd:string ;
+  rdfs:comment "The nextprot api version that generate those current data."^^xsd:string ;
+  rdfs:subClassOf owl:Thing;
+  .
+
+
+<http://np.org/rdf>
+      rdf:type owl:Ontology ;
+      owl:imports owl: , <http://www.w3.org/2004/02/skos/core> ;
+      owl:versionInfo "Initial release"^^xsd:string .
+
+
+:Entry
+      rdf:type owl:Class ;
+      rdfs:comment "General information of a protein."^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      owl:equivalentClass up:Protein;
+      .
+
+:Isoform
+      rdf:type owl:Class ;
+      rdfs:comment "Specific information of a protein isoform."^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      .
+
+:ProteinSequence
+      rdf:type owl:Class ;
+      rdfs:comment "Protein sequence object"^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      .
+
+:History
+      rdf:type owl:Class ;
+      rdfs:comment "A history of a protein entry"^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      .
+
+
+
+# Isoform annotation specificity qualifier
+
+:IsoformAnnotationSpecificityQualifier
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:comment "Specificity qualifiers are used to describe the isoform specificity of an annotation"^^xsd:string ;
+      .
+      
+:UNKNOWN
+      rdf:type :IsoformAnnotationSpecificityQualifier ;
+      rdfs:comment "Not applicable or not known."^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      :notIn :SPECIFIC, :BY_DEFAULT;
+      .
+
+:SPECIFIC
+      rdf:type :IsoformAnnotationSpecificityQualifier ;
+      rdfs:comment "the annotation is explicitly linked to this isoform in swissprot."^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      :notIn :UNKNOWN, :BY_DEFAULT;
+      .
+
+:BY_DEFAULT
+      rdf:type :IsoformAnnotationSpecificityQualifier ;
+      rdfs:comment "the annotation is by default propagated from the master to the isoform."^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      :notIn :SPECIFIC, :UNKNOWN;
+      .
+
+
+# quality qualifiers
+
+:QualityQualifier
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:comment "Quality qualifiers are used to describe the reliability of an annotation or evidence"^^xsd:string ;
+      .
+
+:GOLD
+      rdf:type :QualityQualifier ;
+      rdfs:comment "High level of confidence"^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      :notIn :SILVER, :BRONZE;
+      .
+
+:SILVER
+      rdf:type :QualityQualifier ;
+      rdfs:comment "Medium level of confidence"^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      :notIn :GOLD, :BRONZE;
+      .
+      
+:BRONZE
+      rdf:type :QualityQualifier ;
+      rdfs:comment "Low level of confidence"^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      :notIn :SILVER, :GOLD;
+      .
+      
+# protein existence
+:ProteinExistence
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:comment "Protein existence detection method and reliabilty level"^^xsd:string ;
+      .
+
+:Evidence_at_protein_level
+      rdf:type :ProteinExistence ;
+      :level "1"^^xsd:integer ;
+      rdfs:label "Evidence at protein level"^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      :notIn :Evidence_at_transcript_level, :Inferred_from_homology, :Predicted, :Uncertain;
+      .
+
+:Evidence_at_transcript_level
+      rdf:type :ProteinExistence ;
+      :level "2"^^xsd:integer ;
+      rdfs:label "Evidence at transcript level"^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      :notIn :Evidence_at_protein_level, :Inferred_from_homology, :Predicted, :Uncertain;
+      .
+
+:Inferred_from_homology
+      rdf:type :ProteinExistence ;
+      :level "3"^^xsd:integer ;
+      rdfs:label "Inferred from homology"^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      :notIn :Evidence_at_protein_level, :Evidence_at_transcript_level, :Predicted, :Uncertain;
+      .
+      
+:Predicted
+      rdf:type :ProteinExistence ;
+      :level "4"^^xsd:integer ;
+      rdfs:label "Predicted"^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      :notIn :Evidence_at_protein_level, :Evidence_at_transcript_level, :Inferred_from_homology, :Uncertain;
+      .
+
+:Uncertain
+      rdf:type :ProteinExistence ;
+      :level "5"^^xsd:integer ;
+      rdfs:label "Uncertain"^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      :notIn :Evidence_at_protein_level, :Evidence_at_transcript_level, :Inferred_from_homology, :Predicted;
+      .
+      
+
+      
+#TODO generate specific owl for the publication hierarchy       
+:Publication
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      .
+      #
+# Define Ontology
+# 
+:Term
+      rdf:type owl:Class ;
+      rdfs:comment "A concept used to classify resources."^^xsd:string ;
+      rdfs:subClassOf owl:Thing;
+      owl:equivalentClass up:Concept;
+      .
+       
+:childOf
+      a rdf:Property, owl:TransitiveProperty ;
+      rdfs:domain :Term ;
+      rdfs:range :Term;
+      .
+
+:related
+      a rdf:Property ;
+      rdfs:domain :Term ;
+      rdfs:range :Term;
+      .
+
+# ECO_0000045 IHC =>A spatial pattern of protein expression evidence
+cv:ECO_0000045 rdfs:subClassOf :IHC .
+
+# ECO_0000104 EST =>microarray RNA expression level evidence
+cv:ECO_0000104 rdfs:subClassOf :EST .
+
+# ECO_0000220 microarray =>sequencing assay evidence
+ cv:ECO_0000220 rdfs:subClassOf :Microarray .
+ 
+ 
+# alternative to rdfs:subClassOf (see later)
+#:IHC :related cv:ECO:0000045 .
+#:EST :related cv:ECO:0000104 .
+#:Microarray :related cv: ECO:0000220 .
+
+ 
+
+  
+:BgeeDevelopmentalStageCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "Bgee human developmental stages"^^xsd:string;
+  rdfs:comment "Bgee controlled vocabulary of human developmental stages"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/BgeeDevelopmentalStageCv"^^xsd:anyURI;
+  .      
+  
+:CellosaurusCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "neXtProt cell line"^^xsd:string;
+  rdfs:comment "Controlled vocabulary of cell lines"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/CellosaurusCv"^^xsd:anyURI;
+  .      
+  
+:EnzymeClassificationCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "Enzyme classification"^^xsd:string;
+  rdfs:comment "Describes each type of enzyme for which an EC (Enzyme Commission) number has been provided"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/EnzymeClassificationCv"^^xsd:anyURI;
+  .      
+  
+:EvidenceCodeOntologyCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "Evidence code ontology"^^xsd:string;
+  rdfs:comment "Ontology to describe information that is used to support an assertion"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/EvidenceCodeOntologyCv"^^xsd:anyURI;
+  .      
+  
+:EVocAnatomicalSystemCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "eVOC Anatomical System"^^xsd:string;
+  rdfs:comment "eVOC ontology for anatomical system. http://trac.genebio.com/~defaultuser/repository/anatomicalsystem.obo"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/EVocAnatomicalSystemCv"^^xsd:anyURI;
+  .      
+  
+:EVocCellTypeCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "eVOC Cell Type"^^xsd:string;
+  rdfs:comment "eVOC ontology for cell types. http://trac.genebio.com/~defaultuser/repository/celltype.obo"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/EVocCellTypeCv"^^xsd:anyURI;
+  .      
+  
+:EVocCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "eVOC"^^xsd:string;
+  rdfs:comment "Expressed Sequence Annotation for Humans Provides structured controlled vocabularies for the annotation of expressed sequences with respect to anatomical system, cell type, developmental stage, experimental technique, microarray platform, pathology, pooling, tissue preparation and treatment."^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/EVocCv"^^xsd:anyURI;
+  .      
+  
+:EvocDevelopmentalStageCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "eVOC Development Stage"^^xsd:string;
+  rdfs:comment "eVOC ontology of human development stages"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/EvocDevelopmentalStageCv"^^xsd:anyURI;
+  .      
+  
+:EVocPathologyCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "eVOC Pathology"^^xsd:string;
+  rdfs:comment "eVOC ontology for pathologies. http://trac.genebio.com/~defaultuser/repository/pathology.obo"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/EVocPathologyCv"^^xsd:anyURI;
+  .      
+  
+:GoBiologicalProcessCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "Gene Ontology biological process"^^xsd:string;
+  rdfs:comment "Ontology to describe gene and gene product attributes. This is the part of GO describing biological processes"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/GoBiologicalProcessCv"^^xsd:anyURI;
+  .      
+  
+:GoCellularComponentCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "Gene Ontology cellular component"^^xsd:string;
+  rdfs:comment "Ontology to describe gene and gene product attributes. This is the part of GO describing cellular components"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/GoCellularComponentCv"^^xsd:anyURI;
+  .      
+  
+:GoCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "GO"^^xsd:string;
+  rdfs:comment "The Gene Ontology project provides a controlled vocabulary to describe gene and gene product attributes in any organism"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/GoCv"^^xsd:anyURI;
+  .      
+  
+:GoMolecularFunctionCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "Gene Ontology molecular function"^^xsd:string;
+  rdfs:comment "Ontology to describe gene and gene product attributes. This is the part of GO describing molecular functions"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/GoMolecularFunctionCv"^^xsd:anyURI;
+  .      
+  
+:MeshAnatomyCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "MeSH Anatomy"^^xsd:string;
+  rdfs:comment "National Library of Medicine&apos;s controlled vocabulary thesaurus. This is the C (diseases) part"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/MeshAnatomyCv"^^xsd:anyURI;
+  .      
+  
+:MeshCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "MeSH"^^xsd:string;
+  rdfs:comment "National Library of Medicine&apos;s controlled vocabulary thesaurus"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/MeshCv"^^xsd:anyURI;
+  .      
+  
+:NciMetathesaurusCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "NCI Metathesaurus"^^xsd:string;
+  rdfs:comment "Ontology to describe information that is used to support an assertion."^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/NciMetathesaurusCv"^^xsd:anyURI;
+  .      
+  
+:NciThesaurusCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "NCI Thesaurus"^^xsd:string;
+  rdfs:comment "National Cancer Institute&apos;s reference terminology resource for biomedical concepts"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/NciThesaurusCv"^^xsd:anyURI;
+  .      
+  
+:NextprotAnatomyCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "neXtProt human anatomy"^^xsd:string;
+  rdfs:comment "neXtProt human anatomical ontology. Developed to allow to navigate through protein and mRNA expression data"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/NextprotAnatomyCv"^^xsd:anyURI;
+  .      
+  
+:NextprotAnnotationCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "neXtProt biosequence annotation"^^xsd:string;
+  rdfs:comment "neXtProt ontology for biosequence annotations. Set of terms and relationships used to describe the annotations of biological sequences"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/NextprotAnnotationCv"^^xsd:anyURI;
+  .      
+  
+:NextprotCarbohydrateCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "UniProtKB carbohydrate"^^xsd:string;
+  rdfs:comment "neXtProt controlled vocabulary of carbohydrates bound to human proteins  as derived from UniProtKB/Swiss-Prot"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/NextprotCarbohydrateCv"^^xsd:anyURI;
+  .      
+  
+:NextprotDomainCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "neXtProt domain"^^xsd:string;
+  rdfs:comment "neXtProt controlled vocabulary of domains, repeat and zinc fingers in human proteins as derived from UniProtKB/Swiss-Prot"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/NextprotDomainCv"^^xsd:anyURI;
+  .      
+  
+:NextprotFamilyCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "neXtProt family"^^xsd:string;
+  rdfs:comment "neXtProt list of human protein families as derived from UniProtKB/Swiss-Prot"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/NextprotFamilyCv"^^xsd:anyURI;
+  .      
+  
+:NextprotMetalCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "neXtProt metal"^^xsd:string;
+  rdfs:comment "neXtProt controlled vocabulary of metal bound to human proteins as derived from UniProtKB/Swiss-Prot"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/NextprotMetalCv"^^xsd:anyURI;
+  .      
+  
+:NextprotTopologyCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "UniProtKB topology"^^xsd:string;
+  rdfs:comment "neXtProt controlled vocabulary to describe the topology of regions for transmembrane proteins that span membrane compartments as derived from UniProtKB/Swiss-Prot"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/NextprotTopologyCv"^^xsd:anyURI;
+  .      
+  
+:NonStandardAminoAcidCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "Non-standard amino acid"^^xsd:string;
+  rdfs:comment "Controled vocabulary for non-standard amino acids in protein sequences"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/NonStandardAminoAcidCv"^^xsd:anyURI;
+  .      
+  
+:OmimCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "MIM"^^xsd:string;
+  rdfs:comment "OMIM is a comprehensive, authoritative compendium of human genes and genetic phenotypes"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/OmimCv"^^xsd:anyURI;
+  .      
+  
+:OrganelleCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "Organelle"^^xsd:string;
+  rdfs:comment "List of organelles in which a mature protein is targeted using a transit peptide"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/OrganelleCv"^^xsd:anyURI;
+  .      
+  
+:SequenceOntologyCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "Sequence ontology"^^xsd:string;
+  rdfs:comment "Subset of protein feature ontology."^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/SequenceOntologyCv"^^xsd:anyURI;
+  .      
+  
+:UnipathwayCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "UniPathway"^^xsd:string;
+  rdfs:comment "UniProt controlled vocabulary and hierarchical representation of metabolic pathways"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/UnipathwayCv"^^xsd:anyURI;
+  .      
+  
+:UniprotDiseaseCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "UniProtKB disease"^^xsd:string;
+  rdfs:comment "UniProt controlled vocabulary of human diseases"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/UniprotDiseaseCv"^^xsd:anyURI;
+  .      
+  
+:UniprotFamilyCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "UniProtKB family"^^xsd:string;
+  rdfs:comment "List of families extracted from similar.txt in Uniprot knowledge base. http://www.uniprot.org/docs/similar.txt"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/UniprotFamilyCv"^^xsd:anyURI;
+  .      
+  
+:UniprotKeywordCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "UniProtKB keyword"^^xsd:string;
+  rdfs:comment "UniProt controlled vocabulary of keywords"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/UniprotKeywordCv"^^xsd:anyURI;
+  .      
+  
+:UniprotPtmCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "UniProtKB post-translational modification"^^xsd:string;
+  rdfs:comment "UniProt controlled vocabulary of post-translational modifications"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/UniprotPtmCv"^^xsd:anyURI;
+  .      
+  
+:UniprotRegionStructureCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "UniProtKB region structure"^^xsd:string;
+  rdfs:comment "Control vocabulary to describe the protein region structure"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/UniprotRegionStructureCv"^^xsd:anyURI;
+  .      
+  
+:UniprotSubcellularLocationCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "UniProtKB subcellular location"^^xsd:string;
+  rdfs:comment "UniProt controlled vocabulary of subcellular locations"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/UniprotSubcellularLocationCv"^^xsd:anyURI;
+  .      
+  
+:UniprotSubcellularOrientationCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "UniProtKB subcellular orientation"^^xsd:string;
+  rdfs:comment "UniProt controlled vocabulary of subcellular orientations (in UniProt this is part of the UniProt subcellular location CV)"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/UniprotSubcellularOrientationCv"^^xsd:anyURI;
+  .      
+  
+:UniprotSubcellularTopologyCv
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Term;
+  rdfs:label "UniProtKB subcellular topology"^^xsd:string;
+  rdfs:comment "UniProt controlled vocabulary of subcellular topologies (in UniProt this is part of the UniProt subcellular location CV)"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/manual/UniprotSubcellularTopologyCv"^^xsd:anyURI;
+  .      
+
+
+#
+# Define super classes for annotations
+#
+
+:Name
+   rdf:type :AnnotationType;
+   rdfs:label "Name"^^xsd:string;
+   .   
+:FamilyName
+   rdf:type :AnnotationType;
+   rdfs:comment "Family classification"^^xsd:string;
+   rdfs:label "Family name"^^xsd:string;
+   rdfs:subClassOf :Name;
+   .   
+:PositionalAnnotation
+   rdf:type :AnnotationType;
+   rdfs:label "Positional annotation"^^xsd:string;
+   .   
+:ProcessingProduct
+   rdf:type :AnnotationType;
+   rdfs:label "Processing product"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:Topology
+   rdf:type :AnnotationType;
+   rdfs:label "Topology"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:Region
+   rdf:type :AnnotationType;
+   rdfs:label "Region"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:Site
+   rdf:type :AnnotationType;
+   rdfs:label "Site"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:Ptm
+   rdf:type :AnnotationType;
+   rdfs:label "PTM"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:SecondaryStructure
+   rdf:type :AnnotationType;
+   rdfs:label "Secondary structure"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:Mapping
+   rdf:type :AnnotationType;
+   rdfs:label "Mapping"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:GeneralAnnotation
+   rdf:type :AnnotationType;
+   rdfs:label "General Annotation"^^xsd:string;
+   .   
+:Function
+   rdf:type :AnnotationType;
+   rdfs:label "Function"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   .   
+:Interaction
+   rdf:type :AnnotationType;
+   rdfs:label "Interaction"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   .   
+:CellularComponent
+   rdf:type :AnnotationType;
+   rdfs:label "Cellular component"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   .   
+:Expression
+   rdf:type :AnnotationType;
+   rdfs:label "Expression"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   .   
+:Medical
+   rdf:type :AnnotationType;
+   rdfs:label "Medical"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   .   
+:Keyword
+   rdf:type :AnnotationType;
+   rdfs:label "Keywords"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   .   
+:EnzymeClassification
+   rdf:type :AnnotationType;
+   rdfs:comment "Ontology annotation by enzyme classification"^^xsd:string;
+   rdfs:label "Enzyme classification"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   .   
+:PdbMapping
+   rdf:type :AnnotationType;
+   rdfs:comment "Protein 3D structure"^^xsd:string;
+   rdfs:label "PDB mapping"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :Mapping;
+   .   
+:NonConsecutiveResidue
+   rdf:type :AnnotationType;
+   rdfs:comment "Indicates that two residues in a sequence are not consecutive"^^xsd:string;
+   rdfs:label "Non-consecutive residue"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:NonTerminalResidue
+   rdf:type :AnnotationType;
+   rdfs:comment "The sequence is incomplete. Indicate that a residue is not the terminal residue of the complete protein"^^xsd:string;
+   rdfs:label "Non-terminal residue"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:DomainInfo
+   rdf:type :AnnotationType;
+   rdfs:comment "Relevant information on protein domain(s)"^^xsd:string;
+   rdfs:label "Domain information"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:InitiatorMethionine
+   rdf:type :AnnotationType;
+   rdfs:comment "Cleavage of the initiator methionine"^^xsd:string;
+   rdfs:label "Initiator methionine"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :ProcessingProduct;
+   .   
+:SignalPeptide
+   rdf:type :AnnotationType;
+   rdfs:comment "Sequence targeting proteins to the secretory pathway or periplasmic space"^^xsd:string;
+   rdfs:label "Signal peptide"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :ProcessingProduct;
+   .   
+:PeroxisomeTransitPeptide
+   rdf:type :AnnotationType;
+   rdfs:label "Peroxisome transit peptide"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :ProcessingProduct;
+   .   
+:MitochondrialTransitPeptide
+   rdf:type :AnnotationType;
+   rdfs:label "Mitochondrial transit peptide"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :ProcessingProduct;
+   .   
+:MaturationPeptide
+   rdf:type :AnnotationType;
+   rdfs:comment "Part of a protein that is cleaved during maturation or activation"^^xsd:string;
+   rdfs:label "Maturation peptide"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :ProcessingProduct;
+   .   
+:MatureProtein
+   rdf:type :AnnotationType;
+   rdfs:comment "Extent of an active peptide or a polypetide chain in the mature protein"^^xsd:string;
+   rdfs:label "Mature protein"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :ProcessingProduct;
+   .   
+:TransmembraneRegion
+   rdf:type :AnnotationType;
+   rdfs:comment "Extent of a membrane-spanning region"^^xsd:string;
+   rdfs:label "Transmembrane region"^^xsd:string;
+   rdfs:subClassOf :Topology;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:IntramembraneRegion
+   rdf:type :AnnotationType;
+   rdfs:label "Intramembrane region"^^xsd:string;
+   rdfs:subClassOf :Topology;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:TopologicalDomain
+   rdf:type :AnnotationType;
+   rdfs:comment "Location of non-membrane regions of membrane-spanning proteins"^^xsd:string;
+   rdfs:label "Topological domain"^^xsd:string;
+   rdfs:subClassOf :Topology;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:Domain
+   rdf:type :AnnotationType;
+   rdfs:comment "Position and type of each modular protein domain"^^xsd:string;
+   rdfs:label "Domain"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :Region;
+   .   
+:Repeat
+   rdf:type :AnnotationType;
+   rdfs:comment "Positions of repeated sequence motifs or repeated domains"^^xsd:string;
+   rdfs:label "Repeat"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :Region;
+   .   
+:CalciumBindingRegion
+   rdf:type :AnnotationType;
+   rdfs:comment "Position(s) of calcium binding region(s) within the protein"^^xsd:string;
+   rdfs:label "Calcium-binding region"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :Region;
+   .   
+:ZincFingerRegion
+   rdf:type :AnnotationType;
+   rdfs:comment "Position(s) and type(s) of zinc fingers within the protein"^^xsd:string;
+   rdfs:label "Zinc finger region"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :Region;
+   .   
+:DnaBindingRegion
+   rdf:type :AnnotationType;
+   rdfs:comment "Position and type of a DNA-binding domain"^^xsd:string;
+   rdfs:label "DNA-binding region"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :Region;
+   .   
+:NucleotidePhosphateBindingRegion
+   rdf:type :AnnotationType;
+   rdfs:comment "Nucleotide phosphate binding region"^^xsd:string;
+   rdfs:label "Nucleotide phosphate-binding region"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :Region;
+   .   
+:CoiledCoilRegion
+   rdf:type :AnnotationType;
+   rdfs:comment "Positions of regions of coiled coil within the protein"^^xsd:string;
+   rdfs:label "Coiled-coil region"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :Region;
+   .   
+:ShortSequenceMotif
+   rdf:type :AnnotationType;
+   rdfs:comment "Short (up to 20 amino acids) sequence motif of biological interest"^^xsd:string;
+   rdfs:label "Short sequence motif"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :Region;
+   .   
+:CompositionallyBiasedRegion
+   rdf:type :AnnotationType;
+   rdfs:comment "Region of compositional bias in the protein"^^xsd:string;
+   rdfs:label "Compositionally biased region"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :Region;
+   .   
+:MiscellaneousRegion
+   rdf:type :AnnotationType;
+   rdfs:comment "Region of interest in the sequence"^^xsd:string;
+   rdfs:label "Miscellaneous region"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :Region;
+   .   
+:InteractingRegion
+   rdf:type :AnnotationType;
+   rdfs:comment "Region interacting with another macromolecule."^^xsd:string;
+   rdfs:label "Interacting region"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :Region;
+   .   
+:ActiveSite
+   rdf:type :AnnotationType;
+   rdfs:comment "Amino acid(s) directly involved in the activity of an enzyme"^^xsd:string;
+   rdfs:label "Active site"^^xsd:string;
+   rdfs:subClassOf :Site;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:MetalBindingSite
+   rdf:type :AnnotationType;
+   rdfs:comment "Binding site for a metal ion"^^xsd:string;
+   rdfs:label "Metal binding site"^^xsd:string;
+   rdfs:subClassOf :Site;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:BindingSite
+   rdf:type :AnnotationType;
+   rdfs:comment "Binding site for any chemical group (co-enzyme, prosthetic group, etc.)"^^xsd:string;
+   rdfs:label "Binding site"^^xsd:string;
+   rdfs:subClassOf :Site;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:CleavageSite
+   rdf:type :AnnotationType;
+   rdfs:comment "Cleavage site on the sequence."^^xsd:string;
+   rdfs:label "Cleavage site"^^xsd:string;
+   rdfs:subClassOf :Site;
+   rdfs:subClassOf :PositionalAnnotation;
+   rdfs:subClassOf :ProcessingProduct;
+   .   
+:MiscellaneousSite
+   rdf:type :AnnotationType;
+   rdfs:comment "Interesting single amino acid site on the sequence"^^xsd:string;
+   rdfs:label "Miscellaneous site"^^xsd:string;
+   rdfs:subClassOf :Site;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:Selenocysteine
+   rdf:type :AnnotationType;
+   rdfs:comment "Occurence of non-standard amino acids (selenocysteine and pyrrolysine) in the protein sequence"^^xsd:string;
+   rdfs:label "Selenocysteine"^^xsd:string;
+   rdfs:subClassOf :Ptm;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:LipidationSite
+   rdf:type :AnnotationType;
+   rdfs:comment "Lipidation: covalently attached lipid group(s)"^^xsd:string;
+   rdfs:label "Lipid moiety-binding region"^^xsd:string;
+   rdfs:subClassOf :Ptm;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:GlycosylationSite
+   rdf:type :AnnotationType;
+   rdfs:comment "Covalently attached glycan group(s)"^^xsd:string;
+   rdfs:label "Glycosylation site"^^xsd:string;
+   rdfs:subClassOf :Ptm;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:CrossLink
+   rdf:type :AnnotationType;
+   rdfs:comment "Residues participating in covalent linkage(s) between proteins"^^xsd:string;
+   rdfs:label "Cross-link"^^xsd:string;
+   rdfs:subClassOf :Ptm;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:DisulfideBond
+   rdf:type :AnnotationType;
+   rdfs:comment "Cysteine residues participating in disulfide bonds"^^xsd:string;
+   rdfs:label "Disulfide bond"^^xsd:string;
+   rdfs:subClassOf :Ptm;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:ModifiedResidue
+   rdf:type :AnnotationType;
+   rdfs:comment "Modified residues"^^xsd:string;
+   rdfs:label "Modified residue"^^xsd:string;
+   rdfs:subClassOf :Ptm;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:PtmInfo
+   rdf:type :AnnotationType;
+   rdfs:comment "Post-translational modifications"^^xsd:string;
+   rdfs:label "PTM info"^^xsd:string;
+   rdfs:subClassOf :Ptm;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:Helix
+   rdf:type :AnnotationType;
+   rdfs:comment "Helical regions within the experimentally determined protein structure"^^xsd:string;
+   rdfs:label "Helix"^^xsd:string;
+   rdfs:subClassOf :SecondaryStructure;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:Turn
+   rdf:type :AnnotationType;
+   rdfs:comment "Turns within the experimentally determined protein structure"^^xsd:string;
+   rdfs:label "Turn"^^xsd:string;
+   rdfs:subClassOf :SecondaryStructure;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:BetaStrand
+   rdf:type :AnnotationType;
+   rdfs:comment "Beta strand regions within the experimentally determined protein structure"^^xsd:string;
+   rdfs:label "Beta strand"^^xsd:string;
+   rdfs:subClassOf :SecondaryStructure;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:Variant
+   rdf:type :AnnotationType;
+   rdfs:comment "Natural variant of the protein"^^xsd:string;
+   rdfs:label "Variant"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:VariantInfo
+   rdf:type :AnnotationType;
+   rdfs:comment "Description of polymorphism(s)"^^xsd:string;
+   rdfs:label "VariantInfo"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:Mutagenesis
+   rdf:type :AnnotationType;
+   rdfs:comment "Site which has been experimentally altered by mutagenesis"^^xsd:string;
+   rdfs:label "Mutagenesis"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:SequenceConflict
+   rdf:type :AnnotationType;
+   rdfs:comment "Sequence discrepancies of unknown origin"^^xsd:string;
+   rdfs:label "Sequence conflict"^^xsd:string;
+   rdfs:subClassOf :PositionalAnnotation;
+   .   
+:Induction
+   rdf:type :AnnotationType;
+   rdfs:comment "Effects of environmental factors on gene expression"^^xsd:string;
+   rdfs:label "Induction"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   .   
+:Miscellaneous
+   rdf:type :AnnotationType;
+   rdfs:comment "Any relevant information that doesn&apos;t fit in any other defined sections"^^xsd:string;
+   rdfs:label "Miscellaneous"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   .   
+:Caution
+   rdf:type :AnnotationType;
+   rdfs:comment "Warning about possible errors and/or grounds for confusion"^^xsd:string;
+   rdfs:label "Caution"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   .   
+:SequenceCaution
+   rdf:type :AnnotationType;
+   rdfs:comment "Errors concerning the protein sequence"^^xsd:string;
+   rdfs:label "Sequence caution"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   .   
+:UniprotKeyword
+   rdf:type :AnnotationType;
+   rdfs:comment "Ontology annotation by uniprot keyword"^^xsd:string;
+   rdfs:label "Uniprot keyword"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Keyword;
+   .   
+:FunctionInfo
+   rdf:type :AnnotationType;
+   rdfs:comment "General function(s) of a protein"^^xsd:string;
+   rdfs:label "Function info"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Function;
+   .   
+:CatalyticActivity
+   rdf:type :AnnotationType;
+   rdfs:comment "Reaction(s) catalyzed by an enzyme"^^xsd:string;
+   rdfs:label "Catalytic activity"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Function;
+   .   
+:Cofactor
+   rdf:type :AnnotationType;
+   rdfs:comment "Non-protein substance required for enzyme activity"^^xsd:string;
+   rdfs:label "Cofactor"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Function;
+   rdfs:subClassOf :Interaction;
+   .   
+:EnzymeRegulation
+   rdf:type :AnnotationType;
+   rdfs:comment "Enzyme regulatory mechanism"^^xsd:string;
+   rdfs:label "Enzyme regulation"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Function;
+   rdfs:subClassOf :Interaction;
+   .   
+:Pathway
+   rdf:type :AnnotationType;
+   rdfs:comment "Associated metabolic pathways"^^xsd:string;
+   rdfs:label "Pathway"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Function;
+   .   
+:GoMolecularFunction
+   rdf:type :AnnotationType;
+   rdfs:comment "Ontology annotation by go molecular function"^^xsd:string;
+   rdfs:label "Go molecular function"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Function;
+   .   
+:GoBiologicalProcess
+   rdf:type :AnnotationType;
+   rdfs:comment "Ontology annotation by go biological process"^^xsd:string;
+   rdfs:label "Go biological process"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Function;
+   .   
+:SmallMoleculeInteraction
+   rdf:type :AnnotationType;
+   rdfs:label "Small molecule interaction"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Medical;
+   rdfs:subClassOf :Interaction;
+   .   
+:InteractionInfo
+   rdf:type :AnnotationType;
+   rdfs:comment "Subunit structure: interaction with other protein(s)"^^xsd:string;
+   rdfs:label "Interaction info"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Interaction;
+   .   
+:BinaryInteraction
+   rdf:type :AnnotationType;
+   rdfs:label "Binary interaction"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Interaction;
+   .   
+:SubcellularLocation
+   rdf:type :AnnotationType;
+   rdfs:comment "Subcellular location of the mature protein"^^xsd:string;
+   rdfs:label "Subcellular location"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :CellularComponent;
+   .   
+:SubcellularLocationNote
+   rdf:type :AnnotationType;
+   rdfs:comment "Subcellular location information of the mature protein"^^xsd:string;
+   rdfs:label "Subcellular location info"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :CellularComponent;
+   .   
+:GoCellularComponent
+   rdf:type :AnnotationType;
+   rdfs:comment "Ontology annotation by go cellular component"^^xsd:string;
+   rdfs:label "Go cellular component"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :CellularComponent;
+   .   
+:DevelopmentalStageInfo
+   rdf:type :AnnotationType;
+   rdfs:comment "Expression of the gene product according to the cell stage and/or tissue or organism development"^^xsd:string;
+   rdfs:label "Developmental stage"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Expression;
+   .   
+:ExpressionInfo
+   rdf:type :AnnotationType;
+   rdfs:comment "Expression annotation to summarize expression levels measured in a series of experiments"^^xsd:string;
+   rdfs:label "Expression info"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Expression;
+   .   
+:ExpressionProfile
+   rdf:type :AnnotationType;
+   rdfs:comment "Expression of the gene product in different tissues"^^xsd:string;
+   rdfs:label "Expression profile (tissue specificity)"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Expression;
+   .   
+:Disease
+   rdf:type :AnnotationType;
+   rdfs:comment "Involvement in disease: disease(s) associated with protein defect(s)"^^xsd:string;
+   rdfs:label "Disease"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Medical;
+   .   
+:Allergen
+   rdf:type :AnnotationType;
+   rdfs:comment "Allergenic properties: information relevant to allergenic proteins"^^xsd:string;
+   rdfs:label "Allergen"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Medical;
+   .   
+:Pharmaceutical
+   rdf:type :AnnotationType;
+   rdfs:comment "Pharmaceutical use: use of as a pharmaceutical drug"^^xsd:string;
+   rdfs:label "Pharmaceutical"^^xsd:string;
+   rdfs:subClassOf :GeneralAnnotation;
+   rdfs:subClassOf :Medical;
+   .   
+
+
+#
+# Define evidences
+#
+
+:Evidence
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing;
+      .
+
+:CuratedEvidence
+      rdf:type owl:Class ;
+      :notIn :ComputedEvidence;
+      rdfs:subClassOf :Evidence;
+      .
+
+:ComputedEvidence
+      rdf:type owl:Class ;
+      :notIn :CuratedEvidence;
+      rdfs:subClassOf :Evidence;
+      .
+      
+:assignedBy
+      a rdf:Property, owl:FunctionalProperty ;
+      rdfs:domain :Evidence ;
+      rdfs:range :Source
+      .
+      
+:Integrated
+      rdf:type owl:Class ;
+      rdfs:comment "level of integration"^^xsd:string ;
+      :notIn :Selected,:Single;
+      .
+
+:Selected
+      rdf:type owl:Class ;
+      rdfs:comment "level of integration"^^xsd:string ;
+      :notIn :Integrated,:Single;
+      .
+
+:Single
+      rdf:type owl:Class ;
+      rdfs:comment "level of integration"^^xsd:string ;
+      :notIn :Selected,:Integrated;
+      .
+      
+
+:GOEvidenceCode
+      rdf:type owl:Class ;
+      rdfs:comment "GO evidence code"^^xsd:string ;
+      rdfs:subClassOf owl:Thing;
+      .
+
+# Links between :GOEvidenceCode  :EvidenceCodeOntology
+:EXP :related cv:ECO_0000269 .
+:IBA :related cv:ECO_0000318 .
+:IBD :related cv:ECO_0000319 .
+:IC  :related cv:ECO_0000305 .
+:IDA :related cv:ECO_0000314 .
+:IEA :related cv:ECO_0000501 .
+:IEP :related cv:ECO_0000270 .
+:IGC :related cv:ECO_0000317 .
+:IGC :related cv:ECO_0000354 .
+:IGI :related cv:ECO_0000316 .
+:IKR :related cv:ECO_0000320 .
+:IMP :related cv:ECO_0000315 .
+:IMR :related cv:ECO_0000320 .
+:IPI :related cv:ECO_0000353 .
+:IRD :related cv:ECO_0000321 .
+:ISA :related cv:ECO_0000247 .
+:ISM :related cv:ECO_0000255 .
+:ISO :related cv:ECO_0000266 .
+:ISS :related cv:ECO_0000250 .
+:NAS :related cv:ECO_0000303 .
+:ND  :related cv:ECO_0000307 .
+:RCA :related cv:ECO_0000245 .
+:TAS :related cv:ECO_0000304 .
+
+
+:EXP
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Experiment"^^xsd:string;
+   rdfs:label "EXP"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/EXP"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:IDA
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Direct Assay"^^xsd:string;
+   rdfs:label "IDA"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/IDA"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:IPI
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Physical Interaction"^^xsd:string;
+   rdfs:label "IPI"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/IPI"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:IGI
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Genetic Interaction"^^xsd:string;
+   rdfs:label "IGI"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/IGI"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:IEP
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Expression Pattern"^^xsd:string;
+   rdfs:label "IEP"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/IEP"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:ISS
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Sequence or Structural Similarity"^^xsd:string;
+   rdfs:label "ISS"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/ISS"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:ISO
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Sequence Orthology"^^xsd:string;
+   rdfs:label "ISO"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/ISO"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:ISA
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Sequence Alignment"^^xsd:string;
+   rdfs:label "ISA"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/ISA"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:ISM
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Sequence Model"^^xsd:string;
+   rdfs:label "ISM"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/ISM"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:IGC
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Genomic Context"^^xsd:string;
+   rdfs:label "IGC"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/IGC"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:RCA
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Reviewed Computational Analysis"^^xsd:string;
+   rdfs:label "RCA"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/RCA"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:TAS
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Traceable Author Statement"^^xsd:string;
+   rdfs:label "TAS"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/TAS"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:NAS
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Non-traceable Author Statement"^^xsd:string;
+   rdfs:label "NAS"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/NAS"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:IC
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred by Curator"^^xsd:string;
+   rdfs:label "IC"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/IC"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:ND
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "No biological Data available"^^xsd:string;
+   rdfs:label "ND"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/ND"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :IEA, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:IEA
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Electronic Annotation"^^xsd:string;
+   rdfs:label "IEA"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/IEA"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :NR, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:NR
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Not Recorded"^^xsd:string;
+   rdfs:label "NR"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/NR"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :IMP, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:IMP
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Mutant Phenotype"^^xsd:string;
+   rdfs:label "IMP"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/IMP"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IBA, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:IBA
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Biological aspect of Ancestor."^^xsd:string;
+   rdfs:label "IBA"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/IBA"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBD, :IKR, :IRD;
+   .   
+
+
+
+
+
+:IBD
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Biological aspect of Descendant."^^xsd:string;
+   rdfs:label "IBD"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/IBD"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IKR, :IRD;
+   .   
+
+
+
+
+
+:IKR
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Key Residues."^^xsd:string;
+   rdfs:label "IKR"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/IKR"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IRD;
+   .   
+
+
+
+
+
+:IRD
+   rdf:type :GOEvidenceCode; 
+   rdfs:comment "Inferred from Rapid Divergence."^^xsd:string;
+   rdfs:label "IRD"^^xsd:string; 
+   rdfs:seeAlso "http://www.nextprot.org/manual/IRD"^^xsd:anyURI; 
+   rdfs:subClassOf owl:Thing;
+   :notIn :EXP, :IDA, :IPI, :IGI, :IEP, :ISS, :ISO, :ISA, :ISM, :IGC, :RCA, :TAS, :NAS, :IC, :ND, :IEA, :NR, :IMP, :IBA, :IBD, :IKR;
+   .   
+
+
+
+
+
+ 
+
+#
+# Define Expresion specialisation
+# 
+
+:ExpressionLevel
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:comment "Expression levels detected during experiment"^^xsd:string ;
+      .
+
+   
+:Positive
+      rdf:type :ExpressionLevel ;
+      rdfs:comment "Positive expression"^^xsd:string ;
+      :notIn :Low,:Medium,:High;
+      .
+      
+:High
+      rdf:type :ExpressionLevel ;
+      rdfs:comment "High level of expression"^^xsd:string ;
+      rdfs:subClassOf :Positive ;
+      :notIn :Low,:Medium,:Positive;
+      .
+
+:Medium
+      rdf:type :ExpressionLevel ;
+      rdfs:comment "High level of expression"^^xsd:string ;
+      rdfs:subClassOf :Positive ;
+      :notIn :Low,:High,:Positive;
+      .
+:Low
+      rdf:type :ExpressionLevel ;
+      rdfs:comment "High level of expression"^^xsd:string ;
+      rdfs:subClassOf :Positive ;
+      :notIn :Medium,:High,:Positive;
+      .
+
+:Negative
+      rdf:type :ExpressionLevel ;
+      rdfs:comment "High level of expression"^^xsd:string ;
+      .      
+
+#
+# what about not detected?
+:NotDetected owl:sameAs :Negative.
+
+
+      
+#:expressed      
+#:highlyExpressed
+#:notHighlyExpressed     
+#:notExpressed
+
+
+ #
+# Define Database
+# 
+:Database
+      rdf:type owl:Class ;
+      rdfs:comment "Database of the cross-reference"^^xsd:string ;
+      rdfs:subClassOf owl:Thing;
+      .
+
+:Xref
+      rdf:type owl:Class ;
+      rdfs:comment "Cross reference"^^xsd:string ;
+      rdfs:subClassOf owl:Thing;
+      .
+      
+:Identifier
+      rdf:type owl:Class ;
+      rdfs:comment "Identifier type"^^xsd:string ;
+      rdfs:subClassOf owl:Thing;
+      .
+      
+      
+  
+db:FLJ rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Identifier subtype"^^xsd:string;
+  :category "Identifier subset"^^xsd:string;
+  .      
+  
+db:DSMZ rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "DSMZ-German collection of microorganisms and cell culture"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www.dsmz.de/home.html"^^xsd:anyURI;
+  .      
+  
+db:RESID rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "An ontology consisting of terms that describe protein chemical modifications."^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/RESID/"^^xsd:anyURI;
+  .      
+  
+db:PROSITE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "PROSITE; a protein domain and family database"^^xsd:string;
+  :category "Family and domain databases"^^xsd:string;
+  rdfs:seeAlso "http://prosite.expasy.org/"^^xsd:anyURI;
+  .      
+  
+db:PeptideAtlas rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "PeptideAtlas"^^xsd:string;
+  :category "Proteomic databases"^^xsd:string;
+  rdfs:seeAlso "http://www.peptideatlas.org"^^xsd:anyURI;
+  .      
+  
+db:TIGRFAMs rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "TIGRFAMs; a protein family database"^^xsd:string;
+  :category "Family and domain databases"^^xsd:string;
+  rdfs:seeAlso "http://www.jcvi.org/cgi-bin/tigrfams/index.cgi"^^xsd:anyURI;
+  .      
+  
+db:CATH rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Hierarchical domain classification of protein structures"^^xsd:string;
+  :category "3D structure databases"^^xsd:string;
+  rdfs:seeAlso "http://www.cathdb.info"^^xsd:anyURI;
+  .      
+  
+db:IMAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Identifier subtype"^^xsd:string;
+  :category "Identifier subset"^^xsd:string;
+  .      
+  
+db:KO rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "KEGG Orthology (KO)"^^xsd:string;
+  :category "Phylogenomic databases"^^xsd:string;
+  rdfs:seeAlso "http://www.genome.jp/kegg/"^^xsd:anyURI;
+  .      
+  
+db:SWISS-2DPAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Two-dimensional polyacrylamide gel electrophoresis database from the Geneva University Hospital"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://world-2dpage.expasy.org/swiss-2dpage/"^^xsd:anyURI;
+  .      
+  
+db:PaxDb rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "PaxDb, a database of protein abundance averages across all three domains of life."^^xsd:string;
+  :category "Proteomic databases"^^xsd:string;
+  rdfs:seeAlso "http://pax-db.org"^^xsd:anyURI;
+  .      
+  
+db:InterPro rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Integrated resource of protein families, domains and functional sites"^^xsd:string;
+  :category "Family and domain databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/interpro/"^^xsd:anyURI;
+  .      
+  
+db:SBKB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The Structural Biology Knowledgebase"^^xsd:string;
+  :category "Protocols and materials databases"^^xsd:string;
+  rdfs:seeAlso "http://sbkb.org/"^^xsd:anyURI;
+  .      
+  
+db:UniGene rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "UniGene gene-oriented nucleotide sequence clusters"^^xsd:string;
+  :category "Sequence databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/unigene"^^xsd:anyURI;
+  .      
+  
+db:Antibodypedia rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Antibodypedia"^^xsd:string;
+  :category "Antibody databases"^^xsd:string;
+  rdfs:seeAlso "http://www.antibodypedia.com/"^^xsd:anyURI;
+  .      
+  
+db:InParanoid rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "InParanoid: Eukaryotic Ortholog Groups"^^xsd:string;
+  :category "Phylogenomic databases"^^xsd:string;
+  rdfs:seeAlso "http://inparanoid.sbc.su.se/"^^xsd:anyURI;
+  .      
+  
+db:ISCR rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "International Stem Cell Registry"^^xsd:string;
+  :category "Cell line databases/resources"^^xsd:string;
+  rdfs:seeAlso "http://www.iscr-admin.com/"^^xsd:anyURI;
+  .      
+  
+db:IGRhCellID rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Integrated Genomic Resources of Human Cell lines for Identification"^^xsd:string;
+  :category "Cell line databases/resources"^^xsd:string;
+  rdfs:seeAlso "http://igrcid.ibms.sinica.edu.tw/cgi-bin/index.cgi"^^xsd:anyURI;
+  .      
+  
+db:IMGT_HLA rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "IMGT/HLA"^^xsd:string;
+  :category "Cell line databases/resources"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/ipd/imgt/hla/"^^xsd:anyURI;
+  .      
+  
+db:ECO rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Evidences code ontology"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://www.obofoundry.org/cgi-bin/detail.cgi?id=evidence_code"^^xsd:anyURI;
+  .      
+  
+db:CGH-DB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "CGH Data Base"^^xsd:string;
+  :category "Cell line databases/resources"^^xsd:string;
+  rdfs:seeAlso "http://www.cghtmd.jp/CGHDatabase/summary?lang=en"^^xsd:anyURI;
+  .      
+  
+db:PHCI-2DPAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Parasite host cell interaction 2D-PAGE database"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://www.gram.au.dk/2d/2d.html"^^xsd:anyURI;
+  .      
+  
+db:TIGR rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The bacterial database(s) of &apos;The Institute of Genome Research&apos;"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://cmr.jcvi.org/"^^xsd:anyURI;
+  .      
+  
+db:DDBJ rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "DNA Data Bank of Japan; a nucleotide sequence database"^^xsd:string;
+  :category "Sequence databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ddbj.nig.ac.jp/"^^xsd:anyURI;
+  .      
+  
+db:EchoBASE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "EchoBASE - an integrated post-genomic database for E. coli"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.york.ac.uk/res/thomas/"^^xsd:anyURI;
+  .      
+  
+db:DMDM rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Domain mapping of disease mutations (DMDM)"^^xsd:string;
+  :category "Polymorphism databases"^^xsd:string;
+  rdfs:seeAlso "http://bioinf.umbc.edu/dmdm/"^^xsd:anyURI;
+  .      
+  
+db:IntAct rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Protein interaction database and analysis system"^^xsd:string;
+  :category "Protein-protein interaction databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/intact/"^^xsd:anyURI;
+  .      
+  
+db:GeneTree rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "GeneTree"^^xsd:string;
+  :category "Phylogenomic databases"^^xsd:string;
+  rdfs:seeAlso "http://ensemblgenomes.org"^^xsd:anyURI;
+  .      
+  
+db:GenomeRNAi rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Database of phenotypes from RNA interference screens in Drosophila and Homo sapiens."^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://genomernai.dkfz.de/GenomeRNAi/"^^xsd:anyURI;
+  .      
+  
+db:NCBI_Taxonomy rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "NCBI Taxonomy"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/Taxonomy"^^xsd:anyURI;
+  .      
+  
+db:PomBase rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Schizosaccharomyces pombe database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.pombase.org/"^^xsd:anyURI;
+  .      
+  
+db:DKFZ rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Identifier subtype"^^xsd:string;
+  :category "Identifier subset"^^xsd:string;
+  .      
+  
+db:Gene3D rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Gene3D Structural and Functional Annotation of Protein Families"^^xsd:string;
+  :category "Family and domain databases"^^xsd:string;
+  rdfs:seeAlso "http://gene3d.biochem.ucl.ac.uk/Gene3D/"^^xsd:anyURI;
+  .      
+  
+db:GPCRDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information system for G protein-coupled receptors (GPCRs)"^^xsd:string;
+  :category "Protein family/group databases"^^xsd:string;
+  rdfs:seeAlso "http://www.gpcr.org/7tm/"^^xsd:anyURI;
+  .      
+  
+db:EnsemblPlants rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "EnsemblPlants"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://plants.ensembl.org/"^^xsd:anyURI;
+  .      
+  
+db:IPI rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "International Protein Index"^^xsd:string;
+  :category "Sequence databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/IPI"^^xsd:anyURI;
+  .      
+  
+db:SKIP rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Stemcell Knowledge and Information Portal"^^xsd:string;
+  :category "Cell line databases/resources"^^xsd:string;
+  rdfs:seeAlso "http://www.skip.med.keio.ac.jp/en/"^^xsd:anyURI;
+  .      
+  
+db:ENCODE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Encyclopedia of DNA Elements"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "https://www.encodeproject.org/"^^xsd:anyURI;
+  .      
+  
+db:RSCB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Royan Stem Cell Bank"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www.royaninstitute.org/cmsen/index.php?option=com_content&amp;task=view&amp;id=205&amp;Itemid=40"^^xsd:anyURI;
+  .      
+  
+db:STRING rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "STRING: functional protein association networks"^^xsd:string;
+  :category "Protein-protein interaction databases"^^xsd:string;
+  rdfs:seeAlso "http://string-db.org"^^xsd:anyURI;
+  .      
+  
+db:H-InvDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "H-Invitational Database, human transcriptome db"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.h-invitational.jp/"^^xsd:anyURI;
+  .      
+  
+db:HAMAP-Rule rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "High-quality Automated and Manual Annotation of Proteins"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "https://hamap.expasy.org/"^^xsd:anyURI;
+  .      
+  
+db:WEBINFO rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "web information"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://"^^xsd:anyURI;
+  .      
+  
+db:TubercuList rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Mycobacterium tuberculosis strain H37Rv genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://tuberculist.epfl.ch"^^xsd:anyURI;
+  .      
+  
+db:CLDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Cell Line Data Base of the Interlab Project."^^xsd:string;
+  :category "Cell line databases/resources"^^xsd:string;
+  rdfs:seeAlso "http://bioinformatics.istge.it/cldb/"^^xsd:anyURI;
+  .      
+  
+db:dbMHC rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "dbMHC"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/projects/gv/mhc/ihwg.cgi?cmd=page&amp;page=CellMain"^^xsd:anyURI;
+  .      
+  
+db:PROSITE-ProRule rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "prorule"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "https://prosite.expasy.org/"^^xsd:anyURI;
+  .      
+  
+db:GeneCards rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "GeneCards: human genes, protein and diseases"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.genecards.org/"^^xsd:anyURI;
+  .      
+  
+db:SKY_M-FISH_CGH rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "SKY/M-FISH and CGH database"^^xsd:string;
+  :category "Cell line databases/resources"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/projects/sky/"^^xsd:anyURI;
+  .      
+  
+db:Bgee rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Bgee dataBase for Gene Expression Evolution"^^xsd:string;
+  :category "Gene expression databases"^^xsd:string;
+  rdfs:seeAlso "http://bgee.unil.ch"^^xsd:anyURI;
+  .      
+  
+db:dictyBase rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Dictyostelium discoideum online informatics resource"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://dictybase.org/"^^xsd:anyURI;
+  .      
+  
+db:SGD rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Saccharomyces Genome Database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.yeastgenome.org/"^^xsd:anyURI;
+  .      
+  
+db:WormPep rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Caenorhabditis elegans genome sequencing project protein database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.sanger.ac.uk/Projects/C_elegans/WORMBASE/current/wormpep.shtml"^^xsd:anyURI;
+  .      
+  
+db:HOGENOM rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The HOGENOM Database of Homologous Genes from Fully Sequenced Organisms"^^xsd:string;
+  :category "Phylogenomic databases"^^xsd:string;
+  rdfs:seeAlso "http://pbil.univ-lyon1.fr/databases/hogenom/home.php"^^xsd:anyURI;
+  .      
+  
+db:DOSAC-COBS-2DPAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "DOSAC-COBS 2D-PAGE database"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://www.dosac.unipa.it/2d/"^^xsd:anyURI;
+  .      
+  
+db:UniProtKB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Identifier subtype"^^xsd:string;
+  :category "Identifier subset"^^xsd:string;
+  .      
+  
+db:UniPathway rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "UniPathway: a resource for the exploration and annotation of metabolic pathways"^^xsd:string;
+  :category "Enzyme and pathway databases"^^xsd:string;
+  rdfs:seeAlso "http://www.unipathway.org"^^xsd:anyURI;
+  .      
+  
+db:MoonProt rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "MoonProt"^^xsd:string;
+  :category "Protein family/group databases"^^xsd:string;
+  rdfs:seeAlso "http://www.moonlightingproteins.org/"^^xsd:anyURI;
+  .      
+  
+db:ANU-2DPAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Australian National University 2-DE database"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://semele.anu.edu.au"^^xsd:anyURI;
+  .      
+  
+db:REPRODUCTION-2DPAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "REPRODUCTION-2DPAGE"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://reprod.njmu.edu.cn/cgi-bin/2d/2d.cgi"^^xsd:anyURI;
+  .      
+  
+db:DisProt rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Database of protein disorder"^^xsd:string;
+  :category "3D structure databases"^^xsd:string;
+  rdfs:seeAlso "http://www.disprot.org/"^^xsd:anyURI;
+  .      
+  
+db:RuleBase rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "UniProtKB annotation rules"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "https://services.uniprot.org/supplement/"^^xsd:anyURI;
+  .      
+  
+db:EnsemblBacteria rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "EnsemblBacteria"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://bacteria.ensembl.org/"^^xsd:anyURI;
+  .      
+  
+db:GO rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Gene Ontology"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://www.geneontology.org/"^^xsd:anyURI;
+  .      
+  
+db:CGD rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Candida Genome Database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.candidagenome.org/"^^xsd:anyURI;
+  .      
+  
+db:MetaCyc rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "MetaCyc Metabolic Pathway Database"^^xsd:string;
+  :category "Enzyme and pathway databases"^^xsd:string;
+  rdfs:seeAlso "http://www.biocyc.org//"^^xsd:anyURI;
+  .      
+  
+db:UniProt_control_vocabulary rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Cross ref to all cv loaded from UniProt"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://www.uniprot.org/docs/#vocabulary"^^xsd:anyURI;
+  .      
+  
+db:Clinvar rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Clinvar"^^xsd:string;
+  :category "Protocols and materials databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/clinvar/"^^xsd:anyURI;
+  .      
+  
+db:dbSNP rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Database of single nucleotide polymorphism"^^xsd:string;
+  :category "Polymorphism databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/SNP/"^^xsd:anyURI;
+  .      
+  
+db:neXtProt_control_vocabulary rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Cross ref to all cv loaded from neXtProt"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://trac.genebio.com/~defaultuser/repository/"^^xsd:anyURI;
+  .      
+  
+db:Xenbase rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Xenopus laevis and tropicalis biology and genomics resource"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.xenbase.org/"^^xsd:anyURI;
+  .      
+  
+db:SOURCE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The Stanford Online Universal Resource for Clones and ESTs"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://smd.princeton.edu/cgi-bin/source/sourceSearch"^^xsd:anyURI;
+  .      
+  
+db:PATRIC rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Pathosystems Resource Integration Center (PATRIC)"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://patricbrc.org/"^^xsd:anyURI;
+  .      
+  
+db:DEPOD rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "DEPOD"^^xsd:string;
+  :category "PTM databases"^^xsd:string;
+  rdfs:seeAlso "http://www.koehn.embl.de/depod/"^^xsd:anyURI;
+  .      
+  
+db:SUPFAM rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Superfamily database of structural and functional annotation"^^xsd:string;
+  :category "Family and domain databases"^^xsd:string;
+  rdfs:seeAlso "http://supfam.org"^^xsd:anyURI;
+  .      
+  
+db:AraC-XylS rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "AraC-XylS; a database on a family of Helix-Turn-Helix transcription factors from bacteria"^^xsd:string;
+  :category "Protein family/group databases"^^xsd:string;
+  rdfs:seeAlso "http://www.eez.csic.es/arac-xyls/"^^xsd:anyURI;
+  .      
+  
+db:CTD rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Comparative Toxicogenomics Database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://ctdbase.org/"^^xsd:anyURI;
+  .      
+  
+db:HGNC rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Identifier subtype"^^xsd:string;
+  :category "Identifier subset"^^xsd:string;
+  .      
+  
+db:EFO rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Experimental Factor Ontology"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/efo/"^^xsd:anyURI;
+  .      
+  
+db:NIH-ARP rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "NIH AIDS Reagent Program"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "https://www.aidsreagent.org/"^^xsd:anyURI;
+  .      
+  
+db:GeneFarm rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Structural and functional annotation of Arabidopsis thaliana gene and protein families"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://urgi.versailles.inra.fr/Genefarm/index.htpl"^^xsd:anyURI;
+  .      
+  
+db:GeneRif rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Gene"^^xsd:string;
+  :category "Sequence databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/sites/entrez?Db=gene"^^xsd:anyURI;
+  .      
+  
+db:Leproma rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Mycobacterium leprae genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://mycobrowser.epfl.ch/leprosy.html"^^xsd:anyURI;
+  .      
+  
+db:ENZYME rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Enzyme nomenclature database"^^xsd:string;
+  :category "Enzyme and pathway databases"^^xsd:string;
+  rdfs:seeAlso "http://enzyme.expasy.org/"^^xsd:anyURI;
+  .      
+  
+db:LINCS rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Library of Integrated Network-based Cellular Signatures"^^xsd:string;
+  :category "Cell line databases/resources"^^xsd:string;
+  rdfs:seeAlso "http://lincs.hms.harvard.edu/db/cells/"^^xsd:anyURI;
+  .      
+  
+db:PIR rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Identifier subtype"^^xsd:string;
+  :category "Identifier subset"^^xsd:string;
+  .      
+  
+db:TreeFam rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "TreeFam database of animal gene trees"^^xsd:string;
+  :category "Phylogenomic databases"^^xsd:string;
+  rdfs:seeAlso "http://www.treefam.org"^^xsd:anyURI;
+  .      
+  
+db:UCD-2DPAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "University College Dublin 2-DE Proteome Database"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://proteomics-portal.ucd.ie:8082/cgi-bin/2d/2d.cgi"^^xsd:anyURI;
+  .      
+  
+db:Cosmic-CLP rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "COSMIC Cell lines Project"^^xsd:string;
+  :category "Cell line databases/resources"^^xsd:string;
+  rdfs:seeAlso "http://cancer.sanger.ac.uk/cancergenome/projects/cell_lines/"^^xsd:anyURI;
+  .      
+  
+db:PMAP-CutDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "CutDB - Proteolytic event database"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://www.proteolysis.org/"^^xsd:anyURI;
+  .      
+  
+db:DIP rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Database of interacting proteins"^^xsd:string;
+  :category "Protein-protein interaction databases"^^xsd:string;
+  rdfs:seeAlso "http://dip.doe-mbi.ucla.edu/"^^xsd:anyURI;
+  .      
+  
+db:GOA rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Gene Ontologie Annotation"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/GOA/"^^xsd:anyURI;
+  .      
+  
+db:PhotoList rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Photorhabdus luminescens genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://genolist.pasteur.fr/PhotoList/"^^xsd:anyURI;
+  .      
+  
+db:MEROPS rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "MEROPS protease database"^^xsd:string;
+  :category "Protein family/group databases"^^xsd:string;
+  rdfs:seeAlso "http://merops.sanger.ac.uk/"^^xsd:anyURI;
+  .      
+  
+db:OrthoDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Database of Orthologous Groups"^^xsd:string;
+  :category "Phylogenomic databases"^^xsd:string;
+  rdfs:seeAlso "http://cegg.unige.ch/orthodb6"^^xsd:anyURI;
+  .      
+  
+db:Micado rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Microbial advanced database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://genome.jouy.inra.fr/cgi-bin/micado/index.cgi"^^xsd:anyURI;
+  .      
+  
+db:SCOP rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Structural Classification of Proteins"^^xsd:string;
+  :category "3D structure databases"^^xsd:string;
+  rdfs:seeAlso "http://scop.mrc-lmb.cam.ac.uk/scop/index.html"^^xsd:anyURI;
+  .      
+  
+db:PptaseDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Prokaryotic Protein Phosphatase Database"^^xsd:string;
+  :category "Protein family/group databases"^^xsd:string;
+  rdfs:seeAlso "http://www.phosphatase.biochem.vt.edu"^^xsd:anyURI;
+  .      
+  
+db:ESTDAB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "European Searchable Tumour Line Database"^^xsd:string;
+  :category "Cell line databases/resources"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/ipd/estdab/"^^xsd:anyURI;
+  .      
+  
+db:CCDS rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The Consensus CDS (CCDS) project"^^xsd:string;
+  :category "Sequence databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/CCDS/CcdsBrowse.cgi"^^xsd:anyURI;
+  .      
+  
+db:PRO rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Protein Ontology"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://pir.georgetown.edu/pro/pro.shtml"^^xsd:anyURI;
+  .      
+  
+db:SMR rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "SWISS-MODEL Repository - a database of annotated 3D protein structure models"^^xsd:string;
+  :category "3D structure databases"^^xsd:string;
+  rdfs:seeAlso "http://swissmodel.expasy.org/repository/"^^xsd:anyURI;
+  .      
+  
+db:PIR rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Protein sequence database of the Protein Information Resource"^^xsd:string;
+  :category "Sequence databases"^^xsd:string;
+  rdfs:seeAlso "http://pir.georgetown.edu/"^^xsd:anyURI;
+  .      
+  
+db:ProteinModelPortal rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Protein Model Portal of the PSI-Nature Structural Biology Knowledgebase"^^xsd:string;
+  :category "3D structure databases"^^xsd:string;
+  rdfs:seeAlso "http://www.proteinmodelportal.org/"^^xsd:anyURI;
+  .      
+  
+db:KEGG rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "KEGG: Kyoto Encyclopedia of Genes and Genomes"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://www.genome.jp/kegg/"^^xsd:anyURI;
+  .      
+  
+db:Aarhus_Ghent-2DPAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Human keratinocyte 2D gel protein database from Aarhus and Ghent universities"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "None"^^xsd:anyURI;
+  .      
+  
+db:HAMAP rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "HAMAP database of protein families"^^xsd:string;
+  :category "Family and domain databases"^^xsd:string;
+  rdfs:seeAlso "http://hamap.expasy.org/"^^xsd:anyURI;
+  .      
+  
+db:TKG rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Tohoku University Cancer Cell Line"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www2.idac.tohoku.ac.jp/dep/ccr/CancerCellLine.html"^^xsd:anyURI;
+  .      
+  
+db:DOI rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "DOI resolving site"^^xsd:string;
+  :category "Publication databases"^^xsd:string;
+  rdfs:seeAlso "http://dx.doi.org/"^^xsd:anyURI;
+  .      
+  
+db:PRIDE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "PRoteomics IDEntifications database"^^xsd:string;
+  :category "Proteomic databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/pride"^^xsd:anyURI;
+  .      
+  
+db:CCLE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Cancer Cell Line Encyclopedia"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www.broadinstitute.org/ccle/home"^^xsd:anyURI;
+  .      
+  
+db:PDBsum rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "PDBsum; at-a-glance overview of macromolecular structures"^^xsd:string;
+  :category "3D structure databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/pdbsum/"^^xsd:anyURI;
+  .      
+  
+db:MEDLINE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "MEDLINE"^^xsd:string;
+  :category "Publication databases"^^xsd:string;
+  rdfs:seeAlso "http://medline.cos.com"^^xsd:anyURI;
+  .      
+  
+db:eVOC rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Controlled vocabularies that unifies gene expression data by facilitating a link between the genome sequence and expression phenotype information."^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://www.evocontology.org/"^^xsd:anyURI;
+  .      
+  
+db:GenAtlas rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "GenAtlas: human gene database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://genatlas.medecine.univ-paris5.fr/"^^xsd:anyURI;
+  .      
+  
+db:PIRSF rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "PIRSF; a whole-protein classification database"^^xsd:string;
+  :category "Family and domain databases"^^xsd:string;
+  rdfs:seeAlso "http://pir.georgetown.edu/pirwww/dbinfo/pirsf.shtml"^^xsd:anyURI;
+  .      
+  
+db:BCRC rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Taiwan Bioresource Collection and Research Center"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www.bcrc.firdi.org.tw/"^^xsd:anyURI;
+  .      
+  
+db:ChEMBL rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "ChEMBL database of bioactive drug-like small molecules"^^xsd:string;
+  :category "Chemistry"^^xsd:string;
+  rdfs:seeAlso "https://www.ebi.ac.uk/chembldb"^^xsd:anyURI;
+  .      
+  
+db:FMA rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Foundational Model of Anatomy"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://fma.biostr.washington.edu/"^^xsd:anyURI;
+  .      
+  
+db:VectorBase rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Invertebrate Vectors of Human Pathogens"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://www.vectorbase.org/"^^xsd:anyURI;
+  .      
+  
+db:Allergome rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Allergome; a platform for allergen knowledge"^^xsd:string;
+  :category "Protein family/group databases"^^xsd:string;
+  rdfs:seeAlso "http://www.allergome.org/"^^xsd:anyURI;
+  .      
+  
+db:GO_REF rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Gene Ontologie References"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://www.geneontology.org/cgi-bin/references.cgi"^^xsd:anyURI;
+  .      
+  
+db:NextBio rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "NextBio gene-centric data for human, mouse, rat, fly, worm and yeast"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://www.nextbio.com/b/nextbioCorp.nb"^^xsd:anyURI;
+  .      
+  
+db:ConoServer rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "ConoServer: Cone snail toxin database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.conoserver.org/"^^xsd:anyURI;
+  .      
+  
+db:neXtProtSubmission rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "neXtProt submission; the human protein knowledge platform, publication of type submission part"^^xsd:string;
+  :category "Publication databases"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/"^^xsd:anyURI;
+  .      
+  
+db:UniProt_family rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "UniProt protein list by family"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://www.uniprot.org"^^xsd:anyURI;
+  .      
+  
+db:MeSH rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "MeSH"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://www.nlm.nih.gov/mesh/MBrowser.html"^^xsd:anyURI;
+  .      
+  
+db:HPRD rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Human Proteins Reference Database"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://www.hprd.org"^^xsd:anyURI;
+  .      
+  
+db:PhylomeDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Database for complete collections of gene phylogenies"^^xsd:string;
+  :category "Phylogenomic databases"^^xsd:string;
+  rdfs:seeAlso "http://phylomedb.org/"^^xsd:anyURI;
+  .      
+  
+db:SABIO-RK rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "SABIO-RK: Biochemical Reaction Kinetics Database"^^xsd:string;
+  :category "Enzyme and pathway databases"^^xsd:string;
+  rdfs:seeAlso "http://sabiork.h-its.org/"^^xsd:anyURI;
+  .      
+  
+db:HGNC rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Human Gene Nomenclature Database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.genenames.org/"^^xsd:anyURI;
+  .      
+  
+db:GeneID rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Database of genes from NCBI RefSeq genomes"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/gene"^^xsd:anyURI;
+  .      
+  
+db:MaxQB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "MaxQB - The MaxQuant DataBase"^^xsd:string;
+  :category "Proteomic databases"^^xsd:string;
+  rdfs:seeAlso "http://maxqb.biochem.mpg.de/mxdb/"^^xsd:anyURI;
+  .      
+  
+db:EuPathDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Eukaryotic Pathogen Database Resources"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://eupathdb.org/eupathdb/"^^xsd:anyURI;
+  .      
+  
+db:CMR rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Comprehensive Microbial Resource"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://cmr.jcvi.org/"^^xsd:anyURI;
+  .      
+  
+db:Pfam rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Pfam protein domain database"^^xsd:string;
+  :category "Family and domain databases"^^xsd:string;
+  rdfs:seeAlso "http://pfam.xfam.org/"^^xsd:anyURI;
+  .      
+  
+db:BRENDA rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "BRENDA Comprehensive Enzyme Information System"^^xsd:string;
+  :category "Enzyme and pathway databases"^^xsd:string;
+  rdfs:seeAlso "http://www.brenda-enzymes.org"^^xsd:anyURI;
+  .      
+  
+db:HUGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Human Unidentified Gene-Encoded large proteins database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.kazusa.or.jp/huge/"^^xsd:anyURI;
+  .      
+  
+db:MobiDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "MobiDB: a database of protein disorder and mobility annotations"^^xsd:string;
+  :category "3D structure databases"^^xsd:string;
+  rdfs:seeAlso "http://mobidb.bio.unipd.it/"^^xsd:anyURI;
+  .      
+  
+db:SagaList rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Streptococcus agalactiae NEM316 / Serotype III genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://genolist.pasteur.fr/SagaList/"^^xsd:anyURI;
+  .      
+  
+db:SubtiList rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Bacillus subtilis strain 168 genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://genolist.pasteur.fr/SubtiList/"^^xsd:anyURI;
+  .      
+  
+db:PSI-MOD rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "For the description of covalent bonds in proteins."^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://psidev.sourceforge.net/mod/"^^xsd:anyURI;
+  .      
+  
+db:PubMed rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "PubMed site"^^xsd:string;
+  :category "Publication databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/sites/entrez?db=pubmed"^^xsd:anyURI;
+  .      
+  
+db:DrugBank rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Drug and drug target database"^^xsd:string;
+  :category "Chemistry"^^xsd:string;
+  rdfs:seeAlso "http://www.drugbank.ca/"^^xsd:anyURI;
+  .      
+  
+db:Illumina rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Identifier subtype"^^xsd:string;
+  :category "Identifier subset"^^xsd:string;
+  .      
+  
+db:EnsemblFungi rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "EnsemblFungi"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://fungi.ensembl.org/"^^xsd:anyURI;
+  .      
+  
+db:RCSB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Royal Stem Cell Bank"^^xsd:string;
+  :category "Protocols and materials databases"^^xsd:string;
+  rdfs:seeAlso "http://www.royaninstitute.org/cmsen/index.php?option=com_content&amp;task=view&amp;id=205&amp;Itemid=40"^^xsd:anyURI;
+  .      
+  
+db:ModBase rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Database of comparative protein structure models"^^xsd:string;
+  :category "3D structure databases"^^xsd:string;
+  rdfs:seeAlso "http://modbase.compbio.ucsf.edu/modbase-cgi/index.cgi"^^xsd:anyURI;
+  .      
+  
+db:COMPLUYEAST-2DPAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "2-DE database at Universidad Complutense de Madrid"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://compluyeast2dpage.dacya.ucm.es/"^^xsd:anyURI;
+  .      
+  
+db:TAIR rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The Arabidopsis Information Resource"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.arabidopsis.org/"^^xsd:anyURI;
+  .      
+  
+db:ChiTaRS rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "ChiTaRS: a database of human, mouse and fruit fly chimeric transcripts and RNA-sequencing data."^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://chitars.bioinfo.cnio.es/"^^xsd:anyURI;
+  .      
+  
+db:BCRJ rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Rio de Janeiro Cell Bank"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www.nce.ufrj.br/bcrj/"^^xsd:anyURI;
+  .      
+  
+db:ProtClustDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Entrez Protein Clusters"^^xsd:string;
+  :category "Phylogenomic databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/proteinclusters"^^xsd:anyURI;
+  .      
+  
+db:MypuList rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Mycoplasma pulmonis genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://genolist.pasteur.fr/MypuList/"^^xsd:anyURI;
+  .      
+  
+db:IZSLER rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Istituti Zooprofilattici Sperimentali della Lombardia e dell&apos;Emilia"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www.ibvr.org/Services/CellCultures.aspx"^^xsd:anyURI;
+  .      
+  
+db:Rat-heart-2DPAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "2-DE database of rat heart, at German Heart Institute Berlin, Germany"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://www.mpiib-berlin.mpg.de/2D-PAGE/RAT-HEART/2d/"^^xsd:anyURI;
+  .      
+  
+db:Cornea-2DPAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Human Cornea 2-DE database"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://www.cornea-proteomics.com/"^^xsd:anyURI;
+  .      
+  
+db:LegioList rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Legionella pneumophila genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://genolist.pasteur.fr/LegioList/"^^xsd:anyURI;
+  .      
+  
+db:CBA rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Japanese Collection of Research Bioresources"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://cellbank.nibio.go.jp/search.htm"^^xsd:anyURI;
+  .      
+  
+db:Gramene rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Gramene; a comparative mapping resource for grains"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.gramene.org/"^^xsd:anyURI;
+  .      
+  
+db:Dharmacon rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Dharmacon RNAi oligos"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://dharmacon.com"^^xsd:anyURI;
+  .      
+  
+db:ArachnoServer rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "ArachnoServer: Spider toxin database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.arachnoserver.org"^^xsd:anyURI;
+  .      
+  
+db:ChEBI rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Chemical Entities of Biological Interest"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/chebi/"^^xsd:anyURI;
+  .      
+  
+db:MINT rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Molecular INTeraction database"^^xsd:string;
+  :category "Protein-protein interaction databases"^^xsd:string;
+  rdfs:seeAlso "http://mint.bio.uniroma2.it/mint/"^^xsd:anyURI;
+  .      
+  
+db:ExpressionAtlas rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "ExpressionAtlas, Differential and Baseline Expression"^^xsd:string;
+  :category "Gene expression databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/gxa/home"^^xsd:anyURI;
+  .      
+  
+db:NCImetathesaurus rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "National Cancer Institute Meta thesaurus"^^xsd:string;
+  :category "Protocols and materials databases"^^xsd:string;
+  rdfs:seeAlso "http://ncimeta.nci.nih.gov/"^^xsd:anyURI;
+  .      
+  
+db:Rouge rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Rodent Unidentified Gene-Encoded large proteins database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.kazusa.or.jp/rouge/"^^xsd:anyURI;
+  .      
+  
+db:Siena-2DPAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "2D-PAGE database from the Department of Molecular Biology, University of Siena, Italy"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://www.bio-mol.unisi.it/cgi-bin/2d/2d.cgi"^^xsd:anyURI;
+  .      
+  
+db:CCRID rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Cell resource platform"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://cellresource.cn/"^^xsd:anyURI;
+  .      
+  
+db:Affymetrix rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Identifier subtype"^^xsd:string;
+  :category "Identifier subset"^^xsd:string;
+  .      
+  
+db:AGD rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Ashbya genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://agd.vital-it.ch/"^^xsd:anyURI;
+  .      
+  
+db:RCSB-PDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Protein Data Bank RCSB"^^xsd:string;
+  :category "3D structure databases"^^xsd:string;
+  rdfs:seeAlso "http://www.pdb.org/"^^xsd:anyURI;
+  .      
+  
+db:Proteomes rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Proteomes"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://www.uniprot.org/proteomes"^^xsd:anyURI;
+  .      
+  
+db:EMBL rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "EMBL nucleotide sequence database"^^xsd:string;
+  :category "Sequence databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/ena"^^xsd:anyURI;
+  .      
+  
+db:REBASE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Restriction enzymes and methylases database"^^xsd:string;
+  :category "Protein family/group databases"^^xsd:string;
+  rdfs:seeAlso "http://rebase.neb.com/rebase/rebase.html"^^xsd:anyURI;
+  .      
+  
+db:Cosmic rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Sanger institute"^^xsd:string;
+  :category "Protocols and materials databases"^^xsd:string;
+  rdfs:seeAlso "http://www.sanger.ac.uk/perl/genetics/CGP/core_line_viewer?action=cell_lines"^^xsd:anyURI;
+  .      
+  
+db:hESCreg rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "European Human Embryonic Stem Cell Registry"^^xsd:string;
+  :category "Cell line databases/resources"^^xsd:string;
+  rdfs:seeAlso "http://www.hescreg.eu/"^^xsd:anyURI;
+  .      
+  
+db:Proteopedia rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Collaborative 3D-encyclopedia of proteins &amp; other molecules"^^xsd:string;
+  :category "3D structure databases"^^xsd:string;
+  rdfs:seeAlso "http://www.proteopedia.org/"^^xsd:anyURI;
+  .      
+  
+db:GeneReviews rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "GeneReviews a resource of expert-authored, peer-reviewed disease descriptions."^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/books/NBK1116"^^xsd:anyURI;
+  .      
+  
+db:PhosphoSite rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Phosphorylation site database"^^xsd:string;
+  :category "PTM databases"^^xsd:string;
+  rdfs:seeAlso "http://www.phosphosite.org"^^xsd:anyURI;
+  .      
+  
+db:SRMAtlas rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "SRMAtlas"^^xsd:string;
+  :category "Proteomic databases"^^xsd:string;
+  rdfs:seeAlso "http://www.srmatlas.org"^^xsd:anyURI;
+  .      
+  
+db:ECO2DBASE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Escherichia coli gene-protein database; a 2-DE gel database"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "None"^^xsd:anyURI;
+  .      
+  
+db:PharmGKB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The Pharmacogenetics and Pharmacogenomics Knowledge Base"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.pharmgkb.org"^^xsd:anyURI;
+  .      
+  
+db:OMA rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Identification of Orthologs from Complete Genome Data"^^xsd:string;
+  :category "Phylogenomic databases"^^xsd:string;
+  rdfs:seeAlso "http://omabrowser.org/"^^xsd:anyURI;
+  .      
+  
+db:RefSeq rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "NCBI Reference Sequences"^^xsd:string;
+  :category "Sequence databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/refseq/"^^xsd:anyURI;
+  .      
+  
+db:IHW rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "International Histocompatibility Workshop cell lines"^^xsd:string;
+  :category "Cell line databases/resources"^^xsd:string;
+  rdfs:seeAlso "http://www.ihwg.org/hla/index.html"^^xsd:anyURI;
+  .      
+  
+db:MGC rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Identifier subtype"^^xsd:string;
+  :category "Identifier subset"^^xsd:string;
+  .      
+  
+db:ATCC rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "ATCC"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www.lgcstandards-atcc.org/"^^xsd:anyURI;
+  .      
+  
+db:UniProt_domain rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "UniProt protein list by domain"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://www.uniprot.org"^^xsd:anyURI;
+  .      
+  
+db:EnsemblProtists rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "EnsemblProtists"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://protists.ensembl.org/"^^xsd:anyURI;
+  .      
+  
+db:euHCVdb rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "European Hepatitis C Virus database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://euhcvdb.ibcp.fr/euHCVdb/"^^xsd:anyURI;
+  .      
+  
+db:mycoCLAP rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "mycoCLAP, a database of fungal genes encoding lignocellulose-active proteins"^^xsd:string;
+  :category "Protein family/group databases"^^xsd:string;
+  rdfs:seeAlso "https://mycoclap.fungalgenomics.ca/mycoCLAP/"^^xsd:anyURI;
+  .      
+  
+db:UniProt rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "UniProt web site"^^xsd:string;
+  :category "Sequence databases"^^xsd:string;
+  rdfs:seeAlso "http://www.uniprot.org/uniprot/"^^xsd:anyURI;
+  .      
+  
+db:RCB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "RIKEN Cell Bank"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www.brc.riken.jp/lab/cell/english/index_rcb.shtml"^^xsd:anyURI;
+  .      
+  
+db:UCSC rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "UCSC genome browser"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://genome.ucsc.edu"^^xsd:anyURI;
+  .      
+  
+db:PhosSite rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Phosphorylation site database for Archaea and Bacteria"^^xsd:string;
+  :category "PTM databases"^^xsd:string;
+  rdfs:seeAlso "http://www.phosphorylation.biochem.vt.edu/"^^xsd:anyURI;
+  .      
+  
+db:PANTHER rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The PANTHER Classification System"^^xsd:string;
+  :category "Family and domain databases"^^xsd:string;
+  rdfs:seeAlso "http://www.pantherdb.org/"^^xsd:anyURI;
+  .      
+  
+db:PDBj rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Protein Data Bank Japan"^^xsd:string;
+  :category "3D structure databases"^^xsd:string;
+  rdfs:seeAlso "http://pdbj.org/"^^xsd:anyURI;
+  .      
+  
+db:PeroxiBase rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "PeroxiBase, a peroxidase database"^^xsd:string;
+  :category "Protein family/group databases"^^xsd:string;
+  rdfs:seeAlso "http://peroxibase.toulouse.inra.fr/"^^xsd:anyURI;
+  .      
+  
+db:ProDom rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "ProDom; a protein domain database"^^xsd:string;
+  :category "Family and domain databases"^^xsd:string;
+  rdfs:seeAlso "http://prodom.prabi.fr/prodom/current/html/home.php"^^xsd:anyURI;
+  .      
+  
+db:IMGT rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "ImMunoGeneTics db"^^xsd:string;
+  :category "Protein family/group databases"^^xsd:string;
+  rdfs:seeAlso "http://www.imgt.org/"^^xsd:anyURI;
+  .      
+  
+db:BioGrid rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The Biological General Repository for Interaction Datasets (BioGrid)"^^xsd:string;
+  :category "Protein-protein interaction databases"^^xsd:string;
+  rdfs:seeAlso "http://thebiogrid.org"^^xsd:anyURI;
+  .      
+  
+db:Coriell rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Coriell Cell Repositories"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "https://catalog.coriell.org/"^^xsd:anyURI;
+  .      
+  
+db:WormBase rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "WormBase"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.wormbase.org/"^^xsd:anyURI;
+  .      
+  
+db:EMBL-CDS rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "EMBL coding sequence (CDS) database"^^xsd:string;
+  :category "Sequence databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/embl/"^^xsd:anyURI;
+  .      
+  
+db:PRINTS rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Protein Motif fingerprint database; a protein domain database"^^xsd:string;
+  :category "Family and domain databases"^^xsd:string;
+  rdfs:seeAlso "http://www.bioinf.manchester.ac.uk/dbbrowser/PRINTS/"^^xsd:anyURI;
+  .      
+  
+db:ICLC rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Banca Biologica e Cell Factory"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www.iclc.it/"^^xsd:anyURI;
+  .      
+  
+db:UKSCB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "UK Stem Cell Bank"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www.ukstemcellbank.org.uk/"^^xsd:anyURI;
+  .      
+  
+db:KIAA rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Identifier subtype"^^xsd:string;
+  :category "Identifier subset"^^xsd:string;
+  .      
+  
+db:GenBank rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "GenBank nucleotide sequence database"^^xsd:string;
+  :category "Sequence databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/"^^xsd:anyURI;
+  .      
+  
+db:FlyBase rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Drosophila genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://flybase.org/"^^xsd:anyURI;
+  .      
+  
+db:HPA rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Human Protein Atlas"^^xsd:string;
+  :category "Antibody databases"^^xsd:string;
+  rdfs:seeAlso "http://www.proteinatlas.org/"^^xsd:anyURI;
+  .      
+  
+db:GuidetoPHARMACOLOGY rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "IUPHAR/BPS Guide to PHARMACOLOGY"^^xsd:string;
+  :category "Chemistry"^^xsd:string;
+  rdfs:seeAlso "http://www.guidetopharmacology.org"^^xsd:anyURI;
+  .      
+  
+db:OGP rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Oxford GlycoProteomics 2-DE database"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://proteomewww.bioch.ox.ac.uk/2d/2d.html"^^xsd:anyURI;
+  .      
+  
+db:CleanEx rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "CleanEx database of gene expression profiles"^^xsd:string;
+  :category "Gene expression databases"^^xsd:string;
+  rdfs:seeAlso "http://cleanex.vital-it.ch/"^^xsd:anyURI;
+  .      
+  
+db:MaizeGDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Maize Genetics and Genomics Database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.maizegdb.org/"^^xsd:anyURI;
+  .      
+  
+db:NMPDR rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "National Microbial Pathogen Data Resource"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://www.nmpdr.org"^^xsd:anyURI;
+  .      
+  
+db:eggNOG rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "evolutionary genealogy of genes: Non-supervised Orthologous Groups"^^xsd:string;
+  :category "Phylogenomic databases"^^xsd:string;
+  rdfs:seeAlso "http://eggnog.embl.de/"^^xsd:anyURI;
+  .      
+  
+db:ZFIN rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Zebrafish Information Network genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://zfin.org/"^^xsd:anyURI;
+  .      
+  
+db:GAD rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Genetic Association Database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://geneticassociationdb.nih.gov/"^^xsd:anyURI;
+  .      
+  
+db:Pathway_Interaction_DB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "NCI-Nature Pathway Interaction Database"^^xsd:string;
+  :category "Enzyme and pathway databases"^^xsd:string;
+  rdfs:seeAlso "http://pid.nci.nih.gov/"^^xsd:anyURI;
+  .      
+  
+db:TCDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Transport Classification Database"^^xsd:string;
+  :category "Protein family/group databases"^^xsd:string;
+  rdfs:seeAlso "http://www.tcdb.org/"^^xsd:anyURI;
+  .      
+  
+db:IFO rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Health Science Research Resources Bank"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://cellbank.nibio.go.jp/english/"^^xsd:anyURI;
+  .      
+  
+db:ProMEX rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Protein Mass spectra EXtraction"^^xsd:string;
+  :category "Proteomic databases"^^xsd:string;
+  rdfs:seeAlso "http://promex.pph.univie.ac.at/promex/"^^xsd:anyURI;
+  .      
+  
+db:Reactome rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Reactome - a knowledgebase of biological pathways and processes"^^xsd:string;
+  :category "Enzyme and pathway databases"^^xsd:string;
+  rdfs:seeAlso "http://www.reactome.org/"^^xsd:anyURI;
+  .      
+  
+db:HOVERGEN rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The HOVERGEN Database of Homologous Vertebrate Genes"^^xsd:string;
+  :category "Phylogenomic databases"^^xsd:string;
+  rdfs:seeAlso "http://pbil.univ-lyon1.fr/databases/hovergen.html"^^xsd:anyURI;
+  .      
+  
+db:PseudoCAP rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Pseudomonas genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.pseudomonas.com/"^^xsd:anyURI;
+  .      
+  
+db:neXtProtDoc rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "neXtProt document; the human protein knowledge platform, document part"^^xsd:string;
+  :category "Publication databases"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/"^^xsd:anyURI;
+  .      
+  
+db:SequenceOntology rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Sequence Ontology"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://www.sequenceontology.org/"^^xsd:anyURI;
+  .      
+  
+db:BindingDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "BindingDB database of measured binding affinities"^^xsd:string;
+  :category "Chemistry"^^xsd:string;
+  rdfs:seeAlso "http://www.bindingdb.org/"^^xsd:anyURI;
+  .      
+  
+db:DYP rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The Kahn Dynamic Proteomics project"^^xsd:string;
+  :category "Proteomic databases"^^xsd:string;
+  rdfs:seeAlso "http://www.weizmann.ac.il/mcb/UriAlon/DynamProt/"^^xsd:anyURI;
+  .      
+  
+db:EvolutionaryTrace rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Relative evolutionary importance of amino acids within a protein sequence."^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://mammoth.bcm.tmc.edu/ETserver.html"^^xsd:anyURI;
+  .      
+  
+db:LOC rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Entrez Gene symbol"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/gene"^^xsd:anyURI;
+  .      
+  
+db:MCCL rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Molecular connections cell line ontology"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://www.molecularconnections.com/home/ontology"^^xsd:anyURI;
+  .      
+  
+db:SignaLink rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "SignaLink: a signaling pathway resource with multi-layered regulatory networks"^^xsd:string;
+  :category "Enzyme and pathway databases"^^xsd:string;
+  rdfs:seeAlso "http://signalink.org/"^^xsd:anyURI;
+  .      
+  
+db:SMART rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Simple Modular Architecture Research Tool; a protein domain database"^^xsd:string;
+  :category "Family and domain databases"^^xsd:string;
+  rdfs:seeAlso "http://smart.embl.de/"^^xsd:anyURI;
+  .      
+  
+db:CCLV rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Collection of Cell Lines in Veterinary Medicine"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www.fli.bund.de/en/startseite/institutes/department-of-experimental-animal-facilities-and-biorisk-management/cclv.html"^^xsd:anyURI;
+  .      
+  
+db:ListiList rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Listeria innocua and Listeria monocytogenes genomes database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://genolist.pasteur.fr/ListiList/"^^xsd:anyURI;
+  .      
+  
+db:PMMA-2DPAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Purkyne Military Medical Academy 2D-PAGE database"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://www.pmma.pmfhk.cz/2d/2d.html"^^xsd:anyURI;
+  .      
+  
+db:EcoGene rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Escherichia coli strain K12 genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ecogene.org/"^^xsd:anyURI;
+  .      
+  
+db:MIM rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Online Mendelian Inheritance in Man (OMIM)"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.omim.org/"^^xsd:anyURI;
+  .      
+  
+db:ECACC rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "European Collection of Cell Cultures (ECACC)"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://www.phe-culturecollections.org.uk/products/celllines/index.aspx"^^xsd:anyURI;
+  .      
+  
+db:KCLB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Korean Cell Line Bank"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://cellbank.snu.ac.kr/"^^xsd:anyURI;
+  .      
+  
+db:Lonza rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Lonza Cell and Transfection Database"^^xsd:string;
+  :category "Cell line databases/resources"^^xsd:string;
+  rdfs:seeAlso "http://bio.lonza.com/6.html"^^xsd:anyURI;
+  .      
+  
+db:HSSP rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Homology-derived secondary structure of proteins database"^^xsd:string;
+  :category "3D structure databases"^^xsd:string;
+  rdfs:seeAlso "http://swift.cmbi.kun.nl/swift/hssp/"^^xsd:anyURI;
+  .      
+  
+db:CLO rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Community-based Cell Line Ontology"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://clo-ontology.sourceforge.net/"^^xsd:anyURI;
+  .      
+  
+db:WorfDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The C.elegans ORFeome cloning project"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://worfdb.dfci.harvard.edu/"^^xsd:anyURI;
+  .      
+  
+db:Others rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Identifier subtype"^^xsd:string;
+  :category "Identifier subset"^^xsd:string;
+  .      
+  
+db:GermOnline rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "GermOnline - a gateway for gametogenesis"^^xsd:string;
+  :category "Gene expression databases"^^xsd:string;
+  rdfs:seeAlso "http://www.germonline.org/"^^xsd:anyURI;
+  .      
+  
+db:JCRB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Japanese Collection of Research Bioresources Cell Bank"^^xsd:string;
+  :category "Cell line collections"^^xsd:string;
+  rdfs:seeAlso "http://cellbank.nibio.go.jp/english/"^^xsd:anyURI;
+  .      
+  
+db:Uberon rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Uberon"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://uberon.org"^^xsd:anyURI;
+  .      
+  
+db:Orphanet rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Orphanet; a database dedicated to information on rare diseases and orphan drugs"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.orpha.net/consor/cgi-bin/home.php?Lng=GB"^^xsd:anyURI;
+  .      
+  
+db:KEGGPathway rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "KEGG Pathway is a collection of manually drawn pathway maps"^^xsd:string;
+  :category "Enzyme and pathway databases"^^xsd:string;
+  rdfs:seeAlso "http://www.genome.jp/kegg/pathway.html"^^xsd:anyURI;
+  .      
+  
+db:GenoList rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "GenoList Integrated Environment for the Analysis of Microbial Genomes"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://genodb.pasteur.fr/cgi-bin/WebObjects/GenoList.woa/"^^xsd:anyURI;
+  .      
+  
+db:NCI rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "NCI thesaurus"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://ncit.nci.nih.gov/ncitbrowser"^^xsd:anyURI;
+  .      
+  
+db:CYGD rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Comprehensive Yeast Genome Database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://mips.gsf.de/genre/proj/yeast"^^xsd:anyURI;
+  .      
+  
+db:ProtoNet rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "ProtoNet; Automatic hierarchical classification of proteins"^^xsd:string;
+  :category "Family and domain databases"^^xsd:string;
+  rdfs:seeAlso "http://www.protonet.cs.huji.ac.il/"^^xsd:anyURI;
+  .      
+  
+db:DNASU rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The DNASU plasmid repository"^^xsd:string;
+  :category "Protocols and materials databases"^^xsd:string;
+  rdfs:seeAlso "https://dnasu.org/DNASU/"^^xsd:anyURI;
+  .      
+  
+db:Array-probeset rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Location and trancripts associated with probe features"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://www.ensembl.org"^^xsd:anyURI;
+  .      
+  
+db:GeneWiki rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "GeneWiki"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://en.wikipedia.org/wiki/Portal:Gene_Wiki"^^xsd:anyURI;
+  .      
+  
+db:GenomeReviews rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Genome Reviews; an annotated view of completely sequenced genomes"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/GenomeReviews/"^^xsd:anyURI;
+  .      
+  
+db:neXtProt rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "neXtProt; the human protein knowledge platform"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.nextprot.org/"^^xsd:anyURI;
+  .      
+  
+db:UniCarbKB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "UniCarbKB; an annotated and curated database of glycan structures"^^xsd:string;
+  :category "PTM databases"^^xsd:string;
+  rdfs:seeAlso "http://www.unicarbkb.org/"^^xsd:anyURI;
+  .      
+  
+db:Patent rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Google Patent"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "https://www.google.com/?tbm=pts"^^xsd:anyURI;
+  .      
+  
+db:World-2DPAGE rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "The World-2DPAGE database"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://world-2dpage.expasy.org/repository/"^^xsd:anyURI;
+  .      
+  
+db:RGD rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Rat genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://rgd.mcw.edu/"^^xsd:anyURI;
+  .      
+  
+db:EPODOC rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Europeen patent office database"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://ep.espacenet.com/"^^xsd:anyURI;
+  .      
+  
+db:Genevestigator rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Genevestigator"^^xsd:string;
+  :category "Gene expression databases"^^xsd:string;
+  rdfs:seeAlso "http://www.genevestigator.com"^^xsd:anyURI;
+  .      
+  
+db:2DBase-Ecoli rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "2D-PAGE Database of Escherichia coli"^^xsd:string;
+  :category "2D gel databases"^^xsd:string;
+  rdfs:seeAlso "http://2dbase.techfak.uni-bielefeld.de/"^^xsd:anyURI;
+  .      
+  
+db:CAZy rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Carbohydrate-Active enZymes"^^xsd:string;
+  :category "Protein family/group databases"^^xsd:string;
+  rdfs:seeAlso "http://www.cazy.org/"^^xsd:anyURI;
+  .      
+  
+db:GFP-cDNA rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "EMBL/DKFZ GFP-cDNA Localisation Project"^^xsd:string;
+  :category "Other"^^xsd:string;
+  rdfs:seeAlso "http://gfp-cdna.embl.de"^^xsd:anyURI;
+  .      
+  
+db:CL rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Cell Ontology"^^xsd:string;
+  :category "Ontologies"^^xsd:string;
+  rdfs:seeAlso "http://cellontology.org"^^xsd:anyURI;
+  .      
+  
+db:BuruList rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Mycobacterium ulcerans genome database"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://genolist.pasteur.fr/BuruList/"^^xsd:anyURI;
+  .      
+  
+db:EnsemblMetazoa rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "EnsemblMetazoa"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://metazoa.ensembl.org/"^^xsd:anyURI;
+  .      
+  
+db:BioCyc rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "BioCyc Collection of Pathway/Genome Databases"^^xsd:string;
+  :category "Enzyme and pathway databases"^^xsd:string;
+  rdfs:seeAlso "http://www.biocyc.org/"^^xsd:anyURI;
+  .      
+  
+db:Ensembl rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Ensembl eukaryotic genome annotation project"^^xsd:string;
+  :category "Genome annotation databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ensembl.org/"^^xsd:anyURI;
+  .      
+  
+db:MGI rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Mouse genome database (MGD) from Mouse Genome Informatics (MGI)"^^xsd:string;
+  :category "Organism-specific databases"^^xsd:string;
+  rdfs:seeAlso "http://www.informatics.jax.org/"^^xsd:anyURI;
+  .      
+  
+db:PDB rdf:type :Database;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Protein Data Bank Europe"^^xsd:string;
+  :category "3D structure databases"^^xsd:string;
+  rdfs:seeAlso "http://www.ebi.ac.uk/pdbe/"^^xsd:anyURI;
+  .      
+#
+# Define Datasource
+# 
+:Source
+      rdf:type owl:Class ;
+      rdfs:comment "Originator of the data"^^xsd:string ;
+      rdfs:subClassOf owl:Thing;
+      .
+  
+source:PMID_24129315
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 24129315"^^xsd:string;
+  .      
+  
+source:IPI
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "International Protein Index, from EBI, no more maintain"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_adrenal_gland
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human adrenal gland"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_breast
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human breast"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_digestive_system
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human digestive system"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_eye
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human eye"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_female_reproductive_system
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human female reproductive system"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_heart
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human heart"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_lung
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human lung"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_male_reproductive_system
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human male reproductive system"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_pancreas
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human pancreas"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_spleen
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human spleen"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_urinary_bladder
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human urinary bladder"^^xsd:string;
+  .      
+  
+source:ClinVar
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Database of mutations and their clinical relevance"^^xsd:string;
+  rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/clinvar/"^^xsd:anyURI;
+  .      
+  
+source:SRMAtlas
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Human peptide sequences and identifiers from SRMAtlas"^^xsd:string;
+  .      
+  
+source:MEROPS
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information resource for peptidases"^^xsd:string;
+  rdfs:seeAlso "http://merops.sanger.ac.uk/"^^xsd:anyURI;
+  .      
+  
+source:PhosphoSite
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information resource for protein phosphorylation"^^xsd:string;
+  rdfs:seeAlso "http://www.phosphosite.org"^^xsd:anyURI;
+  .      
+  
+source:GO_central
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Reference Genome Annotation Project"^^xsd:string;
+  rdfs:seeAlso "http://geneontology.org/page/reference-genome-annotation-project"^^xsd:anyURI;
+  .      
+  
+source:SGD
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Saccharomyces Genome Database"^^xsd:string;
+  rdfs:seeAlso "http://www.yeastgenome.org/"^^xsd:anyURI;
+  .      
+  
+source:Bgee
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information imported from dataBase for Gene Expression Evolution"^^xsd:string;
+  .      
+  
+source:CCDS
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Consensus CDS project"^^xsd:string;
+  .      
+  
+source:IntAct
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by IntAct"^^xsd:string;
+  .      
+  
+source:EMBL-EBI
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "European Molecular Biology Laboratory / European Bioinformatics Institute"^^xsd:string;
+  .      
+  
+source:OBO
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "OBO supports community members who are developing and publishing ontologies in the biomedical domain."^^xsd:string;
+  rdfs:seeAlso "http://obofoundry.org/"^^xsd:anyURI;
+  .      
+  
+source:GO
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by Gene Ontology"^^xsd:string;
+  .      
+  
+source:HPRD
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Human Protein Reference Database"^^xsd:string;
+  .      
+  
+source:String
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by String"^^xsd:string;
+  .      
+  
+source:KEGG_PTW
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Link to KEGG pathways"^^xsd:string;
+  .      
+  
+source:MGI
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Data from the Mouse orthologs database"^^xsd:string;
+  .      
+  
+source:MeSH
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by Medical Subject Headings"^^xsd:string;
+  .      
+  
+source:NCBI
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "National Center for Biotechnology Information"^^xsd:string;
+  .      
+  
+source:PIR
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Protein Information Resource"^^xsd:string;
+  .      
+  
+source:eVOC
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by eVOC ontology"^^xsd:string;
+  .      
+  
+source:Ensembl
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information imported from Ensembl"^^xsd:string;
+  rdfs:seeAlso "http://www.ensembl.org"^^xsd:anyURI;
+  .      
+  
+source:InterPro
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by InterPro"^^xsd:string;
+  .      
+  
+source:NextProt
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated automacally or manually by neXtProt"^^xsd:string;
+  .      
+  
+source:NextProt_integration
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Data integrated by neXtProt from various sources"^^xsd:string;
+  .      
+  
+source:PeptideAtlas
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Human peptide sequences and identifiers from PeptideAtlas"^^xsd:string;
+  .      
+  
+source:Prosite
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by Prosite"^^xsd:string;
+  .      
+  
+source:PubMed
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information imported from PubMed"^^xsd:string;
+  .      
+  
+source:Uniprot
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information imported from Uniprot"^^xsd:string;
+  rdfs:seeAlso "http://www.uniprot.org"^^xsd:anyURI;
+  .      
+  
+source:AgBase
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "AgBase is a curated resource for functional analysis of agricultural plant and animal gene products."^^xsd:string;
+  rdfs:seeAlso "http://agbase.msstate.edu/"^^xsd:anyURI;
+  .      
+  
+source:BHF-UCL
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "British Heart Foundation - University College London"^^xsd:string;
+  rdfs:seeAlso "http://wiki.geneontology.org/index.php/BHF-UCL"^^xsd:anyURI;
+  .      
+  
+source:DFLAT
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Developmental FunctionaL Annotation at Tufts"^^xsd:string;
+  rdfs:seeAlso "http://dflat.cs.tufts.edu/data.htm"^^xsd:anyURI;
+  .      
+  
+source:dictyBase
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Dictyostelium discoideum"^^xsd:string;
+  rdfs:seeAlso "http://dictybase.org/"^^xsd:anyURI;
+  .      
+  
+source:GDB
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Human Genome Database"^^xsd:string;
+  rdfs:seeAlso "http://www.gdb.org"^^xsd:anyURI;
+  .      
+  
+source:GOC
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "inferred annotations from GO OBO v1.2"^^xsd:string;
+  rdfs:seeAlso "http://www.geneontology.org"^^xsd:anyURI;
+  .      
+  
+source:HGNC
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "HUGO Gene Nomenclature Committee"^^xsd:string;
+  rdfs:seeAlso "http://www.gene.ucl.ac.uk/nomenclature"^^xsd:anyURI;
+  .      
+  
+source:LIFEdb
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "LIFEdb"^^xsd:string;
+  rdfs:seeAlso "http://www.lifedb.de"^^xsd:anyURI;
+  .      
+  
+source:PINC
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Proteome Inc."^^xsd:string;
+  .      
+  
+source:RefGenome
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "GO Consortium Reference Genomes project"^^xsd:string;
+  rdfs:seeAlso "http://www.geneontology.org/GO.refgenome.shtml"^^xsd:anyURI;
+  .      
+  
+source:Roslin_Institute
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Roslin Institute"^^xsd:string;
+  rdfs:seeAlso "http://rgd.mcw.edu"^^xsd:anyURI;
+  .      
+  
+source:Cosmic
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Catalogue Of Somatic Mutations In Cancer"^^xsd:string;
+  rdfs:seeAlso "http://www.sanger.ac.uk/genetics/CGP/cosmic/"^^xsd:anyURI;
+  .      
+  
+source:dbSNP
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Short genetic variations database"^^xsd:string;
+  rdfs:seeAlso "www.ncbi.nlm.nih.gov/SNP/"^^xsd:anyURI;
+  .      
+  
+source:UniPathway
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "A resource for the exploration of metabolic pathways"^^xsd:string;
+  rdfs:seeAlso "http://www.grenoble.prabi.fr/obiwarehouse/unipathway"^^xsd:anyURI;
+  .      
+  
+source:NTNU_SB
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "NTNU_SB ontology"^^xsd:string;
+  .      
+  
+source:Dyp
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the Dyp database"^^xsd:string;
+  .      
+  
+source:GFP-cDNAEMBL
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "GFP-cDNA Localisation Project (EMBL)"^^xsd:string;
+  .      
+  
+source:Human_protein_atlas
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Expression data imported from Human protein atlas"^^xsd:string;
+  rdfs:seeAlso "http://www.proteinatlas.org"^^xsd:anyURI;
+  .      
+  
+source:Human_protein_atlas_subcellular_localization
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Subcellular localization data imported from Human protein atlas"^^xsd:string;
+  rdfs:seeAlso "http://www.proteinatlas.org"^^xsd:anyURI;
+  .      
+  
+source:MDATA_0004_2011
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted from the submission MDATA_0004_2011"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_brain
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human brain"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_plasma
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human plasma"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_urine
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human urine"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_others
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human others"^^xsd:string;
+  .      
+  
+source:PMID_18614565
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 18614565"^^xsd:string;
+  .      
+  
+source:PMID_19608861
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 19608861"^^xsd:string;
+  .      
+  
+source:PMID_20068231
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 20068231"^^xsd:string;
+  .      
+  
+source:PMID_20140087
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 20140087"^^xsd:string;
+  .      
+  
+source:PMID_20570859
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 20570859"^^xsd:string;
+  .      
+  
+source:PMID_20687582
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 20687582"^^xsd:string;
+  .      
+  
+source:PMID_20797634
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 20797634"^^xsd:string;
+  .      
+  
+source:PMID_20972266
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 20972266"^^xsd:string;
+  .      
+  
+source:PMID_21139048
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 21139048"^^xsd:string;
+  .      
+  
+source:PMID_21406692
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 21406692"^^xsd:string;
+  .      
+  
+source:PMID_21645671
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 21645671"^^xsd:string;
+  .      
+  
+source:MDATA_0023_2012
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Proteomics information extracted from the submission MDATA_0023_2012"^^xsd:string;
+  .      
+  
+source:FlyBase
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "A database for drosophila genetics and molecular biology."^^xsd:string;
+  rdfs:seeAlso "http://flybase.org/"^^xsd:anyURI;
+  .      
+  
+source:PMID_22148984
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 22148984"^^xsd:string;
+  .      
+  
+source:PMID_22199227
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 22199227"^^xsd:string;
+  .      
+  
+source:PMID_22468782
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 22468782"^^xsd:string;
+  .      
+  
+source:PMID_22865923
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 22865923"^^xsd:string;
+  .      
+  
+source:ParkinsonsUK-UCL
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Parkinsons Disease Gene Ontology Initiative"^^xsd:string;
+  .      
+  
+source:PMID_23312004
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 23312004"^^xsd:string;
+  .      
+  
+source:MDATA_0033_2013
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted from the submission MDATA_0033_2013"^^xsd:string;
+  .      
+  
+source:PMID_23584533
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 23584533"^^xsd:string;
+  .      
+  
+source:PMID_23153008
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 23153008"^^xsd:string;
+  .      
+  
+source:PMID_23266961
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 23266961"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_kidney
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human liver"^^xsd:string;
+  .      
+  
+source:PeptideAtlas_human_liver
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information generated by PeptideAtlas, project human liver"^^xsd:string;
+  .      
+  
+source:MTBbase
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Collection and Refinement of Physiological Data on Mycobacterium tuberculosis"^^xsd:string;
+  rdfs:seeAlso "http://www.ark.in-berlin.de/Site/MTBbase.html"^^xsd:anyURI;
+  .      
+  
+source:WormBase
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "A comprehensive resource for genetics, genomics and biology of C. elegans and related nematodes"^^xsd:string;
+  rdfs:seeAlso "http://http://www.wormbase.org"^^xsd:anyURI;
+  .      
+  
+source:PMID_19413330
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 19413330"^^xsd:string;
+  .      
+  
+source:PMID_21890473
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 21890473"^^xsd:string;
+  .      
+  
+source:PMID_23236377
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Information extracted form the PubMed publication 23236377"^^xsd:string;
+  .      
+  
+source:Antibodypedia
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "A searchable database of antibodies against human proteins"^^xsd:string;
+  rdfs:seeAlso "http://www.antibodypedia.com"^^xsd:anyURI;
+  .      
+  
+source:Alzheimers_University_of_Toronto
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "Alzheimers Project at University of Toronto"^^xsd:string;
+  rdfs:seeAlso "http://www.ims.utoronto.ca/Page4.aspx"^^xsd:anyURI;
+  .      
+  
+source:NCI
+  rdf:type :Source;
+  rdfs:subClassOf owl:Thing;
+  rdfs:comment "National Center Institute"^^xsd:string;
+  .      
+#
+# Define Experimental Context
+# 
+:ExperimentalContext
+      rdf:type owl:Class ;
+      rdfs:comment "Experimental variables related to evidences"^^xsd:string ;
+      rdfs:subClassOf owl:Thing;
+      .
+#
+# Define protein interaction
+# 
+:ProteinInteraction
+      rdf:type owl:Class ;
+      rdfs:comment "Protein to protein interactions"^^xsd:string ;
+      rdfs:subClassOf owl:Thing;
+      .
+
+
+#
+# Define antibody mapping and peptide mapping
+# 
+:AntibodyMapping
+      rdf:type owl:Class ;
+      rdfs:comment "Positional mapping of an antibody to an isoform"^^xsd:string ;
+      rdfs:subClassOf owl:Thing;
+      .
+
+:PeptideMapping
+      rdf:type owl:Class ;
+      rdfs:comment "Positional mapping of a natural peptide to an isoform"^^xsd:string ;
+      rdfs:subClassOf owl:Thing;
+      .
+
+:SrmPeptideMapping
+      rdf:type owl:Class ;
+      rdfs:comment "Positional mapping of a synthetic peptide to an isoform"^^xsd:string ;
+      rdfs:subClassOf owl:Thing;
+      .
+
+

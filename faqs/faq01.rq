@@ -1,0 +1,10 @@
+#title:How does the data look like?
+#comment:To have an idea of the data contained in a dataset you can ask for a sample 
+#comment:Don't forget to include the limit keyword to avoid problems of resources and memory
+#tags:explore data
+    
+SELECT *
+WHERE {
+    ?subject ?predicate ?object .
+}
+LIMIT 10

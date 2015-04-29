@@ -1,0 +1,13 @@
+#id:NXQ_00009
+#title:Proteins with 3 disulfide bonds and that are not annotated as hormones 
+#tags:PTM,function
+#acs:A4D1T9,A6NC86,A6NDD2,A6NDV4,A6NGN9,A8MWS1,A8MWY0,A8MXU0,B1AKI9,D3W0D1
+#count:487
+#time:2.6
+
+select distinct ?entry where {
+  ?entry :isoform ?isoform.
+  ?isoform :ptm ?statement.
+  ?statement a :DisulfideBond.
+  filter not exists { ?entry :isoform / :function / :term /:childOf /:related cv:GO_0005179. } # GO Hormone activity
+} group by ?entry ?isoform having (count(?statement) =3 )

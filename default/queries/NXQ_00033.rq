@@ -1,0 +1,9 @@
+#id:NXQ_00033
+#title:Get William's friends (using both tto:friend predicate path and inverse path)
+#comment:retrieves solutions for objects connected to the subject ttr:William using the noraml and inverse path of the tto:friend predicate
+#tags:1 graph pattern,1 variable,path syntax : inverse path ^,path syntax : alternative path |
+
+
+select * where {
+  ttr:William tto:friend | ^tto:friend ?friend.
+}

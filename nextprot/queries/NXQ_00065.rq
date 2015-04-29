@@ -1,0 +1,11 @@
+#id:NXQ_00065
+#title:Proteins that have more than one catalytic activity
+#tags:enzyme,function
+#acs:Q86V88,Q9H008,P54886, ...
+#count:361
+#time:0.3
+
+select distinct ?entry where {
+  ?ec a :EnzymeClassificationCv.
+  ?entry :classifiedWith ?ec
+} group by ?entry having (count(?ec)>1)

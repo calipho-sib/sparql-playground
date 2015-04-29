@@ -1,0 +1,17 @@
+#id:NXQ_00050
+#title:Proteins which are expressed in brain according to IHC but not expressed in brain according to microarray
+#tags:expression,experimental evidence
+#comment:Problem with present RDF: No negativeEvidence for microarrays (cv:ECO_0000104)
+#acs:Q9Y6N5, Q9Y6J6, A1L4K1, ...
+#count:9768
+#time:36
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :expressionProfile ?s1;:expressionProfile ?s2.
+  # there exists an evidence saying that microarray didn't detect any expression in the brain
+  ?s2 :term/:childOf cv:TS-0095;:negativeEvidence/:experimentalContext/:detectionMethod cv:ECO_0000104.
+  #?s2 :term/:childOf cv:TS-0095;:negativeEvidence/:experimentalContext/:detectionMethod cv:ECO_0000009.
+  # there exists an evidence telling that the protein is expressed in brain according to IHC
+  ?s1 :term/:childOf cv:TS-0095;:evidence/:experimentalContext/:detectionMethod cv:ECO_0000087.
+}

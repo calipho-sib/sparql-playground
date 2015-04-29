@@ -1,0 +1,16 @@
+#id:NXQ_00132
+#title:Proteins with a 3D structure in complex with another human protein which is not reported as binary interactant
+#tags:PDB,3D structure,PPI,interaction
+#acs:P10415,P41235,O14786
+#count:1402
+#time:32
+
+select distinct ?entry where {
+  ?entry a :Entry.
+  ?entry :reference ?ref.
+  ?ref :provenance db:PDB; :accession ?ac.
+  ?entry2 a :Entry.
+  ?ac ^:accession/^:reference ?entry2.
+  filter(?entry != ?entry2).
+  filter not exists{?entry :isoform /:binaryInteraction / :interactant ?entry2.}
+}

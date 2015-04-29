@@ -1,0 +1,11 @@
+#id:NXQ_00004
+#title:Select things with their name and color
+#comment:Selects things described with both the dbp:name and tto:color predicates
+#comment:?thing, ?name, ?color are the variables
+#tags:2 graph patterns,3 variables
+    
+select ?thing ?name ?color where {
+  ?thing dbp:name ?name .
+  ?thing tto:color ?color .
+}
+

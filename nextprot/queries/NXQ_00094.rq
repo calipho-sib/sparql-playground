@@ -1,0 +1,28 @@
+#id:NXQ_00094
+#title:Proteins which are targets of antipsychotic drugs and highly expressed in brain
+#comment:Federated query with DrugBank
+#tags:federated query,drug,expression
+#acs:P08183,P10635,P11229, ...
+#count: 8
+#time: 1.3
+
+PREFIX diseasome: <http://wifo5-04.informatik.uni-mannheim.de/diseasome/resource/diseasome/>
+PREFIX drugbank: <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugbank/>
+
+select distinct ?entry where {
+  service <http://wifo5-03.informatik.uni-mannheim.de/drugbank/sparql> {
+    select distinct ?unipage WHERE {
+    ?drug drugbank:drugCategory ?drugCat.
+    ?drug drugbank:target ?target.
+    ?target drugbank:swissprotPage ?unipage.
+    filter ( ?drugCat in (
+      <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugcategory/antipsychoticAgents> ,
+      <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugcategory/antipsychotics>
+    ) )
+    }
+  }
+  ?entry :swissprotPage ?unipage.
+  ?entry :isoform/:expressionProfile ?expr.
+  ?expr :term/:childOf cv:TS-0095.
+  ?expr :evidence / :expressionLevel :High.
+}

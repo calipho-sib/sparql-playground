@@ -1,0 +1,13 @@
+#id:NXQ_00081
+#title:Proteins with at least one 3D structure and that are located in the mitochondrion and are linked with a disease
+#tags:PDB,3D structure,disease,subcellular location,cellular component
+#acs:P43897, Q6PI48, Q92890, ...
+#count:155
+#time: 0.1
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :pdbMapping ?map.
+  ?iso :cellularComponent/:term/:childOf cv:SL-0173.
+  ?iso :medical/rdf:type :Disease.
+}

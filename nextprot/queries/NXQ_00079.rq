@@ -1,0 +1,12 @@
+#id:NXQ_00079
+#title:Proteins with at least one 3D structure and that are phosphorylated
+#tags:PDB,3D structure,PTM,phosphorylation
+#acs:Q9Y570, P37840, O00763, ...
+#count:2972
+#time: 0.53
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :keyword / :term cv:KW-0597. # Phosphoprotein
+  ?iso :pdbMapping ?map.
+}

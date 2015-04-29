@@ -1,0 +1,8 @@
+#title:What properties are used?
+#comment:
+#tags:rdf properties
+    
+SELECT DISTINCT ?property
+WHERE
+{ ?s ?property ?o . }
+LIMIT 50

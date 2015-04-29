@@ -1,0 +1,1199 @@
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix :      <http://nextprot.org/rdf#> .
+@prefix db:    <http://nextprot.org/rdf/db/> .
+@prefix gene:  <http://nextprot.org/rdf/gene/> .
+@prefix evidence: <http://nextprot.org/rdf/evidence/> .
+@prefix interaction: <http://nextprot.org/rdf/interaction/> .
+@prefix cv:    <http://nextprot.org/rdf/terminology/> .
+@prefix up:    <http://purl.uniprot.org/core/> .
+@prefix publication: <http://nextprot.org/rdf/publication/> .
+@prefix annotation: <http://nextprot.org/rdf/annotation/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix source: <http://nextprot.org/rdf/source/> .
+@prefix entry: <http://nextprot.org/rdf/entry/> .
+@prefix context: <http://nextprot.org/rdf/context/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix isoform: <http://nextprot.org/rdf/isoform/> .
+@prefix xref:  <http://nextprot.org/rdf/xref/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix identifier: <http://nextprot.org/rdf/identifier/> .
+@prefix unipage: <http://www.uniprot.org/uniprot/> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+
+db:Micado  rdfs:subClassOf  owl:Thing .
+
+:Pathway  rdfs:subClassOf  :Function , :GeneralAnnotation .
+
+:TransmembraneRegion  rdfs:subClassOf  :Topology , :PositionalAnnotation .
+
+:BY_DEFAULT  rdfs:subClassOf  owl:Thing .
+
+db:SKIP  rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_pancreas
+        rdfs:subClassOf  owl:Thing .
+
+db:CCRID  rdfs:subClassOf  owl:Thing .
+
+db:MEROPS  rdfs:subClassOf  owl:Thing .
+
+:Turn   rdfs:subClassOf  :SecondaryStructure , :PositionalAnnotation .
+
+db:CMR  rdfs:subClassOf  owl:Thing .
+
+db:KIAA  rdfs:subClassOf  owl:Thing .
+
+:TopologicalDomain  rdfs:subClassOf  :Topology , :PositionalAnnotation .
+
+db:Cosmic-CLP  rdfs:subClassOf  owl:Thing .
+
+db:UniPathway  rdfs:subClassOf  owl:Thing .
+
+source:PMID_21890473  rdfs:subClassOf  owl:Thing .
+
+db:SMART  rdfs:subClassOf  owl:Thing .
+
+:CalciumBindingRegion
+        rdfs:subClassOf  :Region , :PositionalAnnotation .
+
+:IBD    rdfs:subClassOf  owl:Thing .
+
+db:LegioList  rdfs:subClassOf  owl:Thing .
+
+db:OrthoDB  rdfs:subClassOf  owl:Thing .
+
+:MiscellaneousRegion  rdfs:subClassOf  :Region , :PositionalAnnotation .
+
+db:Coriell  rdfs:subClassOf  owl:Thing .
+
+:Caution  rdfs:subClassOf  :GeneralAnnotation .
+
+db:MGC  rdfs:subClassOf  owl:Thing .
+
+db:GenoList  rdfs:subClassOf  owl:Thing .
+
+db:IntAct  rdfs:subClassOf  owl:Thing .
+
+:NextprotFamilyCv  rdfs:subClassOf  owl:Thing , :Term .
+
+db:UniCarbKB  rdfs:subClassOf  owl:Thing .
+
+:ISS    rdfs:subClassOf  owl:Thing .
+
+db:KCLB  rdfs:subClassOf  owl:Thing .
+
+db:CCLE  rdfs:subClassOf  owl:Thing .
+
+db:NCI  rdfs:subClassOf  owl:Thing .
+
+db:IHW  rdfs:subClassOf  owl:Thing .
+
+:SubcellularLocation  rdfs:subClassOf  :CellularComponent , :GeneralAnnotation .
+
+:Pharmaceutical  rdfs:subClassOf  :Medical , :GeneralAnnotation .
+
+source:SGD  rdfs:subClassOf  owl:Thing .
+
+db:PhosphoSite  rdfs:subClassOf  owl:Thing .
+
+db:MypuList  rdfs:subClassOf  owl:Thing .
+
+db:PubMed  rdfs:subClassOf  owl:Thing .
+
+db:RESID  rdfs:subClassOf  owl:Thing .
+
+db:ChiTaRS  rdfs:subClassOf  owl:Thing .
+
+db:RCB  rdfs:subClassOf  owl:Thing .
+
+:InteractingRegion  rdfs:subClassOf  :Region , :PositionalAnnotation .
+
+db:AraC-XylS  rdfs:subClassOf  owl:Thing .
+
+db:EMBL  rdfs:subClassOf  owl:Thing .
+
+db:RefSeq  rdfs:subClassOf  owl:Thing .
+
+db:HAMAP-Rule  rdfs:subClassOf  owl:Thing .
+
+db:DNASU  rdfs:subClassOf  owl:Thing .
+
+:Function  rdfs:subClassOf  :GeneralAnnotation .
+
+source:PMID_22865923  rdfs:subClassOf  owl:Thing .
+
+:GoBiologicalProcess  rdfs:subClassOf  :Function , :GeneralAnnotation .
+
+db:2DBase-Ecoli  rdfs:subClassOf  owl:Thing .
+
+:LipidationSite  rdfs:subClassOf  :Ptm , :PositionalAnnotation .
+
+db:RGD  rdfs:subClassOf  owl:Thing .
+
+db:Patent  rdfs:subClassOf  owl:Thing .
+
+:UNKNOWN  rdfs:subClassOf  owl:Thing .
+
+:Evidence_at_protein_level
+        rdfs:subClassOf  owl:Thing .
+
+db:CTD  rdfs:subClassOf  owl:Thing .
+
+:UniprotKeyword  rdfs:subClassOf  :Keyword , :GeneralAnnotation .
+
+:BetaStrand  rdfs:subClassOf  :SecondaryStructure , :PositionalAnnotation .
+
+source:MTBbase  rdfs:subClassOf  owl:Thing .
+
+db:Cornea-2DPAGE  rdfs:subClassOf  owl:Thing .
+
+db:IZSLER  rdfs:subClassOf  owl:Thing .
+
+db:Cosmic  rdfs:subClassOf  owl:Thing .
+
+:NucleotidePhosphateBindingRegion
+        rdfs:subClassOf  :Region , :PositionalAnnotation .
+
+db:VectorBase  rdfs:subClassOf  owl:Thing .
+
+:NextprotTopologyCv  rdfs:subClassOf  owl:Thing , :Term .
+
+:Region  rdfs:subClassOf  :PositionalAnnotation .
+
+:EnzymeRegulation  rdfs:subClassOf  :Interaction , :Function , :GeneralAnnotation .
+
+db:EuPathDB  rdfs:subClassOf  owl:Thing .
+
+db:BCRJ  rdfs:subClassOf  owl:Thing .
+
+db:IMGT  rdfs:subClassOf  owl:Thing .
+
+db:MGI  rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_brain
+        rdfs:subClassOf  owl:Thing .
+
+db:CleanEx  rdfs:subClassOf  owl:Thing .
+
+source:PMID_20140087  rdfs:subClassOf  owl:Thing .
+
+db:GeneWiki  rdfs:subClassOf  owl:Thing .
+
+source:RefGenome  rdfs:subClassOf  owl:Thing .
+
+db:SRMAtlas  rdfs:subClassOf  owl:Thing .
+
+db:IMGT_HLA  rdfs:subClassOf  owl:Thing .
+
+db:World-2DPAGE  rdfs:subClassOf  owl:Thing .
+
+db:GeneTree  rdfs:subClassOf  owl:Thing .
+
+db:DOSAC-COBS-2DPAGE  rdfs:subClassOf  owl:Thing .
+
+db:MetaCyc  rdfs:subClassOf  owl:Thing .
+
+:Evidence  rdfs:subClassOf  owl:Thing .
+
+db:CCLV  rdfs:subClassOf  owl:Thing .
+
+:IGC    rdfs:subClassOf  owl:Thing .
+
+db:IMAGE  rdfs:subClassOf  owl:Thing .
+
+source:PMID_21139048  rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_digestive_system
+        rdfs:subClassOf  owl:Thing .
+
+db:HUGE  rdfs:subClassOf  owl:Thing .
+
+db:dictyBase  rdfs:subClassOf  owl:Thing .
+
+:SubcellularLocationNote
+        rdfs:subClassOf  :CellularComponent , :GeneralAnnotation .
+
+:Selenocysteine  rdfs:subClassOf  :Ptm , :PositionalAnnotation .
+
+:UniprotRegionStructureCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+db:GenAtlas  rdfs:subClassOf  owl:Thing .
+
+db:DYP  rdfs:subClassOf  owl:Thing .
+
+source:PMID_22199227  rdfs:subClassOf  owl:Thing .
+
+db:ECO2DBASE  rdfs:subClassOf  owl:Thing .
+
+source:Antibodypedia  rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_urine
+        rdfs:subClassOf  owl:Thing .
+
+db:PaxDb  rdfs:subClassOf  owl:Thing .
+
+db:MIM  rdfs:subClassOf  owl:Thing .
+
+source:PMID_20570859  rdfs:subClassOf  owl:Thing .
+
+:SILVER  rdfs:subClassOf  owl:Thing .
+
+:SrmPeptideMapping  rdfs:subClassOf  owl:Thing .
+
+db:ProMEX  rdfs:subClassOf  owl:Thing .
+
+db:CYGD  rdfs:subClassOf  owl:Thing .
+
+:GoCellularComponentCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+db:Aarhus_Ghent-2DPAGE
+        rdfs:subClassOf  owl:Thing .
+
+db:ANU-2DPAGE  rdfs:subClassOf  owl:Thing .
+
+source:PMID_23312004  rdfs:subClassOf  owl:Thing .
+
+db:NMPDR  rdfs:subClassOf  owl:Thing .
+
+source:IPI  rdfs:subClassOf  owl:Thing .
+
+:IEP    rdfs:subClassOf  owl:Thing .
+
+db:SMR  rdfs:subClassOf  owl:Thing .
+
+db:TreeFam  rdfs:subClassOf  owl:Thing .
+
+db:JCRB  rdfs:subClassOf  owl:Thing .
+
+db:Others  rdfs:subClassOf  owl:Thing .
+
+db:WorfDB  rdfs:subClassOf  owl:Thing .
+
+source:PIR  rdfs:subClassOf  owl:Thing .
+
+db:SABIO-RK  rdfs:subClassOf  owl:Thing .
+
+:IPI    rdfs:subClassOf  owl:Thing .
+
+:History  rdfs:subClassOf  owl:Thing .
+
+db:GenomeReviews  rdfs:subClassOf  owl:Thing .
+
+:PdbMapping  rdfs:subClassOf  :Mapping , :PositionalAnnotation .
+
+:Repeat  rdfs:subClassOf  :Region , :PositionalAnnotation .
+
+db:EnsemblBacteria  rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_spleen
+        rdfs:subClassOf  owl:Thing .
+
+:ExpressionLevel  rdfs:subClassOf  owl:Thing .
+
+:MetalBindingSite  rdfs:subClassOf  :Site , :PositionalAnnotation .
+
+db:RSCB  rdfs:subClassOf  owl:Thing .
+
+:OrganelleCv  rdfs:subClassOf  owl:Thing , :Term .
+
+:MitochondrialTransitPeptide
+        rdfs:subClassOf  :ProcessingProduct , :PositionalAnnotation .
+
+db:Siena-2DPAGE  rdfs:subClassOf  owl:Thing .
+
+db:neXtProt  rdfs:subClassOf  owl:Thing .
+
+:SignalPeptide  rdfs:subClassOf  :ProcessingProduct , :PositionalAnnotation .
+
+db:Pathway_Interaction_DB
+        rdfs:subClassOf  owl:Thing .
+
+source:PMID_20972266  rdfs:subClassOf  owl:Thing .
+
+db:H-InvDB  rdfs:subClassOf  owl:Thing .
+
+db:PRO  rdfs:subClassOf  owl:Thing .
+
+db:HOGENOM  rdfs:subClassOf  owl:Thing .
+
+:IGI    rdfs:subClassOf  owl:Thing .
+
+db:SWISS-2DPAGE  rdfs:subClassOf  owl:Thing .
+
+db:IFO  rdfs:subClassOf  owl:Thing .
+
+source:MeSH  rdfs:subClassOf  owl:Thing .
+
+:FunctionInfo  rdfs:subClassOf  :Function , :GeneralAnnotation .
+
+db:DOI  rdfs:subClassOf  owl:Thing .
+
+:Source  rdfs:subClassOf  owl:Thing .
+
+:ProteinSequence  rdfs:subClassOf  owl:Thing .
+
+db:Antibodypedia  rdfs:subClassOf  owl:Thing .
+
+:UniprotFamilyCv  rdfs:subClassOf  owl:Thing , :Term .
+
+db:EchoBASE  rdfs:subClassOf  owl:Thing .
+
+db:BuruList  rdfs:subClassOf  owl:Thing .
+
+db:Clinvar  rdfs:subClassOf  owl:Thing .
+
+source:GOC  rdfs:subClassOf  owl:Thing .
+
+db:Pfam  rdfs:subClassOf  owl:Thing .
+
+db:CCDS  rdfs:subClassOf  owl:Thing .
+
+source:dictyBase  rdfs:subClassOf  owl:Thing .
+
+db:Allergome  rdfs:subClassOf  owl:Thing .
+
+db:UCSC  rdfs:subClassOf  owl:Thing .
+
+:PeptideMapping  rdfs:subClassOf  owl:Thing .
+
+:BinaryInteraction  rdfs:subClassOf  :Interaction , :GeneralAnnotation .
+
+db:PIRSF  rdfs:subClassOf  owl:Thing .
+
+source:PMID_19413330  rdfs:subClassOf  owl:Thing .
+
+source:NextProt_integration
+        rdfs:subClassOf  owl:Thing .
+
+db:PRINTS  rdfs:subClassOf  owl:Thing .
+
+source:AgBase  rdfs:subClassOf  owl:Thing .
+
+:RCA    rdfs:subClassOf  owl:Thing .
+
+db:PATRIC  rdfs:subClassOf  owl:Thing .
+
+:EvocDevelopmentalStageCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+:ISO    rdfs:subClassOf  owl:Thing .
+
+source:Human_protein_atlas_subcellular_localization
+        rdfs:subClassOf  owl:Thing .
+
+db:UniGene  rdfs:subClassOf  owl:Thing .
+
+:GoMolecularFunctionCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+db:AGD  rdfs:subClassOf  owl:Thing .
+
+:QualityQualifier  rdfs:subClassOf  owl:Thing .
+
+db:DKFZ  rdfs:subClassOf  owl:Thing .
+
+:Entry  rdfs:subClassOf  owl:Thing .
+
+:FamilyName  rdfs:subClassOf  :Name .
+
+:Uncertain  rdfs:subClassOf  owl:Thing .
+
+:CellularComponent  rdfs:subClassOf  :GeneralAnnotation .
+
+db:DEPOD  rdfs:subClassOf  owl:Thing .
+
+db:EnsemblProtists  rdfs:subClassOf  owl:Thing .
+
+db:Illumina  rdfs:subClassOf  owl:Thing .
+
+:NonStandardAminoAcidCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+source:EMBL-EBI  rdfs:subClassOf  owl:Thing .
+
+:ExpressionInfo  rdfs:subClassOf  :Expression , :GeneralAnnotation .
+
+:NonTerminalResidue  rdfs:subClassOf  :PositionalAnnotation .
+
+source:CCDS  rdfs:subClassOf  owl:Thing .
+
+db:TCDB  rdfs:subClassOf  owl:Thing .
+
+db:Xenbase  rdfs:subClassOf  owl:Thing .
+
+db:PeroxiBase  rdfs:subClassOf  owl:Thing .
+
+db:Leproma  rdfs:subClassOf  owl:Thing .
+
+db:ConoServer  rdfs:subClassOf  owl:Thing .
+
+db:ModBase  rdfs:subClassOf  owl:Thing .
+
+db:PRIDE  rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_plasma
+        rdfs:subClassOf  owl:Thing .
+
+:UniprotPtmCv  rdfs:subClassOf  owl:Thing , :Term .
+
+db:BioCyc  rdfs:subClassOf  owl:Thing .
+
+db:Bgee  rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_lung
+        rdfs:subClassOf  owl:Thing .
+
+db:CLDB  rdfs:subClassOf  owl:Thing .
+
+:GOEvidenceCode  rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_eye
+        rdfs:subClassOf  owl:Thing .
+
+:ComputedEvidence  rdfs:subClassOf  owl:Thing , :Evidence .
+
+db:GO_REF  rdfs:subClassOf  owl:Thing .
+
+:ExpressionProfile  rdfs:subClassOf  :Expression , :GeneralAnnotation .
+
+db:PDBj  rdfs:subClassOf  owl:Thing .
+
+db:SCOP  rdfs:subClassOf  owl:Thing .
+
+:ProteinExistence  rdfs:subClassOf  owl:Thing .
+
+:AntibodyMapping  rdfs:subClassOf  owl:Thing .
+
+:GOLD   rdfs:subClassOf  owl:Thing .
+
+source:PINC  rdfs:subClassOf  owl:Thing .
+
+source:PMID_23584533  rdfs:subClassOf  owl:Thing .
+
+:Medium  rdfs:subClassOf  :Positive .
+
+source:PeptideAtlas_human_urinary_bladder
+        rdfs:subClassOf  owl:Thing .
+
+:SequenceCaution  rdfs:subClassOf  :GeneralAnnotation .
+
+db:HGNC  rdfs:subClassOf  owl:Thing .
+
+:NextprotCarbohydrateCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+db:Rouge  rdfs:subClassOf  owl:Thing .
+
+source:Bgee  rdfs:subClassOf  owl:Thing .
+
+db:HPRD  rdfs:subClassOf  owl:Thing .
+
+db:HAMAP  rdfs:subClassOf  owl:Thing .
+
+source:MDATA_0004_2011
+        rdfs:subClassOf  owl:Thing .
+
+db:Array-probeset  rdfs:subClassOf  owl:Thing .
+
+:UnipathwayCv  rdfs:subClassOf  owl:Thing , :Term .
+
+db:ENCODE  rdfs:subClassOf  owl:Thing .
+
+source:MEROPS  rdfs:subClassOf  owl:Thing .
+
+:ModifiedResidue  rdfs:subClassOf  :Ptm , :PositionalAnnotation .
+
+:EnzymeClassificationCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+:TAS    rdfs:subClassOf  owl:Thing .
+
+db:EnsemblPlants  rdfs:subClassOf  owl:Thing .
+
+:IC     rdfs:subClassOf  owl:Thing .
+
+:Induction  rdfs:subClassOf  :GeneralAnnotation .
+
+:EVocAnatomicalSystemCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+:PtmInfo  rdfs:subClassOf  :Ptm , :PositionalAnnotation .
+
+source:PMID_22468782  rdfs:subClassOf  owl:Thing .
+
+:NextprotAnnotationCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+:Mapping  rdfs:subClassOf  :PositionalAnnotation .
+
+source:NCBI  rdfs:subClassOf  owl:Thing .
+
+db:TAIR  rdfs:subClassOf  owl:Thing .
+
+source:BHF-UCL  rdfs:subClassOf  owl:Thing .
+
+db:TKG  rdfs:subClassOf  owl:Thing .
+
+db:mycoCLAP  rdfs:subClassOf  owl:Thing .
+
+db:GuidetoPHARMACOLOGY
+        rdfs:subClassOf  owl:Thing .
+
+:EnzymeClassification
+        rdfs:subClassOf  :GeneralAnnotation .
+
+source:NCI  rdfs:subClassOf  owl:Thing .
+
+db:ENZYME  rdfs:subClassOf  owl:Thing .
+
+:ExperimentalContext  rdfs:subClassOf  owl:Thing .
+
+source:HGNC  rdfs:subClassOf  owl:Thing .
+
+:ZincFingerRegion  rdfs:subClassOf  :Region , :PositionalAnnotation .
+
+source:OBO  rdfs:subClassOf  owl:Thing .
+
+db:GeneID  rdfs:subClassOf  owl:Thing .
+
+db:COMPLUYEAST-2DPAGE
+        rdfs:subClassOf  owl:Thing .
+
+db:MaizeGDB  rdfs:subClassOf  owl:Thing .
+
+:Topology  rdfs:subClassOf  :PositionalAnnotation .
+
+db:ArachnoServer  rdfs:subClassOf  owl:Thing .
+
+:NciMetathesaurusCv  rdfs:subClassOf  owl:Thing , :Term .
+
+source:HPRD  rdfs:subClassOf  owl:Thing .
+
+:Miscellaneous  rdfs:subClassOf  :GeneralAnnotation .
+
+db:ExpressionAtlas  rdfs:subClassOf  owl:Thing .
+
+:IEA    rdfs:subClassOf  owl:Thing .
+
+:Xref   rdfs:subClassOf  owl:Thing .
+
+db:CGD  rdfs:subClassOf  owl:Thing .
+
+db:EvolutionaryTrace  rdfs:subClassOf  owl:Thing .
+
+db:Affymetrix  rdfs:subClassOf  owl:Thing .
+
+:SmallMoleculeInteraction
+        rdfs:subClassOf  :Medical , :Interaction , :GeneralAnnotation .
+
+db:PMAP-CutDB  rdfs:subClassOf  owl:Thing .
+
+:IBA    rdfs:subClassOf  owl:Thing .
+
+source:Prosite  rdfs:subClassOf  owl:Thing .
+
+db:BRENDA  rdfs:subClassOf  owl:Thing .
+
+:BRONZE  rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_male_reproductive_system
+        rdfs:subClassOf  owl:Thing .
+
+db:REPRODUCTION-2DPAGE
+        rdfs:subClassOf  owl:Thing .
+
+:NR     rdfs:subClassOf  owl:Thing .
+
+:Expression  rdfs:subClassOf  :GeneralAnnotation .
+
+db:NCBI_Taxonomy  rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_liver
+        rdfs:subClassOf  owl:Thing .
+
+:UniprotSubcellularTopologyCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+db:hESCreg  rdfs:subClassOf  owl:Thing .
+
+db:ZFIN  rdfs:subClassOf  owl:Thing .
+
+source:DFLAT  rdfs:subClassOf  owl:Thing .
+
+db:PHCI-2DPAGE  rdfs:subClassOf  owl:Thing .
+
+:CleavageSite  rdfs:subClassOf  :Site , :ProcessingProduct , :PositionalAnnotation .
+
+:DomainInfo  rdfs:subClassOf  :PositionalAnnotation .
+
+source:PMID_21406692  rdfs:subClassOf  owl:Thing .
+
+db:PDBsum  rdfs:subClassOf  owl:Thing .
+
+:IntramembraneRegion  rdfs:subClassOf  :Topology , :PositionalAnnotation .
+
+:ProcessingProduct  rdfs:subClassOf  :PositionalAnnotation .
+
+source:String  rdfs:subClassOf  owl:Thing .
+
+:Mutagenesis  rdfs:subClassOf  :PositionalAnnotation .
+
+db:PseudoCAP  rdfs:subClassOf  owl:Thing .
+
+source:InterPro  rdfs:subClassOf  owl:Thing .
+
+:IMP    rdfs:subClassOf  owl:Thing .
+
+:EXP    rdfs:subClassOf  owl:Thing .
+
+:Helix  rdfs:subClassOf  :SecondaryStructure , :PositionalAnnotation .
+
+db:ListiList  rdfs:subClassOf  owl:Thing .
+
+source:MGI  rdfs:subClassOf  owl:Thing .
+
+db:GFP-cDNA  rdfs:subClassOf  owl:Thing .
+
+:InitiatorMethionine  rdfs:subClassOf  :ProcessingProduct , :PositionalAnnotation .
+
+db:SagaList  rdfs:subClassOf  owl:Thing .
+
+db:GOA  rdfs:subClassOf  owl:Thing .
+
+:EVocCv  rdfs:subClassOf  owl:Thing , :Term .
+
+:PeroxisomeTransitPeptide
+        rdfs:subClassOf  :ProcessingProduct , :PositionalAnnotation .
+
+source:Alzheimers_University_of_Toronto
+        rdfs:subClassOf  owl:Thing .
+
+db:MCCL  rdfs:subClassOf  owl:Thing .
+
+db:Uberon  rdfs:subClassOf  owl:Thing .
+
+db:PomBase  rdfs:subClassOf  owl:Thing .
+
+source:UniPathway  rdfs:subClassOf  owl:Thing .
+
+:CompositionallyBiasedRegion
+        rdfs:subClassOf  :Region , :PositionalAnnotation .
+
+db:BioGrid  rdfs:subClassOf  owl:Thing .
+
+db:PSI-MOD  rdfs:subClassOf  owl:Thing .
+
+source:PMID_23153008  rdfs:subClassOf  owl:Thing .
+
+db:KEGGPathway  rdfs:subClassOf  owl:Thing .
+
+:GoCellularComponent  rdfs:subClassOf  :CellularComponent , :GeneralAnnotation .
+
+:IKR    rdfs:subClassOf  owl:Thing .
+
+db:UniProt  rdfs:subClassOf  owl:Thing .
+
+db:ISCR  rdfs:subClassOf  owl:Thing .
+
+db:EPODOC  rdfs:subClassOf  owl:Thing .
+
+db:OGP  rdfs:subClassOf  owl:Thing .
+
+db:HOVERGEN  rdfs:subClassOf  owl:Thing .
+
+db:DIP  rdfs:subClassOf  owl:Thing .
+
+db:Reactome  rdfs:subClassOf  owl:Thing .
+
+db:DSMZ  rdfs:subClassOf  owl:Thing .
+
+:NciThesaurusCv  rdfs:subClassOf  owl:Thing , :Term .
+
+db:ChEBI  rdfs:subClassOf  owl:Thing .
+
+:CrossLink  rdfs:subClassOf  :Ptm , :PositionalAnnotation .
+
+db:UniProt_family  rdfs:subClassOf  owl:Thing .
+
+db:SequenceOntology  rdfs:subClassOf  owl:Thing .
+
+source:ClinVar  rdfs:subClassOf  owl:Thing .
+
+db:LINCS  rdfs:subClassOf  owl:Thing .
+
+db:PeptideAtlas  rdfs:subClassOf  owl:Thing .
+
+source:GO_central  rdfs:subClassOf  owl:Thing .
+
+db:PDB  rdfs:subClassOf  owl:Thing .
+
+db:InParanoid  rdfs:subClassOf  owl:Thing .
+
+db:SignaLink  rdfs:subClassOf  owl:Thing .
+
+db:UniProtKB  rdfs:subClassOf  owl:Thing .
+
+db:UniProt_domain  rdfs:subClassOf  owl:Thing .
+
+db:ICLC  rdfs:subClassOf  owl:Thing .
+
+db:WEBINFO  rdfs:subClassOf  owl:Thing .
+
+db:SBKB  rdfs:subClassOf  owl:Thing .
+
+db:NIH-ARP  rdfs:subClassOf  owl:Thing .
+
+db:CBA  rdfs:subClassOf  owl:Thing .
+
+db:GenomeRNAi  rdfs:subClassOf  owl:Thing .
+
+db:FLJ  rdfs:subClassOf  owl:Thing .
+
+:DisulfideBond  rdfs:subClassOf  :Ptm , :PositionalAnnotation .
+
+db:SKY_M-FISH_CGH  rdfs:subClassOf  owl:Thing .
+
+db:RuleBase  rdfs:subClassOf  owl:Thing .
+
+db:GenBank  rdfs:subClassOf  owl:Thing .
+
+:Domain  rdfs:subClassOf  :Region , :PositionalAnnotation .
+
+source:PMID_20797634  rdfs:subClassOf  owl:Thing .
+
+db:KO   rdfs:subClassOf  owl:Thing .
+
+:DnaBindingRegion  rdfs:subClassOf  :Region , :PositionalAnnotation .
+
+db:PANTHER  rdfs:subClassOf  owl:Thing .
+
+db:Lonza  rdfs:subClassOf  owl:Thing .
+
+db:WormPep  rdfs:subClassOf  owl:Thing .
+
+db:FMA  rdfs:subClassOf  owl:Thing .
+
+source:KEGG_PTW  rdfs:subClassOf  owl:Thing .
+
+:NextprotDomainCv  rdfs:subClassOf  owl:Thing , :Term .
+
+db:ProtoNet  rdfs:subClassOf  owl:Thing .
+
+source:WormBase  rdfs:subClassOf  owl:Thing .
+
+db:BindingDB  rdfs:subClassOf  owl:Thing .
+
+:Term   rdfs:subClassOf  owl:Thing .
+
+db:EMBL-CDS  rdfs:subClassOf  owl:Thing .
+
+db:PMMA-2DPAGE  rdfs:subClassOf  owl:Thing .
+
+db:GermOnline  rdfs:subClassOf  owl:Thing .
+
+:CatalyticActivity  rdfs:subClassOf  :Function , :GeneralAnnotation .
+
+db:PptaseDB  rdfs:subClassOf  owl:Thing .
+
+:IRD    rdfs:subClassOf  owl:Thing .
+
+:IsoformAnnotationSpecificityQualifier
+        rdfs:subClassOf  owl:Thing .
+
+db:Orphanet  rdfs:subClassOf  owl:Thing .
+
+db:MaxQB  rdfs:subClassOf  owl:Thing .
+
+:GoBiologicalProcessCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+:High   rdfs:subClassOf  :Positive .
+
+db:PROSITE  rdfs:subClassOf  owl:Thing .
+
+db:DrugBank  rdfs:subClassOf  owl:Thing .
+
+source:Dyp  rdfs:subClassOf  owl:Thing .
+
+db:SGD  rdfs:subClassOf  owl:Thing .
+
+:UniprotDiseaseCv  rdfs:subClassOf  owl:Thing , :Term .
+
+:BgeeDevelopmentalStageCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+source:FlyBase  rdfs:subClassOf  owl:Thing .
+
+db:RCSB  rdfs:subClassOf  owl:Thing .
+
+db:EnsemblFungi  rdfs:subClassOf  owl:Thing .
+
+:ShortSequenceMotif  rdfs:subClassOf  :Region , :PositionalAnnotation .
+
+db:GPCRDB  rdfs:subClassOf  owl:Thing .
+
+source:Ensembl  rdfs:subClassOf  owl:Thing .
+
+source:MDATA_0033_2013
+        rdfs:subClassOf  owl:Thing .
+
+db:Gramene  rdfs:subClassOf  owl:Thing .
+
+db:Proteomes  rdfs:subClassOf  owl:Thing .
+
+:MeshAnatomyCv  rdfs:subClassOf  owl:Thing , :Term .
+
+db:CAZy  rdfs:subClassOf  owl:Thing .
+
+source:IntAct  rdfs:subClassOf  owl:Thing .
+
+db:PhosSite  rdfs:subClassOf  owl:Thing .
+
+:VariantInfo  rdfs:subClassOf  :PositionalAnnotation .
+
+source:Roslin_Institute
+        rdfs:subClassOf  owl:Thing .
+
+source:GFP-cDNAEMBL  rdfs:subClassOf  owl:Thing .
+
+cv:ECO_0000104  rdfs:subClassOf  :EST .
+
+source:NTNU_SB  rdfs:subClassOf  owl:Thing .
+
+db:TIGR  rdfs:subClassOf  owl:Thing .
+
+:EvidenceCodeOntologyCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+db:Proteopedia  rdfs:subClassOf  owl:Thing .
+
+:Disease  rdfs:subClassOf  :Medical , :GeneralAnnotation .
+
+source:PMID_24129315  rdfs:subClassOf  owl:Thing .
+
+:UniprotKeywordCv  rdfs:subClassOf  owl:Thing , :Term .
+
+:Publication  rdfs:subClassOf  owl:Thing .
+
+db:DisProt  rdfs:subClassOf  owl:Thing .
+
+db:MEDLINE  rdfs:subClassOf  owl:Thing .
+
+db:DDBJ  rdfs:subClassOf  owl:Thing .
+
+:Ptm    rdfs:subClassOf  :PositionalAnnotation .
+
+source:PubMed  rdfs:subClassOf  owl:Thing .
+
+db:EnsemblMetazoa  rdfs:subClassOf  owl:Thing .
+
+db:dbSNP  rdfs:subClassOf  owl:Thing .
+
+source:PMID_21645671  rdfs:subClassOf  owl:Thing .
+
+:ActiveSite  rdfs:subClassOf  :Site , :PositionalAnnotation .
+
+:NextprotMetalCv  rdfs:subClassOf  owl:Thing , :Term .
+
+source:LIFEdb  rdfs:subClassOf  owl:Thing .
+
+db:ProDom  rdfs:subClassOf  owl:Thing .
+
+db:Genevestigator  rdfs:subClassOf  owl:Thing .
+
+source:dbSNP  rdfs:subClassOf  owl:Thing .
+
+db:ESTDAB  rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_adrenal_gland
+        rdfs:subClassOf  owl:Thing .
+
+db:SUPFAM  rdfs:subClassOf  owl:Thing .
+
+db:Ensembl  rdfs:subClassOf  owl:Thing .
+
+db:MINT  rdfs:subClassOf  owl:Thing .
+
+db:TIGRFAMs  rdfs:subClassOf  owl:Thing .
+
+db:ChEMBL  rdfs:subClassOf  owl:Thing .
+
+db:euHCVdb  rdfs:subClassOf  owl:Thing .
+
+:ISA    rdfs:subClassOf  owl:Thing .
+
+db:CATH  rdfs:subClassOf  owl:Thing .
+
+:MaturationPeptide  rdfs:subClassOf  :ProcessingProduct , :PositionalAnnotation .
+
+:SequenceConflict  rdfs:subClassOf  :PositionalAnnotation .
+
+source:MDATA_0023_2012
+        rdfs:subClassOf  owl:Thing .
+
+:Evidence_at_transcript_level
+        rdfs:subClassOf  owl:Thing .
+
+db:CL   rdfs:subClassOf  owl:Thing .
+
+source:Cosmic  rdfs:subClassOf  owl:Thing .
+
+db:ProteinModelPortal
+        rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas  rdfs:subClassOf  owl:Thing .
+
+db:HPA  rdfs:subClassOf  owl:Thing .
+
+db:DMDM  rdfs:subClassOf  owl:Thing .
+
+db:GeneFarm  rdfs:subClassOf  owl:Thing .
+
+db:LOC  rdfs:subClassOf  owl:Thing .
+
+:Medical  rdfs:subClassOf  :GeneralAnnotation .
+
+db:TubercuList  rdfs:subClassOf  owl:Thing .
+
+:CoiledCoilRegion  rdfs:subClassOf  :Region , :PositionalAnnotation .
+
+db:STRING  rdfs:subClassOf  owl:Thing .
+
+db:ECACC  rdfs:subClassOf  owl:Thing .
+
+db:GAD  rdfs:subClassOf  owl:Thing .
+
+:Inferred_from_homology
+        rdfs:subClassOf  owl:Thing .
+
+db:UCD-2DPAGE  rdfs:subClassOf  owl:Thing .
+
+db:CGH-DB  rdfs:subClassOf  owl:Thing .
+
+source:PMID_23236377  rdfs:subClassOf  owl:Thing .
+
+source:PMID_22148984  rdfs:subClassOf  owl:Thing .
+
+db:KEGG  rdfs:subClassOf  owl:Thing .
+
+:UniprotSubcellularLocationCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+:Isoform  rdfs:subClassOf  owl:Thing .
+
+:BindingSite  rdfs:subClassOf  :Site , :PositionalAnnotation .
+
+source:PMID_23266961  rdfs:subClassOf  owl:Thing .
+
+db:neXtProtDoc  rdfs:subClassOf  owl:Thing .
+
+db:CLO  rdfs:subClassOf  owl:Thing .
+
+:CuratedEvidence  rdfs:subClassOf  owl:Thing , :Evidence .
+
+:MeshCv  rdfs:subClassOf  owl:Thing , :Term .
+
+db:NCImetathesaurus  rdfs:subClassOf  owl:Thing .
+
+db:OMA  rdfs:subClassOf  owl:Thing .
+
+db:InterPro  rdfs:subClassOf  owl:Thing .
+
+:IDA    rdfs:subClassOf  owl:Thing .
+
+db:PhotoList  rdfs:subClassOf  owl:Thing .
+
+:CellosaurusCv  rdfs:subClassOf  owl:Thing , :Term .
+
+db:IPI  rdfs:subClassOf  owl:Thing .
+
+source:GDB  rdfs:subClassOf  owl:Thing .
+
+db:PhylomeDB  rdfs:subClassOf  owl:Thing .
+
+db:PharmGKB  rdfs:subClassOf  owl:Thing .
+
+db:ProtClustDB  rdfs:subClassOf  owl:Thing .
+
+db:UniProt_control_vocabulary
+        rdfs:subClassOf  owl:Thing .
+
+source:PMID_18614565  rdfs:subClassOf  owl:Thing .
+
+:MiscellaneousSite  rdfs:subClassOf  :Site , :PositionalAnnotation .
+
+:MatureProtein  rdfs:subClassOf  :ProcessingProduct , :PositionalAnnotation .
+
+source:PMID_20068231  rdfs:subClassOf  owl:Thing .
+
+db:neXtProt_control_vocabulary
+        rdfs:subClassOf  owl:Thing .
+
+:SequenceOntologyCv  rdfs:subClassOf  owl:Thing , :Term .
+
+db:PIR  rdfs:subClassOf  owl:Thing .
+
+source:PMID_20687582  rdfs:subClassOf  owl:Thing .
+
+:GoMolecularFunction  rdfs:subClassOf  :Function , :GeneralAnnotation .
+
+:Allergen  rdfs:subClassOf  :Medical , :GeneralAnnotation .
+
+db:IGRhCellID  rdfs:subClassOf  owl:Thing .
+
+db:Rat-heart-2DPAGE  rdfs:subClassOf  owl:Thing .
+
+:Interaction  rdfs:subClassOf  :GeneralAnnotation .
+
+db:ATCC  rdfs:subClassOf  owl:Thing .
+
+db:BCRC  rdfs:subClassOf  owl:Thing .
+
+db:Gene3D  rdfs:subClassOf  owl:Thing .
+
+:EVocCellTypeCv  rdfs:subClassOf  owl:Thing , :Term .
+
+db:NextBio  rdfs:subClassOf  owl:Thing .
+
+source:SRMAtlas  rdfs:subClassOf  owl:Thing .
+
+:Variant  rdfs:subClassOf  :PositionalAnnotation .
+
+source:NextProt  rdfs:subClassOf  owl:Thing .
+
+:Predicted  rdfs:subClassOf  owl:Thing .
+
+db:neXtProtSubmission
+        rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_kidney
+        rdfs:subClassOf  owl:Thing .
+
+:SPECIFIC  rdfs:subClassOf  owl:Thing .
+
+cv:ECO_0000220  rdfs:subClassOf  :Microarray .
+
+db:REBASE  rdfs:subClassOf  owl:Thing .
+
+db:MoonProt  rdfs:subClassOf  owl:Thing .
+
+db:GeneRif  rdfs:subClassOf  owl:Thing .
+
+:NextprotAnatomyCv  rdfs:subClassOf  owl:Thing , :Term .
+
+db:EcoGene  rdfs:subClassOf  owl:Thing .
+
+db:eVOC  rdfs:subClassOf  owl:Thing .
+
+db:WormBase  rdfs:subClassOf  owl:Thing .
+
+:GlycosylationSite  rdfs:subClassOf  :Ptm , :PositionalAnnotation .
+
+db:dbMHC  rdfs:subClassOf  owl:Thing .
+
+db:GeneReviews  rdfs:subClassOf  owl:Thing .
+
+source:Uniprot  rdfs:subClassOf  owl:Thing .
+
+:ND     rdfs:subClassOf  owl:Thing .
+
+db:Dharmacon  rdfs:subClassOf  owl:Thing .
+
+source:ParkinsonsUK-UCL
+        rdfs:subClassOf  owl:Thing .
+
+:NonConsecutiveResidue
+        rdfs:subClassOf  :PositionalAnnotation .
+
+:InteractionInfo  rdfs:subClassOf  :Interaction , :GeneralAnnotation .
+
+db:eggNOG  rdfs:subClassOf  owl:Thing .
+
+:Low    rdfs:subClassOf  :Positive .
+
+source:PeptideAtlas_human_others
+        rdfs:subClassOf  owl:Thing .
+
+source:Human_protein_atlas
+        rdfs:subClassOf  owl:Thing .
+
+:GoCv   rdfs:subClassOf  owl:Thing , :Term .
+
+db:PROSITE-ProRule  rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_female_reproductive_system
+        rdfs:subClassOf  owl:Thing .
+
+:ISM    rdfs:subClassOf  owl:Thing .
+
+db:UKSCB  rdfs:subClassOf  owl:Thing .
+
+db:SOURCE  rdfs:subClassOf  owl:Thing .
+
+source:eVOC  rdfs:subClassOf  owl:Thing .
+
+:Keyword  rdfs:subClassOf  :GeneralAnnotation .
+
+source:GO  rdfs:subClassOf  owl:Thing .
+
+db:GeneCards  rdfs:subClassOf  owl:Thing .
+
+db:MobiDB  rdfs:subClassOf  owl:Thing .
+
+db:EFO  rdfs:subClassOf  owl:Thing .
+
+:ProteinInteraction  rdfs:subClassOf  owl:Thing .
+
+db:RCSB-PDB  rdfs:subClassOf  owl:Thing .
+
+source:PeptideAtlas_human_heart
+        rdfs:subClassOf  owl:Thing .
+
+:Cofactor  rdfs:subClassOf  :Interaction , :Function , :GeneralAnnotation .
+
+db:GO   rdfs:subClassOf  owl:Thing .
+
+source:PMID_19608861  rdfs:subClassOf  owl:Thing .
+
+cv:ECO_0000045  rdfs:subClassOf  :IHC .
+
+:Version  rdfs:subClassOf  owl:Thing .
+
+:Identifier  rdfs:subClassOf  owl:Thing .
+
+db:MeSH  rdfs:subClassOf  owl:Thing .
+
+:EVocPathologyCv  rdfs:subClassOf  owl:Thing , :Term .
+
+:NAS    rdfs:subClassOf  owl:Thing .
+
+db:FlyBase  rdfs:subClassOf  owl:Thing .
+
+db:ECO  rdfs:subClassOf  owl:Thing .
+
+:OmimCv  rdfs:subClassOf  owl:Thing , :Term .
+
+:Site   rdfs:subClassOf  :PositionalAnnotation .
+
+source:PeptideAtlas_human_breast
+        rdfs:subClassOf  owl:Thing .
+
+source:PhosphoSite  rdfs:subClassOf  owl:Thing .
+
+:DevelopmentalStageInfo
+        rdfs:subClassOf  :Expression , :GeneralAnnotation .
+
+:UniprotSubcellularOrientationCv
+        rdfs:subClassOf  owl:Thing , :Term .
+
+db:SubtiList  rdfs:subClassOf  owl:Thing .
+
+:Database  rdfs:subClassOf  owl:Thing .
+
+:SecondaryStructure  rdfs:subClassOf  :PositionalAnnotation .
+
+db:HSSP  rdfs:subClassOf  owl:Thing .

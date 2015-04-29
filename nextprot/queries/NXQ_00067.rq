@@ -1,0 +1,17 @@
+#id:NXQ_00067
+#title:Proteins with alternative acetylation or Ubl conjugation (SUMO or Ubiquitin) at the same positions
+#tags:PTM,evidence
+#acs:O00154, P14618, Q04206, ...
+#count:740
+#time: 0.4
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :crossLink /:start ?ptmpos.
+  ?iso :modifiedResidue ?ptm.
+  ?ptm :start ?ptmpos.
+  ?ptm rdfs:comment ?comment.
+  # We use this filter to select acetylations
+  filter regex(?comment, "acetyl","i")
+}
+

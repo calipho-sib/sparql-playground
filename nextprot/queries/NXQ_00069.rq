@@ -1,0 +1,16 @@
+#id:NXQ_00069
+#title:Proteins phosphorylated by SRC
+#tags:PTM,phosphorylation
+#acs:O43184, O15350, Q9NV92, ...
+#count:53
+#time: 0.25
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :modifiedResidue ?ptm.
+  ?ptm :term ?ptmtype.
+  ?ptm rdfs:comment ?comment.
+  filter (?ptmtype in (cv:PTM-0253, cv:PTM-0254, cv:PTM-0255))  
+  filter regex(?comment, "SRC","i")
+ }
+

@@ -1,0 +1,22 @@
+#id:NXQ_00059
+#title:Proteins that are glycosylated and phosphorylated on an extracellular topological domain
+#tags:domain,region,topology,PTM,glycosylation,phosphorylation
+#acs:P01130,Q9UMD9,P06213
+#count:79
+#time: 5.4
+
+select distinct ?entry where {
+  ?entry :isoform ?iso.
+  ?iso :topologicalDomain ?topodom.
+  ?topodom :term cv:CVTO_0002.
+  ?topodom :start ?topostart ; :end ?topoend.
+  ?iso :positionalAnnotation ?annot,?annot2.
+  ?annot a :ModifiedResidue.
+  ?annot :term ?ptmtype.
+  filter (?ptmtype in (cv:PTM-0253, cv:PTM-0254, cv:PTM-0255))  
+  ?annot2 a :GlycosylationSite.
+  ?annot :start ?ptmpos.
+  ?annot2 :start ?glypos.
+ filter ((?ptmpos >= ?topostart) && (?ptmpos <= ?topoend))
+ filter ((?glypos >= ?topostart) && (?glypos <= ?topoend))
+}

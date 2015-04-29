@@ -1,0 +1,7 @@
+#title:How many instances of a certain class are declared?
+#comment:You could say Animal is is a member of the class owl:Class or you could say Animal is a member of the class rdfs:Class. 
+#comment:The former is more common.
+#tags:rdf class
+    
+SELECT (COUNT(?s) AS ?totalNumberOfInstances)
+WHERE { ?s ?p tto:Animal }

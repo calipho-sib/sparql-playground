@@ -1,0 +1,12 @@
+#id:NXQ_00136
+#title:Proteins whose sequence was updated in 2014
+#tags:sequence,entry history
+#acs:P0C221,Q15554,P0DMP2
+#count:124
+#time:0.27
+
+select distinct ?entry where {
+  ?entry a :Entry.
+  ?entry :history / :lastSequenceUpdate ?sequpd.
+  filter(contains(?sequpd,"2014"))
+}

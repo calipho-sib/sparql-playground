@@ -1,0 +1,11 @@
+#id:NXQ_00045
+#title:Proteins with an active site that is a proton acceptor
+#tags:enzyme,active site
+#acs:Q9Y6I4, A2RU49, O15111, ...
+#count:820
+#time:0.07
+
+select distinct ?entry ?comment where {
+  ?entry :isoform/ :activeSite /rdfs:comment ?comment.
+  filter (contains (?comment,'Proton acceptor'))
+}
