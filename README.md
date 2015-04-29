@@ -2,11 +2,8 @@
 
 SPARQL playground has been developed at the <a target="_blank" href="https://www.isb-sib.ch/">Swiss Institute of Bioinformatics</a> for learning SPARQL.
 
-It was forked from the <a target="_blank" href="http://snorql.nextprot.org/">neXtProt snorql interface.</a>
-
-
 ##Technology
-* Sparql playground runs on Java 1.7 or higher
+* Sparql playground requires Java 1.7 or higher
 * The SPARQL engine in use is Sesame 2.7.9
 * The java web services are implemented using Spring Boot 1.2.3
 * The web interface is build in angularJS 1.3 and bootstrap 3
@@ -42,6 +39,8 @@ Your directory should follow this convention:
 #License
 
 The project is opensource and free under the GNU GPL v2 License. The sources are available on GitHub.
+This project was forked from the <a target="_blank" href="http://snorql.nextprot.org/">neXtProt snorql interface.</a>
+
 
 #Contact
 

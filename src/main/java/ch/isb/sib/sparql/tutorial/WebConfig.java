@@ -21,7 +21,6 @@ public class WebConfig extends WebMvcConfigurationSupport {
         registry.addViewController("/help/doc/*").setViewName("forward:/app.html");
         registry.addViewController("/faq").setViewName("forward:/app.html");
         registry.addViewController("/data").setViewName("forward:/app.html");
-        registry.addViewController("/about").setViewName("forward:/app.html");
 
     }
 

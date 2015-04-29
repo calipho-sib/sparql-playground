@@ -70,7 +70,7 @@ public class SparqlService implements InitializingBean {
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		this.prefixesString = IOUtils.readFile(Application.FOLDER + "/prefixes.ttl", Charset.defaultCharset());
+		this.prefixesString = IOUtils.readFile(Application.FOLDER + "/prefixes.ttl", "");
 
 		String prefixes[] = this.prefixesString.split("\n");
 		Map<String, String> m = new TreeMap<String, String>();

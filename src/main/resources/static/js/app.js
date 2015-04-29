@@ -24,7 +24,7 @@ function appRun(gitHubContent, config) {
   gitHubContent.initialize({
         // baseUrl:"http://uat-web2:8080",
         helpPath:'rdfhelp.json',
-        helpTitle:'Generalities',
+        helpTitle:'Documentation',
         root:'help', // specify the root of RDF entity routes
         githubRepo: '/',
         githubApi:window.location.origin,
@@ -193,8 +193,6 @@ function appConfig($routeProvider, $locationProvider, $httpProvider) {
         .when('/data',{title: 'TTL Data', templateUrl: '/partials/data.html'})
         // COPYRIGHT
         .when('/faq',{title: 'Explore data', templateUrl: '/partials/faq.html'})
-        // COPYRIGHT
-        .when('/about',{title: 'About Sparql Playgroung', templateUrl: '/partials/about.html'})
         // Pages (in nextprot-docs/pages): about, copyright...
         .when('/:article', {title: 'page', templateUrl: '/partials/page.html'})
         //// Help pages

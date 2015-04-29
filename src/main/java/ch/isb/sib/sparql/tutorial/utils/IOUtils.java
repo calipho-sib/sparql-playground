@@ -21,13 +21,17 @@ import ch.isb.sib.sparql.tutorial.exception.SparqlTutorialException;
  */
 public class IOUtils {
 
-	public static String readFile(String path, Charset encoding) {
+	public static String readFile(String path, String orValue) {
 		try {
 			byte[] encoded = Files.readAllBytes(Paths.get(path));
-			return new String(encoded, encoding);
+			return new String(encoded, Charset.forName("UTF-8"));
 		} catch (IOException e) {
-			e.printStackTrace();
-			throw new SparqlTutorialException(e);
+			if(orValue != null){
+				return orValue;
+			}else {
+				e.printStackTrace();
+				throw new SparqlTutorialException(e);
+			}
 		}
 	}
 

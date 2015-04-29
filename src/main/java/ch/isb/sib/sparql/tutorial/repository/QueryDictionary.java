@@ -51,7 +51,7 @@ public class QueryDictionary {
 		resourcesMap = new TreeMap<String, String>();
 		for (final File fileEntry : new File(folder).listFiles()) {
 			if (!fileEntry.isDirectory() && fileEntry.getName().endsWith(".rq")) {
-				resourcesMap.put(fileEntry.getName().replace(".rq", ""), IOUtils.readFile(fileEntry.getAbsolutePath(), Charset.defaultCharset()));
+				resourcesMap.put(fileEntry.getName().replace(".rq", ""), IOUtils.readFile(fileEntry.getAbsolutePath(), null));
 			}
 		}
 	}

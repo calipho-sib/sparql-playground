@@ -40,7 +40,7 @@ public class QueriesController {
 
 	@RequestMapping(value = "/rdfhelp", produces = MediaType.APPLICATION_JSON_VALUE)
 	public String rdfhelp() throws IOException {
-		return IOUtils.readFile(Application.FOLDER + "/rdfhelp.json", Charset.defaultCharset());
+		return IOUtils.readFile(Application.FOLDER + "/rdfhelp.json", "");
 	}
 
 }
