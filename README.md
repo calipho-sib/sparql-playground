@@ -19,27 +19,30 @@ java -jar sparql-playgroud.war
 
 There are some datasets predefined:
 
-* java -jar sparql-playgroud.war Uses default dataset: cats and dogs
-* java -jar sparql-playgroud.war nextprot Uses a sample of neXtProt dataset
-* java -jar sparql-playgroud.war uniprot Uses a sample of UniProt dataset
+* Uses default dataset (cats and dogs): `java -jar sparql-playgroud.war`
+
+* Uses a sample of neXtProt dataset: `java -jar sparql-playgroud.war nextprot`
+
+* Uses a sample of UniProt dataset `java -jar sparql-playgroud.war uniprot `
 
 
 ##Create your own RDF dataset
 
-You can create your own dataset by giving a directory as argument and calling: java -jar sparql-playgroud.war "your directory name"
+* You can create your own dataset by giving a directory as argument: `java -jar sparql-playgroud.war your-directory-name`
 
 Your directory should follow this convention:
 
-* prefixes.ttl: a file containing the default prefixes
 * ttl-data: a folder containing turtle file(s)
-* queries: a folder containing the queries
-* pages: pages with markdown files
-
+* queries: a folder containing the queries showed in the first page
+* prefixes.ttl: a file containing the default prefixes (optional)
+* pages: pages with markdown files for the Documentation
+* config.properties - optionally you can include this property file with: repository.type=native to create a native repository (instead of memory)
 
 #License
 
-The project is opensource and free under the GNU GPL v2 License. The sources are available on GitHub.
-This project was forked from the <a target="_blank" href="http://snorql.nextprot.org/">neXtProt snorql interface.</a>
+The project is opensource and free under the GNU GPL v2 License. The sources are available on <a target="_blank" href="http://snorql.nextprot.org/">GitHub</a>.
+
+This project was forked from the <a target="_blank" href="https://github.com/calipho-sib/sparql-playground">neXtProt snorql interface.</a>
 
 
 #Contact
