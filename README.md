@@ -2,18 +2,23 @@
 
 SPARQL playground has been developed at the <a target="_blank" href="https://www.isb-sib.ch/">Swiss Institute of Bioinformatics</a> for learning SPARQL.
 
+##Installation
+* Download the [latest release](https://github.com/calipho-sib/sparql-playground/tarball/master)
+* Run it locally on your machine: 			
+```
+java -jar sparql-playgroud.war
+```
+* Open your browser on port 8080
+```
+http://localhost:8080
+```
+
+
 ##Technology
 * Sparql playground requires Java 1.7 or higher
 * The SPARQL engine in use is Sesame 2.7.9
 * The java web services are implemented using Spring Boot 1.2.3
 * The web interface is build in angularJS 1.3 and bootstrap 3
-
-##Installation
-* Download the latest release:
-* Run it locally on your machine: 			
-```
-java -jar sparql-playgroud.war
-```
 
 ##Predefined RDF datasets
 
