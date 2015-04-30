@@ -5,7 +5,7 @@ SPARQL playground has been developed at the <a target="_blank" href="https://www
 ##Installation
 * Download the [latest release](https://github.com/calipho-sib/sparql-playground/tarball/master)
 * Unzip and enter the folder, then run: `java -jar sparql-playgroud.war` (requires Java 1.7 or higher)
-* Once the application started you should open your browser on: `http://localhost:8080`
+* Once the application started you should open your browser on: <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>
 
 ##Technology
 * Sparql playground requires Java 1.7 or higher
