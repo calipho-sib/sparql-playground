@@ -22,35 +22,35 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 tto:Creature
-	rdf:type owl:Class;
+	rdf:type rdfs:Class;
 	rdfs:label "creature"^^xsd:string;
 	rdfs:isDefinedBy tto: . 
 
 dbo:Person
-	owl:subClassOf tto:Creature .
+	rdfs:subClassOf tto:Creature .
 
 tto:Animal
-	rdf:type owl:Class;
+	rdf:type rdfs:Class;
 	rdfs:label "animal"^^xsd:string;
-	owl:subClassOf tto:Creature ;
+	rdfs:subClassOf tto:Creature ;
 	rdfs:isDefinedBy tto: . 
 
 tto:Cat
-	rdf:type owl:Class;
+	rdf:type rdfs:Class;
 	rdfs:label "cat"^^xsd:string;
-	owl:subClassOf tto:Animal ;
+	rdfs:subClassOf tto:Animal ;
 	rdfs:isDefinedBy tto: . 
 
 tto:Dog
-	rdf:type owl:Class;
+	rdf:type rdfs:Class;
 	rdfs:label "dog"^^xsd:string;
-	owl:subClassOf tto:Animal ;
+	rdfs:subClassOf tto:Animal ;
 	rdfs:isDefinedBy tto: . 
 
 tto:Monkey
-	rdf:type owl:Class;
+	rdf:type rdfs:Class;
 	rdfs:label "monkey"^^xsd:string;
-	owl:subClassOf tto:Animal ;
+	rdfs:subClassOf tto:Animal ;
 	rdfs:isDefinedBy tto: . 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - 
