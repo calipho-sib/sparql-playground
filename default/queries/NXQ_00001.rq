@@ -1,9 +1,8 @@
-#id:NXQ_00001
-#img:NXQ_00001
 #title:Select things that are cats
 #comment:Selects subjects connected to the object tto:Cat via the predicate rdf:type
 #comment:?thing is the only variable
 #tags:1 graph pattern,1 variable
+#img:NXQ_00001
     
 select ?thing where {
   ?thing rdf:type tto:Cat .

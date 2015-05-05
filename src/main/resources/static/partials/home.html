@@ -69,12 +69,15 @@
 
             <div class="example-list">
             <div ng-repeat="example in snorql.examples | containsTag:filterTag | filter:filter">
-              <a href="#" ng-click="selectExample(example.index); example.show=!example.show;" ng-class="{'active':qSelected===example.index}"  class="list-group-item query-{{example.index}}" >
+              <a href="#" ng-click="selectExample(example.index);" ng-class="{'active':qSelected===example.index}"  class="list-group-item query-{{example.index}}" >
+                <button ng-if="example.img" ng-click="example.show=!example.show" type="button" class="btn btn-info btn-xs pull-right">{{example.show ? "hide" : "show"}} diagram</button>
+                <button ng-click="example.show=!example.show" type="button" class="btn btn-primary btn-xs pull-right">show answer</button>
+
                 <h5 class="list-group-item-heading">{{example.userQueryId}}) {{example.title}}</h5>
                 <p class="list-group-item-text"><span  class="label"  >
                   <span ng-repeat="tag in example.tags | orderBy" class="label label-default label-as-badge">{{tag}}</span>
                 </p>
-               <img style="margin:10px" ng-if="example.show && example.img" ng-src="queries/{{example.img}}">
+               <img style="margin:10px; width:90%" ng-if="example.show && example.img" ng-src="queries/{{example.img}}">
               </a>
             </div>
             
