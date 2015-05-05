@@ -7,7 +7,7 @@
 #comment:ttr:John               "Buddy"
 #comment:ttr:William            "Tom Luna"
 #comment:dbpedia:Harrison_Ford  "Snuff"
-#tags:2 graph patterns,2 variables,exercice level 2,GROUP BY,aggregate function GROUP_CONCAT()
+#tags:2 graph patterns,2 variables,exercise level 2,GROUP BY,aggregate function GROUP_CONCAT()
 
 SELECT ... {
 	...

@@ -1,9 +1,9 @@
 #id:NXQ_00006
 #title:Select things that have a weight
-#comment:Selects subjects described with the tto:weight predicate. ?thing, ?name are the variables
-#comment:?thing, ?name are the variables
+#comment:Selects subjects described with the tto:weight predicate. 
+#comment:?thing, ?weight are the variables
 #tags:1 graph pattern,2 variables
     
-select ?thing ?name where {
+select ?thing ?weight where {
   ?thing tto:weight ?weight . 
 }
