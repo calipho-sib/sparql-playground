@@ -1,5 +1,5 @@
 #id:NXQ_00044
-#title:Get list of class and instance pairs (subjects and objectes connected with rdf:type) in the dataset - only 4 first solutions (?class ?instance pairs) of the full set ordered by ?class and ?instance
+#title:Get a subset of the class and instance pairs (subjects and objects connected with rdf:type) in the dataset - only the 5 solutions following the 3 first ones (?class ?instance pairs) of the full set ordered by ?class and ?instance 
 #comment:The OFFSET modifier causes the 3 first solutions not to be returned
 #comment:The LIMIT modifier sets the upper bound (5here 5) to the number of solutions returned. 
 #comment:The first solution returned is the one at rank 4 of the full set, just after the offset value 

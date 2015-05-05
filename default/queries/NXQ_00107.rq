@@ -7,7 +7,7 @@
 #comment:ttr:John       "1982"
 #comment:ttr:William    "1988"
 #comment:ttr:Eve        "1986"
-#tags:2 graph patterns,2 variables,exercice level 2,BIND, date function YEAR()
+#tags:2 graph patterns,2 variables,exercise level 2,BIND, date function YEAR()
 
 SELECT ... {
 	...
