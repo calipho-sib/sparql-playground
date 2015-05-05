@@ -7,6 +7,8 @@ SPARQL playground is beeing developed at the <a target="_blank" href="https://ww
 * Unzip and enter the folder, then run: `java -jar sparql-playgroud.war` (requires Java 1.7 or higher)
 * Once the application started you should open your browser on: <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>
 
+<a href="sparql-playground.png" target="_blank"><img width="90%" src="sparql-playground.png"/></a>
+
 ##Technology in use
 * The SPARQL engine is Sesame 2.7.9
 * The backend uses Spring Boot 1.2.3
