@@ -1,0 +1,11 @@
+#title:Gets initial and name length
+#comment:Use of functions strlen and substr
+#img:family.png
+#tags:functions, strlen, substr, bind
+
+select * where {
+  ?thing dbp:name ?name .
+  BIND ( ( strlen(?name))  as ?nameLength)
+  BIND ( ( substr(?name, 1, 1))  as ?namePrefix)
+  BIND ( ( substr(?name, ?nameLength-1, 2))  as ?namePostfix)
+}

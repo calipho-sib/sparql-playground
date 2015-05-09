@@ -1,0 +1,8 @@
+#title:EXERCISE Who is the grandson of John? using shortcut / and childOf only
+#comment:Traverse the graph in one line
+#tags:exercise
+#img:family.png
+
+select ?grandson where {
+  ...
+}

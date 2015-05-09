@@ -1,0 +1,9 @@
+#title:What type of sexs exist?
+#comment:selects all subjects whose type is dbo:Person and that are females
+#img:family.png
+#tags:distinct
+
+select distinct ?sex where {
+    ?person rdf:type dbo:Person .
+    ?person tto:sex ?sex
+}

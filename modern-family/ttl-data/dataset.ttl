@@ -1,0 +1,71 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbp: <http://dbpedia.org/property/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tto: <http://example.org/tuto/ontology#> .
+@prefix ttr: <http://example.org/tuto/resource#> .
+
+tto:marriedWith a rdf:Property ;
+    rdfs:label "married"^^xsd:string ;
+    rdfs:domain dbo:Person ;
+    rdfs:range dbo:Person ;
+    rdfs:isDefinedBy <http://example.org/tuto/ontology#> .
+
+tto:childOf a rdf:Property ;
+    rdfs:label "child"^^xsd:string ;
+    rdfs:domain dbo:Person ;
+    rdfs:range dbo:Person ;
+    rdfs:isDefinedBy <http://example.org/tuto/ontology#> .
+
+tto:parentOf a rdf:Property ;
+    rdfs:label "child"^^xsd:string ;
+    rdfs:domain dbo:Person ;
+    rdfs:range dbo:Person ;
+    rdfs:isDefinedBy <http://example.org/tuto/ontology#> .
+
+ttr:John a dbo:Person ;
+    dbp:name "John"^^xsd:string ;
+	dbp:birthDate "1921-11-03"^^xsd:date ;
+    tto:sex "male"^^xsd:string ;
+    tto:eyesColor "brown"^^xsd:string;
+    tto:marriedWith ttr:Kat;
+    tto:parentOf ttr:Jack.
+
+
+ttr:Kat a dbo:Person ;
+    dbp:name "Kat"^^xsd:string ;
+	dbp:birthDate "1923-08-22"^^xsd:date ;
+    tto:sex "female"^^xsd:string ;
+    tto:eyesColor "blue"^^xsd:string;
+    tto:marriedWith ttr:John;
+    tto:parentOf ttr:Jack.
+
+ttr:Jack a dbo:Person ;
+    dbp:name "Jack"^^xsd:string ;
+	dbp:birthDate "1963-06-14"^^xsd:date ;
+    tto:sex "male"^^xsd:string ;
+    tto:eyesColor "blue"^^xsd:string;
+    tto:marriedWith ttr:Kim;
+    tto:childOf ttr:John;
+    tto:childOf ttr:Kat;
+    tto:parentOf ttr:Jim.
+
+
+ttr:Kim a dbo:Person ;
+    dbp:name "Kim"^^xsd:string ;
+	dbp:birthDate "1968-08-23"^^xsd:date ;
+    tto:sex "female"^^xsd:string ;
+    tto:eyesColor "blue"^^xsd:string;
+    tto:parentOf ttr:Jim.
+
+
+ttr:Jim a dbo:Person ;
+    dbp:name "Jim"^^xsd:string ;
+	dbp:birthDate "1999-07-18"^^xsd:date ;
+    tto:sex "male"^^xsd:string ;
+    tto:eyesColor "blue"^^xsd:string;
+    tto:marriedWith ttr:Jack;
+    tto:childOf ttr:Jim;
+    tto:childOf ttr:Jack.

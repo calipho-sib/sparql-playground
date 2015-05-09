@@ -1,0 +1,9 @@
+#title:Gets all persons starting with J and finishing with m
+#comment:
+#img:family.png
+#tags:functions,regex
+    
+select * where {
+  ?people dbp:name ?name .
+  FILTER ( REGEX(?name, "^[J].*[m]$" ) )
+}

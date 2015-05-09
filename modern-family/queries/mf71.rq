@@ -1,0 +1,8 @@
+#title:Some exercise
+#comment:
+#img:family.png
+#tags:functions,regex
+    
+select * where {
+    ....
+}

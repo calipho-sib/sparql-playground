@@ -9,11 +9,7 @@ SPARQL playground is beeing developed at the <a target="_blank" href="https://ww
 
 <a href="sparql-playground.png" target="_blank"><img width="90%" src="sparql-playground.png"/></a>
 
-##Technology in use
-* The SPARQL engine is Sesame 2.7.9
-* The backend uses Spring Boot 1.2.3
-* The frontend is build with angularJS 1.3 and bootstrap 3
-* Requires Java 1.7 or higher
+* Select the examples and click on the GO button
 
 ##Predefined RDF datasets
 
@@ -37,6 +33,12 @@ Your directory should follow this convention:
 * prefixes.ttl: a file containing the default prefixes (optional)
 * pages: pages with markdown files for the Documentation
 * config.properties - optionally you can include this property file with: repository.type=native to create a native repository (instead of memory)
+
+##Technology in use
+* The SPARQL engine is Sesame 2.7.9
+* The backend uses Spring Boot 1.2.3
+* The frontend is build with angularJS 1.3 and bootstrap 3
+* Requires Java 1.7 or higher
 
 #License
 
