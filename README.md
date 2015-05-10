@@ -1,6 +1,6 @@
 # Sparql Playground
 
-SPARQL playground is beeing developed at the <a target="_blank" href="https://www.isb-sib.ch/">Swiss Institute of Bioinformatics</a> for learning SPARQL.  
+SPARQL playground is a standalone multi-platform web application used to learn SPARQL. It is beeing developed at the <a target="_blank" href="https://www.isb-sib.ch/">Swiss Institute of Bioinformatics</a>.  
 
 ##Installation
 * Download the [latest release](https://github.com/calipho-sib/sparql-playground/tarball/master)
@@ -16,13 +16,13 @@ SPARQL playground is beeing developed at the <a target="_blank" href="https://ww
 There are some datasets predefined:
 
 * Uses default dataset (cats and dogs): `java -jar sparql-playgroud.war`
-
+* 
 * Uses a sample of neXtProt dataset: `java -jar sparql-playgroud.war nextprot`
 
 * Uses a sample of UniProt dataset `java -jar sparql-playgroud.war uniprot `
 
 
-##Create your own RDF dataset
+##Create your own RDF dataset (and collaborate)
 
 * You can create your own dataset by giving a directory as argument: `java -jar sparql-playgroud.war your-directory-name`
 
@@ -33,6 +33,7 @@ Your directory should follow this convention:
 * prefixes.ttl: a file containing the default prefixes (optional)
 * pages: pages with markdown files for the Documentation
 * config.properties - optionally you can include this property file with: repository.type=native to create a native repository (instead of memory)
+* Optionally you can collaborate with your dataset, simply by doing a pull request. 
 
 ##Technology in use
 * The SPARQL engine is Sesame 2.7.9
