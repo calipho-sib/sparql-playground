@@ -45,7 +45,7 @@ textarea.form-control{
 }
 
 .pink{
-  color:#FF00DD;
+  color:#00C5FF;
 }
 
 .filter-search{
@@ -55,7 +55,7 @@ textarea.form-control{
 }
 
 .label-snorql{
-  background-color: #ccf;
+  background-color: #ccecff;
   color: #666;
 }
 
@@ -150,7 +150,7 @@ textarea.form-control{
 
 
 .navbar-snorql {
-    background-color: #ccccff;
+    background-color: #ccecff;
     border-color: #9f9fff;
 }
 
@@ -171,7 +171,7 @@ textarea.form-control{
 .navbar-snorql .navbar-nav > li > a:hover,
 .navbar-snorql .navbar-nav > li > a:focus {
     color: #fff;
-    background-color: #b3b3ff;
+    background-color: #7B92EF;
 }
 
 .navbar-snorql .navbar-nav > .active > a,
@@ -282,10 +282,10 @@ fieldset[disabled] .navbar-snorql .btn-link:focus {
 .directory small { font-size: 80%; color: #666; }
 
 .snorql h1, .snorql h2 { color: #400; }
-.snorql #header, .snorql .section { background: #ccf; }
-.snorql .queryresults th { background: #88c; }
-.snorql .queryresults .odd td { background: #f2f2ff;max-width: 30%; }
-.snorql .queryresults .even td { background: #ddf;max-width: 30%; }
+.snorql #header, .snorql .section { background: #ccecff; }
+.snorql .queryresults th { background: #4A87C3; }
+.snorql .queryresults .odd td { background: #F2FAFF;max-width: 30%; }
+.snorql .queryresults .even td { background: #DDF3FF;max-width: 30%; }
 
 .browser h1, .browser h2 { color: #810; }
 .browser #header, .browser .section { background: #beb; }
@@ -306,7 +306,7 @@ fieldset[disabled] .navbar-snorql .btn-link:focus {
 }
 
 .snorql{
-  background-color: #ccf;
+  background-color: #ccecff;
   padding:4px;
 }
 
@@ -316,7 +316,7 @@ fieldset[disabled] .navbar-snorql .btn-link:focus {
 
 .examples .label-as-badge {
 	margin-right: 2px;
-	background: #ccf;
+	background: #ccecff;
 	color: #428bca;
 	font-size: 10px;
 }
