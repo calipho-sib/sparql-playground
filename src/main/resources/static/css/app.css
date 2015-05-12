@@ -9,6 +9,11 @@ body {
 body {
   padding-top: 70px;
 }
+
+.gh-page-improve {
+	display:none;
+}
+
 .prefixes {
   font-family: monospace;
   font-size: 80%;
