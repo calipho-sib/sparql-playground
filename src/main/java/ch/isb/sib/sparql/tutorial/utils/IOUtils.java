@@ -35,11 +35,11 @@ public class IOUtils {
 		}
 	}
 
-	public static byte[] readImage(String path) {
+	public static byte[] readImage(File f) {
 
 		try {
 			// Retrieve image from the classpath.
-			InputStream is = new FileInputStream(new File(path));
+			InputStream is = new FileInputStream(f);
 
 			// Prepare buffered image.
 			BufferedImage img = ImageIO.read(is);
@@ -52,7 +52,7 @@ public class IOUtils {
 
 			return bao.toByteArray();
 		} catch (IOException e) {
-			throw new RuntimeException(e);
+			throw new SparqlTutorialException(e);
 		}
 	}
 

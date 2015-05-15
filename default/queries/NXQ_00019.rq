@@ -1,9 +1,0 @@
-#id:NXQ_00019
-#title:William's and Sylvia's pets 
-#comment:Selects ?owner and ?pet connected with a tto:pet predicate but only for the ?owner values provided in the VALUES clause
-#tags:1 graph pattern,2 variables,VALUES
-
-select ?owner ?pet where {
-	VALUES (?owner) { (ttr:William) (ttr:John) }
-	?owner tto:pet ?pet .
-}

@@ -1,7 +1,6 @@
 package ch.isb.sib.sparql.tutorial.repository;
 
 import java.io.File;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;

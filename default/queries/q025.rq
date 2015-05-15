@@ -1,0 +1,13 @@
+#id:NXQ_00025
+#title:For each pet species get the number of pets and their average weight
+#comment:the graph pattern matching process generates the possible solutions as a list of ?species, ?pet and ?weight values tuples
+#comment:then for each ?species value (grouping criterion), the ?pet values are counted and the average ?weight is calculated
+#comment:with the aggregate functions COUNT() and AVG()
+#tags:3 graph patterns,3 variables,GROUP BY,aggregate function COUNT(),aggregate function AVG()
+
+select ?species (COUNT(?pet) as ?petCount) (AVG(?weight) as ?avgWeight) where {
+  ?species owl:subClassOf tto:Animal .
+  ?pet rdf:type ?species .
+  ?pet tto:weight ?weight .
+}
+GROUP BY ?species

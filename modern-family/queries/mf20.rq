@@ -1,0 +1,8 @@
+#title:Who is the son of John?
+#comment:Traverse the graph with the use of parentOf
+#tags:2 graph pattern,1 variable
+#img:family.png
+    
+select ?son where {
+  ttr:John tto:parentOf ?son .
+}

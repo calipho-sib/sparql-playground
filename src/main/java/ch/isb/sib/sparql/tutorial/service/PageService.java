@@ -2,7 +2,6 @@ package ch.isb.sib.sparql.tutorial.service;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -56,7 +55,13 @@ public class PageService {
 	}
 
 	public byte[] getAsset(String asset) {
-		return IOUtils.readImage(Application.FOLDER + "/pages/assets/" + asset + ".png");
+	
+		File f = null;
+		f = new File(Application.FOLDER + "/pages/assets/" + asset + ".png");
+		if(!f.exists()){
+			f = new File("assets/" + asset + ".png");
+		}
+		return IOUtils.readImage(f);
 	}
 
 }

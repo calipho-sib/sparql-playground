@@ -1,0 +1,8 @@
+#id:NXQ_00016
+#title:William's pets
+#comment:Selects objects linked to ttr:William with a tto:pet predicate. ?pet is the variable
+#tags:1 graph pattern,1 variable
+    
+select ?pet where {
+	ttr:William tto:pet ?pet .
+}

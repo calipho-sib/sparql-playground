@@ -24,12 +24,12 @@
                   <select class="form-control" ng-disabled="waiting||!snorql.query" ng-model="output" ng-options="output for output in outputs"></select>
                   <button type="button" class="btn btn-primary" ng-disabled="waiting||!snorql.query" ng-click="executeQuery(snorql.query,output)">Go</button>
                   <button type="button" class="btn btn-default"  ng-click="snorql.reset()">Reset</button>
-                  <div class="input-group pull-right">
+                  <!--  <div class="input-group pull-right">
                     <input type="text"  class="form-control" ng-model="term" placeholder="eg. peroxisome, liver">
                     <span class="input-group-btn">
                       <button type="button" class="btn btn-default "  ng-click="searchTerm(term)" ng-disabled="!term||waiting"><i class="glyphicon glyphicon-search"></i></button>
                     </span>
-                  </div>
+                  </div> -->
               </div>
             </form>
           </div>
@@ -71,7 +71,6 @@
             <div ng-repeat="example in snorql.examples | containsTag:filterTag | filter:filter">
               <a href="#" ng-click="selectExample(example.index);" ng-class="{'active':qSelected===example.index}"  class="list-group-item query-{{example.index}}" >
                 <button ng-if="example.img" ng-click="example.show=!example.show" type="button" class="btn btn-info btn-xs pull-right">{{example.show ? "hide" : "show"}} diagram</button>
-                <button ng-click="example.show=!example.show" type="button" class="btn btn-primary btn-xs pull-right">show answer</button>
 
                 <h5 class="list-group-item-heading">{{example.userQueryId}}) {{example.title}}</h5>
                 <p class="list-group-item-text"><span  class="label"  >

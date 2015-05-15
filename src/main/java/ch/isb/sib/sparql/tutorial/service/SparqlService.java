@@ -2,7 +2,6 @@ package ch.isb.sib.sparql.tutorial.service;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.nio.charset.Charset;
 import java.util.Map;
 import java.util.TreeMap;
 

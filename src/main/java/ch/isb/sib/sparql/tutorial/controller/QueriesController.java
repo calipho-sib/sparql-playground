@@ -1,7 +1,7 @@
 package ch.isb.sib.sparql.tutorial.controller;
 
+import java.io.File;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +35,7 @@ public class QueriesController {
 	
 	@RequestMapping(value = "/queries/{queryId}")
 	public @ResponseBody byte[] queryImage(@PathVariable("queryId") String queryId) throws IOException {
-		return IOUtils.readImage(Application.FOLDER + "/queries/" + queryId + ".png");
+		return IOUtils.readImage(new File(Application.FOLDER + "/queries/" + queryId + ".png"));
 	}
 
 	@RequestMapping(value = "/rdfhelp", produces = MediaType.APPLICATION_JSON_VALUE)

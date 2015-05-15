@@ -1,0 +1,10 @@
+#title:Get the name of all men and and the name of all women
+#comment:Use group concat and group by
+#tags:group by, group_concat
+
+select ?sex (GROUP_CONCAT(?name) as ?peopleNames) where {
+  ?people rdf:type dbo:Person .
+  ?people dbp:name ?name .
+  ?people tto:sex ?sex .
+}
+GROUP BY ?sex

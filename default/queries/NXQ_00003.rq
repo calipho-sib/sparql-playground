@@ -1,9 +1,0 @@
-#title:Select things and their name
-#comment:Selects subjects and objects connected with the predicate dbp:name,
-#comment:?thing and ?name are the variables
-#tags:1 graph pattern,2 variables
-#img:NXQ_00003
-    
-select ?thing ?name where {
-  ?thing dbp:name ?name .
-}

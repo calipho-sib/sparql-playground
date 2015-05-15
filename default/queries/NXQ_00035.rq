@@ -1,9 +1,0 @@
-#id:NXQ_00035
-#title:Get Eve's friends ' pets
-#tags:2 graph patterns,2 variables
-
-select * where {
-  ttr:Eve tto:friend ?friend .
-  ?friend tto:pet ?pet .
-}
-

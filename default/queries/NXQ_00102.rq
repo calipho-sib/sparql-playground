@@ -1,9 +1,0 @@
-#id:NXQ_00102
-#title:Select things that are dogs with their color and sex
-#comment:Create a graph pattern using the rdf:type predicate to connect any subject (i.e the variable ?thing) with the object tto:Dog. Add two graph patterns to get the subject's color and sex
-#comment:The query should return one row with 3 columns containing ttr:BuddyDog, "black", male"
-#tags:3 graph patterns,3 variables,exercise level 1
-
-SELECT ... {
-	...
-}

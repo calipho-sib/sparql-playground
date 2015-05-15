@@ -1,17 +1,21 @@
 # Sparql Playground
 
-SPARQL playground is beeing developed at the <a target="_blank" href="https://www.isb-sib.ch/">Swiss Institute of Bioinformatics</a> for learning SPARQL.  
+[![Build Status](https://travis-ci.org/calipho-sib/sparql-playground.svg?branch=master)](https://travis-ci.org/calipho-sib/sparql-playground)
+
+SPARQL playground is a standalone multi-platform web application used to learn SPARQL (implemented in Java Spring Boot and AngularJS). 
+
+It uses Sesame 2.7.9 as SPARQL Engine. 
+
+It is beeing developed at the <a target="_blank" href="https://www.isb-sib.ch/">Swiss Institute of Bioinformatics</a>.  
 
 ##Installation
 * Download the [latest release](https://github.com/calipho-sib/sparql-playground/tarball/master)
 * Unzip and enter the folder, then run: `java -jar sparql-playgroud.war` (requires Java 1.7 or higher)
 * Once the application started you should open your browser on: <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>
 
-##Technology in use
-* The SPARQL engine is Sesame 2.7.9
-* The backend uses Spring Boot 1.2.3
-* The frontend is build with angularJS 1.3 and bootstrap 3
-* Requires Java 1.7 or higher
+<a href="assets/screenshot.png" target="_blank"><img width="90%" src="assets/screenshot.png"/></a>
+
+* Select the examples and click on the GO button
 
 ##Predefined RDF datasets
 
@@ -24,7 +28,7 @@ There are some datasets predefined:
 * Uses a sample of UniProt dataset `java -jar sparql-playgroud.war uniprot `
 
 
-##Create your own RDF dataset
+##Create your own RDF dataset (and collaborate)
 
 * You can create your own dataset by giving a directory as argument: `java -jar sparql-playgroud.war your-directory-name`
 
@@ -35,6 +39,13 @@ Your directory should follow this convention:
 * prefixes.ttl: a file containing the default prefixes (optional)
 * pages: pages with markdown files for the Documentation
 * config.properties - optionally you can include this property file with: repository.type=native to create a native repository (instead of memory)
+* Optionally you can collaborate with your dataset, simply by doing a pull request. 
+
+##Technology in use
+* The SPARQL engine is Sesame 2.7.9
+* The backend uses Spring Boot 1.2.3
+* The frontend is build with angularJS 1.3 and bootstrap 3
+* Requires Java 1.7 or higher
 
 #License
 
