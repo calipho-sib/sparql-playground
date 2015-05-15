@@ -6,7 +6,7 @@
     
 SELECT distinct ?class
 WHERE {
-    ?class a owl:Class 
-    #you may need to replace owl:Class with rdfs:Class
+    ?class a rdfs:Class
+    #you may need to replace with owl:Class
 }
 order by ?class
