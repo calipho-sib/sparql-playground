@@ -1,0 +1,7 @@
+#title:Whose pet is Buddy ?
+#comment:?someone is the variable which will contain the response
+#tags:1 graph pattern,1 variable
+    
+SELECT ?someone WHERE {
+  ?someone tto:pet ttr:BuddyDog .
+}

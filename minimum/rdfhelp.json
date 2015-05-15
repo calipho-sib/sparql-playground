@@ -1,0 +1,325 @@
+[ {
+  "typeName" : "dbo:Person",
+  "rdfsLabel" : "",
+  "rdfsComment" : "",
+  "instanceCount" : 3,
+  "instanceSample" : "ttr:John",
+  "triples" : [ {
+    "subjectType" : "dbo:Person",
+    "predicate" : "dbp:birthDate",
+    "objectType" : "xsd:string",
+    "tripleCount" : 3,
+    "tripleSample" : "ttr:John dbp:birthDate 1982-02-02 .",
+    "literalType" : true,
+    "values" : [ "1982-02-02", "1986-11-03", "1988-07-20" ]
+  }, {
+    "subjectType" : "dbo:Person",
+    "predicate" : "dbp:name",
+    "objectType" : "xsd:string",
+    "tripleCount" : 3,
+    "tripleSample" : "ttr:John dbp:name \"John\" .",
+    "literalType" : true,
+    "values" : [ "Eve", "John", "William" ]
+  }, {
+    "subjectType" : "dbo:Person",
+    "predicate" : "rdf:type",
+    "objectType" : "xsd:string",
+    "tripleCount" : 3,
+    "tripleSample" : "ttr:John rdf:type dbo:Person .",
+    "literalType" : true,
+    "values" : [ "dbo:Person" ]
+  }, {
+    "subjectType" : "dbo:Person",
+    "predicate" : "tto:fan",
+    "objectType" : "xsd:string",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:Eve tto:fan dbpedia:Harrison_Ford .",
+    "literalType" : true,
+    "values" : [ "dbpedia:Harrison_Ford" ]
+  }, {
+    "subjectType" : "dbo:Person",
+    "predicate" : "tto:friend",
+    "objectType" : "dbo:Person",
+    "tripleCount" : 2,
+    "tripleSample" : "ttr:William tto:friend ttr:John .",
+    "literalType" : false,
+    "values" : null
+  }, {
+    "subjectType" : "dbo:Person",
+    "predicate" : "tto:pet",
+    "objectType" : "tto:Cat",
+    "tripleCount" : 2,
+    "tripleSample" : "ttr:William tto:pet ttr:TomCat .",
+    "literalType" : false,
+    "values" : null
+  }, {
+    "subjectType" : "dbo:Person",
+    "predicate" : "tto:pet",
+    "objectType" : "tto:Dog",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:John tto:pet ttr:BuddyDog .",
+    "literalType" : false,
+    "values" : null
+  }, {
+    "subjectType" : "dbo:Person",
+    "predicate" : "tto:sex",
+    "objectType" : "xsd:string",
+    "tripleCount" : 3,
+    "tripleSample" : "ttr:John tto:sex \"male\" .",
+    "literalType" : true,
+    "values" : [ "female", "male" ]
+  } ],
+  "parentTriples" : [ {
+    "subjectType" : "dbo:Person",
+    "predicate" : "tto:friend",
+    "objectType" : "dbo:Person",
+    "tripleCount" : 2,
+    "tripleSample" : "ttr:William tto:friend ttr:John .",
+    "literalType" : false,
+    "values" : null
+  } ],
+  "parents" : [ "dbo:Person" ],
+  "pathToOrigin" : [ ],
+  "values" : [ "ttr:Eve", "ttr:John", "ttr:William" ],
+  "id" : 5557
+}, {
+  "typeName" : "owl:Class",
+  "rdfsLabel" : "",
+  "rdfsComment" : "",
+  "instanceCount" : 5,
+  "instanceSample" : "tto:Dog",
+  "triples" : [ {
+    "subjectType" : "owl:Class",
+    "predicate" : "owl:subClassOf",
+    "objectType" : "owl:Class",
+    "tripleCount" : 4,
+    "tripleSample" : "tto:Monkey owl:subClassOf tto:Animal .",
+    "literalType" : false,
+    "values" : null
+  }, {
+    "subjectType" : "owl:Class",
+    "predicate" : "rdf:type",
+    "objectType" : "xsd:string",
+    "tripleCount" : 5,
+    "tripleSample" : "tto:Dog rdf:type owl:Class .",
+    "literalType" : true,
+    "values" : [ "owl:Class" ]
+  }, {
+    "subjectType" : "owl:Class",
+    "predicate" : "rdfs:isDefinedBy",
+    "objectType" : "xsd:string",
+    "tripleCount" : 5,
+    "tripleSample" : "tto:Dog rdfs:isDefinedBy tto: .",
+    "literalType" : true,
+    "values" : [ "tto:" ]
+  }, {
+    "subjectType" : "owl:Class",
+    "predicate" : "rdfs:label",
+    "objectType" : "xsd:string",
+    "tripleCount" : 5,
+    "tripleSample" : "tto:Dog rdfs:label \"dog\" .",
+    "literalType" : true,
+    "values" : [ "animal", "cat", "creature", "dog", "monkey" ]
+  } ],
+  "parentTriples" : [ {
+    "subjectType" : "owl:Class",
+    "predicate" : "owl:subClassOf",
+    "objectType" : "owl:Class",
+    "tripleCount" : 4,
+    "tripleSample" : "tto:Monkey owl:subClassOf tto:Animal .",
+    "literalType" : false,
+    "values" : null
+  }, {
+    "subjectType" : "tto:Cat",
+    "predicate" : "rdf:type",
+    "objectType" : "owl:Class",
+    "tripleCount" : 3,
+    "tripleSample" : "ttr:FelixCat rdf:type tto:Cat .",
+    "literalType" : false,
+    "values" : null
+  }, {
+    "subjectType" : "tto:Dog",
+    "predicate" : "rdf:type",
+    "objectType" : "owl:Class",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:BuddyDog rdf:type tto:Dog .",
+    "literalType" : false,
+    "values" : null
+  }, {
+    "subjectType" : "tto:Monkey",
+    "predicate" : "rdf:type",
+    "objectType" : "owl:Class",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:SnuffMonkey rdf:type tto:Monkey .",
+    "literalType" : false,
+    "values" : null
+  } ],
+  "parents" : [ "owl:Class", "tto:Cat", "tto:Dog", "tto:Monkey" ],
+  "pathToOrigin" : [ ],
+  "values" : [ "tto:Animal", "tto:Cat", "tto:Creature", "tto:Dog", "tto:Monkey" ],
+  "id" : 5556
+}, {
+  "typeName" : "tto:Cat",
+  "rdfsLabel" : "cat",
+  "rdfsComment" : "",
+  "instanceCount" : 3,
+  "instanceSample" : "ttr:FelixCat",
+  "triples" : [ {
+    "subjectType" : "tto:Cat",
+    "predicate" : "dbp:name",
+    "objectType" : "xsd:string",
+    "tripleCount" : 3,
+    "tripleSample" : "ttr:FelixCat dbp:name \"Felix\" .",
+    "literalType" : true,
+    "values" : [ "Felix", "Luna", "Tom" ]
+  }, {
+    "subjectType" : "tto:Cat",
+    "predicate" : "rdf:type",
+    "objectType" : "owl:Class",
+    "tripleCount" : 3,
+    "tripleSample" : "ttr:FelixCat rdf:type tto:Cat .",
+    "literalType" : false,
+    "values" : null
+  }, {
+    "subjectType" : "tto:Cat",
+    "predicate" : "tto:color",
+    "objectType" : "xsd:string",
+    "tripleCount" : 2,
+    "tripleSample" : "ttr:TomCat tto:color \"black\" .",
+    "literalType" : true,
+    "values" : [ "black", "red" ]
+  }, {
+    "subjectType" : "tto:Cat",
+    "predicate" : "tto:sex",
+    "objectType" : "xsd:string",
+    "tripleCount" : 3,
+    "tripleSample" : "ttr:FelixCat tto:sex \"male\" .",
+    "literalType" : true,
+    "values" : [ "female", "male" ]
+  }, {
+    "subjectType" : "tto:Cat",
+    "predicate" : "tto:weight",
+    "objectType" : "xsd:string",
+    "tripleCount" : 2,
+    "tripleSample" : "ttr:TomCat tto:weight 5.5 .",
+    "literalType" : true,
+    "values" : [ "5.5", "7.2" ]
+  } ],
+  "parentTriples" : [ {
+    "subjectType" : "dbo:Person",
+    "predicate" : "tto:pet",
+    "objectType" : "tto:Cat",
+    "tripleCount" : 2,
+    "tripleSample" : "ttr:William tto:pet ttr:TomCat .",
+    "literalType" : false,
+    "values" : null
+  } ],
+  "parents" : [ "dbo:Person" ],
+  "pathToOrigin" : [ ],
+  "values" : [ "ttr:FelixCat", "ttr:LunaCat", "ttr:TomCat" ],
+  "id" : 5559
+}, {
+  "typeName" : "tto:Dog",
+  "rdfsLabel" : "dog",
+  "rdfsComment" : "",
+  "instanceCount" : 1,
+  "instanceSample" : "ttr:BuddyDog",
+  "triples" : [ {
+    "subjectType" : "tto:Dog",
+    "predicate" : "dbp:name",
+    "objectType" : "xsd:string",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:BuddyDog dbp:name \"Buddy\" .",
+    "literalType" : true,
+    "values" : [ "Buddy" ]
+  }, {
+    "subjectType" : "tto:Dog",
+    "predicate" : "rdf:type",
+    "objectType" : "owl:Class",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:BuddyDog rdf:type tto:Dog .",
+    "literalType" : false,
+    "values" : null
+  }, {
+    "subjectType" : "tto:Dog",
+    "predicate" : "tto:color",
+    "objectType" : "xsd:string",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:BuddyDog tto:color \"black\" .",
+    "literalType" : true,
+    "values" : [ "black" ]
+  }, {
+    "subjectType" : "tto:Dog",
+    "predicate" : "tto:sex",
+    "objectType" : "xsd:string",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:BuddyDog tto:sex \"male\" .",
+    "literalType" : true,
+    "values" : [ "male" ]
+  } ],
+  "parentTriples" : [ {
+    "subjectType" : "dbo:Person",
+    "predicate" : "tto:pet",
+    "objectType" : "tto:Dog",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:John tto:pet ttr:BuddyDog .",
+    "literalType" : false,
+    "values" : null
+  } ],
+  "parents" : [ "dbo:Person" ],
+  "pathToOrigin" : [ ],
+  "values" : [ "ttr:BuddyDog" ],
+  "id" : 5558
+}, {
+  "typeName" : "tto:Monkey",
+  "rdfsLabel" : "monkey",
+  "rdfsComment" : "",
+  "instanceCount" : 1,
+  "instanceSample" : "ttr:SnuffMonkey",
+  "triples" : [ {
+    "subjectType" : "tto:Monkey",
+    "predicate" : "dbp:name",
+    "objectType" : "xsd:string",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:SnuffMonkey dbp:name \"Snuff\" .",
+    "literalType" : true,
+    "values" : [ "Snuff" ]
+  }, {
+    "subjectType" : "tto:Monkey",
+    "predicate" : "rdf:type",
+    "objectType" : "owl:Class",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:SnuffMonkey rdf:type tto:Monkey .",
+    "literalType" : false,
+    "values" : null
+  }, {
+    "subjectType" : "tto:Monkey",
+    "predicate" : "tto:color",
+    "objectType" : "xsd:string",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:SnuffMonkey tto:color \"golden\" .",
+    "literalType" : true,
+    "values" : [ "golden" ]
+  }, {
+    "subjectType" : "tto:Monkey",
+    "predicate" : "tto:sex",
+    "objectType" : "xsd:string",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:SnuffMonkey tto:sex \"female\" .",
+    "literalType" : true,
+    "values" : [ "female" ]
+  }, {
+    "subjectType" : "tto:Monkey",
+    "predicate" : "tto:weight",
+    "objectType" : "xsd:string",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:SnuffMonkey tto:weight 3.6 .",
+    "literalType" : true,
+    "values" : [ "3.6" ]
+  } ],
+  "parentTriples" : [ ],
+  "parents" : [ ],
+  "pathToOrigin" : [ ],
+  "values" : [ "ttr:SnuffMonkey" ],
+  "id" : 5560
+} ]

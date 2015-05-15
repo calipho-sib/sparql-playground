@@ -1,5 +1,7 @@
 # Sparql Playground
 
+[![Build Status](https://travis-ci.org/calipho-sib/sparql-playground.svg?branch=master)](https://travis-ci.org/calipho-sib/sparql-playground)
+
 SPARQL playground is a standalone multi-platform web application used to learn SPARQL (implemented in Java Spring Boot and AngularJS). 
 
 It uses Sesame 2.7.9 as SPARQL Engine. 
