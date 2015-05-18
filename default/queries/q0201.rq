@@ -1,8 +1,11 @@
-#title:Get people with the species of their pets
-#tags:2 graph patterns,2 variables
+#title:Select persons and their name
+#comment:Selects subjects and objects connected with the predicate dbp:name,
+#comment:?thing and ?name are the variables
+#tags:1 graph pattern,2 variables
 #color:ex-blue
+    
 
-SELECT distinct ?people ?species WHERE {
-  ?people tto:pet ?pet . 
-  ?pet rdf:type ?species .
+select ?person ?name where {
+    ?person rdf:type dbo:Person .
+	?person dbp:name ?name .
 }

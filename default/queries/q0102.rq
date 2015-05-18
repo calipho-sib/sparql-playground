@@ -1,8 +1,0 @@
-#title:Get the direct sub classes of class Creature
-#comment:the single graph pattern matching process finds all the subjects described as a rdfs:subClassOf tto:Creature .
-#tags:1 graph pattern,1 variable
-#color:ex-yellow
-
-select ?subSpecies   where {
-  ?subSpecies rdfs:subClassOf tto:Creature .
-}

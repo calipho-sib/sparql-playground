@@ -1,5 +1,5 @@
-#title:EXERCISE: Select all things that are animals
-#comment:use the property rdfs:subClassOf+ and a
+#title:EXERCISE: Select all instances that are animals ????????
+#comment:Hint:use the property rdfs:subClassOf+, rdf:type and the class tto:Animal
 #tags:1 graph pattern,2 variables,FILTER,logical not equals : !=
 
 select ?thing ?type where {

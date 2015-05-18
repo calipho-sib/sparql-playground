@@ -1,9 +1,10 @@
-#title:Get creature names starting with either B of F and ending with either x or y
+#title:Get creature names starting with either R or I and ending by a x
 #comment: uses a regex pattern (regular expressions) to find names meeting a complex criterion
 #tags:1 graph pattern,2 variables,FILTER,string function regex()
+#color:ex-violet
 
 select * where {
   ?creature dbp:name ?name .
-  FILTER ( REGEX(?name, "^[BF].*[xy]$" ) )
+  FILTER ( REGEX(?name, "^[RI].*x$" ) )
 } 
 

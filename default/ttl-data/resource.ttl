@@ -40,6 +40,7 @@ ttr:TomCat
 	rdf:type tto:Cat ;
 	dbp:name "Tom"^^xsd:string ;
 	tto:sex "male"^^xsd:string ;
+	tto:color "grey"^^xsd:string ;
 	tto:weight "5.8"^^xsd:decimal ;
 	.
 
@@ -47,13 +48,14 @@ ttr:LunaCat
 	rdf:type tto:Cat ;
 	dbp:name "Luna"^^xsd:string ;
 	tto:sex "female"^^xsd:string ;
-	tto:color "red"^^xsd:string ;
+	tto:color "violet"^^xsd:string ;
 	tto:weight "4.2"^^xsd:decimal ;
     .
 
 # Resources - dogs
 ttr:RexDog
 	rdf:type tto:Dog ;
+	dbp:name "Rex"^^xsd:string ;
 	tto:sex "male"^^xsd:string ;
 	tto:color "brown"^^xsd:string ;
 	tto:weight "8.8"^^xsd:decimal ;
@@ -61,6 +63,7 @@ ttr:RexDog
 
 ttr:LonelyDog
 	rdf:type tto:Dog ;
+	dbp:name "Idefix"^^xsd:string ;
 	tto:sex "male"^^xsd:string ;
 	tto:color "white"^^xsd:string ;
 	tto:weight "6.8"^^xsd:decimal ;

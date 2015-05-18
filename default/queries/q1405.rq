@@ -5,6 +5,7 @@
 #comment:The local graph pattern here is optional so that we can see celebrities for which
 #comment:we don't know about their pets.
 #tags:1 graph pattern,VALUES,OPTIONAL,SERVICE
+color:ex-green
 
 select *  where {
     SERVICE <http://dbpedia.org/sparql> {

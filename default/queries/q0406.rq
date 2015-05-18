@@ -4,6 +4,7 @@
 #comment:and solutions are built from the distant and local graph pattern matching processes.
 #comment:The local graph pattern
 #tags:1 graph pattern,VALUES,SERVICE
+#color:ex-green
 
 SELECT * where {
    VALUES ?subj {dbpedia:Harrison_Ford}

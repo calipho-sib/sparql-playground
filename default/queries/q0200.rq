@@ -1,10 +1,9 @@
-#title:Get all parents and their children
-#comment:Use the property dbo:parent
-#tags:
+#title:Select things that are persons
+#comment:Selects subjects connected to the object dbo:Person via the predicate rdf:type
+#comment:?thing is the only variable
+#tags:1 graph pattern,1 variable
 #color:ex-blue
-
-select ?person ?son where {
-	?person dbo:parent ?son
-	
-	#check the inverse path as well ^dbo:parent 
+    
+select ?thing where {
+  ?thing rdf:type dbo:Person .
 }

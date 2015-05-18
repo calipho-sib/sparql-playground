@@ -1,8 +1,14 @@
-#title:Get Creature class and its direct and sub classes
-#comment:the ? after rdfs:subClassOf retrieves solutions for ?species if it is connected to tto:Creature by zero or one rdfs:subClassOf predicate
-#tags:1 graph pattern,1 variable,path syntax : 0-1 path ?
+#title:Get list of 4 instances in the dataset 
+#comment:The LIMIT modifier sets an upper bound to the number of solutions returned.
+#comment:The ORDER BY clause is applied on the full set of solutions. The LIMIT modifier is taken into account
+#comment:after the ORDER BY clause.
+#tags:1 graph pattern,2 variables,ORDER BY,LIMIT
 #color:ex-yellow
 
-select ?subSpecies where {
-  ?subSpecies rdfs:subClassOf? tto:Creature .
+SELECT ?class ?instance WHERE {
+  ?instance rdf:type ?class . 
 }
+ORDER BY ?class ?instance
+LIMIT 4
+
+#can also use 'a' instead of 'rdf:type'

@@ -1,19 +1,8 @@
-#title:Select type of things defined in this dataset
-#comment:When you start exploring a data set you may want to look at what is inside...
-#comment:You can see some helper in the documentation, but a good query to start with is
-#tags:ontology,explore,1 graph pattern,1 variable
-#img:resources
+#title:Get the direct sub classes of class Creature
+#comment:the single graph pattern matching process finds all the subjects described as a rdfs:subClassOf tto:Creature .
+#tags:1 graph pattern,1 variable
 #color:ex-yellow
 
-select * where {
-  ?class a rdfs:Class .
-  #you can use owl:Class as well
+select ?subSpecies   where {
+  ?subSpecies rdfs:subClassOf tto:Creature .
 }
-limit 10
-
-
-#Alternatively get some things:
-#select * where {
-#	?a ?b ?c
-#}
-#limit 10
