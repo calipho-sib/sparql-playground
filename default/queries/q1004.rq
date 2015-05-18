@@ -1,0 +1,9 @@
+#title:Get William's friends or relatives (using dbo:parent predicate path or dpo:parent inverse path or tto:pet predicate path)
+#comment:retrieves solutions for objects connected to the subject ttr:William 
+#comment:using using tto:friend predicate path or tto:friend inverse path or tto:pet predicate path
+#tags:1 graph pattern,1 variable,path syntax : inverse path ^,path syntax : alternative path |
+#color:ex-violet 
+
+select * where {
+  ttr:William dbo:parent | ^dbo:parent | tto:pet ?friendOrPet.
+}

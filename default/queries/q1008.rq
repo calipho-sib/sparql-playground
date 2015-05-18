@@ -1,0 +1,16 @@
+#title:Get the name of things and compute if it matches some regex patterns
+#comment: ?startsWithT, ?containsDD, ?endsWithA, ?caseInsensitivePatternLxA are assigned values within a BIND clause.
+#comment:The ?startsWithT, ?containsDD, ?endsWithA, ?caseInsensitivePatternLxA values are boolean
+#comment:computed using string functionregex()
+#tags:1 graph pattern,4 variables,BIND,string function regex()
+#color:ex-violet
+
+select * where {
+  ?creature dbp:name ?name .
+  BIND ( ( regex(?name,"^T"))  as ?startsWithT)
+  BIND ( ( regex(?name,"dd"))  as ?containsDD)
+  BIND ( ( regex(?name,"a$"))  as ?endsWithA)
+  BIND ( ( regex(?name,".*l.*a", "i"))  as ?caseInsensitivePatternLxA)
+} 
+
+

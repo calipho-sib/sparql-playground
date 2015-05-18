@@ -1,9 +1,0 @@
-#id:NXQ_00042
-#title:Get distinct people with the species of their pets
-#comment:DISTINCT ensure solutions (here ?people - ?species pairs) are unique 
-#tags:2 graph patterns,2 variables,DISTINCT
-
-SELECT DISTINCT ?people ?species WHERE {
-  ?people tto:pet ?pet . 
-  ?pet rdf:type ?species .
-}

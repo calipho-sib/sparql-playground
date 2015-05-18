@@ -1,9 +1,0 @@
-#id:NXQ_00104
-#title:Select the name and the weight of the pet belonging to the star Eve is a fan of
-#comment:Create graph patterns starting from Eve to the star she's a fan of and from the star to his pets adn from the pets to their names.
-#comment:The query should return one row with 2 columns containing "Snuff", "3.6"
-#tags:4 graph patterns,2 variables,exercise level 1
-
-SELECT ... {
-	...
-}

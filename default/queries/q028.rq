@@ -1,8 +1,0 @@
-#id:NXQ_00028
-#title:Get the direct and indirect sub classes of class Creature
-#comment:the + after owl:subClassOf retrieves solutions for ?species if it is connected to tto:Creature by one or multiple owl:sublasseOf predicates
-#tags:1 graph pattern,1 variable,path syntax : 1-n paths +
-
-select ?subSpecies   where {
-  ?subSpecies owl:subClassOf+ tto:Creature .
-}

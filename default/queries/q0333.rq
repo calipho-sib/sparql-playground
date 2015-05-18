@@ -1,0 +1,11 @@
+#title:Get the number of persons by sex  
+#comment:the graph pattern matching process generates the possible solutions as a list of ?sex value and ?people value pairs
+#comment:then for each ?sex value (grouping criterion), the number of ?people values is counted (aggregate function COUNT)
+#tags:2 graph patterns,2 variables,GROUP BY,aggregate function COUNT()
+#color:ex-red
+
+select ?sex (COUNT(?people) as ?peopleCount) where {
+  ?people rdf:type dbo:Person .
+  ?people tto:sex ?sex .
+}
+GROUP BY ?sex

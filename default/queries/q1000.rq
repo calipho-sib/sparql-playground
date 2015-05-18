@@ -1,0 +1,9 @@
+#title:Select things that have a red or golden color
+#comment:Selects subjects described with the tto:color predicate. ?thing, ?color are the variables, 
+#comment:the filter defines 2 criteria. One of them must be met otherwise solutions are removed from the result set
+#tags:1 graph pattern,2 variables,FILTER,logical OR : ||
+    
+select ?subj ?color where {
+	?subj tto:color ?color .
+	FILTER (?color = "red"^^xsd:string || ?color = "golden"^^xsd:string )
+}

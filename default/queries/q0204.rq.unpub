@@ -1,0 +1,11 @@
+#title:Get the persons' names by sex  
+#comment:the graph pattern matching process generates the possible solutions as a list of ?sex value and ?name value pairs
+#comment:then for each ?sex value (grouping criterion), the ?name values is concatenated (aggregate function GROUP_CONCAT)
+#tags:3 graph patterns,3 variables,GROUP BY,aggregate function GROUP_CONCAT()
+
+select ?sex (GROUP_CONCAT(?name) as ?peopleNames) where {
+  ?people rdf:type dbo:Person .
+  ?people dbp:name ?name .
+  ?people tto:sex ?sex .
+}
+GROUP BY ?sex

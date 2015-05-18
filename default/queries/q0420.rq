@@ -1,0 +1,13 @@
+#title:Select people with their gender and birth date orderd by gender and birth date (oldest first) 
+#comment:by default the direction of ORDER BY is ascending (asc), use desc() to use descending direction. 
+#comment:using ; between multiple predicate - object pairs  is useful when they are related to a common subject   
+#tags:4 graph patterns,4 variables,ORDER BY,triple notation ;
+
+select ?people ?sex ?birth ?name where {
+  ?people 
+    rdf:type dbo:Person ; 
+    dbp:name ?name ; 
+    tto:sex ?sex ; 
+    dbp:birthDate ?birth . 
+}
+ORDER BY ?sex desc(?birth)

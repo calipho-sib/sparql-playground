@@ -1,0 +1,8 @@
+#title:Who is Eve's Grand father?
+#comment:Use the property dbo:parent
+#tags:
+#color:ex-violet
+
+select ?grandpa where {
+	 ?grandpa dbo:parent / dbo:parent ttr:Eve
+}

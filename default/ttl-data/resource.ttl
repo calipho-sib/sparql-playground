@@ -7,51 +7,40 @@
 @prefix tto: <http://example.org/tuto/ontology#> .
 @prefix ttr: <http://example.org/tuto/resource#> .
 
-
-
 # Resources - persons
 
 ttr:John
 	rdf:type dbo:Person ;
 	dbp:name "John"^^xsd:string ;
-	dbp:birthDate "1982-02-02"^^xsd:date ;
+	dbp:birthDate "1942-02-02"^^xsd:date ;
+    dbo:parent ttr:William ;
 	tto:sex "male"^^xsd:string ;
-	tto:pet ttr:BuddyDog;
-	.
-
+	tto:pet ttr:TomCat, ttr:LunaCat;
+    .
+    	
 ttr:William
 	rdf:type dbo:Person ;
 	dbp:name "William"^^xsd:string ;
-	dbp:birthDate "1988-07-20"^^xsd:date ;
+	dbp:birthDate "1978-07-20"^^xsd:date ;
 	tto:sex "male"^^xsd:string ;
-	tto:friend ttr:John ;
-	tto:pet ttr:TomCat;
-	tto:pet ttr:LunaCat;
+    dbo:parent ttr:Eve ;
+    tto:pet ttr:RexDog;
 	.
 
 ttr:Eve
 	rdf:type dbo:Person ;
 	dbp:name "Eve"^^xsd:string ;
-	dbp:birthDate "1986-11-03"^^xsd:date ;
-	tto:friend ttr:William ;
-	tto:fanOf dbpedia:Harrison_Ford ;
+	dbp:birthDate "2006-11-03"^^xsd:date ;
 	tto:sex "female"^^xsd:string ;
 	#tto:pet ttr:FelixCat;
 	.
 
-dbpedia:Harrison_Ford
-	tto:pet ttr:SnuffMonkey;
-	.
-
-
 # Resources - cats
-
 ttr:TomCat
 	rdf:type tto:Cat ;
 	dbp:name "Tom"^^xsd:string ;
 	tto:sex "male"^^xsd:string ;
-	tto:color "black"^^xsd:string ;
-	tto:weight "5.5"^^xsd:decimal ;
+	tto:weight "5.8"^^xsd:decimal ;
 	.
 
 ttr:LunaCat
@@ -59,32 +48,20 @@ ttr:LunaCat
 	dbp:name "Luna"^^xsd:string ;
 	tto:sex "female"^^xsd:string ;
 	tto:color "red"^^xsd:string ;
-	.
-
-ttr:FelixCat
-	rdf:type tto:Cat ;
-	dbp:name "Felix"^^xsd:string ;
-	tto:sex "male"^^xsd:string ;
-	tto:weight "7.2"^^xsd:decimal ;
-	.
+	tto:weight "4.2"^^xsd:decimal ;
+    .
 
 # Resources - dogs
-
-
-ttr:BuddyDog
+ttr:RexDog
 	rdf:type tto:Dog ;
-	dbp:name "Buddy"^^xsd:string ;
 	tto:sex "male"^^xsd:string ;
-	tto:color "black"^^xsd:string ;
+	tto:color "brown"^^xsd:string ;
+	tto:weight "8.8"^^xsd:decimal ;
 	.
 
-# Resources - monkeys
-
-
-ttr:SnuffMonkey
-	rdf:type tto:Monkey ;
-	dbp:name "Snuff"^^xsd:string ;
-	tto:color "golden"^^xsd:string ;
-	tto:sex "female"^^xsd:string ;
-	tto:weight "3.6"^^xsd:decimal ;
-	.
+ttr:LonelyDog
+	rdf:type tto:Dog ;
+	tto:sex "male"^^xsd:string ;
+	tto:color "white"^^xsd:string ;
+	tto:weight "6.8"^^xsd:decimal ;
+    .

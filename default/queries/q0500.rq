@@ -1,0 +1,10 @@
+#title:Select things with their name and also their color if it is known
+#comment:Selects subjects described with the dbp:name predicate and optionally with the tto:color predicate. 
+#comment:?thing, ?name, ?color are the variables, color can be UNDEF
+#tags:2 graph patterns,3 variables,OPTIONAL
+    
+select ?thing ?name ?color where {
+  ?thing dbp:name ?name .
+  OPTIONAL { ?thing tto:color ?color }.
+}
+

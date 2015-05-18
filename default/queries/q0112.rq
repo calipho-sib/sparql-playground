@@ -1,0 +1,15 @@
+#title:Get a subset of the class and instance pairs (subjects and objects connected with rdf:type) in the dataset - only the 5 solutions following the 3 first ones (?class ?instance pairs) of the full set ordered by ?class and ?instance 
+#comment:The OFFSET modifier causes the 3 first solutions not to be returned
+#comment:The LIMIT modifier sets the upper bound (5here 5) to the number of solutions returned. 
+#comment:The first solution returned is the one at rank 4 of the full set, just after the offset value 
+#comment:The ORDER BY clause is applied on the full set of solutions. The LIMIT and the OFFSET modifiers are
+#comment:applied after the set of solutions is ordered by ORDER BY clause.
+#comment:OFFSET and LIMIT, used together with an ORDER BY clause can be used for paging of results.
+#tags:1 graph pattern,2 variables,ORDER BY,LIMIT,OFFSET
+#color:ex-yellow
+
+SELECT ?class ?instance WHERE {
+  ?instance rdf:type ?class . 
+}
+ORDER BY ?class ?instance
+OFFSET 3 LIMIT 5 

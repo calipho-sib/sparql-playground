@@ -1,0 +1,15 @@
+#title:Select persons and their names only if they have a pet who is a cat
+#comment:Selects subjects with their name but removes solutions. ?person, ?name ?pet are the variables
+#comment: note that the ?pet value is bound in the FILTER scope but is not bound in the SELECT scope 
+#tags:exercise,2 graph patterns,3 variables,FILTER EXISTS
+#color:ex-violet
+   
+select ?person ?name ?pet where {
+	?person rdf:type dbo:Person .
+	?person dbp:name ?name .
+	FILTER  EXISTS { 
+		?person tto:pet ?pet .
+		?pet rdf:type tto:Cat .
+	}
+}
+

@@ -1,0 +1,8 @@
+#title:Get Creature class and its direct and indirect sub classes
+#comment:the * after rdfs:subClassOf retrieves solutions for ?species if it is connected to tto:Creature by zero, one or multiple owl:sublasseOf predicate
+#tags:1 graph pattern,1 variable,path syntax : 0-n paths *
+#color:ex-yellow
+
+select ?subSpecies where {
+  ?subSpecies rdfs:subClassOf* tto:Creature .
+}

@@ -1,8 +1,0 @@
-#id:NXQ_00029
-#title:Get Creature class and its direct and sub classes
-#comment:the ? after owl:subClassOf retrieves solutions for ?species if it is connected to tto:Creature by zero or one owl:sublasseOf predicate
-#tags:1 graph pattern,1 variable,path syntax : 0-1 path ?
-
-select ?subSpecies   where {
-  ?subSpecies owl:subClassOf? tto:Creature .
-}

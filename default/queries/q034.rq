@@ -1,9 +1,0 @@
-#id:NXQ_00034
-#title:Get William's friends or pets (using tto:friend predicate path or tto:friend inverse path or tto:pet predicate path)
-#comment:retrieves solutions for objects connected to the subject ttr:William 
-#comment:using using tto:friend predicate path or tto:friend inverse path or tto:pet predicate path
-#tags:1 graph pattern,1 variable,path syntax : inverse path ^,path syntax : alternative path |
-
-select * where {
-  ttr:William tto:friend | ^tto:friend | tto:pet ?friendOrPet.
-}

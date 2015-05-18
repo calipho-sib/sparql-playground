@@ -1,0 +1,8 @@
+#title:EXERCISE: Select all things that are animals
+#comment:use the property rdfs:subClassOf+ and a
+#tags:1 graph pattern,2 variables,FILTER,logical not equals : !=
+
+select ?thing ?type where {
+  ?type rdfs:subClassOf+ tto:Animal .
+  ?thing a ?type
+}

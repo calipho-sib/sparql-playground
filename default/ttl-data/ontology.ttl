@@ -37,12 +37,6 @@ tto:Dog
 	rdfs:subClassOf tto:Animal ;
 	rdfs:isDefinedBy tto: . 
 
-tto:Monkey
-	rdf:type rdfs:Class;
-	rdfs:label "monkey"^^xsd:string;
-	rdfs:subClassOf tto:Animal ;
-	rdfs:isDefinedBy tto: . 
-
 # - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # Properties
 # - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -59,27 +53,6 @@ tto:pet
 	rdfs:label "domestic animal"^^xsd:string;
 	rdfs:domain dbo:Person ;
 	rdfs:range tto:Animal ;
-	rdfs:isDefinedBy tto: . 
-
-tto:friend
-	rdf:type rdf:Property;
-	rdfs:label "friend"^^xsd:string;
-	rdfs:domain dbo:Person ;
-	rdfs:range dbo:Person ;
-	rdfs:isDefinedBy tto: . 
-
-tto:fanOf 
-	rdf:type rdf:Property;
-	rdfs:label "fan of"^^xsd:string;
-	rdfs:domain dbo:Person ;
-	rdfs:range dbo:Person ;
-	rdfs:isDefinedBy tto: . 
-
-tto:color 
-	rdf:type rdf:Property;
-	rdfs:label "hair or furr color"^^xsd:string;
-	rdfs:domain tto:Animal ;
-	rdfs:range xsd:string ;
 	rdfs:isDefinedBy tto: . 
 
 tto:weight 
