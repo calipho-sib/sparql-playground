@@ -24,7 +24,7 @@ public class SparqlServiceIntegrationTest {
 	public void testQueryWithLongUrl() throws Exception {
 		String query = "select ?x where { ?x rdf:type <http://example.org/tuto/ontology#Cat> . }";
 		TupleQueryResult result = sparqlService.executeSparql(query);
-		Assert.assertEquals(countResults(result), 3);
+		Assert.assertEquals(countResults(result), 2);
 	}
 
 	@Test
@@ -32,15 +32,15 @@ public class SparqlServiceIntegrationTest {
 		String query = sparqlService.getPrefixesString();
 		query += " select ?x where { ?x rdf:type tto:Cat . }";
 		TupleQueryResult result = sparqlService.executeSparql(query);
-		Assert.assertEquals(countResults(result), 3);
+		Assert.assertEquals(countResults(result), 2);
 	}
 
 	@Test
 	public void testFederatedQuery() throws Exception {
 		String query = sparqlService.getPrefixesString();
-		query += " select ?subj ?pred ?obj where { values (?subj ?pred) { (dbpedia:Harrison_Ford dbo:birthDate) (dbpedia:Harrison_Ford dbp:name) (dbpedia:Harrison_Ford dbp:occupation) (dbpedia:Harrison_Ford tto:pet) } { ?subj ?pred ?obj.  }UNION{ service <http://dbpedia.org/sparql> { ?subj ?pred ?obj.}}}";
+		query += " select ?subj ?pred ?obj where { values (?subj ?pred) { (dbpedia:Harrison_Ford dbo:birthDate) (dbpedia:Harrison_Ford dbp:name) (dbpedia:Harrison_Ford dbp:occupation) } { ?subj ?pred ?obj.  }UNION{ service <http://dbpedia.org/sparql> { ?subj ?pred ?obj.}}}";
 		TupleQueryResult result = sparqlService.executeSparql(query);
-		Assert.assertEquals(countResults(result), 4);
+		Assert.assertEquals(countResults(result), 3);
 	}
 	
 	
