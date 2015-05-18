@@ -16,8 +16,17 @@ public class SparqlQuery {
 	private String sparql;
 	private boolean published;
 	private String owner;
-	private long ownerId;
 	private String img;
+	private String backgroundColor;
+	
+	public String getBackgroundColor() {
+		return backgroundColor;
+	}
+
+	public void setBackgroundColor(String backgroundColor) {
+		this.backgroundColor = backgroundColor;
+	}
+
 	public String getImg() {
 		return img;
 	}
@@ -80,14 +89,6 @@ public class SparqlQuery {
 
 	public void setOwner(String owner) {
 		this.owner = owner;
-	}
-
-	public long getOwnerId() {
-		return ownerId;
-	}
-
-	public void setOwnerId(long ownerId) {
-		this.ownerId = ownerId;
 	}
 
 	public String getPublicId() {

@@ -88,7 +88,7 @@ public class QueryDictionary {
 		dsq.setImg(rawProps.get("img"));
 		dsq.setTitle(rawProps.get("title"));
 		dsq.setOwner("nextprot");
-		dsq.setOwnerId(-1);
+		dsq.setBackgroundColor(rawProps.get("color"));
 		dsq.setDescription(rawProps.get("comment"));
 
 		try {
@@ -154,6 +154,7 @@ public class QueryDictionary {
 		q = parseAndGlupRawQuery(rawData, q, "comment", meta);
 		q = parseAndGlupRawQuery(rawData, q, "time", meta);
 		q = parseAndGlupRawQuery(rawData, q, "img", meta);
+		q = parseAndGlupRawQuery(rawData, q, "color", meta);
 
 		meta.put("query", q.trim());
 

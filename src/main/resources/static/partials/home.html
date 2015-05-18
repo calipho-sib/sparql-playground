@@ -68,8 +68,8 @@
             </div>
 
             <div class="example-list">
-            <div ng-repeat="example in snorql.examples | containsTag:filterTag | filter:filter">
-              <a href="#" ng-click="selectExample(example.index);" ng-class="{'active':qSelected===example.index}"  class="list-group-item query-{{example.index}}" >
+            <div ng-repeat="example in snorql.examples | containsTag:filterTag | filter:filter" >
+              <a ng-class="example.backgroundColor" ng-class="example | containsTag" href="#" ng-click="selectExample(example.index);" ng-class="{'active':qSelected===example.index}"  class="list-group-item query-{{example.index}}" >
                 <button ng-if="example.img" ng-click="example.show=!example.show" type="button" class="btn btn-info btn-xs pull-right">{{example.show ? "hide" : "show"}} diagram</button>
 
                 <h5 class="list-group-item-heading">{{example.userQueryId}}) {{example.title}}</h5>

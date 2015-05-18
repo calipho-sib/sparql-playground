@@ -331,3 +331,23 @@ fieldset[disabled] .navbar-snorql .btn-link:focus {
 	min-height: 580px;
 	overflow-y: scroll;
 }
+
+.ex-blue {
+	background-color : #CCFFFF
+}
+
+.ex-red {
+	background-color : #FFCCCC
+}
+
+.ex-yellow {
+	background-color : #FFFFCC;
+}
+
+.ex-green {
+	background-color : #CCFFCC
+}
+
+.ex-violet {
+	background-color : #FF99FF
+}
