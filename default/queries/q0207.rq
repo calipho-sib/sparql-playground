@@ -1,0 +1,11 @@
+#title:Select persons and their pets (even if they do not have any)
+#comment:Selects things 
+#comment:?thing and ?name are the variables
+#tags:1 graph pattern,2 variables
+#color:ex-blue
+    
+
+select ?person ?pet where {
+    ?person rdf:type dbo:Person .
+	optional {?person tto:pet ?pet }.
+}

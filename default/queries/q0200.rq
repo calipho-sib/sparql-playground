@@ -5,5 +5,12 @@
 #color:ex-blue
     
 select ?thing where {
-  ?thing rdf:type dbo:Person .
+  ?thing a dbo:Person .
 }
+
+#Remember in data tab we can see: 'ttr:John a dbo:Person'
+#'rdf:type' can also be used instead of 'a' 
+#'a' is a synonym of 'rdf:type'
+
+#Explore snorql
+#Click on ttr:William to see the properties attached

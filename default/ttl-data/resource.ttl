@@ -7,64 +7,59 @@
 @prefix tto: <http://example.org/tuto/ontology#> .
 @prefix ttr: <http://example.org/tuto/resource#> .
 
-# Resources - persons
-
 ttr:John
 	rdf:type dbo:Person ;
-	dbp:name "John"^^xsd:string ;
+	dbp:name "John" ;
 	dbp:birthDate "1942-02-02"^^xsd:date ;
     dbo:parent ttr:William ;
-	tto:sex "male"^^xsd:string ;
+	tto:sex "male" ;
 	tto:pet ttr:TomCat, ttr:LunaCat;
     .
     	
 ttr:William
 	rdf:type dbo:Person ;
-	dbp:name "William"^^xsd:string ;
+	dbp:name "William";
 	dbp:birthDate "1978-07-20"^^xsd:date ;
-	tto:sex "male"^^xsd:string ;
+	tto:sex "male" ;
     dbo:parent ttr:Eve ;
     tto:pet ttr:RexDog;
 	.
 
 ttr:Eve
 	rdf:type dbo:Person ;
-	dbp:name "Eve"^^xsd:string ;
+	dbp:name "Eve";
 	dbp:birthDate "2006-11-03"^^xsd:date ;
-	tto:sex "female"^^xsd:string ;
-	#tto:pet ttr:FelixCat;
+	tto:sex "female";
 	.
 
-# Resources - cats
 ttr:TomCat
 	rdf:type tto:Cat ;
-	dbp:name "Tom"^^xsd:string ;
-	tto:sex "male"^^xsd:string ;
-	tto:color "grey"^^xsd:string ;
-	tto:weight "5.8"^^xsd:decimal ;
+	dbp:name "Tom";
+	tto:sex "male";
+	tto:color "grey";
+	tto:weight 5.8 ;
 	.
 
 ttr:LunaCat
 	rdf:type tto:Cat ;
-	dbp:name "Luna"^^xsd:string ;
-	tto:sex "female"^^xsd:string ;
-	tto:color "violet"^^xsd:string ;
-	tto:weight "4.2"^^xsd:decimal ;
+	dbp:name "Luna" ;
+	tto:sex "female" ;
+	tto:color "violet";
+	tto:weight 4.2;
     .
 
-# Resources - dogs
 ttr:RexDog
 	rdf:type tto:Dog ;
-	dbp:name "Rex"^^xsd:string ;
-	tto:sex "male"^^xsd:string ;
-	tto:color "brown"^^xsd:string ;
-	tto:weight "8.8"^^xsd:decimal ;
+	dbp:name "Rex";
+	tto:sex "male";
+	tto:color "brown" ;
+	tto:weight 8.8 ;
 	.
 
 ttr:LonelyDog
 	rdf:type tto:Dog ;
-	dbp:name "Idefix"^^xsd:string ;
-	tto:sex "male"^^xsd:string ;
-	tto:color "white"^^xsd:string ;
-	tto:weight "6.8"^^xsd:decimal ;
+	dbp:name "Idefix";
+	tto:sex "male";
+	tto:color "white";
+	tto:weight 6.8 ;
     .

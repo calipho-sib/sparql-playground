@@ -1,4 +1,4 @@
-#title:Get persons with their birth date and calculated age
+#title:Select persons with their birth date and calculated age
 #comment: The age is computed using the functions YEAR() and NOW().
 #comment: The resulting value is assigned to a new variable ?age in the BIND clause.
 #tags:2 graph patterns,3 variables,date function YEAR(),date function NOW(),BIND,arithmetic -

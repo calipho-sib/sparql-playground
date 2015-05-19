@@ -1,0 +1,23 @@
+#title:Select things that have a weight between 5 and 7 kg order by weight
+#comment:Selects subjects described with the tto:weight predicate. ?thing, ?name are the variables, 
+#comment:the filter removes some solutions according to the ?weight value
+#tags:1 graph pattern,2 variables,FILTER
+#color:ex-red
+  
+select ?thing ?weight where {
+  ?thing tto:weight ?weight .
+  FILTER (?weight > 5 && ?weight < 7.0) 
+}order by ?weight
+
+
+#by default the direction of ORDER BY is ascending (asc), use desc() to use descending direction. 
+#using ; between multiple predicate - object pairs  is useful when they are related to a common subject   
+#try to use desc(?weight)
+
+#try to filter on strings
+# Selects subjects described with the tto:color predicate. ?thing, ?color are the variables, 
+# the filter defines 2 criteria. One of them must be met otherwise solutions are removed from the result set
+# select ?thing ?weight where {
+#  ?thing tto:color ?color .
+#	FILTER (?color = "grey" || ?color = "white" )
+# }

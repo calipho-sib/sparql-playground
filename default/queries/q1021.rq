@@ -1,8 +1,0 @@
-#title:Select persons with their name
-#comment:Selects subjects described with the rdf:type and dbp:name predicates. ?person, ?name are the variables, 
-#tags:2 graph patterns,2 variables
-    
-select ?person ?name where {
-	?person rdf:type dbo:Person .
-	?person dbp:name ?name .
-}

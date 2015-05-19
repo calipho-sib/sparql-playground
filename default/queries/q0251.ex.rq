@@ -1,0 +1,9 @@
+#title:Get all parents and their children
+#comment:Use the property dbo:parent
+#tags:inverse path
+
+select ?person ?son where {
+	?person dbo:parent ?son
+	
+	#check the inverse path as well ^dbo:parent 
+}

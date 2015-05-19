@@ -1,8 +1,0 @@
-#title:Get people with the species of their pets ??????
-#tags:2 graph patterns,2 variables
-#color:ex-blue
-
-SELECT distinct ?people ?species WHERE {
-  ?people tto:pet ?pet . 
-  ?pet rdf:type ?species .
-}

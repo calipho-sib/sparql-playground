@@ -1,0 +1,19 @@
+#title:Select Eve's grandfather
+#comment:Use the property dbo:parent
+#tags:exercise,2 graph patterns,3 variables,FILTER EXISTS
+   
+select ?grandfather where {
+	?grandfather dbo:parent  *** .
+	***	  	     ***         ttr:Eve  .
+}
+
+# Once you get ttr:John,
+# try to write the expression in only one line using '/'
+# knowing that:
+#
+#             ?a prop ?c .
+#			  ?c prop ?d .
+#
+# can be simplified like this:
+#
+#             ?a prop / prop ?d

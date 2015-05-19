@@ -1,0 +1,11 @@
+#title:Select things that are persons and their pets
+#comment:Selects subjects and objects connected with the predicate tto:pet,
+#comment:?thing and ?name are the variables
+#tags:1 graph pattern,2 variables
+#color:ex-blue
+    
+
+select ?person ?pet where {
+    ?person rdf:type dbo:Person .
+	?person tto:pet ?pet .
+}

@@ -1,9 +1,0 @@
-#title:Select things that have a color different from red
-#comment:Selects subjects described with the tto:color predicate where the object value is not "red". ?thing, ?color are the variables, 
-#comment:the filter defines 1 criterion to be met otherwise solutions are removed from the result set
-#tags:1 graph pattern,2 variables,FILTER,logical not equals : !=
-    
-select ?subj ?color where {
-	?subj tto:color ?color .
-	FILTER (?color != "red"^^xsd:string )
-}

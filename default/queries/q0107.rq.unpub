@@ -1,8 +1,0 @@
-#title:John's pets
-#comment:Selects objects linked to ttr:John with a tto:pet predicate. ?pet is the variable
-#tags:1 graph pattern,1 variable
-#color:ex-blue
-    
-select ?pet where {
-	ttr:John tto:pet ?pet .
-}

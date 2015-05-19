@@ -1,10 +1,8 @@
-#title:Get all parents and their children
-#comment:Use the property dbo:parent
-#tags:
+#title:Select all distinct sexes
+#comment:
+#tags:1 graph pattern,2 variables, distinct
 #color:ex-blue
-
-select ?person ?son where {
-	?person dbo:parent ?son
-	
-	#check the inverse path as well ^dbo:parent 
+    
+select distinct ?sex where {
+  ?thing tto:sex ?sex .
 }

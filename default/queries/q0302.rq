@@ -1,7 +1,7 @@
-#title:Get creature names starting with either R or I and ending by a x
+#title:Select creature names starting with either R or I and ending by a x
 #comment: uses a regex pattern (regular expressions) to find names meeting a complex criterion
 #tags:1 graph pattern,2 variables,FILTER,string function regex()
-#color:ex-violet
+#color:ex-red
 
 select * where {
   ?creature dbp:name ?name .

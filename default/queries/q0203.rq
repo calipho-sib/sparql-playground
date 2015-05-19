@@ -1,18 +1,25 @@
-#title:William's and John's pets 
-#comment:Selects ?owner and ?pet connected with a tto:pet predicate but only for the ?owner values provided in the VALUES clause
-#tags:1 graph pattern,2 variables,VALUES
+#title:Select all things that are persons and are female (women)
+#comment:
+#tags:1 graph pattern,1 variable, 2 conditions
 #color:ex-blue
-
-select ?owner ?pet where {
-	VALUES (?owner) { (ttr:William) (ttr:John) }
-	?owner tto:pet ?pet .
+    
+select ?thing where {
+  ?thing a dbo:Person .
+  ?thing tto:sex "female" .
 }
 
-#Or you can use Union
-# select ?pet where {
-#	{ 
-#		ttr:William tto:pet ?pet .
-#	} UNION {
-#		ttr:John tto:pet ?pet .
-#	}
+#Hint you can use semicolon ';' to refer to the previous subject 
+#select ?thing where {
+#  ?thing a dbo:Person ;
+#   		tto:sex "female" .
 #}
+
+
+
+
+
+#We could also use comma. If we had hermaphrodites in our dataset
+#select ?thing where {
+#  ?thing a dbo:Person ;
+#   		tto:sex "female" , "male"
+#

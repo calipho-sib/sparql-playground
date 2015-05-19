@@ -1,0 +1,14 @@
+#title:Select persons that DO NOT have any pets
+#comment:Selects subjects with their name but removes solutions. ?person, ?name ?pet are the variables
+#comment:note that the ?pet value is bound in the FILTER scope but is not bound in the SELECT scope 
+#tags:1 graph pattern,2 variables, filter exists
+#color:ex-blue
+    
+
+select ?person ?pet where {
+    ?person rdf:type dbo:Person .
+	filter not exists {?person tto:pet ?pet }.
+}
+
+# Note that the variable ?pet is not defined even if you use filter exists
+# filter exists {?person tto:pet ?_ }.
