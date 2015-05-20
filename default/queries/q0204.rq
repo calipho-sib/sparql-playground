@@ -1,9 +1,11 @@
 #title:Select all things that have a sex
 #comment:Selects subjects connected to the object dbo:Person via the predicate rdf:type
 #comment:?thing is the only variable
-#tags:1 graph pattern,2 variables
+#tags:1 graph pattern,2 variables,limit, offset
 #color:ex-blue
     
 select ?thing ?sex where {
   ?thing tto:sex ?sex .
 }
+
+#try to use the keywords limit and offset at the end of the query

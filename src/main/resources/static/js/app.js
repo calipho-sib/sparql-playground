@@ -118,8 +118,13 @@ function SnorqlCtrl( $scope,  $timeout, $window, $location,  snorql,  config) {
     });
   };
 
-  $scope.selectExample=function(elm){
-    snorql.query=snorql.examples[elm].sparql;
+  $scope.selectExample=function(elm, hideSparql){
+	  if(hideSparql){
+		  snorql.query="SELECT ... ";
+	  }else {
+		    snorql.query=snorql.examples[elm].sparql;
+	  }
+	  
     snorql.description=snorql.examples[elm].description;
     snorql.selectedQueryId=snorql.examples[elm].userQueryId;
     snorql.queryTitle=snorql.examples[elm].title;

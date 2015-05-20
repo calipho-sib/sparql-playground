@@ -332,6 +332,13 @@ fieldset[disabled] .navbar-snorql .btn-link:focus {
 	overflow-y: scroll;
 }
 
+.ex-btn-show {
+	position:absolute;
+	opacity:0.8; 
+	top: 0;
+	right: 0;
+}
+
 .ex-blue {
 	background-color : #CCFFFF
 }

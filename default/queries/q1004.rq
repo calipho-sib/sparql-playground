@@ -9,6 +9,9 @@
 #tags:2 graph patterns,2 variables,exercise level 2,BIND, date function YEAR()
 #color:f7c5e0
 
-SELECT ... {
-	...
+select ?name ?yearBorn where {
+  ?person rdf:type dbo:Person .
+  ?person dbp:birthDate ?birth .
+  ?person dbp:name ?name .
+  bind (year(?birth) as ?yearBorn)
 }
