@@ -1,9 +1,0 @@
-#title:Select the star Eve is a fan of
-#comment:Create a graph pattern starting from Eve to the star she's a fan of.
-#comment:The query should return one row with 1 column containing dbpedia:Harrison_Ford
-#tags:1 graph pattern,1 variable,exercise level 1
-#color:f7c5e0
-
-SELECT ... {
-	...
-}

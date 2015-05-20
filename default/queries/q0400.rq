@@ -1,6 +1,12 @@
-#title:Link Snuff monkey to Harrison Ford
-#comment: Use the data tab
-#img: 
+#title:Link the little monkey to Harrison Ford from dbpedia
 
-#or use insert....
 
+#comment: Insert the triple that links dbpedia:Harrison_Ford with the predicated tto:pet to the ttr:SnuffMonkey object
+#comment: once this is done, the query should not return any result
+
+#dbpedia:Harrison_Ford tto:pet ttr:SnuffMonkey.
+
+select ?pet ?owner where {
+  ?pet a / rdfs:subClassOf+ tto:Animal .
+  filter not exists {?owner tto:pet ?pet}
+}

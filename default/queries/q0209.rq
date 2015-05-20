@@ -1,0 +1,21 @@
+#title:William's and John's pets 
+#comment:Selects ?owner and ?pet connected with a tto:pet predicate but only for the ?owner values provided in the VALUES clause
+#tags:1 graph pattern,2 variables,values,union
+#color:ex-blue
+
+
+select ?pet where {	
+	{ 
+		ttr:William tto:pet ?pet .
+	} UNION {
+		ttr:John tto:pet ?pet .
+	}
+}
+
+#Alternatively you can use the keyword VALUES
+#
+#select ?owner ?pet where {
+#	VALUES (?owner) { (ttr:William) (ttr:John) }
+#	?owner tto:pet ?pet .
+#}
+

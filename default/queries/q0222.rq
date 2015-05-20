@@ -1,0 +1,23 @@
+#title:Select William's relatives (using both dbo:parent predicate path and inverse path)
+#comment:retrieves solutions for objects connected to the subject ttr:William using the noraml and inverse path of the tto:friend predicate
+#tags:1 graph pattern,1 variable,path syntax : inverse path ^,path syntax : alternative path |
+
+select ?relative where {
+  {ttr:William *** ?relative}
+  *** 
+  {?relative *** ttr:William}
+}
+
+# B) Once you get ttr:Eve and ttr:John try to explore the use of inverse path ^
+#
+# knowing that:
+#
+# 			?a :prop ?b
+#
+# is equivalent:
+#
+# 			?b ^:prop ?a
+
+# C) Once B) done, try out to write the query in one line using the pipe (|) which means OR
+#
+#  ttr:William (prop | ^prop) ?relative

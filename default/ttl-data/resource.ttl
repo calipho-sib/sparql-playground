@@ -56,10 +56,10 @@ ttr:RexDog
 	tto:weight 8.8 ;
 	.
 
-ttr:LonelyDog
-	rdf:type tto:Dog ;
-	dbp:name "Idefix";
-	tto:sex "male";
-	tto:color "white";
-	tto:weight 6.8 ;
-    .
+ttr:SnuffMonkey
+	rdf:type tto:Monkey ;
+	dbp:name "Snuff"^^xsd:string ;
+	tto:color "golden"^^xsd:string ;
+	tto:sex "male" ;
+	tto:weight "3.6"^^xsd:decimal ;
+	.

@@ -1,9 +1,0 @@
-#title:Select things that are dogs
-#comment:Create a graph pattern using the rdf:type predicate to connect any subject (i.e the variable ?thing) with the object tto:Dog
-#comment:The query should return one row containing ttr:BuddyDog
-#tags:1 graph pattern,1 variable,exercise level 1
-#color:f7c5e0
-
-SELECT ... {
-	...
-}

@@ -37,6 +37,12 @@ tto:Dog
 	rdfs:subClassOf tto:Animal ;
 	rdfs:isDefinedBy tto: . 
 
+tto:Monkey
+	rdf:type rdfs:Class;
+	rdfs:label "monkey"^^xsd:string;
+	rdfs:subClassOf tto:Animal ;
+	rdfs:isDefinedBy tto: . 
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # Properties
 # - - - - - - - - - - - - - - - - - - - - - - - - - - 

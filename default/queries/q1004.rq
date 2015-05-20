@@ -1,9 +1,14 @@
-#title:Get William's friends or relatives (using dbo:parent predicate path or dpo:parent inverse path or tto:pet predicate path)
-#comment:retrieves solutions for objects connected to the subject ttr:William 
-#comment:using using tto:friend predicate path or tto:friend inverse path or tto:pet predicate path
-#tags:1 graph pattern,1 variable,path syntax : inverse path ^,path syntax : alternative path |
-#color:ex-violet 
+#title:Get the person's names and the year they were born
+#comment:Use the tto:type predicate to get people,
+#comment:Use the YEAR() function to get the the sear they were born from their birth date 
+#comment:and use BIND to assign the value returned to a new variable.
+#comment:The query should return 3 rows with 2 columns like:
+#comment:ttr:John       "1982"
+#comment:ttr:William    "1988"
+#comment:ttr:Eve        "1986"
+#tags:2 graph patterns,2 variables,exercise level 2,BIND, date function YEAR()
+#color:f7c5e0
 
-select * where {
-  ttr:William dbo:parent | ^dbo:parent | tto:pet ?friendOrPet.
+SELECT ... {
+	...
 }

@@ -1,10 +1,15 @@
-#title:Select creature names starting with either R or I and ending by a x
-#comment: uses a regex pattern (regular expressions) to find names meeting a complex criterion
-#tags:1 graph pattern,2 variables,FILTER,string function regex()
-#color:ex-red
+#title:Select all instances that are animals
+#comment:Hint:use the property rdfs:subClassOf+, rdf:type and the class tto:Animal
+#tags:1 graph pattern,2 variables,FILTER,logical not equals : !=
+#color:ex-yellow
 
-select * where {
-  ?creature dbp:name ?name .
-  FILTER ( REGEX(?name, "^[RI].*x$" ) )
-} 
+select ?thing ?type where {
+  ?thing a ?type
+  ?type rdfs:subClassOf+ tto:Animal .
+}
 
+# or simply 
+#
+# select ?thing ?type where {
+#  ?thing a / rdfs:subClassOf+ tto:Animal .
+#}

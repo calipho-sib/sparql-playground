@@ -1,13 +1,15 @@
-#title:For each pet species get the number of pets and their average weight
-#comment:the graph pattern matching process generates the possible solutions as a list of ?species, ?pet and ?weight values tuples
-#comment:then for each ?species value (grouping criterion), the ?pet values are counted and the average ?weight is calculated
-#comment:with the aggregate functions COUNT() and AVG()
-#tags:exercise,3 graph patterns,3 variables,GROUP BY,aggregate function COUNT(),aggregate function AVG()
-#color:ex-violet
+#title:Get the count of pets by owner
+#comment:Use the tto:pet predicate to link owners to pets,
+#comment:In the SELECT variables, use the aggregate function COUNT() for pets,
+#comment:Add a GROUP BY clause and use the owner as the group criterion.
+#comment:The query should return 3 rows with 2 columns like:
+#comment:ttr:John               "1"
+#comment:ttr:William	        "2"
+#comment:dbpedia:Harrison_Ford	"1"
+#tags:1 graph pattern,2 variables,exercise level 2,GROUP BY,aggregate function COUNT()
+#color:f7c5e0
 
-select ?species (COUNT(?pet) as ?petCount) (AVG(?weight) as ?avgWeight) where {
-  ?species rdfs:subClassOf tto:Animal .
-  ?pet rdf:type ?species .
-  ?pet tto:weight ?weight .
-}
-GROUP BY ?species
+SELECT ... {
+	...
+} GROUP BY ... 
+

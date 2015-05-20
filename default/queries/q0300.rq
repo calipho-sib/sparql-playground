@@ -6,3 +6,4 @@
 select ?subSpecies   where {
   ?subSpecies rdfs:subClassOf tto:Creature .
 }
+

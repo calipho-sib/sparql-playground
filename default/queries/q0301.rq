@@ -6,3 +6,11 @@
 select ?subSpecies   where {
   ?subSpecies rdfs:subClassOf+ tto:Creature .
 }
+
+# There are different ways to express the property path level
+#
+# path+ | path+ | path*
+#
+#  * -> means 0 or more
+#  + -> means 1 or more
+#  ? -> means 0 or 1 

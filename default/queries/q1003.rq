@@ -1,8 +1,12 @@
-#title:Select William's relatives (using both dbo:parent predicate path and inverse path)
-#comment:retrieves solutions for objects connected to the subject ttr:William using the noraml and inverse path of the tto:friend predicate
-#tags:1 graph pattern,1 variable,path syntax : inverse path ^,path syntax : alternative path |
-#color:ex-violet
+#title:For each pet species get the number of pets and their average weight
+#comment:the graph pattern matching process generates the possible solutions as a list of ?species, ?pet and ?weight values tuples
+#comment:then for each ?species value (grouping criterion), the ?pet values are counted and the average ?weight is calculated
+#comment:with the aggregate functions COUNT() and AVG()
+#tags:exercise,3 graph patterns,3 variables,GROUP BY,aggregate function COUNT(),aggregate function AVG()
 
-select * where {
-  ttr:William dbo:parent | ^dbo:parent ?relatives.
+select ?species (COUNT(?pet) as ?petCount) (AVG(?weight) as ?avgWeight) where {
+  ?species rdfs:subClassOf tto:Animal .
+  ?pet rdf:type ?species .
+  ?pet tto:weight ?weight .
 }
+GROUP BY ?species

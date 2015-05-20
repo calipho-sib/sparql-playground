@@ -6,7 +6,6 @@
 #comment:applied after the set of solutions is ordered by ORDER BY clause.
 #comment:OFFSET and LIMIT, used together with an ORDER BY clause can be used for paging of results.
 #tags:1 graph pattern,2 variables,ORDER BY,LIMIT,OFFSET
-#color:ex-yellow
 
 SELECT ?class ?instance WHERE {
   ?instance rdf:type ?class . 

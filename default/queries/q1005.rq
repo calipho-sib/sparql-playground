@@ -2,7 +2,6 @@
 #comment:Uses strlen() and substr() string functions to get the name length, first 2 and last 2 characters.
 #comment:The function results are bound to the ?nameLength, ?namePrefix, ?namePostfix variables using BIND clauses.
 #tags:1 graph pattern,4 variables,BIND,string function strlen(),string function substr()
-#color:ex-violet
 
 select * where {
   ?thing dbp:name ?name .
