@@ -23,9 +23,9 @@ There are some datasets predefined:
 
 * Uses default dataset (cats and dogs): `java -jar sparql-playgroud.war`
 
-* Uses a sample of neXtProt dataset: `java -jar sparql-playgroud.war nextprot`
+* Uses a sample of neXtProt dataset: `java -jar sparql-playground.war nextprot`
 
-* Uses a sample of UniProt dataset `java -jar sparql-playgroud.war uniprot `
+* Uses a sample of UniProt dataset `java -jar sparql-playground.war uniprot `
 
 
 ##Create your own RDF dataset (and collaborate)
