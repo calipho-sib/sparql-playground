@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import ch.isb.sib.sparql.tutorial.Application;
@@ -23,6 +24,7 @@ public class PageService {
 	
 	private static final String ABOUT_PAGE = "99_About";
 
+    @Cacheable("page-tree")
 	public Map<String, Object> getPagesTree() throws IOException {
 
 		Map<String, Object> tree = new HashMap<String, Object>();
@@ -46,6 +48,7 @@ public class PageService {
 		return m;
 	}
 
+    @Cacheable("page")
 	public String getPage(String page) {
 		if(page.equals(ABOUT_PAGE)){
 			return IOUtils.readFile("README.md", null);
@@ -54,12 +57,15 @@ public class PageService {
 		}
 	}
 
-	public byte[] getAsset(String asset) {
+    @Cacheable("asset")
+	public byte[] getImageOrTry(String ... image ) {
 	
 		File f = null;
-		f = new File(Application.FOLDER + "/pages/assets/" + asset + ".png");
+		f = new File(image[0]);
 		if(!f.exists()){
-			f = new File("assets/" + asset + ".png");
+			if(image.length > 1){
+				f = new File(image[1]);
+			}
 		}
 		return IOUtils.readImage(f);
 	}

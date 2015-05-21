@@ -3,6 +3,7 @@ package ch.isb.sib.sparql.tutorial.controller;
 import java.io.IOException;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.openrdf.query.QueryEvaluationException;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import ch.isb.sib.sparql.tutorial.exception.SparqlTutorialException;
 import ch.isb.sib.sparql.tutorial.service.SparqlService;
 
 /**
@@ -45,8 +47,13 @@ public class SparqlController {
 	}
 
 	@RequestMapping(value = "/ttl-data", method = RequestMethod.PUT)
-	public long sparqlData(@RequestParam(value = "data", required = true) String data) throws QueryEvaluationException, Exception {
-		return sparqlService.loadData(data);
+	public long sparqlData(@RequestParam(value = "data", required = true) String data, HttpServletRequest request) throws QueryEvaluationException, Exception {
+
+		if("localhost".equals(request.getLocalName())){
+			return sparqlService.loadData(data);
+		}else {
+			throw new SparqlTutorialException("You must run the application in localhost in order to load data. Download it on GitHub by following the link 'For Developers'");
+		}
 	}
 
 

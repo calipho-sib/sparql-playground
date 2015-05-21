@@ -15,6 +15,7 @@ import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 
 import ch.isb.sib.sparql.tutorial.domain.SparqlQuery;
@@ -60,6 +61,7 @@ public class QueryDictionary {
 		return buildSparqlQueryFromRawContent(queryId, sparqlRaw);
 	}
 
+	@Cacheable("queries")
 	public synchronized List<SparqlQuery> getQueries(String folder) {
 		Map<String, String> map = getResourcesMap(folder);
 		Collection<String> queries = map.keySet();
@@ -161,6 +163,7 @@ public class QueryDictionary {
 		return meta;
 	}
 
+	@Cacheable("faqs")
 	public List<SparqlQuery> getFaqs() {
 		return this.getQueries("faqs");
 	}

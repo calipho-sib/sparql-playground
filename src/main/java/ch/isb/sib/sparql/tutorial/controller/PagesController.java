@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import ch.isb.sib.sparql.tutorial.Application;
 import ch.isb.sib.sparql.tutorial.service.PageService;
 
 /**
@@ -35,7 +36,7 @@ public class PagesController {
 	
 	@RequestMapping(value = "/assets/{asset}")
 	public @ResponseBody byte[] asset(@PathVariable("asset") String asset) throws IOException {
-		return pageService.getAsset(asset);
+		return pageService.getImageOrTry(Application.FOLDER + "/pages/assets/" + asset + ".png", "assets/" + asset + ".png");
 	}
 	
 

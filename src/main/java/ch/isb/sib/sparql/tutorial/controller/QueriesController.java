@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ch.isb.sib.sparql.tutorial.Application;
 import ch.isb.sib.sparql.tutorial.domain.SparqlQuery;
 import ch.isb.sib.sparql.tutorial.repository.QueryDictionary;
+import ch.isb.sib.sparql.tutorial.service.PageService;
 import ch.isb.sib.sparql.tutorial.utils.IOUtils;
 
 /**
@@ -25,8 +26,8 @@ import ch.isb.sib.sparql.tutorial.utils.IOUtils;
 @RestController
 public class QueriesController {
 
-	@Autowired
-	QueryDictionary queryDictionary;
+	@Autowired	QueryDictionary queryDictionary;
+	@Autowired	PageService pageService;
 
 	@RequestMapping(value = "/queries", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<SparqlQuery> queries() throws IOException {
@@ -35,7 +36,7 @@ public class QueriesController {
 	
 	@RequestMapping(value = "/queries/{queryId}")
 	public @ResponseBody byte[] queryImage(@PathVariable("queryId") String queryId) throws IOException {
-		return IOUtils.readImage(new File(Application.FOLDER + "/queries/" + queryId + ".png"));
+		return pageService.getImageOrTry(Application.FOLDER + "/queries/" + queryId + ".png");
 	}
 
 	@RequestMapping(value = "/rdfhelp", produces = MediaType.APPLICATION_JSON_VALUE)
