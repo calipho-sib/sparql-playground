@@ -11,5 +11,6 @@ select ?person ?name where {
 	}
 }
 
-#Alternatively try to return the 2 cats of John 
-#along with the variable ?person and ?name
+# Alternatively try to return the 2 cats of John ?pet
+# along with the variable ?person and ?name
+# remember that variables can not be defined inside filter exists

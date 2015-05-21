@@ -1,5 +1,4 @@
-#title:Link the little monkey to Harrison Ford from dbpedia
-
+#title:Search for lonely pets and try to find them a nice owner :)
 
 #comment: Insert the triple that links dbpedia:Harrison_Ford with the predicated tto:pet to the ttr:SnuffMonkey object
 #comment: once this is done, the query should not return any result
