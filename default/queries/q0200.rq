@@ -3,14 +3,14 @@
 #comment:?thing is the only variable
 #tags:1 graph pattern,1 variable
 #color:ex-blue
-#img:cartoon-diagram
+#img:cartoon-rdf-type
     
 select ?thing where {
-  ?thing a dbo:Person .
+  ?thing rdf:type dbo:Person .
 }
 
 #Remember in data tab we can see: 'ttr:John a dbo:Person'
-#'rdf:type' can also be used instead of 'a' 
+#'a' can also be used instead of 'rdf:type' 
 #'a' is a synonym of 'rdf:type'
 
 #Explore snorql
