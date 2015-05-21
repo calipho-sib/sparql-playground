@@ -10,7 +10,7 @@ It is beeing developed at the <a target="_blank" href="https://www.isb-sib.ch/">
 
 ##Installation
 * Download the [latest release](https://github.com/calipho-sib/sparql-playground/tarball/master)
-* Unzip and enter the folder, then run: `java -jar sparql-playgroud.war` (requires Java 1.7 or higher)
+* Unzip and enter the folder, then run: `java -jar sparql-playground.war` (requires Java 1.7 or higher)
 * Once the application started you should open your browser on: <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>
 
 <a href="assets/screenshot.png" target="_blank"><img width="90%" src="assets/screenshot.png"/></a>
