@@ -3,6 +3,7 @@
 #comment:?thing is the only variable
 #tags:1 graph pattern,1 variable
 #color:ex-blue
+#img:cartoon-diagram
     
 select ?thing where {
   ?thing a dbo:Person .
@@ -14,3 +15,5 @@ select ?thing where {
 
 #Explore snorql
 #Click on ttr:William to see the properties attached
+
+#The name of the variable can be anything

@@ -4,7 +4,7 @@
 #color:ex-yellow
 
 select ?thing ?type where {
-  ?thing a ?type
+  ?thing a ?type .
   ?type rdfs:subClassOf+ tto:Animal .
 }
 

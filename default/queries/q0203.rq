@@ -8,6 +8,10 @@ select ?thing where {
   ?thing tto:sex "female" .
 }
 
+
+#Use the same name of the variable in the 2 statements
+#The name of the variable makes the constraints
+
 #Hint you can use semicolon ';' to refer to the previous subject 
 #select ?thing where {
 #  ?thing a dbo:Person ;

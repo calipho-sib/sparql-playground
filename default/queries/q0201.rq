@@ -7,3 +7,5 @@
 select ?thing where {
   ?thing tto:sex "female" .
 }
+
+#Takes as well the pets

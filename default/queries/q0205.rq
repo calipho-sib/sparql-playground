@@ -1,8 +1,0 @@
-#title:Select all distinct sexes
-#comment:
-#tags:1 graph pattern,2 variables, distinct
-#color:ex-blue
-    
-select distinct ?sex where {
-  ?thing tto:sex ?sex .
-}

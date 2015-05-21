@@ -9,3 +9,4 @@ select ?thing ?sex where {
 }
 
 #try to use the keywords limit and offset at the end of the query
+#in the select replace ?thing with distinct 
