@@ -3,8 +3,8 @@
 #tags:exercise,2 graph patterns,3 variables,FILTER EXISTS
    
 select ?grandfather where {
-	?grandfather dbo:parent  *** .
-	***	  	     ***         ttr:Eve  .
+	ttr:Eve dbo:parent  *** .
+	***	  	     ***   ?grandfather  .
 }
 
 # Once you get ttr:John,
