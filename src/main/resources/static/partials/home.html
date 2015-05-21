@@ -76,7 +76,7 @@
                 </p>
                </a>
               	<button style="position:absolute" ng-if="example.img"  ng-click="example.show=!example.show"  type="button" class="btn btn-info btn-xs pull-right ex-btn-show">{{example.show ? "hide" : "show"}} diagram</button>
-	            <img style="margin:10px; width:90%" ng-if="example.show && example.img" ng-src="queries/{{example.img}}">
+	            <a target="_blank" href="queries/{{example.img}}.png"><img style="margin:10px; width:90%" ng-if="example.show && example.img" ng-src="queries/{{example.img}}"></a>
                 <button style="" ng-if="example.userQueryId > 1000" ng-click="selectExample(example.index)"  type="button" class="btn btn-info btn-xs pull-right ex-btn-show">show</button>
             </div>
             

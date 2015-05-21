@@ -1,9 +1,9 @@
 #title:Search for lonely pets and try to find them a nice owner :)
 
-#comment: Insert the triple that links dbpedia:Harrison_Ford with the predicated tto:pet to the ttr:SnuffMonkey object
-#comment: once this is done, the query should not return any result
+#comment: Insert the triple using the data tab (you must be running in localhost)
 
 #dbpedia:Harrison_Ford tto:pet ttr:SnuffMonkey.
+#This query shows pet without owners
 
 select ?pet ?owner where {
   ?pet a / rdfs:subClassOf+ tto:Animal .
