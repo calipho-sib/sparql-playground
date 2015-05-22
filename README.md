@@ -9,6 +9,7 @@ It uses Sesame 2.7.9 as SPARQL Engine.
 It is beeing developed at the <a target="_blank" href="https://www.isb-sib.ch/">Swiss Institute of Bioinformatics</a>.  
 
 You can see a live demo here: http://sparql-playground.isb-sib.ch/
+
 You can also see a live version of nextprot samples here: http://sparql-playground.nextprot.org/
 
 
