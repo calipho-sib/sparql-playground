@@ -6,3 +6,7 @@ The following diagram shows you the main resources it contains.
 This is a simplified version (all triplets can be seen in the [data](/data) tab)
 
 <a href="assets/model.png" target="_blank"><img size="90%" src="assets/model.png"/></a>
+
+#Properties
+
+<a href="assets/ontology-properties.png" target="_blank"><img width="90%" src="assets/ontology-properties.png"/></a>

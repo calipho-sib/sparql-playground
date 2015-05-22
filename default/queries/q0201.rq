@@ -1,5 +1,5 @@
 #title:Select all things that are females
-#comment:Selects subjects connected to the object dbo:Person via the predicate rdf:type
+#comment:Selects subjects connected to the literal "female" via the predicate tto:sex
 #comment:?thing is the only variable
 #tags:1 graph pattern,1 variable
 #img:cartoon-female
@@ -9,4 +9,4 @@ select ?thing where {
   ?thing tto:sex "female" .
 }
 
-#Takes as well the pets
+#Notice that the pets are also taken

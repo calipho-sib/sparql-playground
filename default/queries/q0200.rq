@@ -9,11 +9,14 @@ select ?thing where {
   ?thing rdf:type dbo:Person .
 }
 
-#Remember in data tab we can see: 'ttr:John a dbo:Person'
-#'a' can also be used instead of 'rdf:type' 
-#'a' is a synonym of 'rdf:type'
+# Remember in data tab we can see: 'ttr:John a dbo:Person'
+#
+# 'a' can also be used instead of 'rdf:type' 
+# 'a' is a synonym of 'rdf:type'
 
-#Explore snorql
-#Click on ttr:William to see the properties attached
+# The name of the variable can have any value
 
-#The name of the variable can be anything
+# Explore snorql:
+#
+# Click on ttr:William to see the properties attached
+
