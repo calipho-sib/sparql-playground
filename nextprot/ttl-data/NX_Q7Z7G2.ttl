@@ -1,0 +1,6029 @@
+@prefix : <http://nextprot.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix up: <http://purl.uniprot.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix entry: <http://nextprot.org/rdf/entry/> .
+@prefix isoform: <http://nextprot.org/rdf/isoform/> .
+@prefix annotation: <http://nextprot.org/rdf/annotation/> .
+@prefix evidence: <http://nextprot.org/rdf/evidence/> .
+@prefix xref: <http://nextprot.org/rdf/xref/> .
+@prefix publication: <http://nextprot.org/rdf/publication/> .
+@prefix identifier: <http://nextprot.org/rdf/identifier/> .
+@prefix cv: <http://nextprot.org/rdf/terminology/> .
+@prefix gene: <http://nextprot.org/rdf/gene/> .
+@prefix source: <http://nextprot.org/rdf/source/> .
+@prefix db: <http://nextprot.org/rdf/db/> .
+@prefix context: <http://nextprot.org/rdf/context/> .
+@prefix interaction: <http://nextprot.org/rdf/interaction/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix unipage: <http://www.uniprot.org/uniprot/> .
+
+# 
+entry:NX_Q7Z7G2 a :Entry;
+  skos:exactMatch uniprot:Q7Z7G2;
+  :swissprotPage unipage:Q7Z7G2;
+  :isoform isoform:NX_Q7Z7G2-1 ;
+  .
+
+isoform:NX_Q7Z7G2-1 :swissprotDisplayed "true"^^xsd:boolean . 
+
+
+# Overview
+entry:NX_Q7Z7G2 
+    :existence      :Evidence_at_protein_level;
+    :family [
+       rdf:type :FamilyInfo ;
+       :accession cv:FA-00720 ;
+       :description "Belongs to the complexin/synaphin family."^^xsd:string ;
+      ];
+      :recommendedName [
+    rdf:type :Name;
+    :fullName "Complexin-4"^^xsd:string;
+  ];
+  :alternativeName [
+    rdf:type :Name;
+        :fullName "Complexin IV"^^xsd:string;
+  ];
+  :alternativeName [
+    rdf:type :Name;
+        :shortName "CPX IV"^^xsd:string;
+  ];
+    :history[
+      rdf:type :History;
+      :name "neXtProt"^^xsd:string; 
+      :integrated "2010-03-01"^^xsd:string; 
+      :updated "2015-05-04"^^xsd:string;
+    ];
+    :history[   
+        rdf:type :History;
+        :name "UniProtKB"^^xsd:string;
+        :integrated "2006-06-13"^^xsd:string;
+        :updated "2015-04-29"^^xsd:string;
+        :version "90"^^xsd:string;
+        :lastSequenceUpdate "2003-10-01"^^xsd:string;
+        :sequenceVersion "1"^^xsd:string;
+    ];    
+    .
+
+# Keywords 
+# Classifications (Keywords and Enzymes) 
+entry:NX_Q7Z7G2 
+  :classifiedWith cv:KW-0268;
+  :classifiedWith cv:KW-0449;
+  :classifiedWith cv:KW-0472;
+  :classifiedWith cv:KW-0488;
+  :classifiedWith cv:KW-0532;
+  :classifiedWith cv:KW-0636;
+  :classifiedWith cv:KW-0770;
+  :classifiedWith cv:KW-0813;
+  :classifiedWith cv:KW-0965;
+  .
+
+# Gene
+entry:NX_Q7Z7G2 :gene gene:ENSG00000166569.
+gene:ENSG00000166569 a :Gene;
+    :name "CPLX4"^^xsd:string;
+    :band "q21.32"^^xsd:string; 
+    :strand "-1"^^xsd:string;
+    :chromosome "18"^^xsd:string;
+    :begin "56942388"^^xsd:integer; 
+    :end "56985881"^^xsd:integer;  
+    :length "43493"^^xsd:integer;  
+    .
+
+
+# Isoform information
+
+isoform:NX_Q7Z7G2-1 a :Isoform;
+  :sequence [
+    rdf:type :ProteinSequence ; 
+    :isoelectricPoint "4.54"^^xsd:double ;
+    :molecularWeight "18336"^^xsd:double ;
+    :length "160"^^xsd:integer ;
+    :chain  "MAFLMKSMISNQVKNLGFGGGSEENKEEGGASDPAAAQGMTREEYEEYQKQMIEEKMERDAAFTQKKAERACLRVHLREKYRLPKSEMDENQIQMAGDDVDLPEDLRKMVDEDQEEEEDKDSILGQIQNLQNMDLDTIKEKAQATFTEIKQTAEQKCSVM"^^xsd:string ;
+  ];
+  .
+
+# Annotations
+
+isoform:NX_Q7Z7G2-1 :ptm annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0009 .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0009 .
+isoform:NX_Q7Z7G2-1 :modifiedResidue annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0009 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0009 a :ModifiedResidue;
+  :entryAnnotationId "AN_Q7Z7G2_0009"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:PTM-0105;
+  rdfs:comment "Cysteine methyl ester"^^xsd:string;
+  :start "157"^^xsd:integer;
+  :end "157"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0009 :evidence evidence:85320375. 
+evidence:85320375 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :processingProduct annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0008 .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0008 .
+isoform:NX_Q7Z7G2-1 :maturationPeptide annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0008 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0008 a :MaturationPeptide;
+  :entryAnnotationId "AN_Q7Z7G2_0008"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Removed in mature form"^^xsd:string;
+  :start "158"^^xsd:integer;
+  :end "160"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0008 :evidence evidence:85320376. 
+evidence:85320376 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :processingProduct annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0007 .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0007 .
+isoform:NX_Q7Z7G2-1 :matureProtein annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0007 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0007 a :MatureProtein;
+  :entryAnnotationId "AN_Q7Z7G2_0007"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Complexin-4"^^xsd:string;
+  :start "1"^^xsd:integer;
+  :end "157"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0007 :evidence evidence:85320377. 
+evidence:85320377 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000305;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :ptm annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0010 .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0010 .
+isoform:NX_Q7Z7G2-1 :lipidationSite annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0010 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0010 a :LipidationSite;
+  :entryAnnotationId "AN_Q7Z7G2_0010"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:PTM-0277;
+  rdfs:comment "S-farnesyl cysteine"^^xsd:string;
+  :start "157"^^xsd:integer;
+  :end "157"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0010 :evidence evidence:85320378. 
+evidence:85320378 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0171 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0171 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0171 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0171"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "E"^^xsd:string;
+  :variation "Q"^^xsd:string;
+  :start "154"^^xsd:integer;
+  :end "154"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0171 :evidence evidence:91403390. 
+evidence:91403390 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1391;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM709220"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0172 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0172 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0172 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0172"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "E"^^xsd:string;
+  :variation "D"^^xsd:string;
+  :start "55"^^xsd:integer;
+  :end "55"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0172 :evidence evidence:91403391. 
+evidence:91403391 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:965;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM438277"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000191 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000191 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000191 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000191"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "D"^^xsd:string;
+  :variation "E"^^xsd:string;
+  :start "89"^^xsd:integer;
+  :end "89"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000191 :evidence evidence:80366750. 
+evidence:80366750 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs185848311"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000190 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000190 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000190 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000190"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "Q"^^xsd:string;
+  :variation "K"^^xsd:string;
+  :start "12"^^xsd:integer;
+  :end "12"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000190 :evidence evidence:80366748. 
+evidence:80366748 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs143459722"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000189 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000189 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000189 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000189"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "V"^^xsd:string;
+  :variation "M"^^xsd:string;
+  :start "159"^^xsd:integer;
+  :end "159"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000189 :evidence evidence:80366747. 
+evidence:80366747 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs202101844"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000192 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000192 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000192 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000192"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "E"^^xsd:string;
+  :variation "K"^^xsd:string;
+  :start "90"^^xsd:integer;
+  :end "90"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000192 :evidence evidence:80366753. 
+evidence:80366753 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs78869871"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0070 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0070 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0070 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0070"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "R"^^xsd:string;
+  :variation "Q"^^xsd:string;
+  :start "107"^^xsd:integer;
+  :end "107"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0070 :evidence evidence:36519621. 
+evidence:36519621 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs144069269"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0073 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0073 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0073 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0073"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "G"^^xsd:string;
+  :variation "S"^^xsd:string;
+  :start "20"^^xsd:integer;
+  :end "20"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0073 :evidence evidence:36519626. 
+evidence:36519626 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs145936799"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0170 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0170 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0170 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0170"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "D"^^xsd:string;
+  :variation "Y"^^xsd:string;
+  :start "121"^^xsd:integer;
+  :end "121"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0170 :evidence evidence:91403389. 
+evidence:91403389 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1339;
+  :reference publication:5256c4948f355eacb090349e7390fdb8;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0170 :evidence evidence:91403388. 
+evidence:91403388 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1463;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM280104"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000183 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000183 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000183 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000183"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "EEY"^^xsd:string;
+  :variation ""^^xsd:string;
+  :start "43"^^xsd:integer;
+  :end "45"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000183 :evidence evidence:91403409. 
+evidence:91403409 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:8496;
+  :reference publication:7f92930aab17cc238d87dbc6840ca5e9;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000183 :evidence evidence:91403408. 
+evidence:91403408 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:8496;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM1684549"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000184 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000184 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000184 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000184"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "E"^^xsd:string;
+  :variation "K"^^xsd:string;
+  :start "117"^^xsd:integer;
+  :end "117"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000184 :evidence evidence:91403412. 
+evidence:91403412 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1606;
+  :reference publication:7eda2f40d9733d91ffcb06a7e945e9ec;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000184 :evidence evidence:91403413. 
+evidence:91403413 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1606;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM1686272"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0083 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0083 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0083 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0083"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "G"^^xsd:string;
+  :variation "E"^^xsd:string;
+  :start "29"^^xsd:integer;
+  :end "29"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0083 :evidence evidence:91403379. 
+evidence:91403379 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1916;
+  :reference publication:03c954a340af900e9171863e704305d1;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0083 :evidence evidence:91403378. 
+evidence:91403378 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1916;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM223951"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000269 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000269 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000269 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000269"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "A"^^xsd:string;
+  :variation "T"^^xsd:string;
+  :start "96"^^xsd:integer;
+  :end "96"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000269 :evidence evidence:91403383. 
+evidence:91403383 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1606;
+  :reference publication:5784bb4ec69f350e4da936e0494fdbc8;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000269 :evidence evidence:91403382. 
+evidence:91403382 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1606;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM1718495"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0084 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0084 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0084 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0084"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "M"^^xsd:string;
+  :variation "I"^^xsd:string;
+  :start "57"^^xsd:integer;
+  :end "57"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0084 :evidence evidence:91403385. 
+evidence:91403385 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1463;
+  :reference publication:2a3c2e50c6bc777e610caae9afed12b7;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0084 :evidence evidence:91403386. 
+evidence:91403386 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1463;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM70289"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0082 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0082 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0082 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0082"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "C"^^xsd:string;
+  :variation "R"^^xsd:string;
+  :start "157"^^xsd:integer;
+  :end "157"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0082 :evidence evidence:91403373. 
+evidence:91403373 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1212;
+  :reference publication:3dac4faa650665e7d5e7bb25bf169a19;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0082 :evidence evidence:91403374. 
+evidence:91403374 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1212;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM144804"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0169 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0169 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0169 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0169"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "D"^^xsd:string;
+  :variation "A"^^xsd:string;
+  :start "101"^^xsd:integer;
+  :end "101"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0169 :evidence evidence:91403387. 
+evidence:91403387 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1120;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM460112"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000177 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000177 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000177 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000177"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "MI"^^xsd:string;
+  :variation "I"^^xsd:string;
+  :start "8"^^xsd:integer;
+  :end "9"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000177 :evidence evidence:91403392. 
+evidence:91403392 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1339;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM1389370"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000179 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000179 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000179 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000179"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "S"^^xsd:string;
+  :variation "G"^^xsd:string;
+  :start "10"^^xsd:integer;
+  :end "10"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000179 :evidence evidence:91403398. 
+evidence:91403398 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1327;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM1389369"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000178 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000178 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000178 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000178"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "D"^^xsd:string;
+  :variation "N"^^xsd:string;
+  :start "105"^^xsd:integer;
+  :end "105"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000178 :evidence evidence:91403393. 
+evidence:91403393 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1372;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM1564025"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0081 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0081 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0081 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0081"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "E"^^xsd:string;
+  :variation "K"^^xsd:string;
+  :start "112"^^xsd:integer;
+  :end "112"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0081 :evidence evidence:91403367. 
+evidence:91403367 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:965;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM160177"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0081 :evidence evidence:91403368. 
+evidence:91403368 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:965;
+  :reference publication:a5c1470f0f431784e83d57ada9d70003;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000276 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000276 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000276 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000276"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "A"^^xsd:string;
+  :variation "V"^^xsd:string;
+  :start "153"^^xsd:integer;
+  :end "153"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000276 :evidence evidence:91403369. 
+evidence:91403369 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:2002;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM170105"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000277 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000277 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000277 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000277"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "N"^^xsd:string;
+  :variation "I"^^xsd:string;
+  :start "25"^^xsd:integer;
+  :end "25"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000277 :evidence evidence:91403371. 
+evidence:91403371 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1606;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM3526826"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000278 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000278 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000278 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000278"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "V"^^xsd:string;
+  :variation "L"^^xsd:string;
+  :start "100"^^xsd:integer;
+  :end "100"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000278 :evidence evidence:91403376. 
+evidence:91403376 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1476;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM4140127"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000279 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000279 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000279 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000279"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "M"^^xsd:string;
+  :variation "I"^^xsd:string;
+  :start "5"^^xsd:integer;
+  :end "5"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000279 :evidence evidence:91403380. 
+evidence:91403380 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1606;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM3526827"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000280 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000280 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000280 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000280"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "D"^^xsd:string;
+  :variation "Y"^^xsd:string;
+  :start "136"^^xsd:integer;
+  :end "136"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000280 :evidence evidence:91403394. 
+evidence:91403394 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1391;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM3959304"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000281 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000281 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000281 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000281"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "K"^^xsd:string;
+  :variation "Q"^^xsd:string;
+  :start "150"^^xsd:integer;
+  :end "150"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000281 :evidence evidence:91403396. 
+evidence:91403396 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1606;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM3526825"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000282 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000282 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000282 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000282"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "T"^^xsd:string;
+  :variation "A"^^xsd:string;
+  :start "137"^^xsd:integer;
+  :end "137"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000282 :evidence evidence:91403400. 
+evidence:91403400 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:2002;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM4072795"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0080 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0080 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0080 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0080"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "K"^^xsd:string;
+  :variation "N"^^xsd:string;
+  :start "14"^^xsd:integer;
+  :end "14"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0080 :evidence evidence:91403366. 
+evidence:91403366 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:965;
+  :reference publication:a5c1470f0f431784e83d57ada9d70003;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0080 :evidence evidence:91403365. 
+evidence:91403365 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:965;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM160176"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0163 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0163 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0163 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0163"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "A"^^xsd:string;
+  :variation "E"^^xsd:string;
+  :start "31"^^xsd:integer;
+  :end "31"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0163 :evidence evidence:91403403. 
+evidence:91403403 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1398;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM319650"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0163 :evidence evidence:91403404. 
+evidence:91403404 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1398;
+  :reference publication:d5409f4a047f6a526dc821199276b184;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0164 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0164 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0164 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0164"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "R"^^xsd:string;
+  :variation "I"^^xsd:string;
+  :start "74"^^xsd:integer;
+  :end "74"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0164 :evidence evidence:91403406. 
+evidence:91403406 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1339;
+  :reference publication:07d2f817f609bbe16956462f1156d89d;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0164 :evidence evidence:91403405. 
+evidence:91403405 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1339;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM1202150"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0165 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0165 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0165 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0165"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "V"^^xsd:string;
+  :variation "A"^^xsd:string;
+  :start "100"^^xsd:integer;
+  :end "100"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0165 :evidence evidence:91403375. 
+evidence:91403375 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1305;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM1136068"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0166 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0166 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0166 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0166"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "E"^^xsd:string;
+  :variation "Q"^^xsd:string;
+  :start "47"^^xsd:integer;
+  :end "47"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0166 :evidence evidence:91403410. 
+evidence:91403410 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1390;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM357550"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0166 :evidence evidence:91403411. 
+evidence:91403411 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1390;
+  :reference publication:4dfb568a53e4d6fab476d73503c9f1e3;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0167 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0167 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0167 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0167"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "L"^^xsd:string;
+  :variation "I"^^xsd:string;
+  :start "106"^^xsd:integer;
+  :end "106"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0167 :evidence evidence:91403414. 
+evidence:91403414 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1390;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM352703"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0167 :evidence evidence:91403415. 
+evidence:91403415 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1390;
+  :reference publication:4dfb568a53e4d6fab476d73503c9f1e3;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0168 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0168 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0168 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_0168"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "Y"^^xsd:string;
+  :variation "H"^^xsd:string;
+  :start "48"^^xsd:integer;
+  :end "48"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0168 :evidence evidence:91403384. 
+evidence:91403384 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1125;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM989340"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000180 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000180 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000180 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000180"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "S"^^xsd:string;
+  :variation "Y"^^xsd:string;
+  :start "122"^^xsd:integer;
+  :end "122"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000180 :evidence evidence:91403401. 
+evidence:91403401 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1125;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM989337"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000181 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000181 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000181 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000181"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "L"^^xsd:string;
+  :variation "I"^^xsd:string;
+  :start "124"^^xsd:integer;
+  :end "124"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000181 :evidence evidence:91403402. 
+evidence:91403402 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1125;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM989336"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000182 .
+isoform:NX_Q7Z7G2-1 :variant annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000182 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000182 a :Variant;
+  :entryAnnotationId "AN_Q7Z7G2_000182"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "I"^^xsd:string;
+  :variation "S"^^xsd:string;
+  :start "53"^^xsd:integer;
+  :end "53"^^xsd:integer;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000182 :evidence evidence:91403407. 
+evidence:91403407 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1125;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM989339"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000272 .
+isoform:NX_Q7Z7G2-1 :function annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000272 .
+isoform:NX_Q7Z7G2-1 :functionInfo annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000272 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000272 a :FunctionInfo;
+  :entryAnnotationId "AN_Q7Z7G2_000272"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Positively regulates a late step in synaptic vesicle exocytosis."^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000272 :evidence evidence:85320374. 
+evidence:85320374 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000273 .
+isoform:NX_Q7Z7G2-1 :interaction annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000273 .
+isoform:NX_Q7Z7G2-1 :interactionInfo annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000273 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000273 a :InteractionInfo;
+  :entryAnnotationId "AN_Q7Z7G2_000273"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Weakly binds to the SNARE core complex containing SNAP25, VAMP2 and STX1A."^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000273 :evidence evidence:85320365. 
+evidence:85320365 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0057 .
+isoform:NX_Q7Z7G2-1 :cellularComponent annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0057 .
+isoform:NX_Q7Z7G2-1 :subcellularLocation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0057 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0057 a :SubcellularLocation;
+  :entryAnnotationId "AN_Q7Z7G2_0057"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:SL-0258;
+  rdfs:comment "Synapse"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0057 :evidence evidence:85320371. 
+evidence:85320371 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0003 .
+isoform:NX_Q7Z7G2-1 :cellularComponent annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0003 .
+isoform:NX_Q7Z7G2-1 :subcellularLocation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0003 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0003 a :SubcellularLocation;
+  :entryAnnotationId "AN_Q7Z7G2_0003"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:SL-0162;
+  rdfs:comment "Membrane"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0003 :evidence evidence:85320370. 
+evidence:85320370 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000231 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000231 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000231 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000231 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000231 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000231"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2171;
+  rdfs:comment "Lymph node nongerminal center cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000231 :negativeEvidence evidence:84004436. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000231 :evidence evidence:84004436. 
+evidence:84004436 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8441;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/lymph node"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000206 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000206 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000206 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000206 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000206 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000206"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1256;
+  rdfs:comment "Cerebral cortex glial cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000206 :negativeEvidence evidence:84004407. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000206 :evidence evidence:84004407. 
+evidence:84004407 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8407;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/cerebral cortex"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000205 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000205 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000205 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000205 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000205 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000205"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2372;
+  rdfs:comment "Cerebral cortex endothelial cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000205 :evidence evidence:84004406. 
+evidence:84004406 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8444;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/cerebral cortex"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000204 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000204 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000204 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000204 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000204 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000204"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0845;
+  rdfs:comment "Purkinje cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000204 :negativeEvidence evidence:84004405. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000204 :evidence evidence:84004405. 
+evidence:84004405 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8391;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/cerebellum"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000203 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000203 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000203 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000203 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000203 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000203"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1248;
+  rdfs:comment "Cerebellum molecular layer"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000203 :negativeEvidence evidence:84004404. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000203 :evidence evidence:84004404. 
+evidence:84004404 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8401;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/cerebellum"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000202 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000202 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000202 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000202 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000202 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000202"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1247;
+  rdfs:comment "Cerebellum granular layer"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000202 :negativeEvidence evidence:84004403. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000202 :evidence evidence:84004403. 
+evidence:84004403 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8400;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/cerebellum"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000201 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000201 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000201 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000201 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000201 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000201"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2399;
+  rdfs:comment "Bronchus epithelial cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000201 :negativeEvidence evidence:84004402. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000201 :evidence evidence:84004402. 
+evidence:84004402 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8453;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/bronchus"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000267 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000267 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000267 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000267 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000267 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000267"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1254;
+  rdfs:comment "Vagina squamous cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000267 :evidence evidence:84004474. 
+evidence:84004474 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8406;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/vagina"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000265 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000265 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000265 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000265 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000265 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000265"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1266;
+  rdfs:comment "Endometrium stroma"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000265 :negativeEvidence evidence:84004417. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000265 :evidence evidence:84004417. 
+evidence:84004417 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8416;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/endometrium 2"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000265 :negativeEvidence evidence:84004416. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000265 :evidence evidence:84004416. 
+evidence:84004416 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8416;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/endometrium 1"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000264 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000264 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000264 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000264 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000264 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000264"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1253;
+  rdfs:comment "Tonsil squamous cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000264 :negativeEvidence evidence:84004473. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000264 :evidence evidence:84004473. 
+evidence:84004473 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8405;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/tonsil"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000240 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000240 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000240 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000240 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000240 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000240"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1280;
+  rdfs:comment "Prostate glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000240 :evidence evidence:84004445. 
+evidence:84004445 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8428;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/prostate"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000241 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000241 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000241 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000241 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000241 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000241"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1281;
+  rdfs:comment "Rectum glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000241 :negativeEvidence evidence:84004446. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000241 :evidence evidence:84004446. 
+evidence:84004446 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8429;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/rectum"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000232 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000232 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000232 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000232 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000232 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000232"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2398;
+  rdfs:comment "Nasopharyngeal epithelial cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000232 :negativeEvidence evidence:84004437. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000232 :evidence evidence:84004437. 
+evidence:84004437 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8452;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/nasopharynx"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000233 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000233 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000233 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000233 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000233 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000233"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1252;
+  rdfs:comment "Oral mucosa squamous cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000233 :evidence evidence:84004438. 
+evidence:84004438 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8404;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/oral mucosa"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000234 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000234 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000234 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000234 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000234 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000234"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1246;
+  rdfs:comment "Ovarian stroma"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000234 :evidence evidence:84004439. 
+evidence:84004439 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Medium;
+  :experimentalContext context:8399;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/ovary"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000247 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000247 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000247 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000247 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000247 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000247"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2376;
+  rdfs:comment "Skin Langerhans cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000247 :negativeEvidence evidence:84004452. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000247 :evidence evidence:84004452. 
+evidence:84004452 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8447;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/skin 1"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000246 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000246 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000246 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000246 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000246 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000246"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0500;
+  rdfs:comment "Keratinocyte"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000246 :negativeEvidence evidence:84004451. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000246 :evidence evidence:84004451. 
+evidence:84004451 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8386;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/skin 1"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000245 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000245 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000245 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000245 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000245 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000245"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0935;
+  rdfs:comment "Skin fibroblast"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000245 :negativeEvidence evidence:84004450. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000245 :evidence evidence:84004450. 
+evidence:84004450 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8393;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/skin 1"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000244 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000244 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000244 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000244 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000244 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000244"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2158;
+  rdfs:comment "Skeletal muscle cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000244 :negativeEvidence evidence:84004449. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000244 :evidence evidence:84004449. 
+evidence:84004449 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8437;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/skeletal muscle"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000243 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000243 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000243 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000243 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000243 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000243"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1283;
+  rdfs:comment "Seminal vesicle glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000243 :negativeEvidence evidence:84004448. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000243 :evidence evidence:84004448. 
+evidence:84004448 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8431;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/seminal vesicle"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000242 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000242 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000242 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000242 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000242 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000242"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1282;
+  rdfs:comment "Salivary gland glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000242 :evidence evidence:84004447. 
+evidence:84004447 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8430;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/salivary gland"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000212 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000212 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000212 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000212 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000212 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000212"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1274;
+  rdfs:comment "Colon glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000212 :evidence evidence:84004413. 
+evidence:84004413 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8422;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/colon"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000211 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000211 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000211 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000211 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000211 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000211"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2397;
+  rdfs:comment "Colon endothelial cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000211 :negativeEvidence evidence:84004412. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000211 :evidence evidence:84004412. 
+evidence:84004412 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8451;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/colon"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000210 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000210 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000210 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000210 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000210 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000210"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1251;
+  rdfs:comment "Uterine cervix squamous cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000210 :evidence evidence:84004411. 
+evidence:84004411 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8403;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/cervix, uterine"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000209 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000209 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000209 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000209 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000209 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000209"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1273;
+  rdfs:comment "Uterine cervix glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000209 :negativeEvidence evidence:84004410. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000209 :evidence evidence:84004410. 
+evidence:84004410 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8421;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/cervix, uterine"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000208 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000208 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000208 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000208 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000208 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000208"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2396;
+  rdfs:comment "Cerebral cortex neuropil"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000208 :negativeEvidence evidence:84004409. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000208 :evidence evidence:84004409. 
+evidence:84004409 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8450;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/cerebral cortex"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000229 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000229 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000229 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000229 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000229 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000229"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2168;
+  rdfs:comment "Pneumocyte"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000229 :negativeEvidence evidence:84004434. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000229 :evidence evidence:84004434. 
+evidence:84004434 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8440;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/lung"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000230 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000230 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000230 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000230 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000230 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000230"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1269;
+  rdfs:comment "Lymph node germinal center cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000230 :negativeEvidence evidence:84004435. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000230 :evidence evidence:84004435. 
+evidence:84004435 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8418;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/lymph node"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000200 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000200 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000200 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000200 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000200 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000200"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2378;
+  rdfs:comment "Mammary gland myoepithelial cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000200 :evidence evidence:84004401. 
+evidence:84004401 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Medium;
+  :experimentalContext context:8449;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/breast"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000217 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000217 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000217 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000217 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000217 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000217"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1277;
+  rdfs:comment "Oviduct glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000217 :evidence evidence:84004422. 
+evidence:84004422 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8425;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/fallopian tube"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000216 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000216 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000216 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000216 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000216 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000216"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1250;
+  rdfs:comment "Esophageal squamous cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000216 :negativeEvidence evidence:84004421. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000216 :evidence evidence:84004421. 
+evidence:84004421 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8402;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/esophagus"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000199 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000199 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000199 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000199 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000199 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000199"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1272;
+  rdfs:comment "Mammary gland glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000199 :evidence evidence:84004400. 
+evidence:84004400 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Medium;
+  :experimentalContext context:8420;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/breast"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000198 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000198 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000198 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000198 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000198 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000198"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2377;
+  rdfs:comment "Breast adipocyte"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000198 :negativeEvidence evidence:84004399. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000198 :evidence evidence:84004399. 
+evidence:84004399 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8448;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/breast"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000197 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000197 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000197 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000197 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000197 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000197"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2109;
+  rdfs:comment "Bone marrow hematopoietic cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000197 :negativeEvidence evidence:84004398. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000197 :evidence evidence:84004398. 
+evidence:84004398 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8436;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/bone marrow"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000196 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000196 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000196 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000196 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000196 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000196"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1268;
+  rdfs:comment "Appendix lymphoid tissue"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000196 :negativeEvidence evidence:84004397. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000196 :evidence evidence:84004397. 
+evidence:84004397 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8417;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/appendix"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000195 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000195 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000195 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000195 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000195 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000195"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1271;
+  rdfs:comment "Appendix glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000195 :negativeEvidence evidence:84004396. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000195 :evidence evidence:84004396. 
+evidence:84004396 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8419;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/appendix"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000194 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000194 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000194 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000194 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000194 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000194"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2177;
+  rdfs:comment "Adrenal gland glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000194 :negativeEvidence evidence:84004395. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000194 :evidence evidence:84004395. 
+evidence:84004395 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8443;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/adrenal gland"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000263 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000263 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000263 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000263 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000263 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000263"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2172;
+  rdfs:comment "Tonsil nongerminal center cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000263 :negativeEvidence evidence:84004472. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000263 :evidence evidence:84004472. 
+evidence:84004472 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8442;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/tonsil"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000262 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000262 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000262 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000262 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000262 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000262"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1288;
+  rdfs:comment "Tonsil germinal center cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000262 :negativeEvidence evidence:84004471. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000262 :evidence evidence:84004471. 
+evidence:84004471 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8434;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/tonsil"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000261 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000261 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000261 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000261 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000261 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000261"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2166;
+  rdfs:comment "Thyroid gland glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000261 :negativeEvidence evidence:84004470. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000261 :evidence evidence:84004470. 
+evidence:84004470 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8439;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/thyroid gland"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000260 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000260 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000260 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000260 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000260 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000260"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1150;
+  rdfs:comment "Leydig cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000260 :evidence evidence:84004469. 
+evidence:84004469 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Medium;
+  :experimentalContext context:8396;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/testis"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000259 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000259 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000259 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000259 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000259 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000259"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1239;
+  rdfs:comment "Seminiferous tubule"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000259 :evidence evidence:84004468. 
+evidence:84004468 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8397;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/testis"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000258 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000258 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000258 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000258 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000258 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000258"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1284;
+  rdfs:comment "Stomach glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000258 :negativeEvidence evidence:84004466. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000258 :evidence evidence:84004466. 
+evidence:84004466 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8432;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/stomach 1"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000258 :evidence evidence:84004467. 
+evidence:84004467 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8432;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/stomach 2"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000257 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000257 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000257 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000257 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000257 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000257"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1264;
+  rdfs:comment "Spleen white pulp"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000257 :negativeEvidence evidence:84004465. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000257 :evidence evidence:84004465. 
+evidence:84004465 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8415;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/spleen"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000256 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000256 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000256 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000256 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000256 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000256"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1263;
+  rdfs:comment "Spleen red pulp"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000256 :negativeEvidence evidence:84004464. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000256 :evidence evidence:84004464. 
+evidence:84004464 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8414;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/spleen"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000255 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000255 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000255 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000255 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000255 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000255"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0138;
+  rdfs:comment "Chondrocyte"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000255 :negativeEvidence evidence:84004463. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000255 :evidence evidence:84004463. 
+evidence:84004463 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8381;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/soft tissue 2"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000254 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000254 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000254 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000254 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000254 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000254"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0772;
+  rdfs:comment "Peripheral nerve"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000254 :evidence evidence:84004461. 
+evidence:84004461 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8390;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/soft tissue 1"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000254 :negativeEvidence evidence:84004462. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000254 :evidence evidence:84004462. 
+evidence:84004462 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8390;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/soft tissue 2"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000253 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000253 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000253 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000253 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000253 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000253"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0362;
+  rdfs:comment "Fibroblast"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000253 :negativeEvidence evidence:84004460. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000253 :evidence evidence:84004460. 
+evidence:84004460 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8384;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/soft tissue 2"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000253 :negativeEvidence evidence:84004459. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000253 :evidence evidence:84004459. 
+evidence:84004459 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8384;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/soft tissue 1"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000252 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000252 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000252 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000252 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000252 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000252"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0012;
+  rdfs:comment "Adipocyte"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000252 :negativeEvidence evidence:84004458. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000252 :evidence evidence:84004458. 
+evidence:84004458 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8378;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/soft tissue 2"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000252 :evidence evidence:84004457. 
+evidence:84004457 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Medium;
+  :experimentalContext context:8378;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/soft tissue 1"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000251 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000251 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000251 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000251 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000251 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000251"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2159;
+  rdfs:comment "Smooth muscle cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000251 :evidence evidence:84004456. 
+evidence:84004456 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8438;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/smooth muscle"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000283 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000283 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000283 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000283 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000283 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000283"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2430;
+  rdfs:comment "Endometrial glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000283 :negativeEvidence evidence:91976001. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000283 :evidence evidence:91976001. 
+evidence:91976001 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8987;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/endometrium 2"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000283 :evidence evidence:91976000. 
+evidence:91976000 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8987;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/endometrium 1"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000187 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000187 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000187 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000187 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000187 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000187"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0865;
+  rdfs:comment "Retina"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000187 :evidence evidence:75782791. 
+evidence:75782791 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000009;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Bgee;
+  :expressionLevel :Positive;
+  :experimentalContext context:469;
+  :fromXref db:Bgee;
+  :reference [
+    rdf:type :Xref ;
+    :accession "stage_id=HsapDO:0000087&amp;organ_id=EV:0100348&amp;gene_id=ENSG00000166569"^^xsd:string;
+    :provenance db:Bgee; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000187 :evidence evidence:75782792. 
+evidence:75782792 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000009;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Bgee;
+  :expressionLevel :Positive;
+  :experimentalContext context:470;
+  :fromXref db:Bgee;
+  :reference [
+    rdf:type :Xref ;
+    :accession "stage_id=HsapDO:0000092&amp;organ_id=EV:0100348&amp;gene_id=ENSG00000166569&amp;stage_children=on"^^xsd:string;
+    :provenance db:Bgee; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000186 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000186 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000186 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000186 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000186 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000186"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0125;
+  rdfs:comment "Cerebellum"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000186 :evidence evidence:75782790. 
+evidence:75782790 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000009;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Bgee;
+  :expressionLevel :Positive;
+  :experimentalContext context:538;
+  :fromXref db:Bgee;
+  :reference [
+    rdf:type :Xref ;
+    :accession "stage_id=HsapDO:0000044&amp;organ_id=EV:0100293&amp;gene_id=ENSG00000166569"^^xsd:string;
+    :provenance db:Bgee; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000185 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000185 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000185 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000185 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000185 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000185"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0789;
+  rdfs:comment "Pineal gland"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000185 :evidence evidence:75782789. 
+evidence:75782789 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000009;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Bgee;
+  :expressionLevel :Positive;
+  :experimentalContext context:578;
+  :fromXref db:Bgee;
+  :reference [
+    rdf:type :Xref ;
+    :accession "stage_id=HsapDO:0000087&amp;organ_id=EV:0100131&amp;gene_id=ENSG00000166569"^^xsd:string;
+    :provenance db:Bgee; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000188 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000188 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000188 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000188 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000188 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000188"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0933;
+  rdfs:comment "Skeletal muscle"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000188 :evidence evidence:75782793. 
+evidence:75782793 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000009;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Bgee;
+  :expressionLevel :Positive;
+  :experimentalContext context:485;
+  :fromXref db:Bgee;
+  :reference [
+    rdf:type :Xref ;
+    :accession "stage_id=HsapDO:0000087&amp;organ_id=EV:0100377&amp;gene_id=ENSG00000166569"^^xsd:string;
+    :provenance db:Bgee; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000214 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000214 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000214 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000214 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000214 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000214"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1275;
+  rdfs:comment "Duodenum glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000214 :negativeEvidence evidence:84004415. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000214 :evidence evidence:84004415. 
+evidence:84004415 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8423;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/duodenum"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000213 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000213 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000213 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000213 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000213 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000213"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2373;
+  rdfs:comment "Colon nerve tissue"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000213 :negativeEvidence evidence:84004414. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000213 :evidence evidence:84004414. 
+evidence:84004414 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8445;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/colon"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000207 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000207 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000207 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000207 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000207 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000207"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1259;
+  rdfs:comment "Cerebral cortex neuron"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000207 :negativeEvidence evidence:84004408. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000207 :evidence evidence:84004408. 
+evidence:84004408 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8410;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/cerebral cortex"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000215 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000215 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000215 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000215 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000215 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000215"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1276;
+  rdfs:comment "Epididymis glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000215 :negativeEvidence evidence:84004420. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000215 :evidence evidence:84004420. 
+evidence:84004420 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8424;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/epididymis"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000228 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000228 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000228 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000228 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000228 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000228"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0576;
+  rdfs:comment "Lung macrophage"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000228 :negativeEvidence evidence:84004433. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000228 :evidence evidence:84004433. 
+evidence:84004433 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8387;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/lung"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000227 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000227 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000227 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000227 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000227 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000227"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0454;
+  rdfs:comment "Hepatocyte"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000227 :evidence evidence:84004432. 
+evidence:84004432 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8385;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/liver"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000226 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000226 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000226 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000226 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000226 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000226"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0075;
+  rdfs:comment "Bile duct"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000226 :evidence evidence:84004431. 
+evidence:84004431 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Low;
+  :experimentalContext context:8379;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/liver"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000225 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000225 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000225 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000225 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000225 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000225"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1261;
+  rdfs:comment "Lateral ventricle neuron"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000225 :negativeEvidence evidence:84004430. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000225 :evidence evidence:84004430. 
+evidence:84004430 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8412;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/lateral ventricle"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000224 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000224 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000224 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000224 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000224 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000224"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1258;
+  rdfs:comment "Lateral ventricle glial cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000224 :negativeEvidence evidence:84004429. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000224 :evidence evidence:84004429. 
+evidence:84004429 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8409;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/lateral ventricle"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000223 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000223 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000223 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000223 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000223 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000223"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1262;
+  rdfs:comment "Renal tubule"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000223 :evidence evidence:84004428. 
+evidence:84004428 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :High;
+  :experimentalContext context:8413;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/kidney"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000222 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000222 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000222 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000222 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000222 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000222"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0862;
+  rdfs:comment "Renal glomerulus"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000222 :evidence evidence:84004427. 
+evidence:84004427 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Medium;
+  :experimentalContext context:8392;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/kidney"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000221 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000221 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000221 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000221 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000221 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000221"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1260;
+  rdfs:comment "Hippocampus neuron"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000221 :negativeEvidence evidence:84004426. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000221 :evidence evidence:84004426. 
+evidence:84004426 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8411;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/hippocampus"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000220 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000220 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000220 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000220 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000220 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000220"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1257;
+  rdfs:comment "Hippocampus glial cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000220 :negativeEvidence evidence:84004425. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000220 :evidence evidence:84004425. 
+evidence:84004425 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8408;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/hippocampus"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000219 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000219 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000219 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000219 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000219 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000219"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0115;
+  rdfs:comment "Heart muscle cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000219 :evidence evidence:84004424. 
+evidence:84004424 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Medium;
+  :experimentalContext context:8380;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/heart muscle"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000218 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000218 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000218 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000218 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000218 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000218"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1278;
+  rdfs:comment "Gall bladder glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000218 :evidence evidence:84004423. 
+evidence:84004423 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Medium;
+  :experimentalContext context:8426;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/gallbladder"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000235 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000235 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000235 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000235 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000235 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000235"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1242;
+  rdfs:comment "Pancreas exocrine glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000235 :negativeEvidence evidence:84004440. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000235 :evidence evidence:84004440. 
+evidence:84004440 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8398;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/pancreas"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000236 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000236 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000236 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000236 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000236 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000236"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0741;
+  rdfs:comment "Pancreatic islet"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000236 :negativeEvidence evidence:84004441. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000236 :evidence evidence:84004441. 
+evidence:84004441 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8389;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/pancreas"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000237 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000237 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000237 .
+isoform:NX_Q7Z7G2-1 :detectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000237 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000237 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000237"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1279;
+  rdfs:comment "Parathyroid glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000237 :evidence evidence:84004442. 
+evidence:84004442 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Medium;
+  :experimentalContext context:8427;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/parathyroid gland"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000238 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000238 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000238 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000238 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000238 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000238"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0193;
+  rdfs:comment "Decidua placentalis"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000238 :negativeEvidence evidence:84004443. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000238 :evidence evidence:84004443. 
+evidence:84004443 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8382;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/placenta"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000239 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000239 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000239 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000239 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000239 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000239"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1070;
+  rdfs:comment "Trophoblast"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000239 :negativeEvidence evidence:84004444. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000239 :evidence evidence:84004444. 
+evidence:84004444 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8394;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/placenta"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000250 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000250 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000250 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000250 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000250 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000250"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-1286;
+  rdfs:comment "Small intestine glandular cell"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000250 :negativeEvidence evidence:84004455. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000250 :evidence evidence:84004455. 
+evidence:84004455 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8433;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/small intestine"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000249 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000249 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000249 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000249 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000249 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000249"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0283;
+  rdfs:comment "Epidermis"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000249 :negativeEvidence evidence:84004454. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000249 :evidence evidence:84004454. 
+evidence:84004454 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8383;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/skin 2"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000248 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000248 .
+isoform:NX_Q7Z7G2-1 :expressionProfile annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000248 .
+isoform:NX_Q7Z7G2-1 :undetectedExpression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000248 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000248 a :ExpressionProfile;
+  :entryAnnotationId "AN_Q7Z7G2_000248"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-2374;
+  rdfs:comment "Skin Melanocyte"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000248 :negativeEvidence evidence:84004453. 
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000248 :evidence evidence:84004453. 
+evidence:84004453 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "true"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :expressionLevel :Negative;
+  :experimentalContext context:8446;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue/skin 1"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :ptm annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000275 .
+isoform:NX_Q7Z7G2-1 :positionalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000275 .
+isoform:NX_Q7Z7G2-1 :ptmInfo annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000275 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000275 a :PtmInfo;
+  :entryAnnotationId "AN_Q7Z7G2_000275"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Farnesylation mediates presynaptic targeting and is important for function in neurotransmitter release."^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000275 :evidence evidence:85320369. 
+evidence:85320369 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000270 .
+isoform:NX_Q7Z7G2-1 :expression annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000270 .
+isoform:NX_Q7Z7G2-1 :expressionInfo annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000270 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000270 a :ExpressionInfo;
+  :entryAnnotationId "AN_Q7Z7G2_000270"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Cells in renal tubules and Leydig cells displayed strong cytoplasmic staining. Breast and heart muscle cells were moderately positive with additional membranous staining in gall bladder and parathyroid. Plasma were positive. Remaining normal tissues were weakly stained or negative. Detected at High or Medium expression level in 10 of 80 analyzed normal tissue cell types."^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000270 :evidence evidence:84004394. 
+evidence:84004394 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000087;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Human_protein_atlas;
+  :fromXref db:HPA;
+  :reference [
+    rdf:type :Xref ;
+    :accession "ENSG00000166569/tissue"^^xsd:string;
+    :provenance db:HPA; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0066 .
+isoform:NX_Q7Z7G2-1 :function annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0066 .
+isoform:NX_Q7Z7G2-1 :goMolecularFunction annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0066 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0066 a :GoMolecularFunction;
+  :entryAnnotationId "AN_Q7Z7G2_0066"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:GO_0019905;
+  rdfs:comment "syntaxin binding"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0066 :evidence evidence:91776798. 
+evidence:91776798 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000501;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:InterPro;
+  :fromXref db:GO_REF;
+  :reference [
+    rdf:type :Xref ;
+    :accession "GO_REF:0000002"^^xsd:string;
+    :provenance db:GO_REF; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0061 .
+isoform:NX_Q7Z7G2-1 :function annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0061 .
+isoform:NX_Q7Z7G2-1 :goBiologicalProcess annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0061 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0061 a :GoBiologicalProcess;
+  :entryAnnotationId "AN_Q7Z7G2_0061"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:GO_0006887;
+  rdfs:comment "exocytosis"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0061 :evidence evidence:91776801. 
+evidence:91776801 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000501;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:GO_REF;
+  :reference [
+    rdf:type :Xref ;
+    :accession "GO_REF:0000037"^^xsd:string;
+    :provenance db:GO_REF; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0060 .
+isoform:NX_Q7Z7G2-1 :function annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0060 .
+isoform:NX_Q7Z7G2-1 :goBiologicalProcess annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0060 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0060 a :GoBiologicalProcess;
+  :entryAnnotationId "AN_Q7Z7G2_0060"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:GO_0006836;
+  rdfs:comment "neurotransmitter transport"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0060 :evidence evidence:91776799. 
+evidence:91776799 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000501;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:GO_REF;
+  :reference [
+    rdf:type :Xref ;
+    :accession "GO_REF:0000037"^^xsd:string;
+    :provenance db:GO_REF; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0065 .
+isoform:NX_Q7Z7G2-1 :function annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0065 .
+isoform:NX_Q7Z7G2-1 :goBiologicalProcess annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0065 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0065 a :GoBiologicalProcess;
+  :entryAnnotationId "AN_Q7Z7G2_0065"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:GO_0046928;
+  rdfs:comment "regulation of neurotransmitter secretion"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0065 :evidence evidence:91776800. 
+evidence:91776800 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000501;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Ensembl;
+  :fromXref db:GO_REF;
+  :reference [
+    rdf:type :Xref ;
+    :accession "GO_REF:0000019"^^xsd:string;
+    :provenance db:GO_REF; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0064 .
+isoform:NX_Q7Z7G2-1 :cellularComponent annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0064 .
+isoform:NX_Q7Z7G2-1 :goCellularComponent annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0064 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0064 a :GoCellularComponent;
+  :entryAnnotationId "AN_Q7Z7G2_0064"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:GO_0045202;
+  rdfs:comment "synapse"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0064 :evidence evidence:91776804. 
+evidence:91776804 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000501;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:GO_REF;
+  :reference [
+    rdf:type :Xref ;
+    :accession "GO_REF:0000039"^^xsd:string;
+    :provenance db:GO_REF; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0062 .
+isoform:NX_Q7Z7G2-1 :cellularComponent annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0062 .
+isoform:NX_Q7Z7G2-1 :goCellularComponent annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0062 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0062 a :GoCellularComponent;
+  :entryAnnotationId "AN_Q7Z7G2_0062"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:GO_0016020;
+  rdfs:comment "membrane"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0062 :evidence evidence:91776802. 
+evidence:91776802 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000501;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:GO_REF;
+  :reference [
+    rdf:type :Xref ;
+    :accession "GO_REF:0000039"^^xsd:string;
+    :provenance db:GO_REF; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0063 .
+isoform:NX_Q7Z7G2-1 :cellularComponent annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0063 .
+isoform:NX_Q7Z7G2-1 :goCellularComponent annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0063 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0063 a :GoCellularComponent;
+  :entryAnnotationId "AN_Q7Z7G2_0063"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:GO_0030054;
+  rdfs:comment "cell junction"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0063 :evidence evidence:91776803. 
+evidence:91776803 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000501;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:GO_REF;
+  :reference [
+    rdf:type :Xref ;
+    :accession "GO_REF:0000037"^^xsd:string;
+    :provenance db:GO_REF; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :keyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000284 .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000284 .
+isoform:NX_Q7Z7G2-1 :uniprotKeyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000284 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000284 a :UniprotKeyword;
+  :entryAnnotationId "AN_Q7Z7G2_000284"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0488;
+  rdfs:comment "Methylation"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000284 :evidence evidence:92579839. 
+evidence:92579839 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :keyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000285 .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000285 .
+isoform:NX_Q7Z7G2-1 :uniprotKeyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000285 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000285 a :UniprotKeyword;
+  :entryAnnotationId "AN_Q7Z7G2_000285"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0770;
+  rdfs:comment "Synapse"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000285 :evidence evidence:92579854. 
+evidence:92579854 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :keyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000286 .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000286 .
+isoform:NX_Q7Z7G2-1 :uniprotKeyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000286 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000286 a :UniprotKeyword;
+  :entryAnnotationId "AN_Q7Z7G2_000286"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0472;
+  rdfs:comment "Membrane"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000286 :evidence evidence:92579870. 
+evidence:92579870 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :keyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000287 .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000287 .
+isoform:NX_Q7Z7G2-1 :uniprotKeyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000287 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000287 a :UniprotKeyword;
+  :entryAnnotationId "AN_Q7Z7G2_000287"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0636;
+  rdfs:comment "Prenylation"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000287 :evidence evidence:92579877. 
+evidence:92579877 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :keyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0069 .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0069 .
+isoform:NX_Q7Z7G2-1 :uniprotKeyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0069 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0069 a :UniprotKeyword;
+  :entryAnnotationId "AN_Q7Z7G2_0069"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-1185;
+  rdfs:comment "Reference proteome"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0069 :evidence evidence:85320384. 
+evidence:85320384 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :keyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0012 .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0012 .
+isoform:NX_Q7Z7G2-1 :uniprotKeyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0012 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0012 a :UniprotKeyword;
+  :entryAnnotationId "AN_Q7Z7G2_0012"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0181;
+  rdfs:comment "Complete proteome"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0012 :evidence evidence:85320388. 
+evidence:85320388 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :keyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0013 .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0013 .
+isoform:NX_Q7Z7G2-1 :uniprotKeyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0013 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0013 a :UniprotKeyword;
+  :entryAnnotationId "AN_Q7Z7G2_0013"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0268;
+  rdfs:comment "Exocytosis"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0013 :evidence evidence:85320389. 
+evidence:85320389 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :keyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0011 .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0011 .
+isoform:NX_Q7Z7G2-1 :uniprotKeyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0011 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0011 a :UniprotKeyword;
+  :entryAnnotationId "AN_Q7Z7G2_0011"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0965;
+  rdfs:comment "Cell junction"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0011 :evidence evidence:85320386. 
+evidence:85320386 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :keyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0020 .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0020 .
+isoform:NX_Q7Z7G2-1 :uniprotKeyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0020 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0020 a :UniprotKeyword;
+  :entryAnnotationId "AN_Q7Z7G2_0020"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0813;
+  rdfs:comment "Transport"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0020 :evidence evidence:85320387. 
+evidence:85320387 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :keyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0014 .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0014 .
+isoform:NX_Q7Z7G2-1 :uniprotKeyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0014 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0014 a :UniprotKeyword;
+  :entryAnnotationId "AN_Q7Z7G2_0014"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0449;
+  rdfs:comment "Lipoprotein"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0014 :evidence evidence:85320380. 
+evidence:85320380 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :keyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0017 .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0017 .
+isoform:NX_Q7Z7G2-1 :uniprotKeyword annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0017 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0017 a :UniprotKeyword;
+  :entryAnnotationId "AN_Q7Z7G2_0017"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0532;
+  rdfs:comment "Neurotransmitter transport"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_0017 :evidence evidence:85320382. 
+evidence:85320382 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000274 .
+isoform:NX_Q7Z7G2-1 :cellularComponent annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000274 .
+isoform:NX_Q7Z7G2-1 :subcellularLocationNote annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000274 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000274 a :SubcellularLocationNote;
+  :entryAnnotationId "AN_Q7Z7G2_000274"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Enriched at the synaptic terminal."^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_000274 :evidence evidence:85320367. 
+evidence:85320367 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "Q7Z7G2"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_Q7Z7G2-1 :generalAnnotation annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_XR_14573668 .
+isoform:NX_Q7Z7G2-1 :function annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_XR_14573668 .
+isoform:NX_Q7Z7G2-1 :pathway annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_XR_14573668 .
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_XR_14573668 a :Pathway;
+  :entryAnnotationId "AN_Q7Z7G2_XR_14573668"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Synaptic vesicle cycle"^^xsd:string;
+  .     
+annotation:NX_Q7Z7G2-1-AN_Q7Z7G2_XR_14573668 :evidence evidence:21014573668. 
+evidence:21014573668 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000305;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:NextProt;
+  :fromXref db:KEGGPathway;
+  :reference [
+    rdf:type :Xref ;
+    :accession "hsa04721+339302"^^xsd:string;
+    :provenance db:KEGGPathway; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+#Interactions begin
+#Interactions end
+
+
+
+
+
+
+
+# - - - - - - - -
+# Xrefs v3
+# - - - - - - - -
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "42122"^^xsd:string ;
+  :provenance db:Antibodypedia ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569"^^xsd:string ;
+  :provenance db:Bgee ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "Q7Z7G2"^^xsd:string ;
+  :provenance db:Bgee ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "stage_id=HsapDO:0000044&amp;organ_id=EV:0100293&amp;gene_id=ENSG00000166569"^^xsd:string ;
+  :provenance db:Bgee ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "stage_id=HsapDO:0000087&amp;organ_id=EV:0100131&amp;gene_id=ENSG00000166569"^^xsd:string ;
+  :provenance db:Bgee ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "stage_id=HsapDO:0000087&amp;organ_id=EV:0100348&amp;gene_id=ENSG00000166569"^^xsd:string ;
+  :provenance db:Bgee ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "stage_id=HsapDO:0000087&amp;organ_id=EV:0100377&amp;gene_id=ENSG00000166569"^^xsd:string ;
+  :provenance db:Bgee ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "stage_id=HsapDO:0000092&amp;organ_id=EV:0100348&amp;gene_id=ENSG00000166569&amp;stage_children=on"^^xsd:string ;
+  :provenance db:Bgee ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "CPLX4"^^xsd:string ;
+  :provenance db:BioMuta ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "CCDS11973.1"^^xsd:string ;
+  :provenance db:CCDS ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "CPLX4"^^xsd:string ;
+  :provenance db:ChiTaRS ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "HS_CPLX4"^^xsd:string ;
+  :provenance db:CleanEx ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM1136068"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM1202150"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM1389369"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM1389370"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM144804"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM1564025"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM160176"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM160177"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM1684549"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM1686272"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM170105"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM1718495"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM223951"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM280104"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM319650"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM3526825"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM3526826"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM3526827"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM352703"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM357550"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM3959304"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM4072795"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM4140127"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM438277"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM460112"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM70289"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM709220"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM989336"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM989337"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM989339"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "COSM989340"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "CPLX4"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "339302"^^xsd:string ;
+  :provenance db:CTD ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "rs143459722"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "rs144069269"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "rs145936799"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "rs185848311"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "rs202101844"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "rs78869871"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "74750239"^^xsd:string ;
+  :provenance db:DMDM ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "339302"^^xsd:string ;
+  :provenance db:DNASU ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "NOG25900"^^xsd:string ;
+  :provenance db:eggNOG ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "AB593158"^^xsd:string ;
+  :provenance db:EMBL ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "AK123184"^^xsd:string ;
+  :provenance db:EMBL ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "AY286502"^^xsd:string ;
+  :provenance db:EMBL ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "BC106887"^^xsd:string ;
+  :provenance db:EMBL ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "BC106888"^^xsd:string ;
+  :provenance db:EMBL ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "BX640655"^^xsd:string ;
+  :provenance db:EMBL ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "EAW63095.1"^^xsd:string ;
+  :provenance db:EMBL ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569"^^xsd:string ;
+  :provenance db:Ensembl ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSP00000299721"^^xsd:string ;
+  :provenance db:Ensembl ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSP00000466304"^^xsd:string ;
+  :provenance db:Ensembl ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENST00000299721"^^xsd:string ;
+  :provenance db:Ensembl ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENST00000587244"^^xsd:string ;
+  :provenance db:Ensembl ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "GC18M056962"^^xsd:string ;
+  :provenance db:GeneCards ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "339302"^^xsd:string ;
+  :provenance db:GeneID ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSGT00490000043378"^^xsd:string ;
+  :provenance db:GeneTree ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "Q7Z7G2"^^xsd:string ;
+  :provenance db:Genevestigator ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "339302"^^xsd:string ;
+  :provenance db:GenomeRNAi ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "Q7Z7G2"^^xsd:string ;
+  :provenance db:GOA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "GO_REF:0000002"^^xsd:string ;
+  :provenance db:GO_REF ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "GO_REF:0000019"^^xsd:string ;
+  :provenance db:GO_REF ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "GO_REF:0000037"^^xsd:string ;
+  :provenance db:GO_REF ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "GO_REF:0000039"^^xsd:string ;
+  :provenance db:GO_REF ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "HGNC:24330"^^xsd:string ;
+  :provenance db:HGNC ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "HOG000111927"^^xsd:string ;
+  :provenance db:HOGENOM ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "HBG060856"^^xsd:string ;
+  :provenance db:HOVERGEN ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/adrenal gland"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/appendix"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/bone marrow"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/breast"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/bronchus"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/cerebellum"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/cerebral cortex"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/cervix, uterine"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/colon"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/duodenum"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/endometrium 1"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/endometrium 2"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/epididymis"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/esophagus"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/fallopian tube"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/gallbladder"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/heart muscle"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/hippocampus"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/kidney"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/lateral ventricle"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/liver"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/lung"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/lymph node"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/nasopharynx"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/oral mucosa"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/ovary"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/pancreas"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/parathyroid gland"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/placenta"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/prostate"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/rectum"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/salivary gland"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/seminal vesicle"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/skeletal muscle"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/skin 1"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/skin 2"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/small intestine"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/smooth muscle"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/soft tissue 1"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/soft tissue 2"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/spleen"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/stomach 1"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/stomach 2"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/testis"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/thyroid gland"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/tonsil"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "ENSG00000166569/tissue/vagina"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "HPA047627"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "13091"^^xsd:string ;
+  :provenance db:HPRD ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "Q7Z7G2"^^xsd:string ;
+  :provenance db:InParanoid ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "IPR008849"^^xsd:string ;
+  :provenance db:InterPro ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "hsa:339302"^^xsd:string ;
+  :provenance db:KEGG ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "hsa04721+339302"^^xsd:string ;
+  :provenance db:KEGGPathway ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "K15295"^^xsd:string ;
+  :provenance db:KO ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "MGI:2685803"^^xsd:string ;
+  :provenance db:MGI ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "609586"^^xsd:string ;
+  :provenance db:MIM ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "9606"^^xsd:string ;
+  :provenance db:NCBI_Taxonomy ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "97343"^^xsd:string ;
+  :provenance db:NextBio ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "NX_Q7Z7G2"^^xsd:string ;
+  :provenance db:neXtProt ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "QATFTEM"^^xsd:string ;
+  :provenance db:OMA ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "PTHR16705"^^xsd:string ;
+  :provenance db:PANTHER ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "Q7Z7G2"^^xsd:string ;
+  :provenance db:PaxDb ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "PAp01566433"^^xsd:string ;
+  :provenance db:PeptideAtlas ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "PAp01592190"^^xsd:string ;
+  :provenance db:PeptideAtlas ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "PAp04237681"^^xsd:string ;
+  :provenance db:PeptideAtlas ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "PAp04730822"^^xsd:string ;
+  :provenance db:PeptideAtlas ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "PF05835"^^xsd:string ;
+  :provenance db:Pfam ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "PA134902350"^^xsd:string ;
+  :provenance db:PharmGKB ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "Q7Z7G2"^^xsd:string ;
+  :provenance db:PhosphoSite ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "Q7Z7G2"^^xsd:string ;
+  :provenance db:PhylomeDB ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "Q7Z7G2"^^xsd:string ;
+  :provenance db:PRIDE ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "PR:Q7Z7G2"^^xsd:string ;
+  :provenance db:PRO ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "UP000005640"^^xsd:string ;
+  :provenance db:Proteomes ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "NP_857637.1"^^xsd:string ;
+  :provenance db:RefSeq ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "Q7Z7G2"^^xsd:string ;
+  :provenance db:SMR ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "PAp01048863"^^xsd:string ;
+  :provenance db:SRMAtlas ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "PAp01561572"^^xsd:string ;
+  :provenance db:SRMAtlas ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "PAp01564724"^^xsd:string ;
+  :provenance db:SRMAtlas ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "PAp01566433"^^xsd:string ;
+  :provenance db:SRMAtlas ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "PAp01592190"^^xsd:string ;
+  :provenance db:SRMAtlas ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "9606.ENSP00000299721"^^xsd:string ;
+  :provenance db:STRING ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "TF331867"^^xsd:string ;
+  :provenance db:TreeFam ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "uc002lhy.3"^^xsd:string ;
+  :provenance db:UCSC ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "Hs.449884"^^xsd:string ;
+  :provenance db:UniGene ; 
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Xref ;
+  :accession "Q7Z7G2"^^xsd:string ;
+  :provenance db:UniProt ; 
+  ]
+.
+
+
+
+# - - - - - - - -
+# Identifiers
+# - - - - - - - -
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "CCDS11973.1"^^xsd:string ;
+  :provenance db:CCDS ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "DKFZp686O0683"^^xsd:string ;
+  :provenance db:DKFZ ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "CPLX4_HUMAN"^^xsd:string ;
+  :provenance db:UniProtKB ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "FLJ41190"^^xsd:string ;
+  :provenance db:FLJ ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "ENSG00000166569"^^xsd:string ;
+  :provenance db:Ensembl ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "GC18M056962"^^xsd:string ;
+  :provenance db:GeneCards ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "339302"^^xsd:string ;
+  :provenance db:GeneID ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "CPLX4"^^xsd:string ;
+  :provenance db:HGNC ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "HGNC:24330"^^xsd:string ;
+  :provenance db:HGNC ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "HPA047627"^^xsd:string ;
+  :provenance db:HPA ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "13091"^^xsd:string ;
+  :provenance db:HPRD ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "ILMN_1707426"^^xsd:string ;
+  :provenance db:Illumina ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "IMAGE:40030309"^^xsd:string ;
+  :provenance db:IMAGE ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "IMAGE:40030305"^^xsd:string ;
+  :provenance db:IMAGE ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "hsa:339302"^^xsd:string ;
+  :provenance db:KEGG ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "MGC:125784"^^xsd:string ;
+  :provenance db:MGC ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "MGC:125783"^^xsd:string ;
+  :provenance db:MGC ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "97343"^^xsd:string ;
+  :provenance db:NextBio ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "BRACE2044816"^^xsd:string ;
+  :provenance db:Others ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "PA134902350"^^xsd:string ;
+  :provenance db:PharmGKB ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "Q7Z7G2"^^xsd:string ;
+  :provenance db:UniProtKB ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "ENSP00000299721"^^xsd:string ;
+  :provenance db:Ensembl ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "ENSP00000466304"^^xsd:string ;
+  :provenance db:Ensembl ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "NP_857637.1"^^xsd:string ;
+  :provenance db:RefSeq ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "F1T0L6"^^xsd:string ;
+  :provenance db:UniProtKB ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "ENST00000587244"^^xsd:string ;
+  :provenance db:Ensembl ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "ENST00000299721"^^xsd:string ;
+  :provenance db:Ensembl ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "uc002lhy.3"^^xsd:string ;
+  :provenance db:UCSC ;
+  ]
+.
+
+entry:NX_Q7Z7G2 :reference [
+  a :Identifier ;
+  :accession "Hs.449884"^^xsd:string ;
+  :provenance db:UniGene ;
+  ]
+.
+
+
+# - - - - - - - -
+# Publications
+# - - - - - - - -
+
+entry:NX_Q7Z7G2 :reference publication:5784bb4ec69f350e4da936e0494fdbc8 .
+entry:NX_Q7Z7G2 :reference publication:7f92930aab17cc238d87dbc6840ca5e9 .
+entry:NX_Q7Z7G2 :reference publication:4dfb568a53e4d6fab476d73503c9f1e3 .
+entry:NX_Q7Z7G2 :reference publication:03c954a340af900e9171863e704305d1 .
+entry:NX_Q7Z7G2 :reference publication:a5c1470f0f431784e83d57ada9d70003 .
+entry:NX_Q7Z7G2 :reference publication:5256c4948f355eacb090349e7390fdb8 .
+entry:NX_Q7Z7G2 :reference publication:07d2f817f609bbe16956462f1156d89d .
+entry:NX_Q7Z7G2 :reference publication:7eda2f40d9733d91ffcb06a7e945e9ec .
+entry:NX_Q7Z7G2 :reference publication:d5409f4a047f6a526dc821199276b184 .
+entry:NX_Q7Z7G2 :reference publication:2191b96dd71ea065834db7b428364a83 .
+entry:NX_Q7Z7G2 :reference publication:2a3c2e50c6bc777e610caae9afed12b7 .
+entry:NX_Q7Z7G2 :reference publication:3dac4faa650665e7d5e7bb25bf169a19 .
+entry:NX_Q7Z7G2 :reference publication:f6b11565e3a10067711468fc49ed4a4d .
+entry:NX_Q7Z7G2 :reference publication:76ef49fb42e120e2dd4739dfd248fb07 .
+entry:NX_Q7Z7G2 :reference publication:1292a79a6ee4bd6c64b1cbcd56e6f612 .
+entry:NX_Q7Z7G2 :reference publication:9fcea3e64fff4863189b75bf5cdca62d .
+entry:NX_Q7Z7G2 :reference publication:0fd6db5be978d5020ffa877452978c0a .
+
+
+
+# Antibodies mappings
+
+  isoform:NX_Q7Z7G2-1 :positionalAnnotation :NX_HPA047627-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :mapping :NX_HPA047627-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :antibodyMapping :NX_HPA047627-NX_Q7Z7G2-1 .
+  :NX_HPA047627-NX_Q7Z7G2-1 
+    rdf:type :AntibodyMapping ;  
+	:antibodyName "NX_HPA047627"^^xsd:string ;
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0000154;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;      
+      :assignedBy source:Human_protein_atlas ;
+      :assocType "evidence"^^xsd:string;
+	  :reference [
+	  	rdf:type :Xref ;
+	  	:provenance db:HPA ;
+		:accession "HPA047627"^^xsd:string ;
+	  ];
+    ];	
+    
+    :position [ 
+      rdf:type :MappingPosition ;
+      :start "114"^^xsd:integer ;
+      :end "160"^^xsd:integer ;
+    ];
+  .
+  
+
+
+
+# Peptides mappings
+
+  isoform:NX_Q7Z7G2-1 :positionalAnnotation :NATUR-NX_PEPT01707995-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :mapping :NATUR-NX_PEPT01707995-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :peptideMapping :NATUR-NX_PEPT01707995-NX_Q7Z7G2-1 .
+  :NATUR-NX_PEPT01707995-NX_Q7Z7G2-1 rdf:type :PeptideMapping ;  
+    :peptideName "NX_PEPT01707995"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "86"^^xsd:integer ;
+      :end "108"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;      
+      :assignedBy source:PeptideAtlas_human_eye ;
+      :reference [
+        a :Xref ;
+        :provenance db:PeptideAtlas ;
+        :accession "PAp04237681"^^xsd:string ;
+      ];
+    ];
+  .
+  
+  isoform:NX_Q7Z7G2-1 :positionalAnnotation :NATUR-NX_PEPT01702473-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :mapping :NATUR-NX_PEPT01702473-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :peptideMapping :NATUR-NX_PEPT01702473-NX_Q7Z7G2-1 .
+  :NATUR-NX_PEPT01702473-NX_Q7Z7G2-1 rdf:type :PeptideMapping ;  
+    :peptideName "NX_PEPT01702473"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "142"^^xsd:integer ;
+      :end "150"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;      
+      :assignedBy source:PeptideAtlas_human_eye ;
+      :reference [
+        a :Xref ;
+        :provenance db:PeptideAtlas ;
+        :accession "PAp01566433"^^xsd:string ;
+      ];
+    ];
+  .
+  
+  isoform:NX_Q7Z7G2-1 :positionalAnnotation :NATUR-NX_PEPT01264972-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :mapping :NATUR-NX_PEPT01264972-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :peptideMapping :NATUR-NX_PEPT01264972-NX_Q7Z7G2-1 .
+  :NATUR-NX_PEPT01264972-NX_Q7Z7G2-1 rdf:type :PeptideMapping ;  
+    :peptideName "NX_PEPT01264972"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "86"^^xsd:integer ;
+      :end "107"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;      
+      :assignedBy source:PeptideAtlas_human_eye ;
+      :reference [
+        a :Xref ;
+        :provenance db:PeptideAtlas ;
+        :accession "PAp01592190"^^xsd:string ;
+      ];
+    ];
+  .
+  
+  isoform:NX_Q7Z7G2-1 :positionalAnnotation :NATUR-NX_PEPT01504719-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :mapping :NATUR-NX_PEPT01504719-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :peptideMapping :NATUR-NX_PEPT01504719-NX_Q7Z7G2-1 .
+  :NATUR-NX_PEPT01504719-NX_Q7Z7G2-1 rdf:type :PeptideMapping ;  
+    :peptideName "NX_PEPT01504719"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "15"^^xsd:integer ;
+      :end "42"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;      
+      :assignedBy source:PeptideAtlas_human_eye ;
+      :reference [
+        a :Xref ;
+        :provenance db:PeptideAtlas ;
+        :accession "PAp04730822"^^xsd:string ;
+      ];
+    ];
+  .
+  
+
+
+# SRM Peptides mappings
+
+  isoform:NX_Q7Z7G2-1 :positionalAnnotation :SYNTH-NX_PEPT00543337-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :mapping :SYNTH-NX_PEPT00543337-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :srmPeptideMapping :SYNTH-NX_PEPT00543337-NX_Q7Z7G2-1 .
+  :SYNTH-NX_PEPT00543337-NX_Q7Z7G2-1 rdf:type :SrmPeptideMapping ;  
+    :peptideName "NX_PEPT00543337"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "86"^^xsd:integer ;
+      :end "107"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;            
+      :assignedBy source:SRMAtlas ;
+      :reference [
+        rdf:type :Xref ;
+        :provenance db:SRMAtlas ;
+        :accession "PAp01592190"^^xsd:string ;
+      ];
+    ];
+  .
+  
+  isoform:NX_Q7Z7G2-1 :positionalAnnotation :SYNTH-NX_PEPT01105600-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :mapping :SYNTH-NX_PEPT01105600-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :srmPeptideMapping :SYNTH-NX_PEPT01105600-NX_Q7Z7G2-1 .
+  :SYNTH-NX_PEPT01105600-NX_Q7Z7G2-1 rdf:type :SrmPeptideMapping ;  
+    :peptideName "NX_PEPT01105600"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "27"^^xsd:integer ;
+      :end "42"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;            
+      :assignedBy source:SRMAtlas ;
+      :reference [
+        rdf:type :Xref ;
+        :provenance db:SRMAtlas ;
+        :accession "PAp01564724"^^xsd:string ;
+      ];
+    ];
+  .
+  
+  isoform:NX_Q7Z7G2-1 :positionalAnnotation :SYNTH-NX_PEPT00853773-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :mapping :SYNTH-NX_PEPT00853773-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :srmPeptideMapping :SYNTH-NX_PEPT00853773-NX_Q7Z7G2-1 .
+  :SYNTH-NX_PEPT00853773-NX_Q7Z7G2-1 rdf:type :SrmPeptideMapping ;  
+    :peptideName "NX_PEPT00853773"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "142"^^xsd:integer ;
+      :end "150"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;            
+      :assignedBy source:SRMAtlas ;
+      :reference [
+        rdf:type :Xref ;
+        :provenance db:SRMAtlas ;
+        :accession "PAp01566433"^^xsd:string ;
+      ];
+    ];
+  .
+  
+  isoform:NX_Q7Z7G2-1 :positionalAnnotation :SYNTH-NX_PEPT01161692-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :mapping :SYNTH-NX_PEPT01161692-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :srmPeptideMapping :SYNTH-NX_PEPT01161692-NX_Q7Z7G2-1 .
+  :SYNTH-NX_PEPT01161692-NX_Q7Z7G2-1 rdf:type :SrmPeptideMapping ;  
+    :peptideName "NX_PEPT01161692"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "121"^^xsd:integer ;
+      :end "139"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;            
+      :assignedBy source:SRMAtlas ;
+      :reference [
+        rdf:type :Xref ;
+        :provenance db:SRMAtlas ;
+        :accession "PAp01561572"^^xsd:string ;
+      ];
+    ];
+  .
+  
+  isoform:NX_Q7Z7G2-1 :positionalAnnotation :SYNTH-NX_PEPT01142859-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :mapping :SYNTH-NX_PEPT01142859-NX_Q7Z7G2-1 .
+  isoform:NX_Q7Z7G2-1 :srmPeptideMapping :SYNTH-NX_PEPT01142859-NX_Q7Z7G2-1 .
+  :SYNTH-NX_PEPT01142859-NX_Q7Z7G2-1 rdf:type :SrmPeptideMapping ;  
+    :peptideName "NX_PEPT01142859"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "15"^^xsd:integer ;
+      :end "26"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;            
+      :assignedBy source:SRMAtlas ;
+      :reference [
+        rdf:type :Xref ;
+        :provenance db:SRMAtlas ;
+        :accession "PAp01048863"^^xsd:string ;
+      ];
+    ];
+  .
+  
+

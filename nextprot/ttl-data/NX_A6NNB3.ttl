@@ -1,0 +1,2917 @@
+@prefix : <http://nextprot.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix up: <http://purl.uniprot.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix entry: <http://nextprot.org/rdf/entry/> .
+@prefix isoform: <http://nextprot.org/rdf/isoform/> .
+@prefix annotation: <http://nextprot.org/rdf/annotation/> .
+@prefix evidence: <http://nextprot.org/rdf/evidence/> .
+@prefix xref: <http://nextprot.org/rdf/xref/> .
+@prefix publication: <http://nextprot.org/rdf/publication/> .
+@prefix identifier: <http://nextprot.org/rdf/identifier/> .
+@prefix cv: <http://nextprot.org/rdf/terminology/> .
+@prefix gene: <http://nextprot.org/rdf/gene/> .
+@prefix source: <http://nextprot.org/rdf/source/> .
+@prefix db: <http://nextprot.org/rdf/db/> .
+@prefix context: <http://nextprot.org/rdf/context/> .
+@prefix interaction: <http://nextprot.org/rdf/interaction/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix unipage: <http://www.uniprot.org/uniprot/> .
+
+# 
+entry:NX_A6NNB3 a :Entry;
+  skos:exactMatch uniprot:A6NNB3;
+  :swissprotPage unipage:A6NNB3;
+  :isoform isoform:NX_A6NNB3-1 ;
+  .
+
+isoform:NX_A6NNB3-1 :swissprotDisplayed "true"^^xsd:boolean . 
+
+
+# Overview
+entry:NX_A6NNB3 
+    :existence      :Evidence_at_protein_level;
+    :family [
+       rdf:type :FamilyInfo ;
+       :accession cv:FA-00524 ;
+       :description "Belongs to the CD225/Dispanin family."^^xsd:string ;
+      ];
+      :recommendedName [
+    rdf:type :Name;
+    :fullName "Interferon-induced transmembrane protein 5"^^xsd:string;
+  ];
+  :alternativeName [
+    rdf:type :Name;
+        :fullName "Bone-restricted interferon-induced transmembrane protein-like protein"^^xsd:string;
+  ];
+  :alternativeName [
+    rdf:type :Name;
+        :shortName "BRIL"^^xsd:string;
+  ];
+  :alternativeName [
+    rdf:type :Name;
+        :fullName "Dispanin subfamily A member 1"^^xsd:string;
+  ];
+  :alternativeName [
+    rdf:type :Name;
+        :shortName "DSPA1"^^xsd:string;
+  ];
+    :history[
+      rdf:type :History;
+      :name "neXtProt"^^xsd:string; 
+      :integrated "2010-03-01"^^xsd:string; 
+      :updated "2015-05-04"^^xsd:string;
+    ];
+    :history[   
+        rdf:type :History;
+        :name "UniProtKB"^^xsd:string;
+        :integrated "2007-10-02"^^xsd:string;
+        :updated "2015-01-07"^^xsd:string;
+        :version "58"^^xsd:string;
+        :lastSequenceUpdate "2007-07-24"^^xsd:string;
+        :sequenceVersion "1"^^xsd:string;
+    ];    
+    .
+
+# Keywords 
+# Classifications (Keywords and Enzymes) 
+entry:NX_A6NNB3 
+  :classifiedWith cv:KW-0217;
+  :classifiedWith cv:KW-0225;
+  :classifiedWith cv:KW-0449;
+  :classifiedWith cv:KW-0472;
+  :classifiedWith cv:KW-0495;
+  :classifiedWith cv:KW-0564;
+  :classifiedWith cv:KW-0621;
+  :classifiedWith cv:KW-0812;
+  :classifiedWith cv:KW-1003;
+  :classifiedWith cv:KW-1065;
+  :classifiedWith cv:KW-1133;
+  .
+
+# Gene
+entry:NX_A6NNB3 :gene gene:ENSG00000206013.
+gene:ENSG00000206013 a :Gene;
+    :name "IFITM5"^^xsd:string;
+    :band "p15.5"^^xsd:string; 
+    :strand "-1"^^xsd:string;
+    :chromosome "11"^^xsd:string;
+    :begin "298200"^^xsd:integer; 
+    :end "299526"^^xsd:integer;  
+    :length "1326"^^xsd:integer;  
+    .
+
+
+# Isoform information
+
+isoform:NX_A6NNB3-1 a :Isoform;
+  :sequence [
+    rdf:type :ProteinSequence ; 
+    :isoelectricPoint "8.48"^^xsd:double ;
+    :molecularWeight "14378"^^xsd:double ;
+    :length "132"^^xsd:integer ;
+    :chain  "MDTAYPREDTRAPTPSKAGAHTALTLGAPHPPPRDHLIWSVFSTLYLNLCCLGFLALAYSIKARDQKVVGDLEAARRFGSKAKCYNILAAMWTLVPPLLLLGLVVTGALHLARLAKDSAAFFSTKFDDADYD"^^xsd:string ;
+  ];
+  .
+
+# Annotations
+
+isoform:NX_A6NNB3-1 :processingProduct annotation:NX_A6NNB3-1-AN_A6NNB3_0003 .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0003 .
+isoform:NX_A6NNB3-1 :matureProtein annotation:NX_A6NNB3-1-AN_A6NNB3_0003 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0003 a :MatureProtein;
+  :entryAnnotationId "AN_A6NNB3_0003"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Interferon-induced transmembrane protein 5"^^xsd:string;
+  :start "1"^^xsd:integer;
+  :end "132"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0003 :evidence evidence:85020317. 
+evidence:85020317 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000305;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :topology annotation:NX_A6NNB3-1-AN_A6NNB3_0004 .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0004 .
+isoform:NX_A6NNB3-1 :transmembraneRegion annotation:NX_A6NNB3-1-AN_A6NNB3_0004 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0004 a :TransmembraneRegion;
+  :entryAnnotationId "AN_A6NNB3_0004"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:CVTO_0022;
+  rdfs:comment "Transmembrane region"^^xsd:string;
+  :start "37"^^xsd:integer;
+  :end "57"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0004 :evidence evidence:85020318. 
+evidence:85020318 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000255;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :topology annotation:NX_A6NNB3-1-AN_A6NNB3_0005 .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0005 .
+isoform:NX_A6NNB3-1 :transmembraneRegion annotation:NX_A6NNB3-1-AN_A6NNB3_0005 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0005 a :TransmembraneRegion;
+  :entryAnnotationId "AN_A6NNB3_0005"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:CVTO_0022;
+  rdfs:comment "Transmembrane region"^^xsd:string;
+  :start "87"^^xsd:integer;
+  :end "107"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0005 :evidence evidence:85020319. 
+evidence:85020319 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000255;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :topology annotation:NX_A6NNB3-1-AN_A6NNB3_0036 .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0036 .
+isoform:NX_A6NNB3-1 :topologicalDomain annotation:NX_A6NNB3-1-AN_A6NNB3_0036 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0036 a :TopologicalDomain;
+  :entryAnnotationId "AN_A6NNB3_0036"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:CVTO_0001;
+  rdfs:comment "Cytoplasmic"^^xsd:string;
+  :start "58"^^xsd:integer;
+  :end "86"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0036 :evidence evidence:85020321. 
+evidence:85020321 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000255;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :topology annotation:NX_A6NNB3-1-AN_A6NNB3_0037 .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0037 .
+isoform:NX_A6NNB3-1 :topologicalDomain annotation:NX_A6NNB3-1-AN_A6NNB3_0037 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0037 a :TopologicalDomain;
+  :entryAnnotationId "AN_A6NNB3_0037"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:CVTO_0002;
+  rdfs:comment "Extracellular"^^xsd:string;
+  :start "108"^^xsd:integer;
+  :end "132"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0037 :evidence evidence:89280357. 
+evidence:89280357 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "O88728"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0037 :evidence evidence:85020320. 
+evidence:85020320 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000255;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :topology annotation:NX_A6NNB3-1-AN_A6NNB3_0035 .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0035 .
+isoform:NX_A6NNB3-1 :topologicalDomain annotation:NX_A6NNB3-1-AN_A6NNB3_0035 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0035 a :TopologicalDomain;
+  :entryAnnotationId "AN_A6NNB3_0035"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:CVTO_0002;
+  rdfs:comment "Extracellular"^^xsd:string;
+  :start "1"^^xsd:integer;
+  :end "36"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0035 :evidence evidence:85020322. 
+evidence:85020322 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000255;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :ptm annotation:NX_A6NNB3-1-AN_A6NNB3_0040 .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0040 .
+isoform:NX_A6NNB3-1 :lipidationSite annotation:NX_A6NNB3-1-AN_A6NNB3_0040 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0040 a :LipidationSite;
+  :entryAnnotationId "AN_A6NNB3_0040"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:PTM-0281;
+  rdfs:comment "S-palmitoyl cysteine"^^xsd:string;
+  :start "84"^^xsd:integer;
+  :end "84"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0040 :evidence evidence:89280360. 
+evidence:89280360 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "O88728"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0040 :evidence evidence:89280361. 
+evidence:89280361 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000255;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :ptm annotation:NX_A6NNB3-1-AN_A6NNB3_0039 .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0039 .
+isoform:NX_A6NNB3-1 :lipidationSite annotation:NX_A6NNB3-1-AN_A6NNB3_0039 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0039 a :LipidationSite;
+  :entryAnnotationId "AN_A6NNB3_0039"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:PTM-0281;
+  rdfs:comment "S-palmitoyl cysteine"^^xsd:string;
+  :start "51"^^xsd:integer;
+  :end "51"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0039 :evidence evidence:89280359. 
+evidence:89280359 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "O88728"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0039 :evidence evidence:89280358. 
+evidence:89280358 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000255;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :ptm annotation:NX_A6NNB3-1-AN_A6NNB3_0038 .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0038 .
+isoform:NX_A6NNB3-1 :lipidationSite annotation:NX_A6NNB3-1-AN_A6NNB3_0038 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0038 a :LipidationSite;
+  :entryAnnotationId "AN_A6NNB3_0038"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:PTM-0281;
+  rdfs:comment "S-palmitoyl cysteine"^^xsd:string;
+  :start "50"^^xsd:integer;
+  :end "50"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0038 :evidence evidence:89280362. 
+evidence:89280362 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "O88728"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0038 :evidence evidence:89280363. 
+evidence:89280363 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000255;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000104 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000104 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000104 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000104"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "R"^^xsd:string;
+  :variation "H"^^xsd:string;
+  :start "77"^^xsd:integer;
+  :end "77"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000104 :evidence evidence:80263339. 
+evidence:80263339 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs147932991"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000103 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000103 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000103 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000103"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "R"^^xsd:string;
+  :variation "Q"^^xsd:string;
+  :start "64"^^xsd:integer;
+  :end "64"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000103 :evidence evidence:80263337. 
+evidence:80263337 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs148174338"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000102 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000102 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000102 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000102"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "A"^^xsd:string;
+  :variation "V"^^xsd:string;
+  :start "129"^^xsd:integer;
+  :end "129"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000102 :evidence evidence:80263336. 
+evidence:80263336 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs186684627"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000101 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000101 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000101 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000101"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "R"^^xsd:string;
+  :variation "Q"^^xsd:string;
+  :start "113"^^xsd:integer;
+  :end "113"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000101 :evidence evidence:80263334. 
+evidence:80263334 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs112478479"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000099 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000099 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000099 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000099"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "G"^^xsd:string;
+  :variation "S"^^xsd:string;
+  :start "53"^^xsd:integer;
+  :end "53"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000099 :evidence evidence:80263329. 
+evidence:80263329 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs192508891"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000123 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000123 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000123 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000123"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :original "G"^^xsd:string;
+  :variation "A"^^xsd:string;
+  :start "27"^^xsd:integer;
+  :end "27"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000123 :evidence evidence:92254313. 
+evidence:92254313 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs57285449"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000123 :evidence evidence:92254315. 
+evidence:92254315 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000123 :evidence evidence:92254314. 
+evidence:92254314 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:2054;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM4145647"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000123 :evidence evidence:92254317. 
+evidence:92254317 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs57285449"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000124 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000124 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000124 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000124"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "P"^^xsd:string;
+  :variation "L"^^xsd:string;
+  :start "32"^^xsd:integer;
+  :end "32"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000124 :evidence evidence:92254335. 
+evidence:92254335 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1372;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM1561441"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000124 :evidence evidence:92254337. 
+evidence:92254337 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs142041432"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000125 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000125 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000125 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000125"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "P"^^xsd:string;
+  :variation "L"^^xsd:string;
+  :start "29"^^xsd:integer;
+  :end "29"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000125 :evidence evidence:92254355. 
+evidence:92254355 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs201497459"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000125 :evidence evidence:92254357. 
+evidence:92254357 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1339;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM1353370"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000126 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000126 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000126 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000126"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "R"^^xsd:string;
+  :variation "Q"^^xsd:string;
+  :start "34"^^xsd:integer;
+  :end "34"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000126 :evidence evidence:92254374. 
+evidence:92254374 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs138776304"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000126 :evidence evidence:92254372. 
+evidence:92254372 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:2002;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM4032286"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000081 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000081 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000081 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000081"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "K"^^xsd:string;
+  :variation "T"^^xsd:string;
+  :start "116"^^xsd:integer;
+  :end "116"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000081 :evidence evidence:90953797. 
+evidence:90953797 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1125;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM926210"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000082 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000082 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000082 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000082"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "M"^^xsd:string;
+  :variation "I"^^xsd:string;
+  :start "1"^^xsd:integer;
+  :end "1"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000082 :evidence evidence:90953801. 
+evidence:90953801 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1125;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM926214"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000083 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000083 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000083 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000083"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "S"^^xsd:string;
+  :variation "C"^^xsd:string;
+  :start "80"^^xsd:integer;
+  :end "80"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000083 :evidence evidence:90953807. 
+evidence:90953807 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1382;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM1604463"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0063 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_0063 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0063 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_0063"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "T"^^xsd:string;
+  :variation "M"^^xsd:string;
+  :start "93"^^xsd:integer;
+  :end "93"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0063 :evidence evidence:36412907. 
+evidence:36412907 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs141240817"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0065 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_0065 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0065 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_0065"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "A"^^xsd:string;
+  :variation "T"^^xsd:string;
+  :start "120"^^xsd:integer;
+  :end "120"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0065 :evidence evidence:36412911. 
+evidence:36412911 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs150598773"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0056 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_0056 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0056 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_0056"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "K"^^xsd:string;
+  :variation "R"^^xsd:string;
+  :start "81"^^xsd:integer;
+  :end "81"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0056 :evidence evidence:36412893. 
+evidence:36412893 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs144778620"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0061 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_0061 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0061 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_0061"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "P"^^xsd:string;
+  :variation "T"^^xsd:string;
+  :start "31"^^xsd:integer;
+  :end "31"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0061 :evidence evidence:36412903. 
+evidence:36412903 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs146230729"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000112 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000112 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000112 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000112"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "A"^^xsd:string;
+  :variation "V"^^xsd:string;
+  :start "89"^^xsd:integer;
+  :end "89"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000112 :evidence evidence:90953795. 
+evidence:90953795 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1606;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM3446632"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000113 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000113 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000113 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000113"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "C"^^xsd:string;
+  :variation "R"^^xsd:string;
+  :start "50"^^xsd:integer;
+  :end "50"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000113 :evidence evidence:90953799. 
+evidence:90953799 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:2002;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM4032285"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000115 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000115 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000115 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000115"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "P"^^xsd:string;
+  :variation "S"^^xsd:string;
+  :start "6"^^xsd:integer;
+  :end "6"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000115 :evidence evidence:90953805. 
+evidence:90953805 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1311;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM4165761"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000117 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000117 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000117 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000117"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "K"^^xsd:string;
+  :variation "R"^^xsd:string;
+  :start "62"^^xsd:integer;
+  :end "62"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000117 :evidence evidence:90953811. 
+evidence:90953811 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:2002;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM4032284"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0071 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_0071 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0071 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_0071"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "L"^^xsd:string;
+  :variation "V"^^xsd:string;
+  :start "49"^^xsd:integer;
+  :end "49"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0071 :evidence evidence:90953800. 
+evidence:90953800 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:2085;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM415219"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0072 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_0072 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0072 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_0072"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "A"^^xsd:string;
+  :variation "S"^^xsd:string;
+  :start "20"^^xsd:integer;
+  :end "20"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0072 :evidence evidence:90953814. 
+evidence:90953814 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1390;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM542295"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000079 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000079 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000079 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000079"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "A"^^xsd:string;
+  :variation "V"^^xsd:string;
+  :start "90"^^xsd:integer;
+  :end "90"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000079 :evidence evidence:90953810. 
+evidence:90953810 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000219;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Cosmic;
+  :experimentalContext context:1339;
+  :fromXref db:Cosmic;
+  :reference [
+    rdf:type :Xref ;
+    :accession "COSM1353369"^^xsd:string;
+    :provenance db:Cosmic; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000096 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000096 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000096 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000096"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "D"^^xsd:string;
+  :variation "N"^^xsd:string;
+  :start "132"^^xsd:integer;
+  :end "132"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000096 :evidence evidence:80263324. 
+evidence:80263324 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs144099368"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000095 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000095 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000095 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000095"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :original "T"^^xsd:string;
+  :variation "M"^^xsd:string;
+  :start "14"^^xsd:integer;
+  :end "14"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000095 :evidence evidence:80263322. 
+evidence:80263322 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000006;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:dbSNP;
+  :fromXref db:dbSNP;
+  :reference [
+    rdf:type :Xref ;
+    :accession "rs200046984"^^xsd:string;
+    :provenance db:dbSNP; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000110 .
+isoform:NX_A6NNB3-1 :variant annotation:NX_A6NNB3-1-AN_A6NNB3_000110 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000110 a :Variant;
+  :entryAnnotationId "AN_A6NNB3_000110"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :original "S"^^xsd:string;
+  :variation "L"^^xsd:string;
+  rdfs:comment "correlates with reduced expression and barely detectable secretion of SERPINF1."^^xsd:string;
+  :disease cv:DI-03563;
+  :start "40"^^xsd:integer;
+  :end "40"^^xsd:integer;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000110 :evidence evidence:89280366. 
+evidence:89280366 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :reference publication:09a17e7d8a6bfa997dde5c2e8a0ff652;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000110 :evidence evidence:89280365. 
+evidence:89280365 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000106 .
+isoform:NX_A6NNB3-1 :function annotation:NX_A6NNB3-1-AN_A6NNB3_000106 .
+isoform:NX_A6NNB3-1 :functionInfo annotation:NX_A6NNB3-1-AN_A6NNB3_000106 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000106 a :FunctionInfo;
+  :entryAnnotationId "AN_A6NNB3_000106"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Required for normal bone mineralization."^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000106 :evidence evidence:89280342. 
+evidence:89280342 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000106 :evidence evidence:89280344. 
+evidence:89280344 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :reference publication:09a17e7d8a6bfa997dde5c2e8a0ff652;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000107 .
+isoform:NX_A6NNB3-1 :interaction annotation:NX_A6NNB3-1-AN_A6NNB3_000107 .
+isoform:NX_A6NNB3-1 :interactionInfo annotation:NX_A6NNB3-1-AN_A6NNB3_000107 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000107 a :InteractionInfo;
+  :entryAnnotationId "AN_A6NNB3_000107"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Interacts with FKBP11."^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000107 :evidence evidence:89280353. 
+evidence:89280353 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "O88728"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000107 :evidence evidence:89280354. 
+evidence:89280354 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0034 .
+isoform:NX_A6NNB3-1 :cellularComponent annotation:NX_A6NNB3-1-AN_A6NNB3_0034 .
+isoform:NX_A6NNB3-1 :subcellularLocation annotation:NX_A6NNB3-1-AN_A6NNB3_0034 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0034 a :SubcellularLocation;
+  :entryAnnotationId "AN_A6NNB3_0034"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:SL-0039;
+  rdfs:comment "Cell membrane"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0034 :evidence evidence:89280355. 
+evidence:89280355 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :reference publication:09a17e7d8a6bfa997dde5c2e8a0ff652;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0034 :evidence evidence:89280356. 
+evidence:89280356 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000087 .
+isoform:NX_A6NNB3-1 :expression annotation:NX_A6NNB3-1-AN_A6NNB3_000087 .
+isoform:NX_A6NNB3-1 :expressionProfile annotation:NX_A6NNB3-1-AN_A6NNB3_000087 .
+isoform:NX_A6NNB3-1 :detectedExpression annotation:NX_A6NNB3-1-AN_A6NNB3_000087 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000087 a :ExpressionProfile;
+  :entryAnnotationId "AN_A6NNB3_000087"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:TS-0229;
+  rdfs:comment "Embryo"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000087 :evidence evidence:77285252. 
+evidence:77285252 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000009;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:Bgee;
+  :expressionLevel :Positive;
+  :experimentalContext context:9;
+  :fromXref db:Bgee;
+  :reference [
+    rdf:type :Xref ;
+    :accession "stage_id=HsapDO:0000197&amp;organ_id=EHDAA:38&amp;gene_id=ENSG00000206013&amp;stage_children=on"^^xsd:string;
+    :provenance db:Bgee; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :ptm annotation:NX_A6NNB3-1-AN_A6NNB3_000109 .
+isoform:NX_A6NNB3-1 :positionalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000109 .
+isoform:NX_A6NNB3-1 :ptmInfo annotation:NX_A6NNB3-1-AN_A6NNB3_000109 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000109 a :PtmInfo;
+  :entryAnnotationId "AN_A6NNB3_000109"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Palmitoylated."^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000109 :evidence evidence:89280350. 
+evidence:89280350 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000250;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "O88728"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000109 :evidence evidence:89280349. 
+evidence:89280349 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000086 .
+isoform:NX_A6NNB3-1 :medical annotation:NX_A6NNB3-1-AN_A6NNB3_000086 .
+isoform:NX_A6NNB3-1 :disease annotation:NX_A6NNB3-1-AN_A6NNB3_000086 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000086 a :Disease;
+  :entryAnnotationId "AN_A6NNB3_000086"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:DI-03563;
+  rdfs:comment "Osteogenesis imperfecta 5 (OI5) [MIM:610967]: An autosomal dominant form of osteogenesis imperfecta, a connective tissue disorder characterized by low bone mass, bone fragility and susceptibility to fractures after minimal trauma. Disease severity ranges from very mild forms without fractures to intrauterine fractures and perinatal lethality. Extraskeletal manifestations, which affect a variable number of patients, are dentinogenesis imperfecta, hearing loss, and blue sclerae. OI5 patients manifest moderate to severe bone fragility, calcification of the forearm interosseous membrane, radial head dislocation, a subphyseal metaphyseal radiodense line, and hyperplastic callus formation. The disease is caused by mutations affecting the gene represented in this entry."^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000086 :evidence evidence:85020314. 
+evidence:85020314 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000086 :evidence evidence:85020315. 
+evidence:85020315 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :reference publication:c3cc88cb9e4f47f06b18c1564b9db729;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000108 .
+isoform:NX_A6NNB3-1 :expression annotation:NX_A6NNB3-1-AN_A6NNB3_000108 .
+isoform:NX_A6NNB3-1 :expressionInfo annotation:NX_A6NNB3-1-AN_A6NNB3_000108 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000108 a :ExpressionInfo;
+  :entryAnnotationId "AN_A6NNB3_000108"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Detected in bone (PubMed:24058703). Detected in osteoblasts and fibroblasts (at protein level) (PubMed:24519609). Detected in bone (PubMed:24058703). Detected in osteoblasts and fibroblasts (PubMed:24519609)."^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000108 :evidence evidence:89280347. 
+evidence:89280347 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000108 :evidence evidence:89280346. 
+evidence:89280346 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :reference publication:27bb34836a752133111f3ae1701da28e;
+  :assocType "evidence"^^xsd:string;
+  .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000108 :evidence evidence:89280348. 
+evidence:89280348 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000269;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :reference publication:09a17e7d8a6bfa997dde5c2e8a0ff652;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000119 .
+isoform:NX_A6NNB3-1 :function annotation:NX_A6NNB3-1-AN_A6NNB3_000119 .
+isoform:NX_A6NNB3-1 :goBiologicalProcess annotation:NX_A6NNB3-1-AN_A6NNB3_000119 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000119 a :GoBiologicalProcess;
+  :entryAnnotationId "AN_A6NNB3_000119"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:GO_0030282;
+  rdfs:comment "bone mineralization"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000119 :evidence evidence:91644276. 
+evidence:91644276 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000315;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :reference publication:09a17e7d8a6bfa997dde5c2e8a0ff652;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000120 .
+isoform:NX_A6NNB3-1 :function annotation:NX_A6NNB3-1-AN_A6NNB3_000120 .
+isoform:NX_A6NNB3-1 :goBiologicalProcess annotation:NX_A6NNB3-1-AN_A6NNB3_000120 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000120 a :GoBiologicalProcess;
+  :entryAnnotationId "AN_A6NNB3_000120"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:GO_0060349;
+  rdfs:comment "bone morphogenesis"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000120 :evidence evidence:91644278. 
+evidence:91644278 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000315;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :reference publication:09a17e7d8a6bfa997dde5c2e8a0ff652;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0050 .
+isoform:NX_A6NNB3-1 :function annotation:NX_A6NNB3-1-AN_A6NNB3_0050 .
+isoform:NX_A6NNB3-1 :goBiologicalProcess annotation:NX_A6NNB3-1-AN_A6NNB3_0050 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0050 a :GoBiologicalProcess;
+  :entryAnnotationId "AN_A6NNB3_0050"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:GO_0030500;
+  rdfs:comment "regulation of bone mineralization"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0050 :evidence evidence:91521365. 
+evidence:91521365 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000501;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:GO_REF;
+  :reference [
+    rdf:type :Xref ;
+    :accession "GO_REF:0000037"^^xsd:string;
+    :provenance db:GO_REF; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0051 .
+isoform:NX_A6NNB3-1 :function annotation:NX_A6NNB3-1-AN_A6NNB3_0051 .
+isoform:NX_A6NNB3-1 :goBiologicalProcess annotation:NX_A6NNB3-1-AN_A6NNB3_0051 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0051 a :GoBiologicalProcess;
+  :entryAnnotationId "AN_A6NNB3_0051"^^xsd:string;
+  :quality :SILVER;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:GO_0009607;
+  rdfs:comment "response to biotic stimulus"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0051 :evidence evidence:91521364. 
+evidence:91521364 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000501;
+  :negative "false"^^xsd:boolean;
+  :quality :SILVER;
+  :assignedBy source:InterPro;
+  :fromXref db:GO_REF;
+  :reference [
+    rdf:type :Xref ;
+    :accession "GO_REF:0000002"^^xsd:string;
+    :provenance db:GO_REF; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000118 .
+isoform:NX_A6NNB3-1 :cellularComponent annotation:NX_A6NNB3-1-AN_A6NNB3_000118 .
+isoform:NX_A6NNB3-1 :goCellularComponent annotation:NX_A6NNB3-1-AN_A6NNB3_000118 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000118 a :GoCellularComponent;
+  :entryAnnotationId "AN_A6NNB3_000118"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:GO_0005887;
+  rdfs:comment "integral component of plasma membrane"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000118 :evidence evidence:91644275. 
+evidence:91644275 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000314;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :reference publication:09a17e7d8a6bfa997dde5c2e8a0ff652;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :keyword annotation:NX_A6NNB3-1-AN_A6NNB3_000121 .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000121 .
+isoform:NX_A6NNB3-1 :uniprotKeyword annotation:NX_A6NNB3-1-AN_A6NNB3_000121 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000121 a :UniprotKeyword;
+  :entryAnnotationId "AN_A6NNB3_000121"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0564;
+  rdfs:comment "Palmitate"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000121 :evidence evidence:92254282. 
+evidence:92254282 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :keyword annotation:NX_A6NNB3-1-AN_A6NNB3_000122 .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000122 .
+isoform:NX_A6NNB3-1 :uniprotKeyword annotation:NX_A6NNB3-1-AN_A6NNB3_000122 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000122 a :UniprotKeyword;
+  :entryAnnotationId "AN_A6NNB3_000122"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-1003;
+  rdfs:comment "Cell membrane"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000122 :evidence evidence:92254299. 
+evidence:92254299 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :keyword annotation:NX_A6NNB3-1-AN_A6NNB3_0054 .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0054 .
+isoform:NX_A6NNB3-1 :uniprotKeyword annotation:NX_A6NNB3-1-AN_A6NNB3_0054 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0054 a :UniprotKeyword;
+  :entryAnnotationId "AN_A6NNB3_0054"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-1185;
+  rdfs:comment "Reference proteome"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0054 :evidence evidence:85020334. 
+evidence:85020334 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :keyword annotation:NX_A6NNB3-1-AN_A6NNB3_0044 .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0044 .
+isoform:NX_A6NNB3-1 :uniprotKeyword annotation:NX_A6NNB3-1-AN_A6NNB3_0044 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0044 a :UniprotKeyword;
+  :entryAnnotationId "AN_A6NNB3_0044"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0495;
+  rdfs:comment "Mineral balance"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0044 :evidence evidence:85020340. 
+evidence:85020340 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :keyword annotation:NX_A6NNB3-1-AN_A6NNB3_0010 .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0010 .
+isoform:NX_A6NNB3-1 :uniprotKeyword annotation:NX_A6NNB3-1-AN_A6NNB3_0010 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0010 a :UniprotKeyword;
+  :entryAnnotationId "AN_A6NNB3_0010"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0812;
+  rdfs:comment "Transmembrane"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0010 :evidence evidence:85020338. 
+evidence:85020338 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :keyword annotation:NX_A6NNB3-1-AN_A6NNB3_0043 .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0043 .
+isoform:NX_A6NNB3-1 :uniprotKeyword annotation:NX_A6NNB3-1-AN_A6NNB3_0043 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0043 a :UniprotKeyword;
+  :entryAnnotationId "AN_A6NNB3_0043"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0449;
+  rdfs:comment "Lipoprotein"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0043 :evidence evidence:85020331. 
+evidence:85020331 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :keyword annotation:NX_A6NNB3-1-AN_A6NNB3_0029 .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0029 .
+isoform:NX_A6NNB3-1 :uniprotKeyword annotation:NX_A6NNB3-1-AN_A6NNB3_0029 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0029 a :UniprotKeyword;
+  :entryAnnotationId "AN_A6NNB3_0029"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-1133;
+  rdfs:comment "Transmembrane helix"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0029 :evidence evidence:85020330. 
+evidence:85020330 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :keyword annotation:NX_A6NNB3-1-AN_A6NNB3_0074 .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0074 .
+isoform:NX_A6NNB3-1 :uniprotKeyword annotation:NX_A6NNB3-1-AN_A6NNB3_0074 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0074 a :UniprotKeyword;
+  :entryAnnotationId "AN_A6NNB3_0074"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-1065;
+  rdfs:comment "Osteogenesis imperfecta"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0074 :evidence evidence:85020329. 
+evidence:85020329 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :keyword annotation:NX_A6NNB3-1-AN_A6NNB3_000111 .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_000111 .
+isoform:NX_A6NNB3-1 :uniprotKeyword annotation:NX_A6NNB3-1-AN_A6NNB3_000111 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_000111 a :UniprotKeyword;
+  :entryAnnotationId "AN_A6NNB3_000111"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0225;
+  rdfs:comment "Disease mutation"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_000111 :evidence evidence:89280368. 
+evidence:89280368 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :keyword annotation:NX_A6NNB3-1-AN_A6NNB3_0007 .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0007 .
+isoform:NX_A6NNB3-1 :uniprotKeyword annotation:NX_A6NNB3-1-AN_A6NNB3_0007 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0007 a :UniprotKeyword;
+  :entryAnnotationId "AN_A6NNB3_0007"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0181;
+  rdfs:comment "Complete proteome"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0007 :evidence evidence:85020335. 
+evidence:85020335 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :keyword annotation:NX_A6NNB3-1-AN_A6NNB3_0008 .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0008 .
+isoform:NX_A6NNB3-1 :uniprotKeyword annotation:NX_A6NNB3-1-AN_A6NNB3_0008 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0008 a :UniprotKeyword;
+  :entryAnnotationId "AN_A6NNB3_0008"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0472;
+  rdfs:comment "Membrane"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0008 :evidence evidence:85020336. 
+evidence:85020336 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :keyword annotation:NX_A6NNB3-1-AN_A6NNB3_0009 .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0009 .
+isoform:NX_A6NNB3-1 :uniprotKeyword annotation:NX_A6NNB3-1-AN_A6NNB3_0009 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0009 a :UniprotKeyword;
+  :entryAnnotationId "AN_A6NNB3_0009"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0621;
+  rdfs:comment "Polymorphism"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0009 :evidence evidence:85020337. 
+evidence:85020337 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :keyword annotation:NX_A6NNB3-1-AN_A6NNB3_0042 .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_0042 .
+isoform:NX_A6NNB3-1 :uniprotKeyword annotation:NX_A6NNB3-1-AN_A6NNB3_0042 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_0042 a :UniprotKeyword;
+  :entryAnnotationId "AN_A6NNB3_0042"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  :term cv:KW-0217;
+  rdfs:comment "Developmental protein"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_0042 :evidence evidence:85020332. 
+evidence:85020332 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000212;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:UniProt;
+  :reference [
+    rdf:type :Xref ;
+    :accession "A6NNB3"^^xsd:string;
+    :provenance db:UniProt; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+isoform:NX_A6NNB3-1 :generalAnnotation annotation:NX_A6NNB3-1-AN_A6NNB3_XR_7204056 .
+isoform:NX_A6NNB3-1 :medical annotation:NX_A6NNB3-1-AN_A6NNB3_XR_7204056 .
+isoform:NX_A6NNB3-1 :disease annotation:NX_A6NNB3-1-AN_A6NNB3_XR_7204056 .
+annotation:NX_A6NNB3-1-AN_A6NNB3_XR_7204056 a :Disease;
+  :entryAnnotationId "AN_A6NNB3_XR_7204056"^^xsd:string;
+  :quality :GOLD;
+  :isoformSpecificity :UNKNOWN;
+  rdfs:comment "Osteogenesis imperfecta type 5"^^xsd:string;
+  .     
+annotation:NX_A6NNB3-1-AN_A6NNB3_XR_7204056 :evidence evidence:21007204056. 
+evidence:21007204056 
+  rdf:type :Evidence ;
+  :evidenceCode cv:ECO_0000305;
+  :negative "false"^^xsd:boolean;
+  :quality :GOLD;
+  :assignedBy source:Uniprot;
+  :fromXref db:Orphanet;
+  :reference [
+    rdf:type :Xref ;
+    :accession "216828"^^xsd:string;
+    :provenance db:Orphanet; 
+   ] ;
+  :assocType "evidence"^^xsd:string;
+  .
+#Interactions begin
+#Interactions end
+
+
+
+
+
+
+
+# - - - - - - - -
+# Xrefs v3
+# - - - - - - - -
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "41962"^^xsd:string ;
+  :provenance db:Antibodypedia ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "A6NNB3"^^xsd:string ;
+  :provenance db:Bgee ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "ENSG00000206013"^^xsd:string ;
+  :provenance db:Bgee ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "stage_id=HsapDO:0000197&amp;organ_id=EHDAA:38&amp;gene_id=ENSG00000206013&amp;stage_children=on"^^xsd:string ;
+  :provenance db:Bgee ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "CCDS31323.1"^^xsd:string ;
+  :provenance db:CCDS ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "HS_IFITM5"^^xsd:string ;
+  :provenance db:CleanEx ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM1353369"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM1353370"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM1561441"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM1604463"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM3446632"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM4032284"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM4032285"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM4032286"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM4145647"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM415219"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM4165761"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM542295"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM926210"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "COSM926214"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "IFITM5"^^xsd:string ;
+  :provenance db:Cosmic ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "387733"^^xsd:string ;
+  :provenance db:CTD ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs112478479"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs138776304"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs141240817"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs142041432"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs144099368"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs144778620"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs146230729"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs147932991"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs148174338"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs150598773"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs186684627"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs192508891"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs200046984"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs201497459"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "rs57285449"^^xsd:string ;
+  :provenance db:dbSNP ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "NOG08460"^^xsd:string ;
+  :provenance db:eggNOG ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "BC150562"^^xsd:string ;
+  :provenance db:EMBL ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "BC150563"^^xsd:string ;
+  :provenance db:EMBL ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "EAW61222.1"^^xsd:string ;
+  :provenance db:EMBL ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "ENSG00000206013"^^xsd:string ;
+  :provenance db:Ensembl ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "ENSP00000372059"^^xsd:string ;
+  :provenance db:Ensembl ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "ENST00000382614"^^xsd:string ;
+  :provenance db:Ensembl ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "GC11M000298"^^xsd:string ;
+  :provenance db:GeneCards ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "387733"^^xsd:string ;
+  :provenance db:GeneID ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "ENSGT00390000003476"^^xsd:string ;
+  :provenance db:GeneTree ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "A6NNB3"^^xsd:string ;
+  :provenance db:Genevestigator ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "387733"^^xsd:string ;
+  :provenance db:GenomeRNAi ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "A6NNB3"^^xsd:string ;
+  :provenance db:GOA ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "GO_REF:0000002"^^xsd:string ;
+  :provenance db:GO_REF ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "GO_REF:0000037"^^xsd:string ;
+  :provenance db:GO_REF ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "HGNC:16644"^^xsd:string ;
+  :provenance db:HGNC ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "HOG000115781"^^xsd:string ;
+  :provenance db:HOGENOM ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "HBG053217"^^xsd:string ;
+  :provenance db:HOVERGEN ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "HPA039258"^^xsd:string ;
+  :provenance db:HPA ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "18802"^^xsd:string ;
+  :provenance db:HPRD ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "A6NNB3"^^xsd:string ;
+  :provenance db:InParanoid ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "IPR007593"^^xsd:string ;
+  :provenance db:InterPro ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "hsa:387733"^^xsd:string ;
+  :provenance db:KEGG ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "K06566"^^xsd:string ;
+  :provenance db:KO ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "MGI:1934923"^^xsd:string ;
+  :provenance db:MGI ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "610967"^^xsd:string ;
+  :provenance db:MIM ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "614757"^^xsd:string ;
+  :provenance db:MIM ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "9606"^^xsd:string ;
+  :provenance db:NCBI_Taxonomy ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "101561"^^xsd:string ;
+  :provenance db:NextBio ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "NX_A6NNB3"^^xsd:string ;
+  :provenance db:neXtProt ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "TSYPRED"^^xsd:string ;
+  :provenance db:OMA ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "216828"^^xsd:string ;
+  :provenance db:Orphanet ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "EOG7288T5"^^xsd:string ;
+  :provenance db:OrthoDB ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "A6NNB3"^^xsd:string ;
+  :provenance db:PaxDb ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "PF04505"^^xsd:string ;
+  :provenance db:Pfam ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "PA162391894"^^xsd:string ;
+  :provenance db:PharmGKB ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "A6NNB3"^^xsd:string ;
+  :provenance db:PhylomeDB ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "A6NNB3"^^xsd:string ;
+  :provenance db:PRIDE ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "PR:A6NNB3"^^xsd:string ;
+  :provenance db:PRO ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "A6NNB3"^^xsd:string ;
+  :provenance db:ProteinModelPortal ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "UP000005640"^^xsd:string ;
+  :provenance db:Proteomes ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "NP_001020466.1"^^xsd:string ;
+  :provenance db:RefSeq ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "PAp01045434"^^xsd:string ;
+  :provenance db:SRMAtlas ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "PAp01567226"^^xsd:string ;
+  :provenance db:SRMAtlas ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "PAp01574482"^^xsd:string ;
+  :provenance db:SRMAtlas ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "PAp01693310"^^xsd:string ;
+  :provenance db:SRMAtlas ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "PAp01747688"^^xsd:string ;
+  :provenance db:SRMAtlas ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "9606.ENSP00000372059"^^xsd:string ;
+  :provenance db:STRING ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "TF334894"^^xsd:string ;
+  :provenance db:TreeFam ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "uc001low.2"^^xsd:string ;
+  :provenance db:UCSC ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "Hs.443469"^^xsd:string ;
+  :provenance db:UniGene ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "A6NNB3"^^xsd:string ;
+  :provenance db:UniProt ; 
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Xref ;
+  :accession "O88728"^^xsd:string ;
+  :provenance db:UniProt ; 
+  ]
+.
+
+
+
+# - - - - - - - -
+# Identifiers
+# - - - - - - - -
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "CCDS31323.1"^^xsd:string ;
+  :provenance db:CCDS ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "IFM5_HUMAN"^^xsd:string ;
+  :provenance db:UniProtKB ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "ENSG00000206013"^^xsd:string ;
+  :provenance db:Ensembl ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "GC11M000298"^^xsd:string ;
+  :provenance db:GeneCards ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "387733"^^xsd:string ;
+  :provenance db:GeneID ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "HGNC:16644"^^xsd:string ;
+  :provenance db:HGNC ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "IFITM5"^^xsd:string ;
+  :provenance db:HGNC ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "HPA039258"^^xsd:string ;
+  :provenance db:HPA ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "18802"^^xsd:string ;
+  :provenance db:HPRD ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "ILMN_1711032"^^xsd:string ;
+  :provenance db:Illumina ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "IMAGE:40127610"^^xsd:string ;
+  :provenance db:IMAGE ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "IMAGE:40127611"^^xsd:string ;
+  :provenance db:IMAGE ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "hsa:387733"^^xsd:string ;
+  :provenance db:KEGG ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "MGC:179712"^^xsd:string ;
+  :provenance db:MGC ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "MGC:179713"^^xsd:string ;
+  :provenance db:MGC ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "101561"^^xsd:string ;
+  :provenance db:NextBio ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "PA162391894"^^xsd:string ;
+  :provenance db:PharmGKB ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "A6NNB3"^^xsd:string ;
+  :provenance db:UniProtKB ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "ENSP00000372059"^^xsd:string ;
+  :provenance db:Ensembl ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "NP_001020466.1"^^xsd:string ;
+  :provenance db:RefSeq ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "ENST00000382614"^^xsd:string ;
+  :provenance db:Ensembl ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "uc001low.2"^^xsd:string ;
+  :provenance db:UCSC ;
+  ]
+.
+
+entry:NX_A6NNB3 :reference [
+  a :Identifier ;
+  :accession "Hs.443469"^^xsd:string ;
+  :provenance db:UniGene ;
+  ]
+.
+
+
+# - - - - - - - -
+# Publications
+# - - - - - - - -
+
+entry:NX_A6NNB3 :reference publication:09a17e7d8a6bfa997dde5c2e8a0ff652 .
+entry:NX_A6NNB3 :reference publication:27bb34836a752133111f3ae1701da28e .
+entry:NX_A6NNB3 :reference publication:c3cc88cb9e4f47f06b18c1564b9db729 .
+entry:NX_A6NNB3 :reference publication:130fdd23ab75749dd77bb6506a7a5325 .
+entry:NX_A6NNB3 :reference publication:0bf1dc75c0b8ccddd59dbb01a50ecabe .
+entry:NX_A6NNB3 :reference publication:9fcea3e64fff4863189b75bf5cdca62d .
+
+
+
+# Antibodies mappings
+
+  isoform:NX_A6NNB3-1 :positionalAnnotation :NX_HPA039258-NX_A6NNB3-1 .
+  isoform:NX_A6NNB3-1 :mapping :NX_HPA039258-NX_A6NNB3-1 .
+  isoform:NX_A6NNB3-1 :antibodyMapping :NX_HPA039258-NX_A6NNB3-1 .
+  :NX_HPA039258-NX_A6NNB3-1 
+    rdf:type :AntibodyMapping ;  
+	:antibodyName "NX_HPA039258"^^xsd:string ;
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0000154;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;      
+      :assignedBy source:Human_protein_atlas ;
+      :assocType "evidence"^^xsd:string;
+	  :reference [
+	  	rdf:type :Xref ;
+	  	:provenance db:HPA ;
+		:accession "HPA039258"^^xsd:string ;
+	  ];
+    ];	
+    
+    :position [ 
+      rdf:type :MappingPosition ;
+      :start "60"^^xsd:integer ;
+      :end "84"^^xsd:integer ;
+    ];
+  .
+  
+
+
+
+# Peptides mappings
+
+
+
+# SRM Peptides mappings
+
+  isoform:NX_A6NNB3-1 :positionalAnnotation :SYNTH-NX_PEPT01108920-NX_A6NNB3-1 .
+  isoform:NX_A6NNB3-1 :mapping :SYNTH-NX_PEPT01108920-NX_A6NNB3-1 .
+  isoform:NX_A6NNB3-1 :srmPeptideMapping :SYNTH-NX_PEPT01108920-NX_A6NNB3-1 .
+  :SYNTH-NX_PEPT01108920-NX_A6NNB3-1 rdf:type :SrmPeptideMapping ;  
+    :peptideName "NX_PEPT01108920"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "117"^^xsd:integer ;
+      :end "125"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;            
+      :assignedBy source:SRMAtlas ;
+      :reference [
+        rdf:type :Xref ;
+        :provenance db:SRMAtlas ;
+        :accession "PAp01567226"^^xsd:string ;
+      ];
+    ];
+  .
+  
+  isoform:NX_A6NNB3-1 :positionalAnnotation :SYNTH-NX_PEPT01140963-NX_A6NNB3-1 .
+  isoform:NX_A6NNB3-1 :mapping :SYNTH-NX_PEPT01140963-NX_A6NNB3-1 .
+  isoform:NX_A6NNB3-1 :srmPeptideMapping :SYNTH-NX_PEPT01140963-NX_A6NNB3-1 .
+  :SYNTH-NX_PEPT01140963-NX_A6NNB3-1 rdf:type :SrmPeptideMapping ;  
+    :peptideName "NX_PEPT01140963"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "1"^^xsd:integer ;
+      :end "7"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;            
+      :assignedBy source:SRMAtlas ;
+      :reference [
+        rdf:type :Xref ;
+        :provenance db:SRMAtlas ;
+        :accession "PAp01045434"^^xsd:string ;
+      ];
+    ];
+  .
+  
+  isoform:NX_A6NNB3-1 :positionalAnnotation :SYNTH-NX_PEPT01117980-NX_A6NNB3-1 .
+  isoform:NX_A6NNB3-1 :mapping :SYNTH-NX_PEPT01117980-NX_A6NNB3-1 .
+  isoform:NX_A6NNB3-1 :srmPeptideMapping :SYNTH-NX_PEPT01117980-NX_A6NNB3-1 .
+  :SYNTH-NX_PEPT01117980-NX_A6NNB3-1 rdf:type :SrmPeptideMapping ;  
+    :peptideName "NX_PEPT01117980"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "68"^^xsd:integer ;
+      :end "76"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;            
+      :assignedBy source:SRMAtlas ;
+      :reference [
+        rdf:type :Xref ;
+        :provenance db:SRMAtlas ;
+        :accession "PAp01574482"^^xsd:string ;
+      ];
+    ];
+  .
+  
+  isoform:NX_A6NNB3-1 :positionalAnnotation :SYNTH-NX_PEPT01167067-NX_A6NNB3-1 .
+  isoform:NX_A6NNB3-1 :mapping :SYNTH-NX_PEPT01167067-NX_A6NNB3-1 .
+  isoform:NX_A6NNB3-1 :srmPeptideMapping :SYNTH-NX_PEPT01167067-NX_A6NNB3-1 .
+  :SYNTH-NX_PEPT01167067-NX_A6NNB3-1 rdf:type :SrmPeptideMapping ;  
+    :peptideName "NX_PEPT01167067"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "18"^^xsd:integer ;
+      :end "34"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;            
+      :assignedBy source:SRMAtlas ;
+      :reference [
+        rdf:type :Xref ;
+        :provenance db:SRMAtlas ;
+        :accession "PAp01693310"^^xsd:string ;
+      ];
+    ];
+  .
+  
+  isoform:NX_A6NNB3-1 :positionalAnnotation :SYNTH-NX_PEPT01158607-NX_A6NNB3-1 .
+  isoform:NX_A6NNB3-1 :mapping :SYNTH-NX_PEPT01158607-NX_A6NNB3-1 .
+  isoform:NX_A6NNB3-1 :srmPeptideMapping :SYNTH-NX_PEPT01158607-NX_A6NNB3-1 .
+  :SYNTH-NX_PEPT01158607-NX_A6NNB3-1 rdf:type :SrmPeptideMapping ;  
+    :peptideName "NX_PEPT01158607"^^xsd:string ;
+    :proteotypic "true"^^xsd:boolean ;
+    :position [ 
+      rdf:type :MappingPosition ;    
+      :start "126"^^xsd:integer ;
+      :end "132"^^xsd:integer ;
+    ];
+    :evidence [
+      rdf:type :Evidence ;
+      :evidenceCode cv:ECO_0001096;
+      :negative "false"^^xsd:boolean;
+      :quality :GOLD;            
+      :assignedBy source:SRMAtlas ;
+      :reference [
+        rdf:type :Xref ;
+        :provenance db:SRMAtlas ;
+        :accession "PAp01747688"^^xsd:string ;
+      ];
+    ];
+  .
+  
+
