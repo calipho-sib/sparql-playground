@@ -69,7 +69,7 @@
 
             <div class="example-list">
             <div style="position:relative" ng-repeat="example in snorql.examples | containsTag:filterTag | filter:filter" >
-                <a ng-class="example.backgroundColor" ng-class="example | containsTag" href="#" ng-click="selectExample(example.index, example.userQueryId > 1000);" ng-class="{'active':qSelected===example.index}"  class="list-group-item query-{{example.index}}">
+                <a ng-class="qSelected===example.index ? 'active' : example.backgroundColor" ng-class="example | containsTag" href="#" ng-click="selectExample(example.index, example.userQueryId > 1000);"  class="list-group-item query-{{example.index}}">
                 <h5 class="list-group-item-heading">{{example.userQueryId}}) {{example.title}}</h5>
                 <p class="list-group-item-text"><span  class="label"  >
                   <span ng-repeat="tag in example.tags | orderBy" class="label label-default label-as-badge">{{tag}}</span>

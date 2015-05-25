@@ -1,5 +1,6 @@
-#title:Select all things that are persons and are female (women)
-#comment:
+#title:Select things that are persons and are female (women)
+#comment:Selects subjects connected to the object dbo:Person via the predicate rdf:type and
+#comment:use the same variable '?thing' to connect to the literal female by the predicated tto:sex.
 #tags:1 graph pattern,1 variable, 2 conditions
 #color:ex-blue
     
@@ -9,21 +10,21 @@ select ?thing where {
 }
 
 
-#Use the same name of the variable in the 2 statements
-#The name of the variable makes the constraints
+# Use the same name of the variable in the 2 statements
+# It is the name of the variable that enforces the constraint
 
-#Hint you can use semicolon ';' to refer to the previous subject 
-#select ?thing where {
+# Hint: Use the semicolon ';' to refer to the previous subject 
+#
+# select ?thing where {
 #  ?thing a dbo:Person ;
 #   		tto:sex "female" .
 #}
 
 
-
-
-
-#We could also use comma. If we had hermaphrodites in our dataset
-#select ?thing where {
+# Note that we could also use the comma ',' , if we had hermaphrodites in our dataset
+# The following statements selects things that are persons male and females at the same time:
+# select ?thing where {
 #  ?thing a dbo:Person ;
-#   		tto:sex "female" , "male"
-#
+#   		tto:sex "female" , "male" 
+#}
+#Of course this does not return any value in our "normal" dataset....

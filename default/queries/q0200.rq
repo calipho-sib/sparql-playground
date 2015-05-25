@@ -9,7 +9,9 @@ select ?thing where {
   ?thing rdf:type dbo:Person .
 }
 
-# Remember in data tab we can see: 'ttr:John a dbo:Person'
+# Remember that in the turtle data (Data tab) we can see: 
+#
+# 'ttr:John a dbo:Person'
 #
 # 'a' can also be used instead of 'rdf:type' 
 # 'a' is a synonym of 'rdf:type'
@@ -18,5 +20,5 @@ select ?thing where {
 
 # Explore snorql:
 #
-# Click on ttr:William to see the properties attached
+# Click on ttr:William to see the properties attached to it
 

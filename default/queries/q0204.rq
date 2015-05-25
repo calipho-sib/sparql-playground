@@ -1,12 +1,19 @@
-#title:Select all things that have a sex
-#comment:Selects subjects connected to the object dbo:Person via the predicate rdf:type
-#comment:?thing is the only variable
-#tags:1 graph pattern,2 variables,limit, offset
+#title:Select things that have a sex
+#comment:Selects subjects connected to any literal ?sex via the predicate tto:sex
+#comment:Two variables are used ?sex and ?thing, we could also use * in the select statement
+#comment:instead of specifying both variables
+#tags:1 graph pattern,2 variables, limit, offset, distinct
 #color:ex-blue
     
 select ?thing ?sex where {
   ?thing tto:sex ?sex .
 }
 
-#try to use the keywords limit and offset at the end of the query
-#in the select replace ?thing with distinct 
+# Notice that we get 2 variables in our dataset
+#
+# Explore the use of the keywords LIMIT and OFFSET at the end of the query
+#
+# example LIMIT 3
+# example OFFSET 2 LIMIT 3
+#
+# Replace the ?thing in the select by distinct, to get the number of distinct sexes on the dataset

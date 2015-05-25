@@ -327,8 +327,7 @@ fieldset[disabled] .navbar-snorql .btn-link:focus {
 }
 
 .example-list {
-	height: 90vh;
-	min-height: 580px;
+	max-height: 520px;
 	overflow-y: scroll;
 }
 
