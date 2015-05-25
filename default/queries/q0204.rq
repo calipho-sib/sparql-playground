@@ -2,7 +2,7 @@
 #comment:Selects subjects connected to any literal ?sex via the predicate tto:sex
 #comment:Two variables are used ?sex and ?thing, we could also use * in the select statement
 #comment:instead of specifying both variables
-#tags:1 graph pattern,2 variables, limit, offset, distinct
+#tags:1 graph pattern,2 variables,limit,offset,distinct
 #color:ex-blue
     
 select ?thing ?sex where {

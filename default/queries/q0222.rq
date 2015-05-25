@@ -8,7 +8,9 @@ select ?relative where {
   {?relative *** ttr:William}
 }
 
-# B) Once you get ttr:Eve and ttr:John try to explore the use of inverse path ^
+# B) 
+#
+# Once you get ttr:Eve and ttr:John try to explore the use of inverse path ^
 #
 # knowing that:
 #
@@ -18,6 +20,8 @@ select ?relative where {
 #
 # 			?b ^:prop ?a
 
-# C) Once B) done, try out to write the query in one line using the pipe (|) which means OR
+# C) 
+#
+# Once B) done, try to write the query in one line using the pipe (|) which means OR
 #
 #  ttr:William (prop | ^prop) ?relative

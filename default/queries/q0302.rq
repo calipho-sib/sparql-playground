@@ -1,11 +1,12 @@
-#title:Select all instances that are animals
+#title:Select all things that are animals
 #comment:Hint:use the property rdfs:subClassOf+, rdf:type and the class tto:Animal
 #tags:1 graph pattern,2 variables,FILTER,logical not equals : !=
 #color:ex-yellow
+#img:animals
 
 select ?thing ?type where {
-  ?thing a ?type .
   ?type rdfs:subClassOf+ tto:Animal .
+  ?thing a ?type .
 }
 
 # or simply 

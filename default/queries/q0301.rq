@@ -1,6 +1,7 @@
 #title:Get the direct and indirect sub classes of class Creature
 #comment:the + after rdfs:subClassOf retrieves solutions for ?species if it is connected to tto:Creature by one or multiple owl:subClassOf predicates
 #tags:1 graph pattern,1 variable,path syntax : 1-n paths +
+#img:ontology
 #color:ex-yellow
 
 select ?subSpecies   where {

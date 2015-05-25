@@ -1,16 +1,16 @@
-#title:Select persons and their names only if they have a pet who is a cat
-#comment:Selects subjects with their name but removes solutions. ?person, ?name ?pet are the variables
-#comment: note that the ?pet value is bound in the FILTER scope but is not bound in the SELECT scope 
-#tags:exercise,2 graph patterns,3 variables,FILTER EXISTS
+#title:Select persons who don't have cats
+#comment:You should filter out any person with a pet which is of type tto:Cat
+#tags:exercise,2 graph patterns,3 variables,filter not exists
    
-select ?person ?name where {
+select ?person where {
 	?person rdf:type dbo:Person .
-	?person dbp:name ?name .
-	*** *** { 
+	*** *** *** { 
 		?person tto:pet / rdf:type *** .
 	}
 }
 
-# Alternatively try to return the 2 cats of John ?pet
-# along with the variable ?person and ?name
-# remember that variables can not be defined inside filter exists
+# B)
+# Once you get ttr:William and ttr:Eve try to reply to this question:
+# Select persons who have pets and those pets are not cats
+# You should get only ttr:William (because Eve does not have any pet)
+# remember that variables are not bound inside a filter clause

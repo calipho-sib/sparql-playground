@@ -1,7 +1,8 @@
-#title:Select things that are persons and their pets
-#comment:Selects subjects and objects connected with the predicate tto:pet,
-#comment:?thing and ?name are the variables
-#tags:1 graph pattern,2 variables
+#title:Select persons and their pets
+#comment:From now one let's assume that "select persons" means "select things that are persons" by selecting subjects connected to the object dbo:Person via the predicate rdf:type.
+#comment:In this case we also want the ?person to be connected to an object ?pet via the predicate tto:pet
+#comment:?person and ?pet are the 2 variables
+#tags:1 graph pattern,2 variables,2 conditions
 #color:ex-blue
     
 
@@ -9,3 +10,9 @@ select ?person ?pet where {
     ?person rdf:type dbo:Person .
 	?person tto:pet ?pet .
 }
+
+# another example where we select 2 variables
+#
+# notice that only the persons 
+#
+# who actually have a pet are returned in the result set

@@ -1,7 +1,7 @@
-#title:Select persons and their pets (even if they do not have any)
-#comment:Selects things 
-#comment:?thing and ?name are the variables
-#tags:1 graph pattern,2 variables
+#title:Select persons and, if they have, their pets as well
+#comment:Similar to the previous one, but putting the
+#comment:the triplet linked with tto:pet inside the optional clause
+#tags:1 graph pattern,2 variables,2 conditions,optional
 #color:ex-blue
     
 
@@ -9,3 +9,7 @@ select ?person ?pet where {
     ?person rdf:type dbo:Person .
 	optional {?person tto:pet ?pet }.
 }
+
+# The use of the clause optional allows
+# to extract their pets if they exist
+# but will not exclude the persons who don't have pets

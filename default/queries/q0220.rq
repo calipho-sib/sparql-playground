@@ -1,12 +1,14 @@
 #title:Select Eve's grandfather
-#comment:Use the property dbo:parent
-#tags:exercise,2 graph patterns,3 variables,FILTER EXISTS
+#comment:Use the property dbo:parent to connect Eve at his father ...
+#tags:exercise,2 graph patterns,2 variables,FILTER EXISTS
    
 select ?grandfather where {
 	ttr:Eve dbo:parent  *** .
 	***	  	     ***   ?grandfather  .
 }
 
+# B)
+#
 # Once you get ttr:John,
 # try to write the expression in only one line using '/'
 # knowing that:

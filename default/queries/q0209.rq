@@ -1,6 +1,6 @@
 #title:William's and John's pets 
-#comment:Selects ?owner and ?pet connected with a tto:pet predicate but only for the ?owner values provided in the VALUES clause
-#tags:1 graph pattern,2 variables,values,union
+#comment:Selects the pets of a list of owners using the clause union or values
+#tags:1 graph pattern,1 variable,values,union
 #color:ex-blue
 
 
@@ -12,9 +12,13 @@ select ?pet where {
 	}
 }
 
-#Alternatively you can use the keyword VALUES
+# In this scenario we only have 2 persons who have pets, so it is not the best example
+# but you could see the potential of union in a real scenario, where we would have many owners and we would 
+# like to filter just a few of them
 #
-#select ?owner ?pet where {
+# Alternatively you can also use the keyword VALUES (faster option)
+#
+# select ?owner ?pet where {
 #	VALUES (?owner) { (ttr:William) (ttr:John) }
 #	?owner tto:pet ?pet .
 #}

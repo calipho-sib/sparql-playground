@@ -15,36 +15,34 @@ You can also see a live version of nextprot samples here: http://sparql-playgrou
 
 ##Installation
 * Download the [latest release](https://github.com/calipho-sib/sparql-playground/tarball/master)
-* Unzip and enter the folder, then run: `java -jar sparql-playground.war` (requires Java 1.7 or higher)
-* Once the application started you should open your browser on: <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>
+* Unzip the folder and run the start script (start.bat for windows users or start.sh for unix users) (it requires java 1.7 or higher)
+* Once the application started you should open your browser on: <a href="http://localhost:8888" target="_blank">http://localhost:8888</a>
 
 <a href="assets/screenshot.png" target="_blank"><img width="90%" src="assets/screenshot.png"/></a>
 
 * Select the examples and click on the GO button
 
-##Predefined RDF datasets
+##Predefined RDF scenarios / datasets
 
-There are some datasets predefined:
+There are some scenarios predefined:
 
-* Uses default dataset (cats and dogs): `java -jar sparql-playgroud.war`
+* Default scenario comes with less than 100 triplets and does not require any domain knowledge (persons and their pets)
 
-* Uses a sample of neXtProt dataset: `java -jar sparql-playground.war nextprot`
+* neXtProt sample in the nextprot folder (run the start-nextprot script)
 
-* Uses a sample of UniProt dataset `java -jar sparql-playground.war uniprot `
+##Create your own RDF scenario (no programming skills are required) 
 
-
-##Create your own RDF dataset (and collaborate)
-
-* You can create your own dataset by giving a directory as argument: `java -jar sparql-playgroud.war your-directory-name`
+* You can create your own scenario by giving a directory as argument: `java -jar sparql-playgroud.war your-directory-name`
 
 Your directory should follow this convention:
 
 * ttl-data: a folder containing turtle file(s)
-* queries: a folder containing the queries showed in the first page
-* prefixes.ttl: a file containing the default prefixes (optional)
-* pages: pages with markdown files for the Documentation
-* config.properties - optionally you can include this property file with: repository.type=native to create a native repository (instead of memory)
-* Optionally you can collaborate with your dataset, simply by doing a pull request. 
+* queries: a folder containing the queries showed in the first page 
+* prefixes.ttl: a file containing the default prefixes (optional) to be added to queries
+* pages: pages with markdown files for the Documentation tab
+* config.properties - optionally you can include this property file with: repository.type=native to create a native repository (instead of in memory). This is particulary useful if your dataset contains more than 100'000 triplets
+
+If you like you can share your dataset with us.
 
 ##Technology in use
 * The SPARQL engine is Sesame 2.7.9

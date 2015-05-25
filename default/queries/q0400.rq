@@ -1,10 +1,10 @@
 #title:Search for lonely pets and try to find them a nice owner :)
 
-#comment: Insert the triple using the data tab (you must be running in localhost)
+#comment: Insert the triplet using the data tab (you must run the web application locally)
+#This query shows pet without owners
+#img:link-data
 
 #dbpedia:Harrison_Ford tto:pet ttr:SnuffMonkey.
-#This query shows pet without owners
-
 select ?pet ?owner where {
   ?pet a / rdfs:subClassOf+ tto:Animal .
   filter not exists {?owner tto:pet ?pet}
