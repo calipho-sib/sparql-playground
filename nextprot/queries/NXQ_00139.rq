@@ -1,0 +1,29 @@
+#id:NXQ_00139
+#title:Human proteins highly expressed in brain and observed in a PDB struture in complex with a virus protein
+#comment:Uses the neXtProt dataset to find human proteins highly expressed in brain according to HPA
+#comment:Uses the UniProt SPARQL service to retrieve human proteins observed in a PDB structure uin complex with a virus protein
+#tags:3D structure,PDB,expression,federated query
+
+PREFIX up_core:<http://purl.uniprot.org/core/>
+PREFIX taxon:<http://purl.uniprot.org/taxonomy/>
+PREFIX up_database:<http://purl.uniprot.org/database/>
+select distinct ?entry  where {
+  {  
+SERVICE <http://beta.sparql.uniprot.org/sparql> {
+      SELECT distinct ?humanprotein ?viralprotein ?db WHERE { 
+        # get human proteins that share a PDB xref with a viral protein (same PDB id)      
+        ?humanprotein a up_core:Protein ; up_core:organism taxon:9606 . 
+        ?viralprotein a up_core:Protein ; up_core:organism / up_core:scientificName ?orgname.
+        filter(contains(?orgname,"virus"))
+        ?humanprotein rdfs:seeAlso ?db .
+        ?viralprotein rdfs:seeAlso ?db .
+        ?db up_core:database up_database:PDB .
+      }
+    }
+  }
+  # get human proteins highly expressed in brain according to HPA
+  ?entry skos:exactMatch ?humanprotein .
+  ?entry :isoform / :highExpression ?expressionprofile .
+  ?expressionprofile :term / :childOf cv:TS-0095 .
+  ?expressionprofile :evidence / :reference / :provenance db:HPA .
+}
