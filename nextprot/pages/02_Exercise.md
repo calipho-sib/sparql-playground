@@ -3,13 +3,13 @@
 #### Exercise 1
 Build query to find:
 ## Glycoproteins located in the cytoplasm
-(/help/doc/03_Exercise1.md)
+!(/help/doc/03_Exercise1.md)
 
 
 #### Exercise 2
 Build query to find:
 ## Proteins with 10 or more gold interactions with SH2 domain-containing proteins
-04_Exercise2.md
+!(04_Exercise2.md)
 
 #### Exercise 3
 Build query to find:
