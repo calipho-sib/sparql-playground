@@ -4,5 +4,5 @@
 
 # Resources - persons
 
-ttr:John tto:pet ttr:BuddyDog .
+ttr:William tto:pet ttr:RexDog .
 
