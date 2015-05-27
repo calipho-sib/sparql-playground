@@ -3,7 +3,7 @@
 #### Exercise 1
 Build query to find:
 ## Glycoproteins located in the cytoplasm
-/help/doc/03_Exercise1.md
+(/help/doc/03_Exercise1.md)
 
 
 #### Exercise 2
