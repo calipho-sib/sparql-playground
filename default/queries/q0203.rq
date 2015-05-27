@@ -9,9 +9,10 @@ select ?thing where {
   ?thing tto:sex "female" .
 }
 
-
 # Use the same name of the variable in the 2 statements
 # It is the name of the variable that enforces the constraint
+
+# Note the dot "." which must be added in the first statement, otherwise we get a MalformedQueryException
 
 # Hint: Use the semicolon ';' to refer to the previous subject 
 #

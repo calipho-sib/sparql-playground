@@ -37,6 +37,7 @@ import org.openrdf.rio.RDFParseException;
 import org.openrdf.rio.Rio;
 import org.openrdf.sail.memory.MemoryStore;
 import org.openrdf.sail.nativerdf.NativeStore;
+import org.springframework.beans.factory.InitializingBean;
 
 import ch.isb.sib.sparql.tutorial.Application;
 import ch.isb.sib.sparql.tutorial.exception.SparqlTutorialException;
@@ -48,7 +49,7 @@ import ch.isb.sib.sparql.tutorial.exception.SparqlTutorialException;
  *
  */
 @org.springframework.stereotype.Repository
-public class SesameRepository {
+public class SesameRepository implements InitializingBean{
 	
 	private static final Log logger = LogFactory.getLog(SesameRepository.class);
 
@@ -58,13 +59,12 @@ public class SesameRepository {
 
 	private Repository rep = null;
 	private SailRepository testRepo;
+	private RepositoryConnection conn = null;
 
 	public TupleQueryResult query(String sparqlQuery) {
 
-		RepositoryConnection conn = null;
 		try {
 
-			conn = rep.getConnection();
 			TupleQuery q = conn.prepareTupleQuery(QueryLanguage.SPARQL, sparqlQuery);
 			return q.evaluate();
 
@@ -77,23 +77,12 @@ public class SesameRepository {
 		} catch (QueryEvaluationException e) {
 			e.printStackTrace();
 			throw new SparqlTutorialException(e);
-		} finally {
-			if(conn != null){
-				try {
-					conn.close();
-				} catch (RepositoryException e) {
-					e.printStackTrace();
-					throw new SparqlTutorialException(e);
-				}
-			}
-		}
+		} 
 
 	}
 
 	public void query(String queryString, TupleQueryResultHandler handler) {
-		RepositoryConnection conn = null;
 		try {
-			conn = rep.getConnection();
 			TupleQuery q = conn.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
 			q.evaluate(handler);
 
@@ -109,16 +98,7 @@ public class SesameRepository {
 		} catch (QueryEvaluationException e) {
 			e.printStackTrace();
 			throw new SparqlTutorialException(e);
-		} finally {
-			if(conn != null){
-				try {
-					conn.close();
-				} catch (RepositoryException e) {
-					e.printStackTrace();
-					throw new SparqlTutorialException(e);
-				}
-			}
-		}
+		} 
 	}
 
 	@PostConstruct
@@ -260,7 +240,9 @@ public class SesameRepository {
 	public long countTriplets() {
 		try {
 			TupleQueryResult result = this.query("SELECT (COUNT(*) AS ?no) { ?s ?p ?o  }");
-			return Long.valueOf(result.next().getBinding("no").getValue().stringValue());
+			long n = Long.valueOf(result.next().getBinding("no").getValue().stringValue());
+			result.close();
+			return n;
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 			throw new SparqlTutorialException(e);
@@ -272,6 +254,11 @@ public class SesameRepository {
 
 	public boolean isDataLoadAllowed() {
 		return rep.getDataDir() == null;
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		conn = rep.getConnection();
 	}
 
 }
