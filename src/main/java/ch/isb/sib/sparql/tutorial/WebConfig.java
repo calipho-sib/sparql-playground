@@ -19,6 +19,7 @@ public class WebConfig extends WebMvcConfigurationSupport {
     protected void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("forward:/app.html");
         registry.addViewController("/help/doc/*").setViewName("forward:/app.html");
+        registry.addViewController("/help/entity/*").setViewName("forward:/app.html");
         registry.addViewController("/faq").setViewName("forward:/app.html");
         registry.addViewController("/data").setViewName("forward:/app.html");
 

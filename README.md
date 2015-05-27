@@ -28,7 +28,7 @@ There are some scenarios predefined:
 
 * Default scenario comes with less than 100 triplets and does not require any domain knowledge (persons and their pets)
 
-* neXtProt sample in the nextprot folder (run the start-nextprot script)
+* neXtProt helps you understand the neXtProt rdf model (run the start-nextprot script)
 
 ##Create your own RDF scenario (no programming skills are required) 
 

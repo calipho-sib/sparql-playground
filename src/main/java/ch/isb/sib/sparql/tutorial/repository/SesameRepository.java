@@ -61,9 +61,10 @@ public class SesameRepository {
 
 	public TupleQueryResult query(String sparqlQuery) {
 
+		RepositoryConnection conn = null;
 		try {
 
-			RepositoryConnection conn = rep.getConnection();
+			conn = rep.getConnection();
 			TupleQuery q = conn.prepareTupleQuery(QueryLanguage.SPARQL, sparqlQuery);
 			return q.evaluate();
 
@@ -76,12 +77,21 @@ public class SesameRepository {
 		} catch (QueryEvaluationException e) {
 			e.printStackTrace();
 			throw new SparqlTutorialException(e);
+		} finally {
+			if(conn != null){
+				try {
+					conn.close();
+				} catch (RepositoryException e) {
+					e.printStackTrace();
+					throw new SparqlTutorialException(e);
+				}
+			}
 		}
 
 	}
 
 	public void query(String queryString, TupleQueryResultHandler handler) {
-		RepositoryConnection conn;
+		RepositoryConnection conn = null;
 		try {
 			conn = rep.getConnection();
 			TupleQuery q = conn.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
@@ -99,6 +109,15 @@ public class SesameRepository {
 		} catch (QueryEvaluationException e) {
 			e.printStackTrace();
 			throw new SparqlTutorialException(e);
+		} finally {
+			if(conn != null){
+				try {
+					conn.close();
+				} catch (RepositoryException e) {
+					e.printStackTrace();
+					throw new SparqlTutorialException(e);
+				}
+			}
 		}
 	}
 
