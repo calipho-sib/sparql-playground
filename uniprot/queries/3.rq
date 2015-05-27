@@ -1,0 +1,4 @@
+#title: All Swiss-Prot entries
+SELECT ?protein
+WHERE {?protein a up:Protein;
+                up:reviewed true}

@@ -1,0 +1,6 @@
+#title:Proteins that are in the genus Hominidae
+SELECT ?protein ?organism
+WHERE {?protein a up:Protein;
+                up:organism ?organism .
+     ?organism rdfs:subClassOf+ taxon:9604
+}

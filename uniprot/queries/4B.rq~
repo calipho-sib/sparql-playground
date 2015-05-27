@@ -1,0 +1,10 @@
+#title:Select UniProt records with a related disease
+#id:4b
+SELECT ?protein ?disease ?comment ?diseaseComment ?omimEtc
+WHERE {?protein a up:Protein;
+                up:annotation ?annotation .
+       ?annotation up:disease ?disease ;
+                rdfs:comment ?comment .
+       ?disease rdfs:seeAlso ?omimEtc ;
+                rdfs:comment ?diseaseComment ;
+}

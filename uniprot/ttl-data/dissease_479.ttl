@@ -1,0 +1,21 @@
+@base <http://purl.uniprot.org/diseases/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sha: <http://purl.uniprot.org/SHA-384/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix up: <http://purl.uniprot.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<479> rdf:type up:Disease ;
+  skos:prefLabel "Erythrocytosis, familial, 1" ;
+  skos:altLabel "Autosomal dominant benign erythrocytosis" ,
+    "Familial primary polycythemia" ,
+    "PFCP" ;
+  up:mnemonic "ECYT1" ;
+  rdfs:comment "An autosomal dominant disorder characterized by increased serum red blood cell mass, elevated hemoglobin and hematocrit, hypersensitivity of erythroid progenitors to erythropoietin, erythropoietin low serum levels, and no increase in platelets nor leukocytes. It has a relatively benign course and does not progress to leukemia." ;
+  rdfs:seeAlso <http://purl.uniprot.org/mim/133100> ,
+    <http://purl.uniprot.org/mesh/D011086> ,
+    <http://purl.uniprot.org/keywords/985> .
+<http://purl.uniprot.org/mim/133100> rdfs:comment "phenotype" .

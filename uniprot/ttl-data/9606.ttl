@@ -1,0 +1,51 @@
+@base <http://purl.uniprot.org/taxonomy/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sha: <http://purl.uniprot.org/SHA-384/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix up: <http://purl.uniprot.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<9606> rdf:type up:Taxon ;
+  up:rank up:Species ;
+  up:reviewed true ;
+  up:complete true ;
+  up:referenceProteome true ;
+  up:mnemonic "HUMAN" ;
+  up:scientificName "Homo sapiens" ;
+  up:commonName "Human" ;
+  up:otherName "Homo sapiens Linnaeus, 1758" ,
+    "man" ;
+  rdfs:seeAlso <http://animaldiversity.ummz.umich.edu/site/accounts/information/Homo_sapiens.html> ,
+    <http://anthro.palomar.edu/homo2/mod_homo_4.htm> ,
+    <http://digimorph.org/specimens/Homo_sapiens/> ,
+    <http://en.wikipedia.org/wiki/Human> ,
+    <http://en.wikipedia.org/wiki/Human_evolution> ,
+    <http://en.wikipedia.org/wiki/Human_taxonomy> ,
+    <http://tolweb.org/Homo_sapiens/16421> ,
+    <http://www.bbc.co.uk/sn/prehistoric_life/human/human_evolution/new_batch1.shtml> ,
+    <http://www.ecotao.com/holism/hu_sap.htm> ,
+    <http://www.ensembl.org/Homo_sapiens/Info/Index> ,
+    <http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180092> ,
+    <http://www.mnh.si.edu/anthro/humanorigins/ha/sap.htm> ,
+    <http://www.sciencedaily.com/releases/2005/02/050223122209.htm> ,
+    <http://www.scientificamerican.com/article.cfm?id=homo-sapiens-fingered-in> ,
+    <https://www.msu.edu/~heslipst/contents/ANP440/sapiens.htm> ;
+  <http://xmlns.com/foaf/0.1/depiction> <http://news.nationalgeographic.com/news/bigphotos/images/070507-aborigines-dna_big.jpg> ,
+    <http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/1878_Darwin_photo_by_Leonard_from_Woodall_1884_-_cropped_grayed_partially_cleaned.jpg/476px-1878_Darwin_photo_by_Leonard_from_Woodall_1884_-_cropped_grayed_partially_cleaned.jpg> ,
+    <http://www.bl.uk/learning/images/bodies/leonardo2.jpg> ;
+  rdfs:subClassOf <9605> ;
+  skos:narrowerTransitive <63221> ,
+    <741158> ;
+  up:partOfLineage false .
+<http://news.nationalgeographic.com/news/bigphotos/images/070507-aborigines-dna_big.jpg> rdf:type <http://xmlns.com/foaf/0.1/Image> ;
+  up:width 461 ;
+  up:height 305 .
+<http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/1878_Darwin_photo_by_Leonard_from_Woodall_1884_-_cropped_grayed_partially_cleaned.jpg/476px-1878_Darwin_photo_by_Leonard_from_Woodall_1884_-_cropped_grayed_partially_cleaned.jpg> rdf:type <http://xmlns.com/foaf/0.1/Image> ;
+  up:width 476 ;
+  up:height 600 .
+<http://www.bl.uk/learning/images/bodies/leonardo2.jpg> rdf:type <http://xmlns.com/foaf/0.1/Image> ;
+  up:width 426 ;
+  up:height 600 .

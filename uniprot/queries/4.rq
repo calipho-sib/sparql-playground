@@ -1,0 +1,5 @@
+#title:Select UniProt records with a related disease
+SELECT ?protein ?disease
+WHERE {?protein a up:Protein;
+                up:annotation ?annotation .
+       ?annotation up:disease ?disease}
