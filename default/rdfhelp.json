@@ -38,7 +38,7 @@
     "values" : [ "4.2", "5.8" ]
   } ],
   "parentTriples" : [ {
-    "subjectType" : "dbo:Person",
+    "subjectType" : ":Person",
     "predicate" : ":pet",
     "objectType" : ":Cat",
     "tripleCount" : 2,
@@ -46,7 +46,7 @@
     "literalType" : false,
     "values" : null
   } ],
-  "parents" : [ "dbo:Person" ],
+  "parents" : [ ":Person" ],
   "pathToOrigin" : [ ],
   "values" : [ "ttr:LunaCat", "ttr:TomCat" ],
   "id" : 5558
@@ -90,7 +90,7 @@
     "values" : [ "8.8" ]
   } ],
   "parentTriples" : [ {
-    "subjectType" : "dbo:Person",
+    "subjectType" : ":Person",
     "predicate" : ":pet",
     "objectType" : ":Dog",
     "tripleCount" : 1,
@@ -98,7 +98,7 @@
     "literalType" : false,
     "values" : null
   } ],
-  "parents" : [ "dbo:Person" ],
+  "parents" : [ ":Person" ],
   "pathToOrigin" : [ ],
   "values" : [ "ttr:RexDog" ],
   "id" : 5559
@@ -145,5 +145,65 @@
   "parents" : [ ],
   "pathToOrigin" : [ ],
   "values" : [ "ttr:SnuffMonkey" ],
+  "id" : 5560
+}, {
+  "typeName" : ":Person",
+  "rdfsLabel" : "monkey",
+  "rdfsComment" : "",
+  "instanceCount" : 3,
+  "instanceSample" : "ttr:SnuffMonkey",
+  "triples" : [ {
+    "subjectType" : ":Person",
+    "predicate" : "dbp:name",
+    "objectType" : "xsd:string",
+    "tripleCount" : 3,
+    "tripleSample" : "ttr:John dbp:name \"John\" .",
+    "literalType" : true,
+    "values" : [ "John", "William", "Eve" ]
+  },{
+    "subjectType" : ":Person",
+    "predicate" : "tto:pet",
+    "objectType" : ":Cat",
+    "tripleCount" : 2,
+    "tripleSample" : "ttr:John tto:pet ttr:TomCat .",
+    "literalType" : true,
+    "values" : null
+  },{
+    "subjectType" : ":Person",
+    "predicate" : "tto:pet",
+    "objectType" : ":Dog",
+    "tripleCount" : 1,
+    "tripleSample" : "ttr:William tto:pet ttr:RexDog .",
+    "literalType" : true,
+    "values" : null
+  },{
+    "subjectType" : ":Person",
+    "predicate" : "tto:pet",
+    "objectType" : ":Monkey",
+    "tripleCount" : 1,
+    "tripleSample" : null,
+    "literalType" : true,
+    "values" : null
+  }, {
+    "subjectType" : ":Person",
+    "predicate" : "dbp:birthDate",
+    "objectType" : "xsd:date",
+    "tripleCount" : 3,
+    "tripleSample" : "ttr:John dbp:birthDate \"1942-02-02\"^^xsd:date .",
+    "literalType" : true,
+    "values" : [ "\"1942-02-02\"^^xsd:date", "\"1978-07-20\"^^xsd:date", "\"2006-11-03\"^^xsd:date" ]
+  }, {
+    "subjectType" : ":Person",
+    "predicate" : "dbp:occupation",
+    "objectType" : "xsd:string",
+    "tripleCount" : 1,
+    "tripleSample" : null,
+    "literalType" : true,
+    "values" : [ "" ]
+  } ],
+  "parentTriples" : [ ],
+  "parents" : [ ],
+  "pathToOrigin" : [ ],
+  "values" : [ "ttr:John", "ttr:William", "ttr:Eve" ],
   "id" : 5560
 } ]
