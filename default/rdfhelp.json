@@ -7,35 +7,27 @@
   "triples" : [ {
     "subjectType" : ":Cat",
     "predicate" : "dbp:name",
-    "objectType" : "BlankNodeType",
+    "objectType" : "xsd:string",
     "tripleCount" : 2,
-    "tripleSample" : "ttr:LunaCat dbp:name  .",
+    "tripleSample" : "ttr:LunaCat dbp:name  \"Tom\"  .",
     "literalType" : true,
-    "values" : null
-  }, {
-    "subjectType" : ":Cat",
-    "predicate" : "rdf:type",
-    "objectType" : "rdfs:Class",
-    "tripleCount" : 2,
-    "tripleSample" : "ttr:LunaCat rdf:type :Cat .",
-    "literalType" : false,
-    "values" : null
+    "values" : ["Tom", "Luna"]
   }, {
     "subjectType" : ":Cat",
     "predicate" : "tto:color",
     "objectType" : "xsd:string",
     "tripleCount" : 2,
-    "tripleSample" : "ttr:LunaCat :color  .",
+    "tripleSample" : "ttr:LunaCat :color \"violet\" .",
     "literalType" : true,
-    "values" : null
+    "values" : ["violet", "grey"]
   }, {
     "subjectType" : ":Cat",
     "predicate" : "tto:sex",
-    "objectType" : "BlankNodeType",
+    "objectType" : "xsd:string",
     "tripleCount" : 2,
-    "tripleSample" : "ttr:LunaCat :sex  .",
+    "tripleSample" : "ttr:LunaCat :sex \"female\" .",
     "literalType" : true,
-    "values" : null
+    "values" : ["male", "female"]
   }, {
     "subjectType" : ":Cat",
     "predicate" : "tto:weight",
@@ -67,35 +59,27 @@
   "triples" : [ {
     "subjectType" : ":Dog",
     "predicate" : "dbp:name",
-    "objectType" : "BlankNodeType",
+    "objectType" : "xsd:string",
     "tripleCount" : 1,
-    "tripleSample" : "ttr:RexDog dbp:name  .",
+    "tripleSample" : "ttr:RexDog dbp:name \"Rex\" .",
     "literalType" : true,
-    "values" : null
-  }, {
-    "subjectType" : ":Dog",
-    "predicate" : "rdf:type",
-    "objectType" : "rdfs:Class",
-    "tripleCount" : 1,
-    "tripleSample" : "ttr:RexDog rdf:type :Dog .",
-    "literalType" : false,
-    "values" : null
+    "values" : ["Rex"]
   }, {
     "subjectType" : ":Dog",
     "predicate" : "tto:color",
     "objectType" : "xsd:string",
     "tripleCount" : 1,
-    "tripleSample" : "ttr:RexDog :color  .",
+    "tripleSample" : "ttr:RexDog :color \"brown\" .",
     "literalType" : true,
-    "values" : null
+    "values" : ["brown"]
   }, {
     "subjectType" : ":Dog",
     "predicate" : "tto:sex",
-    "objectType" : "BlankNodeType",
+    "objectType" : "xsd:string",
     "tripleCount" : 1,
-    "tripleSample" : "ttr:RexDog :sex  .",
+    "tripleSample" : "ttr:RexDog :sex \"male\" .",
     "literalType" : true,
-    "values" : null
+    "values" : ["male"]
   }, {
     "subjectType" : ":Dog",
     "predicate" : "tto:weight",
@@ -134,14 +118,6 @@
     "values" : [ "Snuff" ]
   }, {
     "subjectType" : ":Monkey",
-    "predicate" : "rdf:type",
-    "objectType" : "rdfs:Class",
-    "tripleCount" : 1,
-    "tripleSample" : "ttr:SnuffMonkey rdf:type :Monkey .",
-    "literalType" : false,
-    "values" : null
-  }, {
-    "subjectType" : ":Monkey",
     "predicate" : "tto:color",
     "objectType" : "xsd:string",
     "tripleCount" : 1,
@@ -151,11 +127,11 @@
   }, {
     "subjectType" : ":Monkey",
     "predicate" : "tto:sex",
-    "objectType" : "BlankNodeType",
+    "objectType" : "xsd:string",
     "tripleCount" : 1,
-    "tripleSample" : "ttr:SnuffMonkey :sex  .",
+    "tripleSample" : "ttr:SnuffMonkey :sex  \"male\" ",
     "literalType" : true,
-    "values" : null
+    "values" : [ "male" ]
   }, {
     "subjectType" : ":Monkey",
     "predicate" : "tto:weight",
