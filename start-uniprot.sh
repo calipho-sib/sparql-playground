@@ -1,1 +1,1 @@
-java -Dserver.port=7777 -jar sparql-playground.war uniprot
+java -Dserver.port=9999 -jar sparql-playground.war uniprot
