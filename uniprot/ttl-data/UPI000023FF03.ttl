@@ -1,4 +1,4 @@
-@base <uniparc> .
+@base <http://purl.uniprot.org/uniparc/UPI000023FF03> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix embl-cds: <http://purl.uniprot.org/embl-cds/> .
