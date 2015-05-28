@@ -1,0 +1,1099 @@
+@base <http://purl.uniprot.org/uniref/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix isoform: <http://purl.uniprot.org/isoforms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sha: <http://purl.uniprot.org/SHA-384/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix taxon: <http://purl.uniprot.org/taxonomy/> .
+@prefix uniparc: <http://purl.uniprot.org/uniparc/> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix uniref: <http://purl.uniprot.org/uniref/> .
+@prefix up: <http://purl.uniprot.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<UniRef50_P14753> rdf:type up:Cluster ;
+  rdfs:label "Cluster: Erythropoietin receptor" ;
+  up:identity "0.5"^^xsd:float ;
+  up:modified "2015-05-27"^^xsd:date ;
+  up:commonTaxon taxon:32525 ;
+  up:member uniparc:UPI000000B997 ,
+    uniparc:UPI0003D75B39 ,
+    uniparc:UPI00029334E6 ,
+    uniparc:UPI0001F18FEA ,
+    uniparc:UPI0002AD469E ,
+    uniparc:UPI0003F1C10F ,
+    uniparc:UPI0002C5497F ,
+    uniparc:UPI0001C0E98A ,
+    uniparc:UPI0002AD3E0A ,
+    uniparc:UPI0000692122 ,
+    uniparc:UPI00004A63AE ,
+    uniparc:UPI0005AC4339 ,
+    uniparc:UPI000228B897 ,
+    uniparc:UPI0004547AC3 ,
+    uniparc:UPI000454AC07 ,
+    uniparc:UPI0002C454E9 ,
+    uniparc:UPI00045E455D ,
+    uniparc:UPI000331476A ,
+    uniparc:UPI00033301F0 ,
+    uniparc:UPI0004F49156 ,
+    uniparc:UPI0003F0738E ,
+    uniparc:UPI000236F32B ,
+    uniparc:UPI00034FD135 ,
+    uniparc:UPI00034F2464 ,
+    uniparc:UPI00034F9303 ,
+    uniparc:UPI00048CC3B9 ,
+    uniparc:UPI0003904A23 ,
+    uniparc:UPI0005BDFA24 ,
+    uniparc:UPI0002A8A46C ,
+    uniparc:UPI0003F18428 ,
+    uniparc:UPI00027FB907 ,
+    uniparc:UPI000533FAFD ,
+    uniparc:UPI0001C9F77E ,
+    uniparc:UPI00032AF2F5 ,
+    uniparc:UPI0004448AA0 ,
+    uniparc:UPI000333EA57 ,
+    uniparc:UPI00029DB559 ,
+    uniparc:UPI0002ADB99F ,
+    uniparc:UPI0001FA1E97 ,
+    uniparc:UPI0002AD59AB ,
+    uniparc:UPI0001D61637 ,
+    uniparc:UPI0002746B42 ,
+    uniparc:UPI000012A0AD ,
+    uniparc:UPI000268932A ,
+    uniparc:UPI000053EA3B ,
+    uniparc:UPI000053EA39 ,
+    uniparc:UPI000053EA3C ,
+    uniparc:UPI000053EA3A ,
+    uniparc:UPI000184C015 ,
+    uniparc:UPI00022B2A02 ,
+    uniparc:UPI0003C85A6B ,
+    uniparc:UPI00057AABEE ,
+    uniparc:UPI0003C89ABC ,
+    uniparc:UPI00057BAC65 ,
+    uniparc:UPI0002B2CE87 ,
+    uniparc:UPI0003C8DDFE ,
+    uniparc:UPI0003D0E2B0 ,
+    uniparc:UPI0003D0C4DF ,
+    uniparc:UPI00034F3956 ,
+    uniparc:UPI00034F6247 ,
+    uniparc:UPI0004D0AC84 ,
+    uniparc:UPI0003345945 ,
+    uniparc:UPI000359A3E9 ,
+    uniparc:UPI000019BD6F ,
+    uniparc:UPI00038BECB9 ,
+    uniparc:UPI000012A0AE ,
+    uniparc:UPI00042AECDF ,
+    uniparc:UPI00046BB9B2 ,
+    uniparc:UPI000216B316 ,
+    uniparc:UPI0003C42FC6 ,
+    uniparc:UPI00035B0C06 ,
+    uniparc:UPI00038EC90F ,
+    uniparc:UPI000226E8AA ,
+    uniparc:UPI0002739FA4 ,
+    uniparc:UPI00005EC702 ,
+    uniparc:UPI000238102B ,
+    uniparc:UPI0002741E6A ,
+    uniparc:UPI00045E0568 ,
+    uniparc:UPI000333F73F ,
+    uniparc:UPI0000087E82 ,
+    uniparc:UPI0005F40F8C ,
+    uniparc:UPI000292A701 ,
+    uniparc:UPI000514E862 ,
+    uniparc:UPI0004E528DA ,
+    uniparc:UPI0000D9EA5B ,
+    uniparc:UPI0005F419CC ,
+    uniparc:UPI00045DC7BD ,
+    uniparc:UPI000242B1E8 ,
+    uniparc:UPI000242D24E ,
+    uniparc:UPI00025775C5 ,
+    uniparc:UPI0003AB8E70 ,
+    uniparc:UPI00027F5F1C ,
+    uniparc:UPI0005335152 ,
+    uniparc:UPI0002689329 ,
+    uniparc:UPI00025DC494 ,
+    uniparc:UPI00038C2666 ,
+    uniparc:UPI0003F18D0A ,
+    uniparc:UPI0002C629FA ,
+    uniparc:UPI0002C0EAD6 ,
+    uniparc:UPI00034473AE ,
+    uniparc:UPI0003445FBC ,
+    uniparc:UPI0003EDD3DD ,
+    uniparc:UPI0003EC689A ,
+    uniparc:UPI0003CCEB8D .
+uniparc:UPI000000B997 rdf:type up:Sequence ;
+  up:length 507 ;
+  rdf:value "MDKLRVPLWPRVGPLCLLLAGAAWAPSPSLPDPKFESKAALLASRGSEELLCFTQRLEDLVCFWEEAASSGMDFNYSFSYQLEGESRKSCSLHQAPTVRGSVRFWCSLPTADTSSFVPLELQVTEASGSPRYHRIIHINEVVLLDAPAGLLARRAEEGSHVVLRWLPPPGAPMTTHIRYEVDVSAGNRAGGTQRVEVLEGRTECVLSNLRGGTRYTFAVRARMAEPSFSGFWSAWSEPASLLTASDLDPLILTLSLILVLISLLLTVLALLSHRRTLQQKIWPGIPSPESEFEGLFTTHKGNFQLWLLQRDGCLWWSPGSSFPEDPPAHLEVLSEPRWAVTQAGDPGADDEGPLLEPVGSEHAQDTYLVLDKWLLPRTPCSENLSGPGGSVDPVTMDEASETSSCPSDLASKPRPEGTSPSSFEYTILDPSSQLLCPRALPPELPPTPPHLKYLYLVVSDSGISTDYSSGGSQGVHGDSSDGPYSHPYENSLVPDSEPLHPGYVACS" ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:P14753 ,
+    uniprot:Q3UTV9 ;
+  up:memberOf <UniRef100_P14753> ,
+    <UniRef90_P14753> .
+uniprot:P14753 rdfs:label "Erythropoietin receptor" ;
+  up:representativeFor <UniRef50_P14753> ;
+  up:reviewed true ;
+  up:mnemonic "EPOR_MOUSE" ;
+  up:organism taxon:10090 .
+uniprot:Q3UTV9 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "Q3UTV9_MOUSE" ;
+  up:organism taxon:10090 .
+uniparc:UPI0003D75B39 rdf:type up:Sequence ;
+  up:length 602 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" ;
+  up:memberOf <UniRef100_UPI0003D75B39> ,
+    <UniRef90_P14753> ;
+  up:organism taxon:10090 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" ;
+  up:seedFor <UniRef50_P14753> .
+uniparc:UPI00029334E6 rdf:type up:Sequence ;
+  up:length 511 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:M3Y244 ;
+  up:memberOf <UniRef100_M3Y244> ,
+    <UniRef90_Q2KL21> .
+uniprot:M3Y244 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "M3Y244_MUSPF" ;
+  up:organism taxon:9669 .
+uniparc:UPI0001F18FEA rdf:type up:Sequence ;
+  up:length 514 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:G1LVQ5 ;
+  up:memberOf <UniRef100_G1LVQ5> ,
+    <UniRef90_Q2KL21> .
+uniprot:G1LVQ5 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "G1LVQ5_AILME" ;
+  up:organism taxon:9646 .
+uniparc:UPI0002AD469E rdf:type up:Sequence ;
+  up:length 512 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:M3X491 ;
+  up:memberOf <UniRef100_M3X491> ,
+    <UniRef90_Q2KL21> .
+uniprot:M3X491 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "M3X491_FELCA" ;
+  up:organism taxon:9685 .
+uniparc:UPI0003F1C10F rdf:type up:Sequence ;
+  up:length 511 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0003F1C10F> ,
+    <UniRef90_Q2KL21> ;
+  up:organism taxon:9685 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0002C5497F rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0002C5497F> ,
+    <UniRef90_Q2KL21> ;
+  up:organism taxon:9708 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0001C0E98A rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "Putative uncharacterized protein (Fragment)" ;
+  up:sequenceFor uniprot:D2HGW4 ;
+  up:memberOf <UniRef100_D2HGW4> ,
+    <UniRef90_Q2KL21> .
+uniprot:D2HGW4 rdfs:label "Putative uncharacterized protein (Fragment)" ;
+  up:reviewed false ;
+  up:mnemonic "D2HGW4_AILME" ;
+  up:organism taxon:9646 .
+uniparc:UPI0002AD3E0A rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:M3W333 ;
+  up:memberOf <UniRef100_M3W333> ,
+    <UniRef90_Q2KL21> .
+uniprot:M3W333 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "M3W333_FELCA" ;
+  up:organism taxon:9685 .
+uniparc:UPI0000692122 rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:Q2KL21 ;
+  up:memberOf <UniRef100_Q2KL21> ,
+    <UniRef90_Q2KL21> .
+uniprot:Q2KL21 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed true ;
+  up:mnemonic "EPOR_CANFA" ;
+  up:organism taxon:9615 .
+uniparc:UPI00004A63AE rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:F1PSP2 ;
+  up:memberOf <UniRef100_F1PSP2> ,
+    <UniRef90_Q2KL21> .
+uniprot:F1PSP2 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "F1PSP2_CANFA" ;
+  up:organism taxon:9615 .
+uniparc:UPI0005AC4339 rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0005AC4339> ,
+    <UniRef90_Q2KL21> ;
+  up:organism taxon:9685 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI000228B897 rdf:type up:Sequence ;
+  up:length 479 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:G3H699 ;
+  up:memberOf <UniRef100_G3H699> ,
+    <UniRef90_G3H699> .
+uniprot:G3H699 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "G3H699_CRIGR" ;
+  up:organism taxon:10029 .
+uniparc:UPI0004547AC3 rdf:type up:Sequence ;
+  up:length 530 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" ;
+  up:memberOf <UniRef100_G3H699> ,
+    <UniRef90_G3H699> ;
+  up:organism taxon:10029 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" .
+uniparc:UPI000454AC07 rdf:type up:Sequence ;
+  up:length 462 ;
+  rdfs:label "PREDICTED: LOW QUALITY PROTEIN: erythropoietin receptor isoform X2" ;
+  up:memberOf <UniRef100_UPI000454AC07> ,
+    <UniRef90_G3H699> ;
+  up:organism taxon:10029 ;
+  rdfs:label "PREDICTED: LOW QUALITY PROTEIN: erythropoietin receptor isoform X2" .
+uniparc:UPI0002C454E9 rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0002C454E9> ,
+    <UniRef90_UPI00045E455D> ;
+  up:organism taxon:127582 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI00045E455D rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00045E455D> ,
+    <UniRef90_UPI00045E455D> ;
+  up:organism taxon:1230840 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI000331476A rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI000331476A> ,
+    <UniRef90_UPI000331476A> ;
+  up:organism taxon:42254 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI00033301F0 rdf:type up:Sequence ;
+  up:length 507 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00033301F0> ,
+    <UniRef90_UPI00033301F0> ;
+  up:organism taxon:51337 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0004F49156 rdf:type up:Sequence ;
+  up:length 482 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X2" ;
+  up:memberOf <UniRef100_UPI0004F49156> ,
+    <UniRef90_UPI0004F49156> ;
+  up:organism taxon:9601 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X2" .
+uniparc:UPI0003F0738E rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0003F0738E> ,
+    <UniRef90_UPI0003F0738E> ;
+  up:organism taxon:28737 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI000236F32B rdf:type up:Sequence ;
+  up:length 502 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:G5BUJ5 ;
+  up:memberOf <UniRef100_G5BUJ5> ,
+    <UniRef90_G5BUJ5> .
+uniprot:G5BUJ5 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "G5BUJ5_HETGA" ;
+  up:organism taxon:10181 .
+uniparc:UPI00034FD135 rdf:type up:Sequence ;
+  up:length 533 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00034FD135> ,
+    <UniRef90_G5BUJ5> ;
+  up:organism taxon:10181 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI00034F2464 rdf:type up:Sequence ;
+  up:length 554 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" ;
+  up:memberOf <UniRef100_UPI00034F2464> ,
+    <UniRef90_UPI00034F2464> ;
+  up:organism taxon:10181 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" .
+uniparc:UPI00034F9303 rdf:type up:Sequence ;
+  up:length 540 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X2" ;
+  up:memberOf <UniRef100_UPI00034F9303> ,
+    <UniRef90_UPI00034F2464> ;
+  up:organism taxon:10181 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X2" .
+uniparc:UPI00048CC3B9 rdf:type up:Sequence ;
+  up:length 505 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00048CC3B9> ,
+    <UniRef90_G1TA13> ;
+  up:organism taxon:9986 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0003904A23 rdf:type up:Sequence ;
+  up:length 554 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:G1TA13 ;
+  up:memberOf <UniRef100_G1TA13> ,
+    <UniRef90_G1TA13> .
+uniprot:G1TA13 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "G1TA13_RABIT" ;
+  up:organism taxon:9986 .
+uniparc:UPI0005BDFA24 rdf:type up:Sequence ;
+  up:length 510 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0005BDFA24> ,
+    <UniRef90_L5L3H0> ;
+  up:organism taxon:132908 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0002A8A46C rdf:type up:Sequence ;
+  up:length 519 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:L5L3H0 ;
+  up:memberOf <UniRef100_L5L3H0> ,
+    <UniRef90_L5L3H0> .
+uniprot:L5L3H0 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "L5L3H0_PTEAL" ;
+  up:organism taxon:9402 .
+uniparc:UPI0003F18428 rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0003F18428> ,
+    <UniRef90_L5L3H0> ;
+  up:organism taxon:9402 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI00027FB907 rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" ;
+  up:memberOf <UniRef100_UPI00027FB907> ,
+    <UniRef90_F7ISG7> ;
+  up:organism taxon:39432 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" .
+uniparc:UPI000533FAFD rdf:type up:Sequence ;
+  up:length 438 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X2" ;
+  up:memberOf <UniRef100_UPI00027FB907> ,
+    <UniRef90_F7ISG7> ;
+  up:organism taxon:39432 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X2" .
+uniparc:UPI0001C9F77E rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:F7ISG7 ;
+  up:memberOf <UniRef100_F7ISG7> ,
+    <UniRef90_F7ISG7> .
+uniprot:F7ISG7 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "F7ISG7_CALJA" ;
+  up:organism taxon:9483 .
+uniparc:UPI00032AF2F5 rdf:type up:Sequence ;
+  up:length 505 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00032AF2F5> ,
+    <UniRef90_UPI00032AF2F5> ;
+  up:organism taxon:9978 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0004448AA0 rdf:type up:Sequence ;
+  up:length 506 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0004448AA0> ,
+    <UniRef90_UPI0004448AA0> ;
+  up:organism taxon:9365 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI000333EA57 rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI000333EA57> ,
+    <UniRef90_UPI000333EA57> ;
+  up:organism taxon:10160 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI00029DB559 rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00029DB559> ,
+    <UniRef90_P19235> ;
+  up:organism taxon:9595 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0002ADB99F rdf:type up:Sequence ;
+  up:length 572 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0002ADB99F> ,
+    <UniRef90_P19235> ;
+  up:organism taxon:61853 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0001FA1E97 rdf:type up:Sequence ;
+  up:length 511 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:G3RT53 ;
+  up:memberOf <UniRef100_G3RT53> ,
+    <UniRef90_P19235> .
+uniprot:G3RT53 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "G3RT53_GORGO" ;
+  up:organism taxon:9595 .
+uniparc:UPI0002AD59AB rdf:type up:Sequence ;
+  up:length 511 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:G1RPQ1 ;
+  up:memberOf <UniRef100_G1RPQ1> ,
+    <UniRef90_P19235> .
+uniprot:G1RPQ1 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "G1RPQ1_NOMLE" ;
+  up:organism taxon:61853 .
+uniparc:UPI0001D61637 rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" ;
+  up:memberOf <UniRef100_UPI0001D61637> ,
+    <UniRef90_P19235> ;
+  up:organism taxon:9601 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" .
+uniparc:UPI0002746B42 rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0002746B42> ,
+    <UniRef90_P19235> ;
+  up:organism taxon:9597 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI000012A0AD rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:P19235 ;
+  up:memberOf <UniRef100_P19235> ,
+    <UniRef90_P19235> .
+uniprot:P19235 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed true ;
+  up:mnemonic "EPOR_HUMAN" ;
+  up:organism taxon:9606 .
+uniparc:UPI000268932A rdf:type up:Sequence ;
+  up:length 411 ;
+  rdfs:label "Truncated EPOR" ;
+  up:sequenceFor uniprot:I6R7G3 ;
+  up:memberOf <UniRef100_P19235> ,
+    <UniRef90_P19235> .
+uniprot:I6R7G3 rdfs:label "Truncated EPOR" ;
+  up:reviewed false ;
+  up:mnemonic "I6R7G3_HUMAN" ;
+  up:organism taxon:9606 .
+uniparc:UPI000053EA3B rdf:type up:Sequence ;
+  up:length 501 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:Q4LB09 ;
+  up:memberOf <UniRef100_Q4LB09> ,
+    <UniRef90_Q4LB11> .
+uniprot:Q4LB09 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "Q4LB09_SPACA" ;
+  up:organism taxon:164324 .
+uniparc:UPI000053EA39 rdf:type up:Sequence ;
+  up:length 501 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:Q4LB11 ;
+  up:memberOf <UniRef100_Q4LB11> ,
+    <UniRef90_Q4LB11> .
+uniprot:Q4LB11 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "Q4LB11_NANGA" ;
+  up:organism taxon:1026970 .
+uniparc:UPI000053EA3C rdf:type up:Sequence ;
+  up:length 501 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:Q4LB08 ;
+  up:memberOf <UniRef100_Q4LB08> ,
+    <UniRef90_Q4LB11> .
+uniprot:Q4LB08 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "Q4LB08_SPAJD" ;
+  up:organism taxon:134510 .
+uniparc:UPI000053EA3A rdf:type up:Sequence ;
+  up:length 501 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:Q4LB10 ;
+  up:memberOf <UniRef100_Q4LB10> ,
+    <UniRef90_Q4LB11> .
+uniprot:Q4LB10 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "Q4LB10_SPAGO" ;
+  up:organism taxon:191382 .
+uniparc:UPI000184C015 rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:H0V474 ;
+  up:memberOf <UniRef100_H0V474> ,
+    <UniRef90_H0V474> .
+uniprot:H0V474 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "H0V474_CAVPO" ;
+  up:organism taxon:10141 .
+uniparc:UPI00022B2A02 rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: LOW QUALITY PROTEIN: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00022B2A02> ,
+    <UniRef90_H0V474> ;
+  up:organism taxon:10141 ;
+  rdfs:label "PREDICTED: LOW QUALITY PROTEIN: erythropoietin receptor" .
+uniparc:UPI0003C85A6B rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0003C85A6B> ,
+    <UniRef90_UPI0003C85A6B> ;
+  up:organism taxon:419612 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI00057AABEE rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00057AABEE> ,
+    <UniRef90_UPI0003C85A6B> ;
+  up:organism taxon:9837 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0003C89ABC rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0003C89ABC> ,
+    <UniRef90_UPI0003C85A6B> ;
+  up:organism taxon:30538 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI00057BAC65 rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00057BAC65> ,
+    <UniRef90_UPI0003C85A6B> ;
+  up:organism taxon:9838 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0002B2CE87 rdf:type up:Sequence ;
+  up:length 447 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:L8YFY1 ;
+  up:memberOf <UniRef100_L8YFY1> ,
+    <UniRef90_L8YFY1> .
+uniprot:L8YFY1 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "L8YFY1_TUPCH" ;
+  up:organism taxon:246437 .
+uniparc:UPI0003C8DDFE rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0003C8DDFE> ,
+    <UniRef90_L8YFY1> ;
+  up:organism taxon:246437 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0003D0E2B0 rdf:type up:Sequence ;
+  up:length 538 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" ;
+  up:memberOf <UniRef100_UPI0003D0E2B0> ,
+    <UniRef90_UPI0003D0E2B0> ;
+  up:organism taxon:10116 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" .
+uniparc:UPI0003D0C4DF rdf:type up:Sequence ;
+  up:length 467 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X2" ;
+  up:memberOf <UniRef100_UPI0003D0E2B0> ,
+    <UniRef90_UPI0003D0E2B0> ;
+  up:organism taxon:10116 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X2" .
+uniparc:UPI00034F3956 rdf:type up:Sequence ;
+  up:length 523 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X3" ;
+  up:memberOf <UniRef100_UPI00034F3956> ,
+    <UniRef90_UPI00034F3956> ;
+  up:organism taxon:10181 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X3" .
+uniparc:UPI00034F6247 rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X4" ;
+  up:memberOf <UniRef100_UPI00034F6247> ,
+    <UniRef90_UPI00034F3956> ;
+  up:organism taxon:10181 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X4" .
+uniparc:UPI0004D0AC84 rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0004D0AC84> ,
+    <UniRef90_UPI0004D0AC84> ;
+  up:organism taxon:482537 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0003345945 rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0003345945> ,
+    <UniRef90_UPI0003345945> ;
+  up:organism taxon:143302 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI000359A3E9 rdf:type up:Sequence ;
+  up:length 507 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI000359A3E9> ,
+    <UniRef90_Q07303> ;
+  up:organism taxon:10036 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI000019BD6F rdf:type up:Sequence ;
+  up:length 507 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:Q5FVS4 ;
+  up:memberOf <UniRef100_Q5FVS4> ,
+    <UniRef90_Q07303> .
+uniprot:Q5FVS4 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "Q5FVS4_RAT" ;
+  up:organism taxon:10116 .
+uniparc:UPI00038BECB9 rdf:type up:Sequence ;
+  up:length 507 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00038BECB9> ,
+    <UniRef90_Q07303> ;
+  up:organism taxon:79684 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI000012A0AE rdf:type up:Sequence ;
+  up:length 507 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:Q07303 ;
+  up:memberOf <UniRef100_Q07303> ,
+    <UniRef90_Q07303> .
+uniprot:Q07303 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed true ;
+  up:mnemonic "EPOR_RAT" ;
+  up:organism taxon:10116 .
+uniparc:UPI00042AECDF rdf:type up:Sequence ;
+  up:length 507 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00042AECDF> ,
+    <UniRef90_Q07303> ;
+  up:organism taxon:230844 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI00046BB9B2 rdf:type up:Sequence ;
+  up:length 470 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00046BB9B2> ,
+    <UniRef90_G1PU80> ;
+  up:organism taxon:29078 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI000216B316 rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:G1PU80 ;
+  up:memberOf <UniRef100_G1PU80> ,
+    <UniRef90_G1PU80> .
+uniprot:G1PU80 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "G1PU80_MYOLU" ;
+  up:organism taxon:59463 .
+uniparc:UPI0003C42FC6 rdf:type up:Sequence ;
+  up:length 507 ;
+  rdfs:label "PREDICTED: LOW QUALITY PROTEIN: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0003C42FC6> ,
+    <UniRef90_G1PU80> ;
+  up:organism taxon:59463 ;
+  rdfs:label "PREDICTED: LOW QUALITY PROTEIN: erythropoietin receptor" .
+uniparc:UPI00035B0C06 rdf:type up:Sequence ;
+  up:length 507 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:S7P3E9 ;
+  up:memberOf <UniRef100_S7P3E9> ,
+    <UniRef90_G1PU80> .
+uniprot:S7P3E9 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "S7P3E9_MYOBR" ;
+  up:organism taxon:109478 .
+uniparc:UPI00038EC90F rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00038EC90F> ,
+    <UniRef90_UPI00038EC90F> ;
+  up:organism taxon:34839 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI000226E8AA rdf:type up:Sequence ;
+  up:length 534 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:G3VWD1 ;
+  up:memberOf <UniRef100_G3VWD1> ,
+    <UniRef90_G3VWD1> .
+uniprot:G3VWD1 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "G3VWD1_SARHA" ;
+  up:organism taxon:9305 .
+uniparc:UPI0002739FA4 rdf:type up:Sequence ;
+  up:length 524 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_G3VWD1> ,
+    <UniRef90_G3VWD1> ;
+  up:organism taxon:9305 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI00005EC702 rdf:type up:Sequence ;
+  up:length 532 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:F7BUV5 ;
+  up:memberOf <UniRef100_F7BUV5> ,
+    <UniRef90_F7BUV5> .
+uniprot:F7BUV5 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "F7BUV5_MONDO" ;
+  up:organism taxon:13616 .
+uniparc:UPI000238102B rdf:type up:Sequence ;
+  up:length 510 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:H0XED8 ;
+  up:memberOf <UniRef100_H0XED8> ,
+    <UniRef90_H0XED8> .
+uniprot:H0XED8 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "H0XED8_OTOGA" ;
+  up:organism taxon:30611 .
+uniparc:UPI0002741E6A rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0002741E6A> ,
+    <UniRef90_H0XED8> ;
+  up:organism taxon:30611 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI00045E0568 rdf:type up:Sequence ;
+  up:length 489 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X2" ;
+  up:memberOf <UniRef100_UPI00045E0568> ,
+    <UniRef90_UPI00045E0568> ;
+  up:organism taxon:60711 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X2" .
+uniparc:UPI000333F73F rdf:type up:Sequence ;
+  up:length 504 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI000333F73F> ,
+    <UniRef90_UPI000333F73F> ;
+  up:organism taxon:9371 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0000087E82 rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:Q9MYZ9 ,
+    uniprot:B0ZYW8 ;
+  up:memberOf <UniRef100_Q9MYZ9> ,
+    <UniRef90_Q9MYZ9> .
+uniprot:Q9MYZ9 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed true ;
+  up:mnemonic "EPOR_PIG" ;
+  up:organism taxon:9823 .
+uniprot:B0ZYW8 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "B0ZYW8_PIG" ;
+  up:organism taxon:9823 .
+uniparc:UPI0005F40F8C rdf:type up:Sequence ;
+  up:length 508 ;
+  up:memberOf <UniRef100_UPI0005F40F8C> ,
+    <UniRef90_A0A0A0MVH4> .
+uniparc:UPI000292A701 rdf:type up:Sequence ;
+  up:length 520 ;
+  rdfs:label "PREDICTED: LOW QUALITY PROTEIN: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI000292A701> ,
+    <UniRef90_A0A0A0MVH4> ;
+  up:organism taxon:9598 ;
+  rdfs:label "PREDICTED: LOW QUALITY PROTEIN: erythropoietin receptor" .
+uniparc:UPI000514E862 rdf:type up:Sequence ;
+  up:length 511 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:A0A0D9R391 ;
+  up:memberOf <UniRef100_A0A0D9R391> ,
+    <UniRef90_A0A0A0MVH4> .
+uniprot:A0A0D9R391 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "A0A0D9R391_CHLSB" ;
+  up:organism taxon:60711 .
+uniparc:UPI0004E528DA rdf:type up:Sequence ;
+  up:length 511 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:A0A0A0MVH4 ;
+  up:memberOf <UniRef100_A0A0A0MVH4> ,
+    <UniRef90_A0A0A0MVH4> .
+uniprot:A0A0A0MVH4 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "A0A0A0MVH4_PAPAN" ;
+  up:organism taxon:9555 .
+uniparc:UPI0000D9EA5B rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:F7GNY3 ;
+  up:memberOf <UniRef100_F7GNY3> ,
+    <UniRef90_A0A0A0MVH4> .
+uniprot:F7GNY3 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "F7GNY3_MACMU" ;
+  up:organism taxon:9544 .
+uniparc:UPI0005F419CC rdf:type up:Sequence ;
+  up:length 508 ;
+  up:memberOf <UniRef100_UPI0005F419CC> ,
+    <UniRef90_A0A0A0MVH4> .
+uniparc:UPI00045DC7BD rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" ;
+  up:memberOf <UniRef100_UPI00045DC7BD> ,
+    <UniRef90_A0A0A0MVH4> ;
+  up:organism taxon:60711 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" .
+uniparc:UPI000242B1E8 rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:G7PZF0 ;
+  up:memberOf <UniRef100_G7PZF0> ,
+    <UniRef90_A0A0A0MVH4> .
+uniprot:G7PZF0 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "G7PZF0_MACFA" ;
+  up:organism taxon:9541 .
+uniparc:UPI000242D24E rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:G7NL27 ;
+  up:memberOf <UniRef100_G7NL27> ,
+    <UniRef90_A0A0A0MVH4> .
+uniprot:G7NL27 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "G7NL27_MACMU" ;
+  up:organism taxon:9544 .
+uniparc:UPI00025775C5 rdf:type up:Sequence ;
+  up:length 75 ;
+  rdfs:label "Erythropoietin receptor (Fragment)" ;
+  up:sequenceFor uniprot:H9F2Y0 ;
+  up:memberOf <UniRef100_G7NL27> ,
+    <UniRef90_A0A0A0MVH4> .
+uniprot:H9F2Y0 rdfs:label "Erythropoietin receptor (Fragment)" ;
+  up:reviewed false ;
+  up:mnemonic "H9F2Y0_MACMU" ;
+  up:organism taxon:9544 .
+uniparc:UPI0003AB8E70 rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0003AB8E70> ,
+    <UniRef90_A0A0A0MVH4> ;
+  up:organism taxon:9541 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI00027F5F1C rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00027F5F1C> ,
+    <UniRef90_A0A0A0MVH4> ;
+  up:organism taxon:9555 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0005335152 rdf:type up:Sequence ;
+  up:length 508 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0005335152> ,
+    <UniRef90_A0A0A0MVH4> ;
+  up:organism taxon:61622 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0002689329 rdf:type up:Sequence ;
+  up:length 442 ;
+  rdfs:label "Truncated EPOR" ;
+  up:sequenceFor uniprot:I6RPE1 ;
+  up:memberOf <UniRef100_I6RPE1> ,
+    <UniRef90_A0A0A0MVH4> .
+uniprot:I6RPE1 rdfs:label "Truncated EPOR" ;
+  up:reviewed false ;
+  up:mnemonic "I6RPE1_HUMAN" ;
+  up:organism taxon:9606 .
+uniparc:UPI00025DC494 rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:I3M1H2 ;
+  up:memberOf <UniRef100_I3M1H2> ,
+    <UniRef90_I3M1H2> .
+uniprot:I3M1H2 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "I3M1H2_SPETR" ;
+  up:organism taxon:43179 .
+uniparc:UPI00038C2666 rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00038C2666> ,
+    <UniRef90_I3M1H2> ;
+  up:organism taxon:43179 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0003F18D0A rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0003F18D0A> ,
+    <UniRef90_UPI0003F18D0A> ;
+  up:organism taxon:185453 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0002C629FA rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0002C629FA> ,
+    <UniRef90_UPI0002C629FA> ;
+  up:organism taxon:73337 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0002C0EAD6 rdf:type up:Sequence ;
+  up:length 169 ;
+  rdfs:label "Erythropoietin receptor (Fragment)" ;
+  up:sequenceFor uniprot:M1EQA8 ;
+  up:memberOf <UniRef100_M1EQA8> ,
+    <UniRef90_M1EQA8> .
+uniprot:M1EQA8 rdfs:label "Erythropoietin receptor (Fragment)" ;
+  up:reviewed false ;
+  up:mnemonic "M1EQA8_MUSPF" ;
+  up:organism taxon:9669 .
+uniparc:UPI00034473AE rdf:type up:Sequence ;
+  up:length 539 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X3" ;
+  up:memberOf <UniRef100_M1EQA8> ,
+    <UniRef90_M1EQA8> ;
+  up:organism taxon:9669 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X3" .
+uniparc:UPI0003445FBC rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0003445FBC> ,
+    <UniRef90_M1EQA8> ;
+  up:organism taxon:9669 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0003EDD3DD rdf:type up:Sequence ;
+  up:length 509 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0003EDD3DD> ,
+    <UniRef90_M1EQA8> ;
+  up:organism taxon:9713 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0003EC689A rdf:type up:Sequence ;
+  up:length 514 ;
+  rdfs:label "PREDICTED: LOW QUALITY PROTEIN: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI0003EC689A> ,
+    <UniRef90_UPI0003EC689A> ;
+  up:organism taxon:225400 ;
+  rdfs:label "PREDICTED: LOW QUALITY PROTEIN: erythropoietin receptor" .
+uniparc:UPI0003CCEB8D rdf:type up:Sequence ;
+  up:length 511 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:W5QA99 ;
+  up:memberOf <UniRef100_W5QA99> ,
+    <UniRef90_W5QA99> .
+uniprot:W5QA99 rdfs:label "Uncharacterized protein" ;
+  up:reviewed false ;
+  up:mnemonic "W5QA99_SHEEP" ;
+  up:organism taxon:9940 .
+<UniRef50_P19235-3> rdf:type up:Cluster ;
+  rdfs:label "Cluster: Isoform EPOR-T of Erythropoietin receptor" ;
+  up:identity "0.5"^^xsd:float ;
+  up:modified "2015-04-29"^^xsd:date ;
+  up:commonTaxon taxon:9347 ;
+  up:member uniparc:UPI000023FF04 ,
+    uniparc:UPI0005F4A72B ,
+    uniparc:UPI0003D6DE5E ,
+    uniparc:UPI00032913ED ,
+    uniparc:UPI0003D19C96 ,
+    uniparc:UPI00028F5067 .
+uniparc:UPI000023FF04 rdf:type up:Sequence ;
+  up:length 328 ;
+  rdf:value "MDHLGASLWPQVGSLCLLLAGAAWAPPPNLPDPKFESKAALLAARGPEELLCFTERLEDLVCFWEEAASAGVGPGNYSFSYQLEDEPWKLCRLHQAPTARGAVRFWCSLPTADTSSFVPLELRVTAASGAPRYHRVIHINEVVLLDAPVGLVARLADESGHVVLRWLPPPETPMTSHIRYEVDVSAGNGAGSVQRVEILEGRTECVLSNLRGRTRYTFAVRARMAEPSFGGFWSAWSEPVSLLTPSDLDPLILTLSLILVVILVLLTVLALLSHRRALKQKIWPGIPSPESEFEGLFTTHKGNFQVGGLVVPSVPGLPCFLQPNCRPL" ;
+  up:sequenceFor uniprot:P19235-3 ;
+  up:memberOf <UniRef100_P19235-3> ,
+    <UniRef90_P19235-3> .
+isoform:P19235-3 up:representativeFor <UniRef50_P19235-3> ;
+  up:reviewed false .
+uniparc:UPI0005F4A72B rdf:type up:Sequence ;
+  up:length 276 ;
+  up:memberOf <UniRef100_UPI0005F4A72B> ,
+    <UniRef90_P19235-3> .
+uniparc:UPI0003D6DE5E rdf:type up:Sequence ;
+  up:length 366 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" ;
+  up:memberOf <UniRef100_UPI0003D6DE5E> ,
+    <UniRef90_UPI0003D6DE5E> ;
+  up:organism taxon:10090 ;
+  rdfs:label "PREDICTED: erythropoietin receptor isoform X1" .
+uniparc:UPI00032913ED rdf:type up:Sequence ;
+  up:length 367 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" ;
+  up:memberOf <UniRef100_UPI00032913ED> ,
+    <UniRef90_UPI00032913ED> ;
+  up:organism taxon:9361 ;
+  rdfs:label "PREDICTED: erythropoietin receptor" .
+uniparc:UPI0003D19C96 rdf:type up:Sequence ;
+  up:length 349 ;
+  rdfs:label "Erythropoietin receptor (Fragment)" ;
+  up:sequenceFor uniprot:U6D116 ;
+  up:memberOf <UniRef100_U6D116> ,
+    <UniRef90_U6D116> .
+uniprot:U6D116 rdfs:label "Erythropoietin receptor (Fragment)" ;
+  up:reviewed false ;
+  up:mnemonic "U6D116_NEOVI" ;
+  up:organism taxon:452646 .
+uniparc:UPI00028F5067 rdf:type up:Sequence ;
+  up:length 369 ;
+  rdfs:label "Uncharacterized protein" ;
+  up:sequenceFor uniprot:K7EU54 ;
+  up:memberOf <UniRef100_K7EU54> ,
+    <UniRef90_K7EU54> .
+uniprot:K7EU54 rdfs:label "Uncharacterized protein" ;
+  up:seedFor <UniRef50_P19235-3> ;
+  up:reviewed false ;
+  up:mnemonic "K7EU54_PONAB" ;
+  up:organism taxon:9601 .
+<UniRef50_P19235-2> rdf:type up:Cluster ;
+  rdfs:label "Cluster: Isoform EPOR-S of Erythropoietin receptor" ;
+  up:identity "0.5"^^xsd:float ;
+  up:modified "2015-05-27"^^xsd:date ;
+  up:commonTaxon taxon:1437010 ;
+  up:member uniparc:UPI000023FF03 ,
+    uniparc:UPI0004DE240E ,
+    uniparc:UPI0000086875 ,
+    uniparc:UPI00049CA3DD ,
+    uniparc:UPI00029B8DC3 .
+uniparc:UPI000023FF03 rdf:type up:Sequence ;
+  up:length 241 ;
+  rdf:value "MDHLGASLWPQVGSLCLLLAGAAWAPPPNLPDPKFESKAALLAARGPEELLCFTERLEDLVCFWEEAASAGVGPGNYSFSYQLEDEPWKLCRLHQAPTARGAVRFWCSLPTADTSSFVPLELRVTAASGAPRYHRVIHINEVVLLDAPVGLVARLADESGHVVLRWLPPPETPMTSHIRYEVDVSAGNGAGSVQRGTVFLSPDWLSSTRARPHVIYFCLLRVPRPDSAPRWRSWRAAPSVC" ;
+  up:sequenceFor uniprot:P19235-2 ;
+  up:memberOf <UniRef100_P19235-2> ,
+    <UniRef90_P19235-2> .
+isoform:P19235-2 up:representativeFor <UniRef50_P19235-2> ;
+  up:reviewed false .
+uniparc:UPI0004DE240E rdf:type up:Sequence ;
+  up:length 226 ;
+  rdfs:label "Erythropoietin receptor (Fragment)" ;
+  up:sequenceFor uniprot:A0A075EAM8 ;
+  up:memberOf <UniRef100_A0A075EAM8> ,
+    <UniRef90_A0A075EAM8> .
+uniprot:A0A075EAM8 rdfs:label "Erythropoietin receptor (Fragment)" ;
+  up:reviewed false ;
+  up:mnemonic "A0A075EAM8_CANFA" ;
+  up:organism taxon:9615 .
+uniparc:UPI0000086875 rdf:type up:Sequence ;
+  up:length 229 ;
+  rdfs:label "Erythropoietin receptor (Fragment)" ;
+  up:sequenceFor uniprot:Q28206 ;
+  up:memberOf <UniRef100_Q28206> ,
+    <UniRef90_Q28206> .
+uniprot:Q28206 rdfs:label "Erythropoietin receptor (Fragment)" ;
+  up:reviewed false ;
+  up:mnemonic "Q28206_BOVIN" ;
+  up:organism taxon:9913 .
+uniparc:UPI00049CA3DD rdf:type up:Sequence ;
+  up:length 221 ;
+  rdfs:label "Erythropoietin receptor" ;
+  up:sequenceFor uniprot:A0A061IA96 ;
+  up:memberOf <UniRef100_A0A061IA96> ,
+    <UniRef90_A0A061IA96> .
+uniprot:A0A061IA96 rdfs:label "Erythropoietin receptor" ;
+  up:reviewed false ;
+  up:mnemonic "A0A061IA96_CRIGR" ;
+  up:organism taxon:10029 .
+uniparc:UPI00029B8DC3 rdf:type up:Sequence ;
+  up:length 243 ;
+  rdfs:label "Erythropoietin receptor (Fragment)" ;
+  up:sequenceFor uniprot:K7WIM0 ;
+  up:memberOf <UniRef100_K7WIM0> ,
+    <UniRef90_K7WIM0> .
+uniprot:K7WIM0 rdfs:label "Erythropoietin receptor (Fragment)" ;
+  up:seedFor <UniRef50_P19235-2> ;
+  up:reviewed false ;
+  up:mnemonic "K7WIM0_MESAU" ;
+  up:organism taxon:10036 .

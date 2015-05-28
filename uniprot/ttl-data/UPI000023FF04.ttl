@@ -1,0 +1,75 @@
+@base <uniparc> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix embl-cds: <http://purl.uniprot.org/embl-cds/> .
+@prefix isoform: <http://purl.uniprot.org/isoforms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sha: <http://purl.uniprot.org/SHA-384/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix taxon: <http://purl.uniprot.org/taxonomy/> .
+@prefix uniparc: <http://purl.uniprot.org/uniparc/> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix up: <http://purl.uniprot.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+uniparc:UPI000023FF04 rdf:type up:Sequence ;
+  up:sequenceFor <http://purl.uniprot.org/EPO/JA684580.1> ,
+    <http://purl.uniprot.org/USPTO/ADA04868.1> ,
+    <http://purl.uniprot.org/USPTO/AFT61675.1> ,
+    <http://purl.uniprot.org/USPTO/AHH57716.1> ,
+    <http://purl.uniprot.org/JPO/DL511962> ,
+    <http://purl.uniprot.org/ENSEMBL/ENSP00000467809> ,
+    sha:A1F5F1A0BCD5708FF9B287BB4EC36E111D42EE339DD247B9F4BB43554359386DEE6A6D43B6DEB72EA637CE589E96173A ,
+    isoform:P19235-3 ,
+    <http://purl.uniprot.org/VEGA/OTTHUMP00000268115> ;
+  rdf:value "MDHLGASLWPQVGSLCLLLAGAAWAPPPNLPDPKFESKAALLAARGPEELLCFTERLEDLVCFWEEAASAGVGPGNYSFSYQLEDEPWKLCRLHQAPTARGAVRFWCSLPTADTSSFVPLELRVTAASGAPRYHRVIHINEVVLLDAPVGLVARLADESGHVVLRWLPPPETPMTSHIRYEVDVSAGNGAGSVQRVEILEGRTECVLSNLRGRTRYTFAVRARMAEPSFGGFWSAWSEPVSLLTPSDLDPLILTLSLILVVILVLLTVLALLSHRRALKQKIWPGIPSPESEFEGLFTTHKGNFQVGGLVVPSVPGLPCFLQPNCRPL" ;
+  up:md5Checksum "0496D39EEF4CA405D0397F05E55DDBE5"^^xsd:token .
+<http://purl.uniprot.org/EPO/JA684580.1> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2012-03-21"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/USPTO/ADA04868.1> rdfs:seeAlso <http://purl.uniprot.org/gi/280995565> ;
+  up:version 1 ;
+  up:created "2010-01-06"^^xsd:date ;
+  up:modified "2014-09-26"^^xsd:date .
+<http://purl.uniprot.org/USPTO/AFT61675.1> rdfs:seeAlso <http://purl.uniprot.org/gi/407178054> ;
+  up:version 1 ;
+  up:created "2013-01-07"^^xsd:date ;
+  up:modified "2014-09-26"^^xsd:date .
+<http://purl.uniprot.org/USPTO/AHH57716.1> rdfs:seeAlso <http://purl.uniprot.org/gi/576948862> ;
+  up:version 1 ;
+  up:created "2014-09-26"^^xsd:date ;
+  up:modified "2014-09-26"^^xsd:date .
+<http://purl.uniprot.org/JPO/DL511962> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2013-03-21"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/ENSEMBL/ENSP00000467809> up:organism taxon:9606 ;
+  up:version 2 ;
+  up:created "2013-03-26"^^xsd:date ;
+  up:modified "2015-02-24"^^xsd:date ;
+  up:encodedBy <#_000023FF041> .
+<#_000023FF041> rdf:type up:Gene ;
+  skos:prefLabel "EPOR" .
+sha:A1F5F1A0BCD5708FF9B287BB4EC36E111D42EE339DD247B9F4BB43554359386DEE6A6D43B6DEB72EA637CE589E96173A dcterms:isVersionOf <http://purl.uniprot.org/IPI/IPI00401741.1> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2004-03-05"^^xsd:date ;
+  up:modified "2011-09-27"^^xsd:date ;
+  up:obsolete true .
+isoform:P19235-3 up:reviewed true ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2004-02-20"^^xsd:date ;
+  up:modified "2015-05-27"^^xsd:date ;
+  up:encodedBy <#_000023FF042> ;
+  up:structuredName <#_000023FF043> .
+<#_000023FF042> rdf:type up:Gene ;
+  skos:prefLabel "EPOR" .
+<#_000023FF043> rdf:type up:Structured_Name ;
+  up:structuredNameType "Isoform EPOR-T of Erythropoietin receptor" .
+<http://purl.uniprot.org/VEGA/OTTHUMP00000268115> up:organism taxon:9606 ;
+  up:version 2 ;
+  up:created "2013-02-18"^^xsd:date ;
+  up:modified "2015-02-17"^^xsd:date .

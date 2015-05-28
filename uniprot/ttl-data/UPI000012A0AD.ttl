@@ -1,0 +1,889 @@
+@base <uniparc> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix embl-cds: <http://purl.uniprot.org/embl-cds/> .
+@prefix isoform: <http://purl.uniprot.org/isoforms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sha: <http://purl.uniprot.org/SHA-384/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix taxon: <http://purl.uniprot.org/taxonomy/> .
+@prefix uniparc: <http://purl.uniprot.org/uniparc/> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix up: <http://purl.uniprot.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+uniparc:UPI000012A0AD rdf:type up:Sequence ;
+  up:sequenceFor embl-cds:AAA52401.1 ,
+    embl-cds:AAA52403.1 ,
+    embl-cds:AAB23271.1 ,
+    embl-cds:AAI12154.1 ,
+    embl-cds:BAG37561.1 ,
+    embl-cds:BAI45971.1 ,
+    sha:7B6C1C0C6D56DF47DC902F93A19DFEDA6FBB1A14AC1373A05EC298E0B60BAB34C1BD6617BC714B997A731814CF69EB11 ,
+    uniprot:P19235.1 ,
+    sha:1BFECBEF116F83F823E4A198BA89DDEC5C2D869A8369D015164CF7A57CBDE0C260375EAD0EA31CB54AEDDC6FFF589D4F ,
+    sha:ACBA018CDDA6B3FB29E6BB0D789E3A26504E0350E63A3773EE2541E6EDC37D46DC6806CC3F5F99A86AD41284E0ECA48E ,
+    sha:7B0F4C78C2741B77EDB1B3F6A1D80C8E6FD90F21DD49DAC4BCC95ACDE78D6F54DFA0FC5B576EC3AC6A2F79DD57947992 ,
+    sha:7064ED1DDC2CAA0B10C7E45C344303918F9D21E45CCCD2A8130E3EDE938AA18672488DFAAEA7581B8F772214C8B7DD02 ,
+    sha:7C755258B180EB69AF40B9BB5FA082D3D57BD2D969FB36277AA18AD3FE253B70328F81178E2BCEC1D1401FA41737E169 ,
+    <http://purl.uniprot.org/EPO/AX658276.1> ,
+    <http://purl.uniprot.org/EPO/FB656402.1> ,
+    <http://purl.uniprot.org/EPO/FB661658.1> ,
+    <http://purl.uniprot.org/EPO/HB413295.1> ,
+    <http://purl.uniprot.org/EPO/HB865469.1> ,
+    <http://purl.uniprot.org/EPO/HC870853.1> ,
+    <http://purl.uniprot.org/EPO/HI956856.1> ,
+    <http://purl.uniprot.org/EPO/JA131023.1> ,
+    <http://purl.uniprot.org/EPO/JA684578.1> ,
+    <http://purl.uniprot.org/EPO/JA837693.1> ,
+    <http://purl.uniprot.org/EPO/JB297490.1> ,
+    <http://purl.uniprot.org/EPO/JB390361.1> ,
+    <http://purl.uniprot.org/EPO/JB561483.1> ,
+    <http://purl.uniprot.org/USPTO/ABH87332.1> ,
+    <http://purl.uniprot.org/USPTO/ADA04865.1> ,
+    <http://purl.uniprot.org/USPTO/ADF24525.1> ,
+    <http://purl.uniprot.org/USPTO/AED17308.1> ,
+    <http://purl.uniprot.org/USPTO/AED47635.1> ,
+    <http://purl.uniprot.org/USPTO/AFT61672.1> ,
+    <http://purl.uniprot.org/USPTO/AGD78112.1> ,
+    <http://purl.uniprot.org/USPTO/AHH57713.1> ,
+    <http://purl.uniprot.org/JPO/BD815401> ,
+    <http://purl.uniprot.org/JPO/BD889183> ,
+    <http://purl.uniprot.org/JPO/BD893417> ,
+    <http://purl.uniprot.org/JPO/BD926385> ,
+    <http://purl.uniprot.org/JPO/BD984181> ,
+    <http://purl.uniprot.org/JPO/DD688470> ,
+    <http://purl.uniprot.org/JPO/DD898486> ,
+    <http://purl.uniprot.org/JPO/DD941009> ,
+    <http://purl.uniprot.org/JPO/DJ743363> ,
+    <http://purl.uniprot.org/JPO/DJ794272> ,
+    <http://purl.uniprot.org/JPO/DJ860322> ,
+    <http://purl.uniprot.org/JPO/DJ897785> ,
+    <http://purl.uniprot.org/JPO/DL502454> ,
+    <http://purl.uniprot.org/JPO/DL511960> ,
+    <http://purl.uniprot.org/ENSEMBL/ENSP00000222139> ,
+    sha:7F4FB99FB7838C32F9B248D6415C3A7502CC25CE62CCA40B6956A2F2FE0CEDA57CFF42B77C024A0405FBC58E451E8A29 ,
+    sha:95094B380146A1651D49867976603ECB437651E1ED9B31BE39AE20A536174407101A3E05AA8FFCA6F12002D6404E857F ,
+    isoform:P19235-1 ,
+    sha:37A596216CEF0BDD4022AE6EDB765471EDDD6B0CFBEBF6600D85F5ACC3E087FDB28309973AD84B1E53D4B551AEE7717B ,
+    sha:6B492868647470427FBBA349A46A442D837C3AF8A843BFB2729C436378FB8296381B818BE3A2CC5D89E31BF9579CC8FE ,
+    sha:D577F0BBFD90DC2408627D2EDBA32914C5FAA2C5DC6E18CF21E094227383EE194AD5B9B3096E7683601E112D6E0DF6A0 ,
+    sha:8618CCC6C9028CF5EEE3D4DFD578BE8B526C328A88F5A303D664F239DFA79BFDE4C80D5FFF2DCF63779376F247E42F98 ,
+    sha:5D0DBD6647912D70D5087C9F6CC8AEF8924567A8AE2284D794A2A723188B2AEDB9F4067DAC80DAA45D9CE971B27EBD86 ,
+    sha:F02D316321360931C6952382E5D33627CD7502C110AB74FE22C1802403205C19702882966ADD92A03939714DC4166DEB ,
+    sha:5E1E87CDB44735B56CECE798E58A12CF4FBC7DDD5197B9559A1A85890F71E30178D8056006087D9E86E040CB983F4F80 ,
+    sha:0979AC2C13B2EFE481B936983331B1D69E72C9B16759AB526C70CB329A8B4C9AC89957F8648D9C5EA5FFF9F675896705 ,
+    sha:BC7C5DC213534A8F38306D750E75938458E07C39DCA5AFEFC8EA81B7F1E8A3492B90E31A671326A6013D0178D0A0B112 ,
+    sha:7EA158E7EB080BA86034903506CB6BEF20569E2331D0F36A79548BDFB642FBCD531F512E19BFBF256A5083A2450A94F0 ,
+    sha:BD353D686A10B99DDE8F387C8909A5D3BC0F6E8C9ED96F4E9587FEE38C1F2C291F74695CF1A124A8CFD61E3892BC541E ,
+    <http://purl.uniprot.org/H_INV/HIT000195619.12> ,
+    sha:3CB827C61A7D51EE0D0DEB3AF54B1D0648D967E61E8195976B9ABC7C7696A7AA63430E6A609056886C74726808A4AD4F ,
+    sha:A7D24A8D93E61CEFC7967A0EF30A9A5AA40EFF4DC20E8DBC306FE46E5AAD1267A4E82D9B140D7DAEE1E5D0AB5176582D ,
+    sha:633211663AE0402017F4974631DDC89C57C6A57255B0A178CE43CCD110770189C045F5C6624FEC2CC27A8159FD531855 ,
+    sha:1F1E3CC48837CB1E436D2A092CACBF213FA1A340FDC7D9230C00B5CF0BE80102D003774483BE254EC53F46DDF002492A ,
+    sha:8D2C1E305626D798F9D05E7D2C8E3FF228B2D0C6C00253EB0B1BC0AB03D3ED002F75B8614D6663C5DECBD831BF7D7BFF ,
+    sha:CE4B9418FC93C0CFA357B2910EB8AD93ACB7AFE539948DFA82C3F2BA40557FCF101D5FC0D1D459CB9FAEC0A8A80CB214 ,
+    sha:88F69F19FBD743B0988F2D42A8C11962C85551D3E367967842978C2186C9698757C9D76D18BB2C671ECFD15BE9F136F9 ,
+    sha:62FEF70E5EF3AB59BAA89B22F3823D1597D5A0484CBEE0B7B1891E1B2A011CF8CB72643EA1C34FC1879D3FDB339817DD ,
+    sha:A4706C3DC5C1552E1A1A2AC3B0D23472A7CC3A5045D13250974AA445709BEED385A85BF2943ACC6B74EF274F5184BAED ,
+    sha:E37C34EDCFC980F659ED314C204A8CAF47B2267CCE2FBF156B7C66135006DD85690DF969C6B6DF6651490B0FBFE88CDD ,
+    sha:280FA5DB72DAAC1A92ED95BE8E6AF8C1EFAC443D12819FDDA3ABF8E74D599AC03703E7FD535268BDA7A3B685FDC72A66 ,
+    <http://purl.uniprot.org/H_INV/HIT000195941.13> ,
+    sha:EA7B83AED2DA52043EEE266956851B8C6AD145189FE70B4FABFDA708B5AA32954F75AE4C7D7EF70E9800D9E93D98BC30 ,
+    sha:9445A036F40F437F25CB8BD89D217481A9EC03E3BB232F3E21149CBABF3EB54104ABEF0F7D2C0E791FE18FF812290F2D ,
+    sha:98F746813589F42FC84293F7E341899E730A6DC8FB2CCBB840B75E6F833404C0EA8E6363F1995F271B692E71077778BD ,
+    sha:2B7F42A89BF9125962CB1340A4A10EA631D4D648FD596B09556983B8AF4AA43E500C6B866306548F0967EBD500FE1AC1 ,
+    sha:0DCCB10E52C32CDDB237803F886E39C6BCAA68041BA3E76EBBB825FFB835C83627822DAEB6E9EAA0E869BA02F0C42E58 ,
+    sha:9B123E692C47874FF65A8D1E21C04734C4A3E5146864F8EA9C70CF511644FAEEA7102359BFD5BF1B4269323C8D2AA519 ,
+    sha:340AC71796A447E90DA0CA870629449D1DF05885D604D089A3FA0DD660343FA7ACD8826BEF064E654F9A282110E83355 ,
+    sha:AAD6F861BD6F9BDB57ACF6FD192652C4C7C04EFAEA89ABCA94DD84F4CE8BC63C18B46AADBC5EC49708DD7929EA6FB086 ,
+    sha:6501E49102E8180CB9D1AAF1EFE671338CE8071EE2EBB3A83CFC1972E0723F636041E964A398493EB2AFBE0BCC337F5F ,
+    sha:9332E838060A328C6274F7E7E58C18D4A6AC486CB73794627D4C874BAABFA94C33F2B284586CD1B37273040F1159093B ,
+    <http://purl.uniprot.org/H_INV/HIT000272060.12> ,
+    sha:53F03419857ADED505508BBEC662BEFF9F96ACACFA074313C4D1023853E1881FD02FA29153AE6B6DE17287B52C213140 ,
+    sha:36A5052CFF0CCD9C8DD1B1F14BCC0E5B3FDE7F75C4594894C316F2C552CF9A187A726DF108B618FDBBB3E98E230003E0 ,
+    sha:C86A588E16D02E903001E5A0860BF85AC090B30B3A6BC131BD0EF2B9416C55B14D6D5E1E5E422C6D86FFE75D8292CB1A ,
+    sha:F5C8050B1C3F1A615FD1174D6A74517CA6B84FB4416BC14460EBD3CD0C6A4E12618377AED95899613C8BBF80A167A166 ,
+    sha:8EB0EB5099205DFE2026B5CBE0500DE4D01D5D677E5252F6E33EFC1F11061F3A71EE392C94E16907BD89E4A1A1DB8F86 ,
+    sha:37B004E82FE08DADAA8EA45697C916FFF71173D9F884FD30C54B388A24BE7827E900809E216013BE7F8A80F7827E4CC3 ,
+    sha:EEDFC37D3CF401ECC179B76C3561FAA0600BEC70E2B425AD399754371249FAABD8DC900BACF736E46D619AD2D0BE2578 ,
+    sha:C963CB68001A1D9E52B0DCFA78B13C2986DF5BBE6136B043CA856E1CD527FE4DB1F7680AAF61CA7AA2ECF1602EF28A5F ,
+    sha:FED32F528971A3E39AFA43CD401A50568FD5F94C8FD7C2836E18734016044A24C517FAB394E7C762F695AE6397962681 ,
+    sha:7DFCB8769D567EE2D518E6280F20362D9C3AEB39E8B07AEF53A44D17759E3AFE6743E5DAFA6471E4BEDCC8D5E74EC91E ,
+    <http://purl.uniprot.org/H_INV/HIT000297668.12> ,
+    sha:B22D73420086FD09378EDFEFC3D74E494BA04176032B871BD4DC3FFE477DB599DA7DBCBB7EB5F610677F99B2D8038566 ,
+    sha:6F1016D14FBF2E866924552B2F8AAC73F5C259EAD5B9F5C92B06E557CDB0632367EBA93B156F23C6FEF4DC097663EDE7 ,
+    sha:F37F0889ED18D02C88771C1589396F4950127C71DFEDD6D9A53EA04DDBEB13B501214FEA13D7BFEABC99E99D69CA4776 ,
+    sha:39981AB1D01E0DC15A5FFA811A98DB688AA108904C9937459C7414E9E8B3DD21047B3C95D3E6E32248BEED96F0651793 ,
+    sha:2202E257925AAB3EDDD61E432DB484322052EEEEBB8C869D3B30BCE1235BFEFA59D0733B16B49E26E95C035A58530E41 ,
+    sha:35BA4A865F063D55936208346A8D5A30892A561EA8AE599D5C1EB0F0BE8FC175E8403EA545BF116C9E16A57ED4526939 ,
+    sha:AB981BB6882346872BDA88AA911A86A12DB805B8C0D178C870FA84AF429A16264288504ABD1C9C567CF0320BB03B9001 ,
+    sha:24801C458496573E95E0AD950848D692BAFF5D1CB488EA3EB6D8854EF14E6D28A6607325BBBF616C8CB78C185B1D0CE7 ,
+    sha:9F1BA4B92B1C35BEF6E650F0B0D8536FE450D76FBB9DD16976CCE08F79C32F2184DBFC557D8F2C340EC07789530E6057 ,
+    sha:AD39FB1714121153DA19B245C3C1F46FF6878B05B75D677611D5EF6803874EEA837647C591119E5684B04B1BAE6F9526 ,
+    <http://purl.uniprot.org/H_INV/HIT000299270.12> ,
+    sha:2E3F06F58EA12A8D2D7667EBB4D196849AC0FF258987D19D27DAD338278395BEAB20FEBC221015333BB5953890190F36 ,
+    sha:1596CE463FF5C8B88C22D36465D4F29279AD55BCDA2C1254EEBBA1593842A6B6AA98E69234CA388E66B5A756BE7F7060 ,
+    sha:898BB80A9E07EE5061E1386F58DDA5CCCEB376CA8C94D84A3B6E890F21082A3CB95E96A91BDE624139D70F8852635B05 ,
+    sha:2097F6210DC7C33E14FD922320C4B04180B8341B58E980334B42AD6AB20162460E76A252DF623567DADD259A8F3920B3 ,
+    sha:7384D58C31D52EE94CC255055D677D8032E0564AEBF4504AC23852385B15710CE5DAEDB7F2E2FEFD66C86C6783EB511F ,
+    sha:52008BEB3B8FD7BD60400579BA4814D39AE3F406FD1E37F2E50DFF4F697977D0FE30C74F96A2E9B426E9549191A28556 ,
+    sha:9A995F802D7BCAD43AE67496A287A56BFBBAAA405E3ECB1C5A587421766FAF683BB20B0D9AA1D024A968189EFCF7A538 ,
+    <http://purl.uniprot.org/H_INV/HIT000340282.9> ,
+    sha:A4AA6CB1E8A2652880226EA1622FA5344DB8A5569402BFE0882483645E25EA5FB0194E477FE5928F7AAEF7CBD5141C9B ,
+    sha:30F0E279399791535C86D0E412B6D7095F5C80ACF79E1A0E97FDE13FF6CEF14422E357295F7E7D1B1ED8CC3229AAAA32 ,
+    sha:476094FD705BFE6FC46DE05A01BB9B0BA65F6374CC025C5517D7CD65008D0A6A8326D31DD7B329ED2384B41730CED498 ,
+    sha:F3C7E8B4BFA0CC71DA0EA995F0C21B86D618EE5535A441A20499A40568D823556513F11FED27AF719DC70BCF0A53E600 ,
+    <http://purl.uniprot.org/H_INV/HIT000433963.6> ,
+    sha:2E2FECC7DFEEDA69AB44C5DAD86019AEA4BDE111C226F6ADDD684C46438EF265E44620AB589E0F1E87771FCF0D13073B ,
+    <http://purl.uniprot.org/REFSEQ/NP_000112.1> ,
+    sha:D5D52B389DFDA86F3DA3AE30C0DFCD7DDD4CEA7A16C3E7DE82B2682459EF3B58DDAD319880C677085735518187FD6E2B ,
+    sha:A2263E19B8B39E03A083B7D14052E8FA9ED68085B89953C343DB167A5C7737AAB4C6BFC2C5434113CF7F32EB8539E72C ,
+    <http://purl.uniprot.org/VEGA/OTTHUMP00000268114> ,
+    <http://purl.uniprot.org/EMBL_CON/EAW84205.1> ,
+    <http://purl.uniprot.org/KIPO/DI606864> ,
+    <http://purl.uniprot.org/KIPO/DI622636> ,
+    <http://purl.uniprot.org/KIPO/DI731206> ,
+    <http://purl.uniprot.org/KIPO/DI746026> ,
+    <http://purl.uniprot.org/SEED/fig|9606%2E3%2Epeg%2E15725> ;
+  rdf:value "MDHLGASLWPQVGSLCLLLAGAAWAPPPNLPDPKFESKAALLAARGPEELLCFTERLEDLVCFWEEAASAGVGPGNYSFSYQLEDEPWKLCRLHQAPTARGAVRFWCSLPTADTSSFVPLELRVTAASGAPRYHRVIHINEVVLLDAPVGLVARLADESGHVVLRWLPPPETPMTSHIRYEVDVSAGNGAGSVQRVEILEGRTECVLSNLRGRTRYTFAVRARMAEPSFGGFWSAWSEPVSLLTPSDLDPLILTLSLILVVILVLLTVLALLSHRRALKQKIWPGIPSPESEFEGLFTTHKGNFQLWLYQNDGCLWWSPCTPFTEDPPASLEVLSERCWGTMQAVEPGTDDEGPLLEPVGSEHAQDTYLVLDKWLLPRNPPSEDLPGPGGSVDIVAMDEGSEASSCSSALASKPSPEGASAASFEYTILDPSSQLLRPWTLCPELPPTPPHLKYLYLVVSDSGISTDYSSGDSQGAQGGLSDGPYSNPYENSLIPAAEPLPPSYVACS" ;
+  up:md5Checksum "8599B15580DBB2F39B50B691226F9F66"^^xsd:token .
+embl-cds:AAA52401.1 up:organism taxon:9606 ;
+  rdfs:seeAlso <http://purl.uniprot.org/gi/182201> ;
+  up:version 1 ;
+  up:created "2003-03-12"^^xsd:date ;
+  up:modified "2015-03-01"^^xsd:date ;
+  up:encodedBy <#_000012A0AD1> .
+<#_000012A0AD1> rdf:type up:Gene ;
+  skos:prefLabel "EPOR" .
+embl-cds:AAA52403.1 up:organism taxon:9606 ;
+  rdfs:seeAlso <http://purl.uniprot.org/gi/182245> ;
+  up:version 1 ;
+  up:created "2003-03-12"^^xsd:date ;
+  up:modified "2015-03-01"^^xsd:date ;
+  up:encodedBy <#_000012A0AD2> ;
+  up:structuredName <#_000012A0AD3> .
+<#_000012A0AD2> rdf:type up:Gene ;
+  skos:prefLabel "EPOR" .
+<#_000012A0AD3> rdf:type up:Structured_Name ;
+  up:structuredNameType "erythropoietin receptor" .
+embl-cds:AAB23271.1 up:organism taxon:9606 ;
+  rdfs:seeAlso <http://purl.uniprot.org/gi/255497> ;
+  up:version 1 ;
+  up:created "2003-03-12"^^xsd:date ;
+  up:modified "2015-03-01"^^xsd:date ;
+  up:encodedBy <#_000012A0AD4> ;
+  up:structuredName <#_000012A0AD5> .
+<#_000012A0AD4> rdf:type up:Gene ;
+  skos:prefLabel "erythropoietin receptor, Epo receptor" .
+<#_000012A0AD5> rdf:type up:Structured_Name ;
+  up:structuredNameType "erythropoietin receptor" .
+embl-cds:AAI12154.1 up:organism taxon:9606 ;
+  rdfs:seeAlso <http://purl.uniprot.org/gi/85566834> ;
+  up:version 1 ;
+  up:created "2006-01-23"^^xsd:date ;
+  up:modified "2015-03-01"^^xsd:date ;
+  up:encodedBy <#_000012A0AD6> ;
+  up:structuredName <#_000012A0AD7> .
+<#_000012A0AD6> rdf:type up:Gene ;
+  skos:prefLabel "EPOR" .
+<#_000012A0AD7> rdf:type up:Structured_Name ;
+  up:structuredNameType "erythropoietin receptor" .
+embl-cds:BAG37561.1 up:organism taxon:9606 ;
+  rdfs:seeAlso <http://purl.uniprot.org/gi/189054739> ;
+  up:version 1 ;
+  up:created "2008-05-27"^^xsd:date ;
+  up:modified "2015-03-01"^^xsd:date .
+embl-cds:BAI45971.1 up:organism taxon:32630 ;
+  rdfs:seeAlso <http://purl.uniprot.org/gi/261858898> ;
+  up:version 1 ;
+  up:created "2009-10-23"^^xsd:date ;
+  up:modified "2015-03-01"^^xsd:date ;
+  up:encodedBy <#_000012A0AD8> ;
+  up:structuredName <#_000012A0AD9> .
+<#_000012A0AD8> rdf:type up:Gene ;
+  skos:prefLabel "EPOR" .
+<#_000012A0AD9> rdf:type up:Structured_Name ;
+  up:structuredNameType "erythropoietin receptor" .
+sha:7B6C1C0C6D56DF47DC902F93A19DFEDA6FBB1A14AC1373A05EC298E0B60BAB34C1BD6617BC714B997A731814CF69EB11 dcterms:isVersionOf embl-cds:EAW84205.1 ;
+  up:organism taxon:9606 ;
+  rdfs:seeAlso <http://purl.uniprot.org/gi/119604611> ;
+  up:version 1 ;
+  up:created "2009-12-09"^^xsd:date ;
+  up:modified "2013-11-05"^^xsd:date ;
+  up:obsolete true .
+uniprot:P19235.1 up:reviewed true ;
+  up:organism taxon:9606 ;
+  rdfs:seeAlso <http://purl.uniprot.org/gi/119524> ;
+  up:version 1 ;
+  up:created "1990-11-01"^^xsd:date ;
+  up:modified "2015-05-27"^^xsd:date ;
+  up:encodedBy <#_000012A0ADA> ;
+  up:structuredName <#_000012A0ADB> .
+<#_000012A0ADA> rdf:type up:Gene ;
+  skos:prefLabel "EPOR" .
+<#_000012A0ADB> rdf:type up:Structured_Name ;
+  up:structuredNameType "Erythropoietin receptor" .
+sha:1BFECBEF116F83F823E4A198BA89DDEC5C2D869A8369D015164CF7A57CBDE0C260375EAD0EA31CB54AEDDC6FFF589D4F dcterms:isVersionOf uniprot:B2RCG4.1 ;
+  up:version 1 ;
+  up:created "2008-07-01"^^xsd:date ;
+  up:modified "2009-09-22"^^xsd:date ;
+  up:obsolete true .
+sha:ACBA018CDDA6B3FB29E6BB0D789E3A26504E0350E63A3773EE2541E6EDC37D46DC6806CC3F5F99A86AD41284E0ECA48E dcterms:isVersionOf uniprot:Q2M205.1 ;
+  up:version 1 ;
+  up:created "2006-02-21"^^xsd:date ;
+  up:modified "2007-02-06"^^xsd:date ;
+  up:obsolete true .
+sha:7B0F4C78C2741B77EDB1B3F6A1D80C8E6FD90F21DD49DAC4BCC95ACDE78D6F54DFA0FC5B576EC3AC6A2F79DD57947992 dcterms:isVersionOf <http://purl.uniprot.org/PIRARC/A43799> ;
+  up:version 1 ;
+  up:created "2003-03-31"^^xsd:date ;
+  up:modified "2003-04-04"^^xsd:date ;
+  up:obsolete true .
+sha:7064ED1DDC2CAA0B10C7E45C344303918F9D21E45CCCD2A8130E3EDE938AA18672488DFAAEA7581B8F772214C8B7DD02 dcterms:isVersionOf <http://purl.uniprot.org/PIRARC/A49824> ;
+  up:version 1 ;
+  up:created "2003-03-31"^^xsd:date ;
+  up:modified "2003-04-04"^^xsd:date ;
+  up:obsolete true .
+sha:7C755258B180EB69AF40B9BB5FA082D3D57BD2D969FB36277AA18AD3FE253B70328F81178E2BCEC1D1401FA41737E169 dcterms:isVersionOf <http://purl.uniprot.org/PIRARC/A53958> ;
+  up:version 1 ;
+  up:created "2003-03-31"^^xsd:date ;
+  up:modified "2003-04-04"^^xsd:date ;
+  up:obsolete true .
+<http://purl.uniprot.org/EPO/AX658276.1> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2003-06-11"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/EPO/FB656402.1> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-12-02"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/EPO/FB661658.1> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-12-02"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/EPO/HB413295.1> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2009-09-10"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/EPO/HB865469.1> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2009-12-16"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/EPO/HC870853.1> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2010-09-11"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/EPO/HI956856.1> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2011-03-03"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/EPO/JA131023.1> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2011-06-02"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/EPO/JA684578.1> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2012-03-21"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/EPO/JA837693.1> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2013-04-13"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/EPO/JB297490.1> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2014-01-21"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/EPO/JB390361.1> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2014-01-21"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/EPO/JB561483.1> up:organism taxon:32630 ;
+  up:version 1 ;
+  up:created "2014-01-21"^^xsd:date ;
+  up:modified "2014-03-17"^^xsd:date .
+<http://purl.uniprot.org/USPTO/ABH87332.1> rdfs:seeAlso <http://purl.uniprot.org/gi/112025089> ;
+  up:version 1 ;
+  up:created "2006-09-20"^^xsd:date ;
+  up:modified "2014-09-26"^^xsd:date .
+<http://purl.uniprot.org/USPTO/ADA04865.1> rdfs:seeAlso <http://purl.uniprot.org/gi/280995562> ;
+  up:version 1 ;
+  up:created "2010-01-06"^^xsd:date ;
+  up:modified "2014-09-26"^^xsd:date .
+<http://purl.uniprot.org/USPTO/ADF24525.1> rdfs:seeAlso <http://purl.uniprot.org/gi/294588668> ;
+  up:version 1 ;
+  up:created "2010-06-16"^^xsd:date ;
+  up:modified "2014-09-26"^^xsd:date .
+<http://purl.uniprot.org/USPTO/AED17308.1> rdfs:seeAlso <http://purl.uniprot.org/gi/331402015> ;
+  up:version 1 ;
+  up:created "2011-09-15"^^xsd:date ;
+  up:modified "2014-09-26"^^xsd:date .
+<http://purl.uniprot.org/USPTO/AED47635.1> rdfs:seeAlso <http://purl.uniprot.org/gi/331467125> ;
+  up:version 1 ;
+  up:created "2011-09-15"^^xsd:date ;
+  up:modified "2014-09-26"^^xsd:date .
+<http://purl.uniprot.org/USPTO/AFT61672.1> rdfs:seeAlso <http://purl.uniprot.org/gi/407178051> ;
+  up:version 1 ;
+  up:created "2013-01-07"^^xsd:date ;
+  up:modified "2014-09-26"^^xsd:date .
+<http://purl.uniprot.org/USPTO/AGD78112.1> rdfs:seeAlso <http://purl.uniprot.org/gi/443892716> ;
+  up:version 1 ;
+  up:created "2013-11-19"^^xsd:date ;
+  up:modified "2014-09-26"^^xsd:date .
+<http://purl.uniprot.org/USPTO/AHH57713.1> rdfs:seeAlso <http://purl.uniprot.org/gi/576948854> ;
+  up:version 1 ;
+  up:created "2014-09-26"^^xsd:date ;
+  up:modified "2014-09-26"^^xsd:date .
+<http://purl.uniprot.org/JPO/BD815401> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2005-09-08"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/JPO/BD889183> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-01-11"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/JPO/BD893417> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-01-11"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/JPO/BD926385> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-05-10"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/JPO/BD984181> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-03-13"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/JPO/DD688470> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-12-05"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/JPO/DD898486> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2009-09-09"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/JPO/DD941009> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2010-03-01"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/JPO/DJ743363> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2011-09-05"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/JPO/DJ794272> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2011-11-30"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/JPO/DJ860322> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2012-10-26"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/JPO/DJ897785> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2013-01-07"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/JPO/DL502454> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2013-03-21"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/JPO/DL511960> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2013-03-21"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/ENSEMBL/ENSP00000222139> up:organism taxon:9606 ;
+  up:version 2 ;
+  up:created "2004-05-12"^^xsd:date ;
+  up:modified "2015-02-24"^^xsd:date ;
+  up:encodedBy <#_000012A0ADC> .
+<#_000012A0ADC> rdf:type up:Gene ;
+  skos:prefLabel "EPOR" .
+sha:7F4FB99FB7838C32F9B248D6415C3A7502CC25CE62CCA40B6956A2F2FE0CEDA57CFF42B77C024A0405FBC58E451E8A29 dcterms:isVersionOf <http://purl.uniprot.org/ENSEMBL/ENSP00000322050> ;
+  up:version 1 ;
+  up:created "2003-04-01"^^xsd:date ;
+  up:modified "2004-02-13"^^xsd:date ;
+  up:obsolete true .
+sha:95094B380146A1651D49867976603ECB437651E1ED9B31BE39AE20A536174407101A3E05AA8FFCA6F12002D6404E857F dcterms:isVersionOf <http://purl.uniprot.org/IPI/IPI00017476.1> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2003-03-14"^^xsd:date ;
+  up:modified "2011-09-27"^^xsd:date ;
+  up:obsolete true .
+isoform:P19235-1 up:reviewed true ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2004-02-20"^^xsd:date ;
+  up:modified "2015-05-27"^^xsd:date ;
+  up:encodedBy <#_000012A0ADD> ;
+  up:structuredName <#_000012A0ADE> .
+<#_000012A0ADD> rdf:type up:Gene ;
+  skos:prefLabel "EPOR" .
+<#_000012A0ADE> rdf:type up:Structured_Name ;
+  up:structuredNameType "Isoform EPOR-F of Erythropoietin receptor" .
+sha:37A596216CEF0BDD4022AE6EDB765471EDDD6B0CFBEBF6600D85F5ACC3E087FDB28309973AD84B1E53D4B551AEE7717B dcterms:isVersionOf <http://purl.uniprot.org/PIR/ZUHUR> ;
+  up:version 1 ;
+  up:created "2003-04-11"^^xsd:date ;
+  up:modified "2005-01-04"^^xsd:date ;
+  up:obsolete true .
+sha:6B492868647470427FBBA349A46A442D837C3AF8A843BFB2729C436378FB8296381B818BE3A2CC5D89E31BF9579CC8FE dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195619.1> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-03-20"^^xsd:date ;
+  up:modified "2006-03-20"^^xsd:date ;
+  up:obsolete true .
+sha:D577F0BBFD90DC2408627D2EDBA32914C5FAA2C5DC6E18CF21E094227383EE194AD5B9B3096E7683601E112D6E0DF6A0 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195619.2> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-07-02"^^xsd:date ;
+  up:modified "2006-07-02"^^xsd:date ;
+  up:obsolete true .
+sha:8618CCC6C9028CF5EEE3D4DFD578BE8B526C328A88F5A303D664F239DFA79BFDE4C80D5FFF2DCF63779376F247E42F98 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195619.3> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-10-02"^^xsd:date ;
+  up:modified "2006-12-27"^^xsd:date ;
+  up:obsolete true .
+sha:5D0DBD6647912D70D5087C9F6CC8AEF8924567A8AE2284D794A2A723188B2AEDB9F4067DAC80DAA45D9CE971B27EBD86 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195619.4> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-05-16"^^xsd:date ;
+  up:modified "2007-08-07"^^xsd:date ;
+  up:obsolete true .
+sha:F02D316321360931C6952382E5D33627CD7502C110AB74FE22C1802403205C19702882966ADD92A03939714DC4166DEB dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195619.5> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-10-05"^^xsd:date ;
+  up:modified "2007-10-05"^^xsd:date ;
+  up:obsolete true .
+sha:5E1E87CDB44735B56CECE798E58A12CF4FBC7DDD5197B9559A1A85890F71E30178D8056006087D9E86E040CB983F4F80 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195619.6> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-01-18"^^xsd:date ;
+  up:modified "2008-10-08"^^xsd:date ;
+  up:obsolete true .
+sha:0979AC2C13B2EFE481B936983331B1D69E72C9B16759AB526C70CB329A8B4C9AC89957F8648D9C5EA5FFF9F675896705 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195619.7> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-12-25"^^xsd:date ;
+  up:modified "2009-02-13"^^xsd:date ;
+  up:obsolete true .
+sha:BC7C5DC213534A8F38306D750E75938458E07C39DCA5AFEFC8EA81B7F1E8A3492B90E31A671326A6013D0178D0A0B112 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195619.8> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2009-04-09"^^xsd:date ;
+  up:modified "2010-02-24"^^xsd:date ;
+  up:obsolete true .
+sha:7EA158E7EB080BA86034903506CB6BEF20569E2331D0F36A79548BDFB642FBCD531F512E19BFBF256A5083A2450A94F0 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195619.10> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2010-09-09"^^xsd:date ;
+  up:modified "2010-09-09"^^xsd:date ;
+  up:obsolete true .
+sha:BD353D686A10B99DDE8F387C8909A5D3BC0F6E8C9ED96F4E9587FEE38C1F2C291F74695CF1A124A8CFD61E3892BC541E dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195619.11> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2012-05-07"^^xsd:date ;
+  up:modified "2012-12-19"^^xsd:date ;
+  up:obsolete true .
+<http://purl.uniprot.org/H_INV/HIT000195619.12> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2013-03-18"^^xsd:date ;
+  up:modified "2013-07-12"^^xsd:date .
+sha:3CB827C61A7D51EE0D0DEB3AF54B1D0648D967E61E8195976B9ABC7C7696A7AA63430E6A609056886C74726808A4AD4F dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195941.1> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-03-20"^^xsd:date ;
+  up:modified "2006-03-20"^^xsd:date ;
+  up:obsolete true .
+sha:A7D24A8D93E61CEFC7967A0EF30A9A5AA40EFF4DC20E8DBC306FE46E5AAD1267A4E82D9B140D7DAEE1E5D0AB5176582D dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195941.2> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-07-02"^^xsd:date ;
+  up:modified "2006-07-02"^^xsd:date ;
+  up:obsolete true .
+sha:633211663AE0402017F4974631DDC89C57C6A57255B0A178CE43CCD110770189C045F5C6624FEC2CC27A8159FD531855 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195941.3> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-10-02"^^xsd:date ;
+  up:modified "2006-12-27"^^xsd:date ;
+  up:obsolete true .
+sha:1F1E3CC48837CB1E436D2A092CACBF213FA1A340FDC7D9230C00B5CF0BE80102D003774483BE254EC53F46DDF002492A dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195941.4> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-05-16"^^xsd:date ;
+  up:modified "2007-05-16"^^xsd:date ;
+  up:obsolete true .
+sha:8D2C1E305626D798F9D05E7D2C8E3FF228B2D0C6C00253EB0B1BC0AB03D3ED002F75B8614D6663C5DECBD831BF7D7BFF dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195941.5> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-08-07"^^xsd:date ;
+  up:modified "2007-08-07"^^xsd:date ;
+  up:obsolete true .
+sha:CE4B9418FC93C0CFA357B2910EB8AD93ACB7AFE539948DFA82C3F2BA40557FCF101D5FC0D1D459CB9FAEC0A8A80CB214 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195941.6> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-10-05"^^xsd:date ;
+  up:modified "2007-10-05"^^xsd:date ;
+  up:obsolete true .
+sha:88F69F19FBD743B0988F2D42A8C11962C85551D3E367967842978C2186C9698757C9D76D18BB2C671ECFD15BE9F136F9 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195941.7> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-01-18"^^xsd:date ;
+  up:modified "2008-10-08"^^xsd:date ;
+  up:obsolete true .
+sha:62FEF70E5EF3AB59BAA89B22F3823D1597D5A0484CBEE0B7B1891E1B2A011CF8CB72643EA1C34FC1879D3FDB339817DD dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195941.8> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-12-25"^^xsd:date ;
+  up:modified "2009-02-13"^^xsd:date ;
+  up:obsolete true .
+sha:A4706C3DC5C1552E1A1A2AC3B0D23472A7CC3A5045D13250974AA445709BEED385A85BF2943ACC6B74EF274F5184BAED dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195941.9> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2009-04-09"^^xsd:date ;
+  up:modified "2010-02-24"^^xsd:date ;
+  up:obsolete true .
+sha:E37C34EDCFC980F659ED314C204A8CAF47B2267CCE2FBF156B7C66135006DD85690DF969C6B6DF6651490B0FBFE88CDD dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195941.11> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2010-09-09"^^xsd:date ;
+  up:modified "2010-09-09"^^xsd:date ;
+  up:obsolete true .
+sha:280FA5DB72DAAC1A92ED95BE8E6AF8C1EFAC443D12819FDDA3ABF8E74D599AC03703E7FD535268BDA7A3B685FDC72A66 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000195941.12> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2012-05-07"^^xsd:date ;
+  up:modified "2012-12-19"^^xsd:date ;
+  up:obsolete true .
+<http://purl.uniprot.org/H_INV/HIT000195941.13> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2013-03-18"^^xsd:date ;
+  up:modified "2013-07-12"^^xsd:date .
+sha:EA7B83AED2DA52043EEE266956851B8C6AD145189FE70B4FABFDA708B5AA32954F75AE4C7D7EF70E9800D9E93D98BC30 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000272060.1> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-03-20"^^xsd:date ;
+  up:modified "2006-03-20"^^xsd:date ;
+  up:obsolete true .
+sha:9445A036F40F437F25CB8BD89D217481A9EC03E3BB232F3E21149CBABF3EB54104ABEF0F7D2C0E791FE18FF812290F2D dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000272060.2> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-07-02"^^xsd:date ;
+  up:modified "2006-07-02"^^xsd:date ;
+  up:obsolete true .
+sha:98F746813589F42FC84293F7E341899E730A6DC8FB2CCBB840B75E6F833404C0EA8E6363F1995F271B692E71077778BD dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000272060.3> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-10-02"^^xsd:date ;
+  up:modified "2006-12-27"^^xsd:date ;
+  up:obsolete true .
+sha:2B7F42A89BF9125962CB1340A4A10EA631D4D648FD596B09556983B8AF4AA43E500C6B866306548F0967EBD500FE1AC1 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000272060.4> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-05-16"^^xsd:date ;
+  up:modified "2007-08-07"^^xsd:date ;
+  up:obsolete true .
+sha:0DCCB10E52C32CDDB237803F886E39C6BCAA68041BA3E76EBBB825FFB835C83627822DAEB6E9EAA0E869BA02F0C42E58 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000272060.5> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-10-05"^^xsd:date ;
+  up:modified "2007-10-05"^^xsd:date ;
+  up:obsolete true .
+sha:9B123E692C47874FF65A8D1E21C04734C4A3E5146864F8EA9C70CF511644FAEEA7102359BFD5BF1B4269323C8D2AA519 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000272060.6> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-01-18"^^xsd:date ;
+  up:modified "2008-10-08"^^xsd:date ;
+  up:obsolete true .
+sha:340AC71796A447E90DA0CA870629449D1DF05885D604D089A3FA0DD660343FA7ACD8826BEF064E654F9A282110E83355 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000272060.7> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-12-25"^^xsd:date ;
+  up:modified "2009-02-13"^^xsd:date ;
+  up:obsolete true .
+sha:AAD6F861BD6F9BDB57ACF6FD192652C4C7C04EFAEA89ABCA94DD84F4CE8BC63C18B46AADBC5EC49708DD7929EA6FB086 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000272060.8> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2009-04-09"^^xsd:date ;
+  up:modified "2010-02-24"^^xsd:date ;
+  up:obsolete true .
+sha:6501E49102E8180CB9D1AAF1EFE671338CE8071EE2EBB3A83CFC1972E0723F636041E964A398493EB2AFBE0BCC337F5F dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000272060.10> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2010-09-09"^^xsd:date ;
+  up:modified "2010-09-09"^^xsd:date ;
+  up:obsolete true .
+sha:9332E838060A328C6274F7E7E58C18D4A6AC486CB73794627D4C874BAABFA94C33F2B284586CD1B37273040F1159093B dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000272060.11> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2012-05-07"^^xsd:date ;
+  up:modified "2012-12-19"^^xsd:date ;
+  up:obsolete true .
+<http://purl.uniprot.org/H_INV/HIT000272060.12> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2013-03-18"^^xsd:date ;
+  up:modified "2013-07-12"^^xsd:date .
+sha:53F03419857ADED505508BBEC662BEFF9F96ACACFA074313C4D1023853E1881FD02FA29153AE6B6DE17287B52C213140 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000297668.1> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-03-20"^^xsd:date ;
+  up:modified "2006-03-20"^^xsd:date ;
+  up:obsolete true .
+sha:36A5052CFF0CCD9C8DD1B1F14BCC0E5B3FDE7F75C4594894C316F2C552CF9A187A726DF108B618FDBBB3E98E230003E0 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000297668.2> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-07-02"^^xsd:date ;
+  up:modified "2006-07-02"^^xsd:date ;
+  up:obsolete true .
+sha:C86A588E16D02E903001E5A0860BF85AC090B30B3A6BC131BD0EF2B9416C55B14D6D5E1E5E422C6D86FFE75D8292CB1A dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000297668.3> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-10-02"^^xsd:date ;
+  up:modified "2006-12-27"^^xsd:date ;
+  up:obsolete true .
+sha:F5C8050B1C3F1A615FD1174D6A74517CA6B84FB4416BC14460EBD3CD0C6A4E12618377AED95899613C8BBF80A167A166 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000297668.4> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-05-16"^^xsd:date ;
+  up:modified "2007-08-07"^^xsd:date ;
+  up:obsolete true .
+sha:8EB0EB5099205DFE2026B5CBE0500DE4D01D5D677E5252F6E33EFC1F11061F3A71EE392C94E16907BD89E4A1A1DB8F86 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000297668.5> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-10-05"^^xsd:date ;
+  up:modified "2007-10-05"^^xsd:date ;
+  up:obsolete true .
+sha:37B004E82FE08DADAA8EA45697C916FFF71173D9F884FD30C54B388A24BE7827E900809E216013BE7F8A80F7827E4CC3 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000297668.6> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-01-18"^^xsd:date ;
+  up:modified "2008-10-08"^^xsd:date ;
+  up:obsolete true .
+sha:EEDFC37D3CF401ECC179B76C3561FAA0600BEC70E2B425AD399754371249FAABD8DC900BACF736E46D619AD2D0BE2578 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000297668.7> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-12-25"^^xsd:date ;
+  up:modified "2009-02-13"^^xsd:date ;
+  up:obsolete true .
+sha:C963CB68001A1D9E52B0DCFA78B13C2986DF5BBE6136B043CA856E1CD527FE4DB1F7680AAF61CA7AA2ECF1602EF28A5F dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000297668.8> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2009-04-09"^^xsd:date ;
+  up:modified "2010-02-24"^^xsd:date ;
+  up:obsolete true .
+sha:FED32F528971A3E39AFA43CD401A50568FD5F94C8FD7C2836E18734016044A24C517FAB394E7C762F695AE6397962681 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000297668.10> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2010-09-09"^^xsd:date ;
+  up:modified "2010-09-09"^^xsd:date ;
+  up:obsolete true .
+sha:7DFCB8769D567EE2D518E6280F20362D9C3AEB39E8B07AEF53A44D17759E3AFE6743E5DAFA6471E4BEDCC8D5E74EC91E dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000297668.11> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2012-05-07"^^xsd:date ;
+  up:modified "2012-12-19"^^xsd:date ;
+  up:obsolete true .
+<http://purl.uniprot.org/H_INV/HIT000297668.12> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2013-03-18"^^xsd:date ;
+  up:modified "2013-07-12"^^xsd:date .
+sha:B22D73420086FD09378EDFEFC3D74E494BA04176032B871BD4DC3FFE477DB599DA7DBCBB7EB5F610677F99B2D8038566 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000299270.1> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-03-20"^^xsd:date ;
+  up:modified "2006-03-20"^^xsd:date ;
+  up:obsolete true .
+sha:6F1016D14FBF2E866924552B2F8AAC73F5C259EAD5B9F5C92B06E557CDB0632367EBA93B156F23C6FEF4DC097663EDE7 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000299270.2> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-07-02"^^xsd:date ;
+  up:modified "2006-07-02"^^xsd:date ;
+  up:obsolete true .
+sha:F37F0889ED18D02C88771C1589396F4950127C71DFEDD6D9A53EA04DDBEB13B501214FEA13D7BFEABC99E99D69CA4776 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000299270.3> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2006-10-02"^^xsd:date ;
+  up:modified "2006-12-27"^^xsd:date ;
+  up:obsolete true .
+sha:39981AB1D01E0DC15A5FFA811A98DB688AA108904C9937459C7414E9E8B3DD21047B3C95D3E6E32248BEED96F0651793 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000299270.4> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-05-16"^^xsd:date ;
+  up:modified "2007-08-07"^^xsd:date ;
+  up:obsolete true .
+sha:2202E257925AAB3EDDD61E432DB484322052EEEEBB8C869D3B30BCE1235BFEFA59D0733B16B49E26E95C035A58530E41 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000299270.5> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-10-05"^^xsd:date ;
+  up:modified "2007-10-05"^^xsd:date ;
+  up:obsolete true .
+sha:35BA4A865F063D55936208346A8D5A30892A561EA8AE599D5C1EB0F0BE8FC175E8403EA545BF116C9E16A57ED4526939 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000299270.6> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-01-18"^^xsd:date ;
+  up:modified "2008-10-08"^^xsd:date ;
+  up:obsolete true .
+sha:AB981BB6882346872BDA88AA911A86A12DB805B8C0D178C870FA84AF429A16264288504ABD1C9C567CF0320BB03B9001 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000299270.7> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-12-25"^^xsd:date ;
+  up:modified "2009-02-13"^^xsd:date ;
+  up:obsolete true .
+sha:24801C458496573E95E0AD950848D692BAFF5D1CB488EA3EB6D8854EF14E6D28A6607325BBBF616C8CB78C185B1D0CE7 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000299270.8> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2009-04-09"^^xsd:date ;
+  up:modified "2010-02-24"^^xsd:date ;
+  up:obsolete true .
+sha:9F1BA4B92B1C35BEF6E650F0B0D8536FE450D76FBB9DD16976CCE08F79C32F2184DBFC557D8F2C340EC07789530E6057 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000299270.10> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2010-09-09"^^xsd:date ;
+  up:modified "2010-09-09"^^xsd:date ;
+  up:obsolete true .
+sha:AD39FB1714121153DA19B245C3C1F46FF6878B05B75D677611D5EF6803874EEA837647C591119E5684B04B1BAE6F9526 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000299270.11> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2012-05-07"^^xsd:date ;
+  up:modified "2012-12-19"^^xsd:date ;
+  up:obsolete true .
+<http://purl.uniprot.org/H_INV/HIT000299270.12> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2013-03-18"^^xsd:date ;
+  up:modified "2013-07-12"^^xsd:date .
+sha:2E3F06F58EA12A8D2D7667EBB4D196849AC0FF258987D19D27DAD338278395BEAB20FEBC221015333BB5953890190F36 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000340282.1> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-05-16"^^xsd:date ;
+  up:modified "2007-08-07"^^xsd:date ;
+  up:obsolete true .
+sha:1596CE463FF5C8B88C22D36465D4F29279AD55BCDA2C1254EEBBA1593842A6B6AA98E69234CA388E66B5A756BE7F7060 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000340282.2> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2007-10-05"^^xsd:date ;
+  up:modified "2007-10-05"^^xsd:date ;
+  up:obsolete true .
+sha:898BB80A9E07EE5061E1386F58DDA5CCCEB376CA8C94D84A3B6E890F21082A3CB95E96A91BDE624139D70F8852635B05 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000340282.3> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-01-18"^^xsd:date ;
+  up:modified "2008-10-08"^^xsd:date ;
+  up:obsolete true .
+sha:2097F6210DC7C33E14FD922320C4B04180B8341B58E980334B42AD6AB20162460E76A252DF623567DADD259A8F3920B3 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000340282.4> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-12-25"^^xsd:date ;
+  up:modified "2009-02-13"^^xsd:date ;
+  up:obsolete true .
+sha:7384D58C31D52EE94CC255055D677D8032E0564AEBF4504AC23852385B15710CE5DAEDB7F2E2FEFD66C86C6783EB511F dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000340282.5> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2009-04-09"^^xsd:date ;
+  up:modified "2010-02-24"^^xsd:date ;
+  up:obsolete true .
+sha:52008BEB3B8FD7BD60400579BA4814D39AE3F406FD1E37F2E50DFF4F697977D0FE30C74F96A2E9B426E9549191A28556 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000340282.7> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2010-09-09"^^xsd:date ;
+  up:modified "2010-09-09"^^xsd:date ;
+  up:obsolete true .
+sha:9A995F802D7BCAD43AE67496A287A56BFBBAAA405E3ECB1C5A587421766FAF683BB20B0D9AA1D024A968189EFCF7A538 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000340282.8> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2012-05-07"^^xsd:date ;
+  up:modified "2012-12-19"^^xsd:date ;
+  up:obsolete true .
+<http://purl.uniprot.org/H_INV/HIT000340282.9> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2013-03-18"^^xsd:date ;
+  up:modified "2013-07-12"^^xsd:date .
+sha:A4AA6CB1E8A2652880226EA1622FA5344DB8A5569402BFE0882483645E25EA5FB0194E477FE5928F7AAEF7CBD5141C9B dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000433963.1> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-12-25"^^xsd:date ;
+  up:modified "2009-02-13"^^xsd:date ;
+  up:obsolete true .
+sha:30F0E279399791535C86D0E412B6D7095F5C80ACF79E1A0E97FDE13FF6CEF14422E357295F7E7D1B1ED8CC3229AAAA32 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000433963.2> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2009-04-09"^^xsd:date ;
+  up:modified "2010-02-24"^^xsd:date ;
+  up:obsolete true .
+sha:476094FD705BFE6FC46DE05A01BB9B0BA65F6374CC025C5517D7CD65008D0A6A8326D31DD7B329ED2384B41730CED498 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000433963.4> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2010-09-09"^^xsd:date ;
+  up:modified "2010-09-09"^^xsd:date ;
+  up:obsolete true .
+sha:F3C7E8B4BFA0CC71DA0EA995F0C21B86D618EE5535A441A20499A40568D823556513F11FED27AF719DC70BCF0A53E600 dcterms:isVersionOf <http://purl.uniprot.org/H_INV/HIT000433963.5> ;
+  up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2012-05-07"^^xsd:date ;
+  up:modified "2012-12-19"^^xsd:date ;
+  up:obsolete true .
+<http://purl.uniprot.org/H_INV/HIT000433963.6> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2013-03-18"^^xsd:date ;
+  up:modified "2013-07-12"^^xsd:date .
+sha:2E2FECC7DFEEDA69AB44C5DAD86019AEA4BDE111C226F6ADDD684C46438EF265E44620AB589E0F1E87771FCF0D13073B dcterms:isVersionOf <http://purl.uniprot.org/REFSEQ/NP_000112.1> ;
+  up:organism taxon:9606 ;
+  rdfs:seeAlso <http://purl.uniprot.org/gi/4503591> ;
+  up:version 1 ;
+  up:created "2004-07-08"^^xsd:date ;
+  up:modified "2004-09-12"^^xsd:date ;
+  up:obsolete true .
+<http://purl.uniprot.org/REFSEQ/NP_000112.1> up:organism taxon:9606 ;
+  rdfs:seeAlso <http://purl.uniprot.org/gi/4503591> ;
+  up:version 1 ;
+  up:created "2004-09-14"^^xsd:date ;
+  up:modified "2015-03-16"^^xsd:date ;
+  up:encodedBy <#_000012A0ADF> ;
+  up:structuredName <#_000012A0AD10> .
+<#_000012A0ADF> rdf:type up:Gene ;
+  skos:prefLabel "EPOR" .
+<#_000012A0AD10> rdf:type up:Structured_Name ;
+  up:structuredNameType "erythropoietin receptor precursor" .
+sha:D5D52B389DFDA86F3DA3AE30C0DFCD7DDD4CEA7A16C3E7DE82B2682459EF3B58DDAD319880C677085735518187FD6E2B dcterms:isVersionOf <http://purl.uniprot.org/VEGA/OTTHUMP00000067324> ;
+  up:version 1 ;
+  up:created "2006-10-19"^^xsd:date ;
+  up:modified "2007-11-27"^^xsd:date ;
+  up:obsolete true .
+sha:A2263E19B8B39E03A083B7D14052E8FA9ED68085B89953C343DB167A5C7737AAB4C6BFC2C5434113CF7F32EB8539E72C dcterms:isVersionOf <http://purl.uniprot.org/VEGA/OTTHUMP00000076459> ;
+  up:version 1 ;
+  up:created "2005-08-15"^^xsd:date ;
+  up:modified "2011-03-01"^^xsd:date ;
+  up:obsolete true .
+<http://purl.uniprot.org/VEGA/OTTHUMP00000268114> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2012-09-13"^^xsd:date ;
+  up:modified "2015-02-17"^^xsd:date .
+<http://purl.uniprot.org/EMBL_CON/EAW84205.1> up:organism taxon:9606 ;
+  rdfs:seeAlso <http://purl.uniprot.org/gi/119604611> ;
+  up:version 1 ;
+  up:created "2007-01-15"^^xsd:date ;
+  up:modified "2015-03-01"^^xsd:date ;
+  up:encodedBy <#_000012A0AD11> ;
+  up:structuredName <#_000012A0AD12> .
+<#_000012A0AD11> rdf:type up:Gene ;
+  skos:prefLabel "EPOR" .
+<#_000012A0AD12> rdf:type up:Structured_Name ;
+  up:structuredNameType "erythropoietin receptor, isoform CRA_a" .
+<http://purl.uniprot.org/KIPO/DI606864> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2008-03-25"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/KIPO/DI622636> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2014-02-05"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/KIPO/DI731206> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2015-01-12"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/KIPO/DI746026> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2015-01-12"^^xsd:date ;
+  up:modified "2015-01-12"^^xsd:date .
+<http://purl.uniprot.org/SEED/fig|9606%2E3%2Epeg%2E15725> up:organism taxon:9606 ;
+  up:version 1 ;
+  up:created "2013-03-19"^^xsd:date ;
+  up:modified "2013-03-19"^^xsd:date .

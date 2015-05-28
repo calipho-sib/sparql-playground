@@ -1,0 +1,29 @@
+@base <http://purl.uniprot.org/uniref/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix isoform: <http://purl.uniprot.org/isoforms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sha: <http://purl.uniprot.org/SHA-384/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix taxon: <http://purl.uniprot.org/taxonomy/> .
+@prefix uniparc: <http://purl.uniprot.org/uniparc/> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix uniref: <http://purl.uniprot.org/uniref/> .
+@prefix up: <http://purl.uniprot.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<UniRef100_P19235-2> rdf:type up:Cluster ;
+  rdfs:label "Cluster: Isoform EPOR-S of Erythropoietin receptor" ;
+  up:identity "1.0"^^xsd:float ;
+  up:modified "2012-11-28"^^xsd:date ;
+  up:commonTaxon taxon:9606 ;
+  up:member uniparc:UPI000023FF03 .
+uniparc:UPI000023FF03 rdf:type up:Sequence ;
+  up:length 241 ;
+  rdf:value "MDHLGASLWPQVGSLCLLLAGAAWAPPPNLPDPKFESKAALLAARGPEELLCFTERLEDLVCFWEEAASAGVGPGNYSFSYQLEDEPWKLCRLHQAPTARGAVRFWCSLPTADTSSFVPLELRVTAASGAPRYHRVIHINEVVLLDAPVGLVARLADESGHVVLRWLPPPETPMTSHIRYEVDVSAGNGAGSVQRGTVFLSPDWLSSTRARPHVIYFCLLRVPRPDSAPRWRSWRAAPSVC" ;
+  up:sequenceFor uniprot:P19235-2 ;
+  up:memberOf <UniRef90_P19235-2> ,
+    <UniRef50_P19235-2> .
+isoform:P19235-2 up:representativeFor <UniRef100_P19235-2> ;
+  up:reviewed false .
