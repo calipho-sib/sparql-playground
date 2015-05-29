@@ -15,3 +15,8 @@ select ?subSpecies   where {
 #  * -> means 0 or more
 #  + -> means 1 or more
 #  ? -> means 0 or 1 
+
+# The same can be used for any property for example:
+# select ?parents where {
+#	ttr:Eve dbo:parent+ ?parents .
+# }

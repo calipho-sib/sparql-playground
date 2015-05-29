@@ -1,6 +1,9 @@
 package ch.isb.sib.sparql.tutorial.controller;
 
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -49,10 +52,10 @@ public class SparqlController {
 	@RequestMapping(value = "/ttl-data", method = RequestMethod.PUT)
 	public long sparqlData(@RequestParam(value = "data", required = true) String data, HttpServletRequest request) throws QueryEvaluationException, Exception {
 
-		if("localhost".equals(request.getLocalName())){
-			return sparqlService.loadData(data);
+		if((System.getProperty("reload") != null) && (System.getProperty("reload").equalsIgnoreCase("false"))){ //check if loading data is not allowed
+			throw new SparqlTutorialException("You must run the application in localhost in order to load data. Download it by clicking on the link below the page");
 		}else {
-			throw new SparqlTutorialException("You must run the application in localhost in order to load data. Download it on GitHub by following the link 'For Developers'");
+			return sparqlService.loadData(data);
 		}
 	}
 
