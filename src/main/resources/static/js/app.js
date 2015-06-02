@@ -193,7 +193,7 @@ function appConfig($routeProvider, $locationProvider, $httpProvider) {
     // List of routes of the application
     $routeProvider
         // Home page
-        .when('/', {title: 'welcome to snorql', templateUrl: '/partials/home.html'})
+        .when('/', {title: 'welcome to snorql', reloadOnSearch: false, templateUrl: '/partials/home.html'})
         //TTL Data
         .when('/data',{title: 'TTL Data', templateUrl: '/partials/data.html'})
         // COPYRIGHT
