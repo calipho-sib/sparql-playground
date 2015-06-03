@@ -6,7 +6,7 @@ SPARQL playground is a standalone multi-platform web application used to learn S
 
 It uses Sesame 2.7.9 as SPARQL Engine. 
 
-It is beeing developed at the <a target="_blank" href="https://www.isb-sib.ch/">Swiss Institute of Bioinformatics</a>.  
+It is beeing developed at the <a target="_blank" href="https://www.isb-sib.ch/">SIB Swiss Institute of Bioinformatics</a>.  
 
 You can see a live demo here: http://sparql-playground.isb-sib.ch/
 
