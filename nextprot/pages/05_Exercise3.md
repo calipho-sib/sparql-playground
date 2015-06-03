@@ -27,7 +27,7 @@ Build a SPARQL query to find:
 filter (?varpos > ?start && ?varpos <= ?end )
 ```
 
-* Run the query
+* Run the query => you should get 10 rows as a result
 
 * Check the result you get by clicking one of the *(neXtProt link)* in the result:
   * see feature viewer of *Sequence* TAB
