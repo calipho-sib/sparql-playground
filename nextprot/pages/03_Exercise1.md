@@ -12,10 +12,10 @@ Build a SPARQL query to find:
 
 * Modify the keyword term accession in the query
 
-* Run the query
+* Run the query => you should get 13 rows as a result
  
 * Check the result you get by clicking one of the (neXtProt link) in the result:
-* 
+
   * bottom of *Localisation* TAB should contain the term *Cytoplasm* or a more specific one (a :childOf Cytoplasm)
  
   * *Keyword* section of Sequence TAB should contain the *Glycoprotein* term
