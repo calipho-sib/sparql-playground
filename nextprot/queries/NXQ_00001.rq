@@ -1,6 +1,6 @@
 #id:NXQ_00001
 #title:Proteins phosphorylated and located in the cytoplasm
-#comment:In this query we use the keyword "Phosphorylation" (KW-0597) and the UniProt subcellular location ontology term "Cytoplasm" (SL-0886).
+#comment:In this query we use the keyword "Phosphoprotein" (KW-0597) and the UniProt subcellular location ontology term "Cytoplasm" (SL-0886).
 #comment:Using the "childOf" allows to select for subcellular locations that are, in that ontology, children of cytoplasm like for example "Cell cortex".
 #tags:subcellular location,cellular component,PTM,phosphorylation
 #acs:A1A4S6,A1KZ92,A1L020,A1X283,A2RRP1,A2RU30,A5PLL1,A6NDB9,A6NI72,A6NIZ1,Q8TCT0,Q99828,Q9H6Q3,Q9HBY8,Q9NPB8,Q9NQ66,A0AVT1,A2A288,A2AJT9,A2RTX5,A2RUB6,A3KMH1
