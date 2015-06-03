@@ -33,10 +33,10 @@ The modified version is equivalent to the original one, except that now we have 
 ```
 ?ptm a :LipidationSite .
 ```
-* Run the query
+* Run the query => you should get 11 rows as a result
 
-* Check the result you get by clicking one of the (neXtProt link) in the result:
-  * see feature viewer in of Sequence TAB
+* Check the result you get by clicking one of the *(neXtProt link)* in the result:
+  * see feature viewer in the *Sequence* TAB
   * check that you find at least one variant at the position of a lipidation site
 
 **Optionally**
