@@ -1,13 +1,11 @@
-#title:Which Classes Use a Particular Property?
-#comment:Selects subjects described with the tto:weight predicate. ?thing, ?name are the variables, 
-#comment:each filter removes some solutions in turn according to the ?weight value
-#tags:rdf property
+#title:Which classes use a particular property?
+#comment:In this example we see which classes uses dbp:name
     
 SELECT DISTINCT ?class
 WHERE {
-    ?s dbp:name ?o ;
-    a ?class .
+    ?subject dbp:name ?o .
+	?subject a ?class .
 }
 
-# may be worth to include rdfs:label, rdfs:comment or 
+# It is a good practice to include rdfs:label, rdfs:comment or 
 # rdfs:domain to get even more knowledgeable data

@@ -1,8 +1,5 @@
 #title:How often is a property used
-#comment:Selects subjects described with the tto:weight predicate. ?thing, ?name are the variables, 
-#comment:the filter defines 2 criteria to be met for the ?weight value to remove some solutions
-#tags:1 graph pattern,2 variables,FILTER,logical AND : &&
-    
+#comment:In this example we see how often is the property dbp:name used
 
 SELECT (COUNT(?o) AS ?totalNumberOfNames)
 WHERE { ?s dbp:name ?o }

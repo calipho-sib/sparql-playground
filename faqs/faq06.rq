@@ -1,10 +1,8 @@
-#title:Which classes have instances?
-#comment:Selects subjects described with the tto:weight predicate. ?thing, ?name are the variables
-#comment:?thing, ?name are the variables
-#tags:owl class, instance
+#title:How to get the declared properties
+#comment:Selects the declared properties. 
+#comment:Note that the dataset may be using properties that are not "declared" (they may be declared in other dataset see FAQ7)
 
-SELECT DISTINCT ?class
+SELECT ?property
 WHERE {
-    ?instance a ?class .
+    ?property a rdf:Property . 
 }
-ORDER by ?class

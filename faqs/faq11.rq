@@ -1,0 +1,25 @@
+#title:What meta-information is declared for a property?
+#comment:It is a good practice to include rdfs:comment, rdfs:label, rdfs:domain and rdfs:range for the properties to express meta information about the data.
+#comment:rdfs:range tells what kind of resource is expected as the object of triples involving this property. 
+#comment:rdfs:domain tells what kind of resource is expected as the subject of triples involving this property. 
+#comment:rdfs:label the label to be usedname of the property
+#comment:rdfs:comment more information about the meaning of the resource described
+
+SELECT *
+WHERE { 
+
+  #
+  # if you would like to restrict to 1 or more properties
+  # values ?property {tto:sex tto:weight} 
+  # or 
+  # bind (tto:sex as ?property)
+  #
+  
+  ?property a rdf:Property. 
+  optional {?property rdfs:comment ?comment}
+  optional {?property rdfs:label ?label}
+  optional {?property rdfs:range ?range} #kind of resource expected as the object of this prop
+  optional {?property rdfs:domain ?domain} #kind of resource expected as the subject of this prop
+}
+
+#With rdfs:Class usually one only uses rdfs:label and rdfs:comment

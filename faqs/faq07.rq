@@ -1,6 +1,5 @@
 #title:What properties are used?
-#comment:
-#tags:rdf properties
+#comment:Includes properties in use in the dataset (even if they are not "declared" in this dataset see FAQ6).
     
 SELECT DISTINCT ?property
 WHERE

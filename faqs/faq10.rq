@@ -1,10 +1,7 @@
 #title:Stats about properties
-#comment:Very expensive query
-#tags:properties,stats
-#tags:properties,stats
-    
+#comment:This query tells for each property how many times it has been use. This is a very expensive query, therefore use it with care
 
-SELECT ?p (COUNT(?p) AS ?pTotal)
-WHERE { ?s ?p ?o . }
-GROUP BY ?p
-ORDER BY DESC(?pTotal)
+SELECT ?property (COUNT(?property) AS ?propTotal)
+WHERE { ?s ?property ?o . }
+GROUP BY ?property
+ORDER BY DESC(?propTotal)

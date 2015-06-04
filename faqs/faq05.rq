@@ -1,9 +1,10 @@
-#title:How to get the declared properties
-#comment:Selects the properties
-#tags:rdf properties,advanced
+#title:Which classes have instances?
+#comment:Selects subjects described with the tto:weight predicate. ?thing, ?name are the variables
+#comment:?thing, ?name are the variables
+#tags:owl class, instance
 
-SELECT ?property
+SELECT DISTINCT ?class
 WHERE {
-    ?property a rdf:Property . 
-    # you can replace a by rdf:type (they are synonyms)
+    ?instance a ?class .
 }
+ORDER by ?class

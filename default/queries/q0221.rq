@@ -1,0 +1,10 @@
+#title:Select persons who don't have cats
+#comment:You should filter out any person with a pet which is of type tto:Cat
+#tags:exercise,2 graph patterns,filter not exists
+   
+select ?person where {
+	?person rdf:type dbo:Person .
+	*** *** *** { 
+		?person tto:pet / rdf:type *** .
+	}
+}

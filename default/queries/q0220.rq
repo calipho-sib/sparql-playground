@@ -1,5 +1,5 @@
 #title:Select Eve's grandfather
-#comment:Use the property dbo:parent to connect Eve at his father ...
+#comment:Use the property dbo:parent to connect Eve at his father ... Explore the use of slash / in alternative B) 
 #tags:exercise,2 graph patterns,2 variables,FILTER EXISTS
    
 select ?grandfather where {
@@ -7,7 +7,7 @@ select ?grandfather where {
 	***	  	     ***   ?grandfather  .
 }
 
-# B)
+# Alternative B) with /
 #
 # Once you get ttr:John,
 # try to write the expression in only one line using '/'
