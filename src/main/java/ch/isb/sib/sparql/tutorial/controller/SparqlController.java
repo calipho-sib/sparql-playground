@@ -42,7 +42,7 @@ public class SparqlController {
 	@RequestMapping(value = "/sparql")
 	public void sparqlEndpoint(@RequestParam(value = "query", required = true) String query, @RequestParam(value = "output", required = false) String output, HttpServletRequest request, HttpServletResponse response)
 			throws QueryEvaluationException, Exception {
-		logger.info("query=" + query + ";format=" + output);
+		logger.info("query=" + query + ";format=" + output + ";remote-host=" + request.getRemoteHost());
 		sparqlService.executeSparql(query, response.getOutputStream(), output);
 	}
 
