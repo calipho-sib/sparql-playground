@@ -9,6 +9,8 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openrdf.query.QueryEvaluationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.isb.sib.sparql.tutorial.exception.SparqlTutorialException;
+import ch.isb.sib.sparql.tutorial.repository.SesameRepository;
 import ch.isb.sib.sparql.tutorial.service.SparqlService;
 
 /**
@@ -30,12 +33,16 @@ import ch.isb.sib.sparql.tutorial.service.SparqlService;
 @RestController
 public class SparqlController {
 
+	private static final Log logger = LogFactory.getLog(SparqlController.class);
+
 	@Autowired
 	private SparqlService sparqlService;
 
+
 	@RequestMapping(value = "/sparql")
-	public void sparqlEndpoint(@RequestParam(value = "query", required = true) String query, @RequestParam(value = "output", required = false) String output, HttpServletResponse response)
+	public void sparqlEndpoint(@RequestParam(value = "query", required = true) String query, @RequestParam(value = "output", required = false) String output, HttpServletRequest request, HttpServletResponse response)
 			throws QueryEvaluationException, Exception {
+		logger.info("query=" + query + ";format=" + output);
 		sparqlService.executeSparql(query, response.getOutputStream(), output);
 	}
 

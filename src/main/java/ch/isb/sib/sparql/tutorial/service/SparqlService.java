@@ -5,6 +5,8 @@ import java.io.OutputStream;
 import java.util.Map;
 import java.util.TreeMap;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openrdf.query.TupleQueryResult;
 import org.openrdf.query.resultio.sparqljson.SPARQLResultsJSONWriter;
 import org.openrdf.query.resultio.sparqlxml.SPARQLResultsXMLWriter;
@@ -15,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ch.isb.sib.sparql.tutorial.Application;
+import ch.isb.sib.sparql.tutorial.controller.SparqlController;
 import ch.isb.sib.sparql.tutorial.exception.SparqlTutorialException;
 import ch.isb.sib.sparql.tutorial.repository.SesameRepository;
 import ch.isb.sib.sparql.tutorial.utils.IOUtils;
@@ -35,6 +38,7 @@ public class SparqlService implements InitializingBean {
 	private String prefixesString;
 
 	public void executeSparql(final String queryString, OutputStream out, String format) {
+		
 		if ("json".equalsIgnoreCase(format)) {
 			repository.query(queryString, new SPARQLResultsJSONWriter(out));
 		} else if ("csv".equalsIgnoreCase(format)) {

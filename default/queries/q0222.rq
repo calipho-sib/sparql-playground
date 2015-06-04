@@ -1,13 +1,13 @@
 #title: ***BONUS*** Select William's relatives 
-#comment:Join the solutions between the parent and the child of William
+#comment:Join the results of William's parent and people who has William as parent
 #comment:Explore the property inverse path on alternative B) ^ .
 #comment:Explore the use of the pipe in alternative C) | .
 #tags:1 graph pattern,1 variable,path syntax : inverse path ^,path syntax : alternative path |
 
 select ?relative where {
-  {ttr:William *** ?relative}
+  {ttr:William *** ?relative} 
   *** 
-  {?relative *** ttr:William}
+  {?relative *** ttr:William} 
 }
 
 # B) 
