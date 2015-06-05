@@ -1,12 +1,20 @@
-#Scenario 
-This example contains a very simple set with persons and their pets.
+#Ontology
 
-The following diagram shows you the main resources it contains.
+In this page you can learn about recommended practices / conventions when defining classes and properties.
 
-This is a simplified version (all triplets can be seen in the [data](/data) tab)
+#Classes 
 
-<a href="assets/model.png" target="_blank"><img size="90%" src="assets/model.png"/></a>
+A class should be defined by owl:Class or rdfs:Class
 
-#Properties
+<a href="assets/ontology-classes.png" target="_blank"><img width="90%" src="assets/ontology-classes.png"/></a>
+
+#Animal class in depth
+Here is the example of the class tto:Animal and the properties attached (old diagram with owl instead of rdfs)
+
+<a href="assets/ontology-class-details.png" target="_blank"><img width="90%" src="assets/ontology-class-details.png"/></a>
+
+
+#Properties in detail
+Here we see how properties are attached to the domain. It is also recommended to attach them to their rdfs:range
 
 <a href="assets/ontology-properties.png" target="_blank"><img width="90%" src="assets/ontology-properties.png"/></a>
