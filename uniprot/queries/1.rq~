@@ -1,8 +1,0 @@
-#title: Select all taxa from the UniProt taxonomy
-
-SELECT ?taxon
-FROM <http://beta.sparql.uniprot.org/taxonomy/>
-WHERE
-{
-		?taxon a up:Taxon .
-}
