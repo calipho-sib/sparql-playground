@@ -1,0 +1,7 @@
+#title:Select classes described in the endpoint
+#comment:see http://purl.uniprot.org/core/ for a fast list
+SELECT DISTINCT * WHERE {
+  ?s a owl:Class .
+  FILTER (!isBlank(?s))
+}
+LIMIT 50

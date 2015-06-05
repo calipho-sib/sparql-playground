@@ -1,0 +1,12 @@
+#id:exercise10
+#color:ex-green
+#comment:
+#title:Find cross references to EMBL in UniProt and see if they where mapped by sequence identity using UniParc
+#
+SELECT ?uniprot ?uniparc ?embl
+WHERE
+{
+	?uniprot rdf:seeAlso ?embl .
+        ?embl up:database *** .
+        ?uniparc up:sequenceFor ?uniprot , ?embl .
+}
