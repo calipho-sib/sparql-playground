@@ -1,0 +1,13 @@
+#id:exercise11
+#color:ex-green
+#
+SELECT ?protein ?drugbank ?name
+WHERE 
+{
+	?protein a up:Protein ;
+                rdfs:seeAlso *** .
+        *** *** <http://purl.uniprot.org/database/drugbank> .
+        ?protein *** ?names .
+        ?names *** ?name .
+}
+
