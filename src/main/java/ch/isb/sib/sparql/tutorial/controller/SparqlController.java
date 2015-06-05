@@ -1,9 +1,6 @@
 package ch.isb.sib.sparql.tutorial.controller;
 
 import java.io.IOException;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.isb.sib.sparql.tutorial.exception.SparqlTutorialException;
-import ch.isb.sib.sparql.tutorial.repository.SesameRepository;
 import ch.isb.sib.sparql.tutorial.service.SparqlService;
 
 /**
