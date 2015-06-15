@@ -44,15 +44,19 @@ There are some scenarios predefined:
 
 * You can create your own scenario by giving a directory as argument: `java -jar sparql-playgroud.war your-directory-name`
 
+
 Your directory should follow this convention:
 
 * ttl-data: a folder containing turtle file(s)
-* queries: a folder containing the queries showed in the first page 
-* prefixes.ttl: a file containing the default prefixes (optional) to be added to queries
+* queries: a folder containing the example queries showed in the first page 
+* prefixes.ttl: a file containing the default prefixes to be added to queries
 * pages: pages with markdown files for the Documentation tab
-* config.properties - optionally you can include this property file with: repository.type=native to create a native repository (instead of in memory). This is particulary useful if your dataset contains more than 100'000 triplets
 
-If you like you can share your dataset with us.
+Notes:
+
+* If your dataset is reasonably large that can't be fit in memory (> 50'000 triples) you may want to add the property `-Drepository.type=native`. This will create a native repository (instead of a in memory datastore). The database will be persisted in a `sesame-db` folder. The first time it will take some time to create the structure, but once the application is restarted it will be instantaneous. 
+
+* For development purposes you may want to set the java property `-Dspring.profiles.active=nocache` so the cache is not enabled (example queries, page, images, faqs ...) 
 
 ##Technology in use
 * The SPARQL engine is Sesame 2.7.9

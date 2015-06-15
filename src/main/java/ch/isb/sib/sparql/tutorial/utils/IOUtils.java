@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -38,6 +39,7 @@ public class IOUtils {
 	public static byte[] readImage(String extension, File f) {
 
 		try {
+
 			// Retrieve image from the classpath.
 			InputStream is = new FileInputStream(f);
 
@@ -55,5 +57,29 @@ public class IOUtils {
 			throw new SparqlTutorialException(e);
 		}
 	}
+	
+
+	public static void streamFile(File file, OutputStream outStream) {
+
+		try {
+
+			FileInputStream inputStream = new FileInputStream(file);
+
+	        byte[] buffer = new byte[4096];
+	        int bytesRead = -1;
+	 
+	        // write bytes read from the input stream into the output stream
+	        while ((bytesRead = inputStream.read(buffer)) != -1) {
+	            outStream.write(buffer, 0, bytesRead);
+	        }
+	 
+	        inputStream.close();
+	        outStream.close();
+		} catch (IOException e) {
+			throw new SparqlTutorialException(e);
+		}
+	}
+	
+	
 
 }

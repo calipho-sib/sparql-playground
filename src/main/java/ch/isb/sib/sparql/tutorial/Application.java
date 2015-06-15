@@ -5,7 +5,6 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.CacheManager;
-import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.context.annotation.Bean;
 
@@ -15,7 +14,6 @@ import org.springframework.context.annotation.Bean;
  * @author Daniel Teixeira http://github.com/ddtxra
  *
  */
-@EnableCaching
 @SpringBootApplication
 public class Application {
 
@@ -25,12 +23,14 @@ public class Application {
 
 	public static void main(String[] args) {
 
+		
 		if (args.length > 0) {
 			FOLDER = args[0];
 		}
 		logger.info("Reading from " + FOLDER);
 
 		SpringApplication.run(Application.class, args);
+		
 		String port = null;
 		if (System.getProperty("server.port") == null) {
 			port = "8080";

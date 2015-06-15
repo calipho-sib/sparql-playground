@@ -50,7 +50,9 @@ public class PageService {
 
     @Cacheable("page")
 	public String getPage(String page) {
-		if(page.equals(ABOUT_PAGE)){
+		System.err.println("Getting page");
+
+    	if(page.equals(ABOUT_PAGE)){
 			return IOUtils.readFile("README.md", null);
 		}else {
 			return IOUtils.readFile(Application.FOLDER + "/pages/" + page + ".md", null);

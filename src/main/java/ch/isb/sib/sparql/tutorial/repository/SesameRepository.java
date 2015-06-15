@@ -104,15 +104,7 @@ public class SesameRepository implements InitializingBean{
 	@PostConstruct
 	public void init() throws Exception {
 
-		Properties prop = new Properties();
-		File configFile = new File(Application.FOLDER + "/config.properties");
-		if (configFile.exists()) {
-			InputStream input = null;
-			input = new FileInputStream(configFile);
-			prop.load(input);
-		}
-		
-		boolean nativeConfig = prop.containsKey("repository.type") && prop.get("repository.type").equals("native");
+		boolean nativeConfig = (System.getProperty("repository.type") != null) && (System.getProperty("repository.type").equals("native"));
 		if(nativeConfig){
 			logger.info("Found repository type native property!");
 		}
