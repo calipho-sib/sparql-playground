@@ -58,16 +58,16 @@ public class PageService {
 	}
 
     @Cacheable("asset")
-	public byte[] getImageOrTry(String ... image ) {
-	
+	public byte[] getFileOrTry(String assetOk, String assetIfFailure, String extension) {
+
 		File f = null;
-		f = new File(image[0]);
+		f = new File(assetOk);
 		if(!f.exists()){
-			if(image.length > 1){
-				f = new File(image[1]);
+			if(assetIfFailure != null){
+				f = new File(assetIfFailure);
 			}
 		}
-		return IOUtils.readImage(f);
+		return IOUtils.readImage(extension, f);
 	}
 
 }

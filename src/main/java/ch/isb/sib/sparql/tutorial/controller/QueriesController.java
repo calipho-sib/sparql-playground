@@ -33,9 +33,9 @@ public class QueriesController {
 		return queryDictionary.getQueries(Application.FOLDER + "/queries");
 	}
 	
-	@RequestMapping(value = "/queries/{queryId}")
-	public @ResponseBody byte[] queryImage(@PathVariable("queryId") String queryId) throws IOException {
-		return pageService.getImageOrTry(Application.FOLDER + "/queries/" + queryId + ".png");
+	@RequestMapping(value = "/queries/{queryId}.{extension}")
+	public @ResponseBody byte[] queryImage(@PathVariable("queryId") String queryId, @PathVariable("extension") String extension) throws IOException {
+		return pageService.getFileOrTry(Application.FOLDER + "/queries/" + queryId + "." + extension, null, extension);
 	}
 
 	@RequestMapping(value = "/rdfhelp", produces = MediaType.APPLICATION_JSON_VALUE)

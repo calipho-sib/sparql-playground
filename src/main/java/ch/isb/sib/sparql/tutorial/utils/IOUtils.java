@@ -35,7 +35,7 @@ public class IOUtils {
 		}
 	}
 
-	public static byte[] readImage(File f) {
+	public static byte[] readImage(String extension, File f) {
 
 		try {
 			// Retrieve image from the classpath.
@@ -48,7 +48,7 @@ public class IOUtils {
 			ByteArrayOutputStream bao = new ByteArrayOutputStream();
 
 			// Write to output stream
-			ImageIO.write(img, "png", bao);
+			ImageIO.write(img, extension, bao);
 
 			return bao.toByteArray();
 		} catch (IOException e) {

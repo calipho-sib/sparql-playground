@@ -34,9 +34,9 @@ public class PagesController {
 		return pageService.getPage(page);
 	}
 	
-	@RequestMapping(value = "/assets/{asset}")
-	public @ResponseBody byte[] asset(@PathVariable("asset") String asset) throws IOException {
-		return pageService.getImageOrTry(Application.FOLDER + "/pages/assets/" + asset + ".png", "assets/" + asset + ".png");
+	@RequestMapping(value = "/assets/{asset}.{extension}")
+	public @ResponseBody byte[] asset(@PathVariable("asset") String asset, @PathVariable("extension") String extension) throws IOException {
+		return pageService.getFileOrTry(Application.FOLDER + "/pages/assets/" + asset + "." + extension, "assets/" + asset + "." + extension, extension);
 	}
 	
 
