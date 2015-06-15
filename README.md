@@ -32,6 +32,10 @@ There are some scenarios predefined:
 
 * UniProt helps you understand the UniProt rdf model, run the `start-uniprot.sh` (Linux, Mac) or `start-uniprot.bat` (Windows) script
 
+## Slides of the presentations
+
+* Introduction to RDF and SPARQL <a href="assets/BC2-sparql-tutorial-introduction.pdf" target="_blank"></a>
+
 ##Create your own RDF scenario (no programming skills are required) 
 
 * You can create your own scenario by giving a directory as argument: `java -jar sparql-playgroud.war your-directory-name`
