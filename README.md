@@ -34,7 +34,11 @@ There are some scenarios predefined:
 
 ## Slides of the presentations
 
-* Introduction to RDF and SPARQL <a href="assets/BC2-sparql-tutorial-introduction.pdf" target="_blank"></a>
+* <a href="assets/BC2-sparql-tutorial-introduction.pdf" target="_blank">Introduction to RDF and SPARQL</a>
+* <a href="assets/BC2-sparql-tutorial-nextprot.pdf" target="_blank">RDF and SPARQL within neXtProt</a>
+* <a href="assets/BC2-sparql-tutorial-federated.pdf" target="_blank">SPARQL federated queries within neXtProt</a>
+* <a href="assets/BC2-sparql-tutorial-uniprot.pdf" target="_blank">RDF and SPARQL within UniProt</a>
+* <a href="assets/BC2-sparql-tutorial-additional.pdf" target="_blank">Additional slides about RDF and SPARQL</a>
 
 ##Create your own RDF scenario (no programming skills are required) 
 
