@@ -1,1 +1,1 @@
-java -Dserver.port=7777 -jar sparql-playground.war nextprot
+java -Dserver.port=7777 -Drepository.type=native -jar sparql-playground.war nextprot
