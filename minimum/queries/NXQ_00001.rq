@@ -1,7 +1,0 @@
-#title:Who is John's pet ?
-#comment:?somePet is the variable which will contain the response
-#tags:1 graph pattern,1 variable
-    
-SELECT ?somePet WHERE {
-  ttr:John tto:pet ?somePet .
-}

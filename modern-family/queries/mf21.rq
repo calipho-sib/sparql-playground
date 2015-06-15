@@ -1,8 +1,0 @@
-#title:EXERCISE: Who is the son of John? Using only tto:childOf
-#comment:Use only the property tto:childOf
-#img:family.png
-#tags:exercise
-    
-select ?son where {
-  ...
-}

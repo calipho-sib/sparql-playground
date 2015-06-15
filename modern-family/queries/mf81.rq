@@ -1,9 +1,0 @@
-#title:Count the number of men and women in the family
-#comment:Use the tto:sex property and use the group by and count function
-#tags:group by, count
-
-select ?sex (COUNT(?people) as ?peopleCount) where {
-  ?people rdf:type dbo:Person .
-  ?people tto:sex ?sex .
-}
-GROUP BY ?sex

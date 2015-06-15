@@ -1,3 +1,0 @@
-prefix tto: <http://example.org/tuto/ontology#> 
-prefix ttr: <http://example.org/tuto/resource#> 
-

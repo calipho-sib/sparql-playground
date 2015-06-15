@@ -1,7 +1,0 @@
-#title:What's the relation between John and Buddy
-#comment:?relation is the variable which will contain the response
-#tags:1 graph pattern,1 variable
-    
-SELECT ?relation WHERE {
-  ttr:John ?relation ttr:BuddyDog .
-}

@@ -1,8 +1,0 @@
-#title:Who is the grandson of John?
-#comment:Traverse the graph
-#img:family.png
-
-select ?grandson where {
-  ttr:John tto:parentOf ?son
-  ?son tto:parentOf ?grandson .
-}

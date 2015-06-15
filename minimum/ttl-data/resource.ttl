@@ -1,8 +1,0 @@
-@prefix tto: <http://example.org/tuto/ontology#> .
-@prefix ttr: <http://example.org/tuto/resource#> .
-
-
-# Resources - persons
-
-ttr:William tto:pet ttr:RexDog .
-

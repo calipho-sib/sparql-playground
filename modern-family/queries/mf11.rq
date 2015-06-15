@@ -1,8 +1,0 @@
-#title:Who are the women in the family?
-#comment:selects all subjects whose type is dbo:Person and that are females
-#img:family.png
-
-select ?person where {
-    ?person rdf:type dbo:Person .
-    ?person tto:sex "female"^^xsd:string
-}
