@@ -26,9 +26,15 @@ You can also see a live version of nextprot samples here: http://sparql-playgrou
 
 There are some scenarios predefined:
 
-* Default scenario comes with less than 100 triplets and does not require any domain knowledge (persons and their pets)
+* Default scenario comes with less than 100 triplets and does not require any domain knowledge (persons and their pets), run the `start.sh` (Linux, Mac) or `start.bat` (Windows) script
 
-* neXtProt helps you understand the neXtProt rdf model (run the start-nextprot script)
+* neXtProt helps you understand the neXtProt rdf model, run the `start-nextprot.sh` (Linux, Mac) or `start-nextprot.bat`  (Windows) script
+
+* UniProt helps you understand the UniProt rdf model, run the `start-uniprot.sh` (Linux, Mac) or `start-uniprot.bat` (Windows) script
+
+## Slides of the presentations
+
+* Introduction to RDF and SPARQL <a href="assets/BC2-sparql-tutorial-introduction.pdf" target="_blank"></a>
 
 ##Create your own RDF scenario (no programming skills are required) 
 
