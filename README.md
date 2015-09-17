@@ -4,7 +4,7 @@
 
 SPARQL playground is a standalone multi-platform web application used to learn SPARQL (implemented in Java Spring Boot and AngularJS). 
 
-It uses Sesame 2.7.9 as SPARQL Engine. 
+It uses Sesame 2.8.6 as SPARQL Engine. 
 
 It is beeing developed at the <a target="_blank" href="https://www.isb-sib.ch/">SIB Swiss Institute of Bioinformatics</a>.  
 
@@ -59,7 +59,7 @@ Notes:
 * For development purposes you may want to set the java property `-Dspring.profiles.active=nocache` so the cache is not enabled (example queries, page, images, faqs ...) 
 
 ##Technology in use
-* The SPARQL engine is Sesame 2.7.9
+* The SPARQL engine is Sesame 2.8.6
 * The backend uses Spring Boot 1.2.3
 * The frontend is build with angularJS 1.3 and bootstrap 3
 * Requires Java 1.7 or higher
