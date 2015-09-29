@@ -1,12 +1,12 @@
+
 <!DOCTYPE html>
 <html ng-app="snorql">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SPARQL Play Ground</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPARQL Play Ground</title>
 
-    <base href="/" />
+  <base href="/" />
 
     <!-- Support of IE 10 (window.location.origin) -->
     <script>
@@ -15,90 +15,146 @@
         }
     </script>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="css/vendor.css?release=1427720527077">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="css/vendor.css?release=1427720527077">
+ 
+  <!-- application -->
+  <link rel="stylesheet" href="css/app.css?release=1427720527077" />
 
-    <!-- application -->
-    <link rel="stylesheet" href="css/app.css?release=1427720527077" />
+  <script type="text/javascript">
+  var npHelpSettings={}
+  </script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="js/vendor.js?release=1427720527077"></script>
+  <script src="js/sparql-mode.js"></script>
 
-    <script type="text/javascript">
-        var npHelpSettings = {}
-    </script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="js/vendor.js?release=1427720527077"></script>
-    <script src="js/sparql-mode.js"></script>
-
-    <!-- application script -->
-    <script src="js/app.js"></script>
-    <script src="js/app.factory.js"></script>
-    <script src="js/app.config.js"></script>
-    <script src="js/app.directives.js"></script>
-
-    <!-- analytics -->
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-63731875-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- application script -->
+  <script src="js/app.js"></script>
+  <script src="js/app.factory.js"></script>
+  <script src="js/app.config.js"></script>
+  <script src="js/app.directives.js"></script>
+ 
+  <!-- analytics -->
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-63731875-1', 'auto');  ga('send', 'pageview');</script>
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 
 <body ng-controller="SnorqlCtrl">
 
-    <div class="navbar navbar-fixed-top navbar-snorql" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-play pink"></span> SPARQL playground</a>
-            </div>
-            <ul class="nav navbar-nav navbar-right">
-                <a target="_blank" href="http://www.isb-sib.ch/"><img style="width:40px; margin:10px; right:0px" src="img/logo.jpg" alt="Swiss Institute of Bioinformatics" />
-                </a>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Resources <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li role="presentation" class="dropdown-header">Sparql Playgrounds</li>
-                        <li><a target="_blank" href="http://sparql-playground.isb-sib.ch">Sparql Playground (default)</a>
-                        </li>
-                        <li><a target="_blank" href="http://sparql-playground.nextprot.org">Sparql Playground (nextprot)</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li role="presentation" class="dropdown-header">Biological Sparql Endpoints</li>
-                        <li><a target="_blank" href="http://snorql.nextprot.org">neXtProt</a>
-                        </li>
-                        <li><a target="_blank" href="http://beta.sparql.uniprot.org/">Uniprot</a>
-                        </li>
-                        <li><a target="_blank" href="http://pdb.bio2rdf.org/sparql">PDB – Protein Data Bank</a>
-                        </li>
-                        <li><a target="_blank" href="http://pubmed.bio2rdf.org/sparql">PubMed</a>
-                        </li>
-                        <li><a target="_blank" href="http://cu.goa.bio2rdf.org/sparql">GO Ontology</a>
-                        </li>
-                        <li><a target="_blank" href="http://www.ebi.ac.uk/rdf/">EBI</a>
-                        </li>
-                        <li><a target="_blank" href="http://wwwdev.ebi.ac.uk/rdf/services/ensembl/sparql">Ensembl</a>
-                        </li>
-                        <li><a target="_blank" href="http://cu.bioportal.bio2rdf.org/sparql">BioPortal</a>
-                        </li>
-                        <li><a target="_blank" href="http://wifo5-04.informatik.uni-mannheim.de/drugbank/snorql/">DrugBank</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li role="presentation" class="dropdown-header">Other Sparql Endpoints</li>
-                        <li><a target="_blank" href="http://dbpedia.org/snorql/">dBPedia snorql (Extensive RDF data from Wikipedia)</a>
-                        </li>
-                        <li><a target="_blank" href=" http://data.linkedmdb.org/snorql/">LinkedMDB
+  <div class="navbar navbar-fixed-top navbar-snorql" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-play pink"></span> SPARQL playground</a>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+		    <a target="_blank" href="http://www.isb-sib.ch/"><img style="width:40px; margin:10px; right:0px"  src="img/logo.jpg" alt="Swiss Institute of Bioinformatics" /></a>
+            <li class="dropdown">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Resources <span class="caret"></span></a>
+	            <ul class="dropdown-menu" role="menu">
+	              <li role="presentation" class="dropdown-header">Sparql Playgrounds</li>
+	              <li><a target="_blank" href="http://sparql-playground.isb-sib.ch">Sparql Playground (default)</a></li>
+	              <li><a target="_blank" href="http://sparql-playground.nextprot.org">Sparql Playground (nextprot)</a></li>
+	              <li class="divider"></li>
+	              <li role="presentation" class="dropdown-header">Biological Sparql Endpoints</li>
+	              <li><a target="_blank" href="http://snorql.nextprot.org">neXtProt</a></li>
+	              <li><a target="_blank" href="http://beta.sparql.uniprot.org/">Uniprot</a></li>
+	              <li><a target="_blank" href="http://pdb.bio2rdf.org/sparql">PDB – Protein Data Bank</a></li>
+	              <li><a target="_blank" href="http://pubmed.bio2rdf.org/sparql">PubMed</a></li>
+	              <li><a target="_blank" href="http://cu.goa.bio2rdf.org/sparql">GO Ontology</a></li>
+	              <li><a target="_blank" href="http://www.ebi.ac.uk/rdf/">EBI</a></li>
+	              <li><a target="_blank" href="http://wwwdev.ebi.ac.uk/rdf/services/ensembl/sparql">Ensembl</a></li>
+	              <li><a target="_blank" href="http://cu.bioportal.bio2rdf.org/sparql">BioPortal</a></li>
+	              <li><a target="_blank" href="http://wifo5-04.informatik.uni-mannheim.de/drugbank/snorql/">DrugBank</a></li>
+	              <li class="divider"></li>
+	              <li role="presentation" class="dropdown-header">Other Sparql Endpoints</li>
+	              <li><a target="_blank" href="http://dbpedia.org/snorql/">dBPedia snorql (Extensive RDF data from Wikipedia)</a></li>
+	              <li><a target="_blank" href=" http://data.linkedmdb.org/snorql/">LinkedMDB (Films, actors, directors, writers, producers, etc.)</a></li>
+	              <li><a target="_blank" href="http://www4.wiwiss.fu-berlin.de/factbook/snorql/">World Factbook (Country statistics from the CIA World Factbook)</a></li>
+	              <li class="divider"></li>
+	              <li role="presentation" class="dropdown-header">External Documentation</li>
+	              <li><a target="_blank" href="http://www.w3.org/TR/rdf-sparql-query/">W3C SPARQL Query Language</a></li>
+	            </ul>
+	          </li>
+        </ul>
+
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+	        <li><a href="/help/doc/introduction">Documentation</a></li>
+            <li><a href="/faq">FAQs</a></li>
+	        <li><a href="/data">Data</a></li>
+			<li><a href="/help/doc/about">About</a></li>
+        </ul>
+      </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+  </div><!-- /.navbar -->
+
+  <div class="nav-menu hide" >
+    <div class="list-group">
+      <a href="#" class="list-group-item active">
+        <h4 class="list-group-item-heading">List group item heading</h4>
+        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+      </a>
+      <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">List group item heading</h4>
+        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+      </a>
+      <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">List group item heading</h4>
+        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <div ng-view>
+  </div>
+  <!--
+    <hr>
+    <footer>
+      <p><a target="_blank" href="https://github.com/calipho-sib/nextprot-snorql">GitHub fork</a></p>
+      <p><a href="/legal-disclaimer">Terms of Service</a></p>
+      <p><a href="/copyright">&copy; SIB 2015</a></p>
+
+  </footer>
+  -->
+
+  <footer class="container text-center small">
+    <hr/>
+    <div class="row">
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="/help/doc/about">About</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a target="_blank" href="https://github.com/calipho-sib/sparql-playground/tarball/master">Download latest version</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a target="_blank" href="https://github.com/calipho-sib/sparql-playground/releases">Download archives</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a target="_blank" href="https://github.com/calipho-sib/sparql-playground" target="_blank"><i class="icon-github"></i>For developers</a></li></a></li>
+          </ul>
+        </div>
+      </div>
+    <hr/>
+  </footer>
+
+</body>
+
+
+</html>
