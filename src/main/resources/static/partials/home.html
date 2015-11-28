@@ -12,7 +12,7 @@
               <textarea style="border:none; width:100%; margin-top:1px; resize-disable: none;" rows=4 ng-model=snorql.description/>
 					
 	            <a style="font-size:11px" href="#" ng-click="showPrefixes = !showPrefixes">{{showPrefixes? "Hide prefixes" : "Show prefixes ..."}}</a>
-			 	<div class="pull-right" style="font-size:11px">endpoint: <a target="blank" ng-href="{{snorql.endpoint()}}">{{snorql.endpoint()}}</a></div>
+			 	<div class="pull-right hidden-sm" style="font-size:11px">endpoint: <a target="blank" ng-href="{{snorql.endpoint()}}">{{snorql.endpoint()}}</a></div>
 
 	            <ul ng-show="showPrefixes"  class="list-unstyled prefixes">
 	              <li style="font-size:10px" ng-repeat="(prefix, url) in snorql.getPrefixes()">PREFIX {{prefix}}:&lt;{{url}}&gt;</li>
