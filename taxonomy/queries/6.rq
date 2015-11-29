@@ -5,7 +5,7 @@ WHERE
 	?taxon a up:Taxon .
         ?taxon up:rank ?rank .
         {
-	       ?taxon up:ramk up:Genus .
+	       ?taxon up:rank up:Genus .
         } UNION {
                ?taxon up:rank up:Species . 
         }

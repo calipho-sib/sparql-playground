@@ -1,0 +1,6 @@
+#title: should give a random result back, not always very random :(
+SELECT (sample(?taxon) as ?randomSample)
+WHERE {
+  ?taxon a up:Taxon ;
+         up:scientificName ?name .
+}           

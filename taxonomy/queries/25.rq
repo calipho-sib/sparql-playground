@@ -1,0 +1,4 @@
+#title: contains is case sensitive substring present tester
+SELECT * WHERE {?taxon up:scientificName ?name .
+FILTER (contains(?name, "ota"))
+}

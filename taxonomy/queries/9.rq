@@ -2,8 +2,8 @@
 SELECT ?subject ?predicate ?object
 WHERE
 {
-	?subject ?preficate ?object
+	?subject ?predicate ?object
         MINUS {
-       		?msubject ?mpreficate ?mobject
+       		?msubject ?mpredicate ?mobject
 	} 
-}
+} LIMIT 10

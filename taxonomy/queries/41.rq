@@ -1,0 +1,8 @@
+#title: LIMIT and OFFSET
+SELECT *
+WHERE 
+{
+	SERVICE<http://sparql.uniprot.org/sparql>{
+		?protein up:organism taxonomy:9993 .
+	}
+} LIMIT 4 OFFSET 5

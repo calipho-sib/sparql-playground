@@ -1,0 +1,7 @@
+#title: FILTER using OR
+SELECT ?taxon ?name
+WHERE {
+  ?taxon a up:Taxon .
+  ?taxon up:scientificName ?name .
+  FILTER(?name = "Marmota" || ?name = "Marmota marmota" )
+}    

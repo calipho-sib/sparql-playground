@@ -1,0 +1,4 @@
+#title: Can use the variable in a normal join afterwards
+SELECT *
+WHERE {taxon:9994 rdfs:subClassOf+ ?ancestor . 
+	?ancestor up:scientificName ?name}

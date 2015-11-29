@@ -1,7 +1,2 @@
-#title:Select classes described in the endpoint
-#comment:see http://purl.uniprot.org/core/ for a fast list
-SELECT DISTINCT * WHERE {
-  ?s a owl:Class .
-  FILTER (!isBlank(?s))
-}
-LIMIT 50
+#title: FILTER 1 not equal to 2
+SELECT * {?s ?p ?o. FILTER(1 !=2 )} LIMIT 1
