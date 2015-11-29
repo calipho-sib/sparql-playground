@@ -1,0 +1,11 @@
+#title:Not exists (Negation 1)
+SELECT ?taxon ?name
+WHERE
+{
+	?taxon a up:Taxon .
+        FILTER (
+        	NOT EXISTS{
+			?taxon up:commonName ?name .
+        	}
+        )
+}

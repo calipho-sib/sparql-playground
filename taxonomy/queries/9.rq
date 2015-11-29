@@ -1,0 +1,9 @@
+#title:MINUS all data (note lack of overlap in variables)
+SELECT ?subject ?predicate ?object
+WHERE
+{
+	?subject ?preficate ?object
+        MINUS {
+       		?msubject ?mpreficate ?mobject
+	} 
+}

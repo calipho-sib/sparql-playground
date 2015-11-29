@@ -1,0 +1,7 @@
+#title:Two variables one output column
+SELECT ?taxon
+WHERE
+{
+	?taxon a up:Taxon ;
+	       up:scientificName ?name .
+}
