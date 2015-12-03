@@ -1,0 +1,5 @@
+#title:Select things that are ETalks
+
+select ?thing where {
+  ?thing a eto:ETalk .
+}

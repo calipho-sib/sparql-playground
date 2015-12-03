@@ -1,0 +1,6 @@
+@prefix eto: <http://etalk.vital-it.ch/ontology#> .
+@prefix etr: <http://etalk.vital-it.ch/resource#> .
+@prefix up:<http://purl.uniprot.org/core/> .
+
+etr:Talk123 a eto:ETalk;
+	eto:refer up:O39831 .

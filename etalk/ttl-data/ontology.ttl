@@ -1,0 +1,21 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbp: <http://dbpedia.org/property/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix eto: <http://etalk.vital-it.ch/ontology#> .
+@prefix etr: <http://etalk.vital-it.ch/resource#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix up:<http://purl.uniprot.org/core/> .
+
+eto:ETalk a rdfs:Class ;
+	rdfs:isDefinedBy <http://etalk.vital-it.ch/ontology#> ;
+	rdfs:label "Etalk Class" .
+
+
+eto:refer a rdf:Property ;
+	rdfs:domain eto:Etalk ;
+	rdfs:isDefinedBy <http://etalk.vital-it.ch/ontology#> ;
+	rdfs:label "refers to citations" ;
+	rdfs:range up:Protein .
