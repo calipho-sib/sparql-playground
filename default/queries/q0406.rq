@@ -7,9 +7,10 @@
 #color:ex-green
 
 SELECT * where {
-   dbpedia:Harrison_Ford tto:pet ?pet .
+   ?subj tto:pet ?pet .
    SERVICE <http://dbpedia.org/sparql> {
-       dbpedia:Harrison_Ford dbp:name ?name .
-       dbpedia:Harrison_Ford dbp:birthDate ?bd .
+	   VALUES ?subj {dbpedia:Harrison_Ford}
+	   ?subj dbp:name ?name .
+       ?subj dbp:birthDate ?bd .
 	 }
 }
