@@ -30,11 +30,11 @@ function snorql($http, $q, $timeout, $location, config) {
                   '}\n' +
                   'ORDER BY (!BOUND(?hasValue)) ?property ?hasValue ?isValueOf',
 
-    description:   'When you have a new dataset, you usually want to look at some data. \nHere is a an example on how to get the first 10 rows of a dataset. \nWhen doing such queries it is important to set a limit value to avoid memory and resources issues. \nClick on the examples on the right to continue your journey about learning SPARQL.',
+    description:   'Here is a an example on how to get the first 10 rows of a dataset. \nClick on the examples on the right to continue your journey about learning SPARQL.',
 
 
     title:"Extract some data",
-    query:'SELECT DISTINCT * WHERE {\n  ?s ?p ?o\n}\nLIMIT 10',
+    query:'SELECT DISTINCT * WHERE {\n  ?s ?p ?o\n}\nLIMIT 10\n\n\n# When doing such a query it is important to set LIMIT 10.\n# This limit avoids performance issues, if the size of the dataset is unknown.',
 
     // set your endpoint here
     sparqlEndpoint:config.sparql.endpoint,
