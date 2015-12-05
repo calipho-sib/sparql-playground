@@ -4,7 +4,7 @@
 #comment:?person and ?pet are the 2 variables
 #tags:1 graph pattern,2 variables,2 conditions
 #color:ex-blue
-    
+#img:cartoon-rdf-type
 
 select ?person ?pet where {
     ?person rdf:type dbo:Person .

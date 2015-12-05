@@ -10,16 +10,16 @@
             <form>
               <h5>{{snorql.queryTitle}}</h5>
               <textarea style="border:none; width:100%; margin-top:1px; resize-disable: none;" rows=4 ng-model=snorql.description/>
-					
+
 	            <a style="font-size:11px" href="#" ng-click="showPrefixes = !showPrefixes">{{showPrefixes? "Hide prefixes" : "Show prefixes ..."}}</a>
-			 	<div class="pull-right hidden-sm" style="font-size:11px">endpoint: <a target="blank" ng-href="{{snorql.endpoint()}}">{{snorql.endpoint()}}</a></div>
+			 	<div class="pull-right hidden-xs" style="font-size:11px">endpoint: <a target="blank" ng-href="{{snorql.endpoint()}}">{{snorql.endpoint()}}</a></div>
 
 	            <ul ng-show="showPrefixes"  class="list-unstyled prefixes">
 	              <li style="font-size:10px" ng-repeat="(prefix, url) in snorql.getPrefixes()">PREFIX {{prefix}}:&lt;{{url}}&gt;</li>
 	            </ul>
-	            
+
               <textarea class="form-control" ui-codemirror="cmOption" ng-model="snorql.query"></textarea>
-				  
+
               <div class=" form-inline">
                   <select class="form-control" ng-disabled="waiting||!snorql.query" ng-model="output" ng-options="output for output in outputs"></select>
                   <button type="button" class="btn btn-primary" ng-disabled="waiting||!snorql.query" ng-click="executeQuery(snorql.query,output)">Go</button>
@@ -79,7 +79,7 @@
 	            <a target="_blank" href="queries/{{example.img}}.png"><img style="margin:10px; width:90%" ng-if="example.show && example.img" ng-src="queries/{{example.img}}.png"></a>
                 <button style="z-index:2" ng-if="example.userQueryId > 1000" ng-click="selectExample(example.index)"  type="button" class="btn btn-info btn-xs pull-right ex-btn-show">show</button>
             </div>
-            
+
             </div>
 
           </div>

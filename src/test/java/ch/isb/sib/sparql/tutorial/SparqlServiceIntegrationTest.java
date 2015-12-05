@@ -1,5 +1,7 @@
 package ch.isb.sib.sparql.tutorial;
 
+import javax.validation.constraints.AssertTrue;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,6 +43,13 @@ public class SparqlServiceIntegrationTest {
 		query += " select ?subj ?pred ?obj where { values (?subj ?pred) { (dbpedia:Harrison_Ford dbo:birthDate) (dbpedia:Harrison_Ford dbp:name) (dbpedia:Harrison_Ford dbp:occupation) } { ?subj ?pred ?obj.  }UNION{ service <http://dbpedia.org/sparql> { ?subj ?pred ?obj.}}}";
 		TupleQueryResult result = sparqlService.executeSparql(query);
 		Assert.assertEquals(countResults(result), 3);
+	}
+	
+	@Test
+	public void testAskQuery() throws Exception {
+		String query = "ASK {FILTER(2>1)} ";
+		Boolean result = sparqlService.ask(query);
+		Assert.assertTrue(result);
 	}
 	
 	

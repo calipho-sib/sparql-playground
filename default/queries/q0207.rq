@@ -3,7 +3,7 @@
 #comment:the triplet linked with tto:pet inside the optional clause
 #tags:1 graph pattern,2 variables,2 conditions,optional
 #color:ex-blue
-    
+#img:cartoon-rdf-type
 
 select ?person ?pet where {
     ?person rdf:type dbo:Person .

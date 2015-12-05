@@ -51,6 +51,10 @@ public class SparqlService implements InitializingBean {
 	public TupleQueryResult executeSparql(final String queryString) {
 		return repository.query(queryString);
 	}
+	
+	public boolean ask(final String queryString) {
+		return repository.ask(queryString);
+	}
 
 	public Map<String, String> getPrefixes() {
 		return prefixes;

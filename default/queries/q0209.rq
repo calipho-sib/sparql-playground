@@ -2,6 +2,7 @@
 #comment:Selects the pets of a list of owners using the clause union or values
 #tags:1 graph pattern,1 variable,values,union
 #color:ex-blue
+#img:cartoon-rdf-type
 
 
 select ?pet where {	

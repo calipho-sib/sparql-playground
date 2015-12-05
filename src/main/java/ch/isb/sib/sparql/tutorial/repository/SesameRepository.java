@@ -1,15 +1,11 @@
 package ch.isb.sib.sparql.tutorial.repository;
 
-import info.aduna.iteration.Iterations;
-
 import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Map;
-import java.util.Properties;
 
 import javax.annotation.PostConstruct;
 
@@ -19,6 +15,7 @@ import org.openrdf.model.Model;
 import org.openrdf.model.Resource;
 import org.openrdf.model.Statement;
 import org.openrdf.model.impl.LinkedHashModel;
+import org.openrdf.query.BooleanQuery;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.query.QueryLanguage;
@@ -41,6 +38,7 @@ import org.springframework.beans.factory.InitializingBean;
 
 import ch.isb.sib.sparql.tutorial.Application;
 import ch.isb.sib.sparql.tutorial.exception.SparqlTutorialException;
+import info.aduna.iteration.Iterations;
 
 /**
  * RDF data store for sesame
@@ -67,6 +65,26 @@ public class SesameRepository implements InitializingBean{
 
 			TupleQuery q = conn.prepareTupleQuery(QueryLanguage.SPARQL, sparqlQuery);
 			return q.evaluate();
+
+		} catch (RepositoryException e) {
+			e.printStackTrace();
+			throw new SparqlTutorialException(e);
+		} catch (MalformedQueryException e) {
+			e.printStackTrace();
+			throw new SparqlTutorialException(e);
+		} catch (QueryEvaluationException e) {
+			e.printStackTrace();
+			throw new SparqlTutorialException(e);
+		} 
+
+	}
+	
+	public boolean ask(String sparqlAskQuery) {
+
+		try {
+
+			BooleanQuery bq = conn.prepareBooleanQuery(QueryLanguage.SPARQL, sparqlAskQuery);
+			return bq.evaluate();
 
 		} catch (RepositoryException e) {
 			e.printStackTrace();

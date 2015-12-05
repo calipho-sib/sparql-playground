@@ -4,6 +4,7 @@
 #comment:instead of specifying both variables
 #tags:1 graph pattern,2 variables,limit,offset,distinct
 #color:ex-blue
+#img:cartoon-female
     
 select ?thing ?sex where {
   ?thing tto:sex ?sex .

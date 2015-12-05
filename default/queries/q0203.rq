@@ -3,6 +3,7 @@
 #comment:use the same variable '?thing' to connect to the literal female by the predicated tto:sex.
 #tags:1 graph pattern,1 variable,2 conditions
 #color:ex-blue
+#img:cartoon-female
     
 select ?thing where {
   ?thing a dbo:Person .

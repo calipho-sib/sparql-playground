@@ -2,7 +2,7 @@
 #comment:Selects persons and assures that the selected persons do not contain any link to an object via the predicate tto:pet
 #tags:1 graph pattern,2 variables,filter not exists
 #color:ex-blue
-    
+#img:cartoon-rdf-type
 
 select ?person ?pet where {
     ?person rdf:type dbo:Person .
