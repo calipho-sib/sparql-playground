@@ -357,3 +357,7 @@ fieldset[disabled] .navbar-snorql .btn-link:focus {
 .ex-violet {
 	background-color : #FF99FF
 }
+
+#explore {
+	margin:10px
+}
