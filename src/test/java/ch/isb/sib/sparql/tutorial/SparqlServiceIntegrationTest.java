@@ -25,20 +25,18 @@ public class SparqlServiceIntegrationTest {
 	@Autowired
 	private SparqlService sparqlService;
 
-	/*@Test
+	@Test
 	public void testQueryWithLongUrl() throws Exception {
 		String query = "select ?x where { ?x rdf:type <http://example.org/tuto/ontology#Cat> . }";
 
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		Writer writer = new PrintWriter(out);
 
-		sparqlService.handleSPARQLQuery(query, out, SparqlResultFormat.CSV);
+		Object queryResult = sparqlService.evaluateQuery(query);
+		
 
-		writer.flush();
-		String results = out.toString().split("\n")
-		Assert.assertEquals(results.split("\n").length, 3); //header + 2 rows
 	}
-
+/*
 	@Test
 	public void testQueryWithNamespaces() throws Exception {
 		String query = sparqlService.getPrefixesString();

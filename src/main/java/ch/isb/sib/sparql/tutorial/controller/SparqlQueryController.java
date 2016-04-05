@@ -8,19 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.openrdf.http.server.HTTPException;
 import org.openrdf.http.server.ProtocolUtil;
 import org.openrdf.http.server.repository.BooleanQueryResultView;
 import org.openrdf.http.server.repository.GraphQueryResultView;
 import org.openrdf.http.server.repository.QueryResultView;
 import org.openrdf.http.server.repository.RepositoryController;
 import org.openrdf.http.server.repository.TupleQueryResultView;
-import org.openrdf.query.BooleanQuery;
-import org.openrdf.query.GraphQuery;
 import org.openrdf.query.Query;
 import org.openrdf.query.QueryEvaluationException;
-import org.openrdf.query.QueryInterruptedException;
-import org.openrdf.query.TupleQuery;
 import org.openrdf.query.resultio.BooleanQueryResultWriterRegistry;
 import org.openrdf.query.resultio.TupleQueryResultWriterRegistry;
 import org.openrdf.rio.RDFWriterRegistry;
@@ -31,8 +26,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.View;
 
+import ch.isb.sib.sparql.tutorial.domain.SparqlQueryType;
 import ch.isb.sib.sparql.tutorial.exception.SparqlTutorialException;
-import ch.isb.sib.sparql.tutorial.repository.SesameRepository;
+import ch.isb.sib.sparql.tutorial.service.SparqlService;
 import info.aduna.lang.FileFormat;
 import info.aduna.lang.service.FileFormatServiceRegistry;
 
@@ -40,7 +36,7 @@ import info.aduna.lang.service.FileFormatServiceRegistry;
 public class SparqlQueryController extends RepositoryController {
 
 	private static final Log logger = LogFactory.getLog(SparqlController.class);
-	@Autowired private SesameRepository repository;
+	@Autowired private SparqlService sparqlService;
 	
 
 	/*
@@ -55,48 +51,14 @@ public class SparqlQueryController extends RepositoryController {
 
 		if (queryStr != null) {
 			synchronized (this) {
-				Query query = repository.prepareQuery(queryStr);
 
-				View view;
-				Object queryResult;
-				FileFormatServiceRegistry<? extends FileFormat, ?> registry;
+				Query query = sparqlService.getQuery(queryStr);
+				SparqlQueryType queryType = SparqlQueryType.getQueryType(query);
+				Object queryResult = sparqlService.evaluateQuery(queryStr);
 
-				try {
-					if (query instanceof TupleQuery) {
-						TupleQuery tQuery = (TupleQuery) query;
-
-						queryResult = tQuery.evaluate();
-						registry = TupleQueryResultWriterRegistry.getInstance();
-						view = TupleQueryResultView.getInstance();
-					} else if (query instanceof GraphQuery) {
-						GraphQuery gQuery = (GraphQuery) query;
-
-						queryResult = gQuery.evaluate();
-						registry = RDFWriterRegistry.getInstance();
-						view = GraphQueryResultView.getInstance();
-					} else if (query instanceof BooleanQuery) {
-						BooleanQuery bQuery = (BooleanQuery) query;
-
-						queryResult = bQuery.evaluate();
-						registry = BooleanQueryResultWriterRegistry.getInstance();
-						view = BooleanQueryResultView.getInstance();
-					} else {
-						throw new SparqlTutorialException("Unsupported query type: " + query.getClass().getName());
-					}
-				} catch (QueryInterruptedException e) {
-					logger.info("Query interrupted", e);
-					throw new SparqlTutorialException("Query evaluation took too long");
-				} catch (QueryEvaluationException e) {
-					logger.info("Query evaluation error", e);
-					if (e.getCause() != null && e.getCause() instanceof HTTPException) {
-						// custom signal from the backend, throw as
-						// HTTPException
-						// directly (see SES-1016).
-						throw (HTTPException) e.getCause();
-					} else {
-						throw new SparqlTutorialException("Query evaluation error: " + e.getMessage());
-					}
-				}
+				View view = getView(queryType);
+				FileFormatServiceRegistry<? extends FileFormat, ?> registry = getRegistryInstance(queryType);
+				
 				Object factory = ProtocolUtil.getAcceptableService(request, response, registry);
 
 				Map<String, Object> model = new HashMap<String, Object>();
@@ -110,6 +72,26 @@ public class SparqlQueryController extends RepositoryController {
 		} else {
 			throw new SparqlTutorialException("Missing parameter: ");
 		}
+	}
+
+
+	private FileFormatServiceRegistry<? extends FileFormat, ?> getRegistryInstance(SparqlQueryType queryType) {
+		switch(queryType){
+			case TUPLE_QUERY: return TupleQueryResultWriterRegistry.getInstance();
+			case GRAPH_QUERY: return RDFWriterRegistry.getInstance();
+			case BOOLEAN_QUERY: return BooleanQueryResultWriterRegistry.getInstance();
+		}
+		return null;
+	}
+
+
+	private View getView(SparqlQueryType queryType) {
+		switch(queryType){
+			case TUPLE_QUERY: return TupleQueryResultView.getInstance();
+			case GRAPH_QUERY: return GraphQueryResultView.getInstance();
+			case BOOLEAN_QUERY: return BooleanQueryResultView.getInstance();
+		}
+		return null;
 	}
 
 	
