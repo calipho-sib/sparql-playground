@@ -34,7 +34,7 @@ public class Application {
 		String port = null;
 		if (System.getProperty("server.port") == null) {
 			port = "8080";
-			logger.info("Taking default port 8080. You can change the port by adding a jvm option -Dserver.port=8090");
+			logger.info("Taking default port 8080. The value of the port can be changed, by adding the jvm option: -Dserver.port=8090");
 		} else {
 			port = System.getProperty("server.port");
 			logger.info("server.port option found. Taking port " + port);

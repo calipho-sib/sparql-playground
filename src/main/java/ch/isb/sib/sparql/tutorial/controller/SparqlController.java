@@ -29,18 +29,19 @@ import ch.isb.sib.sparql.tutorial.service.SparqlService;
 @RestController
 public class SparqlController {
 
-	private static final Log logger = LogFactory.getLog(SparqlController.class);
+	//private static final Log logger = LogFactory.getLog(SparqlController.class);
 
 	@Autowired
 	private SparqlService sparqlService;
 
 
+	/* delegated not to SparqlQueryController	
 	@RequestMapping(value = "/sparql")
 	public void sparqlEndpoint(@RequestParam(value = "query", required = true) String query, @RequestParam(value = "output", required = false) String output, HttpServletRequest request, HttpServletResponse response)
 			throws QueryEvaluationException, Exception {
 		logger.info("query=" + query + ";format=" + output + ";remote-host=" + request.getRemoteHost());
 		sparqlService.executeSparql(query, response.getOutputStream(), output);
-	}
+	}*/
 
 	@RequestMapping(value = "/prefixes", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Map<String, String> sparqlPrefixes() throws IOException {

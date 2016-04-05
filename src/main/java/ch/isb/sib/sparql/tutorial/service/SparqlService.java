@@ -5,11 +5,6 @@ import java.io.OutputStream;
 import java.util.Map;
 import java.util.TreeMap;
 
-import org.openrdf.query.TupleQueryResult;
-import org.openrdf.query.resultio.sparqljson.SPARQLResultsJSONWriter;
-import org.openrdf.query.resultio.sparqlxml.SPARQLResultsXMLWriter;
-import org.openrdf.query.resultio.text.csv.SPARQLResultsCSVWriter;
-import org.openrdf.query.resultio.text.tsv.SPARQLResultsTSVWriter;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +15,7 @@ import ch.isb.sib.sparql.tutorial.repository.SesameRepository;
 import ch.isb.sib.sparql.tutorial.utils.IOUtils;
 
 /**
- * A SPARQL service
+ * A SPARQL service that adds prefixes to repository
  * @author Daniel Teixeira http://github.com/ddtxra
  *
  */
@@ -31,30 +26,7 @@ public class SparqlService implements InitializingBean {
 	private SesameRepository repository;
 
 	private Map<String, String> prefixes = null;
-
 	private String prefixesString;
-
-	public void executeSparql(final String queryString, OutputStream out, String format) {
-		
-		if ("json".equalsIgnoreCase(format)) {
-			repository.query(queryString, new SPARQLResultsJSONWriter(out));
-		} else if ("csv".equalsIgnoreCase(format)) {
-			repository.query(queryString, new SPARQLResultsCSVWriter(out));
-		} else if ("tsv".equalsIgnoreCase(format)) {
-			repository.query(queryString, new SPARQLResultsTSVWriter(out));
-		} else {
-			repository.query(queryString, new SPARQLResultsXMLWriter(out));
-		}
-
-	}
-
-	public TupleQueryResult executeSparql(final String queryString) {
-		return repository.query(queryString);
-	}
-	
-	public boolean ask(final String queryString) {
-		return repository.ask(queryString);
-	}
 
 	public Map<String, String> getPrefixes() {
 		return prefixes;

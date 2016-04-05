@@ -282,15 +282,25 @@ function snorql($http, $q, $timeout, $location, config) {
       return new (function(result, namespaces){
         this._json = result;
         this._variables = this._json.head['vars']||{};
-        this._results = this._json.results['bindings']||[];
+        this._boolean = this._json.boolean;
+        if(this._boolean === undefined) {
+            this._results = this._json.results['bindings']||[];
+        }else {
+            this._variables = ["boolean"];
+        }
+
         this._namespaces = namespaces;
 
         this.toDOM = function() {
             var table = document.createElement('table');
             table.className = 'queryresults';
             table.appendChild(this._createTableHeader());
-            for (var i = 0; i < this._results.length; i++) {
-                table.appendChild(this._createTableRow(this._results[i], i));
+            if(this._boolean === undefined) {
+                for (var i = 0; i < this._results.length; i++) {
+                    table.appendChild(this._createTableRow(this._results[i], i));
+                }
+            }else { //ASK query
+                table.appendChild(this._createTableBooleanRow(this._boolean));
             }
             return table;
         }
@@ -323,6 +333,16 @@ function snorql($http, $q, $timeout, $location, config) {
                 th.appendChild(document.createTextNode(' '));
                 tr.insertBefore(th, tr.firstChild);
             }
+            return tr;
+        }
+        
+        this._createTableBooleanRow = function(boolean) {
+            var tr = document.createElement('tr');
+            tr.className = 'odd';
+            var namedGraph = null;
+            var td = document.createElement('td');
+            td.appendChild(this._formatNode({value: boolean, type: "literal"}, "boolean"));
+            tr.appendChild(td);
             return tr;
         }
 
