@@ -72,58 +72,6 @@ public class SesameRepositoryImpl implements SesameRepository, InitializingBean 
 		}
 	}
 	
-	public TupleQueryResult selectQuery(String sparqlQuery) {
-
-		try {
-			TupleQuery q = conn.prepareTupleQuery(QueryLanguage.SPARQL, sparqlQuery);
-			return q.evaluate();
-
-		} catch (RepositoryException e) {
-			e.printStackTrace();
-			throw new SparqlTutorialException(e);
-		} catch (MalformedQueryException e) {
-			e.printStackTrace();
-			throw new SparqlTutorialException(e);
-		} catch (QueryEvaluationException e) {
-			e.printStackTrace();
-			throw new SparqlTutorialException(e);
-		}
-
-	}
-
-	@Override
-	public void askQuery(String sparqlAskQuery, BooleanQueryResultWriter handler) {
-		try {
-			handler.handleBoolean(askQuery(sparqlAskQuery));
-		} catch (QueryResultHandlerException e) {
-			e.printStackTrace();
-			throw new SparqlTutorialException(e);
-		}
-	}
-
-	@Override
-	public void selectQuery(String queryString, TupleQueryResultWriter handler) {
-
-		try {
-			
-			TupleQuery q = conn.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
-			q.evaluate(handler);
-
-		} catch (RepositoryException e) {
-			e.printStackTrace();
-			throw new SparqlTutorialException(e);
-		} catch (MalformedQueryException e) {
-			e.printStackTrace();
-			throw new SparqlTutorialException(e);
-		} catch (TupleQueryResultHandlerException e) {
-			e.printStackTrace();
-			throw new SparqlTutorialException(e);
-		} catch (QueryEvaluationException e) {
-			e.printStackTrace();
-			throw new SparqlTutorialException(e);
-		}
-	}
-
 	@PostConstruct
 	public void init() throws Exception {
 
@@ -184,7 +132,7 @@ public class SesameRepositoryImpl implements SesameRepository, InitializingBean 
 
 	}
 
-	public void writeTripletsAsTTL(OutputStream output, Map<String, String> prefixes) {
+	public void writeTriplesAsTurtle(OutputStream output, Map<String, String> prefixes) {
 		try {
 
 			RepositoryResult<Statement> statements = rep.getConnection().getStatements(null, null, null, true);
@@ -213,7 +161,7 @@ public class SesameRepositoryImpl implements SesameRepository, InitializingBean 
 		}
 	}
 
-	public void testLoadData(String data) {
+	public void testLoadTurtleData(String data) {
 		try {
 
 			InputStream stream = new ByteArrayInputStream(data.getBytes());
@@ -233,7 +181,7 @@ public class SesameRepositoryImpl implements SesameRepository, InitializingBean 
 		}
 	}
 
-	public void loadData(String data) {
+	public void loadTurtleData(String data) {
 		try {
 			InputStream stream = new ByteArrayInputStream(data.getBytes());
 			rep.getConnection().add(stream, "", RDFFormat.TURTLE, new Resource[] {});
@@ -252,7 +200,10 @@ public class SesameRepositoryImpl implements SesameRepository, InitializingBean 
 
 	public long countTriplets() {
 		try {
-			TupleQueryResult result = this.selectQuery("SELECT (COUNT(*) AS ?no) { ?s ?p ?o  }");
+
+			Query query = prepareQuery("SELECT (COUNT(*) AS ?no) { ?s ?p ?o  }");
+			TupleQueryResult result = ((TupleQuery) query).evaluate();
+
 			long n = Long.valueOf(result.next().getBinding("no").getValue().stringValue());
 			result.close();
 			return n;
@@ -272,23 +223,6 @@ public class SesameRepositoryImpl implements SesameRepository, InitializingBean 
 	@Override
 	public void afterPropertiesSet() throws Exception {
 		conn = rep.getConnection();
-	}
-
-	@Override
-	public boolean askQuery(String queryString) {
-
-		BooleanQuery bq;
-		try {
-			bq = conn.prepareBooleanQuery(QueryLanguage.SPARQL, queryString);
-			return bq.evaluate();
-
-		} catch (RepositoryException | MalformedQueryException e) {
-			e.printStackTrace();
-			throw new SparqlTutorialException(e);
-		} catch (QueryEvaluationException e) {
-			e.printStackTrace();
-			throw new SparqlTutorialException(e);
-		}
 	}
 
 }

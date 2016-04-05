@@ -16,24 +16,16 @@ import org.openrdf.query.resultio.TupleQueryResultWriter;
  */
 public interface SesameRepository{
 
-	TupleQueryResult selectQuery(String queryString);
-	boolean askQuery(String queryString);
-	
-	void selectQuery(String queryString, TupleQueryResultWriter queryResultWriter);
-	void askQuery(String queryString, BooleanQueryResultWriter queryResultWriter);
-
-	void testLoadData(String data);
-
+	void testLoadTurtleData(String data);
+	void loadTurtleData(String data);
+	boolean isDataLoadAllowed();
 	void clearData();
 
-	long countTriplets();
+	void writeTriplesAsTurtle(OutputStream out, Map<String, String> prefixes);
 
-	void loadData(String data);
-
-	boolean isDataLoadAllowed();
-
-	void writeTripletsAsTTL(OutputStream out, Map<String, String> prefixes);
 	Query prepareQuery(String sparqlQuery);
+
+	long countTriplets();
 
 	
 }

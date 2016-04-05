@@ -47,7 +47,7 @@ public class SparqlQueryController extends RepositoryController {
 	//Code taken from Sesame (before used to be in SparqlController)
 	@RequestMapping(value = "/sparql")
 	public ModelAndView sparqlEndpoint(@RequestParam(value = "query", required = true) String queryStr, @RequestParam(value = "output", required = false) String output, HttpServletRequest request,
-			HttpServletResponse response) throws QueryEvaluationException, Exception {
+			HttpServletResponse response) throws Exception {
 
 		if (queryStr != null) {
 			synchronized (this) {
@@ -58,7 +58,7 @@ public class SparqlQueryController extends RepositoryController {
 
 				View view = getView(queryType);
 				FileFormatServiceRegistry<? extends FileFormat, ?> registry = getRegistryInstance(queryType);
-				
+
 				Object factory = ProtocolUtil.getAcceptableService(request, response, registry);
 
 				Map<String, Object> model = new HashMap<String, Object>();

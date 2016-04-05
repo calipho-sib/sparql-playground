@@ -1,9 +1,6 @@
 package ch.isb.sib.sparql.tutorial;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintWriter;
-import java.io.Writer;
-
+import ch.isb.sib.sparql.tutorial.service.SparqlService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +12,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 //import ch.isb.sib.sparql.tutorial.domain.SparqlResultFormat;
-import ch.isb.sib.sparql.tutorial.service.SparqlService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = {Application.class})
@@ -26,37 +22,46 @@ public class SparqlServiceIntegrationTest {
 	private SparqlService sparqlService;
 
 	@Test
+	public void testAskQuery() throws Exception {
+		String query = "ASK {FILTER(2>1)} ";
+		Boolean result =  (Boolean) sparqlService.evaluateQuery(query);
+		Assert.assertTrue(result);
+	}
+
+	@Test
 	public void testQueryWithLongUrl() throws Exception {
 		String query = "select ?x where { ?x rdf:type <http://example.org/tuto/ontology#Cat> . }";
+		TupleQueryResult result = (TupleQueryResult) sparqlService.evaluateQuery(query);
+		Assert.assertEquals(countResults(result), 2);
 
-		ByteArrayOutputStream out = new ByteArrayOutputStream();
-		Writer writer = new PrintWriter(out);
-
-		Object queryResult = sparqlService.evaluateQuery(query);
-		
 
 	}
-/*
+
 	@Test
 	public void testQueryWithNamespaces() throws Exception {
 		String query = sparqlService.getPrefixesString();
 		query += " select ?x where { ?x rdf:type tto:Cat . }";
-		TupleQueryResult result = sparqlService.handleSPARQLQuery(query, out, SparqlResultFormat.CSV);
+		TupleQueryResult result = (TupleQueryResult) sparqlService.evaluateQuery(query);
 		Assert.assertEquals(countResults(result), 2);
 	}
+
 
 	@Test
 	public void testFederatedQuery() throws Exception {
 		String query = sparqlService.getPrefixesString();
 		query += " select ?subj ?pred ?obj where { values (?subj ?pred) { (dbpedia:Harrison_Ford dbo:birthDate) (dbpedia:Harrison_Ford dbp:name) (dbpedia:Harrison_Ford dbp:occupation) } { ?subj ?pred ?obj.  }UNION{ service <http://dbpedia.org/sparql> { ?subj ?pred ?obj.}}}";
-		TupleQueryResult result = sparqlService.selectQuery(query);
-		Assert.assertEquals(countResults(result), 3);
+		TupleQueryResult result = (TupleQueryResult) sparqlService.evaluateQuery(query);
+		Assert.assertEquals(countResults(result), 2);
 	}
 	
 	
 	@Test
-	public void testCount() throws Exception {
-		Long n = sparqlService.getNumberOfTriplets();
+	public void testCountNumberOfTriples() throws Exception {
+		Long n = sparqlService.countNumberOfTriples();
+		System.out.println(n + " triples");
+		Assert.assertTrue(n > 50);
+		Assert.assertTrue(n < 100);
+
 	}
 
 	private long countResults(TupleQueryResult results) {
@@ -71,6 +76,6 @@ public class SparqlServiceIntegrationTest {
 			e.printStackTrace();
 			return 0;
 		}
-	}*/
+	}
 
 }

@@ -104,7 +104,7 @@ public class SparqlService implements InitializingBean {
 
 	public void writeData(OutputStream out) {
 		if(isDataLoadAllowed()){
-			repository.writeTripletsAsTTL(out, prefixes);
+			repository.writeTriplesAsTurtle(out, prefixes);
 		}else {
 			try {
 				out.write("Loading data is not supported for native store (only available for memory store)".getBytes());
@@ -117,9 +117,9 @@ public class SparqlService implements InitializingBean {
 
 	public long loadData(String data) {
 		if(isDataLoadAllowed()){
-			repository.testLoadData(data); //check if data is ok first (returns exception if not)
+			repository.testLoadTurtleData(data); //check if data is ok first (returns exception if not)
 			repository.clearData();
-			repository.loadData(data);
+			repository.loadTurtleData(data);
 			return repository.countTriplets();
 		}else {
 			throw new SparqlTutorialException("Loading data is not supported for native store");
@@ -131,7 +131,7 @@ public class SparqlService implements InitializingBean {
 		return repository.isDataLoadAllowed();
 	}
 
-	public long getNumberOfTriplets() {
+	public long countNumberOfTriples() {
 		return repository.countTriplets();
 	}
 
