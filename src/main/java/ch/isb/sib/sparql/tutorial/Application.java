@@ -8,6 +8,8 @@ import org.springframework.cache.CacheManager;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.context.annotation.Bean;
 
+import java.io.File;
+
 /**
  * A simple Spring Boot application for educative purpose in learning SPARQL
  * 
@@ -25,7 +27,10 @@ public class Application {
 
 		
 		if (args.length > 0) {
-			FOLDER = args[0];
+			String folderAux = args[0];
+			if (new File(folderAux).exists()){
+				FOLDER  = folderAux;
+			}else logger.info(folderAux + " folder not found");
 		}
 		logger.info("Reading from " + FOLDER);
 

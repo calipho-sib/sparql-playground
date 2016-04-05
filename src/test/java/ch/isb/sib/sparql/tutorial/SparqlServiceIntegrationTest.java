@@ -11,8 +11,6 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-//import ch.isb.sib.sparql.tutorial.domain.SparqlResultFormat;
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = {Application.class})
 @WebAppConfiguration
@@ -20,6 +18,8 @@ public class SparqlServiceIntegrationTest {
 
 	@Autowired
 	private SparqlService sparqlService;
+
+
 
 	@Test
 	public void testAskQuery() throws Exception {
@@ -29,11 +29,10 @@ public class SparqlServiceIntegrationTest {
 	}
 
 	@Test
-	public void testQueryWithLongUrl() throws Exception {
+	public void testQueryWithURI() throws Exception {
 		String query = "select ?x where { ?x rdf:type <http://example.org/tuto/ontology#Cat> . }";
 		TupleQueryResult result = (TupleQueryResult) sparqlService.evaluateQuery(query);
 		Assert.assertEquals(countResults(result), 2);
-
 
 	}
 
@@ -45,6 +44,45 @@ public class SparqlServiceIntegrationTest {
 		Assert.assertEquals(countResults(result), 2);
 	}
 
+	//This query stopped working from 2.8.7 upgrade
+	//See related issue: https://groups.google.com/forum/#!topic/sesame-users/NpidJt61cCQ
+
+	@Test
+	public void testFederatedQueryWithEBI() throws Exception {
+
+		String federatedQuery = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
+				"PREFIX msi: <http://rdf.ebi.ac.uk/resource/biosamples/msi/>" +
+				"SELECT * where { " +
+				"	SERVICE <http://www.ebi.ac.uk/rdf/services/biosamples/servlet/query> { " +
+				"	msi:GAE-GEOD-25609 rdf:type ?obj " +
+				"} }";
+
+		TupleQueryResult result =  sparqlService.executeSelectQuery(federatedQuery);
+		Assert.assertEquals(countResults(result), 2);
+	}
+
+
+
+	@Test
+	public void testFederatedQueryWithDBPedia() throws Exception {
+
+		String federatedQuery = "PREFIX dbp:<http://dbpedia.org/property/>\n" +
+				"PREFIX tto:<http://example.org/tuto/ontology#>\n" +
+				"\n" +
+				"select *  where {\n" +
+				"    SERVICE <http://dbpedia.org/sparql> {\n" +
+				"      select ?person ?birthDate ?occupation ?pet where {\n" +
+				"        VALUES ?birthDate { \"1942-07-13\"^^xsd:date }\n" +
+				"        ?person dbp:birthDate ?birthDate .\n" +
+				"        ?person dbp:occupation ?occupation .\n" +
+				"      } \n" +
+				"    }\n" +
+				"    OPTIONAL { ?person tto:pet ?pet } .\n" +
+				"}";
+
+		TupleQueryResult result =  sparqlService.executeSelectQuery(federatedQuery);
+		Assert.assertEquals(countResults(result), 6);
+	}
 
 	@Test
 	public void testFederatedQuery() throws Exception {

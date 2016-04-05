@@ -7,12 +7,7 @@ import java.util.TreeMap;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.openrdf.query.BooleanQuery;
-import org.openrdf.query.GraphQuery;
-import org.openrdf.query.Query;
-import org.openrdf.query.QueryEvaluationException;
-import org.openrdf.query.QueryInterruptedException;
-import org.openrdf.query.TupleQuery;
+import org.openrdf.query.*;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,6 +39,18 @@ public class SparqlService implements InitializingBean {
 	public Query getQuery(String queryStr) throws SparqlTutorialException {
 		return repository.prepareQuery(queryStr);
 	}
+
+
+	public TupleQueryResult executeSelectQuery(String queryStr) {
+		Query query = repository.prepareQuery(queryStr);
+		return (TupleQueryResult) evaluateQuery(query, SparqlQueryType.getQueryType(query));
+	}
+
+	public boolean executeAskQuery(String queryStr) {
+		Query query = repository.prepareQuery(queryStr);
+		return (Boolean) evaluateQuery(query, SparqlQueryType.getQueryType(query));
+	}
+
 
 	public Object evaluateQuery(String queryStr) {
 		Query query = repository.prepareQuery(queryStr);
