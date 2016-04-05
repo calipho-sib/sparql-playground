@@ -25,7 +25,9 @@ public class Application {
 
 	public static void main(String[] args) {
 
-		
+		logger.info("SPARQL Playground\n");
+
+
 		if (args.length > 0) {
 			String folderAux = args[0];
 			if (new File(folderAux).exists()){

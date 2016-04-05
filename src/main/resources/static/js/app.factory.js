@@ -137,11 +137,8 @@ function snorql($http, $q, $timeout, $location, config) {
    if(this.examples.length){
      return this;
    }
-   this.$promise=this.$promise.then(function(){
-       return $http({method:'GET',url:self.examplesUrl});
-   });
 
-   this.$promise.then(function(config){
+      $http({method:'GET',url:self.examplesUrl}).then(function(config){
       var index=0, rawtags=[];
       self.examples=(config.data);
       self.examples.forEach(function(example){
@@ -204,7 +201,7 @@ function snorql($http, $q, $timeout, $location, config) {
 		   url: this.dataURL,
 		   method: 'PUT',
 		   params: {data : self.data}}).then(function(response){
-		   alert(response.data + " triplets succesfully loaded");
+		   alert(response.data + " triples successfully loaded");
 	   }, function(error){
 		  alert("error " + error.data.responseText);
 	   })
@@ -250,7 +247,7 @@ function snorql($http, $q, $timeout, $location, config) {
    if(params.output!=='html'){
      self.reset();
      var deferred = $q.defer();
-     window.location =url+'?'+$.param(params);
+     window.location =url+ '?'+$.param(params);
      this.$promise=deferred.promise;
      $timeout(function(){
        deferred.resolve(this);
@@ -261,11 +258,13 @@ function snorql($http, $q, $timeout, $location, config) {
    //
    // html output is done by parsing json
    params.output='json'
-   this.$promise=$http({method:'GET', url:url,params:params,headers:accept, timeout: this.canceler.promise});
-   console.log(this.$promise)
-   this.$promise.then(function(config){
-      self.result=(config.data);
-      console.log(self.result);
+   $http({method:'GET',
+          url:url,
+          params:params,
+          headers: {'Accept': defaultAcceptHeaders[params.output]},
+          timeout: this.canceler.promise})
+       .then(function(response){
+           self.result=(response.data);
    })
    return this;
   }

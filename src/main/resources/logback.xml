@@ -7,11 +7,11 @@
 		</encoder>
 	</appender>
 
-	<logger name="ch.isb.sib.sparql">
+	<logger name="swiss.sib">
 		<level value="DEBUG" />
 	</logger>
 	
-	<root level="warn">
+	<root level="error">
 		<appender-ref ref="STDOUT" />
 	</root>
 </configuration>
