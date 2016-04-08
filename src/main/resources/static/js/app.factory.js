@@ -247,7 +247,7 @@ function snorql($http, $q, $timeout, $location, config) {
    var url=defaultSnorql.sparqlEndpoint;
 
 
-   if(params.output!=='html'){
+   /*if(params.output!=='html'){
      self.reset();
      var deferred = $q.defer();
      window.location =url+ '?'+$.param(params);
@@ -256,13 +256,35 @@ function snorql($http, $q, $timeout, $location, config) {
        deferred.resolve(this);
      },200)
      return self;
+   }*/
+   
+   if(params.output!=='html'){
+	   
+	   $http({method:'GET', url:url,params:params,headers:accept, timeout: this.canceler.promise}).
+	   success(function(data, status, headers, config) {
+	      var anchor = angular.element('<a/>');
+	      var dataAux = data;
+	      if(params.output === "json"){
+	    	  dataAux = JSON.stringify(data, null, 2);
+	      }
+	      var dataaux;
+	      anchor.attr({
+	          href: 'data:attachment/' +  accept + ';charset=utf-8,' + encodeURI(dataAux),
+	          target: '_blank',
+	          download: 'result.' + params.output
+	      })[0].click();
+	   }).
+	   error(function(data, status, headers, config) {
+	     // handle error
+	   });
+      return self;
+
    }
 
    //
    // html output is done by parsing json
    params.output='json'
    this.$promise=$http({method:'GET', url:url,params:params,headers:accept, timeout: this.canceler.promise});
-   console.log(this.$promise)
    this.$promise.then(function(config){
       self.result=(config.data);
       console.log(self.result);
