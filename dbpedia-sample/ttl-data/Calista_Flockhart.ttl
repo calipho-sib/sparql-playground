@@ -1,0 +1,208 @@
+@prefix dbp:	<http://dbpedia.org/property/> .
+@prefix dbr:	<http://dbpedia.org/resource/> .
+<http://dbpedia.org/resource/Fragile_(film)>	dbp:starring	dbr:Calista_Flockhart .
+@prefix dbo:	<http://dbpedia.org/ontology/> .
+<http://dbpedia.org/resource/Fragile_(film)>	dbo:starring	dbr:Calista_Flockhart .
+<http://dbpedia.org/resource/Supergirl_(U.S._TV_series)>	dbp:starring	dbr:Calista_Flockhart ;
+	dbo:starring	dbr:Calista_Flockhart .
+dbr:Telling_Lies_in_America	dbp:starring	dbr:Calista_Flockhart ;
+	dbo:starring	dbr:Calista_Flockhart .
+dbr:Calista	dbo:wikiPageDisambiguates	dbr:Calista_Flockhart .
+dbr:The_Last_Shot	dbp:starring	dbr:Calista_Flockhart ;
+	dbo:starring	dbr:Calista_Flockhart .
+dbr:Calista_Flockheart	dbo:wikiPageRedirects	dbr:Calista_Flockhart .
+dbr:Calista_flockhart	dbo:wikiPageRedirects	dbr:Calista_Flockhart .
+dbr:Callista_Flockhart	dbo:wikiPageRedirects	dbr:Calista_Flockhart .
+dbr:Callista_Flockheart	dbo:wikiPageRedirects	dbr:Calista_Flockhart .
+dbr:Callista_flockhart	dbo:wikiPageRedirects	dbr:Calista_Flockhart .
+dbr:Callista_flockheart	dbo:wikiPageRedirects	dbr:Calista_Flockhart .
+<http://dbpedia.org/resource/Saturday_Night_Live_(season_26)>	dbp:rtitle	dbr:Calista_Flockhart .
+<http://dbpedia.org/resource/Ally_McBeal_(character)>	dbp:portrayer	dbr:Calista_Flockhart ;
+	dbo:portrayer	dbr:Calista_Flockhart .
+dbr:Kitty_Walker	dbp:portrayer	dbr:Calista_Flockhart .
+<http://dbpedia.org/resource/Brothers_&_Sisters_(2006_TV_series)>	dbp:starring	dbr:Calista_Flockhart ;
+	dbo:starring	dbr:Calista_Flockhart .
+dbr:Things_You_Can_Tell_Just_by_Looking_at_Her	dbp:starring	dbr:Calista_Flockhart ;
+	dbo:starring	dbr:Calista_Flockhart .
+dbr:Ally_McBeal	dbp:starring	dbr:Calista_Flockhart ;
+	dbo:starring	dbr:Calista_Flockhart .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix yago:	<http://dbpedia.org/class/yago/> .
+dbr:Calista_Flockhart	rdf:type	yago:Object100002684 ,
+		yago:AmericanFilmActors ,
+		yago:ShakespeareanActors ,
+		yago:Performer110415638 ,
+		yago:Whole100003553 ,
+		yago:Actor109765278 ,
+		yago:Person100007846 ,
+		yago:AmericanTelevisionActors ,
+		yago:LivingThing100004258 ,
+		<http://dbpedia.org/class/yago/PeopleFromFreeport,Illinois> ,
+		dbo:Agent ,
+		yago:AmericanStageActors .
+@prefix wikidata:	<http://www.wikidata.org/entity/> .
+dbr:Calista_Flockhart	rdf:type	wikidata:Q215627 .
+@prefix umbel-rc:	<http://umbel.org/umbel/rc/> .
+dbr:Calista_Flockhart	rdf:type	umbel-rc:PersonWithOccupation .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+dbr:Calista_Flockhart	rdf:type	foaf:Person .
+@prefix ns8:	<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+dbr:Calista_Flockhart	rdf:type	ns8:NaturalPerson ,
+		yago:LivingPeople .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+dbr:Calista_Flockhart	rdf:type	owl:Thing ,
+		yago:YagoLegalActor ,
+		yago:AmericanSoapOperaActors ,
+		dbo:Person ,
+		yago:Organism100004475 ,
+		ns8:Agent .
+@prefix schema:	<http://schema.org/> .
+dbr:Calista_Flockhart	rdf:type	schema:Person ,
+		umbel-rc:Actor ,
+		<http://dbpedia.org/class/yago/PeopleFromNorwich,NewYork> ,
+		umbel-rc:Artist ,
+		yago:CausalAgent100007347 ,
+		yago:PhysicalEntity100001930 ,
+		yago:Entertainer109616922 ,
+		yago:ActorsFromIllinois ,
+		wikidata:Q5 ,
+		yago:YagoLegalActorGeo ;
+	dbo:birthPlace	dbr:Illinois ,
+		<http://dbpedia.org/resource/Freeport,_Illinois> ;
+	dbp:birthPlace	"Freeport, Illinois, U.S."@en .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+dbr:Calista_Flockhart	dbo:birthDate	"1964-11-11"^^xsd:date .
+@prefix dct:	<http://purl.org/dc/terms/> .
+dbr:Calista_Flockhart	dct:subject	<http://dbpedia.org/resource/Category:Best_Musical_or_Comedy_Actress_Golden_Globe_(television)_winners> .
+@prefix dbc:	<http://dbpedia.org/resource/Category:> .
+dbr:Calista_Flockhart	dct:subject	dbc:American_film_actresses ,
+		dbc:Clarence_Derwent_Award_winners ,
+		<http://dbpedia.org/resource/Category:1964_births> ,
+		dbc:Actresses_from_Illinois ,
+		dbc:American_soap_opera_actresses ,
+		dbc:American_stage_actresses ,
+		<http://dbpedia.org/resource/Category:People_from_Freeport,_Illinois> ,
+		dbc:Mason_Gross_School_of_the_Arts_alumni ,
+		<http://dbpedia.org/resource/Category:20th-century_American_actresses> ,
+		dbc:Living_people ,
+		dbc:American_Shakespearean_actresses ,
+		<http://dbpedia.org/resource/Category:21st-century_American_actresses> ,
+		<http://dbpedia.org/resource/Category:People_from_Norwich,_New_York> ;
+	dbo:wikiPageID	7517 ;
+	dbo:wikiPageRevisionID	681745422 .
+@prefix ns14:	<http://www.emmys.com/celebrities/> .
+dbr:Calista_Flockhart	dbo:wikiPageExternalLink	ns14:calista-flockhart .
+@prefix ns15:	<http://www.w3.org/2006/03/wn/wn20/instances/> .
+dbr:Calista_Flockhart	dbp:wordnet_type	ns15:synset-actor-noun-1 .
+@prefix dbpedia-es:	<http://es.dbpedia.org/resource/> .
+dbr:Calista_Flockhart	owl:sameAs	dbpedia-es:Calista_Flockhart .
+@prefix dbpedia-cs:	<http://cs.dbpedia.org/resource/> .
+dbr:Calista_Flockhart	owl:sameAs	dbpedia-cs:Calista_Flockhart .
+@prefix dbpedia-nl:	<http://nl.dbpedia.org/resource/> .
+dbr:Calista_Flockhart	owl:sameAs	dbpedia-nl:Calista_Flockhart ,
+		<http://rdf.freebase.com/ns/m.023s8> .
+@prefix opencyc:	<http://sw.opencyc.org/concept/> .
+dbr:Calista_Flockhart	owl:sameAs	opencyc:Mx4rwO72UZwpEbGdrcN5Y29ycA .
+@prefix dbpedia-wikidata:	<http://wikidata.dbpedia.org/resource/> .
+dbr:Calista_Flockhart	owl:sameAs	dbpedia-wikidata:Q26424 .
+@prefix dbpedia-id:	<http://id.dbpedia.org/resource/> .
+dbr:Calista_Flockhart	owl:sameAs	dbpedia-id:Calista_Flockhart .
+@prefix dbpedia-ko:	<http://ko.dbpedia.org/resource/> .
+dbr:Calista_Flockhart	owl:sameAs	dbpedia-ko:캘리스타_플록하트 .
+@prefix dbpedia-fr:	<http://fr.dbpedia.org/resource/> .
+dbr:Calista_Flockhart	owl:sameAs	dbpedia-fr:Calista_Flockhart ,
+		wikidata:Q26424 .
+@prefix dbpedia-ja:	<http://ja.dbpedia.org/resource/> .
+dbr:Calista_Flockhart	owl:sameAs	dbpedia-ja:キャリスタ・フロックハート .
+@prefix dbpedia-pl:	<http://pl.dbpedia.org/resource/> .
+dbr:Calista_Flockhart	owl:sameAs	dbpedia-pl:Calista_Flockhart .
+@prefix dbpedia-pt:	<http://pt.dbpedia.org/resource/> .
+dbr:Calista_Flockhart	owl:sameAs	dbpedia-pt:Calista_Flockhart .
+@prefix yago-res:	<http://yago-knowledge.org/resource/> .
+dbr:Calista_Flockhart	owl:sameAs	yago-res:Calista_Flockhart .
+@prefix dbpedia-it:	<http://it.dbpedia.org/resource/> .
+dbr:Calista_Flockhart	owl:sameAs	dbpedia-it:Calista_Flockhart .
+@prefix dbpedia-de:	<http://de.dbpedia.org/resource/> .
+dbr:Calista_Flockhart	owl:sameAs	dbpedia-de:Calista_Flockhart ,
+		<http://viaf.org/viaf/84241405> ;
+	dbp:almaMater	dbr:Mason_Gross_School_of_the_Arts ,
+		dbr:Rutgers_University ;
+	dbp:alternativeNames	"Flockhart, Calista Kay"@en ;
+	dbp:birthDate	"1964-11-11"^^xsd:date ;
+	dbp:birthName	"Calista Kay Flockhart"@en ;
+	dbp:children	1 ;
+	dbp:dateOfBirth	"1964-11-11"^^xsd:date ;
+	dbp:occupation	"Actress"@en ;
+	dbp:placeOfBirth	"Freeport, Illinois, United States"@en ;
+	dbp:shortDescription	"television and film actress"@en ;
+	dbp:spouse	dbr:Harrison_Ford ,
+		2010 ;
+	dbp:years	"for The Glass Menagerie"@en ,
+		1995 ;
+	dbp:yearsActive	1989 ;
+	dbp:caption	"Flockhart at the 2009 Deauville American Film Festival"@en ;
+	dbp:title	"Awards for Calista Flockhart"@en ,
+		dbr:Theatre_World_Award .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+dbr:Calista_Flockhart	rdfs:label	"Calista Flockhart"@es ,
+		"\u30AD\u30E3\u30EA\u30B9\u30BF\u30FB\u30D5\u30ED\u30C3\u30AF\u30CF\u30FC\u30C8"@ja ,
+		"Calista Flockhart"@de ,
+		"Calista Flockhart"@nl ,
+		"Calista Flockhart"@en ,
+		"Calista Flockhart"@fr ,
+		"\u0643\u0627\u0644\u064A\u0633\u062A\u0627 \u0641\u0644\u0648\u0643\u0647\u0627\u0631\u062A"@ar ,
+		"Calista Flockhart"@it ,
+		"Calista Flockhart"@pt ,
+		"Calista Flockhart"@pl ,
+		"\u0424\u043B\u043E\u043A\u0445\u0430\u0440\u0442, \u041A\u0430\u043B\u0438\u0441\u0442\u0430"@ru ;
+	rdfs:comment	"Calista Kay Flockhart est une actrice am\u00E9ricaine, n\u00E9e le 11 novembre 1964 \u00E0 Freeport, dans l'Illinois.Elle est connue pour tenir le r\u00F4le principal d'Ally McBeal dans la s\u00E9rie du m\u00EAme nom."@fr ,
+		"\u0643\u0627\u0644\u064A\u0633\u062A\u0627 \u0641\u0644\u0648\u0643\u0647\u0627\u0631\u062A (\u0628\u0627\u0644\u0625\u0646\u062C\u0644\u064A\u0632\u064A\u0629: Calista Flockhart) \u0645\u0648\u0627\u0644\u064A\u062F 11 \u0646\u0648\u0641\u0645\u0628\u0631 1964 \u0641\u064A \u0625\u0644\u064A\u0646\u0648\u064A\u060C \u0627\u0644\u0648\u0644\u0627\u064A\u0627\u062A \u0627\u0644\u0645\u062A\u062D\u062F\u0629\u060C \u0647\u064A \u0645\u0645\u062B\u0644\u0629 \u0623\u0645\u0631\u064A\u0643\u064A\u0629 \u0628\u062F\u0623\u062A \u0645\u0633\u064A\u0631\u062A\u0647\u0627 \u0627\u0644\u0641\u0646\u064A\u0629 \u0639\u0627\u0645 1989. \u0643\u0645\u0627 \u0623\u0646\u0647\u0627 \u0645\u0646 \u0627\u0644\u0641\u0627\u0626\u0632\u0627\u062A \u0628\u062C\u0627\u0626\u0632\u0629 \u063A\u0648\u0644\u062F\u0646 \u063A\u0644\u0648\u0628."@ar ,
+		"Calista Kay Flockhart  (Freeport (Illinois), 11 november 1964) is een Amerikaanse actrice.Na Broadway en rollen in de films Quiz Show en The Birdcage, werd ze voornamelijk bekend door haar titelrol in de televisieserie Ally McBeal. Haar gewichtsverlies gedurende de eerste paar seizoenen van de show was aanleiding voor geruchten dat ze zou lijden aan Anorexia nervosa.Ze is op 15-06-2010 met acteur Harrison Ford getrouwd."@nl ,
+		"\u30AD\u30E3\u30EA\u30B9\u30BF\u30FB\u30D5\u30ED\u30C3\u30AF\u30CF\u30FC\u30C8\uFF08Calista Flockhart, 1964\u5E7411\u670811\u65E5 - \uFF09\u306F\u5973\u512A\u3002\u30A2\u30E1\u30EA\u30AB\u5408\u8846\u56FD\u30A4\u30EA\u30CE\u30A4\u5DDE\u51FA\u8EAB\u3002"@ja ,
+		"Calista Kay Flockhart (n. Freeport, Illinois; 11 de noviembre de 1964) es una actriz estadounidense, conocida por protagonizar la serie Ally McBeal (1997-2002) y por su papel en la serie Cinco hermanos (2006-2011). Est\u00E1 casada con el tambi\u00E9n actor Harrison Ford."@es ,
+		"\u041A\u0430\u043B\u0438\u0441\u0442\u0430 \u0424\u043B\u043E\u043A\u0445\u0430\u0440\u0442 (Calista Kay Flockhart) \u2014 \u0430\u043C\u0435\u0440\u0438\u043A\u0430\u043D\u0441\u043A\u0430\u044F \u0430\u043A\u0442\u0440\u0438\u0441\u0430, \u043D\u0430\u0438\u0431\u043E\u043B\u0435\u0435 \u0438\u0437\u0432\u0435\u0441\u0442\u043D\u0430\u044F \u0441\u0432\u043E\u0438\u043C\u0438 \u0442\u0435\u043B\u0435\u0432\u0438\u0437\u0438\u043E\u043D\u043D\u044B\u043C\u0438 \u0440\u043E\u043B\u044F\u043C\u0438. \u0421 1997 \u043F\u043E 2002 \u0433\u043E\u0434 \u043E\u043D\u0430 \u0438\u0433\u0440\u0430\u043B\u0430 \u0433\u043B\u0430\u0432\u043D\u0443\u044E \u0440\u043E\u043B\u044C \u0432 \u0442\u0435\u043B\u0435\u0441\u0435\u0440\u0438\u0430\u043B\u0435 \u00AB\u042D\u043B\u043B\u0438 \u041C\u0430\u043A\u0411\u0438\u043B\u00BB, \u0437\u0430 \u043A\u043E\u0442\u043E\u0440\u0443\u044E \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0430 \u00AB\u0417\u043E\u043B\u043E\u0442\u043E\u0439 \u0433\u043B\u043E\u0431\u0443\u0441\u00BB \u0432 1997, \u0430 \u0442\u0430\u043A\u0436\u0435 \u0442\u0440\u0438\u0436\u0434\u044B \u0431\u044B\u043B\u0430 \u043D\u043E\u043C\u0438\u043D\u0438\u0440\u043E\u0432\u0430\u043D\u0430 \u043D\u0430 \u0433\u043B\u0430\u0432\u043D\u0443\u044E \u0442\u0435\u043B\u0435\u043F\u0440\u0435\u043C\u0438\u044E \u00AB\u042D\u043C\u043C\u0438\u00BB. \u0421 2006 \u043F\u043E 2011 \u043E\u043D\u0430 \u0438\u0433\u0440\u0430\u043B\u0430 \u0440\u043E\u043B\u044C \u041A\u0438\u0442\u0442\u0438 \u0423\u043E\u043A\u0435\u0440, \u0434\u043E\u0447\u0435\u0440\u0438 \u0433\u0435\u0440\u043E\u0438\u043D\u0438 \u0421\u0430\u043B\u043B\u0438 \u0424\u0438\u043B\u0434 \u2014 \u041D\u043E\u0440\u044B \u0423\u043E\u043A\u0435\u0440 \u0432 \u0442\u0435\u043B\u0435\u0441\u0435\u0440\u0438\u0430\u043B\u0435 \u00AB\u0411\u0440\u0430\u0442\u044C\u044F \u0438 \u0441\u0451\u0441\u0442\u0440\u044B\u00BB."@ru ,
+		"Calista Kay Flockhart (Freeport, 11 de Novembro de 1964) \u00E9 uma actriz norte-americana.\u00C9 conhecida pelo papel da temperamental advogada na s\u00E9rie Ally McBeal. Integrou o elenco das 5 temporadas da s\u00E9rie Brothers & Sisters. \u00C9 casada com o ator Harrison Ford."@pt ,
+		"Calista Kay Flockhart (* 11. November 1964 in Freeport, Illinois) ist eine US-amerikanische Schauspielerin. Ihre bekannteste Rolle ist die der Ally McBeal in der gleichnamigen Fernsehserie."@de ,
+		"Calista Kay Flockhart (born November 11, 1964) is an American actress, known for playing the title role in the Fox television comedy-drama series Ally McBeal and for playing Kitty Walker McCallister on the ABC drama Brothers & Sisters. During her career she has received a Golden Globe Award, a Screen Actors Guild Award and three Emmy Award nominations."@en ;
+	foaf:name	"Flockhart, Calista"@en ,
+		"Calista Flockhart"@en ;
+	dbp:name	"Flockhart, Calista"@en ,
+		"Calista Flockhart"@en ;
+	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Calista_Flockhart_at_the_2009_Deauville_American_Film_Festival-01.jpg> .
+@prefix dc:	<http://purl.org/dc/elements/1.1/> .
+dbr:Calista_Flockhart	dc:description	"television and film actress" ,
+		"television and film actress"@en ;
+	foaf:givenName	"Calista"@en .
+@prefix wikipedia-en:	<http://en.wikipedia.org/wiki/> .
+dbr:Calista_Flockhart	foaf:isPrimaryTopicOf	wikipedia-en:Calista_Flockhart ;
+	foaf:surname	"Flockhart"@en ;
+	dbo:thumbnail	<http://commons.wikimedia.org/wiki/Special:FilePath/Calista_Flockhart_at_the_2009_Deauville_American_Film_Festival-01.jpg?width=300> .
+@prefix prov:	<http://www.w3.org/ns/prov#> .
+dbr:Calista_Flockhart	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Calista_Flockhart?oldid=681745422> ;
+	dbo:abstract	"Calista Kay Flockhart (Freeport, 11 de Novembro de 1964) \u00E9 uma actriz norte-americana.\u00C9 conhecida pelo papel da temperamental advogada na s\u00E9rie Ally McBeal. Integrou o elenco das 5 temporadas da s\u00E9rie Brothers & Sisters. \u00C9 casada com o ator Harrison Ford."@pt ,
+		"Calista Kay Flockhart (born November 11, 1964) is an American actress, known for playing the title role in the Fox television comedy-drama series Ally McBeal and for playing Kitty Walker McCallister on the ABC drama Brothers & Sisters. During her career she has received a Golden Globe Award, a Screen Actors Guild Award and three Emmy Award nominations."@en ,
+		"Calista Kay Flockhart (* 11. November 1964 in Freeport, Illinois) ist eine US-amerikanische Schauspielerin. Ihre bekannteste Rolle ist die der Ally McBeal in der gleichnamigen Fernsehserie."@de ,
+		"Calista Kay Flockhart est une actrice am\u00E9ricaine, n\u00E9e le 11 novembre 1964 \u00E0 Freeport, dans l'Illinois.Elle est connue pour tenir le r\u00F4le principal d'Ally McBeal dans la s\u00E9rie du m\u00EAme nom."@fr ,
+		"Calista Kay Flockhart (n. Freeport, Illinois; 11 de noviembre de 1964) es una actriz estadounidense, conocida por protagonizar la serie Ally McBeal (1997-2002) y por su papel en la serie Cinco hermanos (2006-2011). Est\u00E1 casada con el tambi\u00E9n actor Harrison Ford."@es ,
+		"Calista Kay Flockhart  (Freeport (Illinois), 11 november 1964) is een Amerikaanse actrice.Na Broadway en rollen in de films Quiz Show en The Birdcage, werd ze voornamelijk bekend door haar titelrol in de televisieserie Ally McBeal. Haar gewichtsverlies gedurende de eerste paar seizoenen van de show was aanleiding voor geruchten dat ze zou lijden aan Anorexia nervosa.Ze is op 15-06-2010 met acteur Harrison Ford getrouwd."@nl ,
+		"\u041A\u0430\u043B\u0438\u0441\u0442\u0430 \u0424\u043B\u043E\u043A\u0445\u0430\u0440\u0442 (Calista Kay Flockhart) \u2014 \u0430\u043C\u0435\u0440\u0438\u043A\u0430\u043D\u0441\u043A\u0430\u044F \u0430\u043A\u0442\u0440\u0438\u0441\u0430, \u043D\u0430\u0438\u0431\u043E\u043B\u0435\u0435 \u0438\u0437\u0432\u0435\u0441\u0442\u043D\u0430\u044F \u0441\u0432\u043E\u0438\u043C\u0438 \u0442\u0435\u043B\u0435\u0432\u0438\u0437\u0438\u043E\u043D\u043D\u044B\u043C\u0438 \u0440\u043E\u043B\u044F\u043C\u0438. \u0421 1997 \u043F\u043E 2002 \u0433\u043E\u0434 \u043E\u043D\u0430 \u0438\u0433\u0440\u0430\u043B\u0430 \u0433\u043B\u0430\u0432\u043D\u0443\u044E \u0440\u043E\u043B\u044C \u0432 \u0442\u0435\u043B\u0435\u0441\u0435\u0440\u0438\u0430\u043B\u0435 \u00AB\u042D\u043B\u043B\u0438 \u041C\u0430\u043A\u0411\u0438\u043B\u00BB, \u0437\u0430 \u043A\u043E\u0442\u043E\u0440\u0443\u044E \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0430 \u00AB\u0417\u043E\u043B\u043E\u0442\u043E\u0439 \u0433\u043B\u043E\u0431\u0443\u0441\u00BB \u0432 1997, \u0430 \u0442\u0430\u043A\u0436\u0435 \u0442\u0440\u0438\u0436\u0434\u044B \u0431\u044B\u043B\u0430 \u043D\u043E\u043C\u0438\u043D\u0438\u0440\u043E\u0432\u0430\u043D\u0430 \u043D\u0430 \u0433\u043B\u0430\u0432\u043D\u0443\u044E \u0442\u0435\u043B\u0435\u043F\u0440\u0435\u043C\u0438\u044E \u00AB\u042D\u043C\u043C\u0438\u00BB. \u0421 2006 \u043F\u043E 2011 \u043E\u043D\u0430 \u0438\u0433\u0440\u0430\u043B\u0430 \u0440\u043E\u043B\u044C \u041A\u0438\u0442\u0442\u0438 \u0423\u043E\u043A\u0435\u0440, \u0434\u043E\u0447\u0435\u0440\u0438 \u0433\u0435\u0440\u043E\u0438\u043D\u0438 \u0421\u0430\u043B\u043B\u0438 \u0424\u0438\u043B\u0434 \u2014 \u041D\u043E\u0440\u044B \u0423\u043E\u043A\u0435\u0440 \u0432 \u0442\u0435\u043B\u0435\u0441\u0435\u0440\u0438\u0430\u043B\u0435 \u00AB\u0411\u0440\u0430\u0442\u044C\u044F \u0438 \u0441\u0451\u0441\u0442\u0440\u044B\u00BB."@ru ,
+		"\u30AD\u30E3\u30EA\u30B9\u30BF\u30FB\u30D5\u30ED\u30C3\u30AF\u30CF\u30FC\u30C8\uFF08Calista Flockhart, 1964\u5E7411\u670811\u65E5 - \uFF09\u306F\u5973\u512A\u3002\u30A2\u30E1\u30EA\u30AB\u5408\u8846\u56FD\u30A4\u30EA\u30CE\u30A4\u5DDE\u51FA\u8EAB\u3002"@ja ,
+		"\u0643\u0627\u0644\u064A\u0633\u062A\u0627 \u0641\u0644\u0648\u0643\u0647\u0627\u0631\u062A (\u0628\u0627\u0644\u0625\u0646\u062C\u0644\u064A\u0632\u064A\u0629: Calista Flockhart) \u0645\u0648\u0627\u0644\u064A\u062F 11 \u0646\u0648\u0641\u0645\u0628\u0631 1964 \u0641\u064A \u0625\u0644\u064A\u0646\u0648\u064A\u060C \u0627\u0644\u0648\u0644\u0627\u064A\u0627\u062A \u0627\u0644\u0645\u062A\u062D\u062F\u0629\u060C \u0647\u064A \u0645\u0645\u062B\u0644\u0629 \u0623\u0645\u0631\u064A\u0643\u064A\u0629 \u0628\u062F\u0623\u062A \u0645\u0633\u064A\u0631\u062A\u0647\u0627 \u0627\u0644\u0641\u0646\u064A\u0629 \u0639\u0627\u0645 1989. \u0643\u0645\u0627 \u0623\u0646\u0647\u0627 \u0645\u0646 \u0627\u0644\u0641\u0627\u0626\u0632\u0627\u062A \u0628\u062C\u0627\u0626\u0632\u0629 \u063A\u0648\u0644\u062F\u0646 \u063A\u0644\u0648\u0628."@ar ;
+	dbo:activeYearsStartYear	"1989"^^xsd:gYear ;
+	dbo:alias	"Flockhart, Calista Kay"@en ;
+	dbo:almaMater	dbr:Mason_Gross_School_of_the_Arts ,
+		dbr:Rutgers_University ;
+	dbo:birthName	"Calista Kay Flockhart"@en ;
+	dbo:birthYear	"1964"^^xsd:gYear ;
+	dbo:occupation	dbr:Calista_Flockhart__1 ;
+	dbo:spouse	dbr:Harrison_Ford .
+dbr:Charlize_Theron	dbp:after	dbr:Calista_Flockhart .
+dbr:Harrison_Ford	dbp:spouse	dbr:Calista_Flockhart ;
+	dbo:spouse	dbr:Calista_Flockhart .
+<http://dbpedia.org/resource/A_Midsummer_Night\u0027s_Dream_(1999_film)>	dbp:starring	dbr:Calista_Flockhart ;
+	dbo:starring	dbr:Calista_Flockhart .
+dbr:Flockhart	dbo:wikiPageDisambiguates	dbr:Calista_Flockhart .
+wikipedia-en:Calista_Flockhart	foaf:primaryTopic	dbr:Calista_Flockhart .
+<http://dbpedia.org/resource/List_of_Late_Night_with_Conan_O\u0027Brien_episodes_(season_7)>	dbp:guests	dbr:Calista_Flockhart .
+<http://dbpedia.org/data/Calista_Flockhart.n3>	rdf:type	foaf:Document ;
+	foaf:primaryTopic	dbr:Calista_Flockhart .

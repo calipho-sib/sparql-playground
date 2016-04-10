@@ -1,0 +1,24 @@
+#title:Select things that are persons
+#comment:Selects subjects connected to the object dbo:Person via the predicate rdf:type
+#comment:?thing is the only variable
+#tags:1 graph pattern,1 variable
+#color:ex-blue
+#img:cartoon-rdf-type
+    
+select ?thing where {
+  ?thing rdf:type dbo:Person .
+}
+
+# Remember that in the turtle data (Data tab) we can see: 
+#
+# 'ttr:John a dbo:Person'
+#
+# 'a' can also be used instead of 'rdf:type' 
+# 'a' is a synonym of 'rdf:type'
+
+# The name of the variable can have any value
+
+# Explore snorql:
+#
+# Click on ttr:William to see the properties attached to it
+

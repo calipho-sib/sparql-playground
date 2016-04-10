@@ -1,0 +1,148 @@
+@prefix dbp:	<http://dbpedia.org/property/> .
+@prefix ns1:	<http://dbpedia.org/resource/Twilight_Zone:> .
+@prefix dbr:	<http://dbpedia.org/resource/> .
+ns1:_The_Movie	dbp:writer	dbr:Melissa_Mathison .
+@prefix dbo:	<http://dbpedia.org/ontology/> .
+ns1:_The_Movie	dbo:writer	dbr:Melissa_Mathison .
+dbr:Kundun	dbp:writer	dbr:Melissa_Mathison ;
+	dbo:writer	dbr:Melissa_Mathison .
+<http://dbpedia.org/resource/The_Indian_in_the_Cupboard_(film)>	dbp:screenplay	dbr:Melissa_Mathison ;
+	dbo:writer	dbr:Melissa_Mathison .
+<http://dbpedia.org/resource/E.T._the_Extra-Terrestrial>	dbp:writer	dbr:Melissa_Mathison ;
+	dbo:writer	dbr:Melissa_Mathison .
+dbr:Harrison_Ford	dbp:spouse	dbr:Melissa_Mathison ;
+	dbo:spouse	dbr:Melissa_Mathison .
+dbr:Mathison	dbo:wikiPageDisambiguates	dbr:Melissa_Mathison .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix yago:	<http://dbpedia.org/class/yago/> .
+dbr:Melissa_Mathison	rdf:type	yago:CausalAgent100007347 ,
+		yago:LivingPeople .
+@prefix wikidata:	<http://www.wikidata.org/entity/> .
+dbr:Melissa_Mathison	rdf:type	wikidata:Q28389 ,
+		yago:Screenwriter110564400 ,
+		yago:Object100002684 ,
+		dbo:Agent .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+dbr:Melissa_Mathison	rdf:type	foaf:Person ,
+		yago:YagoLegalActor .
+@prefix ns8:	<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+dbr:Melissa_Mathison	rdf:type	ns8:NaturalPerson ,
+		yago:LivingThing100004258 ,
+		yago:AmericanScreenwriters ,
+		dbo:Writer ,
+		wikidata:Q36180 .
+@prefix schema:	<http://schema.org/> .
+dbr:Melissa_Mathison	rdf:type	schema:Person ,
+		wikidata:Q5 ,
+		yago:Person100007846 ,
+		yago:Scriptwriter110564905 ,
+		yago:Communicator109610660 ,
+		yago:PhysicalEntity100001930 ,
+		yago:Whole100003553 ,
+		yago:Organism100004475 ,
+		dbo:ScreenWriter ,
+		wikidata:Q215627 ,
+		yago:Writer110794014 .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+dbr:Melissa_Mathison	rdf:type	owl:Thing ,
+		dbo:Person ,
+		yago:YagoLegalActorGeo ,
+		ns8:Agent ;
+	dbo:birthPlace	dbr:California ,
+		dbr:Los_Angeles ;
+	dbp:birthPlace	"Los Angeles, California, U.S."@en .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+dbr:Melissa_Mathison	dbo:birthDate	"1950-06-03"^^xsd:date .
+@prefix dct:	<http://purl.org/dc/terms/> .
+dbr:Melissa_Mathison	dct:subject	<http://dbpedia.org/resource/Category:1950_births> .
+@prefix dbc:	<http://dbpedia.org/resource/Category:> .
+dbr:Melissa_Mathison	dct:subject	dbc:American_screenwriters ,
+		dbc:Living_people ,
+		<http://dbpedia.org/resource/Category:People_from_Los_Angeles,_California> ,
+		dbc:American_women_screenwriters ,
+		dbc:Tibet_freedom_activists ;
+	dbo:wikiPageID	1133213 ;
+	dbo:wikiPageRevisionID	672624100 .
+@prefix ns14:	<http://www.w3.org/2006/03/wn/wn20/instances/> .
+dbr:Melissa_Mathison	dbp:wordnet_type	ns14:synset-actor-noun-1 ;
+	owl:sameAs	<http://rdf.freebase.com/ns/m.0493s8> .
+@prefix dbpedia-it:	<http://it.dbpedia.org/resource/> .
+dbr:Melissa_Mathison	owl:sameAs	dbpedia-it:Melissa_Mathison .
+@prefix dbpedia-es:	<http://es.dbpedia.org/resource/> .
+dbr:Melissa_Mathison	owl:sameAs	dbpedia-es:Melissa_Mathison .
+@prefix dbpedia-wikidata:	<http://wikidata.dbpedia.org/resource/> .
+dbr:Melissa_Mathison	owl:sameAs	dbpedia-wikidata:Q435696 .
+@prefix dbpedia-ja:	<http://ja.dbpedia.org/resource/> .
+dbr:Melissa_Mathison	owl:sameAs	dbpedia-ja:メリッサ・マシスン .
+@prefix dbpedia-nl:	<http://nl.dbpedia.org/resource/> .
+dbr:Melissa_Mathison	owl:sameAs	dbpedia-nl:Melissa_Mathison .
+@prefix dbpedia-fr:	<http://fr.dbpedia.org/resource/> .
+dbr:Melissa_Mathison	owl:sameAs	dbpedia-fr:Melissa_Mathison ,
+		wikidata:Q435696 .
+@prefix yago-res:	<http://yago-knowledge.org/resource/> .
+dbr:Melissa_Mathison	owl:sameAs	yago-res:Melissa_Mathison .
+@prefix dbpedia-de:	<http://de.dbpedia.org/resource/> .
+dbr:Melissa_Mathison	owl:sameAs	dbpedia-de:Melissa_Mathison ;
+	dbp:birthDate	"1950-06-03"^^xsd:date ;
+	dbp:birthname	"Melissa Marie Mathison"@en ;
+	dbp:dateOfBirth	"1950-06-03"^^xsd:date ;
+	dbp:occupation	"Screenwriter"@en ;
+	dbp:placeOfBirth	"Los Angeles, California, U.S."@en ;
+	dbp:shortDescription	"American screenwriter"@en ;
+	dbp:spouse	dbr:Harrison_Ford ;
+	dbp:yearsactive	1979 .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+dbr:Melissa_Mathison	rdfs:label	"Melissa Mathison"@es ,
+		"Melissa Mathison"@it ,
+		"\u041C\u044D\u0442\u0438\u0441\u043E\u043D, \u041C\u0435\u043B\u0438\u0441\u0441\u0430"@ru ,
+		"Melissa Mathison"@fr ,
+		"Melissa Mathison"@nl ,
+		"Melissa Mathison"@de ,
+		"Melissa Mathison"@en ,
+		"\u30E1\u30EA\u30C3\u30B5\u30FB\u30DE\u30B7\u30B9\u30F3"@ja ;
+	rdfs:comment	"Melissa Mathison, n\u00E9e le 3 juin 1950, est une sc\u00E9nariste am\u00E9ricaine."@fr ,
+		"Melissa Marie Mathison (born June 3, 1950) is an American film and television screenwriter."@en ,
+		"Melissa Mathison (naci\u00F3 el 3 de junio de 1950) es una escritora estadounidense.Se le conoce por escribir los guiones para las pel\u00EDculas E.T. el Extra-Terrestre (1982), por el que obtuvo una nominaci\u00F3n al \u00F3scar, y Kundun, un filme sobre el Dal\u00E1i Lama. Se cas\u00F3 con Harrison Ford, del que es segunda esposa y con quien tiene dos hijos.Estuvo casada con Paul Short."@es ,
+		"Melissa Mathison (* 3. Juni 1950 in Los Angeles) ist eine US-amerikanische Drehbuchautorin."@de ,
+		"\u00C8 stata una delle principali collaboratrici di Steven Spielberg, nota soprattutto per la sceneggiatura di E.T. l'extra-terrestre che gli \u00E8 valsa il successo internazionale e numerose nomination a premi importanti come l'Oscar, il Golden Globe e il BAFTA.Nel 1983 si \u00E8 sposata con Harrison Ford da cui ha clamorosamente divorziato nel 2004. Buddista praticante ha scritto e coprodotto Kundun di Martin Scorsese sulla vita del Dalai Lama."@it ,
+		"Melissa Mathison (Los Angeles, 3 juni 1950) is een Amerikaanse scenarioschrijfster. Ze was de tweede vrouw van Harrison Ford, met wie ze twee kinderen heeft.Een bekend script dat ze schreef was van E.T. the Extra-Terrestrial van filmregisseur Steven Spielberg uit 1983, waarvoor ze gewaardeerd werd met een Oscar-nominatie en een Saturn Award ontving. Ze schreef verder het draaiboek voor de film Kundun van Martin Scorsese uit 1997 over de jonge veertiende dalai lama Tenzin Gyatso."@nl ,
+		"\u30E1\u30EA\u30C3\u30B5\u30FB\u30DE\u30B7\u30B9\u30F3\uFF08Melissa Mathison, 1950\u5E746\u67083\u65E5 - \uFF09\u306F\u30A2\u30E1\u30EA\u30AB\u5408\u8846\u56FD\u30AB\u30EA\u30D5\u30A9\u30EB\u30CB\u30A2\u5DDE\u30ED\u30B5\u30F3\u30BC\u30EB\u30B9\u51FA\u8EAB\u306E\u811A\u672C\u5BB6\u30021982\u5E74\u306E\u300EE.T.\u300F\u3067\u30A2\u30AB\u30C7\u30DF\u30FC\u811A\u672C\u8CDE\u306B\u30CE\u30DF\u30CD\u30FC\u30C8\u3055\u308C\u305F\u3002\u79C1\u751F\u6D3B\u3067\u306F1983\u5E74\u306B\u4FF3\u512A\u306E\u30CF\u30EA\u30BD\u30F3\u30FB\u30D5\u30A9\u30FC\u30C9\u3068\u7D50\u5A5A\u3057\u5B50\u4F9B\u3092\u4E8C\u4EBA\u3082\u3046\u3051\u305F\u304C\u30012004\u5E74\u306B\u96E2\u5A5A\u3057\u305F\u3002"@ja ,
+		"\u041C\u0435\u043B\u0438\u0441\u0441\u0430 \u041C\u044D\u0442\u0438\u0441\u043E\u043D (\u0430\u043D\u0433\u043B. Melissa Mathison, \u0440\u043E\u0434. 3 \u0438\u044E\u043D\u044F 1950, \u041B\u043E\u0441-\u0410\u043D\u0434\u0436\u0435\u043B\u0435\u0441, \u041A\u0430\u043B\u0438\u0444\u043E\u0440\u043D\u0438\u044F, \u0421\u0428\u0410) \u2014 \u0430\u043C\u0435\u0440\u0438\u043A\u0430\u043D\u0441\u043A\u0438\u0439 \u0441\u0446\u0435\u043D\u0430\u0440\u0438\u0441\u0442 \u0438 \u043F\u0440\u043E\u0434\u044E\u0441\u0435\u0440, \u0438\u0437\u0432\u0435\u0441\u0442\u043D\u0430\u044F \u043F\u043E \u0441\u0446\u0435\u043D\u0430\u0440\u0438\u044E \u043A \u0444\u0438\u043B\u044C\u043C\u0443 \u00AB\u0418\u043D\u043E\u043F\u043B\u0430\u043D\u0435\u0442\u044F\u043D\u0438\u043D\u00BB, \u0437\u0430 \u0447\u0442\u043E \u0431\u044B\u043B\u0430 \u043D\u043E\u043C\u0438\u043D\u0438\u0440\u043E\u0432\u0430\u043D\u0430 \u043D\u0430 \u043C\u043D\u043E\u0436\u0435\u0441\u0442\u0432\u043E \u043F\u0440\u0435\u0441\u0442\u0438\u0436\u043D\u044B\u0445 \u043A\u0438\u043D\u043E\u043D\u0430\u0433\u0440\u0430\u0434, \u0432 \u0442\u043E\u043C \u0447\u0438\u0441\u043B\u0435 \u043D\u0430 \u00AB\u041E\u0441\u043A\u0430\u0440\u00BB."@ru ;
+	foaf:name	"Mathison, Melissa"@en ,
+		"Melissa Mathison"@en ;
+	dbp:name	"Mathison, Melissa"@en ,
+		"Melissa Mathison"@en .
+@prefix dc:	<http://purl.org/dc/elements/1.1/> .
+dbr:Melissa_Mathison	dc:description	"American screenwriter" ,
+		"American screenwriter"@en ;
+	foaf:givenName	"Melissa"@en .
+@prefix wikipedia-en:	<http://en.wikipedia.org/wiki/> .
+dbr:Melissa_Mathison	foaf:isPrimaryTopicOf	wikipedia-en:Melissa_Mathison ;
+	foaf:surname	"Mathison"@en .
+@prefix prov:	<http://www.w3.org/ns/prov#> .
+dbr:Melissa_Mathison	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Melissa_Mathison?oldid=672624100> ;
+	dbo:abstract	"\u00C8 stata una delle principali collaboratrici di Steven Spielberg, nota soprattutto per la sceneggiatura di E.T. l'extra-terrestre che gli \u00E8 valsa il successo internazionale e numerose nomination a premi importanti come l'Oscar, il Golden Globe e il BAFTA.Nel 1983 si \u00E8 sposata con Harrison Ford da cui ha clamorosamente divorziato nel 2004. Buddista praticante ha scritto e coprodotto Kundun di Martin Scorsese sulla vita del Dalai Lama."@it ,
+		"Melissa Marie Mathison (born June 3, 1950) is an American film and television screenwriter."@en ,
+		"\u041C\u0435\u043B\u0438\u0441\u0441\u0430 \u041C\u044D\u0442\u0438\u0441\u043E\u043D (\u0430\u043D\u0433\u043B. Melissa Mathison, \u0440\u043E\u0434. 3 \u0438\u044E\u043D\u044F 1950, \u041B\u043E\u0441-\u0410\u043D\u0434\u0436\u0435\u043B\u0435\u0441, \u041A\u0430\u043B\u0438\u0444\u043E\u0440\u043D\u0438\u044F, \u0421\u0428\u0410) \u2014 \u0430\u043C\u0435\u0440\u0438\u043A\u0430\u043D\u0441\u043A\u0438\u0439 \u0441\u0446\u0435\u043D\u0430\u0440\u0438\u0441\u0442 \u0438 \u043F\u0440\u043E\u0434\u044E\u0441\u0435\u0440, \u0438\u0437\u0432\u0435\u0441\u0442\u043D\u0430\u044F \u043F\u043E \u0441\u0446\u0435\u043D\u0430\u0440\u0438\u044E \u043A \u0444\u0438\u043B\u044C\u043C\u0443 \u00AB\u0418\u043D\u043E\u043F\u043B\u0430\u043D\u0435\u0442\u044F\u043D\u0438\u043D\u00BB, \u0437\u0430 \u0447\u0442\u043E \u0431\u044B\u043B\u0430 \u043D\u043E\u043C\u0438\u043D\u0438\u0440\u043E\u0432\u0430\u043D\u0430 \u043D\u0430 \u043C\u043D\u043E\u0436\u0435\u0441\u0442\u0432\u043E \u043F\u0440\u0435\u0441\u0442\u0438\u0436\u043D\u044B\u0445 \u043A\u0438\u043D\u043E\u043D\u0430\u0433\u0440\u0430\u0434, \u0432 \u0442\u043E\u043C \u0447\u0438\u0441\u043B\u0435 \u043D\u0430 \u00AB\u041E\u0441\u043A\u0430\u0440\u00BB."@ru ,
+		"Melissa Mathison (naci\u00F3 el 3 de junio de 1950) es una escritora estadounidense.Se le conoce por escribir los guiones para las pel\u00EDculas E.T. el Extra-Terrestre (1982), por el que obtuvo una nominaci\u00F3n al \u00F3scar, y Kundun, un filme sobre el Dal\u00E1i Lama. Se cas\u00F3 con Harrison Ford, del que es segunda esposa y con quien tiene dos hijos.Estuvo casada con Paul Short."@es ,
+		"Melissa Mathison (Los Angeles, 3 juni 1950) is een Amerikaanse scenarioschrijfster. Ze was de tweede vrouw van Harrison Ford, met wie ze twee kinderen heeft.Een bekend script dat ze schreef was van E.T. the Extra-Terrestrial van filmregisseur Steven Spielberg uit 1983, waarvoor ze gewaardeerd werd met een Oscar-nominatie en een Saturn Award ontving. Ze schreef verder het draaiboek voor de film Kundun van Martin Scorsese uit 1997 over de jonge veertiende dalai lama Tenzin Gyatso. Voor het script van deze film ontving ze de Light of Truth Award van de International Campaign for Tibet.Andere draaiboeken van haar hand waren The Black Stallion uit 1979 en The Indian in the Cupboard uit 1995.Als boeddhist werd ze ge\u00EFnterviewd voor de documentaire Refuge van filmregisseur John Halpern uit 2006."@nl ,
+		"\u30E1\u30EA\u30C3\u30B5\u30FB\u30DE\u30B7\u30B9\u30F3\uFF08Melissa Mathison, 1950\u5E746\u67083\u65E5 - \uFF09\u306F\u30A2\u30E1\u30EA\u30AB\u5408\u8846\u56FD\u30AB\u30EA\u30D5\u30A9\u30EB\u30CB\u30A2\u5DDE\u30ED\u30B5\u30F3\u30BC\u30EB\u30B9\u51FA\u8EAB\u306E\u811A\u672C\u5BB6\u30021982\u5E74\u306E\u300EE.T.\u300F\u3067\u30A2\u30AB\u30C7\u30DF\u30FC\u811A\u672C\u8CDE\u306B\u30CE\u30DF\u30CD\u30FC\u30C8\u3055\u308C\u305F\u3002\u79C1\u751F\u6D3B\u3067\u306F1983\u5E74\u306B\u4FF3\u512A\u306E\u30CF\u30EA\u30BD\u30F3\u30FB\u30D5\u30A9\u30FC\u30C9\u3068\u7D50\u5A5A\u3057\u5B50\u4F9B\u3092\u4E8C\u4EBA\u3082\u3046\u3051\u305F\u304C\u30012004\u5E74\u306B\u96E2\u5A5A\u3057\u305F\u3002"@ja ,
+		"Melissa Mathison (* 3. Juni 1950 in Los Angeles) ist eine US-amerikanische Drehbuchautorin."@de ,
+		"Melissa Mathison, n\u00E9e le 3 juin 1950, est une sc\u00E9nariste am\u00E9ricaine."@fr ;
+	dbo:activeYearsStartYear	"1979"^^xsd:gYear ;
+	dbo:birthName	"Melissa Marie Mathison"@en ;
+	dbo:birthYear	"1950"^^xsd:gYear ;
+	dbo:occupation	dbr:Melissa_Mathison__1 ,
+		dbr:Screenwriter ;
+	dbo:spouse	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/The_BFG_(2016_film)>	dbp:screenplay	dbr:Melissa_Mathison ;
+	dbo:writer	dbr:Melissa_Mathison .
+<http://dbpedia.org/resource/The_Black_Stallion_(film)>	dbp:screenplay	dbr:Melissa_Mathison ;
+	dbo:writer	dbr:Melissa_Mathison .
+dbr:The_Escape_Artist	dbp:writer	dbr:Melissa_Mathison ;
+	dbo:writer	dbr:Melissa_Mathison .
+<http://dbpedia.org/resource/Son_of_the_Morning_Star_(film)>	dbp:writer	dbr:Melissa_Mathison ;
+	dbo:writer	dbr:Melissa_Mathison .
+wikipedia-en:Melissa_Mathison	foaf:primaryTopic	dbr:Melissa_Mathison .
+<http://dbpedia.org/data/Melissa_Mathison.n3>	rdf:type	foaf:Document ;
+	foaf:primaryTopic	dbr:Melissa_Mathison .

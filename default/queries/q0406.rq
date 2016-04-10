@@ -1,4 +1,4 @@
-#title:Get Harrison Ford's pets, name and birth date 
+#title:Get Harrison Ford's pets and birth date 
 #comment:Some information is retrieved from dbpedia (name, birth date) using a federated query  
 #comment:through the SERVICE keyword. The graph retrieved is combined with the local graph
 #comment:and solutions are built from the distant and local graph pattern matching processes.
@@ -7,10 +7,9 @@
 #color:ex-green
 
 SELECT * where {
+   VALUES ?subj {dbpedia:Harrison_Ford}
    ?subj tto:pet ?pet .
    SERVICE <http://dbpedia.org/sparql> {
-	   VALUES ?subj {dbpedia:Harrison_Ford}
-	   ?subj dbp:name ?name .
-       ?subj dbp:birthDate ?bd .
+       ?subj dbp:birthDate ?birthday .
 	 }
 }

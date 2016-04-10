@@ -1,0 +1,318 @@
+@prefix dbo:	<http://dbpedia.org/ontology/> .
+@prefix dbr:	<http://dbpedia.org/resource/> .
+<http://dbpedia.org/resource/Ford,_Harrison>	dbo:wikiPageRedirects	dbr:Harrison_Ford .
+dbr:Harison_Ford	dbo:wikiPageRedirects	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Harrison_Ford_(actor)>	dbo:wikiPageRedirects	dbr:Harrison_Ford .
+dbr:Harrison_ford	dbo:wikiPageRedirects	dbr:Harrison_Ford .
+@prefix dbp:	<http://dbpedia.org/property/> .
+<http://dbpedia.org/resource/Patriot_Games_(film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:What_Lies_Beneath	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Indiana_Jones_(franchise)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Jack_Ryan_(character)>	dbp:portrayer	dbr:Harrison_Ford ;
+	dbo:portrayer	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Heroes_(1977_film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Indiana_Jones_and_the_Temple_of_Doom	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:The_Conversation	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Witness_(1985_film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Crossing_Over_(film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:The_Frisco_Kid	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Frantic_(film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Working_Girl	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:The_Mosquito_Coast	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/The_Devil\u0027s_Own>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Regarding_Henry	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+@prefix ns3:	<http://dbpedia.org/resource/Star_Wars:> .
+ns3:_The_Force_Awakens	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Star_Wars_Holiday_Special	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/The_Possessed_(1977_film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Presumed_Innocent_(film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Journey_to_Shiloh	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Six_Days_Seven_Nights	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Clear_and_Present_Danger_(film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Dalai_Lama_Renaissance	dbp:narrator	dbr:Harrison_Ford ;
+	dbo:narrator	dbr:Harrison_Ford .
+dbr:The_Making_of_Star_Wars	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:The_Age_of_Adaline	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Firewall_(film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Hollywood_Homicide	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Extraordinary_Measures	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Cowboys_&_Aliens>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Apocalypse_Now_Redux	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Return_of_the_Ewok	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Calista_Flockhart	dbp:spouse	dbr:Harrison_Ford ;
+	dbo:spouse	dbr:Harrison_Ford .
+dbr:Indiana_Jones	dbp:portrayer	dbr:Harrison_Ford ;
+	dbo:portrayer	dbr:Harrison_Ford .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+dbr:Harrison_Ford	rdf:type	owl:Thing .
+@prefix yago:	<http://dbpedia.org/class/yago/> .
+dbr:Harrison_Ford	rdf:type	yago:Person100007846 ,
+		yago:Performer110415638 ,
+		yago:YagoLegalActor ,
+		yago:Whole100003553 ,
+		yago:Object100002684 ,
+		yago:Woodworker110790192 ,
+		yago:Reformer110515194 ,
+		yago:Entertainer109616922 ,
+		yago:Worker109632518 ,
+		yago:YagoLegalActorGeo ,
+		yago:Carpenter109896685 ,
+		yago:AmericanPeopleOfBelarusian-JewishDescent ,
+		yago:LivingThing100004258 .
+@prefix ns7:	<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+dbr:Harrison_Ford	rdf:type	ns7:Agent .
+@prefix umbel-rc:	<http://umbel.org/umbel/rc/> .
+dbr:Harrison_Ford	rdf:type	umbel-rc:Artist ,
+		yago:LivingPeople ,
+		umbel-rc:Actor ,
+		yago:Craftsman109974648 ,
+		yago:Carpenters .
+@prefix schema:	<http://schema.org/> .
+dbr:Harrison_Ford	rdf:type	schema:Person ,
+		yago:Actor109765278 ,
+		yago:Environmentalist110060621 ,
+		yago:SkilledWorker110605985 ,
+		yago:Organism100004475 ,
+		<http://dbpedia.org/class/yago/PeopleFromParkRidge,Illinois> ,
+		ns7:NaturalPerson ,
+		dbo:Agent ,
+		yago:AmericanPeopleOfGermanDescent ,
+		<http://dbpedia.org/class/yago/ActorsFromChicago,Illinois> ,
+		yago:CausalAgent100007347 ,
+		yago:AmericanTelevisionActors ,
+		yago:AmericanAviators ,
+		yago:PhysicalEntity100001930 ,
+		yago:AmericanPeopleOfIrishDescent ,
+		dbo:Person .
+@prefix wikidata:	<http://www.wikidata.org/entity/> .
+dbr:Harrison_Ford	rdf:type	wikidata:Q215627 .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+dbr:Harrison_Ford	rdf:type	foaf:Person ,
+		yago:Aviator109826204 ,
+		yago:Disputant109615465 ,
+		yago:AmericanFilmActors ,
+		wikidata:Q5 ,
+		yago:AmericanConservationists ;
+	dbp:birthPlace	"Chicago, Illinois, U.S."@en .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+dbr:Harrison_Ford	dbo:birthDate	"1942-07-13"^^xsd:date .
+@prefix dct:	<http://purl.org/dc/terms/> .
+@prefix dbc:	<http://dbpedia.org/resource/Category:> .
+dbr:Harrison_Ford	dct:subject	dbc:American_male_film_actors ,
+		<http://dbpedia.org/resource/Category:21st-century_American_male_actors> ,
+		<http://dbpedia.org/resource/Category:Male_actors_from_Chicago,_Illinois> ,
+		dbc:Survivors_of_aviation_accidents_or_incidents ,
+		<http://dbpedia.org/resource/Category:1942_births> ,
+		dbc:People_banned_from_entering_China ,
+		<http://dbpedia.org/resource/Category:20th-century_American_male_actors> ,
+		dbc:American_people_of_Russian-Jewish_descent ,
+		dbc:American_people_of_Irish_descent ,
+		dbc:American_people_of_German_descent ,
+		dbc:Tibet_freedom_artists ,
+		dbc:American_people_of_Belarusian-Jewish_descent ,
+		dbc:American_conservationists ,
+		dbc:Living_people ,
+		dbc:American_carpenters ,
+		dbc:California_Democrats ,
+		dbc:American_aviators ,
+		<http://dbpedia.org/resource/Category:Actors_from_Park_Ridge,_Illinois> ,
+		<http://dbpedia.org/resource/Category:Cecil_B._DeMille_Award_Golden_Globe_winners> ,
+		dbc:Aviators_from_Illinois ,
+		dbc:American_male_television_actors ;
+	dbo:wikiPageID	44059 ;
+	dbo:wikiPageRevisionID	683840059 .
+@prefix ns15:	<http://www.verticalmag.com/news/article/> .
+dbr:Harrison_Ford	dbo:wikiPageExternalLink	ns15:VideoFeatureHarrisonFordsBell407GX .
+@prefix ns16:	<http://www.w3.org/2006/03/wn/wn20/instances/> .
+dbr:Harrison_Ford	dbp:wordnet_type	ns16:synset-actor-noun-1 .
+@prefix dbpedia-fr:	<http://fr.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-fr:Harrison_Ford ,
+		<http://data.linkedmdb.org/resource/actor/755> .
+@prefix dbpedia-id:	<http://id.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-id:Harrison_Ford .
+@prefix dbpedia-eu:	<http://eu.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-eu:Harrison_Ford .
+@prefix dbpedia-nl:	<http://nl.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-nl:Harrison_Ford .
+@prefix dbpedia-de:	<http://de.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-de:Harrison_Ford ,
+		wikidata:Q81328 ,
+		<http://viaf.org/viaf/85338964> .
+@prefix dbpedia-el:	<http://el.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-el:Χάρισον_Φορντ .
+@prefix yago-res:	<http://yago-knowledge.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	yago-res:Harrison_Ford .
+@prefix nyt:	<http://data.nytimes.com/> .
+dbr:Harrison_Ford	owl:sameAs	nyt:N67046777445705385433 .
+@prefix dbpedia-es:	<http://es.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-es:Harrison_Ford .
+@prefix dbpedia-pt:	<http://pt.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-pt:Harrison_Ford .
+@prefix dbpedia-wikidata:	<http://wikidata.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-wikidata:Q81328 ,
+		<http://rdf.freebase.com/ns/m.0c0k1> .
+@prefix dbpedia-ja:	<http://ja.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-ja:ハリソン・フォード .
+@prefix opencyc:	<http://sw.opencyc.org/concept/> .
+dbr:Harrison_Ford	owl:sameAs	opencyc:Mx4rvup_m5wpEbGdrcN5Y29ycA .
+@prefix dbpedia-cs:	<http://cs.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-cs:Harrison_Ford .
+@prefix dbpedia-ko:	<http://ko.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-ko:해리슨_포드 .
+@prefix dbpedia-pl:	<http://pl.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-pl:Harrison_Ford .
+@prefix dbpedia-it:	<http://it.dbpedia.org/resource/> .
+dbr:Harrison_Ford	owl:sameAs	dbpedia-it:Harrison_Ford ;
+	dbp:align	"right"@en ;
+	dbp:birthDate	"1942-07-13"^^xsd:date ;
+	dbp:children	5 ;
+	dbp:occupation	"*Actor\n*producer"@en ;
+	dbp:relations	dbr:Terence_Ford ;
+	dbp:spouse	1983 ,
+		1979 ,
+		2010 ,
+		2004 ,
+		dbr:Melissa_Mathison ,
+		"Mary Marquardt"@en ,
+		dbr:Calista_Flockhart ,
+		1964 ;
+	dbp:video	ns15:VideoFeatureHarrisonFordsBell407GX ;
+	dbp:years	1992 ,
+		1993 ,
+		1998 ;
+	dbp:yearsActive	1966 ;
+	dbp:caption	"Ford at the 2015 San Diego Comic-Con International"@en ;
+	dbp:title	<http://dbpedia.org/resource/Jack_Ryan_(character)> ,
+		"Awards for Harrison Ford"@en ,
+		<http://dbpedia.org/resource/The_Fugitive_(TV_series)> ,
+		"People Sexiest Man Alive"@en .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+dbr:Harrison_Ford	rdfs:label	"\u0424\u043E\u0440\u0434, \u0425\u0430\u0440\u0440\u0438\u0441\u043E\u043D"@ru ,
+		"Harrison Ford"@nl ,
+		"\u54C8\u91CC\u68EE\u00B7\u798F\u7279"@zh ,
+		"Harrison Ford"@it ,
+		"\u0647\u0627\u0631\u064A\u0633\u0648\u0646 \u0641\u0648\u0631\u062F"@ar ,
+		"Harrison Ford"@pt ,
+		"Harrison Ford"@fr ,
+		"\u30CF\u30EA\u30BD\u30F3\u30FB\u30D5\u30A9\u30FC\u30C9"@ja ,
+		"Harrison Ford"@en ,
+		"Harrison Ford"@es ,
+		"Harrison Ford"@pl ,
+		"Harrison Ford"@de ;
+	rdfs:comment	"Harrison Ford (Chicago, 13 de julio de 1942) es un actor estadounidense de cine y televisi\u00F3n.Debe su notoriedad a su colaboraci\u00F3n con el guionista, productor y director George Lucas, que fue el primero en darle la posibilidad de consagrarse como actor. Sus papeles de Han Solo en la trilog\u00EDa original de Star Wars y de Indiana Jones lo elevaron al nivel de estrella internacional."@es ,
+		"Harrison Ford (Chicago, 13 de julho de 1942) \u00E9 um ator estadunidense. Ford \u00E9 mais conhecido pelas atua\u00E7\u00F5es como Han Solo nos filmes Star Wars, Deckard em Blade Runner e Indiana Jones na quadrilogia de filmes Indiana Jones."@pt ,
+		"\u0425\u0430\u0301\u0440\u0440\u0438\u0441\u043E\u043D \u0424\u043E\u0440\u0434 (\u0430\u043D\u0433\u043B. Harrison Ford; \u0440\u043E\u0434. 13 \u0438\u044E\u043B\u044F 1942(19420713), \u0427\u0438\u043A\u0430\u0433\u043E, \u0418\u043B\u043B\u0438\u043D\u043E\u0439\u0441) \u2014 \u0430\u043C\u0435\u0440\u0438\u043A\u0430\u043D\u0441\u043A\u0438\u0439 \u0430\u043A\u0442\u0451\u0440 \u0438 \u043F\u0440\u043E\u0434\u044E\u0441\u0435\u0440. \u041D\u043E\u043C\u0438\u043D\u0430\u043D\u0442 \u043D\u0430 \u043F\u0440\u0435\u043C\u0438\u044E \u00AB\u041E\u0441\u043A\u0430\u0440\u00BB, BAFTA, \u0447\u0435\u0442\u044B\u0440\u0451\u0445\u043A\u0440\u0430\u0442\u043D\u044B\u0439 \u043D\u043E\u043C\u0438\u043D\u0430\u043D\u0442 \u0438 \u043E\u0431\u043B\u0430\u0434\u0430\u0442\u0435\u043B\u044C \u0441\u043F\u0435\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0439 \u043F\u0440\u0435\u043C\u0438\u0438 \u00AB\u0417\u043E\u043B\u043E\u0442\u043E\u0439 \u0433\u043B\u043E\u0431\u0443\u0441\u00BB. \u041D\u0430\u0438\u0431\u043E\u043B\u0435\u0435 \u0438\u0437\u0432\u0435\u0441\u0442\u0435\u043D \u043F\u043E \u0443\u0447\u0430\u0441\u0442\u0438\u044E \u0432 \u0441\u0435\u0440\u0438\u0438 \u0444\u0438\u043B\u044C\u043C\u043E\u0432 \u00AB\u0417\u0432\u0451\u0437\u0434\u043D\u044B\u0435 \u0432\u043E\u0439\u043D\u044B\u00BB \u0438 \u0441\u0435\u0440\u0438\u0438 \u0444\u0438\u043B\u044C\u043C\u043E\u0432 \u043E\u0431 \u0418\u043D\u0434\u0438\u0430\u043D\u0435 \u0414\u0436\u043E\u043D\u0441\u0435, \u0430 \u0442\u0430\u043A\u0436\u0435 \u043F\u043E \u0444\u0438\u043B\u044C\u043C\u0430\u043C \u00AB\u0411\u0435\u0433\u0443\u0449\u0438\u0439 \u043F\u043E \u043B\u0435\u0437\u0432\u0438\u044E\u00BB, \u00AB\u0418\u0433\u0440\u044B \u043F\u0430\u0442\u0440\u0438\u043E\u0442\u043E\u0432\u00BB, \u00AB\u0411\u0435\u0433\u043B\u0435\u0446\u00BB, \u00AB\u0421\u0430\u043C\u043E\u043B\u0451\u0442 \u043F\u0440\u0435\u0437\u0438\u0434\u0435\u043D\u0442\u0430\u00BB, \u00AB\u041A-19\u00BB."@ru ,
+		"Harrison Ford (* 13. Juli 1942 in Chicago, Illinois) ist ein US-amerikanischer Schauspieler und Produzent. Ford, der unter anderem in drei Filmen der Reihe Star Wars als Han Solo zu sehen war, gilt als einer der kommerziell erfolgreichsten Darsteller der Filmgeschichte. Besondere Popularit\u00E4t erlangte Ford in der Rolle des Arch\u00E4ologen und Abenteurers Indiana Jones, den er seit 1981 in vier Filmen darstellte."@de ,
+		"Tra la fine degli anni settanta e l'inizio dei novanta del XX secolo, ha partecipato ad alcuni dei film statunitensi di maggiore successo di quel periodo."@it ,
+		"\u30CF\u30EA\u30BD\u30F3\u30FB\u30D5\u30A9\u30FC\u30C9\uFF08Harrison Ford, 1942\u5E747\u670813\u65E5 - \uFF09\u306F\u3001\u30A2\u30E1\u30EA\u30AB\u5408\u8846\u56FD\u306E\u4FF3\u512A\u3067\u3042\u308B\u3002\u30A4\u30EA\u30CE\u30A4\u5DDE\u30B7\u30AB\u30B4\u751F\u307E\u308C\u3002\u7236\u89AA\u306E\u30AF\u30EA\u30B9\u30C8\u30D5\u30A1\u30FC\u30FB\u30D5\u30A9\u30FC\u30C9\u306F\u30A2\u30A4\u30EB\u30E9\u30F3\u30C9\u7CFB\u30A2\u30E1\u30EA\u30AB\u4EBA\u3067\u5143\u4FF3\u512A\u3001\u6BCD\u89AA\u306E\u30C9\u30ED\u30B7\u30FC\u30FB\u30D5\u30A9\u30FC\u30C9\u306F\u30E9\u30B8\u30AA\u5973\u512A\u3067\u30ED\u30B7\u30A2\u7CFB\u30E6\u30C0\u30E4\u4EBA\u3002\u8EAB\u9577183cm\u3002\u300C\u30CF\u30EA\u30B9\u30F3\u30D5\u30A9\u30FC\u30C9\u300D\u3068\u8A18\u3055\u308C\u308B\u5834\u5408\u3082\u3042\u308B\u304C\u3001\u8AA4\u308A\u3002\u300C\u30CF\u30EA\u30BD\u30F3\u30D5\u30A9\u30FC\u30C9\u300D\u304C\u6B63\u3057\u3044\u3002"@ja ,
+		"Harrison Ford (Chicago, 13 juli 1942) is een Amerikaans filmacteur. Hij is gespecialiseerd in het spelen van heldenrollen die hij in filmreeksen speelt. Hij speelde Han Solo in de Star Warssaga, archeoloog Indiana Jones in vier avonturenfilms en hij was als geheim agent Jack Ryan te zien in Patriot Games en Clear and Present Danger.Door deze filmrollen is hij \u00E9\u00E9n van de succesvolste acteurs van Hollywood geworden."@nl ,
+		"Harrison Ford (born July 13, 1942) is an American actor and film producer. He gained worldwide fame for his starring roles as Han Solo in the original Star Wars epic space opera trilogy and the title character of the Indiana Jones film series."@en ,
+		"Harrison Ford est un acteur am\u00E9ricain n\u00E9 le 13 juillet 1942 \u00E0 Chicago (Illinois). Sa collaboration avec George Lucas, qui a \u00E9t\u00E9 le premier \u00E0 lui donner l'occasion de s'affirmer en tant qu'acteur avec American Graffiti, lui permet d'acc\u00E9der au rang de vedette internationale avec les r\u00F4les de Han Solo dans la trilogie originelle de Star Wars et d'Indiana Jones."@fr ,
+		"\u0647\u0627\u0631\u064A\u0633\u0648\u0646 \u0641\u0648\u0631\u062F (\u0628\u0627\u0644\u0625\u0646\u062C\u0644\u064A\u0632\u064A\u0629: Harrison Ford) \u0648\u0644\u062F \u0641\u064A 13 \u064A\u0648\u0644\u064A\u0648 1942 \u0644\u0627\u0628 \u0623\u064A\u0631\u0644\u0646\u062F\u064A \u0648\u0627\u0645 \u064A\u0647\u0648\u062F\u064A\u0629, \u0647\u0648 \u0645\u0645\u062B\u0644 \u0623\u0645\u0631\u064A\u0643\u064A \u064A\u0639\u062F \u0647\u0648 \u0648\u0633\u0644\u0641\u0633\u062A\u0631 \u0633\u062A\u0627\u0644\u0648\u0646 \u0648\u0634\u0648\u0627\u0632\u0646\u064A\u062C\u0631 \u0648\u062A\u0648\u0645 \u0647\u0627\u0646\u0643\u0633 \u0645\u0646 \u0623\u0641\u0636\u0644 10 \u0645\u0645\u062B\u0644\u064A\u0646 \u0641\u064A \u062A\u0627\u0631\u064A\u062E \u0627\u0644\u0633\u064A\u0646\u0645\u0627, \u0643\u0627\u0646 \u064A\u0639\u0645\u0644 \u0646\u062C\u0627\u0631 \u0642\u0628\u0644 \u0623\u0646 \u064A\u0643\u0648\u0646 \u0645\u0645\u062B\u0644, \u0627\u0634\u062A\u0647\u0631 \u0628\u062F\u0648\u0631 \u0647\u0627\u0646 \u0633\u0648\u0644\u0648 \u0641\u064A \u0641\u064A\u0644\u0645 \u062D\u0631\u0628 \u0627\u0644\u0646\u062C\u0648\u0645, \u0648\u0643\u0630\u0644\u0643 \u0627\u0634\u062A\u0647\u0631 \u0628\u062F\u0648\u0631\u0647 \u0641\u064A \u0633\u0644\u0633\u0644\u0629 \u0623\u0641\u0644\u0627\u0645 \u0625\u0646\u062F\u064A\u0627\u0646\u0627 \u062C\u0648\u0646\u0632.\u062A\u0639\u0631\u0636 \u0644\u062D\u0627\u062F\u062B \u0627\u0635\u0637\u062F\u0627\u0645  \u062E\u0637\u064A\u0631 \u0628\u0637\u0627\u0626\u0631\u062A\u0647 \u0627\u0644\u062E\u0627\u0635\u0629 \u0648\u0647\u0648 \u064A\u062D\u0644\u0642 \u0641\u064A \u0645\u0644\u0639\u0628 \u0644\u0644\u063A\u0648\u0644\u0641 \u0641\u064A \u0645\u062F\u064A\u0646\u0629 \u0644\u0648\u0633 \u0627\u0646\u062C\u0644\u064A\u0633 \u064A\u0648\u0645 \u0627\u0644\u062E\u0645\u064A\u0633 05 \u0645\u0627\u0631\u0633 2015 \u0641\u062A\u0645 \u0646\u0642\u0644\u0647 \u0627\u0644\u0649 \u0627\u0644\u0645\u0633\u062A\u0634\u0641\u0649 \u0641\u064A \u062D\u0627\u0644\u0629 \u062E\u0637\u064A\u0631\u0629 ."@ar ;
+	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Harrison_Ford_by_Gage_Skidmore.jpg> .
+@prefix wikipedia-en:	<http://en.wikipedia.org/wiki/> .
+dbr:Harrison_Ford	foaf:isPrimaryTopicOf	wikipedia-en:Harrison_Ford ;
+	dbo:thumbnail	<http://commons.wikimedia.org/wiki/Special:FilePath/Harrison_Ford_by_Gage_Skidmore.jpg?width=300> .
+@prefix prov:	<http://www.w3.org/ns/prov#> .
+dbr:Harrison_Ford	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Harrison_Ford?oldid=683840059> ;
+	dbo:abstract	"Harrison Ford est un acteur am\u00E9ricain n\u00E9 le 13 juillet 1942 \u00E0 Chicago (Illinois). Sa collaboration avec George Lucas, qui a \u00E9t\u00E9 le premier \u00E0 lui donner l'occasion de s'affirmer en tant qu'acteur avec American Graffiti, lui permet d'acc\u00E9der au rang de vedette internationale avec les r\u00F4les de Han Solo dans la trilogie originelle de Star Wars et d'Indiana Jones. Son statut d'acteur majeur du cin\u00E9ma de divertissement lui vaut d'\u00EAtre consacr\u00E9 \u00AB star du si\u00E8cle du box-office \u00BB en 1994 par l'Association nationale des propri\u00E9taires de salles de spectacle. En effet, les films dans lesquels il a tenu un r\u00F4le majeur ont engendr\u00E9 pr\u00E8s de six milliards de dollars dans le monde.Depuis plusieurs ann\u00E9es, Harrison Ford met sa notori\u00E9t\u00E9 au service de la conservation de la nature et de la pr\u00E9servation de l'environnement en sensibilisant l'opinion notamment sur le cas critique de la d\u00E9forestation des for\u00EAts tropicales."@fr ,
+		"\u0647\u0627\u0631\u064A\u0633\u0648\u0646 \u0641\u0648\u0631\u062F (\u0628\u0627\u0644\u0625\u0646\u062C\u0644\u064A\u0632\u064A\u0629: Harrison Ford) \u0648\u0644\u062F \u0641\u064A 13 \u064A\u0648\u0644\u064A\u0648 1942 \u0644\u0627\u0628 \u0623\u064A\u0631\u0644\u0646\u062F\u064A \u0648\u0627\u0645 \u064A\u0647\u0648\u062F\u064A\u0629, \u0647\u0648 \u0645\u0645\u062B\u0644 \u0623\u0645\u0631\u064A\u0643\u064A \u064A\u0639\u062F \u0647\u0648 \u0648\u0633\u0644\u0641\u0633\u062A\u0631 \u0633\u062A\u0627\u0644\u0648\u0646 \u0648\u0634\u0648\u0627\u0632\u0646\u064A\u062C\u0631 \u0648\u062A\u0648\u0645 \u0647\u0627\u0646\u0643\u0633 \u0645\u0646 \u0623\u0641\u0636\u0644 10 \u0645\u0645\u062B\u0644\u064A\u0646 \u0641\u064A \u062A\u0627\u0631\u064A\u062E \u0627\u0644\u0633\u064A\u0646\u0645\u0627, \u0643\u0627\u0646 \u064A\u0639\u0645\u0644 \u0646\u062C\u0627\u0631 \u0642\u0628\u0644 \u0623\u0646 \u064A\u0643\u0648\u0646 \u0645\u0645\u062B\u0644, \u0627\u0634\u062A\u0647\u0631 \u0628\u062F\u0648\u0631 \u0647\u0627\u0646 \u0633\u0648\u0644\u0648 \u0641\u064A \u0641\u064A\u0644\u0645 \u062D\u0631\u0628 \u0627\u0644\u0646\u062C\u0648\u0645, \u0648\u0643\u0630\u0644\u0643 \u0627\u0634\u062A\u0647\u0631 \u0628\u062F\u0648\u0631\u0647 \u0641\u064A \u0633\u0644\u0633\u0644\u0629 \u0623\u0641\u0644\u0627\u0645 \u0625\u0646\u062F\u064A\u0627\u0646\u0627 \u062C\u0648\u0646\u0632.\u062A\u0639\u0631\u0636 \u0644\u062D\u0627\u062F\u062B \u0627\u0635\u0637\u062F\u0627\u0645  \u062E\u0637\u064A\u0631 \u0628\u0637\u0627\u0626\u0631\u062A\u0647 \u0627\u0644\u062E\u0627\u0635\u0629 \u0648\u0647\u0648 \u064A\u062D\u0644\u0642 \u0641\u064A \u0645\u0644\u0639\u0628 \u0644\u0644\u063A\u0648\u0644\u0641 \u0641\u064A \u0645\u062F\u064A\u0646\u0629 \u0644\u0648\u0633 \u0627\u0646\u062C\u0644\u064A\u0633 \u064A\u0648\u0645 \u0627\u0644\u062E\u0645\u064A\u0633 05 \u0645\u0627\u0631\u0633 2015 \u0641\u062A\u0645 \u0646\u0642\u0644\u0647 \u0627\u0644\u0649 \u0627\u0644\u0645\u0633\u062A\u0634\u0641\u0649 \u0641\u064A \u062D\u0627\u0644\u0629 \u062E\u0637\u064A\u0631\u0629 ."@ar ,
+		"Harrison Ford (Chicago, 13 juli 1942) is een Amerikaans filmacteur. Hij is gespecialiseerd in het spelen van heldenrollen die hij in filmreeksen speelt. Hij speelde Han Solo in de Star Warssaga, archeoloog Indiana Jones in vier avonturenfilms en hij was als geheim agent Jack Ryan te zien in Patriot Games en Clear and Present Danger.Door deze filmrollen is hij \u00E9\u00E9n van de succesvolste acteurs van Hollywood geworden. Bij elkaar hebben zijn films in de Verenigde staten zo'n 3,4 miljard dollar opgebracht."@nl ,
+		"Harrison Ford (Chicago, 13 de julho de 1942) \u00E9 um ator estadunidense. Ford \u00E9 mais conhecido pelas atua\u00E7\u00F5es como Han Solo nos filmes Star Wars, Deckard em Blade Runner e Indiana Jones na quadrilogia de filmes Indiana Jones."@pt ,
+		"Harrison Ford (* 13. Juli 1942 in Chicago, Illinois) ist ein US-amerikanischer Schauspieler und Produzent. Ford, der unter anderem in drei Filmen der Reihe Star Wars als Han Solo zu sehen war, gilt als einer der kommerziell erfolgreichsten Darsteller der Filmgeschichte. Besondere Popularit\u00E4t erlangte Ford in der Rolle des Arch\u00E4ologen und Abenteurers Indiana Jones, den er seit 1981 in vier Filmen darstellte. In Filmen wie Der einzige Zeuge (1985), Mosquito Coast (1986) und In Sachen Henry (1991) konnte er sich auch als Charakterdarsteller profilieren."@de ,
+		"\u0425\u0430\u0301\u0440\u0440\u0438\u0441\u043E\u043D \u0424\u043E\u0440\u0434 (\u0430\u043D\u0433\u043B. Harrison Ford; \u0440\u043E\u0434. 13 \u0438\u044E\u043B\u044F 1942(19420713), \u0427\u0438\u043A\u0430\u0433\u043E, \u0418\u043B\u043B\u0438\u043D\u043E\u0439\u0441) \u2014 \u0430\u043C\u0435\u0440\u0438\u043A\u0430\u043D\u0441\u043A\u0438\u0439 \u0430\u043A\u0442\u0451\u0440 \u0438 \u043F\u0440\u043E\u0434\u044E\u0441\u0435\u0440. \u041D\u043E\u043C\u0438\u043D\u0430\u043D\u0442 \u043D\u0430 \u043F\u0440\u0435\u043C\u0438\u044E \u00AB\u041E\u0441\u043A\u0430\u0440\u00BB, BAFTA, \u0447\u0435\u0442\u044B\u0440\u0451\u0445\u043A\u0440\u0430\u0442\u043D\u044B\u0439 \u043D\u043E\u043C\u0438\u043D\u0430\u043D\u0442 \u0438 \u043E\u0431\u043B\u0430\u0434\u0430\u0442\u0435\u043B\u044C \u0441\u043F\u0435\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0439 \u043F\u0440\u0435\u043C\u0438\u0438 \u00AB\u0417\u043E\u043B\u043E\u0442\u043E\u0439 \u0433\u043B\u043E\u0431\u0443\u0441\u00BB. \u041D\u0430\u0438\u0431\u043E\u043B\u0435\u0435 \u0438\u0437\u0432\u0435\u0441\u0442\u0435\u043D \u043F\u043E \u0443\u0447\u0430\u0441\u0442\u0438\u044E \u0432 \u0441\u0435\u0440\u0438\u0438 \u0444\u0438\u043B\u044C\u043C\u043E\u0432 \u00AB\u0417\u0432\u0451\u0437\u0434\u043D\u044B\u0435 \u0432\u043E\u0439\u043D\u044B\u00BB \u0438 \u0441\u0435\u0440\u0438\u0438 \u0444\u0438\u043B\u044C\u043C\u043E\u0432 \u043E\u0431 \u0418\u043D\u0434\u0438\u0430\u043D\u0435 \u0414\u0436\u043E\u043D\u0441\u0435, \u0430 \u0442\u0430\u043A\u0436\u0435 \u043F\u043E \u0444\u0438\u043B\u044C\u043C\u0430\u043C \u00AB\u0411\u0435\u0433\u0443\u0449\u0438\u0439 \u043F\u043E \u043B\u0435\u0437\u0432\u0438\u044E\u00BB, \u00AB\u0418\u0433\u0440\u044B \u043F\u0430\u0442\u0440\u0438\u043E\u0442\u043E\u0432\u00BB, \u00AB\u0411\u0435\u0433\u043B\u0435\u0446\u00BB, \u00AB\u0421\u0430\u043C\u043E\u043B\u0451\u0442 \u043F\u0440\u0435\u0437\u0438\u0434\u0435\u043D\u0442\u0430\u00BB, \u00AB\u041A-19\u00BB."@ru ,
+		"Tra la fine degli anni settanta e l'inizio dei novanta del XX secolo, ha partecipato ad alcuni dei film statunitensi di maggiore successo di quel periodo. Molti dei personaggi interpretati da Ford consistono in eroi duri, decisi ma sempre lievemente autoironici, tra i quali i pi\u00F9 noti sono il contrabbandiere spaziale Ian Solo nella prima trilogia di Guerre stellari di George Lucas, l'archeologo Indiana Jones nella tetralogia di film diretti da Steven Spielberg e prodotti dallo stesso Lucas, l'agente della CIA Jack Ryan in Giochi di potere e Sotto il segno del pericolo, e il cacciatore di replicanti Rick Deckard in Blade Runner di Ridley Scott."@it ,
+		"Harrison Ford (born July 13, 1942) is an American actor and film producer. He gained worldwide fame for his starring roles as Han Solo in the original Star Wars epic space opera trilogy and the title character of the Indiana Jones film series. Ford is also known for his roles as Rick Deckard in the 1982 neo-noir dystopian science fiction film Blade Runner, John Book in the 1985 thriller Witness, and Jack Ryan in the 1992 action-suspense film Patriot Games and the 1994 spy action thriller film Clear and Present Danger.His career has spanned six decades and includes roles in several Hollywood blockbusters; including the epic war film Apocalypse Now (1979), the legal drama Presumed Innocent (1990), the action film The Fugitive (1993), the political action thriller Air Force One (1997) and the psychological thriller What Lies Beneath (2000). At one point, four of the top six box-office hits of all time included one of his roles. Seven of his films have been inducted into the National Film Registry: American Graffiti (1973), The Conversation (1974), Star Wars (1977), Apocalypse Now, The Empire Strikes Back (1980), Raiders of the Lost Ark (1981) and Blade Runner.In 1997, Ford was ranked No. 1 in Empire\u200D\u200D\u200A'\u200B\u200Ds \"The Top 100 Movie Stars of All Time\" list. As of July 2008, the US domestic box office grosses of Ford's films total over US$3.5 billion, with worldwide grosses surpassing $6 billion, making Ford the 4th highest grossing U.S. domestic box-office star. Ford is married to actress Calista Flockhart, who is known for playing the title role in the comedy-drama series Ally McBeal."@en ,
+		"\u30CF\u30EA\u30BD\u30F3\u30FB\u30D5\u30A9\u30FC\u30C9\uFF08Harrison Ford, 1942\u5E747\u670813\u65E5 - \uFF09\u306F\u3001\u30A2\u30E1\u30EA\u30AB\u5408\u8846\u56FD\u306E\u4FF3\u512A\u3067\u3042\u308B\u3002\u30A4\u30EA\u30CE\u30A4\u5DDE\u30B7\u30AB\u30B4\u751F\u307E\u308C\u3002\u7236\u89AA\u306E\u30AF\u30EA\u30B9\u30C8\u30D5\u30A1\u30FC\u30FB\u30D5\u30A9\u30FC\u30C9\u306F\u30A2\u30A4\u30EB\u30E9\u30F3\u30C9\u7CFB\u30A2\u30E1\u30EA\u30AB\u4EBA\u3067\u5143\u4FF3\u512A\u3001\u6BCD\u89AA\u306E\u30C9\u30ED\u30B7\u30FC\u30FB\u30D5\u30A9\u30FC\u30C9\u306F\u30E9\u30B8\u30AA\u5973\u512A\u3067\u30ED\u30B7\u30A2\u7CFB\u30E6\u30C0\u30E4\u4EBA\u3002\u8EAB\u9577183cm\u3002\u300C\u30CF\u30EA\u30B9\u30F3\u30D5\u30A9\u30FC\u30C9\u300D\u3068\u8A18\u3055\u308C\u308B\u5834\u5408\u3082\u3042\u308B\u304C\u3001\u8AA4\u308A\u3002\u300C\u30CF\u30EA\u30BD\u30F3\u30D5\u30A9\u30FC\u30C9\u300D\u304C\u6B63\u3057\u3044\u3002"@ja ,
+		"Harrison Ford (Chicago, 13 de julio de 1942) es un actor estadounidense de cine y televisi\u00F3n.Debe su notoriedad a su colaboraci\u00F3n con el guionista, productor y director George Lucas, que fue el primero en darle la posibilidad de consagrarse como actor. Sus papeles de Han Solo en la trilog\u00EDa original de Star Wars y de Indiana Jones lo elevaron al nivel de estrella internacional. Aunque un fracaso inicial en taquilla, la pel\u00EDcula de Ridley Scott Blade Runner, donde desempe\u00F1a el papel del cazador de replicantes Rick Deckard, termin\u00F3 convirti\u00E9ndose en una pel\u00EDcula de culto de la ciencia ficci\u00F3n.Con m\u00E1s de cinco mil seiscientos millones de d\u00F3lares recaudados en todo el mundo por sus pel\u00EDculas, Ford es el actor con mayores ingresos en taquilla de la historia. En 1998 fue elegido, con cincuenta y seis a\u00F1os, el hombre vivo m\u00E1s sexy del mundo por la revista estadounidense People, y en 1995 por la brit\u00E1nica Empire como uno de los cien actores m\u00E1s sexy de la historia (en el puesto 15).Mundialmente famoso por sus papeles en pel\u00EDculas de acci\u00F3n y aventuras, fue galardonado con el premio Cecil B. DeMille en reconocimiento a su trayectoria cinematogr\u00E1fica en la gala de los Globos de Oro de 2002 y con el C\u00E9sar honor\u00EDfico al conjunto de su carrera en 2010; en 1994 la National Association of Theatre Owners le otorg\u00F3 el t\u00EDtulo de \u00ABEstrella del siglo del box-office\u00BB. Adem\u00E1s de las distinciones personales recibidas, seis de las pel\u00EDculas en las que trabaj\u00F3 figuran en el National Film Registry, y cinco est\u00E1n clasificadas en el \u00ABtop 100\u00BB del American Film Institute.Ha puesto su notoriedad al servicio de la conservaci\u00F3n de la naturaleza y de la preservaci\u00F3n del medioambiente, sensibilizando particularmente sobre la situaci\u00F3n cr\u00EDtica de deforestaci\u00F3n de los bosques tropicales."@es ;
+	dbo:activeYearsStartYear	"1966"^^xsd:gYear ;
+	dbo:birthYear	"1942"^^xsd:gYear ;
+	dbo:occupation	dbr:Harrison_Ford__2 ;
+	dbo:relation	dbr:Terence_Ford ;
+	dbo:spouse	dbr:Melissa_Mathison ,
+		dbr:Calista_Flockhart .
+@prefix ns37:	<http://dbpedia.org/resource/K-19:> .
+ns37:_The_Widowmaker	dbp:producer	dbr:Harrison_Ford ;
+	dbo:producer	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Indiana_Jones_and_the_Last_Crusade	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Return_of_the_Jedi	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Air_Force_One_(film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Dynasty_(film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Force_10_from_Navarone_(film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Morning_Glory_(2010_film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Paranoia_(2013_film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Rick_Deckard	dbp:portrayer	dbr:Harrison_Ford ;
+	dbo:portrayer	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/42_(film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:Melissa_Mathison	dbp:spouse	dbr:Harrison_Ford ;
+	dbo:spouse	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Hearts_of_Darkness:_A_Filmmaker\u0027s_Apocalypse>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/List_of_The_Tonight_Show_with_Jay_Leno_episodes_(2010)>	dbp:guests	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/List_of_The_Tonight_Show_with_Jay_Leno_episodes_(1992\u201399)>	dbp:guests	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Star_Wars_(film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Sabrina_(1995_film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/The_Force_(Star_Wars)>	dbp:actor	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/Hanover_Street_(film)>	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+dbr:The_Expendables_3	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+wikipedia-en:Harrison_Ford	foaf:primaryTopic	dbr:Harrison_Ford .
+@prefix ns38:	<http://dbpedia.org/resource/Drew:> .
+ns38:_The_Man_Behind_the_Poster	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+@prefix ns39:	<http://dbpedia.org/resource/Flying_The_Feathered_Edge:> .
+ns39:_The_Bob_Hoover_Project	dbp:starring	dbr:Harrison_Ford ;
+	dbo:starring	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/List_of_The_Late_Late_Show_with_Craig_Ferguson_episodes_(2013)>	dbp:guests	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/List_of_Late_Night_with_Jimmy_Fallon_episodes_(2013\u201314)>	dbp:guests	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/List_of_The_Tonight_Show_with_Jay_Leno_episodes_(2013\u201314)>	dbp:guests	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/List_of_Conan_episodes_(2010\u201311)>	dbp:guests	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/List_of_Conan_episodes_(2013)>	dbp:guests	dbr:Harrison_Ford .
+dbr:The_Complete_Guide_to_Everything	dbp:title	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/List_of_Late_Night_with_Conan_O\u0027Brien_episodes_(season_10)>	dbp:guests	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/List_of_Late_Night_with_Conan_O\u0027Brien_episodes_(season_13)>	dbp:guests	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/List_of_Late_Night_with_Conan_O\u0027Brien_episodes_(season_7)>	dbp:guests	dbr:Harrison_Ford .
+<http://dbpedia.org/resource/List_of_Late_Night_with_Conan_O\u0027Brien_episodes_(season_9)>	dbp:guests	dbr:Harrison_Ford .
+<http://dbpedia.org/data/Harrison_Ford.n3>	rdf:type	foaf:Document ;
+	foaf:primaryTopic	dbr:Harrison_Ford .

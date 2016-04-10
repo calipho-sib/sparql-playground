@@ -1,0 +1,15 @@
+#title:Harrison Ford' spouses and their age difference
+#tags:1 graph pattern,SERVICE, BIND
+color:ex-green
+
+SELECT * where {
+   SERVICE <http://dbpedia.org/sparql> {
+	   VALUES ?subj {dbpedia:Harrison_Ford}
+	   ?subj dbp:spouse ?spouse .
+       ?spouse a dbo:Person .
+       ?subj dbp:birthDate ?harrisonFordBirthday .
+	   ?spouse dbp:birthDate ?spouseBirthday .
+	 }
+	 # Computes the age difference
+	 #BIND (year(?spouseBirthday) - ( year(?harrisonFordBirthday)) AS ?ageDiff )	   
+}
