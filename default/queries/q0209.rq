@@ -17,7 +17,7 @@ select ?pet where {
 # but you could see the potential of union in a real scenario, where we would have many owners and we would 
 # like to filter just a few of them
 #
-# Alternatively you can also use the keyword VALUES (faster option)
+# Alternatively you can also use the keyword VALUES that sets what the values of ?owner could be (faster option)
 #
 # select ?owner ?pet where {
 #	VALUES (?owner) { (ttr:William) (ttr:John) }

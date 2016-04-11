@@ -1,5 +1,5 @@
 #title:Get Harrison Ford's pets and birth date 
-#comment:Some information is retrieved from dbpedia (name, birth date) using a federated query  
+#comment:The birthday variable is retrieved from dbpedia using a federated query  
 #comment:through the SERVICE keyword. The graph retrieved is combined with the local graph
 #comment:and solutions are built from the distant and local graph pattern matching processes.
 #comment:The local graph pattern
