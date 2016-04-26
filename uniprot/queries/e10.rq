@@ -6,7 +6,7 @@
 SELECT ?uniprot ?uniparc ?embl
 WHERE
 {
-	?uniprot rdf:seeAlso ?embl .
+	?uniprot rdfs:seeAlso ?embl .
         ?embl up:database *** .
         ?uniparc up:sequenceFor ?uniprot , ?embl .
 }
