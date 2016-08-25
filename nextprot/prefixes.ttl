@@ -21,3 +21,4 @@ prefix interaction: <http://nextprot.org/rdf/interaction/>
 prefix skos: <http://www.w3.org/2004/02/skos/core#> 
 prefix uniprot: <http://purl.uniprot.org/uniprot/> 
 prefix unipage: <http://www.uniprot.org/uniprot/> 
+prefix proteoform: <http://nextprot.org/rdf/proteoform/> 
