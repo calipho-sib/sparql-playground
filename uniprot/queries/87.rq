@@ -1,0 +1,8 @@
+#title: Constructing an owl:sameAs between two IRI (this is an example wrong in practice)
+CONSTRUCT {
+	?taxon owl:sameAs ?ncbi
+} WHERE {
+	?taxon a up:Taxon .
+	BIND("http://www.ncbi.nlm.gov/taxonomy/" AS ?base)
+	BIND(IRI(CONCAT(?base, substr(?taxon, 34) AS ?ncbi)
+}

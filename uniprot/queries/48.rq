@@ -1,0 +1,9 @@
+#title:Minus (Negation 2)
+SELECT ?taxon ?name
+WHERE
+{
+	?taxon a up:Taxon .
+        MINUS {
+		?taxon up:commonName ?name .
+        }
+}

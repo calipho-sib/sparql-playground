@@ -1,0 +1,5 @@
+#title: HAVING  a filter for aggeregates
+SELECT ?taxon
+WHERE {
+  ?taxon up:otherName ?name
+} GROUP BY ?taxon HAVING (COUNT(?name) > 2)

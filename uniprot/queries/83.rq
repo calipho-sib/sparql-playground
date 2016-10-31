@@ -1,0 +1,5 @@
+#title: ORDER BY name descending 
+SELECT *
+WHERE {
+ ?taxon up:scientificName ?name .
+} ORDER BY DESC(?name)

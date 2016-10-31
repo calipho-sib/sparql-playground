@@ -1,0 +1,5 @@
+#title:BIND concat string
+SELECT ?newVar WHERE {
+	?taxon a up:Taxon ; up:scientific ?name .
+        BIND(concat("Hello, ", ?name, ". Nice to meet you.") AS ?greeting)
+}

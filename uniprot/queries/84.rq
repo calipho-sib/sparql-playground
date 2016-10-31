@@ -1,0 +1,6 @@
+#title: VALUES selecting two taxons
+SELECT *
+WHERE {
+	VALUES (?taxon) {(taxon:9993) (taxon:9994)}
+	?taxon up:scientificName ?name
+}

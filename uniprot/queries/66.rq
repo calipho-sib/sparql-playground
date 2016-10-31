@@ -1,0 +1,6 @@
+#title: REGEX like a java|python|perl5 regex
+SELECT *
+WHERE {
+	?taxon up:scientificName ?name .
+        FILTER(regex(?name, "(marmota ?){2}", "i"))
+}

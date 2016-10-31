@@ -1,0 +1,7 @@
+#title: UNION for OR of predicate
+SELECT ?name
+WHERE {
+	{taxon:9994 up:scientificName ?name .}
+	UNION 
+	{taxon:9994 up:otherName ?name .}
+}

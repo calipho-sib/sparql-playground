@@ -1,0 +1,381 @@
+@base <http://purl.uniprot.org/taxonomy/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sha: <http://purl.uniprot.org/SHA-384/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix up: <http://purl.uniprot.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<9994> rdf:type up:Taxon ;
+  up:rank up:Subspecies ;
+  up:reviewed true ;
+  up:mnemonic "MARMA" ;
+  up:scientificName "Marmota marmota marmota" ;
+  up:commonName "Alpine marmot" ;
+  rdfs:seeAlso <http://www.arkive.org/alpine-marmot/marmota-marmota/info.html> ,
+    <https://en.wikipedia.org/wiki/Alpine_Marmot> ;
+  foaf:depiction <http://cache.corbis.com/Agent/10/24/20/10242068.jpg> ,
+    <http://www.biolib.cz/IMG/GAL/2578.jpg> ,
+    <https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Marmotte_des_Pyr%C3%A9n%C3%A9es.jpg/800px-Marmotte_des_Pyr%C3%A9n%C3%A9es.jpg> ;
+  rdfs:subClassOf <9993> ;
+  up:partOfLineage false .
+<http://cache.corbis.com/Agent/10/24/20/10242068.jpg> rdf:type foaf:Image ;
+  up:width 169 ;
+  up:height 256 .
+<http://www.biolib.cz/IMG/GAL/2578.jpg> rdf:type foaf:Image ;
+  up:width 600 ;
+  up:height 400 .
+<https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Marmotte_des_Pyr%C3%A9n%C3%A9es.jpg/800px-Marmotte_des_Pyr%C3%A9n%C3%A9es.jpg> rdf:type foaf:Image ;
+  up:width 800 ;
+  up:height 533 .
+<9993> rdf:type up:Taxon ;
+  up:rank up:Species ;
+  up:reviewed true ;
+  up:mnemonic "MARMR" ;
+  up:scientificName "Marmota marmota" ;
+  up:commonName "Alpine marmot" ;
+  up:otherName "European marmot" ;
+  rdfs:seeAlso <http://animaldiversity.ummz.umich.edu/site/accounts/information/Marmota_marmota.html> ,
+    <http://www.alphagalileo.org/Organisations/ViewItem.aspx?OrganisationId=2043&ItemId=70106&CultureCode=en> ,
+    <http://www.arkive.org/alpine-marmot/marmota-marmota/info.html> ,
+    <http://www.biolib.cz/en/taxon/id20598/> ,
+    <http://www.marmotburrow.ucla.edu/alpine.html> ,
+    <http://www.waza.org/en/zoo/pick-a-picture/marmota-marmota> ,
+    <https://en.wikipedia.org/wiki/Alpine_Marmot> ,
+    <https://en.wikipedia.org/wiki/Marmot> ;
+  foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Marmota_marmota_Alpes2.jpg/800px-Marmota_marmota_Alpes2.jpg> ,
+    <https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Marmota_marmota_IMG_8980.jpg/715px-Marmota_marmota_IMG_8980.jpg> ;
+  rdfs:subClassOf <9992> ;
+  skos:narrowerTransitive <9994> ;
+  up:partOfLineage false .
+<https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Marmota_marmota_Alpes2.jpg/800px-Marmota_marmota_Alpes2.jpg> rdf:type foaf:Image ;
+  up:width 800 ;
+  up:height 598 .
+<https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Marmota_marmota_IMG_8980.jpg/715px-Marmota_marmota_IMG_8980.jpg> rdf:type foaf:Image ;
+  up:width 715 ;
+  up:height 600 .
+<9992> rdf:type up:Taxon ;
+  up:rank up:Genus ;
+  up:scientificName "Marmota" ;
+  up:otherName "Marmota Blumenbach, 1779" ;
+  rdfs:subClassOf <337730> ;
+  skos:narrowerTransitive <9993> ,
+    <9995> ,
+    <71802> ,
+    <93157> ,
+    <93158> ,
+    <93159> ,
+    <93160> ,
+    <93161> ,
+    <93162> ,
+    <93163> ,
+    <93164> ,
+    <93165> ,
+    <93166> ,
+    <93167> ,
+    <1607863> ;
+  up:partOfLineage true .
+<337730> rdf:type up:Taxon ;
+  up:rank up:Tribe ;
+  up:scientificName "Marmotini" ;
+  up:otherName "Marmotini Pocock, 1923" ;
+  rdfs:subClassOf <337726> ;
+  skos:narrowerTransitive <9992> ,
+    <9996> ,
+    <13712> ,
+    <45478> ,
+    <45485> ,
+    <226848> ,
+    <1048899> ,
+    <1141636> ,
+    <1141637> ,
+    <1141640> ,
+    <1141641> ,
+    <1141643> ,
+    <1141645> ;
+  up:partOfLineage true .
+<337726> rdf:type up:Taxon ;
+  up:rank up:Subfamily ;
+  up:scientificName "Xerinae" ;
+  rdfs:subClassOf <55153> ;
+  skos:narrowerTransitive <337729> ,
+    <337730> ,
+    <337733> ;
+  up:partOfLineage true .
+<55153> rdf:type up:Taxon ;
+  up:rank up:Family ;
+  up:mnemonic "9SCIU" ;
+  up:scientificName "Sciuridae" ;
+  rdfs:subClassOf <33553> ;
+  skos:narrowerTransitive <9991> ,
+    <337720> ,
+    <337722> ,
+    <337724> ,
+    <337726> ,
+    <1002716> ;
+  up:partOfLineage true .
+<33553> rdf:type up:Taxon ;
+  up:rank up:Suborder ;
+  up:scientificName "Sciurognathi" ;
+  up:otherName "Myomorpha" ,
+    "Sciuromorpha" ;
+  rdfs:subClassOf <9989> ;
+  skos:narrowerTransitive <10010> ,
+    <10015> ,
+    <10021> ,
+    <10164> ,
+    <29132> ,
+    <30648> ,
+    <30650> ,
+    <51340> ,
+    <55153> ,
+    <101663> ,
+    <337687> ;
+  up:partOfLineage true .
+<9989> rdf:type up:Taxon ;
+  up:rank up:Order ;
+  up:mnemonic "9RODE" ;
+  up:scientificName "Rodentia" ;
+  up:otherName "rodent" ,
+    "rodents" ;
+  rdfs:subClassOf <314147> ;
+  skos:narrowerTransitive <33550> ,
+    <33553> ,
+    <69157> ;
+  up:partOfLineage true .
+<314147> rdf:type up:Taxon ;
+  up:scientificName "Glires" ;
+  up:commonName "Rodents and rabbits" ;
+  rdfs:subClassOf <314146> ;
+  skos:narrowerTransitive <9975> ,
+    <9989> ;
+  up:partOfLineage true .
+<314146> rdf:type up:Taxon ;
+  up:rank up:Superorder ;
+  up:scientificName "Euarchontoglires" ;
+  rdfs:subClassOf <1437010> ;
+  skos:narrowerTransitive <9392> ,
+    <9443> ,
+    <30656> ,
+    <314147> ;
+  up:partOfLineage true .
+<1437010> rdf:type up:Taxon ;
+  up:scientificName "Boreoeutheria" ;
+  up:otherName "Boreotheria" ;
+  rdfs:subClassOf <9347> ;
+  skos:narrowerTransitive <314145> ,
+    <314146> ;
+  up:partOfLineage false .
+<9347> rdf:type up:Taxon ;
+  up:mnemonic "9EUTH" ;
+  up:scientificName "Eutheria" ;
+  up:otherName "Placentalia" ,
+    "eutherian mammals" ,
+    "placental mammals" ,
+    "placentals" ;
+  rdfs:subClassOf <32525> ;
+  skos:narrowerTransitive <9348> ,
+    <311790> ,
+    <1437010> ,
+    <1563120> ,
+    <1563124> ;
+  up:partOfLineage true .
+<32525> rdf:type up:Taxon ;
+  up:mnemonic "9THER" ;
+  up:scientificName "Theria" ;
+  up:otherName "Theria Parker & Haswell, 1897" ;
+  rdfs:subClassOf <40674> ;
+  skos:narrowerTransitive <9263> ,
+    <9347> ;
+  up:partOfLineage false .
+<40674> rdf:type up:Taxon ;
+  up:rank up:Class ;
+  up:mnemonic "9MAMM" ;
+  up:scientificName "Mammalia" ;
+  up:otherName "mammals" ;
+  rdfs:subClassOf <32524> ;
+  skos:narrowerTransitive <9254> ,
+    <32525> ,
+    <1002697> ,
+    <1092586> ;
+  up:partOfLineage true .
+<32524> rdf:type up:Taxon ;
+  up:mnemonic "9AMIO" ;
+  up:scientificName "Amniota" ;
+  up:otherName "amniotes" ;
+  rdfs:subClassOf <32523> ;
+  skos:narrowerTransitive <8457> ,
+    <40674> ;
+  up:partOfLineage false .
+<32523> rdf:type up:Taxon ;
+  up:reviewed false ;
+  up:mnemonic "9TETR" ;
+  up:scientificName "Tetrapoda" ;
+  up:otherName "tetrapods" ;
+  rdfs:subClassOf <1338369> ;
+  skos:narrowerTransitive <8292> ,
+    <32524> ;
+  up:partOfLineage false .
+<1338369> rdf:type up:Taxon ;
+  up:scientificName "Dipnotetrapodomorpha" ;
+  rdfs:subClassOf <8287> ;
+  skos:narrowerTransitive <7878> ,
+    <32523> ;
+  up:partOfLineage false .
+<8287> rdf:type up:Taxon ;
+  up:mnemonic "9SARC" ;
+  up:scientificName "Sarcopterygii" ;
+  rdfs:subClassOf <117571> ;
+  skos:narrowerTransitive <118072> ,
+    <1338369> ;
+  up:partOfLineage false .
+<117571> rdf:type up:Taxon ;
+  up:mnemonic "9EUTE" ;
+  up:scientificName "Euteleostomi" ;
+  up:otherName "bony vertebrates" ;
+  rdfs:subClassOf <117570> ;
+  skos:narrowerTransitive <7898> ,
+    <8287> ;
+  up:partOfLineage true .
+<117570> rdf:type up:Taxon ;
+  up:scientificName "Teleostomi" ;
+  rdfs:subClassOf <7776> ;
+  skos:narrowerTransitive <117571> ;
+  up:partOfLineage false .
+<7776> rdf:type up:Taxon ;
+  up:scientificName "Gnathostomata" ;
+  up:commonName "jawed vertebrates" ;
+  rdfs:subClassOf <7742> ;
+  skos:narrowerTransitive <7777> ,
+    <117570> ;
+  up:partOfLineage false .
+<7742> rdf:type up:Taxon ;
+  up:mnemonic "9VERT" ;
+  up:scientificName "Vertebrata" ;
+  up:otherName "Vertebrata Cuvier, 1812" ,
+    "vertebrates" ;
+  rdfs:subClassOf <89593> ;
+  skos:narrowerTransitive <7776> ,
+    <1476529> ,
+    <1476749> ;
+  up:partOfLineage true .
+<89593> rdf:type up:Taxon ;
+  up:rank up:Subphylum ;
+  up:mnemonic "9CRAN" ;
+  up:scientificName "Craniata" ;
+  rdfs:subClassOf <7711> ;
+  skos:narrowerTransitive <7742> ;
+  up:partOfLineage true .
+<7711> rdf:type up:Taxon ;
+  up:rank up:Phylum ;
+  up:mnemonic "9CHOR" ;
+  up:scientificName "Chordata" ;
+  up:otherName "chordates" ;
+  rdfs:subClassOf <33511> ;
+  skos:narrowerTransitive <7712> ,
+    <7735> ,
+    <89593> ,
+    <547488> ,
+    <1003298> ;
+  up:partOfLineage true .
+<33511> rdf:type up:Taxon ;
+  up:scientificName "Deuterostomia" ;
+  up:otherName "deuterostomes" ;
+  rdfs:subClassOf <33213> ;
+  skos:narrowerTransitive <7586> ,
+    <7711> ,
+    <10219> ,
+    <10229> ,
+    <1312402> ;
+  up:partOfLineage false .
+<33213> rdf:type up:Taxon ;
+  up:mnemonic "9BILA" ;
+  up:scientificName "Bilateria" ;
+  rdfs:subClassOf <6072> ;
+  skos:narrowerTransitive <6157> ,
+    <33317> ,
+    <33511> ,
+    <66780> ,
+    <190469> ,
+    <589317> ;
+  up:partOfLineage false .
+<6072> rdf:type up:Taxon ;
+  up:scientificName "Eumetazoa" ;
+  rdfs:subClassOf <33208> ;
+  skos:narrowerTransitive <6073> ,
+    <10197> ,
+    <33213> ;
+  up:partOfLineage false .
+<33208> rdf:type up:Taxon ;
+  up:rank up:Kingdom ;
+  up:mnemonic "9METZ" ;
+  up:scientificName "Metazoa" ;
+  up:otherName "Animalia" ,
+    "animals" ,
+    "metazoans" ,
+    "multicellular animals" ;
+  rdfs:subClassOf <33154> ;
+  skos:narrowerTransitive <6040> ,
+    <6072> ,
+    <10213> ,
+    <10226> ,
+    <212041> ;
+  up:partOfLineage true .
+<33154> rdf:type up:Taxon ;
+  up:scientificName "Opisthokonta" ;
+  up:otherName "Fungi/Metazoa group" ,
+    "Opisthokonta Cavalier-Smith 1987" ,
+    "opisthokonts" ;
+  rdfs:subClassOf <2759> ;
+  skos:narrowerTransitive <4751> ,
+    <28009> ,
+    <33208> ,
+    <42461> ,
+    <610163> ,
+    <1001604> ;
+  up:partOfLineage false .
+<2759> rdf:type up:Taxon ;
+  up:rank up:Superkingdom ;
+  up:mnemonic "9EUKA" ;
+  up:scientificName "Eukaryota" ;
+  up:otherName "Eucarya" ,
+    "Eucaryotae" ,
+    "Eukarya" ,
+    "Eukaryotae" ,
+    "eucaryotes" ,
+    "eukaryotes" ;
+  rdfs:subClassOf <131567> ;
+  skos:narrowerTransitive <2763> ,
+    <2830> ,
+    <3027> ,
+    <5719> ,
+    <5752> ,
+    <33090> ,
+    <33154> ,
+    <33630> ,
+    <33634> ,
+    <33682> ,
+    <38254> ,
+    <42452> ,
+    <61964> ,
+    <66288> ,
+    <136087> ,
+    <193537> ,
+    <207245> ,
+    <339960> ,
+    <543769> ,
+    <554296> ,
+    <554915> ,
+    <556282> ,
+    <1401294> ;
+  up:partOfLineage true .
+<131567> rdf:type up:Taxon ;
+  up:scientificName "cellular organisms" ;
+  up:otherName "biota" ;
+  skos:narrowerTransitive <2> ,
+    <2157> ,
+    <2759> ;
+  up:partOfLineage false .
