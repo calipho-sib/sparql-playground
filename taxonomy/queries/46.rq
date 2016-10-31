@@ -1,7 +1,0 @@
-#title: Example CONSTRUCT making new triples
-CONSTRUCT {
-	?taxon a <http://example.org/coolCreature> 
-} WHERE {
-	?taxon up:scientificName ?name .
-	FILTER(contains(?name, "Marmot")
-}

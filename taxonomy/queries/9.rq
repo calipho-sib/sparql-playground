@@ -1,9 +1,0 @@
-#title:MINUS all data (note lack of overlap in variables)
-SELECT ?subject ?predicate ?object
-WHERE
-{
-	?subject ?predicate ?object
-        MINUS {
-       		?msubject ?mpredicate ?mobject
-	} 
-} LIMIT 10

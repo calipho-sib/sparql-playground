@@ -1,6 +1,0 @@
-#title: Finding a grand parent using normal joins
-SELECT ?grandparent
-WHERE {
-	taxon:9994 rdfs:subClassOf ?parent .
-        ?parent rdfs:subClassOf ?grandparent .
-}

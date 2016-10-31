@@ -1,7 +1,0 @@
-#title: Select all taxa from the UniProt taxonomy
-#img:taxonomy
-SELECT ?taxon
-WHERE
-{
-		?taxon a up:Taxon .
-}

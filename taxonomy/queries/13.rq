@@ -1,7 +1,0 @@
-#title: FILTER NOT IN
-SELECT ?taxon ?name
-WHERE {
-  ?taxon a up:Taxon .
-  ?taxon up:scientificName ?name .
-  FILTER(?name NOT IN ("Marmota", "Marmota marmota" ))
-}    

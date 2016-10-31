@@ -1,3 +1,0 @@
-#title: Finding any ancestor
-SELECT *
-WHERE {taxon:9994 rdfs:subClassOf+ ?ancestor}

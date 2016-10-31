@@ -1,2 +1,0 @@
-#title:FILTER 2 greater than 1
-SELECT * WHERE { ?s ?p ?o . FILTER(2>1) } LIMIT 1

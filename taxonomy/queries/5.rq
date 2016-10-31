@@ -1,9 +1,0 @@
-#title:Optional (if present give else leave empty)
-SELECT ?taxon ?name
-WHERE
-{
-	?taxon a up:Taxon .
-        OPTIONAL {
-	       ?taxon up:commonName ?name .
-        }
-}

@@ -1,9 +1,0 @@
-#title:FILTER NOT EXISTS  all data (note lack of overlap in variables)
-SELECT ?subject ?predicate ?object
-WHERE
-{
-	?subject ?preficate ?object
-        FILTER (NOT EXISTS {
-       		?msubject ?mpreficate ?mobject
-	})
-}

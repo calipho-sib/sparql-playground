@@ -1,5 +1,0 @@
-#title: Path queries (no path)
-SELECT *
-WHERE {
-	taxon:9994 rdfs:subClassOf ?taxon
-}

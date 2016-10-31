@@ -1,6 +1,0 @@
-#title: substring
-SELECT ?name
-WHERE {
-	?taxon a up:Taxon ; up:commonName ?name .
-        FILTER(substr(?name, 1, 4) = "Alpi")
-}

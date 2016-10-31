@@ -1,7 +1,0 @@
-#title: FILTER IN
-SELECT ?taxon ?name
-WHERE {
-  ?taxon a up:Taxon .
-  ?taxon up:scientificName ?name .
-  FILTER(?name IN ("Marmota", "Marmota marmota" ))
-}    

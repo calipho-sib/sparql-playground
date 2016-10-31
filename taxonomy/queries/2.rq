@@ -1,7 +1,0 @@
-#title:AND join (default)
-SELECT *
-WHERE
-{
-	?taxon a up:Taxon .
-	?taxon up:scientificName ?name .
-}

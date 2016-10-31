@@ -1,2 +1,0 @@
-#title: sameTerm does not convert
-SELECT * {?s ?p ?o . FILTER(sameTerm("1.0"^^xsd:float, "1"^^xsd:int)) } LIMIT 1

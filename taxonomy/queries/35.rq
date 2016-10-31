@@ -1,5 +1,0 @@
-#title: | is OR for predicate
-SELECT ?name
-WHERE {
-	taxon:9994 up:scientificName|up:otherName ?name .
-}

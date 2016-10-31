@@ -1,6 +1,0 @@
-#title:GROUP BY
-SELECT *
-WHERE 
-{
-	?taxon up:otherName ?name 
-} GROUP BY ?taxon ?name

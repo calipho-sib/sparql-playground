@@ -1,8 +1,0 @@
-#title: FILTER using implicit and
-SELECT ?taxon ?name
-WHERE {
-  ?taxon a up:Taxon .
-  ?taxon up:scientificName ?name .
-  FILTER(?name != "Marmota") 
-  FILTER (?name != "Marmota marmota" )
-}    

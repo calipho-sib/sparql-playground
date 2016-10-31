@@ -1,5 +1,0 @@
-#title: BIND variable into newly named variable
-SELECT ?newVar WHERE {
-	?taxon a up:Taxon .
-        BIND(?taxon AS ?newVar )
-}

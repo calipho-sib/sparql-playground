@@ -1,5 +1,0 @@
-#title: Finding a grandParent using a path query
-SELECT ?grandparent
-WHERE {
-	taxon:9994 rdfs:subClassOf/rdfs:subClassOf ?grandparent .
-}
