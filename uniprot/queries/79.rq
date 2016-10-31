@@ -1,4 +1,5 @@
 #title:GROUP BY
+#color:ex-red 
 SELECT *
 WHERE 
 {

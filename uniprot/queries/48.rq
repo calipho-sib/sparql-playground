@@ -1,4 +1,5 @@
 #title:Minus (Negation 2)
+#color:ex-red 
 SELECT ?taxon ?name
 WHERE
 {

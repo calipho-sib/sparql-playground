@@ -1,4 +1,5 @@
 #title:Optional (if present give else leave empty)
+#color:ex-red 
 SELECT ?taxon ?name
 WHERE
 {

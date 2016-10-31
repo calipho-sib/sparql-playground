@@ -1,0 +1,9 @@
+#title: Cross references between PDB and UniProt
+#comment: see the standard website at www.uniprot.org/database/PDB and its helpfull cheat view www.uniprot.org/database/PDB
+PREFIX database:<http://purl.uniprot.org/database/>
+SELECT ?uniprot ?pdb
+WHERE
+{
+	?uniprot rdfs:seeAlso ?pdb .
+        ?pdb up:database database:PDB .
+}

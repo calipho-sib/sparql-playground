@@ -1,4 +1,5 @@
 #title: VALUES selecting two taxons
+#color:ex-red 
 SELECT *
 WHERE {
 	VALUES (?taxon) {(taxon:9993) (taxon:9994)}

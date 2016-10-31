@@ -1,4 +1,5 @@
 #title:Not exists (Negation 1)
+#color:ex-red 
 SELECT ?taxon ?name
 WHERE
 {

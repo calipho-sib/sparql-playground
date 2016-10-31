@@ -1,4 +1,5 @@
 #title: Example CONSTRUCT making new triples
+#color:ex-red 
 CONSTRUCT {
 	?taxon a <http://example.org/coolCreature> 
 } WHERE {

@@ -1,0 +1,19 @@
+#id:exercise12
+#color:ex-green
+#title:Exercise find protein names and drugbank links
+#tags:Exercise,UniProtKB,XRef
+SELECT ?protein ?drugbank (GROUP_CONCAT(?name; separator = ', ') as ?cvsnames)
+WHERE 
+{
+   ?protein a up:Protein ;
+            rdfs:seeAlso ?drugbank .
+                         ?drugbank ***  <http://purl.uniprot.org/database/DrugBank> .
+   ?protein ****  ?name
+} GROUP BY ?protein ?drugbank
+
+#There are lot of different names and they are grouped in uniprot
+#
+#Try to use unions or path options
+#up:recommendedName up:alternativeName up:submittedName
+#up:fullName|up:shortName|
+

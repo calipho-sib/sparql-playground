@@ -1,8 +1,11 @@
-#title: Select Proteins similar to Human EPO isform 3
-SELECT ?epoLike
-WHERE {?cluster up:identity "0.9"^^xsd:float;
-                up:member ?member,?member2 .
-     ?member up:sequenceFor ?epoLike .
-     ?member2 up:sequenceFor uniprot:P19235-3 . 
-     FILTER(?epoLike != uniprot:P19235-3)
+#title:Select UniProt records with a related disease plus more information about the disease
+#id:6
+#tags:UniProtKB,Swiss-Prot,disease
+SELECT ?protein ?disease ?comment ?diseaseComment ?omimEtc
+WHERE {?protein a up:Protein;
+                up:annotation ?annotation .
+       ?annotation up:disease ?disease ;
+                rdfs:comment ?comment .
+       ?disease rdfs:seeAlso ?omimEtc ;
+                rdfs:comment ?diseaseComment ;
 }

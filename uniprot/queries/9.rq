@@ -1,0 +1,4 @@
+#title:Describe an UniParc record
+#comment: use an  query form to investigate an IRI
+#tags:UniParc
+SELECT ?predicate ?object WHERE { <http://purl.uniprot.org/uniparc/UPI000012A0AD> ?predicate ?object}

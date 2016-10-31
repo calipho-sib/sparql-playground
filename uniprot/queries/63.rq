@@ -1,4 +1,5 @@
 #title: substring
+#color:ex-red 
 SELECT ?name
 WHERE {
 	?taxon a up:Taxon ; up:commonName ?name .

@@ -1,4 +1,5 @@
 #title:UNION (OR inclusive)
+#color:ex-red 
 SELECT ?taxon ?rank
 WHERE
 {

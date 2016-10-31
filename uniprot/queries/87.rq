@@ -1,4 +1,5 @@
 #title: Constructing an owl:sameAs between two IRI (this is an example wrong in practice)
+#color:ex-red 
 CONSTRUCT {
 	?taxon owl:sameAs ?ncbi
 } WHERE {

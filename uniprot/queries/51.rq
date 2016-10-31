@@ -1,4 +1,5 @@
 #title:Negation 3: FILTER NOT BOUND/SPARQL 1.0
+#color:ex-red 
 SELECT ?taxon ?rank
 WHERE
 {

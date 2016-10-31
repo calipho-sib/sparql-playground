@@ -1,4 +1,5 @@
 #title: Path queries (no path)
+#color:ex-red 
 SELECT *
 WHERE {
 	taxon:9994 rdfs:subClassOf ?taxon

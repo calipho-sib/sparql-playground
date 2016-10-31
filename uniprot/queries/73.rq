@@ -1,4 +1,5 @@
 #title: Finding a grand parent using normal joins
+#color:ex-red 
 SELECT ?grandparent
 WHERE {
 	taxon:9994 rdfs:subClassOf ?parent .

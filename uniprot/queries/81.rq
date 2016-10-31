@@ -1,4 +1,5 @@
 #title: LIMIT and OFFSET
+#color:ex-red 
 SELECT *
 WHERE 
 {

@@ -1,4 +1,5 @@
 #title:AND join (default)
+#color:ex-red 
 SELECT *
 WHERE
 {

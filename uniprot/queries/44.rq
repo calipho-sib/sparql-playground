@@ -1,4 +1,5 @@
 #title:Two variables one output column
+#color:ex-red 
 SELECT ?taxon
 WHERE
 {

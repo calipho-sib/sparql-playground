@@ -3,14 +3,17 @@
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix citation: <http://purl.uniprot.org/citations/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix disease: <http://purl.uniprot.org/diseases/> .
 @prefix enzyme: <http://purl.uniprot.org/enzyme/> .
 @prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix go: <http://purl.obolibrary.org/obo/> .
 @prefix isoform: <http://purl.uniprot.org/isoforms/> .
 @prefix keyword: <http://purl.uniprot.org/keywords/> .
 @prefix location: <http://purl.uniprot.org/locations/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix position: <http://purl.uniprot.org/position/> .
+@prefix pubmed: <http://purl.uniprot.org/pubmed/> .
 @prefix range: <http://purl.uniprot.org/range/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -23,8 +26,8 @@
 <Q07303> rdf:type up:Protein ;
   up:reviewed true ;
   up:created "1995-02-01"^^xsd:date ;
-  up:modified "2015-04-01"^^xsd:date ;
-  up:version 120 ;
+  up:modified "2016-10-05"^^xsd:date ;
+  up:version 129 ;
   up:mnemonic "EPOR_RAT" ;
   up:citation citation:7684373 ,
     citation:9029168 ;
@@ -32,26 +35,26 @@
     <http://purl.uniprot.org/pir/A46713> ,
     <http://purl.uniprot.org/unigene/Rn.22394> ,
     <http://purl.uniprot.org/proteinmodelportal/Q07303> ,
-    <http://purl.uniprot.org/smr/Q07303> ,
     <http://purl.uniprot.org/string/10116.ENSRNOP00000017369> ,
-    <http://purl.uniprot.org/phosphosite/Q07303> ,
+    <http://purl.uniprot.org/iptmnet/Q07303> ,
     <http://purl.uniprot.org/paxdb/Q07303> ,
+    <http://purl.uniprot.org/pride/Q07303> ,
     <http://purl.uniprot.org/ucsc/RGD:2560> ,
     <http://purl.uniprot.org/rgd/2560> ,
-    <http://purl.uniprot.org/eggnog/NOG46583> ,
+    <http://purl.uniprot.org/eggnog/ENOG410IFGH> ,
+    <http://purl.uniprot.org/eggnog/ENOG4111PGS> ,
     <http://purl.uniprot.org/hogenom/HOG000059639> ,
     <http://purl.uniprot.org/hovergen/HBG005595> ,
     <http://purl.uniprot.org/inparanoid/Q07303> ,
     <http://purl.uniprot.org/phylomedb/Q07303> ,
     <http://purl.obolibrary.org/obo/PR_Q07303> ,
-    <http://purl.uniprot.org/genevestigator/Q07303> ,
     <http://purl.uniprot.org/gene3d/2.60.40.10> ,
     <http://purl.uniprot.org/interpro/IPR009167> ,
     <http://purl.uniprot.org/interpro/IPR003961> ,
     <http://purl.uniprot.org/interpro/IPR015152> ,
     <http://purl.uniprot.org/interpro/IPR013783> ,
     <http://purl.uniprot.org/interpro/IPR003528> ,
-    <http://purl.uniprot.org/panther/PTHR23037:SF7> ,
+    <http://purl.uniprot.org/panther/PTHR23037:SF28> ,
     <http://purl.uniprot.org/pfam/PF09067> ,
     <http://purl.uniprot.org/pfam/PF00041> ,
     <http://purl.uniprot.org/pirsf/PIRSF001959> ,
@@ -63,44 +66,44 @@
   up:organism taxon:10116 ;
   up:isolatedFrom tissue:786 ;
   up:encodedBy <#_5130373330330011> ;
-  up:annotation sha:AD93819E49B6DD176A5D9C36219859D3E3690EB9A2B4F89150516CE354C16CF9B337113F298C8B30EDD23D9635FC9B90 ,
-    sha:0EABA71404DC4F7E50CF726B168066848B5605B4ECDD8AE085467F0170840A244316ACA3A0A66BCDB38D43FD523D1DC2 ,
-    sha:1AEBDB276C43BE721269D0798E712CEE20B3E83D58B00BCC186A98EC1B1063B6D768D0D79CCB55C03BA41F9148D0805A ,
-    sha:F17666E0610059B7AB2AA5755B13CC9E9A946CEBACB0A6D41A400B1BC02428AEC3EB8948EEC1FA83F1339388F2A3E2B5 ,
-    sha:9CF591E1F0BED8E6D64A306D6A282250B9F40E92E569A86C165AC9056D338EBF5535210821C826D3B9B59156F41C2D84 ,
-    sha:690D181FAAA152F7673E448634517E10E4530FDC1F24FFDAD541BB9202FAE7371C8EBD7B858DCF4B97CFEDB69A35437F ,
-    sha:2D9F4A56E9DFF7EAB6EC692D1D299702610808E646D2957611759C987AD331F0DA688A586E3945C0393C02138AEB3888 ,
-    sha:C2B809F3CF25A2FBDDAA52CF355DE191B0868117352E7E1ECBBAF8E513FB7EC337385930A62DFAADDB900B95F05CD8CF ,
-    sha:E749CB5915617FFE5DF067831E85180905484010F382AAC287D264C3AC9A549400C2C18D7510E84B0473D8D7CFAD8A85 ,
-    sha:DC60DDAE03EB25FDF2EF27C31EDD3919D7CFB6AFDE471B3D76F70A4675097F533CD00CC8BDC92A78B80ED30611AB79D8 ,
-    sha:970FA8A80ECA53E2E25A8B683F6A8CBED55B636C63668CF656786A0A32FE56357E744EF8A5B9E331926CE01A55006A0D ,
-    sha:165DBC9681347817C6FF611D72A73D793D3F537140350787A398C39366DD783A4ADC84DED50514E0BADB19F2D1091D5D ,
-    sha:04A2FDA06C164A434B3408B98EAFAAC93290D04A45CE691B9CB1C7BA118F83B3106F9CEA4E6642B47D32F16834527738 ,
+  up:annotation sha:D4BC2E4283E048C24D335F8BD1FC75F93CD9FAF3A7A9AF76FA9FCE805A299D538A2206F014F42958D638734788294A4B ,
+    sha:FA38293D6C3078705C5E0D4289134787627DDCD759A831722D58E19D16E0870A641D636C03DB5C5CF19A093064D4FF99 ,
+    sha:58F5BD18F540CA8D1859858174FD406D2311B7EE7C7516757E2549768AF7960093A96AFBB17EC4F2647864B823C639DE ,
+    sha:D944C02BD2779DD65DF57DA2E9C9C252CA891AEABD99DF5E4FB0BDD5C8C6E94EDCE3FBAE07C53C58C6B5B92570D52D71 ,
+    sha:4510C96CB3EF086660449B91DBCFB0E72B6795D586ED9754BFA2B79DCB3ED5F5FC85D4133FDB3B0600BAE57953DA379F ,
+    sha:48B431A8B78A7D8EAD9C4FF9BE4D3A6FF215BFFC15DF9CF55490F9DACE59636DA6CB16C9A06A16AD867DD12E95B228F6 ,
+    sha:2894619AAC361341278DE195D50D40F63706BF8A7BE986ABD8D79FA1F8C0008C2A58D621F53F85B003BF41FA87165E28 ,
+    sha:3721C407B5832393A83422DC2E6A48357922F3621E6B88D3371716C434F977C33C0BA38BDEF2C469C1966440F87F1729 ,
+    sha:505D474A71302DD8E1BBC23318ABB5459D9545A11B149B79CB2295B661F7CDF18A465A5099BDC298F16AC2D16A65023D ,
+    sha:387F699D356CED49805EBD46A09E27FD417AEA8E4CDA1A6DAD94622F111B50E42244235E41D64EA81AB32BFDABAF9D22 ,
+    sha:897EDC0DE2E670DF7AFD5CFDD7669E6F4AAF76619F6D2FC5F83DE726307D7804B929BE0CAAF83F1811F5C71A6757BE9B ,
+    sha:E189BEB2196049E65F5844AD6FBE0DA5A398FC121D9D8AB41B39C5CC29512DEF3BEA0223E8B683BDDBAAE79113B69D76 ,
+    sha:B261308149E8AA7F3461D5901E75EC9F6597B288FAD7B3343EFD795C63CAA32DBFFE8A309E255DB708729022CEDAFE28 ,
     annotation:PRO_0000010871 ,
-    sha:E31C7089B1A22760BCA4F30ABA039F773FB8A6DFFAF4023A2F48DEF1098332A389CEFFA42D1F0846E69DA46589FDAA8C ,
-    sha:361A27FE0D9665E4E7F8D518260C949C52B6C39E6D910A2A1DEC14A9453EBF1BC7358BF1F4466898BEE2B4AA600C6849 ,
-    sha:A7A6E115CBFD0AF82E88467A0282B5281D97AC1E20E4A4DDC0D593A2D8A780B2E091037716AABCE108494D434FFA8C2C ,
-    sha:9D4929DCF3E2B23AAFBB3030DAAAF669D16EB30AFC4BDABF25C3936A1F923A30877EC32EC5A74A324AD4CD702BF3E645 ,
-    sha:5322ED0B84DDD2958CAF895230A1E08798C7DCEABB8BD01A3F5FBAF8F6E1CA7701579E64CE7C53F17545DB82EB08067C ,
-    sha:0FAC1036CD3E955F96BB66CF4957C595305CED24ABF48E86311558FD24DDA3DCC30804F015FF7312C9FC580A268CDEDA ,
-    sha:9BBC4A6739721EC9C9653EFF858BEEC13E7DE59C3C752A5E7706312F73A600B320DC94A567FA3FE4C50BD7D80BCFC133 ,
-    sha:8F26FE0BD2B91ACB463BD7A4D298B018A6CB733DD5BE87FB0228C62E932C04B1D9BA64BF6E4521353711BBC5961E2626 ,
-    sha:9428BA1E435C80C26E5D1FE45463735CB0459673CCF41C9E15B6E7207A3EA2B4CE36483DFE8C276F3333EB1AD095D2E3 ,
-    sha:630F2E2C2AAC5CD5A813C290A975EF0AAEB74D19640382F8684BFB4425D5B1BD792F3FB68D42CA8516FFAF0776EA4FAA ,
-    sha:1D316E8B83F935EC235171747CFA2B9EBC29981A0E3D7724E430DF69DD171F5A1EB647EB1571F5C293CAADFBA0BA14B6 ,
-    sha:2180323386D70FB464C444AB0B0124CBE22B83EC1D10B63E9A96B75938EACC6146DC3559C89243BE45294C6568C46A8F ,
-    sha:B626AC5943693DFAADB476F27D5E38104E204E4736B7761A830E992513D1E7C6B0CF9396B7E900B8C7EA0C24D0E63192 ,
-    sha:FF4FDBB38A89368955660F793B6B64F150CFD157F528311E570DD6C1E6BED3D0C383FCD6060F2B8AB5C4FBE454B2B3FF ,
-    sha:6332402D17AEA3D40ECF71EAF14A9E14A641158D0F9E37597C90CC570BCE3EA936A70A996B3C568CFDCD0C6F6DDF0AD2 ,
-    sha:98ABFB75A21B8F546B814005FC63721C39E84FD495607310D59F6F5813B4DC36021BFB3AF9260CF5D40AF97251448D94 ,
-    sha:75ACB6F689CF5BD086D5EC0807CF2518091859D1838056339FE7D654B7CFBEDF6277BA513EC43325B6338E3CEEE1773C ,
-    sha:8E914093EDFBDC915E34FCA3DF6526CEE0BF7284190CCF9D1F4AA522006F806FBE6DDB03B570F83B382C26062D8CC82E ,
-    sha:2F4EF8BB6F99BC86A412F8CB4202939F4638798732E606C35BE014967EB8D81178D00D580FD2F0279AC69F52DF4130FC ,
-    sha:32D77DB9BCA545732B9457BF71B8D09B8B7866D1E2B57B21C8BDB3A8731C5EAD4C1B73E97C091D73AE23BDC74D341833 ,
-    sha:8DC0CB5ACAE28BD56AB5B25D4D48E391303AF182932FFAE7E468653DB6006D75F29AB503D247638748B6C32F08CC1135 ,
-    sha:D3B13210FC1A288B250BBFDAB286CDCF5466F29C11FC0E040110887EDABCF0A03F68DD7E85039ABB921CC2113947A5B6 ,
-    sha:B29B3B1727F3AEA2F1F679910376FD303DE3EC9D6FE3CF94948902537DCBB7173B4EEE9012BA2AB2B894F196013D4673 ,
-    sha:BF585339252A0B915C57F2DBC40AE22DF6F260E53C42003EE0B16A0F49438C375FD91EA350F23840B2EE0EFE9634D4A0 ,
+    sha:C93C4F2AB27519E35C003D168EA077B63A51C18C03F9D224C4DB1A9ACAB2312D0ED77AC13CE5F492083B453C13967908 ,
+    sha:A8DB57F9D3991540BA5ABF44D217C79CF644F6747D70952A26110A3B1489FAE334BA147ED4521DCA4F6BF7DCB1C75401 ,
+    sha:EB20D7D31B3F5AB32D055A533C4F93FE63EAAA9FDEB3191E6E34D13244738B1304BD9F86D687F4AA0CEDD71E9957DC8A ,
+    sha:4539D7521BB3A8B70B5CF4A6D38DA0E71914643791EADA8A823574F9B0922E06173D0F1B7BD82152E6AEA71F7EA404F1 ,
+    sha:CEF8F3926D1D4C5D55C413263A01757787A1102ABA32D9BAC409035E8F8C109DCBC70EDDAE11416C61F15EDC36C7C788 ,
+    sha:85E93843267A60007AE38A56D606A6FFF9B93D1A58536039E63FA7F0B00BDF536985DF78C4D4C6AC2296897AC7E206CE ,
+    sha:FE1D1230EF27B66071398B73F3312944A93C33AD6470F554C28B58848B14F0DD9E6D85F16CBE329B9BDBD1E41AF80DC4 ,
+    sha:4F79E9544E30C97D1BCE75ACB50696AA9CB34621FE64F43E757C6D0A38667CC759EC2E61489E2FBADF6E49B1C60D4DDB ,
+    sha:7BD15CAD164B6A3A7BD590DDCACB6BB859F91FE22E1158C1482A0902D5E5A55D101274C05CF8739FF4851EC595C409D1 ,
+    sha:47FA2BB7B400EF57D2A5D715452D72E29018B46283958D367CEB56764C1E75A9E05C431E9D299A5CEBB9B9CF80639523 ,
+    sha:C4659446667BC2EA180913B07FF93C16E2BE3228BF8C97EC8EDAC4BBA4EDD0475A2F00072D0664DE81F1CA76F08066ED ,
+    sha:E7D1F76C7A1E08909092B770BA5DE88EACD188CDCC9BF0E7ED4A44425ADA470D006836C70E5971F9A7D8E0EC37CC7C6E ,
+    sha:2DEF87F0F384AC7421838EF009BB84948D23F1D72C75237CFD16348761A4816D0A0CBB4DBD7F849150CB392D6EDA6DA3 ,
+    sha:F1CC1F453CA369A071395A0B5987495D8A135A11FEA56C48C6EB373F12AE1FF0B38D775717127772395AD3472A7B16A3 ,
+    sha:36D95EE6D5D098FD16DC51369252B9C1D3AEF57E92B3ED61C9DF10BACABE94AA4ED669E7FB0A297E796AC44383A51FD5 ,
+    sha:03F3E4C854EFF9FFFE2666930BA0473B8D3A3E3B843E9278BAAA5A4F6FC48252E882D3B6C37B04F81BD08102B995A725 ,
+    sha:9C3EA3DC786207D107D7595EE1139CAEFCCDD06BAF58CB6245EA87CFBC7140FBBEA770005A8913FEBFD465124E436759 ,
+    sha:31E97F7D668D07D397B2C0235D45CFA928DD0CAF101D15308D57C15B54C7CDB7AFE19A0DE28FD4EAF57487F1F9BECE3A ,
+    sha:E1649C8E105766A11BBEB301E4F3623A829530D3271539F0236AD31EFD0C8EEA9C1088728D192E789AEF52B7CD231D45 ,
+    sha:3ED93E2C71A898AEA1F475746B2DC914363AD07DAFB08F1173E9EF26CCB6BE3B6EF5B3A21517B1D7A26038AD6D88B80D ,
+    sha:1BA8033CEA971E3F811F0244FEDB37A54878F6F1101D8AD674302BA4EE5E74BD59A60B97A61C15968E58B70CE76C5F87 ,
+    sha:E6955B49CBCD4C43C71DB267F29E714E0297E69143D7C61D2DC9D8A7E03B650E81081C2EC1B664C89CB505427AE33682 ,
+    sha:08859862622C9D2E6196D0C7C7A67E2DB09BEB34987D6E69357472FAA29675502BE128916CD6BBD351A3C6CBCC301CFB ,
+    sha:37713CF6C97AC956AF4FEA48A28BF0FD29BB58921190C59D2E6BB794587F8233CCC49BFB2DE011C2AB95A7EB9F4A8769 ,
     annotation:VSP_009514 ,
     annotation:VSP_009515 ;
   up:existence up:Evidence_at_Transcript_Level_Existence ;
@@ -114,22 +117,42 @@
     keyword:732 ,
     keyword:1133 ,
     keyword:832 ,
+    go:GO_0005737 ,
+    go:GO_0009897 ,
     go:GO_0016021 ,
     go:GO_0004900 ,
-    go:GO_0038162 ,
+    go:GO_0007568 ,
+    go:GO_1904374 ,
+    go:GO_1903206 ,
     go:GO_0043524 ,
-    go:GO_0007204 ;
+    go:GO_0045019 ,
+    go:GO_0008284 ,
+    go:GO_0007204 ,
+    go:GO_0070374 ,
+    go:GO_0010976 ,
+    go:GO_0001666 ;
   up:sequence isoform:Q07303-1 ,
     isoform:Q07303-2 ;
-  up:attribution <#_5130373330330077> ,
-    <#_5130373330330079> ,
-    <#_513037333033007B> ,
-    <#_513037333033007D> ,
-    <#_513037333033007F> ,
+  up:attribution <#_5130373330330078> ,
+    <#_513037333033007A> ,
+    <#_513037333033007C> ,
+    <#_513037333033007E> ,
+    <#_5130373330330080> ,
+    <#_5130373330330082> ,
+    <#_5130373330330084> ,
+    <#_5130373330330086> ,
+    <#_5130373330330087> ,
+    <#_5130373330330089> ,
+    <#_513037333033008B> ,
+    <#_513037333033008D> ,
+    <#_513037333033008F> ,
+    <#_5130373330330091> ,
+    <#_5130373330330093> ,
     <#_5130373330330014> ,
+    <#_513037333033006E> ,
     <#_513037333033002F> ,
     <#_5130373330330027> ,
-    <#_5130373330330073> ,
+    <#_5130373330330074> ,
     <#_5130373330330024> ;
   up:proteome <http://purl.uniprot.org/proteomes/UP000002494#Unplaced> .
 citation:7684373 rdf:type up:Journal_Citation ;
@@ -141,8 +164,8 @@ citation:7684373 rdf:type up:Journal_Citation ;
     "Gallyas F." ,
     "Tabira T." ,
     "Sasaki R." ;
-  skos:exactMatch <http://purl.uniprot.org/pubmed/7684373> ;
-  <http://xmlns.com/foaf/0.1/primaryTopicOf> <http://www.ncbi.nlm.nih.gov/pubmed/7684373> ;
+  skos:exactMatch pubmed:7684373 ;
+  foaf:primaryTopicOf <https://www.ncbi.nlm.nih.gov/pubmed/7684373> ;
   up:date "1993"^^xsd:gYear ;
   up:name "J. Biol. Chem." ;
   up:volume "268" ;
@@ -168,8 +191,8 @@ citation:9029168 rdf:type up:Journal_Citation ;
     "Saya H." ,
     "Serikawa T." ,
     "Maeda S." ;
-  skos:exactMatch <http://purl.uniprot.org/pubmed/9029168> ;
-  <http://xmlns.com/foaf/0.1/primaryTopicOf> <http://www.ncbi.nlm.nih.gov/pubmed/9029168> ;
+  skos:exactMatch pubmed:9029168 ;
+  foaf:primaryTopicOf <https://www.ncbi.nlm.nih.gov/pubmed/9029168> ;
   dcterms:identifier "doi:10.1016/S0304-3835(96)04544-2" ;
   up:date "1997"^^xsd:gYear ;
   up:name "Cancer Lett." ;
@@ -194,28 +217,27 @@ citation:9029168 rdf:type up:Journal_Citation ;
   up:database <http://purl.uniprot.org/database/UniGene> .
 <http://purl.uniprot.org/proteinmodelportal/Q07303> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/ProteinModelPortal> .
-<http://purl.uniprot.org/smr/Q07303> rdf:type up:Resource ;
-  up:database <http://purl.uniprot.org/database/SMR> ;
-  rdfs:comment "32-246" .
 <http://purl.uniprot.org/string/10116.ENSRNOP00000017369> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/STRING> .
-<http://purl.uniprot.org/phosphosite/Q07303> rdf:type up:Resource ;
-  up:database <http://purl.uniprot.org/database/PhosphoSite> .
+<http://purl.uniprot.org/iptmnet/Q07303> rdf:type up:Resource ;
+  up:database <http://purl.uniprot.org/database/iPTMnet> .
 <http://purl.uniprot.org/paxdb/Q07303> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/PaxDb> .
+<http://purl.uniprot.org/pride/Q07303> rdf:type up:Resource ;
+  up:database <http://purl.uniprot.org/database/PRIDE> .
 <http://purl.uniprot.org/ucsc/RGD:2560> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/UCSC> ;
-  rdfs:comment "rat" .
-<#_513037333033005> rdf:type rdf:Statement ;
-  rdf:subject <Q07303> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/ucsc/RGD:2560> ;
-  up:sequence isoform:Q07303-1 .
+  rdfs:comment "rat" ;
+  rdfs:seeAlso isoform:Q07303-1 .
 <http://purl.uniprot.org/rgd/2560> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/RGD> ;
   rdfs:comment "Epor" .
-<http://purl.uniprot.org/eggnog/NOG46583> rdf:type up:Resource ;
-  up:database <http://purl.uniprot.org/database/eggNOG> .
+<http://purl.uniprot.org/eggnog/ENOG410IFGH> rdf:type up:Resource ;
+  up:database <http://purl.uniprot.org/database/eggNOG> ;
+  rdfs:comment "Eukaryota" .
+<http://purl.uniprot.org/eggnog/ENOG4111PGS> rdf:type up:Resource ;
+  up:database <http://purl.uniprot.org/database/eggNOG> ;
+  rdfs:comment "LUCA" .
 <http://purl.uniprot.org/hogenom/HOG000059639> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/HOGENOM> .
 <http://purl.uniprot.org/hovergen/HBG005595> rdf:type up:Resource ;
@@ -226,16 +248,10 @@ citation:9029168 rdf:type up:Journal_Citation ;
   up:database <http://purl.uniprot.org/database/PhylomeDB> .
 <http://purl.obolibrary.org/obo/PR_Q07303> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/PRO> .
-<http://purl.uniprot.org/genevestigator/Q07303> rdf:type up:Resource ;
-  up:database <http://purl.uniprot.org/database/Genevestigator> .
 <http://purl.uniprot.org/gene3d/2.60.40.10> rdf:type up:Resource ;
-  up:database <http://purl.uniprot.org/database/Gene3D> .
-<#_513037333033006> rdf:type rdf:Statement ;
-  rdf:subject <Q07303> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/gene3d/2.60.40.10> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 2 .
+  up:database <http://purl.uniprot.org/database/Gene3D> ;
+  up:signatureSequenceMatch <http:/purl.uniprot.org/isoform/Q07303-1#Gene3D_2_60_40_10_match_1> ,
+    <http://purl.uniprot.org/isoform/Q07303-1#Gene3D_2_60_40_10_match_2> .
 <http://purl.uniprot.org/interpro/IPR009167> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/InterPro> ;
   rdfs:comment "Erythropoietin_rcpt" .
@@ -251,78 +267,39 @@ citation:9029168 rdf:type up:Journal_Citation ;
 <http://purl.uniprot.org/interpro/IPR003528> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/InterPro> ;
   rdfs:comment "Long_hematopoietin_rcpt_CS" .
-<http://purl.uniprot.org/panther/PTHR23037:SF7> rdf:type up:Resource ;
+<http://purl.uniprot.org/panther/PTHR23037:SF28> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/PANTHER> ;
-  rdfs:comment "PTHR23037:SF7" .
-<#_513037333033007> rdf:type rdf:Statement ;
-  rdf:subject <Q07303> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/panther/PTHR23037:SF7> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 1 .
+  rdfs:comment "PTHR23037:SF28" ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/Q07303-1#PANTHER_PTHR23037:SF28_match_1> .
 <http://purl.uniprot.org/pfam/PF09067> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/Pfam> ;
-  rdfs:comment "EpoR_lig-bind" .
-<#_513037333033008> rdf:type rdf:Statement ;
-  rdf:subject <Q07303> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/pfam/PF09067> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 1 .
+  rdfs:comment "EpoR_lig-bind" ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/Q07303-1#Pfam_PF09067_match_1> .
 <http://purl.uniprot.org/pfam/PF00041> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/Pfam> ;
-  rdfs:comment "fn3" .
-<#_513037333033009> rdf:type rdf:Statement ;
-  rdf:subject <Q07303> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/pfam/PF00041> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 1 .
+  rdfs:comment "fn3" ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/Q07303-1#Pfam_PF00041_match_1> .
 <http://purl.uniprot.org/pirsf/PIRSF001959> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/PIRSF> ;
-  rdfs:comment "EPO_receptor" .
-<#_51303733303300A> rdf:type rdf:Statement ;
-  rdf:subject <Q07303> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/pirsf/PIRSF001959> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 1 .
+  rdfs:comment "EPO_receptor" ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/Q07303-1#PIRSF_PIRSF001959_match_1> .
 <http://purl.uniprot.org/smart/SM00060> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/SMART> ;
-  rdfs:comment "FN3" .
-<#_51303733303300B> rdf:type rdf:Statement ;
-  rdf:subject <Q07303> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/smart/SM00060> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 1 .
+  rdfs:comment "FN3" ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/Q07303-1#SMART_SM00060_match_1> .
 <http://purl.uniprot.org/supfam/SSF49265> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/SUPFAM> ;
-  rdfs:comment "SSF49265" .
-<#_51303733303300C> rdf:type rdf:Statement ;
-  rdf:subject <Q07303> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/supfam/SSF49265> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 2 .
+  rdfs:comment "SSF49265" ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/Q07303-1#SUPFAM_SSF49265_match_1> ,
+    <http://purl.uniprot.org/isoform:Q07303-1#SUPFAM_SSF49265_match_2> .
 <http://purl.uniprot.org/prosite/PS50853> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/PROSITE> ;
-  rdfs:comment "FN3" .
-<#_51303733303300D> rdf:type rdf:Statement ;
-  rdf:subject <Q07303> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/prosite/PS50853> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 1 .
+  rdfs:comment "FN3" ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/Q07303-1#PROSITE_PS50853_match_1> .
 <http://purl.uniprot.org/prosite/PS01352> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/PROSITE> ;
-  rdfs:comment "HEMATOPO_REC_L_F1" .
-<#_51303733303300E> rdf:type rdf:Statement ;
-  rdf:subject <Q07303> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/prosite/PS01352> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 1 .
+  rdfs:comment "HEMATOPO_REC_L_F1" ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/Q07303-1#PROSITE_PS01352_match_1> .
 sha:D99D00342CBCC954E38CCE89BC163EDF9D9337B5438241956D4E5ACC29CE2173D3B097394EC829157668C5C2A981D073 rdf:type up:Structured_Name ;
   up:fullName "Erythropoietin receptor" ;
   up:shortName "EPO-R" .
@@ -333,64 +310,64 @@ sha:D99D00342CBCC954E38CCE89BC163EDF9D9337B5438241956D4E5ACC29CE2173D3B097394EC8
   up:citation citation:7684373 .
 <#_5130373330330011> rdf:type up:Gene ;
   skos:prefLabel "Epor" .
-sha:AD93819E49B6DD176A5D9C36219859D3E3690EB9A2B4F89150516CE354C16CF9B337113F298C8B30EDD23D9635FC9B90 rdf:type up:Function_Annotation ;
+sha:D4BC2E4283E048C24D335F8BD1FC75F93CD9FAF3A7A9AF76FA9FCE805A299D538A2206F014F42958D638734788294A4B rdf:type up:Function_Annotation ;
   rdfs:comment "Receptor for erythropoietin. Mediates erythropoietin-induced erythroblast proliferation and differentiation. Upon EPO stimulation, EPOR dimerizes triggering the JAK2/STAT5 signaling cascade. In some cell types, can also activate STAT1 and STAT3. May also activate LYN tyrosine kinase (By similarity)." .
 <#_5130373330330013> rdf:type rdf:Statement ;
-  rdf:subject sha:AD93819E49B6DD176A5D9C36219859D3E3690EB9A2B4F89150516CE354C16CF9B337113F298C8B30EDD23D9635FC9B90 ;
+  rdf:subject sha:D4BC2E4283E048C24D335F8BD1FC75F93CD9FAF3A7A9AF76FA9FCE805A299D538A2206F014F42958D638734788294A4B ;
   rdf:predicate rdfs:comment ;
   rdf:object "Receptor for erythropoietin. Mediates erythropoietin-induced erythroblast proliferation and differentiation. Upon EPO stimulation, EPOR dimerizes triggering the JAK2/STAT5 signaling cascade. In some cell types, can also activate STAT1 and STAT3. May also activate LYN tyrosine kinase (By similarity)." ;
   up:attribution <#_5130373330330014> .
-sha:0EABA71404DC4F7E50CF726B168066848B5605B4ECDD8AE085467F0170840A244316ACA3A0A66BCDB38D43FD523D1DC2 rdf:type up:Subunit_Annotation ;
+sha:FA38293D6C3078705C5E0D4289134787627DDCD759A831722D58E19D16E0870A641D636C03DB5C5CF19A093064D4FF99 rdf:type up:Subunit_Annotation ;
   rdfs:comment "Forms homodimers on EPO stimulation. The tyrosine-phosphorylated form interacts with several SH2 domain-containing proteins including LYN, the adapter protein APS, PTPN6, PTPN11, JAK2, PI3 kinases, STAT5A/B, SOCS3 and CRKL. The N-terminal SH2 domain of PTPN6 binds Tyr-453 and inhibits signaling through dephosphorylation of JAK2. APS binding also inhibits the JAK-STAT signaling. Binding to PTPN11, preferentially through the N-terminal SH2 domain, promotes mitogenesis and phosphorylation of PTPN11. Binding of JAK2 (through its N-terminal) promotes cell-surface expression. Interaction with the ubiquitin ligase NOSIP mediates EPO-induced cell proliferation. Interacts with ATXN2L and INPP5D/SHIP1 (By similarity)." .
 <#_5130373330330016> rdf:type rdf:Statement ;
-  rdf:subject sha:0EABA71404DC4F7E50CF726B168066848B5605B4ECDD8AE085467F0170840A244316ACA3A0A66BCDB38D43FD523D1DC2 ;
+  rdf:subject sha:FA38293D6C3078705C5E0D4289134787627DDCD759A831722D58E19D16E0870A641D636C03DB5C5CF19A093064D4FF99 ;
   rdf:predicate rdfs:comment ;
   rdf:object "Forms homodimers on EPO stimulation. The tyrosine-phosphorylated form interacts with several SH2 domain-containing proteins including LYN, the adapter protein APS, PTPN6, PTPN11, JAK2, PI3 kinases, STAT5A/B, SOCS3 and CRKL. The N-terminal SH2 domain of PTPN6 binds Tyr-453 and inhibits signaling through dephosphorylation of JAK2. APS binding also inhibits the JAK-STAT signaling. Binding to PTPN11, preferentially through the N-terminal SH2 domain, promotes mitogenesis and phosphorylation of PTPN11. Binding of JAK2 (through its N-terminal) promotes cell-surface expression. Interaction with the ubiquitin ligase NOSIP mediates EPO-induced cell proliferation. Interacts with ATXN2L and INPP5D/SHIP1 (By similarity)." ;
   up:attribution <#_5130373330330014> .
-sha:1AEBDB276C43BE721269D0798E712CEE20B3E83D58B00BCC186A98EC1B1063B6D768D0D79CCB55C03BA41F9148D0805A rdf:type up:Subcellular_Location_Annotation ;
-  up:locatedIn <#_5130373330330018> .
-<#_5130373330330018> up:cellularComponent location:162 ;
+sha:58F5BD18F540CA8D1859858174FD406D2311B7EE7C7516757E2549768AF7960093A96AFBB17EC4F2647864B823C639DE rdf:type up:Subcellular_Location_Annotation ;
+  up:locatedIn sha:C679A52B410E1F580AAA2E09F1C9E40745669A5CF4B69DD7E0940448DFD95F5B059ECB09FFB896EBAD07FF35BF5A81DE .
+sha:C679A52B410E1F580AAA2E09F1C9E40745669A5CF4B69DD7E0940448DFD95F5B059ECB09FFB896EBAD07FF35BF5A81DE up:cellularComponent location:162 ;
   up:topology location:9905 .
-sha:F17666E0610059B7AB2AA5755B13CC9E9A946CEBACB0A6D41A400B1BC02428AEC3EB8948EEC1FA83F1339388F2A3E2B5 rdf:type up:Alternative_Splicing_Annotation ;
+sha:D944C02BD2779DD65DF57DA2E9C9C252CA891AEABD99DF5E4FB0BDD5C8C6E94EDCE3FBAE07C53C58C6B5B92570D52D71 rdf:type up:Alternative_Splicing_Annotation ;
   up:sequence isoform:Q07303-1 ,
     isoform:Q07303-2 .
-sha:9CF591E1F0BED8E6D64A306D6A282250B9F40E92E569A86C165AC9056D338EBF5535210821C826D3B9B59156F41C2D84 rdf:type up:Tissue_Specificity_Annotation ;
+sha:4510C96CB3EF086660449B91DBCFB0E72B6795D586ED9754BFA2B79DCB3ED5F5FC85D4133FDB3B0600BAE57953DA379F rdf:type up:Tissue_Specificity_Annotation ;
   rdfs:comment "Isoform EPOR-F and isoform EPOR-S are expressed in bone marrow, spleen and eythroleukemia cell lines." .
-sha:690D181FAAA152F7673E448634517E10E4530FDC1F24FFDAD541BB9202FAE7371C8EBD7B858DCF4B97CFEDB69A35437F rdf:type up:Domain_Annotation ;
+sha:48B431A8B78A7D8EAD9C4FF9BE4D3A6FF215BFFC15DF9CF55490F9DACE59636DA6CB16C9A06A16AD867DD12E95B228F6 rdf:type up:Domain_Annotation ;
   rdfs:comment "The WSXWS motif appears to be necessary for proper protein folding and thereby efficient intracellular transport and cell-surface receptor binding." .
-sha:2D9F4A56E9DFF7EAB6EC692D1D299702610808E646D2957611759C987AD331F0DA688A586E3945C0393C02138AEB3888 rdf:type up:Domain_Annotation ;
+sha:2894619AAC361341278DE195D50D40F63706BF8A7BE986ABD8D79FA1F8C0008C2A58D621F53F85B003BF41FA87165E28 rdf:type up:Domain_Annotation ;
   rdfs:comment "The box 1 motif is required for JAK interaction and/or activation." .
-sha:C2B809F3CF25A2FBDDAA52CF355DE191B0868117352E7E1ECBBAF8E513FB7EC337385930A62DFAADDB900B95F05CD8CF rdf:type up:Domain_Annotation ;
+sha:3721C407B5832393A83422DC2E6A48357922F3621E6B88D3371716C434F977C33C0BA38BDEF2C469C1966440F87F1729 rdf:type up:Domain_Annotation ;
   rdfs:comment "Contains 1 copy of a cytoplasmic motif that is referred to as the immunoreceptor tyrosine-based inhibitor motif (ITIM). This motif is involved in modulation of cellular responses. The phosphorylated ITIM motif can bind the SH2 domain of several SH2-containing phosphatases." .
-sha:E749CB5915617FFE5DF067831E85180905484010F382AAC287D264C3AC9A549400C2C18D7510E84B0473D8D7CFAD8A85 rdf:type up:PTM_Annotation ;
+sha:505D474A71302DD8E1BBC23318ABB5459D9545A11B149B79CB2295B661F7CDF18A465A5099BDC298F16AC2D16A65023D rdf:type up:PTM_Annotation ;
   rdfs:comment "On EPO stimulation, phosphorylated on C-terminal tyrosine residues by JAK2. The phosphotyrosine motifs are also recruitment sites for several SH2-containing proteins and adapter proteins which mediate cell proliferation. Phosphorylation on Tyr-453 is required for PTPN6 interaction, Tyr-425 for PTPN11. Tyr-425 is also required for SOCS3 binding, but Tyr-453/Tyr-455 motif is the preferred binding site (By similarity)." .
 <#_513037333033001F> rdf:type rdf:Statement ;
-  rdf:subject sha:E749CB5915617FFE5DF067831E85180905484010F382AAC287D264C3AC9A549400C2C18D7510E84B0473D8D7CFAD8A85 ;
+  rdf:subject sha:505D474A71302DD8E1BBC23318ABB5459D9545A11B149B79CB2295B661F7CDF18A465A5099BDC298F16AC2D16A65023D ;
   rdf:predicate rdfs:comment ;
   rdf:object "On EPO stimulation, phosphorylated on C-terminal tyrosine residues by JAK2. The phosphotyrosine motifs are also recruitment sites for several SH2-containing proteins and adapter proteins which mediate cell proliferation. Phosphorylation on Tyr-453 is required for PTPN6 interaction, Tyr-425 for PTPN11. Tyr-425 is also required for SOCS3 binding, but Tyr-453/Tyr-455 motif is the preferred binding site (By similarity)." ;
   up:attribution <#_5130373330330014> .
-sha:DC60DDAE03EB25FDF2EF27C31EDD3919D7CFB6AFDE471B3D76F70A4675097F533CD00CC8BDC92A78B80ED30611AB79D8 rdf:type up:PTM_Annotation ;
+sha:387F699D356CED49805EBD46A09E27FD417AEA8E4CDA1A6DAD94622F111B50E42244235E41D64EA81AB32BFDABAF9D22 rdf:type up:PTM_Annotation ;
   rdfs:comment "Ubiquitinated by NOSIP; appears to be either multi-monoubiquitinated or polyubiquitinated. Ubiquitination mediates proliferation and survival of EPO-dependent cells. Ubiquitination at Lys-280 mediates receptor internalization, whereas ubiquitination at Lys-452 promotes trafficking of activated receptors to the lysosomes for degradation (By similarity)." .
 <#_5130373330330021> rdf:type rdf:Statement ;
-  rdf:subject sha:DC60DDAE03EB25FDF2EF27C31EDD3919D7CFB6AFDE471B3D76F70A4675097F533CD00CC8BDC92A78B80ED30611AB79D8 ;
+  rdf:subject sha:387F699D356CED49805EBD46A09E27FD417AEA8E4CDA1A6DAD94622F111B50E42244235E41D64EA81AB32BFDABAF9D22 ;
   rdf:predicate rdfs:comment ;
   rdf:object "Ubiquitinated by NOSIP; appears to be either multi-monoubiquitinated or polyubiquitinated. Ubiquitination mediates proliferation and survival of EPO-dependent cells. Ubiquitination at Lys-280 mediates receptor internalization, whereas ubiquitination at Lys-452 promotes trafficking of activated receptors to the lysosomes for degradation (By similarity)." ;
   up:attribution <#_5130373330330014> .
-sha:970FA8A80ECA53E2E25A8B683F6A8CBED55B636C63668CF656786A0A32FE56357E744EF8A5B9E331926CE01A55006A0D rdf:type up:Similarity_Annotation ;
+sha:897EDC0DE2E670DF7AFD5CFDD7669E6F4AAF76619F6D2FC5F83DE726307D7804B929BE0CAAF83F1811F5C71A6757BE9B rdf:type up:Similarity_Annotation ;
   rdfs:comment "Belongs to the type I cytokine receptor family. Type 1 subfamily." .
 <#_5130373330330023> rdf:type rdf:Statement ;
-  rdf:subject sha:970FA8A80ECA53E2E25A8B683F6A8CBED55B636C63668CF656786A0A32FE56357E744EF8A5B9E331926CE01A55006A0D ;
+  rdf:subject sha:897EDC0DE2E670DF7AFD5CFDD7669E6F4AAF76619F6D2FC5F83DE726307D7804B929BE0CAAF83F1811F5C71A6757BE9B ;
   rdf:predicate rdfs:comment ;
   rdf:object "Belongs to the type I cytokine receptor family. Type 1 subfamily." ;
   up:attribution <#_5130373330330024> .
-sha:165DBC9681347817C6FF611D72A73D793D3F537140350787A398C39366DD783A4ADC84DED50514E0BADB19F2D1091D5D rdf:type up:Similarity_Annotation ;
+sha:E189BEB2196049E65F5844AD6FBE0DA5A398FC121D9D8AB41B39C5CC29512DEF3BEA0223E8B683BDDBAAE79113B69D76 rdf:type up:Similarity_Annotation ;
   rdfs:comment "Contains 1 fibronectin type-III domain." .
 <#_5130373330330026> rdf:type rdf:Statement ;
-  rdf:subject sha:165DBC9681347817C6FF611D72A73D793D3F537140350787A398C39366DD783A4ADC84DED50514E0BADB19F2D1091D5D ;
+  rdf:subject sha:E189BEB2196049E65F5844AD6FBE0DA5A398FC121D9D8AB41B39C5CC29512DEF3BEA0223E8B683BDDBAAE79113B69D76 ;
   rdf:predicate rdfs:comment ;
   rdf:object "Contains 1 fibronectin type-III domain." ;
   up:attribution <#_5130373330330027> .
-sha:04A2FDA06C164A434B3408B98EAFAAC93290D04A45CE691B9CB1C7BA118F83B3106F9CEA4E6642B47D32F16834527738 rdf:type up:Signal_Peptide_Annotation ;
+sha:B261308149E8AA7F3461D5901E75EC9F6597B288FAD7B3343EFD795C63CAA32DBFFE8A309E255DB708729022CEDAFE28 rdf:type up:Signal_Peptide_Annotation ;
   up:range range:22852486753694510tt1tt24 .
 range:22852486753694510tt1tt24 rdf:type faldo:Region ;
   faldo:begin position:22852486753694510tt1 ;
@@ -406,7 +383,7 @@ position:22852486753694510tt24 rdf:type faldo:Position ,
 <#_5130373330330029> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:04A2FDA06C164A434B3408B98EAFAAC93290D04A45CE691B9CB1C7BA118F83B3106F9CEA4E6642B47D32F16834527738 ;
+  rdf:object sha:B261308149E8AA7F3461D5901E75EC9F6597B288FAD7B3343EFD795C63CAA32DBFFE8A309E255DB708729022CEDAFE28 ;
   up:attribution <#_5130373330330014> .
 annotation:PRO_0000010871 rdf:type up:Chain_Annotation ;
   rdfs:comment "Erythropoietin receptor" ;
@@ -422,7 +399,7 @@ position:22852486753694510tt507 rdf:type faldo:Position ,
     faldo:ExactPosition ;
   faldo:position 507 ;
   faldo:reference isoform:Q07303-1 .
-sha:E31C7089B1A22760BCA4F30ABA039F773FB8A6DFFAF4023A2F48DEF1098332A389CEFFA42D1F0846E69DA46589FDAA8C rdf:type up:Topological_Domain_Annotation ;
+sha:C93C4F2AB27519E35C003D168EA077B63A51C18C03F9D224C4DB1A9ACAB2312D0ED77AC13CE5F492083B453C13967908 rdf:type up:Topological_Domain_Annotation ;
   rdfs:comment "Extracellular" ;
   up:range range:22852486753694510tt25tt249 .
 range:22852486753694510tt25tt249 rdf:type faldo:Region ;
@@ -435,9 +412,9 @@ position:22852486753694510tt249 rdf:type faldo:Position ,
 <#_513037333033002D> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:E31C7089B1A22760BCA4F30ABA039F773FB8A6DFFAF4023A2F48DEF1098332A389CEFFA42D1F0846E69DA46589FDAA8C ;
+  rdf:object sha:C93C4F2AB27519E35C003D168EA077B63A51C18C03F9D224C4DB1A9ACAB2312D0ED77AC13CE5F492083B453C13967908 ;
   up:attribution <#_513037333033002F> .
-sha:361A27FE0D9665E4E7F8D518260C949C52B6C39E6D910A2A1DEC14A9453EBF1BC7358BF1F4466898BEE2B4AA600C6849 rdf:type up:Transmembrane_Annotation ;
+sha:A8DB57F9D3991540BA5ABF44D217C79CF644F6747D70952A26110A3B1489FAE334BA147ED4521DCA4F6BF7DCB1C75401 rdf:type up:Transmembrane_Annotation ;
   rdfs:comment "Helical" ;
   up:range range:22852486753694510tt250tt272 .
 range:22852486753694510tt250tt272 rdf:type faldo:Region ;
@@ -454,9 +431,9 @@ position:22852486753694510tt272 rdf:type faldo:Position ,
 <#_5130373330330031> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:361A27FE0D9665E4E7F8D518260C949C52B6C39E6D910A2A1DEC14A9453EBF1BC7358BF1F4466898BEE2B4AA600C6849 ;
+  rdf:object sha:A8DB57F9D3991540BA5ABF44D217C79CF644F6747D70952A26110A3B1489FAE334BA147ED4521DCA4F6BF7DCB1C75401 ;
   up:attribution <#_513037333033002F> .
-sha:A7A6E115CBFD0AF82E88467A0282B5281D97AC1E20E4A4DDC0D593A2D8A780B2E091037716AABCE108494D434FFA8C2C rdf:type up:Topological_Domain_Annotation ;
+sha:EB20D7D31B3F5AB32D055A533C4F93FE63EAAA9FDEB3191E6E34D13244738B1304BD9F86D687F4AA0CEDD71E9957DC8A rdf:type up:Topological_Domain_Annotation ;
   rdfs:comment "Cytoplasmic" ;
   up:range range:22852486753694510tt273tt507 .
 range:22852486753694510tt273tt507 rdf:type faldo:Region ;
@@ -469,9 +446,9 @@ position:22852486753694510tt273 rdf:type faldo:Position ,
 <#_5130373330330034> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:A7A6E115CBFD0AF82E88467A0282B5281D97AC1E20E4A4DDC0D593A2D8A780B2E091037716AABCE108494D434FFA8C2C ;
+  rdf:object sha:EB20D7D31B3F5AB32D055A533C4F93FE63EAAA9FDEB3191E6E34D13244738B1304BD9F86D687F4AA0CEDD71E9957DC8A ;
   up:attribution <#_513037333033002F> .
-sha:9D4929DCF3E2B23AAFBB3030DAAAF669D16EB30AFC4BDABF25C3936A1F923A30877EC32EC5A74A324AD4CD702BF3E645 rdf:type up:Domain_Extent_Annotation ;
+sha:4539D7521BB3A8B70B5CF4A6D38DA0E71914643791EADA8A823574F9B0922E06173D0F1B7BD82152E6AEA71F7EA404F1 rdf:type up:Domain_Extent_Annotation ;
   rdfs:comment "Fibronectin type-III" ;
   up:range range:22852486753694510tt146tt246 .
 range:22852486753694510tt146tt246 rdf:type faldo:Region ;
@@ -488,9 +465,9 @@ position:22852486753694510tt246 rdf:type faldo:Position ,
 <#_5130373330330037> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:9D4929DCF3E2B23AAFBB3030DAAAF669D16EB30AFC4BDABF25C3936A1F923A30877EC32EC5A74A324AD4CD702BF3E645 ;
+  rdf:object sha:4539D7521BB3A8B70B5CF4A6D38DA0E71914643791EADA8A823574F9B0922E06173D0F1B7BD82152E6AEA71F7EA404F1 ;
   up:attribution <#_5130373330330027> .
-sha:5322ED0B84DDD2958CAF895230A1E08798C7DCEABB8BD01A3F5FBAF8F6E1CA7701579E64CE7C53F17545DB82EB08067C rdf:type up:Motif_Annotation ;
+sha:CEF8F3926D1D4C5D55C413263A01757787A1102ABA32D9BAC409035E8F8C109DCBC70EDDAE11416C61F15EDC36C7C788 rdf:type up:Motif_Annotation ;
   rdfs:comment "WSXWS motif" ;
   up:range range:22852486753694510tt232tt236 .
 range:22852486753694510tt232tt236 rdf:type faldo:Region ;
@@ -504,7 +481,7 @@ position:22852486753694510tt236 rdf:type faldo:Position ,
     faldo:ExactPosition ;
   faldo:position 236 ;
   faldo:reference isoform:Q07303-1 .
-sha:0FAC1036CD3E955F96BB66CF4957C595305CED24ABF48E86311558FD24DDA3DCC30804F015FF7312C9FC580A268CDEDA rdf:type up:Motif_Annotation ;
+sha:85E93843267A60007AE38A56D606A6FFF9B93D1A58536039E63FA7F0B00BDF536985DF78C4D4C6AC2296897AC7E206CE rdf:type up:Motif_Annotation ;
   rdfs:comment "Box 1 motif" ;
   up:range range:22852486753694510tt281tt289 .
 range:22852486753694510tt281tt289 rdf:type faldo:Region ;
@@ -518,7 +495,7 @@ position:22852486753694510tt289 rdf:type faldo:Position ,
     faldo:ExactPosition ;
   faldo:position 289 ;
   faldo:reference isoform:Q07303-1 .
-sha:9BBC4A6739721EC9C9653EFF858BEEC13E7DE59C3C752A5E7706312F73A600B320DC94A567FA3FE4C50BD7D80BCFC133 rdf:type up:Motif_Annotation ;
+sha:FE1D1230EF27B66071398B73F3312944A93C33AD6470F554C28B58848B14F0DD9E6D85F16CBE329B9BDBD1E41AF80DC4 rdf:type up:Motif_Annotation ;
   rdfs:comment "ITIM motif" ;
   up:range range:22852486753694510tt451tt456 .
 range:22852486753694510tt451tt456 rdf:type faldo:Region ;
@@ -532,7 +509,7 @@ position:22852486753694510tt456 rdf:type faldo:Position ,
     faldo:ExactPosition ;
   faldo:position 456 ;
   faldo:reference isoform:Q07303-1 .
-sha:8F26FE0BD2B91ACB463BD7A4D298B018A6CB733DD5BE87FB0228C62E932C04B1D9BA64BF6E4521353711BBC5961E2626 rdf:type up:Site_Annotation ;
+sha:4F79E9544E30C97D1BCE75ACB50696AA9CB34621FE64F43E757C6D0A38667CC759EC2E61489E2FBADF6E49B1C60D4DDB rdf:type up:Site_Annotation ;
   rdfs:comment "Required for ligand binding" ;
   up:range range:22852486753694510tt116tt116 .
 range:22852486753694510tt116tt116 rdf:type faldo:Region ;
@@ -545,9 +522,9 @@ position:22852486753694510tt116 rdf:type faldo:Position ,
 <#_5130373330330040> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:8F26FE0BD2B91ACB463BD7A4D298B018A6CB733DD5BE87FB0228C62E932C04B1D9BA64BF6E4521353711BBC5961E2626 ;
+  rdf:object sha:4F79E9544E30C97D1BCE75ACB50696AA9CB34621FE64F43E757C6D0A38667CC759EC2E61489E2FBADF6E49B1C60D4DDB ;
   up:attribution <#_5130373330330014> .
-sha:9428BA1E435C80C26E5D1FE45463735CB0459673CCF41C9E15B6E7207A3EA2B4CE36483DFE8C276F3333EB1AD095D2E3 rdf:type up:Site_Annotation ;
+sha:7BD15CAD164B6A3A7BD590DDCACB6BB859F91FE22E1158C1482A0902D5E5A55D101274C05CF8739FF4851EC595C409D1 rdf:type up:Site_Annotation ;
   rdfs:comment "Interaction with APS and STAT5, and activation" ;
   up:range range:22852486753694510tt367tt367 .
 range:22852486753694510tt367tt367 rdf:type faldo:Region ;
@@ -557,7 +534,7 @@ position:22852486753694510tt367 rdf:type faldo:Position ,
     faldo:ExactPosition ;
   faldo:position 367 ;
   faldo:reference isoform:Q07303-1 .
-sha:630F2E2C2AAC5CD5A813C290A975EF0AAEB74D19640382F8684BFB4425D5B1BD792F3FB68D42CA8516FFAF0776EA4FAA rdf:type up:Site_Annotation ;
+sha:47FA2BB7B400EF57D2A5D715452D72E29018B46283958D367CEB56764C1E75A9E05C431E9D299A5CEBB9B9CF80639523 rdf:type up:Site_Annotation ;
   rdfs:comment "Required for STAT5/PTPN11/SOCS3 binding" ;
   up:range range:22852486753694510tt425tt425 .
 range:22852486753694510tt425tt425 rdf:type faldo:Region ;
@@ -567,7 +544,7 @@ position:22852486753694510tt425 rdf:type faldo:Position ,
     faldo:ExactPosition ;
   faldo:position 425 ;
   faldo:reference isoform:Q07303-1 .
-sha:1D316E8B83F935EC235171747CFA2B9EBC29981A0E3D7724E430DF69DD171F5A1EB647EB1571F5C293CAADFBA0BA14B6 rdf:type up:Site_Annotation ;
+sha:C4659446667BC2EA180913B07FF93C16E2BE3228BF8C97EC8EDAC4BBA4EDD0475A2F00072D0664DE81F1CA76F08066ED rdf:type up:Site_Annotation ;
   rdfs:comment "Interaction with PTPN6" ;
   up:range range:22852486753694510tt453tt453 .
 range:22852486753694510tt453tt453 rdf:type faldo:Region ;
@@ -577,31 +554,31 @@ position:22852486753694510tt453 rdf:type faldo:Position ,
     faldo:ExactPosition ;
   faldo:position 453 ;
   faldo:reference isoform:Q07303-1 .
-sha:2180323386D70FB464C444AB0B0124CBE22B83EC1D10B63E9A96B75938EACC6146DC3559C89243BE45294C6568C46A8F rdf:type up:Modified_Residue_Annotation ;
+sha:E7D1F76C7A1E08909092B770BA5DE88EACD188CDCC9BF0E7ED4A44425ADA470D006836C70E5971F9A7D8E0EC37CC7C6E rdf:type up:Modified_Residue_Annotation ;
   rdfs:comment "Phosphotyrosine; by JAK2" ;
   up:range range:22852486753694510tt367tt367 .
 <#_5130373330330049> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:2180323386D70FB464C444AB0B0124CBE22B83EC1D10B63E9A96B75938EACC6146DC3559C89243BE45294C6568C46A8F ;
+  rdf:object sha:E7D1F76C7A1E08909092B770BA5DE88EACD188CDCC9BF0E7ED4A44425ADA470D006836C70E5971F9A7D8E0EC37CC7C6E ;
   up:attribution <#_5130373330330014> .
-sha:B626AC5943693DFAADB476F27D5E38104E204E4736B7761A830E992513D1E7C6B0CF9396B7E900B8C7EA0C24D0E63192 rdf:type up:Modified_Residue_Annotation ;
+sha:2DEF87F0F384AC7421838EF009BB84948D23F1D72C75237CFD16348761A4816D0A0CBB4DBD7F849150CB392D6EDA6DA3 rdf:type up:Modified_Residue_Annotation ;
   rdfs:comment "Phosphotyrosine; by JAK2" ;
   up:range range:22852486753694510tt425tt425 .
 <#_513037333033004C> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:B626AC5943693DFAADB476F27D5E38104E204E4736B7761A830E992513D1E7C6B0CF9396B7E900B8C7EA0C24D0E63192 ;
+  rdf:object sha:2DEF87F0F384AC7421838EF009BB84948D23F1D72C75237CFD16348761A4816D0A0CBB4DBD7F849150CB392D6EDA6DA3 ;
   up:attribution <#_5130373330330014> .
-sha:FF4FDBB38A89368955660F793B6B64F150CFD157F528311E570DD6C1E6BED3D0C383FCD6060F2B8AB5C4FBE454B2B3FF rdf:type up:Modified_Residue_Annotation ;
+sha:F1CC1F453CA369A071395A0B5987495D8A135A11FEA56C48C6EB373F12AE1FF0B38D775717127772395AD3472A7B16A3 rdf:type up:Modified_Residue_Annotation ;
   rdfs:comment "Phosphotyrosine; by JAK2" ;
   up:range range:22852486753694510tt453tt453 .
 <#_513037333033004F> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:FF4FDBB38A89368955660F793B6B64F150CFD157F528311E570DD6C1E6BED3D0C383FCD6060F2B8AB5C4FBE454B2B3FF ;
+  rdf:object sha:F1CC1F453CA369A071395A0B5987495D8A135A11FEA56C48C6EB373F12AE1FF0B38D775717127772395AD3472A7B16A3 ;
   up:attribution <#_5130373330330014> .
-sha:6332402D17AEA3D40ECF71EAF14A9E14A641158D0F9E37597C90CC570BCE3EA936A70A996B3C568CFDCD0C6F6DDF0AD2 rdf:type up:Modified_Residue_Annotation ;
+sha:36D95EE6D5D098FD16DC51369252B9C1D3AEF57E92B3ED61C9DF10BACABE94AA4ED669E7FB0A297E796AC44383A51FD5 rdf:type up:Modified_Residue_Annotation ;
   rdfs:comment "Phosphotyrosine; by JAK2" ;
   up:range range:22852486753694510tt455tt455 .
 range:22852486753694510tt455tt455 rdf:type faldo:Region ;
@@ -614,9 +591,9 @@ position:22852486753694510tt455 rdf:type faldo:Position ,
 <#_5130373330330052> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:6332402D17AEA3D40ECF71EAF14A9E14A641158D0F9E37597C90CC570BCE3EA936A70A996B3C568CFDCD0C6F6DDF0AD2 ;
+  rdf:object sha:36D95EE6D5D098FD16DC51369252B9C1D3AEF57E92B3ED61C9DF10BACABE94AA4ED669E7FB0A297E796AC44383A51FD5 ;
   up:attribution <#_5130373330330014> .
-sha:98ABFB75A21B8F546B814005FC63721C39E84FD495607310D59F6F5813B4DC36021BFB3AF9260CF5D40AF97251448D94 rdf:type up:Modified_Residue_Annotation ;
+sha:03F3E4C854EFF9FFFE2666930BA0473B8D3A3E3B843E9278BAAA5A4F6FC48252E882D3B6C37B04F81BD08102B995A725 rdf:type up:Modified_Residue_Annotation ;
   rdfs:comment "Phosphotyrosine; by JAK2" ;
   up:range range:22852486753694510tt467tt467 .
 range:22852486753694510tt467tt467 rdf:type faldo:Region ;
@@ -629,9 +606,9 @@ position:22852486753694510tt467 rdf:type faldo:Position ,
 <#_5130373330330055> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:98ABFB75A21B8F546B814005FC63721C39E84FD495607310D59F6F5813B4DC36021BFB3AF9260CF5D40AF97251448D94 ;
+  rdf:object sha:03F3E4C854EFF9FFFE2666930BA0473B8D3A3E3B843E9278BAAA5A4F6FC48252E882D3B6C37B04F81BD08102B995A725 ;
   up:attribution <#_5130373330330014> .
-sha:75ACB6F689CF5BD086D5EC0807CF2518091859D1838056339FE7D654B7CFBEDF6277BA513EC43325B6338E3CEEE1773C rdf:type up:Modified_Residue_Annotation ;
+sha:9C3EA3DC786207D107D7595EE1139CAEFCCDD06BAF58CB6245EA87CFBC7140FBBEA770005A8913FEBFD465124E436759 rdf:type up:Modified_Residue_Annotation ;
   rdfs:comment "Phosphotyrosine; by JAK2" ;
   up:range range:22852486753694510tt484tt484 .
 range:22852486753694510tt484tt484 rdf:type faldo:Region ;
@@ -644,9 +621,9 @@ position:22852486753694510tt484 rdf:type faldo:Position ,
 <#_5130373330330058> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:75ACB6F689CF5BD086D5EC0807CF2518091859D1838056339FE7D654B7CFBEDF6277BA513EC43325B6338E3CEEE1773C ;
+  rdf:object sha:9C3EA3DC786207D107D7595EE1139CAEFCCDD06BAF58CB6245EA87CFBC7140FBBEA770005A8913FEBFD465124E436759 ;
   up:attribution <#_5130373330330014> .
-sha:8E914093EDFBDC915E34FCA3DF6526CEE0BF7284190CCF9D1F4AA522006F806FBE6DDB03B570F83B382C26062D8CC82E rdf:type up:Modified_Residue_Annotation ;
+sha:31E97F7D668D07D397B2C0235D45CFA928DD0CAF101D15308D57C15B54C7CDB7AFE19A0DE28FD4EAF57487F1F9BECE3A rdf:type up:Modified_Residue_Annotation ;
   rdfs:comment "Phosphotyrosine; by JAK2" ;
   up:range range:22852486753694510tt488tt488 .
 range:22852486753694510tt488tt488 rdf:type faldo:Region ;
@@ -659,9 +636,9 @@ position:22852486753694510tt488 rdf:type faldo:Position ,
 <#_513037333033005B> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:8E914093EDFBDC915E34FCA3DF6526CEE0BF7284190CCF9D1F4AA522006F806FBE6DDB03B570F83B382C26062D8CC82E ;
+  rdf:object sha:31E97F7D668D07D397B2C0235D45CFA928DD0CAF101D15308D57C15B54C7CDB7AFE19A0DE28FD4EAF57487F1F9BECE3A ;
   up:attribution <#_5130373330330014> .
-sha:2F4EF8BB6F99BC86A412F8CB4202939F4638798732E606C35BE014967EB8D81178D00D580FD2F0279AC69F52DF4130FC rdf:type up:Modified_Residue_Annotation ;
+sha:E1649C8E105766A11BBEB301E4F3623A829530D3271539F0236AD31EFD0C8EEA9C1088728D192E789AEF52B7CD231D45 rdf:type up:Modified_Residue_Annotation ;
   rdfs:comment "Phosphotyrosine; by JAK2" ;
   up:range range:22852486753694510tt503tt503 .
 range:22852486753694510tt503tt503 rdf:type faldo:Region ;
@@ -674,9 +651,9 @@ position:22852486753694510tt503 rdf:type faldo:Position ,
 <#_513037333033005E> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:2F4EF8BB6F99BC86A412F8CB4202939F4638798732E606C35BE014967EB8D81178D00D580FD2F0279AC69F52DF4130FC ;
+  rdf:object sha:E1649C8E105766A11BBEB301E4F3623A829530D3271539F0236AD31EFD0C8EEA9C1088728D192E789AEF52B7CD231D45 ;
   up:attribution <#_5130373330330014> .
-sha:32D77DB9BCA545732B9457BF71B8D09B8B7866D1E2B57B21C8BDB3A8731C5EAD4C1B73E97C091D73AE23BDC74D341833 rdf:type up:Glycosylation_Annotation ;
+sha:3ED93E2C71A898AEA1F475746B2DC914363AD07DAFB08F1173E9EF26CCB6BE3B6EF5B3A21517B1D7A26038AD6D88B80D rdf:type up:Glycosylation_Annotation ;
   rdfs:comment "N-linked (GlcNAc...)" ;
   up:range range:22852486753694510tt75tt75 .
 range:22852486753694510tt75tt75 rdf:type faldo:Region ;
@@ -689,9 +666,9 @@ position:22852486753694510tt75 rdf:type faldo:Position ,
 <#_5130373330330061> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:32D77DB9BCA545732B9457BF71B8D09B8B7866D1E2B57B21C8BDB3A8731C5EAD4C1B73E97C091D73AE23BDC74D341833 ;
+  rdf:object sha:3ED93E2C71A898AEA1F475746B2DC914363AD07DAFB08F1173E9EF26CCB6BE3B6EF5B3A21517B1D7A26038AD6D88B80D ;
   up:attribution <#_513037333033002F> .
-sha:8DC0CB5ACAE28BD56AB5B25D4D48E391303AF182932FFAE7E468653DB6006D75F29AB503D247638748B6C32F08CC1135 rdf:type up:Disulfide_Bond_Annotation ;
+sha:1BA8033CEA971E3F811F0244FEDB37A54878F6F1101D8AD674302BA4EE5E74BD59A60B97A61C15968E58B70CE76C5F87 rdf:type up:Disulfide_Bond_Annotation ;
   up:range range:22852486753694510tt52tt52 ,
     range:22852486753694510tt62tt62 .
 range:22852486753694510tt52tt52 rdf:type faldo:Region ;
@@ -711,9 +688,9 @@ position:22852486753694510tt62 rdf:type faldo:Position ,
 <#_5130373330330064> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:8DC0CB5ACAE28BD56AB5B25D4D48E391303AF182932FFAE7E468653DB6006D75F29AB503D247638748B6C32F08CC1135 ;
+  rdf:object sha:1BA8033CEA971E3F811F0244FEDB37A54878F6F1101D8AD674302BA4EE5E74BD59A60B97A61C15968E58B70CE76C5F87 ;
   up:attribution <#_5130373330330014> .
-sha:D3B13210FC1A288B250BBFDAB286CDCF5466F29C11FC0E040110887EDABCF0A03F68DD7E85039ABB921CC2113947A5B6 rdf:type up:Disulfide_Bond_Annotation ;
+sha:E6955B49CBCD4C43C71DB267F29E714E0297E69143D7C61D2DC9D8A7E03B650E81081C2EC1B664C89CB505427AE33682 rdf:type up:Disulfide_Bond_Annotation ;
   up:range range:22852486753694510tt90tt90 ,
     range:22852486753694510tt106tt106 .
 range:22852486753694510tt90tt90 rdf:type faldo:Region ;
@@ -733,9 +710,9 @@ position:22852486753694510tt106 rdf:type faldo:Position ,
 <#_5130373330330068> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:D3B13210FC1A288B250BBFDAB286CDCF5466F29C11FC0E040110887EDABCF0A03F68DD7E85039ABB921CC2113947A5B6 ;
+  rdf:object sha:E6955B49CBCD4C43C71DB267F29E714E0297E69143D7C61D2DC9D8A7E03B650E81081C2EC1B664C89CB505427AE33682 ;
   up:attribution <#_5130373330330014> .
-sha:B29B3B1727F3AEA2F1F679910376FD303DE3EC9D6FE3CF94948902537DCBB7173B4EEE9012BA2AB2B894F196013D4673 rdf:type up:Cross-link_Annotation ;
+sha:08859862622C9D2E6196D0C7C7A67E2DB09BEB34987D6E69357472FAA29675502BE128916CD6BBD351A3C6CBCC301CFB rdf:type up:Cross-link_Annotation ;
   rdfs:comment "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)" ;
   up:range range:22852486753694510tt280tt280 .
 range:22852486753694510tt280tt280 rdf:type faldo:Region ;
@@ -748,9 +725,9 @@ position:22852486753694510tt280 rdf:type faldo:Position ,
 <#_513037333033006C> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:B29B3B1727F3AEA2F1F679910376FD303DE3EC9D6FE3CF94948902537DCBB7173B4EEE9012BA2AB2B894F196013D4673 ;
-  up:attribution <#_5130373330330014> .
-sha:BF585339252A0B915C57F2DBC40AE22DF6F260E53C42003EE0B16A0F49438C375FD91EA350F23840B2EE0EFE9634D4A0 rdf:type up:Cross-link_Annotation ;
+  rdf:object sha:08859862622C9D2E6196D0C7C7A67E2DB09BEB34987D6E69357472FAA29675502BE128916CD6BBD351A3C6CBCC301CFB ;
+  up:attribution <#_513037333033006E> .
+sha:37713CF6C97AC956AF4FEA48A28BF0FD29BB58921190C59D2E6BB794587F8233CCC49BFB2DE011C2AB95A7EB9F4A8769 rdf:type up:Cross-link_Annotation ;
   rdfs:comment "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)" ;
   up:range range:22852486753694510tt452tt452 .
 range:22852486753694510tt452tt452 rdf:type faldo:Region ;
@@ -760,11 +737,11 @@ position:22852486753694510tt452 rdf:type faldo:Position ,
     faldo:ExactPosition ;
   faldo:position 452 ;
   faldo:reference isoform:Q07303-1 .
-<#_513037333033006F> rdf:type rdf:Statement ;
+<#_5130373330330070> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:BF585339252A0B915C57F2DBC40AE22DF6F260E53C42003EE0B16A0F49438C375FD91EA350F23840B2EE0EFE9634D4A0 ;
-  up:attribution <#_5130373330330014> .
+  rdf:object sha:37713CF6C97AC956AF4FEA48A28BF0FD29BB58921190C59D2E6BB794587F8233CCC49BFB2DE011C2AB95A7EB9F4A8769 ;
+  up:attribution <#_513037333033006E> .
 annotation:VSP_009514 rdf:type up:Alternative_Sequence_Annotation ;
   rdfs:comment "In isoform EPOR-S." ;
   up:substitution "GEATVPRGGGGAGPNTSKPP" ;
@@ -776,11 +753,11 @@ position:22852486753694510tt265 rdf:type faldo:Position ,
     faldo:ExactPosition ;
   faldo:position 265 ;
   faldo:reference isoform:Q07303-1 .
-<#_5130373330330071> rdf:type rdf:Statement ;
+<#_5130373330330072> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
   rdf:object annotation:VSP_009514 ;
-  up:attribution <#_5130373330330073> .
+  up:attribution <#_5130373330330074> .
 annotation:VSP_009515 rdf:type up:Alternative_Sequence_Annotation ;
   rdfs:comment "In isoform EPOR-S." ;
   up:substitution "" ;
@@ -792,36 +769,82 @@ position:22852486753694510tt266 rdf:type faldo:Position ,
     faldo:ExactPosition ;
   faldo:position 266 ;
   faldo:reference isoform:Q07303-1 .
-<#_5130373330330074> rdf:type rdf:Statement ;
+<#_5130373330330075> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:annotation ;
   rdf:object annotation:VSP_009515 ;
-  up:attribution <#_5130373330330073> .
-<#_5130373330330076> rdf:type rdf:Statement ;
+  up:attribution <#_5130373330330074> .
+<#_5130373330330077> rdf:type rdf:Statement ;
+  rdf:subject <Q07303> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_0005737 ;
+  up:attribution <#_5130373330330078> .
+<#_5130373330330079> rdf:type rdf:Statement ;
+  rdf:subject <Q07303> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_0009897 ;
+  up:attribution <#_513037333033007A> .
+<#_513037333033007B> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:classifiedWith ;
   rdf:object go:GO_0016021 ;
-  up:attribution <#_5130373330330077> .
-<#_5130373330330078> rdf:type rdf:Statement ;
+  up:attribution <#_513037333033007C> .
+<#_513037333033007D> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:classifiedWith ;
   rdf:object go:GO_0004900 ;
-  up:attribution <#_5130373330330079> .
-<#_513037333033007A> rdf:type rdf:Statement ;
+  up:attribution <#_513037333033007E> .
+<#_513037333033007F> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0038162 ;
-  up:attribution <#_513037333033007B> .
-<#_513037333033007C> rdf:type rdf:Statement ;
+  rdf:object go:GO_0007568 ;
+  up:attribution <#_5130373330330080> .
+<#_5130373330330081> rdf:type rdf:Statement ;
+  rdf:subject <Q07303> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_1904374 ;
+  up:attribution <#_5130373330330082> .
+<#_5130373330330083> rdf:type rdf:Statement ;
+  rdf:subject <Q07303> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_1903206 ;
+  up:attribution <#_5130373330330084> .
+<#_5130373330330085> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:classifiedWith ;
   rdf:object go:GO_0043524 ;
-  up:attribution <#_513037333033007D> .
-<#_513037333033007E> rdf:type rdf:Statement ;
+  up:attribution <#_5130373330330086> ,
+    <#_5130373330330087> .
+<#_5130373330330088> rdf:type rdf:Statement ;
+  rdf:subject <Q07303> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_0045019 ;
+  up:attribution <#_5130373330330089> .
+<#_513037333033008A> rdf:type rdf:Statement ;
+  rdf:subject <Q07303> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_0008284 ;
+  up:attribution <#_513037333033008B> .
+<#_513037333033008C> rdf:type rdf:Statement ;
   rdf:subject <Q07303> ;
   rdf:predicate up:classifiedWith ;
   rdf:object go:GO_0007204 ;
-  up:attribution <#_513037333033007F> .
+  up:attribution <#_513037333033008D> .
+<#_513037333033008E> rdf:type rdf:Statement ;
+  rdf:subject <Q07303> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_0070374 ;
+  up:attribution <#_513037333033008F> .
+<#_5130373330330090> rdf:type rdf:Statement ;
+  rdf:subject <Q07303> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_0010976 ;
+  up:attribution <#_5130373330330091> .
+<#_5130373330330092> rdf:type rdf:Statement ;
+  rdf:subject <Q07303> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_0001666 ;
+  up:attribution <#_5130373330330093> .
 isoform:Q07303-1 rdf:type up:Simple_Sequence ;
   up:modified "1995-02-01"^^xsd:date ;
   up:version 1 ;
@@ -837,31 +860,74 @@ isoform:Q07303-2 rdf:type up:Modified_Sequence ;
   up:basedOn isoform:Q07303-1 ;
   up:modification annotation:VSP_009514 ,
     annotation:VSP_009515 .
-<#_5130373330330077> dcterms:creator <http://purl.uniprot.org/goa-projects/UniProtKB-KW> ;
-  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
-<#_5130373330330079> dcterms:creator <http://purl.uniprot.org/goa-projects/UniProtKB> ;
-  up:manual true ;
-  up:evidence <http://purl.obolibrary.org/obo/ECO_0000250> .
-<#_513037333033007B> dcterms:creator <http://purl.uniprot.org/goa-projects/GOC> ;
+<#_5130373330330078> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
-  up:source citation:7684373 .
-<#_513037333033007D> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
+  up:source citation:17554621 .
+<#_513037333033007A> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
+  up:source citation:21649646 .
+<#_513037333033007C> dcterms:creator <http://purl.uniprot.org/goa-projects/UniProtKB-KW> ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
+<#_513037333033007E> dcterms:creator <http://purl.uniprot.org/goa-projects/UniProtKB> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000250> .
+<#_5130373330330080> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000270> ;
+  up:source citation:19330822 .
+<#_5130373330330082> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000270> ;
+  up:source citation:18711747 .
+<#_5130373330330084> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000315> ;
+  up:source citation:23636173 .
+<#_5130373330330086> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000315> ;
   up:source citation:12451129 .
-<#_513037333033007F> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
+<#_5130373330330087> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000315> ;
+  up:source citation:18711747 .
+<#_5130373330330089> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000315> ;
+  up:source citation:10489101 .
+<#_513037333033008B> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000315> ;
+  up:source citation:21749867 .
+<#_513037333033008D> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
   up:source citation:7684373 .
+<#_513037333033008F> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000315> ;
+  up:source citation:21749867 .
+<#_5130373330330091> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000315> ;
+  up:source citation:22469063 .
+<#_5130373330330093> dcterms:creator <http://purl.uniprot.org/goa-projects/RGD> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000270> ;
+  up:source citation:21624288 .
 <#_5130373330330014> up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000250> .
+<#_513037333033006E> up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000250> ;
+  up:source <P14753> .
 <#_513037333033002F> up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000255> .
 <#_5130373330330027> up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000255> ;
   up:source <http://purl.uniprot.org/prosite-prorule/PRU00316> .
-<#_5130373330330073> up:manual true ;
+<#_5130373330330074> up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000303> ;
   up:source citation:9029168 .
 <#_5130373330330024> up:manual true ;

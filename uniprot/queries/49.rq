@@ -1,4 +1,5 @@
 #title:MINUS all data (note lack of overlap in variables)
+#color:ex-red 
 SELECT ?subject ?predicate ?object
 WHERE
 {

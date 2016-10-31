@@ -1,0 +1,9 @@
+#title: Select Proteins similar to Human EPO isform 3
+#tags:UniRef,UniProtKB,UniParc
+SELECT ?epoLike
+WHERE {?cluster up:identity "0.9"^^xsd:float;
+                up:member ?member,?member2 .
+     ?member up:sequenceFor ?epoLike .
+     ?member2 up:sequenceFor uniprot:P19235-3 . 
+     FILTER(?epoLike != uniprot:P19235-3)
+}

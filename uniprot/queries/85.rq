@@ -1,4 +1,5 @@
 #title: SERVICE combining playground with main dataset
+#color:ex-red 
 SELECT *
 WHERE {
 	SERVICE <http://sparql.uniprot.org/sparql/> {

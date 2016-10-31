@@ -1,4 +1,5 @@
 #title: ORDER BY name descending 
+#color:ex-red 
 SELECT *
 WHERE {
  ?taxon up:scientificName ?name .

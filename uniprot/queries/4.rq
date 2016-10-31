@@ -1,4 +1,5 @@
 #title:Select UniProt records with a related disease
+#tags: Swiss-Prot, UniProtKB, Disease
 SELECT ?protein ?disease
 WHERE {?protein a up:Protein;
                 up:annotation ?annotation .

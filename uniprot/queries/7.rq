@@ -1,0 +1,9 @@
+#title:Proteins that are in the genus Hominidae
+#tags:taxonomy, UniProtKB, chain
+SELECT ?protein ?organism
+WHERE {?protein a up:Protein;
+                up:organism ?organism .
+     ?organism rdfs:subClassOf+ taxon:9604 .
+# try this without the plus! or with an asterix
+# the plus is not needed on the real uniprot website
+}

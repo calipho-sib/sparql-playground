@@ -1,4 +1,5 @@
 #title: | is OR for predicate
+#color:ex-red 
 SELECT ?name
 WHERE {
 	taxon:9994 up:scientificName|up:otherName ?name .

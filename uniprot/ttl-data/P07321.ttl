@@ -3,14 +3,17 @@
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix citation: <http://purl.uniprot.org/citations/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix disease: <http://purl.uniprot.org/diseases/> .
 @prefix enzyme: <http://purl.uniprot.org/enzyme/> .
 @prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix go: <http://purl.obolibrary.org/obo/> .
 @prefix isoform: <http://purl.uniprot.org/isoforms/> .
 @prefix keyword: <http://purl.uniprot.org/keywords/> .
 @prefix location: <http://purl.uniprot.org/locations/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix position: <http://purl.uniprot.org/position/> .
+@prefix pubmed: <http://purl.uniprot.org/pubmed/> .
 @prefix range: <http://purl.uniprot.org/range/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -23,8 +26,8 @@
 <P07321> rdf:type up:Protein ;
   up:reviewed true ;
   up:created "1988-04-01"^^xsd:date ;
-  up:modified "2015-04-01"^^xsd:date ;
-  up:version 123 ;
+  up:modified "2016-10-05"^^xsd:date ;
+  up:version 136 ;
   up:mnemonic "EPO_MOUSE" ;
   up:citation citation:3773894 ,
     citation:3022133 ,
@@ -40,7 +43,8 @@
     <http://purl.uniprot.org/unigene/Mm.349116> ,
     <http://purl.uniprot.org/proteinmodelportal/P07321> ,
     <http://purl.uniprot.org/smr/P07321> ,
-    <http://purl.uniprot.org/phosphosite/P07321> ,
+    <http://purl.uniprot.org/string/10090.ENSMUSP00000031723> ,
+    <http://purl.uniprot.org/paxdb/P07321> ,
     <http://purl.uniprot.org/pride/P07321> ,
     <http://purl.uniprot.org/ensembl/ENSMUST00000031723> ,
     <http://purl.uniprot.org/ensembl/ENSMUST00000111038> ,
@@ -49,23 +53,22 @@
     <http://purl.uniprot.org/ucsc/uc009acm.1> ,
     <http://purl.uniprot.org/ctd/2056> ,
     <http://purl.uniprot.org/mgi/95407> ,
-    <http://purl.uniprot.org/eggnog/NOG43828> ,
+    <http://purl.uniprot.org/eggnog/ENOG410IHW5> ,
+    <http://purl.uniprot.org/eggnog/ENOG410XTRF> ,
+    <http://purl.uniprot.org/genetree/ENSGT00390000017226> ,
     <http://purl.uniprot.org/hogenom/HOG000052505> ,
     <http://purl.uniprot.org/hovergen/HBG003978> ,
     <http://purl.uniprot.org/inparanoid/P07321> ,
     <http://purl.uniprot.org/ko/K05437> ,
     <http://purl.uniprot.org/oma/NVTMGCA> ,
-    <http://purl.uniprot.org/orthodb/EOG7DVDCR> ,
+    <http://purl.uniprot.org/orthodb/EOG091G0PMA> ,
     <http://purl.uniprot.org/phylomedb/P07321> ,
     <http://purl.uniprot.org/treefam/TF333413> ,
-    <http://purl.uniprot.org/reactome/REACT_303732> ,
     <http://purl.uniprot.org/sabio-rk/P07321> ,
-    <http://purl.uniprot.org/nextbio/284726> ,
     <http://purl.obolibrary.org/obo/PR_P07321> ,
-    <http://purl.uniprot.org/bgee/P07321> ,
+    <http://purl.uniprot.org/bgee/ENSMUSG00000029711> ,
     <http://purl.uniprot.org/cleanex/MM_EPO> ,
     <http://purl.uniprot.org/expressionatlas/P07321> ,
-    <http://purl.uniprot.org/genevestigator/P07321> ,
     <http://purl.uniprot.org/gene3d/1.20.1250.10> ,
     <http://purl.uniprot.org/interpro/IPR009079> ,
     <http://purl.uniprot.org/interpro/IPR012351> ,
@@ -81,16 +84,16 @@
   up:recommendedName sha:97863F13DD39E8A2305FAF66EE60E55B79B2ABA7C2492D16E4BDA016344742D8C8448C42992E2AFA09F92B45E59F36F8 ;
   up:organism taxon:10090 ;
   up:encodedBy <#_50303733323100E> ;
-  up:annotation sha:CE38A0A0AD1F20847015787A0E5156D6E564977FFD246E529C3C72F4634AE7B5E8029630DA51F08AAFDC62BBC18FB2B7 ,
-    sha:8C526BAD4DFD5F6A0E758420419FAB2D29B6C0D028CAE42175CF073E7AF8781C238921BF78715BAA1F4E579ECC68E3B0 ,
-    sha:9F02F20ED4845D86D8323FC9FFFF50CA884C7C124AA1B69B35350E965A026B1972A019759C7E6AFDC5076491C5100BF6 ,
-    sha:475E54DDF789260878D01E271743459AF77E74AEED3C2C7DDA4FDEAB7A7360DCC2CDE99D584C7B2DB5BC5581B3B74074 ,
-    sha:0C37D52A98CC1380FAE358D3F3DF7B64417288D6E8E9789787EE533896E1D7D3C8E14D080D3D3B4B356C3D09F6510449 ,
+  up:annotation sha:6031D171175A8B67212934A7F5E54E536C5D5670B2C2DFFF767DD0DBA606DEE0A1FC2592AA109E176E21567DD4403640 ,
+    sha:8DFDD5F0129356217B6B059FC3C4DF35D21BAFEB1C3C9A82C58F9C0C1B319881E54A71CC4C2645AB24D3A24ED3826B4D ,
+    sha:C3E36D850ACB36B899534D1746112B14BE1EBEB6856C67713175DEDB510572A6E65FD7473124715770625EFC380D5C52 ,
+    sha:FE3C484C3DF40F9E0BA5BF07723319D580186B5E3514C0D59793E8E0541BA0A71DD9A8DFD994CAAD2277E4DC84510BAC ,
+    sha:1B8F3DDDD8240012F4881570D944763095C593108110AC0AD46BEA74E20BB75517713578E531A6608C7C728353E7E737 ,
     annotation:PRO_0000008405 ,
-    sha:D36811688825105E974EA282E7FCBBFA2FCB96E82C603B6BCD021930144A77B34870A25BDCEFF70FCCBE1E3D104EE359 ,
-    sha:59C942D693B9CD954189DD2834D08D985EE73F822FCF4A1CCD8980D8C62B93F712547C9327AC417A027002D4C6B1FFC0 ,
-    sha:C57B3F35944E693978E5795A27A0E59B454FF3884772994C5146F03DAE6B63B3BC1955AA4D45E01BCF9F13370CFAC27E ,
-    sha:3DEDB09F534E641C9724D63BBBD75F4C0078E53F86DBA021FF480F6B86462770C2E71DAA4215FFFB76D68F852FFD56E3 ;
+    sha:D0FEBADA6025DD59AB83E67A258DB0AEE866274137A4483401AF2BBBFD079A63121FD54CFA679DE0F60555D60AD04CA7 ,
+    sha:2D03F5B3AF6B84C203D8CA6C182F0055B299C18D825AB601C32922968F9891EF03EC5F72E1D360378A2E7037615D68CF ,
+    sha:838F4713758BAFA88FF02F04C67F423292E26FC71E6EBD1734D174E486065F6878E6B272E7BB545A1340B4B58A05195E ,
+    sha:74433B152017B209055824B8B0C9DAC7457FC92C61C84F00073BA5F4FB8D64F938D5591DE0F3D289DB1823B69D41B578 ;
   up:existence up:Evidence_at_Transcript_Level_Existence ;
   up:classifiedWith keyword:1015 ,
     keyword:265 ,
@@ -103,6 +106,7 @@
     go:GO_0005615 ,
     go:GO_0005128 ,
     go:GO_0030295 ,
+    go:GO_0006953 ,
     go:GO_0007568 ,
     go:GO_0001525 ,
     go:GO_0006915 ,
@@ -119,10 +123,14 @@
     go:GO_1902251 ,
     go:GO_1902219 ,
     go:GO_0033033 ,
+    go:GO_1901215 ,
+    go:GO_0000122 ,
     go:GO_0018105 ,
+    go:GO_0042104 ,
     go:GO_0008284 ,
     go:GO_0045740 ,
-    go:GO_0045666 ,
+    go:GO_0070374 ,
+    go:GO_0010976 ,
     go:GO_0045860 ,
     go:GO_0046579 ,
     go:GO_0045893 ,
@@ -184,6 +192,11 @@
     <#_5030373332310076> ,
     <#_5030373332310078> ,
     <#_503037333231007A> ,
+    <#_503037333231007C> ,
+    <#_503037333231007E> ,
+    <#_5030373332310080> ,
+    <#_5030373332310082> ,
+    <#_5030373332310084> ,
     <#_503037333231001C> ,
     <#_5030373332310015> ;
   up:proteome <http://purl.uniprot.org/proteomes/UP000000589#Chromosome%205> .
@@ -191,8 +204,8 @@ citation:3773894 rdf:type up:Journal_Citation ;
   up:title "Murine erythropoietin gene: cloning, expression, and human gene homology." ;
   up:author "Shoemaker C.B." ,
     "Mitsock L.D." ;
-  skos:exactMatch <http://purl.uniprot.org/pubmed/3773894> ;
-  <http://xmlns.com/foaf/0.1/primaryTopicOf> <http://www.ncbi.nlm.nih.gov/pubmed/3773894> ;
+  skos:exactMatch pubmed:3773894 ;
+  foaf:primaryTopicOf <https://www.ncbi.nlm.nih.gov/pubmed/3773894> ;
   up:date "1986"^^xsd:gYear ;
   up:name "Mol. Cell. Biol." ;
   up:volume "6" ;
@@ -208,8 +221,8 @@ citation:3022133 rdf:type up:Journal_Citation ;
   up:author "McDonald J.D." ,
     "Lin F.-K." ,
     "Goldwasser E." ;
-  skos:exactMatch <http://purl.uniprot.org/pubmed/3022133> ;
-  <http://xmlns.com/foaf/0.1/primaryTopicOf> <http://www.ncbi.nlm.nih.gov/pubmed/3022133> ;
+  skos:exactMatch pubmed:3022133 ;
+  foaf:primaryTopicOf <https://www.ncbi.nlm.nih.gov/pubmed/3022133> ;
   up:date "1986"^^xsd:gYear ;
   up:name "Mol. Cell. Biol." ;
   up:volume "6" ;
@@ -234,8 +247,8 @@ citation:11239002 rdf:type up:Journal_Citation ;
     "Tsui L.-C." ,
     "Miller W." ,
     "Koop B.F." ;
-  skos:exactMatch <http://purl.uniprot.org/pubmed/11239002> ;
-  <http://xmlns.com/foaf/0.1/primaryTopicOf> <http://www.ncbi.nlm.nih.gov/pubmed/11239002> ;
+  skos:exactMatch pubmed:11239002 ;
+  foaf:primaryTopicOf <https://www.ncbi.nlm.nih.gov/pubmed/11239002> ;
   dcterms:identifier "doi:10.1093/nar/29.6.1352" ;
   up:date "2001"^^xsd:gYear ;
   up:name "Nucleic Acids Res." ;
@@ -258,8 +271,8 @@ citation:9365246 rdf:type up:Journal_Citation ;
     "Gisselbrecht S." ,
     "Mayeux P." ,
     "Lacombe C." ;
-  skos:exactMatch <http://purl.uniprot.org/pubmed/9365246> ;
-  <http://xmlns.com/foaf/0.1/primaryTopicOf> <http://www.ncbi.nlm.nih.gov/pubmed/9365246> ;
+  skos:exactMatch pubmed:9365246 ;
+  foaf:primaryTopicOf <https://www.ncbi.nlm.nih.gov/pubmed/9365246> ;
   dcterms:identifier "doi:10.1038/sj.onc.1201364" ;
   up:date "1997"^^xsd:gYear ;
   up:name "Oncogene" ;
@@ -303,9 +316,11 @@ citation:9365246 rdf:type up:Journal_Citation ;
   up:database <http://purl.uniprot.org/database/ProteinModelPortal> .
 <http://purl.uniprot.org/smr/P07321> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/SMR> ;
-  rdfs:comment "27-192" .
-<http://purl.uniprot.org/phosphosite/P07321> rdf:type up:Resource ;
-  up:database <http://purl.uniprot.org/database/PhosphoSite> .
+  rdfs:comment "27-192, 130-190" .
+<http://purl.uniprot.org/string/10090.ENSMUSP00000031723> rdf:type up:Resource ;
+  up:database <http://purl.uniprot.org/database/STRING> .
+<http://purl.uniprot.org/paxdb/P07321> rdf:type up:Resource ;
+  up:database <http://purl.uniprot.org/database/PaxDb> .
 <http://purl.uniprot.org/pride/P07321> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/PRIDE> .
 <http://purl.uniprot.org/ensembl/ENSMUST00000031723> rdf:type up:Transcript_Resource ;
@@ -328,8 +343,14 @@ citation:9365246 rdf:type up:Journal_Citation ;
 <http://purl.uniprot.org/mgi/95407> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/MGI> ;
   rdfs:comment "Epo" .
-<http://purl.uniprot.org/eggnog/NOG43828> rdf:type up:Resource ;
-  up:database <http://purl.uniprot.org/database/eggNOG> .
+<http://purl.uniprot.org/eggnog/ENOG410IHW5> rdf:type up:Resource ;
+  up:database <http://purl.uniprot.org/database/eggNOG> ;
+  rdfs:comment "Eukaryota" .
+<http://purl.uniprot.org/eggnog/ENOG410XTRF> rdf:type up:Resource ;
+  up:database <http://purl.uniprot.org/database/eggNOG> ;
+  rdfs:comment "LUCA" .
+<http://purl.uniprot.org/genetree/ENSGT00390000017226> rdf:type up:Resource ;
+  up:database <http://purl.uniprot.org/database/GeneTree> .
 <http://purl.uniprot.org/hogenom/HOG000052505> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/HOGENOM> .
 <http://purl.uniprot.org/hovergen/HBG003978> rdf:type up:Resource ;
@@ -340,38 +361,26 @@ citation:9365246 rdf:type up:Journal_Citation ;
   up:database <http://purl.uniprot.org/database/KO> .
 <http://purl.uniprot.org/oma/NVTMGCA> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/OMA> .
-<http://purl.uniprot.org/orthodb/EOG7DVDCR> rdf:type up:Resource ;
+<http://purl.uniprot.org/orthodb/EOG091G0PMA> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/OrthoDB> .
 <http://purl.uniprot.org/phylomedb/P07321> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/PhylomeDB> .
 <http://purl.uniprot.org/treefam/TF333413> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/TreeFam> .
-<http://purl.uniprot.org/reactome/REACT_303732> rdf:type up:Resource ;
-  up:database <http://purl.uniprot.org/database/Reactome> ;
-  rdfs:comment "Regulation of gene expression by Hypoxia-inducible Factor" .
 <http://purl.uniprot.org/sabio-rk/P07321> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/SABIO-RK> .
-<http://purl.uniprot.org/nextbio/284726> rdf:type up:Resource ;
-  up:database <http://purl.uniprot.org/database/NextBio> .
 <http://purl.obolibrary.org/obo/PR_P07321> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/PRO> .
-<http://purl.uniprot.org/bgee/P07321> rdf:type up:Resource ;
+<http://purl.uniprot.org/bgee/ENSMUSG00000029711> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/Bgee> .
 <http://purl.uniprot.org/cleanex/MM_EPO> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/CleanEx> .
 <http://purl.uniprot.org/expressionatlas/P07321> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/ExpressionAtlas> ;
-  rdfs:comment "baseline" .
-<http://purl.uniprot.org/genevestigator/P07321> rdf:type up:Resource ;
-  up:database <http://purl.uniprot.org/database/Genevestigator> .
+  rdfs:comment "baseline and differential" .
 <http://purl.uniprot.org/gene3d/1.20.1250.10> rdf:type up:Resource ;
-  up:database <http://purl.uniprot.org/database/Gene3D> .
-<#_503037333231007> rdf:type rdf:Statement ;
-  rdf:subject <P07321> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/gene3d/1.20.1250.10> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 1 .
+  up:database <http://purl.uniprot.org/database/Gene3D> ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/P07321-1#Gene3D_1.20.1250.10_match_1> .
 <http://purl.uniprot.org/interpro/IPR009079> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/InterPro> ;
   rdfs:comment "4_helix_cytokine-like_core" .
@@ -389,71 +398,46 @@ citation:9365246 rdf:type up:Journal_Citation ;
   rdfs:comment "Erythroptn" .
 <http://purl.uniprot.org/panther/PTHR10370> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/PANTHER> ;
-  rdfs:comment "PTHR10370" .
-<#_503037333231008> rdf:type rdf:Statement ;
-  rdf:subject <P07321> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/panther/PTHR10370> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 1 .
+  rdfs:comment "PTHR10370" ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/P07321-1#PANTHER_PTHR10370_match_1> .
 <http://purl.uniprot.org/pfam/PF00758> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/Pfam> ;
-  rdfs:comment "EPO_TPO" .
-<#_503037333231009> rdf:type rdf:Statement ;
-  rdf:subject <P07321> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/pfam/PF00758> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 1 .
+  rdfs:comment "EPO_TPO" ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/P07321-1#Pfam_PF00758_match_1> .
 <http://purl.uniprot.org/pirsf/PIRSF001951> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/PIRSF> ;
-  rdfs:comment "EPO" .
-<#_50303733323100A> rdf:type rdf:Statement ;
-  rdf:subject <P07321> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/pirsf/PIRSF001951> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 1 .
+  rdfs:comment "EPO" ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/P07321-1#PIRSF_PIRSF001951_match_1> .
 <http://purl.uniprot.org/prints/PR00272> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/PRINTS> ;
   rdfs:comment "ERYTHROPTN" .
 <http://purl.uniprot.org/supfam/SSF47266> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/SUPFAM> ;
-  rdfs:comment "SSF47266" .
-<#_50303733323100B> rdf:type rdf:Statement ;
-  rdf:subject <P07321> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/supfam/SSF47266> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 1 .
+  rdfs:comment "SSF47266" ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/P07321-1#SUPFAM_SSF47266_match_1> .
 <http://purl.uniprot.org/prosite/PS00817> rdf:type up:Resource ;
   up:database <http://purl.uniprot.org/database/PROSITE> ;
-  rdfs:comment "EPO_TPO" .
-<#_50303733323100C> rdf:type rdf:Statement ;
-  rdf:subject <P07321> ;
-  rdf:predicate rdfs:seeAlso ;
-  rdf:object <http://purl.uniprot.org/prosite/PS00817> ;
-  rdf:type up:Domain_Assignment_Statement ;
-  up:hits 1 .
+  rdfs:comment "EPO_TPO" ;
+  up:signatureSequenceMatch <http://purl.uniprot.org/isoform/P07321-1#PROSITE_PS00817_match_1> .
 sha:97863F13DD39E8A2305FAF66EE60E55B79B2ABA7C2492D16E4BDA016344742D8C8448C42992E2AFA09F92B45E59F36F8 rdf:type up:Structured_Name ;
   up:fullName "Erythropoietin" .
 <#_50303733323100E> rdf:type up:Gene ;
   skos:prefLabel "Epo" .
-sha:CE38A0A0AD1F20847015787A0E5156D6E564977FFD246E529C3C72F4634AE7B5E8029630DA51F08AAFDC62BBC18FB2B7 rdf:type up:Function_Annotation ;
+sha:6031D171175A8B67212934A7F5E54E536C5D5670B2C2DFFF767DD0DBA606DEE0A1FC2592AA109E176E21567DD4403640 rdf:type up:Function_Annotation ;
   rdfs:comment "Erythropoietin is the principal hormone involved in the regulation of erythrocyte differentiation and the maintenance of a physiological level of circulating erythrocyte mass." .
-sha:8C526BAD4DFD5F6A0E758420419FAB2D29B6C0D028CAE42175CF073E7AF8781C238921BF78715BAA1F4E579ECC68E3B0 rdf:type up:Subcellular_Location_Annotation ;
-  up:locatedIn <#_5030373332310011> .
-<#_5030373332310011> up:cellularComponent location:243 .
-sha:9F02F20ED4845D86D8323FC9FFFF50CA884C7C124AA1B69B35350E965A026B1972A019759C7E6AFDC5076491C5100BF6 rdf:type up:Tissue_Specificity_Annotation ;
+sha:8DFDD5F0129356217B6B059FC3C4DF35D21BAFEB1C3C9A82C58F9C0C1B319881E54A71CC4C2645AB24D3A24ED3826B4D rdf:type up:Subcellular_Location_Annotation ;
+  up:locatedIn sha:379908DBE5D7A724F97429BF02A5F8C9497B79AB65F8517E4E1FA3E31499DFC57FB5AE9F1120614558EA7AC0EA5C44AC .
+sha:379908DBE5D7A724F97429BF02A5F8C9497B79AB65F8517E4E1FA3E31499DFC57FB5AE9F1120614558EA7AC0EA5C44AC up:cellularComponent location:243 .
+sha:C3E36D850ACB36B899534D1746112B14BE1EBEB6856C67713175DEDB510572A6E65FD7473124715770625EFC380D5C52 rdf:type up:Tissue_Specificity_Annotation ;
   rdfs:comment "Produced by kidney or liver of adult mammals and by liver of fetal or neonatal mammals." .
-sha:475E54DDF789260878D01E271743459AF77E74AEED3C2C7DDA4FDEAB7A7360DCC2CDE99D584C7B2DB5BC5581B3B74074 rdf:type up:Similarity_Annotation ;
+sha:FE3C484C3DF40F9E0BA5BF07723319D580186B5E3514C0D59793E8E0541BA0A71DD9A8DFD994CAAD2277E4DC84510BAC rdf:type up:Similarity_Annotation ;
   rdfs:comment "Belongs to the EPO/TPO family." .
 <#_5030373332310014> rdf:type rdf:Statement ;
-  rdf:subject sha:475E54DDF789260878D01E271743459AF77E74AEED3C2C7DDA4FDEAB7A7360DCC2CDE99D584C7B2DB5BC5581B3B74074 ;
+  rdf:subject sha:FE3C484C3DF40F9E0BA5BF07723319D580186B5E3514C0D59793E8E0541BA0A71DD9A8DFD994CAAD2277E4DC84510BAC ;
   rdf:predicate rdfs:comment ;
   rdf:object "Belongs to the EPO/TPO family." ;
   up:attribution <#_5030373332310015> .
-sha:0C37D52A98CC1380FAE358D3F3DF7B64417288D6E8E9789787EE533896E1D7D3C8E14D080D3D3B4B356C3D09F6510449 rdf:type up:Signal_Peptide_Annotation ;
+sha:1B8F3DDDD8240012F4881570D944763095C593108110AC0AD46BEA74E20BB75517713578E531A6608C7C728353E7E737 rdf:type up:Signal_Peptide_Annotation ;
   up:range range:22571011777114414tt1tt26 .
 range:22571011777114414tt1tt26 rdf:type faldo:Region ;
   faldo:begin position:22571011777114414tt1 ;
@@ -480,7 +464,7 @@ position:22571011777114414tt192 rdf:type faldo:Position ,
     faldo:ExactPosition ;
   faldo:position 192 ;
   faldo:reference isoform:P07321-1 .
-sha:D36811688825105E974EA282E7FCBBFA2FCB96E82C603B6BCD021930144A77B34870A25BDCEFF70FCCBE1E3D104EE359 rdf:type up:Glycosylation_Annotation ;
+sha:D0FEBADA6025DD59AB83E67A258DB0AEE866274137A4483401AF2BBBFD079A63121FD54CFA679DE0F60555D60AD04CA7 rdf:type up:Glycosylation_Annotation ;
   rdfs:comment "N-linked (GlcNAc...)" ;
   up:range range:22571011777114414tt50tt50 .
 range:22571011777114414tt50tt50 rdf:type faldo:Region ;
@@ -493,9 +477,9 @@ position:22571011777114414tt50 rdf:type faldo:Position ,
 <#_503037333231001A> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:D36811688825105E974EA282E7FCBBFA2FCB96E82C603B6BCD021930144A77B34870A25BDCEFF70FCCBE1E3D104EE359 ;
+  rdf:object sha:D0FEBADA6025DD59AB83E67A258DB0AEE866274137A4483401AF2BBBFD079A63121FD54CFA679DE0F60555D60AD04CA7 ;
   up:attribution <#_503037333231001C> .
-sha:59C942D693B9CD954189DD2834D08D985EE73F822FCF4A1CCD8980D8C62B93F712547C9327AC417A027002D4C6B1FFC0 rdf:type up:Glycosylation_Annotation ;
+sha:2D03F5B3AF6B84C203D8CA6C182F0055B299C18D825AB601C32922968F9891EF03EC5F72E1D360378A2E7037615D68CF rdf:type up:Glycosylation_Annotation ;
   rdfs:comment "N-linked (GlcNAc...)" ;
   up:range range:22571011777114414tt64tt64 .
 range:22571011777114414tt64tt64 rdf:type faldo:Region ;
@@ -508,9 +492,9 @@ position:22571011777114414tt64 rdf:type faldo:Position ,
 <#_503037333231001E> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:59C942D693B9CD954189DD2834D08D985EE73F822FCF4A1CCD8980D8C62B93F712547C9327AC417A027002D4C6B1FFC0 ;
+  rdf:object sha:2D03F5B3AF6B84C203D8CA6C182F0055B299C18D825AB601C32922968F9891EF03EC5F72E1D360378A2E7037615D68CF ;
   up:attribution <#_503037333231001C> .
-sha:C57B3F35944E693978E5795A27A0E59B454FF3884772994C5146F03DAE6B63B3BC1955AA4D45E01BCF9F13370CFAC27E rdf:type up:Glycosylation_Annotation ;
+sha:838F4713758BAFA88FF02F04C67F423292E26FC71E6EBD1734D174E486065F6878E6B272E7BB545A1340B4B58A05195E rdf:type up:Glycosylation_Annotation ;
   rdfs:comment "N-linked (GlcNAc...)" ;
   up:range range:22571011777114414tt109tt109 .
 range:22571011777114414tt109tt109 rdf:type faldo:Region ;
@@ -523,9 +507,9 @@ position:22571011777114414tt109 rdf:type faldo:Position ,
 <#_5030373332310021> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:C57B3F35944E693978E5795A27A0E59B454FF3884772994C5146F03DAE6B63B3BC1955AA4D45E01BCF9F13370CFAC27E ;
+  rdf:object sha:838F4713758BAFA88FF02F04C67F423292E26FC71E6EBD1734D174E486065F6878E6B272E7BB545A1340B4B58A05195E ;
   up:attribution <#_503037333231001C> .
-sha:3DEDB09F534E641C9724D63BBBD75F4C0078E53F86DBA021FF480F6B86462770C2E71DAA4215FFFB76D68F852FFD56E3 rdf:type up:Disulfide_Bond_Annotation ;
+sha:74433B152017B209055824B8B0C9DAC7457FC92C61C84F00073BA5F4FB8D64F938D5591DE0F3D289DB1823B69D41B578 rdf:type up:Disulfide_Bond_Annotation ;
   up:range range:22571011777114414tt33tt33 ,
     range:22571011777114414tt187tt187 .
 range:22571011777114414tt33tt33 rdf:type faldo:Region ;
@@ -545,7 +529,7 @@ position:22571011777114414tt187 rdf:type faldo:Position ,
 <#_5030373332310024> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:annotation ;
-  rdf:object sha:3DEDB09F534E641C9724D63BBBD75F4C0078E53F86DBA021FF480F6B86462770C2E71DAA4215FFFB76D68F852FFD56E3 ;
+  rdf:object sha:74433B152017B209055824B8B0C9DAC7457FC92C61C84F00073BA5F4FB8D64F938D5591DE0F3D289DB1823B69D41B578 ;
   up:attribution <#_503037333231001C> .
 <#_5030373332310027> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
@@ -570,193 +554,218 @@ position:22571011777114414tt187 rdf:type faldo:Position ,
 <#_503037333231002F> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0007568 ;
+  rdf:object go:GO_0006953 ;
   up:attribution <#_5030373332310030> .
 <#_5030373332310031> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0001525 ;
+  rdf:object go:GO_0007568 ;
   up:attribution <#_5030373332310032> .
 <#_5030373332310033> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0006915 ;
+  rdf:object go:GO_0001525 ;
   up:attribution <#_5030373332310034> .
 <#_5030373332310035> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0055008 ;
+  rdf:object go:GO_0006915 ;
   up:attribution <#_5030373332310036> .
 <#_5030373332310037> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0071474 ;
+  rdf:object go:GO_0055008 ;
   up:attribution <#_5030373332310038> .
 <#_5030373332310039> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0007566 ;
+  rdf:object go:GO_0071474 ;
   up:attribution <#_503037333231003A> .
 <#_503037333231003B> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0030218 ;
+  rdf:object go:GO_0007566 ;
   up:attribution <#_503037333231003C> .
 <#_503037333231003D> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0043249 ;
+  rdf:object go:GO_0030218 ;
   up:attribution <#_503037333231003E> .
 <#_503037333231003F> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0003007 ;
+  rdf:object go:GO_0043249 ;
   up:attribution <#_5030373332310040> .
 <#_5030373332310041> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0042541 ;
+  rdf:object go:GO_0003007 ;
   up:attribution <#_5030373332310042> .
 <#_5030373332310043> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0043066 ;
+  rdf:object go:GO_0042541 ;
   up:attribution <#_5030373332310044> .
 <#_5030373332310045> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0010523 ;
+  rdf:object go:GO_0043066 ;
   up:attribution <#_5030373332310046> .
 <#_5030373332310047> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_2001258 ;
+  rdf:object go:GO_0010523 ;
   up:attribution <#_5030373332310048> .
 <#_5030373332310049> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_1902251 ;
+  rdf:object go:GO_2001258 ;
   up:attribution <#_503037333231004A> .
 <#_503037333231004B> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_1902219 ;
+  rdf:object go:GO_1902251 ;
   up:attribution <#_503037333231004C> .
 <#_503037333231004D> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0033033 ;
+  rdf:object go:GO_1902219 ;
   up:attribution <#_503037333231004E> .
 <#_503037333231004F> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0018105 ;
+  rdf:object go:GO_0033033 ;
   up:attribution <#_5030373332310050> .
 <#_5030373332310051> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0008284 ;
+  rdf:object go:GO_1901215 ;
   up:attribution <#_5030373332310052> .
 <#_5030373332310053> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0045740 ;
+  rdf:object go:GO_0000122 ;
   up:attribution <#_5030373332310054> .
 <#_5030373332310055> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0045666 ;
+  rdf:object go:GO_0018105 ;
   up:attribution <#_5030373332310056> .
 <#_5030373332310057> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0045860 ;
+  rdf:object go:GO_0042104 ;
   up:attribution <#_5030373332310058> .
 <#_5030373332310059> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0046579 ;
+  rdf:object go:GO_0008284 ;
   up:attribution <#_503037333231005A> .
 <#_503037333231005B> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0045893 ;
+  rdf:object go:GO_0045740 ;
   up:attribution <#_503037333231005C> .
 <#_503037333231005D> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0042523 ;
+  rdf:object go:GO_0070374 ;
   up:attribution <#_503037333231005E> .
 <#_503037333231005F> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0006357 ;
+  rdf:object go:GO_0010976 ;
   up:attribution <#_5030373332310060> .
 <#_5030373332310061> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0048678 ;
+  rdf:object go:GO_0045860 ;
   up:attribution <#_5030373332310062> .
 <#_5030373332310063> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0051602 ;
+  rdf:object go:GO_0046579 ;
   up:attribution <#_5030373332310064> .
 <#_5030373332310065> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0043627 ;
+  rdf:object go:GO_0045893 ;
   up:attribution <#_5030373332310066> .
 <#_5030373332310067> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0055093 ;
+  rdf:object go:GO_0042523 ;
   up:attribution <#_5030373332310068> .
 <#_5030373332310069> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0001666 ;
+  rdf:object go:GO_0006357 ;
   up:attribution <#_503037333231006A> .
 <#_503037333231006B> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0070555 ;
+  rdf:object go:GO_0048678 ;
   up:attribution <#_503037333231006C> .
 <#_503037333231006D> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0032496 ;
+  rdf:object go:GO_0051602 ;
   up:attribution <#_503037333231006E> .
 <#_503037333231006F> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0009651 ;
+  rdf:object go:GO_0043627 ;
   up:attribution <#_5030373332310070> .
 <#_5030373332310071> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0033574 ;
+  rdf:object go:GO_0055093 ;
   up:attribution <#_5030373332310072> .
 <#_5030373332310073> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0033189 ;
+  rdf:object go:GO_0001666 ;
   up:attribution <#_5030373332310074> .
 <#_5030373332310075> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0060979 ;
+  rdf:object go:GO_0070555 ;
   up:attribution <#_5030373332310076> .
 <#_5030373332310077> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0055010 ;
+  rdf:object go:GO_0032496 ;
   up:attribution <#_5030373332310078> .
 <#_5030373332310079> rdf:type rdf:Statement ;
   rdf:subject <P07321> ;
   rdf:predicate up:classifiedWith ;
-  rdf:object go:GO_0061032 ;
+  rdf:object go:GO_0009651 ;
   up:attribution <#_503037333231007A> .
+<#_503037333231007B> rdf:type rdf:Statement ;
+  rdf:subject <P07321> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_0033574 ;
+  up:attribution <#_503037333231007C> .
+<#_503037333231007D> rdf:type rdf:Statement ;
+  rdf:subject <P07321> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_0033189 ;
+  up:attribution <#_503037333231007E> .
+<#_503037333231007F> rdf:type rdf:Statement ;
+  rdf:subject <P07321> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_0060979 ;
+  up:attribution <#_5030373332310080> .
+<#_5030373332310081> rdf:type rdf:Statement ;
+  rdf:subject <P07321> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_0055010 ;
+  up:attribution <#_5030373332310082> .
+<#_5030373332310083> rdf:type rdf:Statement ;
+  rdf:subject <P07321> ;
+  rdf:predicate up:classifiedWith ;
+  rdf:object go:GO_0061032 ;
+  up:attribution <#_5030373332310084> .
 isoform:P07321-1 rdf:type up:Simple_Sequence ;
   up:modified "1988-04-01"^^xsd:date ;
   up:version 1 ;
@@ -781,46 +790,45 @@ isoform:P07321-1 rdf:type up:Simple_Sequence ;
   up:source citation:21095239 .
 <#_5030373332310030> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
-<#_5030373332310032> dcterms:creator <http://purl.uniprot.org/goa-projects/DFLAT> ;
+<#_5030373332310032> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
+<#_5030373332310034> dcterms:creator <http://purl.uniprot.org/goa-projects/DFLAT> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000304> ;
   up:source citation:20299672 .
-<#_5030373332310034> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
+<#_5030373332310036> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
   up:source citation:17300687 .
-<#_5030373332310036> dcterms:creator <http://purl.uniprot.org/goa-projects/DFLAT> ;
+<#_5030373332310038> dcterms:creator <http://purl.uniprot.org/goa-projects/DFLAT> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000304> ;
   up:source citation:20299672 .
-<#_5030373332310038> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
-  up:manual true ;
-  up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
 <#_503037333231003A> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
   up:manual true ;
-  up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
-  up:source citation:17300687 .
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
 <#_503037333231003C> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
+  up:source citation:17300687 .
+<#_503037333231003E> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
   up:source citation:15591122 .
-<#_503037333231003E> dcterms:creator <http://purl.uniprot.org/goa-projects/UniProtKB-KW> ;
+<#_5030373332310040> dcterms:creator <http://purl.uniprot.org/goa-projects/UniProtKB-KW> ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
-<#_5030373332310040> dcterms:creator <http://purl.uniprot.org/goa-projects/DFLAT> ;
+<#_5030373332310042> dcterms:creator <http://purl.uniprot.org/goa-projects/DFLAT> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000304> ;
   up:source citation:20299672 .
-<#_5030373332310042> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
+<#_5030373332310044> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
   up:source citation:17300687 .
-<#_5030373332310044> dcterms:creator <http://purl.uniprot.org/goa-projects/UniProtKB> ;
+<#_5030373332310046> dcterms:creator <http://purl.uniprot.org/goa-projects/UniProtKB> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
   up:source citation:21095239 .
-<#_5030373332310046> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
-  up:manual true ;
-  up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
 <#_5030373332310048> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
@@ -832,49 +840,49 @@ isoform:P07321-1 rdf:type up:Simple_Sequence ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
 <#_503037333231004E> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
   up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
+<#_5030373332310050> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
+  up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
   up:source citation:17981124 .
-<#_5030373332310050> dcterms:creator <http://purl.uniprot.org/goa-projects/UniProtKB> ;
-  up:manual true ;
-  up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
-  up:source citation:21095239 .
-<#_5030373332310052> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
-  up:manual true ;
-  up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
+<#_5030373332310052> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
 <#_5030373332310054> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
-<#_5030373332310056> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
-  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
-<#_5030373332310058> dcterms:creator <http://purl.uniprot.org/goa-projects/UniProtKB> ;
+<#_5030373332310056> dcterms:creator <http://purl.uniprot.org/goa-projects/UniProtKB> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
   up:source citation:21095239 .
+<#_5030373332310058> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
 <#_503037333231005A> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
 <#_503037333231005C> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
-<#_503037333231005E> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
-  up:manual true ;
-  up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
-<#_5030373332310060> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
+<#_503037333231005E> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
+<#_5030373332310060> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
+<#_5030373332310062> dcterms:creator <http://purl.uniprot.org/goa-projects/UniProtKB> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
-  up:source citation:17300687 .
-<#_5030373332310062> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
-  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
-<#_5030373332310064> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
-  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
-<#_5030373332310066> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
-  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
-<#_5030373332310068> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
-  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
+  up:source citation:21095239 .
+<#_5030373332310064> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
+<#_5030373332310066> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
+<#_5030373332310068> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000266> .
 <#_503037333231006A> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
-  up:source citation:15016652 .
+  up:source citation:17300687 .
 <#_503037333231006C> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
 <#_503037333231006E> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
@@ -883,17 +891,29 @@ isoform:P07321-1 rdf:type up:Simple_Sequence ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
 <#_5030373332310072> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
-<#_5030373332310074> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
+<#_5030373332310074> dcterms:creator <http://purl.uniprot.org/goa-projects/MGI> ;
+  up:manual true ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000314> ;
+  up:source citation:15016652 .
+<#_5030373332310076> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
-<#_5030373332310076> dcterms:creator <http://purl.uniprot.org/goa-projects/DFLAT> ;
+<#_5030373332310078> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
+<#_503037333231007A> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
+<#_503037333231007C> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
+<#_503037333231007E> dcterms:creator <http://purl.uniprot.org/goa-projects/Ensembl> ;
+  up:evidence <http://purl.obolibrary.org/obo/ECO_0000501> .
+<#_5030373332310080> dcterms:creator <http://purl.uniprot.org/goa-projects/DFLAT> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000304> ;
   up:source citation:20299672 .
-<#_5030373332310078> dcterms:creator <http://purl.uniprot.org/goa-projects/DFLAT> ;
+<#_5030373332310082> dcterms:creator <http://purl.uniprot.org/goa-projects/DFLAT> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000304> ;
   up:source citation:20299672 .
-<#_503037333231007A> dcterms:creator <http://purl.uniprot.org/goa-projects/DFLAT> ;
+<#_5030373332310084> dcterms:creator <http://purl.uniprot.org/goa-projects/DFLAT> ;
   up:manual true ;
   up:evidence <http://purl.obolibrary.org/obo/ECO_0000304> ;
   up:source citation:20299672 .

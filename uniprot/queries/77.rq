@@ -1,3 +1,4 @@
 #title: Finding any ancestor
+#color:ex-red 
 SELECT *
 WHERE {taxon:9994 rdfs:subClassOf+ ?ancestor}

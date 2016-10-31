@@ -1,4 +1,5 @@
 #title: FILTER using implicit and
+#color:ex-red 
 SELECT ?taxon ?name
 WHERE {
   ?taxon a up:Taxon .

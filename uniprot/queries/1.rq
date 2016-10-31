@@ -1,5 +1,6 @@
 #title: Select all taxa from the UniProt taxonomy
 #img:taxonomy
+#tags:taxonomy
 SELECT ?taxon
 WHERE
 {

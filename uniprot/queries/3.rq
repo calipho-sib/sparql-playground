@@ -1,5 +1,6 @@
 #title: All Swiss-Prot entries
 #img:uniprot
+#tags:Swiss-Prot, UniProtKB
 SELECT ?protein
 WHERE {?protein a up:Protein;
                 up:reviewed true}

@@ -1,4 +1,5 @@
 #title: should give a random result back, not always very random :(
+#color:ex-red 
 SELECT (sample(?taxon) as ?randomSample)
 WHERE {
   ?taxon a up:Taxon ;
