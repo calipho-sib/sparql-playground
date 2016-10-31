@@ -81,7 +81,7 @@ public class SparqlServiceIntegrationTest {
 				"}";
 
 		TupleQueryResult result =  sparqlService.executeSelectQuery(federatedQuery);
-		Assert.assertEquals(countResults(result), 6);
+		Assert.assertTrue(countResults(result) >  3);
 	}
 
 	@Test
