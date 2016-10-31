@@ -1,5 +1,7 @@
 #title: Constructing an owl:sameAs between two IRI (this is an example wrong in practice)
-#color:ex-red 
+#color:ex-yellow 
+#tags:Does not work
+#comment:CONSTRUCT does not work in the playground try it at sparql.uniprot.org
 CONSTRUCT {
 	?taxon owl:sameAs ?ncbi
 } WHERE {
