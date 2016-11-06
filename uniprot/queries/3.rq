@@ -1,6 +1,7 @@
 #title: All Swiss-Prot entries
 #img:uniprot
 #tags:Swiss-Prot, UniProtKB
+#comment:Again use the normal UniProt website to find exampes! Go to www.uniprot.org/uniprot and click on the reviewed filter on the right then look at any entryin the .ttl view
 SELECT ?protein
 WHERE {?protein a up:Protein;
                 up:reviewed true}

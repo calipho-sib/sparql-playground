@@ -1,6 +1,7 @@
 #title: Select all taxa from the UniProt taxonomy
 #img:taxonomy
 #tags:taxonomy
+#comment: Always have a look at the normal uniprot website to find examples. And then use the "secret" ttl view. e.g. http://www.uniprot.org/taxnonomy/2.ttl
 SELECT ?taxon
 WHERE
 {
