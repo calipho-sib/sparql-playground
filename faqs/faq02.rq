@@ -1,6 +1,6 @@
 #title:How many triplets are contained in the dataset?
-#comment:You can have an idea on how big a dataset is by asking how many triplets it contains.
-#comment:Depending on how large the dataset is, this query may take lots of time (be patient and just wait for an answer)
+#comment:You can have an idea on how big a dataset is by asking how many triples it contains.
+#comment:Depending on how large the dataset is, this query may take some time (be patient and just wait for an answer)
     
 SELECT (COUNT(*) AS ?no) 
 where { ?s ?p ?o  }

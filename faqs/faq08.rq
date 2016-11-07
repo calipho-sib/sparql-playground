@@ -8,4 +8,4 @@ WHERE {
 }
 
 # It is a good practice to include rdfs:label, rdfs:comment or 
-# rdfs:domain to get even more knowledgeable data
+# rdfs:domain to describe data

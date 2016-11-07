@@ -1,6 +1,6 @@
 #title:Select persons and, if they have, their pets as well
 #comment:Similar to the previous one, but putting the
-#comment:the triplet linked with tto:pet inside the optional clause
+#comment:the triple linked with tto:pet inside the optional clause
 #tags:1 graph pattern,2 variables,2 conditions,optional
 #color:ex-blue
 #img:cartoon-rdf-type

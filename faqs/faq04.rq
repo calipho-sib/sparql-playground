@@ -2,5 +2,5 @@
 #comment:To count the number of instances of a particular class you can use the keyword COUNT with the name of the class
     
 SELECT (COUNT(?s) AS ?totalNumberOfInstances)
-WHERE { ?s ?p tto:Animal } 
+WHERE { ?s rdfs:subClassOf tto:Animal } 
 #replace tto:Animal with the name of the class

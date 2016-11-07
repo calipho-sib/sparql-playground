@@ -1,10 +1,10 @@
 #title:Which classes have instances?
-#comment:Selects subjects described with the tto:weight predicate. ?thing, ?name are the variables
-#comment:?thing, ?name are the variables
-#tags:owl class, instance
+#comment:Counts the number of instances per class
+#tags:class, instance
 
-SELECT DISTINCT ?class
+SELECT ?class (count(?instance) as ?numberOfInstances) 
 WHERE {
     ?instance a ?class .
 }
-ORDER by ?class
+group by ?class
+order by desc(?numberOfInstances) 

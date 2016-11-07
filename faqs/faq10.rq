@@ -1,5 +1,5 @@
 #title:Stats about properties
-#comment:This query tells for each property how many times it has been use. This is a very expensive query, therefore use it with care
+#comment:This query tells for each property how many times it has been used. This is a very expensive query, therefore use it with care
 
 SELECT ?property (COUNT(?property) AS ?propTotal)
 WHERE { ?s ?property ?o . }
