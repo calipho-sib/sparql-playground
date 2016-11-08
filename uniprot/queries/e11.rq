@@ -3,7 +3,7 @@
 #comment:
 #title:Find cross references to EMBL in UniProt and see if they where mapped by sequence identity using UniParc
 #
-PREFIX database:<http://purl.uniprot.org/database>
+PREFIX database:<http://purl.uniprot.org/database/>
 SELECT ?uniprot ?uniparc ?embl
 WHERE
 {
