@@ -34,13 +34,15 @@ There are some scenarios predefined:
 
 * UniProt helps you understand the UniProt rdf model, run the `start-uniprot.sh` (Linux, Mac) or `start-uniprot.bat` (Windows) script
 
-## Slides of the presentations
+## Slides of the SPARQL course at SIB Swiss Institute of BioInformatics in Lausanne, June 2016
 
-* <a href="assets/sparql-intro.pdf" target="_blank">Introduction to RDF and SPARQL</a>
-* <a href="assets/nextprot-slides.pdf" target="_blank">RDF and SPARQL within neXtProt</a>
-* <a href="assets/biocuration-uniprot-slides.pdf" target="_blank">RDF and SPARQL within UniProt</a>
-* <a href="assets/BC2-sparql-tutorial-federated.pdf" target="_blank">Federated queries using neXtProt and UniProt</a>
-* <a href="assets/BC2-sparql-tutorial-additional.pdf" target="_blank">Additional slides about RDF and SPARQL</a>
+* <a href="assets/lausanne2016-sparql-introduction.pdf" target="_blank">Introduction to RDF and SPARQL</a>
+* <a href="assets/lausanne2016-sparql-nextprot.pdf" target="_blank">RDF and SPARQL within neXtProt</a>
+* <a href="assets/uniprot-and-federated-queries.pdf" target="_blank">UniProt data model and federated queries</a>
+
+## Other presentations
+
+* <a href="https://github.com/calipho-sib/sparql-playground/tree/master/assets/archive" target="_blank">Additional Slides on GitHub</a>
 
 ##Create your own RDF scenario (no programming skills are required) 
 
