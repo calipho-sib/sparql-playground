@@ -34,7 +34,7 @@ There are some scenarios predefined:
 
 * UniProt helps you understand the UniProt rdf model, run the `start-uniprot.sh` (Linux, Mac) or `start-uniprot.bat` (Windows) script
 
-## Slides of the SPARQL course at SIB Swiss Institute of BioInformatics in Lausanne, June 2016
+## Slides of the SPARQL course at SIB Lausanne, 8th of November 2016
 
 * <a href="assets/lausanne2016-sparql-introduction.pdf" target="_blank">Introduction to RDF and SPARQL</a>
 * <a href="assets/lausanne2016-sparql-nextprot.pdf" target="_blank">RDF and SPARQL within neXtProt</a>
@@ -42,7 +42,7 @@ There are some scenarios predefined:
 
 ## Other presentations
 
-* <a href="https://github.com/calipho-sib/sparql-playground/tree/master/assets/archive" target="_blank">Additional Slides on GitHub</a>
+* <a href="https://github.com/calipho-sib/sparql-playground/tree/master/assets/archives" target="_blank">Additional Slides on GitHub</a>
 
 ##Create your own RDF scenario (no programming skills are required) 
 
