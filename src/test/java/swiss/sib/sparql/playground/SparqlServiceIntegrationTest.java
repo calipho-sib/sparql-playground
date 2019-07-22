@@ -3,6 +3,7 @@ package swiss.sib.sparql.playground;
 import swiss.sib.sparql.playground.service.SparqlService;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.query.TupleQueryResult;
@@ -48,6 +49,7 @@ public class SparqlServiceIntegrationTest {
 	//See related issue: https://groups.google.com/forum/#!topic/sesame-users/NpidJt61cCQ
 
 	@Test
+        @Ignore
 	public void testFederatedQueryWithEBI() throws Exception {
 
 		String federatedQuery = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
@@ -64,6 +66,7 @@ public class SparqlServiceIntegrationTest {
 
 
 	@Test
+        @Ignore
 	public void testFederatedQueryWithDBPedia() throws Exception {
 
 		String federatedQuery = "PREFIX dbp:<http://dbpedia.org/property/>\n" +
