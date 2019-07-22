@@ -9,7 +9,7 @@ color:ex-green
 
 select *  where {
     SERVICE <http://dbpedia.org/sparql> {
-      select ?person ?birthDate ?occupation ?pet where {
+      select ?person ?birthDate ?occupation where {
         VALUES ?birthDate { "1942-07-13"^^xsd:date }
         ?person dbp:birthDate ?birthDate .
         ?person dbp:occupation ?occupation .
