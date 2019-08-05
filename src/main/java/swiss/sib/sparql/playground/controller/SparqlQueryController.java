@@ -1,8 +1,11 @@
 package swiss.sib.sparql.playground.controller;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.util.*;
 
+import javax.activation.MimeType;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -14,12 +17,17 @@ import org.openrdf.http.server.repository.GraphQueryResultView;
 import org.openrdf.http.server.repository.QueryResultView;
 import org.openrdf.http.server.repository.RepositoryController;
 import org.openrdf.http.server.repository.TupleQueryResultView;
-import org.openrdf.query.Query;
-import org.openrdf.query.resultio.BooleanQueryResultWriterRegistry;
-import org.openrdf.query.resultio.TupleQueryResultWriterRegistry;
+import org.openrdf.query.*;
+import org.openrdf.query.resultio.*;
+import org.openrdf.query.resultio.sparqljson.SPARQLResultsJSONWriterFactory;
+import org.openrdf.query.resultio.sparqlxml.SPARQLResultsXMLWriterFactory;
+import org.openrdf.query.resultio.text.csv.SPARQLResultsCSVWriterFactory;
+import org.openrdf.query.resultio.text.tsv.SPARQLResultsTSVWriterFactory;
+import org.openrdf.repository.RepositoryConnection;
 import org.openrdf.rio.RDFWriterRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.MimeTypeUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -45,32 +53,59 @@ public class SparqlQueryController extends RepositoryController {
 
 	//Code taken from Sesame (before used to be in SparqlController)
 	@RequestMapping(value = "/sparql")
-	public ModelAndView sparqlEndpoint(@RequestParam(value = "query", required = true) String queryStr, @RequestParam(value = "output", required = false) String output, HttpServletRequest request,
+	public void sparqlEndpoint(@RequestParam(value = "query", required = true) String queryStr, @RequestParam(value = "output", required = false) String output, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 
 		if (queryStr != null) {
 			synchronized (this) {
 
-				Query query = sparqlService.getQuery(queryStr);
-				SparqlQueryType queryType = SparqlQueryType.getQueryType(query);
-				Object queryResult = sparqlService.evaluateQuery(queryStr);
+				TupleQueryResult queryResult = (TupleQueryResult) sparqlService.evaluateQuery(queryStr);
 
-				View view = getView(queryType);
-				FileFormatServiceRegistry<? extends FileFormat, ?> registry = getRegistryInstance(queryType);
+				TupleQueryResultWriterFactory factory;
+				if(output != null && output.equalsIgnoreCase("csv")) {
+					factory = new SPARQLResultsCSVWriterFactory();
+					response.setContentType(MimeTypeUtils.TEXT_PLAIN_VALUE);
+					response.setHeader("Content-Disposition", "attachment; filename=" + "result." + output);
 
-				Object factory = ProtocolUtil.getAcceptableService(request, response, registry);
+				}else if(output != null && output.equalsIgnoreCase("tsv")) {
+					factory = new SPARQLResultsTSVWriterFactory();
+					response.setContentType(MimeTypeUtils.TEXT_PLAIN_VALUE);
+				}else if(output != null && output.equalsIgnoreCase("xml")) {
+					factory = new SPARQLResultsXMLWriterFactory();
+					response.setContentType(MimeTypeUtils.APPLICATION_XML_VALUE);
+				}else {
+					factory = new SPARQLResultsJSONWriterFactory();
+					response.setContentType(MimeTypeUtils.APPLICATION_JSON_VALUE);
+				}
 
-				Map<String, Object> model = new HashMap<String, Object>();
-				model.put(QueryResultView.FILENAME_HINT_KEY, "query-result");
-				model.put(QueryResultView.QUERY_RESULT_KEY, queryResult);
-				model.put(QueryResultView.FACTORY_KEY, factory);
-				model.put(QueryResultView.HEADERS_ONLY, false);
-
-				return new ModelAndView(view, model);
+				renderInternal(factory, queryResult, request, response);
 			}
 		} else {
 			throw new SparqlTutorialException("Missing parameter: ");
 		}
+	}
+
+	private void renderInternal(TupleQueryResultWriterFactory factory, TupleQueryResult tupleQueryResult, HttpServletRequest request, HttpServletResponse response) throws IOException {
+		response.setStatus(200);
+		ServletOutputStream out = response.getOutputStream();
+
+		try {
+			TupleQueryResultWriter qrWriter = factory.getWriter(out);
+			QueryResults.report(tupleQueryResult, qrWriter);
+		} catch (QueryInterruptedException var16) {
+			this.logger.error("Query interrupted", var16);
+			response.sendError(503, "Query evaluation took too long");
+		} catch (QueryEvaluationException var17) {
+			this.logger.error("Query evaluation error", var17);
+			response.sendError(500, "Query evaluation error: " + var17.getMessage());
+		} catch (TupleQueryResultHandlerException var18) {
+			this.logger.error("Serialization error", var18);
+			response.sendError(500, "Serialization error: " + var18.getMessage());
+		} finally {
+			out.close();
+		}
+
+
 	}
 
 

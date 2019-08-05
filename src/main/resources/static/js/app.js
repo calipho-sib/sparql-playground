@@ -48,7 +48,7 @@ function SnorqlCtrl( $scope,  $timeout, $window, $location,  snorql,  config) {
 
   //
   // setup default output
-  $scope.outputs=['html','json','csv','xml'];
+  $scope.outputs=['html','json','csv','tsv','xml'];
   $scope.output='html';
   $scope.showPrefixes = false;
 

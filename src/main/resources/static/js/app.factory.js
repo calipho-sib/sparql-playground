@@ -54,7 +54,8 @@ function snorql($http, $q, $timeout, $location, config) {
     html:'application/sparql-results+json,*/*',
     json:'application/sparql-results+json,*/*',
     xml:'application/sparql-results+xml,*/*',
-    csv:'application/sparql-results+csv,*/*'
+    csv:'application/sparql-results+csv,*/*',
+    tsv:'application/sparql-results+tsv,*/*'
   };
 
   //
@@ -259,36 +260,27 @@ function snorql($http, $q, $timeout, $location, config) {
    }*/
    
    if(params.output!=='html'){
-	   
-	   $http({method:'GET', url:url,params:params,headers:accept, timeout: this.canceler.promise}).
-	   success(function(data, status, headers, config) {
-	      var anchor = angular.element('<a/>');
-	      var dataAux = data;
-	      if(params.output === "json"){
-	    	  dataAux = JSON.stringify(data, null, 2);
-	      }
-	      var dataaux;
-	      anchor.attr({
-	          href: 'data:attachment/' +  accept + ';charset=utf-8,' + encodeURI(dataAux),
-	          target: '_blank',
-	          download: 'result.' + params.output
-	      })[0].click();
-	   }).
-	   error(function(data, status, headers, config) {
-	     // handle error
-	   });
+
+       var encodedUrl = url+"?output="+params.output+"&query="+encodeURIComponent(params.query)
+       console.log(encodedUrl)
+       window.open(encodedUrl)
+
       return self;
+
+   } else {
+
+      //
+      // html output is done by parsing json
+      params.output='json'
+      this.$promise=$http({method:'GET', url:url,params:params,headers:accept, timeout: this.canceler.promise});
+      this.$promise.then(function(config){
+         self.result=(config.data);
+         console.log(self.result);
+      })
 
    }
 
-   //
-   // html output is done by parsing json
-   params.output='json'
-   this.$promise=$http({method:'GET', url:url,params:params,headers:accept, timeout: this.canceler.promise});
-   this.$promise.then(function(config){
-      self.result=(config.data);
-      console.log(self.result);
-   })
+
    return this;
   }
 
