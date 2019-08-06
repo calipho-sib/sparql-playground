@@ -88,6 +88,7 @@ public class SparqlServiceIntegrationTest {
 	}
 
 	@Test
+	@Ignore
 	public void testFederatedQuery() throws Exception {
 		String query = sparqlService.getPrefixesString();
 		query += " select ?subj ?pred ?obj where { values (?subj ?pred) { (dbpedia:Harrison_Ford dbo:birthDate) (dbpedia:Harrison_Ford dbp:name) (dbpedia:Harrison_Ford dbp:occupation) } { ?subj ?pred ?obj.  }UNION{ service <http://dbpedia.org/sparql> { ?subj ?pred ?obj.}}}";
