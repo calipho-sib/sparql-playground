@@ -69,3 +69,9 @@ tto:weight
 	rdfs:range xsd:decimal ;
 	rdfs:isDefinedBy tto: . 
 
+tto:color
+	rdf:type rdf:Property;
+	rdfs:label "color"^^xsd:string;
+	rdfs:domain dbo:Animal ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy tto: .
