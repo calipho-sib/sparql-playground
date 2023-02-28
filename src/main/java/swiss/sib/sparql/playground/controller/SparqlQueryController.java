@@ -1,43 +1,43 @@
 package swiss.sib.sparql.playground.controller;
 
 import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.*;
 
-import javax.activation.MimeType;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.openrdf.http.server.ProtocolUtil;
-import org.openrdf.http.server.repository.BooleanQueryResultView;
-import org.openrdf.http.server.repository.GraphQueryResultView;
-import org.openrdf.http.server.repository.QueryResultView;
-import org.openrdf.http.server.repository.RepositoryController;
-import org.openrdf.http.server.repository.TupleQueryResultView;
-import org.openrdf.query.*;
-import org.openrdf.query.resultio.*;
-import org.openrdf.query.resultio.sparqljson.SPARQLResultsJSONWriterFactory;
-import org.openrdf.query.resultio.sparqlxml.SPARQLResultsXMLWriterFactory;
-import org.openrdf.query.resultio.text.csv.SPARQLResultsCSVWriterFactory;
-import org.openrdf.query.resultio.text.tsv.SPARQLResultsTSVWriterFactory;
-import org.openrdf.repository.RepositoryConnection;
-import org.openrdf.rio.RDFWriterRegistry;
+import org.eclipse.rdf4j.common.lang.FileFormat;
+import org.eclipse.rdf4j.common.lang.service.FileFormatServiceRegistry;
+import org.eclipse.rdf4j.http.server.repository.BooleanQueryResultView;
+import org.eclipse.rdf4j.http.server.repository.GraphQueryResultView;
+import org.eclipse.rdf4j.http.server.repository.RepositoryController;
+import org.eclipse.rdf4j.http.server.repository.TupleQueryResultView;
+import org.eclipse.rdf4j.query.QueryEvaluationException;
+import org.eclipse.rdf4j.query.QueryInterruptedException;
+import org.eclipse.rdf4j.query.QueryResults;
+import org.eclipse.rdf4j.query.TupleQueryResult;
+import org.eclipse.rdf4j.query.TupleQueryResultHandlerException;
+import org.eclipse.rdf4j.query.resultio.BooleanQueryResultWriterRegistry;
+import org.eclipse.rdf4j.query.resultio.TupleQueryResultWriter;
+import org.eclipse.rdf4j.query.resultio.TupleQueryResultWriterFactory;
+import org.eclipse.rdf4j.query.resultio.TupleQueryResultWriterRegistry;
+import org.eclipse.rdf4j.query.resultio.sparqljson.SPARQLResultsJSONWriterFactory;
+import org.eclipse.rdf4j.query.resultio.sparqlxml.SPARQLResultsXMLWriterFactory;
+import org.eclipse.rdf4j.query.resultio.text.csv.SPARQLResultsCSVWriterFactory;
+import org.eclipse.rdf4j.query.resultio.text.tsv.SPARQLResultsTSVWriterFactory;
+import org.eclipse.rdf4j.rio.RDFWriterRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.MimeTypeUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.View;
 
 import swiss.sib.sparql.playground.domain.SparqlQueryType;
 import swiss.sib.sparql.playground.exception.SparqlTutorialException;
 import swiss.sib.sparql.playground.service.SparqlService;
-import info.aduna.lang.FileFormat;
-import info.aduna.lang.service.FileFormatServiceRegistry;
 
 @Controller
 public class SparqlQueryController extends RepositoryController {
