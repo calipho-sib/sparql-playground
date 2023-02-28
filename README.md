@@ -29,7 +29,7 @@ You can also see a live version of nextprot samples here: http://sparql-playgrou
 You can also use docker by building the image and running it with the 
 ```
 docker build -t sparql-playground .
-docker run -p 8088:8080 -v `PWD`/default:/app/default sparql-playground
+docker run -p 8888:8888 -v `PWD`/default:/app/default sparql-playground
 ```
 
 ## Predefined RDF scenarios / datasets
