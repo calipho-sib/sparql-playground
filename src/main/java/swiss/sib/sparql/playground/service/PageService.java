@@ -36,7 +36,7 @@ public class PageService {
 			}
 		}
 		
-		pages.add(buildPage(new File("README.md"), ABOUT_PAGE + ".md"));
+		pages.add(buildPage(new File("README.md"), ABOUT_PAGE));
 		return tree;
 	}
 
@@ -51,9 +51,9 @@ public class PageService {
     @Cacheable("page")
 	public String getPage(String page) {
     	if(page.equals(ABOUT_PAGE)){
-			return IOUtils.readFile("README.md", null);
+			return IOUtils.readFile("README", null);
 		}else {
-			return IOUtils.readFile(Application.FOLDER + "/pages/" + page + ".md", null);
+			return IOUtils.readFile(Application.FOLDER + "/pages/" + page, null);
 		}
 	}
 

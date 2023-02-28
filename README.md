@@ -4,20 +4,20 @@
 
 SPARQL playground is a standalone multi-platform web application used to learn SPARQL (implemented in Java Spring Boot and AngularJS). 
 
-It uses Sesame 2.8.6 as SPARQL Engine. 
+It uses [Eclipse RDF4j Native](https://rdf4j.org) as SPARQL Engine. 
 
-It is beeing developed at the <a target="_blank" href="https://www.isb-sib.ch/">SIB Swiss Institute of Bioinformatics</a>.  
+It is beeing developed at the <a target="_blank" href="https://www.sib.swiss/">SIB Swiss Institute of Bioinformatics</a>.  
 
 See the <a href="assets/poster-sparql.png" target="_blank"> poster</a> to have a quick overview of the tool.
 
-Or see a live demo directly here: http://sparql-playground.isb-sib.ch/
+Or see a live demo directly here: http://sparql-playground.sib.swiss.ch/
 
 You can also see a live version of nextprot samples here: http://sparql-playground.nextprot.org/
 
 
 ## Installation
 * Download the [latest release](https://github.com/calipho-sib/sparql-playground/tarball/master)
-* Unzip the folder and run the start script (start.bat for windows users or start.sh for unix users) (it requires java 1.7 or higher)
+* Unzip the folder and run the start script (start.bat for windows users or start.sh for unix users) (it requires java 1.9 or higher)
 * Once the application started you should open your browser on: <a href="http://localhost:8888" target="_blank">http://localhost:8888</a>
 
 <a href="assets/screenshot.png" target="_blank"><img width="90%" src="assets/screenshot.png"/></a>
@@ -63,10 +63,12 @@ Notes:
 * For development purposes you may want to set the java property `-Dspring.profiles.active=nocache` so the cache is not enabled (example queries, page, images, faqs ...) 
 
 ## Technology in use
-* The SPARQL engine is Sesame 2.8.6
-* The backend uses Spring Boot 1.2.3
+* The SPARQL engine is Eclipse RDF4j
+* The backend uses Spring Boot
 * The frontend is build with angularJS 1.3 and bootstrap 3
-* Requires Java 1.7 or higher
+* Requires Java 1.9 or higher
+
+For details see the pom file.
 
 # License
 

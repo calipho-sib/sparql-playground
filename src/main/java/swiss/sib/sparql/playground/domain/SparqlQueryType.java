@@ -1,9 +1,9 @@
 package swiss.sib.sparql.playground.domain;
 
-import org.openrdf.query.BooleanQuery;
-import org.openrdf.query.GraphQuery;
-import org.openrdf.query.Query;
-import org.openrdf.query.TupleQuery;
+import org.eclipse.rdf4j.query.BooleanQuery;
+import org.eclipse.rdf4j.query.GraphQuery;
+import org.eclipse.rdf4j.query.Query;
+import org.eclipse.rdf4j.query.TupleQuery;
 
 import swiss.sib.sparql.playground.exception.SparqlTutorialException;
 

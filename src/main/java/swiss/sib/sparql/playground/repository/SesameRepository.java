@@ -3,10 +3,7 @@ package swiss.sib.sparql.playground.repository;
 import java.io.OutputStream;
 import java.util.Map;
 
-import org.openrdf.query.Query;
-import org.openrdf.query.TupleQueryResult;
-import org.openrdf.query.resultio.BooleanQueryResultWriter;
-import org.openrdf.query.resultio.TupleQueryResultWriter;
+import org.eclipse.rdf4j.query.Query;
 
 /**
  * Interface fos Sesame Repository
