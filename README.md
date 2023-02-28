@@ -10,7 +10,7 @@ It is beeing developed at the <a target="_blank" href="https://www.sib.swiss/">S
 
 See the <a href="assets/poster-sparql.png" target="_blank"> poster</a> to have a quick overview of the tool.
 
-Or see a live demo directly here: http://sparql-playground.sib.swiss.ch/
+Or see a live demo directly here: https://sparql-playground.sib.swiss/
 
 You can also see a live version of nextprot samples here: http://sparql-playground.nextprot.org/
 
