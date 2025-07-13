@@ -1,4 +1,4 @@
-#neXtProt
+# neXtProt
 neXtProt is human proteome database
 
 The following model shows a simplified view of the datamodel

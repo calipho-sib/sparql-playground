@@ -1,4 +1,4 @@
-#Exercise 3
+# Exercise 3
 
 Build a SPARQL query to find:
 

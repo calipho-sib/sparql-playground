@@ -1,4 +1,4 @@
-#Scenario 
+# Scenario
 This example contains a very simple set with persons and their pets.
 
 The following diagram shows you the main resources it contains.

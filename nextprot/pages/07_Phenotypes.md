@@ -1,4 +1,4 @@
-#Phenotypes
+# Phenotypes
 
 Since neXtProt 2.0 (released in September 2016), the RDF model has evolved to express phenotypes related to variants.
 
