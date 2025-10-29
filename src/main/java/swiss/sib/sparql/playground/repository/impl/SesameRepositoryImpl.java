@@ -115,16 +115,29 @@ public class SesameRepositoryImpl implements SesameRepository, InitializingBean 
 
 	}
 
-	private static void addTTLFiles(final File folder, RepositoryConnection conn) throws RDFParseException, RepositoryException, IOException {
+	private static void addTTLFiles(final File folder, RepositoryConnection conn) throws Exception {
 		long start = System.currentTimeMillis();
 		for (final File fileEntry : folder.listFiles()) {
-			if (!fileEntry.isDirectory()) {
+			if (fileEntry.isDirectory()) {
+				loadFilesRecursively(fileEntry, conn);
+			} else {
 				logger.debug("Loading " + fileEntry);
 				conn.add(fileEntry, "", RDFFormat.TURTLE, new Resource[] {});
 			}
 		}
 		logger.info("Loading turtle files finished in " + (System.currentTimeMillis() - start) + " ms");
 
+	}
+
+	public static void loadFilesRecursively(File folder, RepositoryConnection conn) throws Exception {
+		for (final File fileEntry : folder.listFiles()) {
+			if (fileEntry.isDirectory()) {
+				loadFilesRecursively(fileEntry, conn);
+			} else {
+				logger.debug("Loading " + fileEntry);
+				conn.add(fileEntry, "", RDFFormat.TURTLE, new Resource[] {});
+			}
+		}
 	}
 
 	public void writeTriplesAsTurtle(OutputStream output, Map<String, String> prefixes) {
